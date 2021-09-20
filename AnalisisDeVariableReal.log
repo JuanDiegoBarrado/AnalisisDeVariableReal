@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  3 JUL 2021 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  20 SEP 2021 11:06
 entering extended mode
 **./AnalisisDeVariableReal.tex
 (AnalisisDeVariableReal.tex
@@ -1154,7 +1154,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 Package xcolor Warning: Incompatible color definition on input line 69.
 
-<./fotos/producto cartesiano.jpg, id=39, 782.925pt x 344.03531pt>
+<./fotos/producto cartesiano.jpg, id=42, 782.925pt x 344.03531pt>
 File: ./fotos/producto cartesiano.jpg Graphic file (type jpg)
 <use ./fotos/producto cartesiano.jpg>
 Package pdftex.def Info: ./fotos/producto cartesiano.jpg  used on input line 76
@@ -1205,7 +1205,7 @@ Package xcolor Warning: Incompatible color definition on input line 147.
 
 Package xcolor Warning: Incompatible color definition on input line 150.
 
-<./fotos/nxn numerable.png, id=59, 668.4975pt x 411.5375pt>
+<./fotos/nxn numerable.png, id=62, 668.4975pt x 411.5375pt>
 File: ./fotos/nxn numerable.png Graphic file (type png)
 <use ./fotos/nxn numerable.png>
 Package pdftex.def Info: ./fotos/nxn numerable.png  used on input line 156.
@@ -1425,7 +1425,7 @@ Package xcolor Warning: Incompatible color definition on input line 1040.
 Package xcolor Warning: Incompatible color definition on input line 1047.
 
 [26]
-<./fotos/Intervalos encajados.jpg, id=144, 692.5875pt x 228.10219pt>
+<./fotos/Intervalos encajados.jpg, id=145, 692.5875pt x 228.10219pt>
 File: ./fotos/Intervalos encajados.jpg Graphic file (type jpg)
 <use ./fotos/Intervalos encajados.jpg>
 Package pdftex.def Info: ./fotos/Intervalos encajados.jpg  used on input line 1
@@ -1450,13 +1450,13 @@ U/msb/m/n/10 N \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 [] \OML
 Package xcolor Warning: Incompatible color definition on input line 1078.
 
 [27 <./fotos/Intervalos encajados.jpg>]
-<./fotos/corolario cantor.jpg, id=148, 1051.67906pt x 433.62pt>
+<./fotos/corolario cantor.jpg, id=149, 1051.67906pt x 433.62pt>
 File: ./fotos/corolario cantor.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor.jpg>
 Package pdftex.def Info: ./fotos/corolario cantor.jpg  used on input line 1092.
 
 (pdftex.def)             Requested size: 262.91911pt x 108.40472pt.
-<./fotos/corolario cantor 2.jpg, id=149, 707.64375pt x 427.5975pt>
+<./fotos/corolario cantor 2.jpg, id=150, 707.64375pt x 427.5975pt>
 File: ./fotos/corolario cantor 2.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor 2.jpg>
 Package pdftex.def Info: ./fotos/corolario cantor 2.jpg  used on input line 110
@@ -1486,7 +1486,7 @@ Package xcolor Warning: Incompatible color definition on input line 1144.
 Package xcolor Warning: Incompatible color definition on input line 1158.
 
 [31]
-<./fotos/convergente.png, id=165, 678.28406pt x 172.39406pt>
+<./fotos/convergente.png, id=166, 678.28406pt x 172.39406pt>
 File: ./fotos/convergente.png Graphic file (type png)
 <use ./fotos/convergente.png>
 Package pdftex.def Info: ./fotos/convergente.png  used on input line 1173.
@@ -1502,7 +1502,7 @@ Package xcolor Warning: Incompatible color definition on input line 1182.
 Package xcolor Warning: Incompatible color definition on input line 1196.
 
 [32 <./fotos/convergente.png>]
-<./fotos/x a cero.jpeg, id=169, 2248.4pt x 634.37pt>
+<./fotos/x a cero.jpeg, id=170, 2248.4pt x 634.37pt>
 File: ./fotos/x a cero.jpeg Graphic file (type jpg)
 <use ./fotos/x a cero.jpeg>
 Package pdftex.def Info: ./fotos/x a cero.jpeg  used on input line 1249.
@@ -1518,7 +1518,7 @@ Package xcolor Warning: Incompatible color definition on input line 1280.
 
 Package xcolor Warning: Incompatible color definition on input line 1301.
 
-<./fotos/limite negativo.jpeg, id=176, 807.015pt x 287.57437pt>
+<./fotos/limite negativo.jpeg, id=177, 807.015pt x 287.57437pt>
 File: ./fotos/limite negativo.jpeg Graphic file (type jpg)
 <use ./fotos/limite negativo.jpeg>
 Package pdftex.def Info: ./fotos/limite negativo.jpeg  used on input line 1318.
@@ -1654,7 +1654,7 @@ Package xcolor Warning: Incompatible color definition on input line 1554.
 Package xcolor Warning: Incompatible color definition on input line 1569.
 
 [41]
-<./fotos/proposicion subsucesiones.jpeg, id=200, 928.21782pt x 536.0025pt>
+<./fotos/proposicion subsucesiones.jpeg, id=201, 928.21782pt x 536.0025pt>
 File: ./fotos/proposicion subsucesiones.jpeg Graphic file (type jpg)
 <use ./fotos/proposicion subsucesiones.jpeg>
 Package pdftex.def Info: ./fotos/proposicion subsucesiones.jpeg  used on input 
@@ -1668,7 +1668,7 @@ Package xcolor Warning: Incompatible color definition on input line 1604.
 
 Package xcolor Warning: Incompatible color definition on input line 1622.
 
-<./fotos/Cauchy 1.jpeg, id=204, 889.07156pt x 500.62032pt>
+<./fotos/Cauchy 1.jpeg, id=205, 889.07156pt x 500.62032pt>
 File: ./fotos/Cauchy 1.jpeg Graphic file (type jpg)
 <use ./fotos/Cauchy 1.jpeg>
 Package pdftex.def Info: ./fotos/Cauchy 1.jpeg  used on input line 1629.
@@ -1802,7 +1802,7 @@ Package xcolor Warning: Incompatible color definition on input line 2000.
 
 Package xcolor Warning: Incompatible color definition on input line 2001.
 
-<./fotos/Cauchy 2.jpeg, id=250, 838.63312pt x 280.79906pt>
+<./fotos/Cauchy 2.jpeg, id=251, 838.63312pt x 280.79906pt>
 File: ./fotos/Cauchy 2.jpeg Graphic file (type jpg)
 <use ./fotos/Cauchy 2.jpeg>
 Package pdftex.def Info: ./fotos/Cauchy 2.jpeg  used on input line 2007.
@@ -1828,7 +1828,7 @@ x[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
 
 Package xcolor Warning: Incompatible color definition on input line 2033.
 
-<./fotos/limite.jpg, id=254, 413.29407pt x 261.22594pt>
+<./fotos/limite.jpg, id=255, 413.29407pt x 261.22594pt>
 File: ./fotos/limite.jpg Graphic file (type jpg)
 <use ./fotos/limite.jpg>
 Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2043.
@@ -1837,7 +1837,7 @@ Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2043.
 Package xcolor Warning: Incompatible color definition on input line 2049.
 
 [58 <./fotos/limite.jpg>]
-<./fotos/limite doble.jpeg, id=258, 984.67876pt x 310.15875pt>
+<./fotos/limite doble.jpeg, id=259, 984.67876pt x 310.15875pt>
 File: ./fotos/limite doble.jpeg Graphic file (type jpg)
 <use ./fotos/limite doble.jpeg>
 Package pdftex.def Info: ./fotos/limite doble.jpeg  used on input line 2080.
@@ -1904,7 +1904,7 @@ Package xcolor Warning: Incompatible color definition on input line 2235.
 
 Package xcolor Warning: Incompatible color definition on input line 2262.
 
-<./fotos/continuidad de composicion.jpeg, id=275, 847.66687pt x 282.30469pt>
+<./fotos/continuidad de composicion.jpeg, id=276, 847.66687pt x 282.30469pt>
 File: ./fotos/continuidad de composicion.jpeg Graphic file (type jpg)
 <use ./fotos/continuidad de composicion.jpeg>
 Package pdftex.def Info: ./fotos/continuidad de composicion.jpeg  used on input
@@ -1932,7 +1932,7 @@ Package xcolor Warning: Incompatible color definition on input line 2314.
 Package xcolor Warning: Incompatible color definition on input line 2324.
 
 [65]
-<./fotos/unicidad limite lateral.jpeg, id=283, 949.29657pt x 354.57469pt>
+<./fotos/unicidad limite lateral.jpeg, id=284, 949.29657pt x 354.57469pt>
 File: ./fotos/unicidad limite lateral.jpeg Graphic file (type jpg)
 <use ./fotos/unicidad limite lateral.jpeg>
 Package pdftex.def Info: ./fotos/unicidad limite lateral.jpeg  used on input li
@@ -2021,7 +2021,7 @@ x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 f\OT1
 m/it/10 f[]
  []
 
-<./fotos/inyectivas continuas son monotonas.jpeg, id=300, 1058.45438pt x 584.93
+<./fotos/inyectivas continuas son monotonas.jpeg, id=301, 1058.45438pt x 584.93
 532pt>
 File: ./fotos/inyectivas continuas son monotonas.jpeg Graphic file (type jpg)
 <use ./fotos/inyectivas continuas son monotonas.jpeg>
@@ -2029,7 +2029,7 @@ Package pdftex.def Info: ./fotos/inyectivas continuas son monotonas.jpeg  used
 on input line 2556.
 (pdftex.def)             Requested size: 211.68712pt x 116.98499pt.
 [71]
-<./fotos/inyectividad a monotonia en continuas1.jpeg, id=305, 822.82407pt x 444
+<./fotos/inyectividad a monotonia en continuas1.jpeg, id=306, 822.82407pt x 444
 .15938pt>
 File: ./fotos/inyectividad a monotonia en continuas1.jpeg Graphic file (type jp
 g)
@@ -2114,7 +2114,7 @@ it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 c
 
 Package xcolor Warning: Incompatible color definition on input line 2706.
 
-<./fotos/Interpretacion derivada.png, id=326, 351.20685pt x 199.69342pt>
+<./fotos/Interpretacion derivada.png, id=327, 351.20685pt x 199.69342pt>
 File: ./fotos/Interpretacion derivada.png Graphic file (type png)
 <use ./fotos/Interpretacion derivada.png>
 Package pdftex.def Info: ./fotos/Interpretacion derivada.png  used on input lin
@@ -2160,7 +2160,7 @@ Package xcolor Warning: Incompatible color definition on input line 2836.
 
 Package xcolor Warning: Incompatible color definition on input line 2844.
 
-<./fotos/Teorema de Rolle.png, id=339, 285.91026pt x 231.07382pt>
+<./fotos/Teorema de Rolle.png, id=340, 285.91026pt x 231.07382pt>
 File: ./fotos/Teorema de Rolle.png Graphic file (type png)
 <use ./fotos/Teorema de Rolle.png>
 Package pdftex.def Info: ./fotos/Teorema de Rolle.png  used on input line 2849.
@@ -2233,14 +2233,14 @@ Package xcolor Warning: Incompatible color definition on input line 3073.
 
 Package xcolor Warning: Incompatible color definition on input line 3074.
 
-<./fotos/polinomio de taylor 1.png, id=362, 272.62607pt x 151.17612pt>
+<./fotos/polinomio de taylor 1.png, id=363, 272.62607pt x 151.17612pt>
 File: ./fotos/polinomio de taylor 1.png Graphic file (type png)
 <use ./fotos/polinomio de taylor 1.png>
 Package pdftex.def Info: ./fotos/polinomio de taylor 1.png  used on input line 
 3078.
 (pdftex.def)             Requested size: 245.36119pt x 136.05724pt.
 [89 <./fotos/polinomio de taylor 1.png>]
-<./fotos/de taylor 2.png, id=369, 814.242pt x 470.9595pt>
+<./fotos/de taylor 2.png, id=370, 814.242pt x 470.9595pt>
 File: ./fotos/de taylor 2.png Graphic file (type png)
 <use ./fotos/de taylor 2.png>
 Package pdftex.def Info: ./fotos/de taylor 2.png  used on input line 3082.
@@ -2295,7 +2295,7 @@ Overfull \hbox (19.5811pt too wide) detected at line 3198
 Package xcolor Warning: Incompatible color definition on input line 3201.
 
 [93]
-<./fotos/convexidad.png, id=383, 341.85762pt x 189.56627pt>
+<./fotos/convexidad.png, id=384, 341.85762pt x 189.56627pt>
 File: ./fotos/convexidad.png Graphic file (type png)
 <use ./fotos/convexidad.png>
 Package pdftex.def Info: ./fotos/convexidad.png  used on input line 3205.
@@ -2312,7 +2312,7 @@ MS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 tx[]
 /cmm/m/it/10 x[] \OMS/cmsy/m/n/10  []
  []
 
-<./fotos/convexidad 2.png, id=384, 801.59476pt x 416.15475pt>
+<./fotos/convexidad 2.png, id=385, 801.59476pt x 416.15475pt>
 File: ./fotos/convexidad 2.png Graphic file (type png)
 <use ./fotos/convexidad 2.png>
 Package pdftex.def Info: ./fotos/convexidad 2.png  used on input line 3222.
@@ -2365,7 +2365,7 @@ Overfull \hbox (28.00632pt too wide) detected at line 3258
 Package xcolor Warning: Incompatible color definition on input line 3262.
 
 [95]
-<./fotos/metodo Newton.png, id=394, 213.11478pt x 127.05876pt>
+<./fotos/metodo Newton.png, id=395, 213.11478pt x 127.05876pt>
 File: ./fotos/metodo Newton.png Graphic file (type png)
 <use ./fotos/metodo Newton.png>
 Package pdftex.def Info: ./fotos/metodo Newton.png  used on input line 3265.
@@ -2387,12 +2387,12 @@ Package xcolor Warning: Incompatible color definition on input line 3315.
 
 Package xcolor Warning: Incompatible color definition on input line 3316.
 
-<./fotos/area facil.png, id=405, 319.20137pt x 190.30745pt>
+<./fotos/area facil.png, id=406, 319.20137pt x 190.30745pt>
 File: ./fotos/area facil.png Graphic file (type png)
 <use ./fotos/area facil.png>
 Package pdftex.def Info: ./fotos/area facil.png  used on input line 3322.
 (pdftex.def)             Requested size: 255.36143pt x 152.24615pt.
-<./fotos/integral de curvas.png, id=406, 618.31pt x 344.28625pt>
+<./fotos/integral de curvas.png, id=407, 618.31pt x 344.28625pt>
 File: ./fotos/integral de curvas.png Graphic file (type png)
 <use ./fotos/integral de curvas.png>
 Package pdftex.def Info: ./fotos/integral de curvas.png  used on input line 332
@@ -2484,7 +2484,7 @@ Overfull \hbox (55.05052pt too wide) detected at line 3467
 
 Package xcolor Warning: Incompatible color definition on input line 3476.
 
-<./fotos/función escalera.png, id=427, 401.5pt x 321.2pt>
+<./fotos/función escalera.png, id=428, 401.5pt x 321.2pt>
 File: ./fotos/función escalera.png Graphic file (type png)
 <use ./fotos/función escalera.png>
 Package pdftex.def Info: ./fotos/función escalera.png  used on input line 3490
@@ -2498,7 +2498,7 @@ Package xcolor Warning: Incompatible color definition on input line 3496.
 Package xcolor Warning: Incompatible color definition on input line 3527.
 
 [106]
-<./fotos/criterio sandwich para integrales.png, id=435, 843.61868pt x 365.28688
+<./fotos/criterio sandwich para integrales.png, id=436, 843.61868pt x 365.28688
 pt>
 File: ./fotos/criterio sandwich para integrales.png Graphic file (type png)
 <use ./fotos/criterio sandwich para integrales.png>
@@ -2992,11 +2992,11 @@ LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 30624 strings out of 480790
- 764695 string characters out of 2897301
+ 30636 strings out of 480790
+ 764808 string characters out of 2897301
  1165500 words of memory out of 3000000
- 45998 multiletter control sequences out of 15000+200000
- 546157 words of font info for 79 fonts, out of 3000000 for 9000
+ 46005 multiletter control sequences out of 15000+200000
+ 547808 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,103p,889b,2630s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tct
@@ -3024,21 +3024,22 @@ rs/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb>
 r6.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmr7.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jdbar/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jdbar/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jdbar/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jdbar/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/User
-s/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-<C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxf
-ont/line10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on AnalisisDeVariableReal.pdf (185 pages, 3269093 bytes).
+public/amsfonts/cm/cmr9.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/jdbar/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/jdbar/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/jdbar/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/
+jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmt
+i8.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/latxfont/line10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on AnalisisDeVariableReal.pdf (185 pages, 3283264 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
+ 801 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
