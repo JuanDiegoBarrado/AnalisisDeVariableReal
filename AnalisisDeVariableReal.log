@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  20 SEP 2021 11:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  23 SEP 2021 11:22
 entering extended mode
 **./AnalisisDeVariableReal.tex
 (AnalisisDeVariableReal.tex
@@ -1126,48 +1126,51 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [1
 
 
-{C:/Users/jdbar/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
+{C:/Users/jdbar/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Overfull \hbox (5.53996pt too wide) in paragraph at lines 49--50
+[]\OT1/cmr/m/n/10 Anali-sis de Va-ria-ble Real \TS1/cmr/m/n/10 � \OT1/cmr/m/n/
+10 2021 by Juan Die-go Ba-rra-do & Iker Mu~noz is li-cen-sed un-der Attribution
+-
+ []
 
-]
+[2]
 
-Package xcolor Warning: Incompatible color definition on input line 51.
+Package xcolor Warning: Incompatible color definition on input line 54.
 
 
-Overfull \hbox (13.41162pt too wide) in paragraph at lines 51--51
+Overfull \hbox (13.41162pt too wide) in paragraph at lines 54--54
 |\OT1/cmr/bx/n/24.88 INTRODUCCI[]ON A CON-JUN-TOS
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 52.
+Package xcolor Warning: Incompatible color definition on input line 55.
 
 
-Package xcolor Warning: Incompatible color definition on input line 54.
+Package xcolor Warning: Incompatible color definition on input line 57.
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-2.
+5.
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
 
 
-Package xcolor Warning: Incompatible color definition on input line 69.
+Package xcolor Warning: Incompatible color definition on input line 72.
 
-<./fotos/producto cartesiano.jpg, id=42, 782.925pt x 344.03531pt>
+<./fotos/producto cartesiano.jpg, id=43, 782.925pt x 344.03531pt>
 File: ./fotos/producto cartesiano.jpg Graphic file (type jpg)
 <use ./fotos/producto cartesiano.jpg>
-Package pdftex.def Info: ./fotos/producto cartesiano.jpg  used on input line 76
+Package pdftex.def Info: ./fotos/producto cartesiano.jpg  used on input line 79
 .
 (pdftex.def)             Requested size: 391.46155pt x 172.01723pt.
 [1
 
+
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 79.
-
-
-Package xcolor Warning: Incompatible color definition on input line 84.
+Package xcolor Warning: Incompatible color definition on input line 82.
 
 
 Package xcolor Warning: Incompatible color definition on input line 87.
@@ -1176,14 +1179,17 @@ Package xcolor Warning: Incompatible color definition on input line 87.
 Package xcolor Warning: Incompatible color definition on input line 90.
 
 
-Package xcolor Warning: Incompatible color definition on input line 94.
+Package xcolor Warning: Incompatible color definition on input line 93.
+
+
+Package xcolor Warning: Incompatible color definition on input line 97.
 
 [2 <./fotos/producto cartesiano.jpg>]
 
-Package xcolor Warning: Incompatible color definition on input line 102.
+Package xcolor Warning: Incompatible color definition on input line 105.
 
 
-Overfull \hbox (1.78139pt too wide) detected at line 129
+Overfull \hbox (1.78139pt too wide) detected at line 132
 \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 )? \OMS/
 cmsy/m/n/10 ! \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 y \OT1/cmr/
 m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
@@ -1193,182 +1199,182 @@ m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 131.
+Package xcolor Warning: Incompatible color definition on input line 134.
 
 [3]
 
-Package xcolor Warning: Incompatible color definition on input line 143.
-
-
-Package xcolor Warning: Incompatible color definition on input line 147.
+Package xcolor Warning: Incompatible color definition on input line 146.
 
 
 Package xcolor Warning: Incompatible color definition on input line 150.
 
-<./fotos/nxn numerable.png, id=62, 668.4975pt x 411.5375pt>
+
+Package xcolor Warning: Incompatible color definition on input line 153.
+
+<./fotos/nxn numerable.png, id=63, 668.4975pt x 411.5375pt>
 File: ./fotos/nxn numerable.png Graphic file (type png)
 <use ./fotos/nxn numerable.png>
-Package pdftex.def Info: ./fotos/nxn numerable.png  used on input line 156.
+Package pdftex.def Info: ./fotos/nxn numerable.png  used on input line 159.
 (pdftex.def)             Requested size: 167.12396pt x 102.88412pt.
 
-Package xcolor Warning: Incompatible color definition on input line 159.
+Package xcolor Warning: Incompatible color definition on input line 162.
 
 [4 <./fotos/nxn numerable.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 163.
+Package xcolor Warning: Incompatible color definition on input line 166.
 
 
-Package xcolor Warning: Incompatible color definition on input line 167.
+Package xcolor Warning: Incompatible color definition on input line 170.
 
 
-Package xcolor Warning: Incompatible color definition on input line 178.
+Package xcolor Warning: Incompatible color definition on input line 181.
 
 
-Package xcolor Warning: Incompatible color definition on input line 199.
+Package xcolor Warning: Incompatible color definition on input line 202.
 
 [5]
 
-Package xcolor Warning: Incompatible color definition on input line 210.
+Package xcolor Warning: Incompatible color definition on input line 213.
 
 [6]
 
-Package xcolor Warning: Incompatible color definition on input line 221.
+Package xcolor Warning: Incompatible color definition on input line 224.
 
 
-Package xcolor Warning: Incompatible color definition on input line 226.
+Package xcolor Warning: Incompatible color definition on input line 229.
 
 
-Package xcolor Warning: Incompatible color definition on input line 228.
+Package xcolor Warning: Incompatible color definition on input line 231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 247.
+Package xcolor Warning: Incompatible color definition on input line 250.
 
 [7
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 271.
-
-
 Package xcolor Warning: Incompatible color definition on input line 274.
+
+
+Package xcolor Warning: Incompatible color definition on input line 277.
 
 [8]
 
-Package xcolor Warning: Incompatible color definition on input line 347.
+Package xcolor Warning: Incompatible color definition on input line 350.
 
 [9]
 
-Package xcolor Warning: Incompatible color definition on input line 363.
+Package xcolor Warning: Incompatible color definition on input line 366.
 
 [10] [11]
 
-Package xcolor Warning: Incompatible color definition on input line 489.
+Package xcolor Warning: Incompatible color definition on input line 492.
 
 [12]
 
-Package xcolor Warning: Incompatible color definition on input line 506.
+Package xcolor Warning: Incompatible color definition on input line 509.
 
 
-Package xcolor Warning: Incompatible color definition on input line 508.
+Package xcolor Warning: Incompatible color definition on input line 511.
 
 
-Package xcolor Warning: Incompatible color definition on input line 526.
+Package xcolor Warning: Incompatible color definition on input line 529.
 
 [13]
 
-Package xcolor Warning: Incompatible color definition on input line 542.
+Package xcolor Warning: Incompatible color definition on input line 545.
 
 
-Package xcolor Warning: Incompatible color definition on input line 553.
+Package xcolor Warning: Incompatible color definition on input line 556.
 
 [14]
 
-Package xcolor Warning: Incompatible color definition on input line 562.
+Package xcolor Warning: Incompatible color definition on input line 565.
 
 
-Package xcolor Warning: Incompatible color definition on input line 573.
+Package xcolor Warning: Incompatible color definition on input line 576.
 
 
-Package xcolor Warning: Incompatible color definition on input line 597.
+Package xcolor Warning: Incompatible color definition on input line 600.
 
 
-Package xcolor Warning: Incompatible color definition on input line 604.
+Package xcolor Warning: Incompatible color definition on input line 607.
 
 [15]
 
-Package xcolor Warning: Incompatible color definition on input line 618.
+Package xcolor Warning: Incompatible color definition on input line 621.
 
 
-Package xcolor Warning: Incompatible color definition on input line 622.
+Package xcolor Warning: Incompatible color definition on input line 625.
 
 
-Package xcolor Warning: Incompatible color definition on input line 640.
-
-
-Package xcolor Warning: Incompatible color definition on input line 648.
+Package xcolor Warning: Incompatible color definition on input line 643.
 
 
 Package xcolor Warning: Incompatible color definition on input line 651.
 
+
+Package xcolor Warning: Incompatible color definition on input line 654.
+
 [16]
-
-Package xcolor Warning: Incompatible color definition on input line 658.
-
-
-Package xcolor Warning: Incompatible color definition on input line 660.
-
 
 Package xcolor Warning: Incompatible color definition on input line 661.
 
 
-Package xcolor Warning: Incompatible color definition on input line 673.
+Package xcolor Warning: Incompatible color definition on input line 663.
 
 
-Package xcolor Warning: Incompatible color definition on input line 685.
+Package xcolor Warning: Incompatible color definition on input line 664.
+
+
+Package xcolor Warning: Incompatible color definition on input line 676.
+
+
+Package xcolor Warning: Incompatible color definition on input line 688.
 
 [17]
 
-Package xcolor Warning: Incompatible color definition on input line 698.
+Package xcolor Warning: Incompatible color definition on input line 701.
 
 
-Package xcolor Warning: Incompatible color definition on input line 707.
+Package xcolor Warning: Incompatible color definition on input line 710.
 
 
-Package xcolor Warning: Incompatible color definition on input line 725.
+Package xcolor Warning: Incompatible color definition on input line 728.
 
 [18]
 
-Package xcolor Warning: Incompatible color definition on input line 753.
+Package xcolor Warning: Incompatible color definition on input line 756.
 
 
-Package xcolor Warning: Incompatible color definition on input line 759.
+Package xcolor Warning: Incompatible color definition on input line 762.
 
 
-Package xcolor Warning: Incompatible color definition on input line 767.
+Package xcolor Warning: Incompatible color definition on input line 770.
 
 [19]
 
-Package xcolor Warning: Incompatible color definition on input line 775.
+Package xcolor Warning: Incompatible color definition on input line 778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 787.
+Package xcolor Warning: Incompatible color definition on input line 790.
 
 
-Package xcolor Warning: Incompatible color definition on input line 805.
+Package xcolor Warning: Incompatible color definition on input line 808.
 
 [20]
 
-Package xcolor Warning: Incompatible color definition on input line 810.
+Package xcolor Warning: Incompatible color definition on input line 813.
 
 
-Package xcolor Warning: Incompatible color definition on input line 843.
+Package xcolor Warning: Incompatible color definition on input line 846.
 
 [21]
 
-Package xcolor Warning: Incompatible color definition on input line 879.
+Package xcolor Warning: Incompatible color definition on input line 882.
 
 [22]
-Overfull \hbox (20.30946pt too wide) detected at line 921
+Overfull \hbox (20.30946pt too wide) detected at line 924
 \OML/cmm/m/it/10 r[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 h [] > a \OMS/cmsy/m/n
 /10 , \OML/cmm/m/it/10 r[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a > h [] \OMS/cm
 sy/m/n/10 , \OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 < h < [][]h \OMS/cmsy/m/n/10  \
@@ -1376,17 +1382,17 @@ OT1/cmr/m/n/10 1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 926.
+Package xcolor Warning: Incompatible color definition on input line 929.
 
 
-Package xcolor Warning: Incompatible color definition on input line 931.
+Package xcolor Warning: Incompatible color definition on input line 934.
 
 [23]
 
-Package xcolor Warning: Incompatible color definition on input line 936.
+Package xcolor Warning: Incompatible color definition on input line 939.
 
 
-Overfull \hbox (46.14114pt too wide) detected at line 942
+Overfull \hbox (46.14114pt too wide) detected at line 945
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; x > 
 \OT1/cmr/m/n/10 1 : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/
 msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 y > x[] \OMS/cmsy/m/n/10 ) f\OM
@@ -1398,10 +1404,10 @@ L/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[] ) 9 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 949.
+Package xcolor Warning: Incompatible color definition on input line 952.
 
 [24]
-Overfull \hbox (33.58252pt too wide) detected at line 1010
+Overfull \hbox (33.58252pt too wide) detected at line 1013
 \OML/cmm/m/it/10 x < \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 x >
  \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ) 9\OT1/cmr/m/n/10 !\OML/cmm/m/it/10 n \OMS
 /cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/cmsy/m
@@ -1416,23 +1422,23 @@ it/10 n \OT1/cmr/m/n/10 + 1 = \OML/cmm/m/it/10 m
 
 [25]
 
-Package xcolor Warning: Incompatible color definition on input line 1030.
+Package xcolor Warning: Incompatible color definition on input line 1033.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1040.
+Package xcolor Warning: Incompatible color definition on input line 1043.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1047.
+Package xcolor Warning: Incompatible color definition on input line 1050.
 
 [26]
-<./fotos/Intervalos encajados.jpg, id=145, 692.5875pt x 228.10219pt>
+<./fotos/Intervalos encajados.jpg, id=146, 692.5875pt x 228.10219pt>
 File: ./fotos/Intervalos encajados.jpg Graphic file (type jpg)
 <use ./fotos/Intervalos encajados.jpg>
 Package pdftex.def Info: ./fotos/Intervalos encajados.jpg  used on input line 1
-053.
+056.
 (pdftex.def)             Requested size: 138.51505pt x 45.61961pt.
 
-Overfull \hbox (36.12018pt too wide) detected at line 1075
+Overfull \hbox (36.12018pt too wide) detected at line 1078
 \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ; \OT
 1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/
 cmm/m/it/10  \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm
@@ -1447,95 +1453,95 @@ U/msb/m/n/10 N \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 [] \OML
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1078.
+Package xcolor Warning: Incompatible color definition on input line 1081.
 
 [27 <./fotos/Intervalos encajados.jpg>]
-<./fotos/corolario cantor.jpg, id=149, 1051.67906pt x 433.62pt>
+<./fotos/corolario cantor.jpg, id=150, 1051.67906pt x 433.62pt>
 File: ./fotos/corolario cantor.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor.jpg>
-Package pdftex.def Info: ./fotos/corolario cantor.jpg  used on input line 1092.
+Package pdftex.def Info: ./fotos/corolario cantor.jpg  used on input line 1095.
 
 (pdftex.def)             Requested size: 262.91911pt x 108.40472pt.
-<./fotos/corolario cantor 2.jpg, id=150, 707.64375pt x 427.5975pt>
+<./fotos/corolario cantor 2.jpg, id=151, 707.64375pt x 427.5975pt>
 File: ./fotos/corolario cantor 2.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor 2.jpg>
 Package pdftex.def Info: ./fotos/corolario cantor 2.jpg  used on input line 110
-6.
+9.
 (pdftex.def)             Requested size: 176.9105pt x 106.89911pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1114.
+Package xcolor Warning: Incompatible color definition on input line 1117.
 
 [28 <./fotos/corolario cantor.jpg> <./fotos/corolario cantor 2.jpg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1124.
+Package xcolor Warning: Incompatible color definition on input line 1127.
 
 [29] [30
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 1133.
+Package xcolor Warning: Incompatible color definition on input line 1136.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1134.
+Package xcolor Warning: Incompatible color definition on input line 1137.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1144.
+Package xcolor Warning: Incompatible color definition on input line 1147.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1158.
+Package xcolor Warning: Incompatible color definition on input line 1161.
 
 [31]
 <./fotos/convergente.png, id=166, 678.28406pt x 172.39406pt>
 File: ./fotos/convergente.png Graphic file (type png)
 <use ./fotos/convergente.png>
-Package pdftex.def Info: ./fotos/convergente.png  used on input line 1173.
+Package pdftex.def Info: ./fotos/convergente.png  used on input line 1176.
 (pdftex.def)             Requested size: 237.40297pt x 60.33882pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1176.
+Package xcolor Warning: Incompatible color definition on input line 1179.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1182.
+Package xcolor Warning: Incompatible color definition on input line 1185.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1196.
+Package xcolor Warning: Incompatible color definition on input line 1199.
 
 [32 <./fotos/convergente.png>]
 <./fotos/x a cero.jpeg, id=170, 2248.4pt x 634.37pt>
 File: ./fotos/x a cero.jpeg Graphic file (type jpg)
 <use ./fotos/x a cero.jpeg>
-Package pdftex.def Info: ./fotos/x a cero.jpeg  used on input line 1249.
+Package pdftex.def Info: ./fotos/x a cero.jpeg  used on input line 1252.
 (pdftex.def)             Requested size: 112.42657pt x 31.72035pt.
  [33]
 
-Package xcolor Warning: Incompatible color definition on input line 1273.
+Package xcolor Warning: Incompatible color definition on input line 1276.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1280.
+Package xcolor Warning: Incompatible color definition on input line 1283.
 
 [34 <./fotos/x a cero.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1301.
+Package xcolor Warning: Incompatible color definition on input line 1304.
 
 <./fotos/limite negativo.jpeg, id=177, 807.015pt x 287.57437pt>
 File: ./fotos/limite negativo.jpeg Graphic file (type jpg)
 <use ./fotos/limite negativo.jpeg>
-Package pdftex.def Info: ./fotos/limite negativo.jpeg  used on input line 1318.
+Package pdftex.def Info: ./fotos/limite negativo.jpeg  used on input line 1321.
 
 (pdftex.def)             Requested size: 201.75325pt x 71.89342pt.
 [35 <./fotos/limite negativo.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1331.
+Package xcolor Warning: Incompatible color definition on input line 1334.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1338.
+Package xcolor Warning: Incompatible color definition on input line 1341.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1356.
+Package xcolor Warning: Incompatible color definition on input line 1359.
 
 [36]
-Overfull \hbox (32.56601pt too wide) detected at line 1375
+Overfull \hbox (32.56601pt too wide) detected at line 1378
 []\OML/cmm/m/it/10 M > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []" \OT1/cmr/m/n/10 
 = [] \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 
 N \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OM
@@ -1547,7 +1553,7 @@ m/it/10 x[] < " \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 M < []
  []
 
 
-Overfull \hbox (66.45485pt too wide) detected at line 1378
+Overfull \hbox (66.45485pt too wide) detected at line 1381
 []\OML/cmm/m/it/10 M > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []" \OT1/cmr/m/n/10 
 = [] \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 
 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\OML
@@ -1560,17 +1566,17 @@ m/m/it/10 M
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1381.
+Package xcolor Warning: Incompatible color definition on input line 1384.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1414.
+Package xcolor Warning: Incompatible color definition on input line 1417.
 
 [37]
 
-Package xcolor Warning: Incompatible color definition on input line 1422.
+Package xcolor Warning: Incompatible color definition on input line 1425.
 
 
-Overfull \hbox (70.70465pt too wide) detected at line 1443
+Overfull \hbox (70.70465pt too wide) detected at line 1446
 []\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10  \OT1/cmr/m/n/10 : 0 \OML/cmm/m/it/10 < 
  \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\O
 ML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OMS/cmsy/m/n/10 ) []  [] 
@@ -1582,7 +1588,7 @@ msy/m/n/10 2 \U/msb/m/n/10 N\OMS/cmsy/m/n/10 g[]
  []
 
 
-Overfull \hbox (17.98872pt too wide) detected at line 1452
+Overfull \hbox (17.98872pt too wide) detected at line 1455
 \OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 < \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 r\OMS/c
 msy/m/n/10 j \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m
 /n/10 0 \OMS/cmsy/m/n/10  j\OML/cmm/m/it/10 r[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n
@@ -1593,7 +1599,7 @@ L/cmm/m/it/10 r[] \OT1/cmr/m/n/10 = 0
  []
 
 [38]
-Overfull \hbox (8.34692pt too wide) detected at line 1479
+Overfull \hbox (8.34692pt too wide) detected at line 1482
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) [] 
  \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) [] \OT1/cmr/m/n/10 = 1 + \OML/cmm/m/it/10
  k[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 k[] > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/1
@@ -1603,7 +1609,7 @@ L/cmm/m/it/10 k[] \OT1/cmr/m/n/10 = 1 + []
  []
 
 
-Overfull \hbox (30.04227pt too wide) detected at line 1480
+Overfull \hbox (30.04227pt too wide) detected at line 1483
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 1 \OMS
 /cmsy/m/n/10  []  \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 , \OT1/cmr/m/n/10 0 \
 OMS/cmsy/m/n/10  \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/1
@@ -1613,17 +1619,17 @@ T1/cmr/m/n/10 1 + 0 = 1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1486.
+Package xcolor Warning: Incompatible color definition on input line 1489.
 
 [39]
-Overfull \hbox (4.106pt too wide) detected at line 1518
+Overfull \hbox (4.106pt too wide) detected at line 1521
 [] \OT1/cmr/m/n/10 + [] [] [] [] + [] [] \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 n[]
  \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/c
 msy/m/n/10  \OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 : [] \OML/cmm/m/it/10 < []
  []
 
 
-Overfull \hbox (30.37665pt too wide) detected at line 1524
+Overfull \hbox (30.37665pt too wide) detected at line 1527
 [] \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 M [] \OMS/cmsy/m/n/10 8
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 : []
  \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10
@@ -1634,7 +1640,7 @@ y[]\OT1/cmr/m/n/10 ) = [] + 2\OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10  \OT1/cmr/m
  []
 
 
-Overfull \hbox (1.43906pt too wide) detected at line 1525
+Overfull \hbox (1.43906pt too wide) detected at line 1528
 \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 + [] = 2\OML/cmm/m/it/10 
 M \OT1/cmr/m/n/10 + [] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 M[]
  [] \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \
@@ -1645,42 +1651,42 @@ OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n[] \OT
 
 [40]
 
-Package xcolor Warning: Incompatible color definition on input line 1549.
+Package xcolor Warning: Incompatible color definition on input line 1552.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1554.
+Package xcolor Warning: Incompatible color definition on input line 1557.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1569.
+Package xcolor Warning: Incompatible color definition on input line 1572.
 
 [41]
 <./fotos/proposicion subsucesiones.jpeg, id=201, 928.21782pt x 536.0025pt>
 File: ./fotos/proposicion subsucesiones.jpeg Graphic file (type jpg)
 <use ./fotos/proposicion subsucesiones.jpeg>
 Package pdftex.def Info: ./fotos/proposicion subsucesiones.jpeg  used on input 
-line 1587.
+line 1590.
 (pdftex.def)             Requested size: 139.22665pt x 80.3969pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1604.
+Package xcolor Warning: Incompatible color definition on input line 1607.
 
 [42 <./fotos/proposicion subsucesiones.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1622.
+Package xcolor Warning: Incompatible color definition on input line 1625.
 
 <./fotos/Cauchy 1.jpeg, id=205, 889.07156pt x 500.62032pt>
 File: ./fotos/Cauchy 1.jpeg Graphic file (type jpg)
 <use ./fotos/Cauchy 1.jpeg>
-Package pdftex.def Info: ./fotos/Cauchy 1.jpeg  used on input line 1629.
+Package pdftex.def Info: ./fotos/Cauchy 1.jpeg  used on input line 1632.
 (pdftex.def)             Requested size: 133.35498pt x 75.0898pt.
 
-Package xcolor Warning: Incompatible color definition on input line 1632.
+Package xcolor Warning: Incompatible color definition on input line 1635.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1638.
+Package xcolor Warning: Incompatible color definition on input line 1641.
 
 [43 <./fotos/Cauchy 1.jpeg>]
-Overfull \hbox (30.87723pt too wide) detected at line 1656
+Overfull \hbox (30.87723pt too wide) detected at line 1659
 []\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 9\O
 ML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cm
 m/m/it/10 k \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 : \OMS/cmsy
@@ -1693,13 +1699,13 @@ j\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1665.
+Package xcolor Warning: Incompatible color definition on input line 1668.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1675.
+Package xcolor Warning: Incompatible color definition on input line 1678.
 
 [44]
-Overfull \hbox (44.32188pt too wide) detected at line 1687
+Overfull \hbox (44.32188pt too wide) detected at line 1690
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 l \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 " \OM
 S/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \O
 MS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \
@@ -1712,30 +1718,30 @@ m/n/10 + \OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ) [] )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1691.
+Package xcolor Warning: Incompatible color definition on input line 1694.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1697.
+Package xcolor Warning: Incompatible color definition on input line 1700.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1704.
+Package xcolor Warning: Incompatible color definition on input line 1707.
 
 [45]
 
-Package xcolor Warning: Incompatible color definition on input line 1717.
+Package xcolor Warning: Incompatible color definition on input line 1720.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1718.
+Package xcolor Warning: Incompatible color definition on input line 1721.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1730.
+Package xcolor Warning: Incompatible color definition on input line 1733.
 
 [46]
 
-Package xcolor Warning: Incompatible color definition on input line 1746.
+Package xcolor Warning: Incompatible color definition on input line 1749.
 
 
-Overfull \hbox (36.71242pt too wide) detected at line 1752
+Overfull \hbox (36.71242pt too wide) detected at line 1755
 \OML/cmm/m/it/10 z[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 z[] \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10
@@ -1746,75 +1752,75 @@ sy/m/n/10  \OML/cmm/m/it/10 y[] [] a[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[]
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1755.
+Package xcolor Warning: Incompatible color definition on input line 1758.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1765.
+Package xcolor Warning: Incompatible color definition on input line 1768.
 
 [47]
 
-Package xcolor Warning: Incompatible color definition on input line 1777.
+Package xcolor Warning: Incompatible color definition on input line 1780.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1779.
+Package xcolor Warning: Incompatible color definition on input line 1782.
 
 [48]
 
-Package xcolor Warning: Incompatible color definition on input line 1811.
+Package xcolor Warning: Incompatible color definition on input line 1814.
 
 [49]
 
-Package xcolor Warning: Incompatible color definition on input line 1831.
+Package xcolor Warning: Incompatible color definition on input line 1834.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1845.
+Package xcolor Warning: Incompatible color definition on input line 1848.
 
 [50]
 
-Package xcolor Warning: Incompatible color definition on input line 1874.
+Package xcolor Warning: Incompatible color definition on input line 1877.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1881.
+Package xcolor Warning: Incompatible color definition on input line 1884.
 
 [51] [52]
 
-Package xcolor Warning: Incompatible color definition on input line 1929.
+Package xcolor Warning: Incompatible color definition on input line 1932.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1934.
+Package xcolor Warning: Incompatible color definition on input line 1937.
 
 [53]
 
-Package xcolor Warning: Incompatible color definition on input line 1970.
+Package xcolor Warning: Incompatible color definition on input line 1973.
 
 [54] [55] [56
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 1998.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1999.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2000.
-
-
 Package xcolor Warning: Incompatible color definition on input line 2001.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2002.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2003.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2004.
 
 <./fotos/Cauchy 2.jpeg, id=251, 838.63312pt x 280.79906pt>
 File: ./fotos/Cauchy 2.jpeg Graphic file (type jpg)
 <use ./fotos/Cauchy 2.jpeg>
-Package pdftex.def Info: ./fotos/Cauchy 2.jpeg  used on input line 2007.
+Package pdftex.def Info: ./fotos/Cauchy 2.jpeg  used on input line 2010.
 (pdftex.def)             Requested size: 167.72365pt x 56.15881pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2012.
+Package xcolor Warning: Incompatible color definition on input line 2015.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2018.
+Package xcolor Warning: Incompatible color definition on input line 2021.
 
 
-Overfull \hbox (48.43878pt too wide) detected at line 2025
+Overfull \hbox (48.43878pt too wide) detected at line 2028
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D \O
 T1/cmr/m/n/10 : \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2 [] \OT1/cmr/m/n/10 : \O
 ML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OM
@@ -1826,28 +1832,28 @@ x[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
 
 [57 <./fotos/Cauchy 2.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2033.
+Package xcolor Warning: Incompatible color definition on input line 2036.
 
 <./fotos/limite.jpg, id=255, 413.29407pt x 261.22594pt>
 File: ./fotos/limite.jpg Graphic file (type jpg)
 <use ./fotos/limite.jpg>
-Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2043.
+Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2046.
 (pdftex.def)             Requested size: 165.31468pt x 104.48851pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2049.
+Package xcolor Warning: Incompatible color definition on input line 2052.
 
 [58 <./fotos/limite.jpg>]
 <./fotos/limite doble.jpeg, id=259, 984.67876pt x 310.15875pt>
 File: ./fotos/limite doble.jpeg Graphic file (type jpg)
 <use ./fotos/limite doble.jpeg>
-Package pdftex.def Info: ./fotos/limite doble.jpeg  used on input line 2080.
+Package pdftex.def Info: ./fotos/limite doble.jpeg  used on input line 2083.
 (pdftex.def)             Requested size: 295.4059pt x 93.04834pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2093.
+Package xcolor Warning: Incompatible color definition on input line 2096.
 
 [59 <./fotos/limite doble.jpeg>]
-Overfull \hbox (4.36256pt too wide) detected at line 2137
+Overfull \hbox (4.36256pt too wide) detected at line 2140
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 : \OMS/cmsy/m/n/10 9\O
 ML/cmm/m/it/10  > \OT1/cmr/m/n/10 0 : \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \O
 ML/cmm/m/it/10 D \OMS/cmsy/m/n/10 ^ j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML
@@ -1862,7 +1868,7 @@ n/10 j  [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 "
  []
 
 [60]
-Overfull \hbox (47.83014pt too wide) detected at line 2153
+Overfull \hbox (47.83014pt too wide) detected at line 2156
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 [] > \OT1/cmr/m/n/10 0 : [] \OMS/cmsy/m/n/1
 0 ) j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OM
 S/cmsy/m/n/10   \OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < [] \OMS
@@ -1875,43 +1881,43 @@ cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  j\OML/cmm/m
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2160.
+Package xcolor Warning: Incompatible color definition on input line 2163.
 
 [61]
 
-Package xcolor Warning: Incompatible color definition on input line 2191.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2195.
+Package xcolor Warning: Incompatible color definition on input line 2194.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2198.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2199.
+Package xcolor Warning: Incompatible color definition on input line 2201.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2208.
+Package xcolor Warning: Incompatible color definition on input line 2202.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2211.
 
 [62]
 
-Package xcolor Warning: Incompatible color definition on input line 2232.
-
-
 Package xcolor Warning: Incompatible color definition on input line 2235.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2238.
 
 [63]
 
-Package xcolor Warning: Incompatible color definition on input line 2262.
+Package xcolor Warning: Incompatible color definition on input line 2265.
 
 <./fotos/continuidad de composicion.jpeg, id=276, 847.66687pt x 282.30469pt>
 File: ./fotos/continuidad de composicion.jpeg Graphic file (type jpg)
 <use ./fotos/continuidad de composicion.jpeg>
 Package pdftex.def Info: ./fotos/continuidad de composicion.jpeg  used on input
- line 2278.
+ line 2281.
 (pdftex.def)             Requested size: 296.68785pt x 98.8081pt.
 
-Overfull \hbox (9.00485pt too wide) detected at line 2287
+Overfull \hbox (9.00485pt too wide) detected at line 2290
 []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OML/cmm/m/it/10
  D \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 x[] [] x[] [] f\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/i
@@ -1922,38 +1928,38 @@ mr/m/n/10 )) \OMS/cmsy/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2292.
+Package xcolor Warning: Incompatible color definition on input line 2295.
 
 [64 <./fotos/continuidad de composicion.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2314.
+Package xcolor Warning: Incompatible color definition on input line 2317.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2324.
+Package xcolor Warning: Incompatible color definition on input line 2327.
 
 [65]
 <./fotos/unicidad limite lateral.jpeg, id=284, 949.29657pt x 354.57469pt>
 File: ./fotos/unicidad limite lateral.jpeg Graphic file (type jpg)
 <use ./fotos/unicidad limite lateral.jpeg>
 Package pdftex.def Info: ./fotos/unicidad limite lateral.jpeg  used on input li
-ne 2353.
+ne 2356.
 (pdftex.def)             Requested size: 237.32356pt x 88.64345pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2358.
+Package xcolor Warning: Incompatible color definition on input line 2361.
 
 [66 <./fotos/unicidad limite lateral.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2385.
+Package xcolor Warning: Incompatible color definition on input line 2388.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2397.
+Package xcolor Warning: Incompatible color definition on input line 2400.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2413.
+Package xcolor Warning: Incompatible color definition on input line 2416.
 
 
-Overfull \hbox (2.31148pt too wide) detected at line 2426
+Overfull \hbox (2.31148pt too wide) detected at line 2429
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -1964,7 +1970,7 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 [67]
-Overfull \hbox (2.03372pt too wide) detected at line 2432
+Overfull \hbox (2.03372pt too wide) detected at line 2435
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -1975,40 +1981,40 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2435.
+Package xcolor Warning: Incompatible color definition on input line 2438.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2436.
+Package xcolor Warning: Incompatible color definition on input line 2439.
 
 [68]
 
-Package xcolor Warning: Incompatible color definition on input line 2461.
+Package xcolor Warning: Incompatible color definition on input line 2464.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2469.
+Package xcolor Warning: Incompatible color definition on input line 2472.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2477.
+Package xcolor Warning: Incompatible color definition on input line 2480.
 
 [69]
 
-Package xcolor Warning: Incompatible color definition on input line 2488.
+Package xcolor Warning: Incompatible color definition on input line 2491.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2495.
+Package xcolor Warning: Incompatible color definition on input line 2498.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2505.
+Package xcolor Warning: Incompatible color definition on input line 2508.
 
 [70]
 
-Package xcolor Warning: Incompatible color definition on input line 2530.
+Package xcolor Warning: Incompatible color definition on input line 2533.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2536.
+Package xcolor Warning: Incompatible color definition on input line 2539.
 
 
-Overfull \hbox (9.16077pt too wide) detected at line 2549
+Overfull \hbox (9.16077pt too wide) detected at line 2552
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x[]; x[] \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 
 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ] : \OML/cmm/m/it/10 x[] < x[] \OMS/cmsy/
 m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10
@@ -2026,7 +2032,7 @@ m/it/10 f[]
 File: ./fotos/inyectivas continuas son monotonas.jpeg Graphic file (type jpg)
 <use ./fotos/inyectivas continuas son monotonas.jpeg>
 Package pdftex.def Info: ./fotos/inyectivas continuas son monotonas.jpeg  used 
-on input line 2556.
+on input line 2559.
 (pdftex.def)             Requested size: 211.68712pt x 116.98499pt.
 [71]
 <./fotos/inyectividad a monotonia en continuas1.jpeg, id=306, 822.82407pt x 444
@@ -2035,47 +2041,47 @@ File: ./fotos/inyectividad a monotonia en continuas1.jpeg Graphic file (type jp
 g)
 <use ./fotos/inyectividad a monotonia en continuas1.jpeg>
 Package pdftex.def Info: ./fotos/inyectividad a monotonia en continuas1.jpeg  u
-sed on input line 2563.
+sed on input line 2566.
 (pdftex.def)             Requested size: 205.7055pt x 111.03957pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2577.
+Package xcolor Warning: Incompatible color definition on input line 2580.
 
 [72 <./fotos/inyectivas continuas son monotonas.jpeg> <./fotos/inyectividad a m
 onotonia en continuas1.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2598.
+Package xcolor Warning: Incompatible color definition on input line 2601.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2607.
+Package xcolor Warning: Incompatible color definition on input line 2610.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2608.
+Package xcolor Warning: Incompatible color definition on input line 2611.
 
 [73]
 
-Package xcolor Warning: Incompatible color definition on input line 2620.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2633.
+Package xcolor Warning: Incompatible color definition on input line 2623.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2636.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2639.
 
 [74] [75] [76
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 2659.
+Package xcolor Warning: Incompatible color definition on input line 2662.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2660.
+Package xcolor Warning: Incompatible color definition on input line 2663.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2661.
+Package xcolor Warning: Incompatible color definition on input line 2664.
 
 
-Overfull \hbox (20.56566pt too wide) detected at line 2668
+Overfull \hbox (20.56566pt too wide) detected at line 2671
 \OML/cmm/m/it/10 f[]c \OMS/cmsy/m/n/10 , 9 [] \OML/cmm/m/it/10 '\OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 L \OMS/cmsy/m/n/10 , 9
  [] \OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \O
@@ -2088,17 +2094,17 @@ m/m/it/10 <  \OMS/cmsy/m/n/10 ) j\OML/cmm/m/it/10 '\OT1/cmr/m/n/10 (\OML/cmm/m
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2678.
+Package xcolor Warning: Incompatible color definition on input line 2681.
 
 [77]
 
-Package xcolor Warning: Incompatible color definition on input line 2684.
+Package xcolor Warning: Incompatible color definition on input line 2687.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2690.
+Package xcolor Warning: Incompatible color definition on input line 2693.
 
 
-Overfull \hbox (18.38974pt too wide) detected at line 2704
+Overfull \hbox (18.38974pt too wide) detected at line 2707
 \OMS/cmsy/m/n/10 9 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 f\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )) = [] [] \OMS/cmsy/m/n/10  []\OT1/cmr
@@ -2112,83 +2118,83 @@ it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 c
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2706.
+Package xcolor Warning: Incompatible color definition on input line 2709.
 
 <./fotos/Interpretacion derivada.png, id=327, 351.20685pt x 199.69342pt>
 File: ./fotos/Interpretacion derivada.png Graphic file (type png)
 <use ./fotos/Interpretacion derivada.png>
 Package pdftex.def Info: ./fotos/Interpretacion derivada.png  used on input lin
-e 2710.
+e 2713.
 (pdftex.def)             Requested size: 224.7716pt x 127.80334pt.
 [78 <./fotos/Interpretacion derivada.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 2715.
+Package xcolor Warning: Incompatible color definition on input line 2718.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2716.
+Package xcolor Warning: Incompatible color definition on input line 2719.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2741.
+Package xcolor Warning: Incompatible color definition on input line 2744.
 
 [79]
 
-Package xcolor Warning: Incompatible color definition on input line 2764.
+Package xcolor Warning: Incompatible color definition on input line 2767.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2778.
+Package xcolor Warning: Incompatible color definition on input line 2781.
 
 [80]
 
-Package xcolor Warning: Incompatible color definition on input line 2794.
+Package xcolor Warning: Incompatible color definition on input line 2797.
 
 [81]
 
-Package xcolor Warning: Incompatible color definition on input line 2826.
+Package xcolor Warning: Incompatible color definition on input line 2829.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2827.
+Package xcolor Warning: Incompatible color definition on input line 2830.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2828.
-
-
-Package xcolor Warning: Incompatible color definition on input line 2833.
+Package xcolor Warning: Incompatible color definition on input line 2831.
 
 
 Package xcolor Warning: Incompatible color definition on input line 2836.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2844.
+Package xcolor Warning: Incompatible color definition on input line 2839.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2847.
 
 <./fotos/Teorema de Rolle.png, id=340, 285.91026pt x 231.07382pt>
 File: ./fotos/Teorema de Rolle.png Graphic file (type png)
 <use ./fotos/Teorema de Rolle.png>
-Package pdftex.def Info: ./fotos/Teorema de Rolle.png  used on input line 2849.
+Package pdftex.def Info: ./fotos/Teorema de Rolle.png  used on input line 2852.
 
 (pdftex.def)             Requested size: 257.31683pt x 207.9645pt.
 [82]
 
-Package xcolor Warning: Incompatible color definition on input line 2860.
+Package xcolor Warning: Incompatible color definition on input line 2863.
 
-
-Package xcolor Warning: Incompatible color definition on input line 2875.
-
-[83 <./fotos/Teorema de Rolle.png>]
 
 Package xcolor Warning: Incompatible color definition on input line 2878.
 
+[83 <./fotos/Teorema de Rolle.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 2903.
+Package xcolor Warning: Incompatible color definition on input line 2881.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2913.
+Package xcolor Warning: Incompatible color definition on input line 2906.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2916.
 
 [84]
 
-Package xcolor Warning: Incompatible color definition on input line 2935.
+Package xcolor Warning: Incompatible color definition on input line 2938.
 
 
-Overfull \hbox (51.38857pt too wide) detected at line 2946
+Overfull \hbox (51.38857pt too wide) detected at line 2949
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10  > \OT1/cmr/m/n/10 0 : 0 \OML/cmm/m/it/10 <
  \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\O
 MS/cmsy/m/n/10 j \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) [] \OML/cmm/m/it/10 < 
@@ -2199,70 +2205,70 @@ MS/cmsy/m/n/10 j \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) [] \OML/cmm/m/it/10 <
 
 [85]
 
-Package xcolor Warning: Incompatible color definition on input line 2949.
+Package xcolor Warning: Incompatible color definition on input line 2952.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2966.
+Package xcolor Warning: Incompatible color definition on input line 2969.
 
 [86]
 
-Package xcolor Warning: Incompatible color definition on input line 2984.
+Package xcolor Warning: Incompatible color definition on input line 2987.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2985.
+Package xcolor Warning: Incompatible color definition on input line 2988.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2990.
+Package xcolor Warning: Incompatible color definition on input line 2993.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3004.
+Package xcolor Warning: Incompatible color definition on input line 3007.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3014.
+Package xcolor Warning: Incompatible color definition on input line 3017.
 
 [87] [88]
 
-Package xcolor Warning: Incompatible color definition on input line 3055.
+Package xcolor Warning: Incompatible color definition on input line 3058.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3063.
+Package xcolor Warning: Incompatible color definition on input line 3066.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3073.
+Package xcolor Warning: Incompatible color definition on input line 3076.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3074.
+Package xcolor Warning: Incompatible color definition on input line 3077.
 
 <./fotos/polinomio de taylor 1.png, id=363, 272.62607pt x 151.17612pt>
 File: ./fotos/polinomio de taylor 1.png Graphic file (type png)
 <use ./fotos/polinomio de taylor 1.png>
 Package pdftex.def Info: ./fotos/polinomio de taylor 1.png  used on input line 
-3078.
+3081.
 (pdftex.def)             Requested size: 245.36119pt x 136.05724pt.
 [89 <./fotos/polinomio de taylor 1.png>]
 <./fotos/de taylor 2.png, id=370, 814.242pt x 470.9595pt>
 File: ./fotos/de taylor 2.png Graphic file (type png)
 <use ./fotos/de taylor 2.png>
-Package pdftex.def Info: ./fotos/de taylor 2.png  used on input line 3082.
+Package pdftex.def Info: ./fotos/de taylor 2.png  used on input line 3085.
 (pdftex.def)             Requested size: 203.56pt x 117.73958pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3102.
+Package xcolor Warning: Incompatible color definition on input line 3105.
 
 [90 <./fotos/de taylor 2.png>]
-Overfull \hbox (18.44788pt too wide) detected at line 3116
+Overfull \hbox (18.44788pt too wide) detected at line 3119
 \OML/cmm/m/it/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OMS
 /cmsy/m/n/10   []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3125.
+Package xcolor Warning: Incompatible color definition on input line 3128.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3137.
+Package xcolor Warning: Incompatible color definition on input line 3140.
 
 [91]
-Overfull \hbox (16.85695pt too wide) detected at line 3149
+Overfull \hbox (16.85695pt too wide) detected at line 3152
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ; \OML/cmm/m/i
 t/10 x[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/
@@ -2275,10 +2281,10 @@ msy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) + [] + [](\OML/cmm/m/it/10 x
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3167.
+Package xcolor Warning: Incompatible color definition on input line 3170.
 
 [92]
-Overfull \hbox (8.16663pt too wide) detected at line 3186
+Overfull \hbox (8.16663pt too wide) detected at line 3189
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/
 cmr/m/n/10 ; \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/
 m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = (\OML/cmm/m/i
@@ -2287,21 +2293,21 @@ t/10 p[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it
  []
 
 
-Overfull \hbox (19.5811pt too wide) detected at line 3198
+Overfull \hbox (19.5811pt too wide) detected at line 3201
 \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3201.
+Package xcolor Warning: Incompatible color definition on input line 3204.
 
 [93]
 <./fotos/convexidad.png, id=384, 341.85762pt x 189.56627pt>
 File: ./fotos/convexidad.png Graphic file (type png)
 <use ./fotos/convexidad.png>
-Package pdftex.def Info: ./fotos/convexidad.png  used on input line 3205.
+Package pdftex.def Info: ./fotos/convexidad.png  used on input line 3208.
 (pdftex.def)             Requested size: 239.29869pt x 132.69547pt.
 
-Overfull \hbox (5.95142pt too wide) detected at line 3214
+Overfull \hbox (5.95142pt too wide) detected at line 3217
 \OML/cmm/m/it/10 tx[] \OT1/cmr/m/n/10 + (1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 
 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \
 OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 tx[] 
@@ -2315,18 +2321,18 @@ MS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 tx[]
 <./fotos/convexidad 2.png, id=385, 801.59476pt x 416.15475pt>
 File: ./fotos/convexidad 2.png Graphic file (type png)
 <use ./fotos/convexidad 2.png>
-Package pdftex.def Info: ./fotos/convexidad 2.png  used on input line 3222.
+Package pdftex.def Info: ./fotos/convexidad 2.png  used on input line 3225.
 (pdftex.def)             Requested size: 240.48029pt x 124.84738pt.
 
-Package xcolor Warning: Incompatible color definition on input line 3227.
+Package xcolor Warning: Incompatible color definition on input line 3230.
 
 [94 <./fotos/convexidad.png> <./fotos/convexidad 2.png>]
-Overfull \hbox (1.45576pt too wide) detected at line 3244
+Overfull \hbox (1.45576pt too wide) detected at line 3247
 [] \OMS/cmsy/m/n/10 ) [] )
  []
 
 
-Overfull \hbox (28.03539pt too wide) detected at line 3245
+Overfull \hbox (28.03539pt too wide) detected at line 3248
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 tf\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1
 /cmr/m/n/10 ) + (1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/c
 mm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/
@@ -2341,7 +2347,7 @@ m/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n
  []
 
 
-Overfull \hbox (16.50769pt too wide) detected at line 3252
+Overfull \hbox (16.50769pt too wide) detected at line 3255
 \OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10   \
 OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 + \O
 ML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cm
@@ -2357,62 +2363,62 @@ n/10  \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (28.00632pt too wide) detected at line 3258
+Overfull \hbox (28.00632pt too wide) detected at line 3261
 [] [] \OT1/cmr/m/n/10 = [] [] =
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3262.
+Package xcolor Warning: Incompatible color definition on input line 3265.
 
 [95]
 <./fotos/metodo Newton.png, id=395, 213.11478pt x 127.05876pt>
 File: ./fotos/metodo Newton.png Graphic file (type png)
 <use ./fotos/metodo Newton.png>
-Package pdftex.def Info: ./fotos/metodo Newton.png  used on input line 3265.
+Package pdftex.def Info: ./fotos/metodo Newton.png  used on input line 3268.
 (pdftex.def)             Requested size: 340.98409pt x 203.29428pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3274.
+Package xcolor Warning: Incompatible color definition on input line 3277.
 
 [96 <./fotos/metodo Newton.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3308.
+Package xcolor Warning: Incompatible color definition on input line 3311.
 
 [97] [98
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 3315.
+Package xcolor Warning: Incompatible color definition on input line 3318.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3316.
+Package xcolor Warning: Incompatible color definition on input line 3319.
 
 <./fotos/area facil.png, id=406, 319.20137pt x 190.30745pt>
 File: ./fotos/area facil.png Graphic file (type png)
 <use ./fotos/area facil.png>
-Package pdftex.def Info: ./fotos/area facil.png  used on input line 3322.
+Package pdftex.def Info: ./fotos/area facil.png  used on input line 3325.
 (pdftex.def)             Requested size: 255.36143pt x 152.24615pt.
 <./fotos/integral de curvas.png, id=407, 618.31pt x 344.28625pt>
 File: ./fotos/integral de curvas.png Graphic file (type png)
 <use ./fotos/integral de curvas.png>
-Package pdftex.def Info: ./fotos/integral de curvas.png  used on input line 332
-8.
+Package pdftex.def Info: ./fotos/integral de curvas.png  used on input line 333
+1.
 (pdftex.def)             Requested size: 247.31961pt x 137.71205pt.
 [99 <./fotos/area facil.png> <./fotos/integral de curvas.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3333.
+Package xcolor Warning: Incompatible color definition on input line 3336.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3334.
+Package xcolor Warning: Incompatible color definition on input line 3337.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3344.
+Package xcolor Warning: Incompatible color definition on input line 3347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3359.
+Package xcolor Warning: Incompatible color definition on input line 3362.
 
 [100]
-Overfull \hbox (27.84927pt too wide) detected at line 3369
+Overfull \hbox (27.84927pt too wide) detected at line 3372
 [] \OMS/cmsy/m/n/10 ) j\OML/cmm/m/it/10 L \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 L
 []\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 L \OM
 S/cmsy/m/n/10   \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/c
@@ -2427,10 +2433,10 @@ cmr/m/n/10 2\OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 L \OT1/cmr/m
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3371.
+Package xcolor Warning: Incompatible color definition on input line 3374.
 
 
-Overfull \hbox (46.40488pt too wide) detected at line 3377
+Overfull \hbox (46.40488pt too wide) detected at line 3380
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/cmr/m/n/10 ) = []
  \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 )(\OML/
 cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) = [] \
@@ -2441,17 +2447,17 @@ y/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) = [] = []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3388.
+Package xcolor Warning: Incompatible color definition on input line 3391.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3389.
+Package xcolor Warning: Incompatible color definition on input line 3392.
 
 [101]
 
-Package xcolor Warning: Incompatible color definition on input line 3411.
+Package xcolor Warning: Incompatible color definition on input line 3414.
 
 [102]
-Overfull \hbox (63.81pt too wide) detected at line 3429
+Overfull \hbox (63.81pt too wide) detected at line 3432
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 : \OML/cmm/m/it/10  \
 OT1/cmr/m/n/10 = [] : \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 }\OMS/cmsy/m/n/10 jj 
 \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) []  \OT1/cmr/m/n/10 6 []\OMS/cmsy/m/n/
@@ -2463,39 +2469,39 @@ r/m/n/10 = \OML/cmm/m/it/10 "
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3431.
+Package xcolor Warning: Incompatible color definition on input line 3434.
 
 [103]
-Overfull \hbox (36.66388pt too wide) detected at line 3444
+Overfull \hbox (36.66388pt too wide) detected at line 3447
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cm
 r/m/n/10 ) = [] \OMS/cmsy/m/n/10  [] ) j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  []  []  
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3451.
+Package xcolor Warning: Incompatible color definition on input line 3454.
 
 
-Overfull \hbox (55.05052pt too wide) detected at line 3467
+Overfull \hbox (55.05052pt too wide) detected at line 3470
 [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 < "
  []
 
 [104]
 
-Package xcolor Warning: Incompatible color definition on input line 3476.
+Package xcolor Warning: Incompatible color definition on input line 3479.
 
 <./fotos/función escalera.png, id=428, 401.5pt x 321.2pt>
 File: ./fotos/función escalera.png Graphic file (type png)
 <use ./fotos/función escalera.png>
-Package pdftex.def Info: ./fotos/función escalera.png  used on input line 3490
+Package pdftex.def Info: ./fotos/función escalera.png  used on input line 3493
 .
 (pdftex.def)             Requested size: 200.7495pt x 160.59961pt.
 [105 <./fotos/función escalera.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3496.
+Package xcolor Warning: Incompatible color definition on input line 3499.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3527.
+Package xcolor Warning: Incompatible color definition on input line 3530.
 
 [106]
 <./fotos/criterio sandwich para integrales.png, id=436, 843.61868pt x 365.28688
@@ -2503,29 +2509,29 @@ pt>
 File: ./fotos/criterio sandwich para integrales.png Graphic file (type png)
 <use ./fotos/criterio sandwich para integrales.png>
 Package pdftex.def Info: ./fotos/criterio sandwich para integrales.png  used on
- input line 3533.
+ input line 3536.
 (pdftex.def)             Requested size: 379.6249pt x 164.37756pt.
  [107 <./fotos/criterio sandwich para integrales.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3568.
+Package xcolor Warning: Incompatible color definition on input line 3571.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3584.
+Package xcolor Warning: Incompatible color definition on input line 3587.
 
 [108] [109]
 
-Package xcolor Warning: Incompatible color definition on input line 3651.
+Package xcolor Warning: Incompatible color definition on input line 3654.
 
 [110]
 
-Package xcolor Warning: Incompatible color definition on input line 3684.
+Package xcolor Warning: Incompatible color definition on input line 3687.
 
 [111]
 
-Package xcolor Warning: Incompatible color definition on input line 3709.
+Package xcolor Warning: Incompatible color definition on input line 3712.
 
 
-Overfull \hbox (8.30437pt too wide) detected at line 3727
+Overfull \hbox (8.30437pt too wide) detected at line 3730
 \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; \OT1/cmr/m/n/10 ) = 
 [][] \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 + [][] \OML/cmm/m/it/10 f \OT1/cmr/m/n/
 10 + [][] = \OMS/cmsy/m/n/10   [][] \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10   [][] 
@@ -2537,14 +2543,14 @@ m/n/10  \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; \OT1/cmr/m/n
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3737.
+Package xcolor Warning: Incompatible color definition on input line 3740.
 
 [112]
 
-Package xcolor Warning: Incompatible color definition on input line 3742.
+Package xcolor Warning: Incompatible color definition on input line 3745.
 
 
-Overfull \hbox (63.92665pt too wide) detected at line 3756
+Overfull \hbox (63.92665pt too wide) detected at line 3759
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/cmr/m/n/10 ) = []
  [] = [] [] = \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m
 /n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
@@ -2558,35 +2564,35 @@ OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm
 
 [113]
 
-Package xcolor Warning: Incompatible color definition on input line 3779.
+Package xcolor Warning: Incompatible color definition on input line 3782.
 
 [114]
 
-Package xcolor Warning: Incompatible color definition on input line 3833.
+Package xcolor Warning: Incompatible color definition on input line 3836.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3834.
+Package xcolor Warning: Incompatible color definition on input line 3837.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3835.
+Package xcolor Warning: Incompatible color definition on input line 3838.
 
 [115] [116]
 
-Package xcolor Warning: Incompatible color definition on input line 3871.
+Package xcolor Warning: Incompatible color definition on input line 3874.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3897.
+Package xcolor Warning: Incompatible color definition on input line 3900.
 
 [117]
 
-Package xcolor Warning: Incompatible color definition on input line 3930.
+Package xcolor Warning: Incompatible color definition on input line 3933.
 
 [118]
 
-Package xcolor Warning: Incompatible color definition on input line 3939.
+Package xcolor Warning: Incompatible color definition on input line 3942.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3974.
+Package xcolor Warning: Incompatible color definition on input line 3977.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -2594,14 +2600,14 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
 
-Package xcolor Warning: Incompatible color definition on input line 4017.
+Package xcolor Warning: Incompatible color definition on input line 4020.
 
 [120]
 
-Package xcolor Warning: Incompatible color definition on input line 4042.
+Package xcolor Warning: Incompatible color definition on input line 4045.
 
 
-Overfull \hbox (10.1504pt too wide) detected at line 4075
+Overfull \hbox (10.1504pt too wide) detected at line 4078
 [][] \OML/cmm/m/it/10 f[] \OMS/cmsy/m/n/10 , [][] \OML/cmm/m/it/10 f\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 :
  \OML/cmm/m/it/10 a[] > a[] \OMS/cmsy/m/n/10 , [][] \OML/cmm/m/it/10 f\OT1/cmr/
@@ -2611,17 +2617,17 @@ m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx \OT1/cmr/m/n/10
 
 [121]
 
-Package xcolor Warning: Incompatible color definition on input line 4079.
+Package xcolor Warning: Incompatible color definition on input line 4082.
 
 Missing character: There is no ; in font nullfont!
 [122]
 Missing character: There is no ; in font nullfont!
 
 
-Package xcolor Warning: Incompatible color definition on input line 4155.
+Package xcolor Warning: Incompatible color definition on input line 4158.
 
 [123]
-Overfull \hbox (28.47679pt too wide) detected at line 4185
+Overfull \hbox (28.47679pt too wide) detected at line 4188
 [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OM
 L/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 ) [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 ) [][
@@ -2630,38 +2636,38 @@ OML/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4204.
+Package xcolor Warning: Incompatible color definition on input line 4207.
 
 [124]
 
-Package xcolor Warning: Incompatible color definition on input line 4209.
+Package xcolor Warning: Incompatible color definition on input line 4212.
 
 [125] [126]
 
-Package xcolor Warning: Incompatible color definition on input line 4354.
+Package xcolor Warning: Incompatible color definition on input line 4357.
 
 [127]
 
-Package xcolor Warning: Incompatible color definition on input line 4401.
+Package xcolor Warning: Incompatible color definition on input line 4404.
 
 [128] [129] [130]
 
-Package xcolor Warning: Incompatible color definition on input line 4462.
+Package xcolor Warning: Incompatible color definition on input line 4465.
 
 [131
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 4538.
+Package xcolor Warning: Incompatible color definition on input line 4541.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4539.
+Package xcolor Warning: Incompatible color definition on input line 4542.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4540.
+Package xcolor Warning: Incompatible color definition on input line 4543.
 
 [132]
-Overfull \hbox (7.92851pt too wide) detected at line 4575
+Overfull \hbox (7.92851pt too wide) detected at line 4578
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cm
 r/m/n/10 : \OML/cmm/m/it/10 N > [] \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 < x \
 OMS/cmsy/m/n/10 ) 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 N \OT
@@ -2673,26 +2679,26 @@ cmr/m/n/10 ) = 0
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4579.
+Package xcolor Warning: Incompatible color definition on input line 4582.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [133]
 
-Package xcolor Warning: Incompatible color definition on input line 4646.
+Package xcolor Warning: Incompatible color definition on input line 4649.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4653.
+Package xcolor Warning: Incompatible color definition on input line 4656.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4661.
+Package xcolor Warning: Incompatible color definition on input line 4664.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4662.
+Package xcolor Warning: Incompatible color definition on input line 4665.
 
 [134]
-Overfull \hbox (6.16122pt too wide) detected at line 4682
+Overfull \hbox (6.16122pt too wide) detected at line 4685
 \OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []K\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 "\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m
 /n/10 : \OML/cmm/m/it/10 n; m \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 K\OT1/cmr/m/n
@@ -2707,21 +2713,21 @@ cmm/m/it/10 f[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 f[]\OMS/cmsy/m/n/10 jj[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4692.
+Package xcolor Warning: Incompatible color definition on input line 4695.
 
 [135] [136]
 
-Package xcolor Warning: Incompatible color definition on input line 4728.
+Package xcolor Warning: Incompatible color definition on input line 4731.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4743.
+Package xcolor Warning: Incompatible color definition on input line 4746.
 
 [137]
 
-Package xcolor Warning: Incompatible color definition on input line 4787.
+Package xcolor Warning: Incompatible color definition on input line 4790.
 
 [138]
-Overfull \hbox (41.69077pt too wide) detected at line 4815
+Overfull \hbox (41.69077pt too wide) detected at line 4818
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1
 /cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/
 it/10 f[]; []\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] \OMS/cmsy
@@ -2735,59 +2741,59 @@ OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML
 
 [139]
 
-Package xcolor Warning: Incompatible color definition on input line 4841.
+Package xcolor Warning: Incompatible color definition on input line 4844.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4848.
+Package xcolor Warning: Incompatible color definition on input line 4851.
 
 [140]
 
-Package xcolor Warning: Incompatible color definition on input line 4877.
+Package xcolor Warning: Incompatible color definition on input line 4880.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4881.
+Package xcolor Warning: Incompatible color definition on input line 4884.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4882.
+Package xcolor Warning: Incompatible color definition on input line 4885.
 
 [141]
 
-Package xcolor Warning: Incompatible color definition on input line 4900.
+Package xcolor Warning: Incompatible color definition on input line 4903.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4907.
+Package xcolor Warning: Incompatible color definition on input line 4910.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4920.
+Package xcolor Warning: Incompatible color definition on input line 4923.
 
 [142]
 
-Package xcolor Warning: Incompatible color definition on input line 4928.
+Package xcolor Warning: Incompatible color definition on input line 4931.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4938.
+Package xcolor Warning: Incompatible color definition on input line 4941.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4950.
+Package xcolor Warning: Incompatible color definition on input line 4953.
 
 [143]
 
-Package xcolor Warning: Incompatible color definition on input line 4957.
+Package xcolor Warning: Incompatible color definition on input line 4960.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4962.
+Package xcolor Warning: Incompatible color definition on input line 4965.
 
 [144]
-Overfull \hbox (62.00505pt too wide) in paragraph at lines 5000--5001
+Overfull \hbox (62.00505pt too wide) in paragraph at lines 5003--5004
 []\OT1/cmr/m/n/10 Si $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \O
 T1/cmr/m/n/10 1 : [][] [][]$ 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5003.
+Package xcolor Warning: Incompatible color definition on input line 5006.
 
 
-Overfull \hbox (32.32623pt too wide) in paragraph at lines 5019--5020
+Overfull \hbox (32.32623pt too wide) in paragraph at lines 5022--5023
 []\OT1/cmr/m/n/10 De mo-do analo-go, los lmi-tes su-pe-rio-res coin-ci-den: 
 $[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]b[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/1
 0 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OMS/cmsy/m/n/10 j[]j\OML/cmm/m/it/
@@ -2795,7 +2801,7 @@ $[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]b[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/1
  []
 
 [145]
-Overfull \hbox (2.82228pt too wide) detected at line 5022
+Overfull \hbox (2.82228pt too wide) detected at line 5025
 [] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []
  [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10
@@ -2805,21 +2811,21 @@ OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5025.
+Package xcolor Warning: Incompatible color definition on input line 5028.
 
 [146]
 
-Package xcolor Warning: Incompatible color definition on input line 5076.
+Package xcolor Warning: Incompatible color definition on input line 5079.
 
 [147]
 
-Package xcolor Warning: Incompatible color definition on input line 5090.
+Package xcolor Warning: Incompatible color definition on input line 5093.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5098.
+Package xcolor Warning: Incompatible color definition on input line 5101.
 
 
-Overfull \hbox (56.10487pt too wide) detected at line 5110
+Overfull \hbox (56.10487pt too wide) detected at line 5113
 [][]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\O
 T1/cmr/m/n/10 ; 0)\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] [] [] 0 \OMS/cmsy/m/n
 /10 ) [] []\OML/cmm/m/it/10 x[] \U/msa/m/n/10  \OML/cmm/m/it/10 f\OT1/cmr/m/n/
@@ -2830,7 +2836,7 @@ m/m/it/10 x\OT1/cmr/m/n/10 ) = [] []\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 : \OMS
  []
 
 [148]
-Overfull \hbox (0.26785pt too wide) detected at line 5125
+Overfull \hbox (0.26785pt too wide) detected at line 5128
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cms
 y/m/n/10   [] \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 x[] \OT
 1/cmr/m/n/10 : \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 (0\OML/cmm
@@ -2842,14 +2848,14 @@ y/m/n/10 ) [] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x\OMS/cmsy
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5136.
+Package xcolor Warning: Incompatible color definition on input line 5139.
 
 [149]
 
-Package xcolor Warning: Incompatible color definition on input line 5140.
+Package xcolor Warning: Incompatible color definition on input line 5143.
 
 [150]
-Overfull \hbox (3.92183pt too wide) detected at line 5185
+Overfull \hbox (3.92183pt too wide) detected at line 5188
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; \OT1
 /cmr/m/n/10 0)\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 j\OML/cm
 m/m/it/10 x\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/
@@ -2859,7 +2865,7 @@ m/it/10 z\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  []  []\OML/cmm/m/it/10 M [] \OT
  []
 
 [151]
-Overfull \hbox (7.06015pt too wide) detected at line 5217
+Overfull \hbox (7.06015pt too wide) detected at line 5220
 \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cms
 y/m/n/10  \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10  \OML/cmm/m/it/1
 0 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \O
@@ -2875,10 +2881,10 @@ y/m/n/10 ) \OML/cmm/m/it/10 E [] \OT1/cmr/m/n/10 = [] = [] = \OML/cmm/m/it/10 e
 ] [155] [156]
 Ap\'{e}ndice A.
 
-Package xcolor Warning: Incompatible color definition on input line 5282.
+Package xcolor Warning: Incompatible color definition on input line 5285.
 
 
-Overfull \hbox (13.41162pt too wide) in paragraph at lines 5282--5282
+Overfull \hbox (13.41162pt too wide) in paragraph at lines 5285--5285
 |\OT1/cmr/bx/n/24.88 INTRODUCCI[]ON A CON-JUN-TOS
  []
 
@@ -2887,18 +2893,18 @@ Overfull \hbox (13.41162pt too wide) in paragraph at lines 5282--5282
 ] [158]
 Ap\'{e}ndice B.
 
-Package xcolor Warning: Incompatible color definition on input line 5343.
+Package xcolor Warning: Incompatible color definition on input line 5346.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5344.
+Package xcolor Warning: Incompatible color definition on input line 5347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5345.
+Package xcolor Warning: Incompatible color definition on input line 5348.
 
 [159
 
 ]
-Overfull \hbox (1.6965pt too wide) in paragraph at lines 5396--5397
+Overfull \hbox (1.6965pt too wide) in paragraph at lines 5399--5400
 []\OT1/cmr/m/it/10 Las po-ten-cias de un nume-ro ma-
  []
 
@@ -2907,37 +2913,37 @@ Overfull \hbox (1.6965pt too wide) in paragraph at lines 5396--5397
 ]
 Ap\'{e}ndice C.
 
-Package xcolor Warning: Incompatible color definition on input line 5446.
+Package xcolor Warning: Incompatible color definition on input line 5449.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5447.
+Package xcolor Warning: Incompatible color definition on input line 5450.
 
 [163] [164]
-Overfull \hbox (3.65091pt too wide) in paragraph at lines 5598--5599
+Overfull \hbox (3.65091pt too wide) in paragraph at lines 5601--5602
 []\OT1/cmr/m/it/10 Para cual-quier sub-su-ce-sion de $\OML/cmm/m/it/10 x[]$ \O
 T1/cmr/m/it/10 si con-
  []
 
 [165]
-Overfull \hbox (19.00763pt too wide) in paragraph at lines 5603--5604
+Overfull \hbox (19.00763pt too wide) in paragraph at lines 5606--5607
 []\OT1/cmr/m/it/10 Para cual-
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5628.
+Package xcolor Warning: Incompatible color definition on input line 5631.
 
 [166]
 Ap\'{e}ndice D.
 
-Package xcolor Warning: Incompatible color definition on input line 5630.
+Package xcolor Warning: Incompatible color definition on input line 5633.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5633.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 5636.
 
 [167
 
 ] [168] [169]
-Overfull \hbox (2.31148pt too wide) detected at line 5801
+Overfull \hbox (2.31148pt too wide) detected at line 5804
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -2948,7 +2954,7 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 
-Overfull \hbox (2.03372pt too wide) detected at line 5807
+Overfull \hbox (2.03372pt too wide) detected at line 5810
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -2959,7 +2965,7 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 [170] [171]
-Overfull \hbox (0.43558pt too wide) in paragraph at lines 5900--5901
+Overfull \hbox (0.43558pt too wide) in paragraph at lines 5903--5904
 []\OT1/cmr/m/it/10 Las fun-cio-nes $[] \OML/cmm/m/it/10 x$ \OT1/cmr/m/it/10 y $
 [] \OML/cmm/m/it/10 x$ \OT1/cmr/m/it/10 son con-
  []
@@ -2967,14 +2973,14 @@ Overfull \hbox (0.43558pt too wide) in paragraph at lines 5900--5901
 [172]
 Ap\'{e}ndice E.
 
-Package xcolor Warning: Incompatible color definition on input line 5908.
+Package xcolor Warning: Incompatible color definition on input line 5911.
 
 [173
 
 ] [174] [175] [176]
 Ap\'{e}ndice F.
 
-Package xcolor Warning: Incompatible color definition on input line 6051.
+Package xcolor Warning: Incompatible color definition on input line 6054.
 
 [177
 
@@ -2983,7 +2989,7 @@ Package xcolor Warning: Incompatible color definition on input line 6051.
 ]
 Ap\'{e}ndice G.
 
-Package xcolor Warning: Incompatible color definition on input line 6233.
+Package xcolor Warning: Incompatible color definition on input line 6236.
 
 [183] (AnalisisDeVariableReal.aux
 LaTeX Info: Redefining \. on input line 8.
@@ -2992,17 +2998,17 @@ LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 30636 strings out of 480790
- 764808 string characters out of 2897301
+ 30637 strings out of 480790
+ 764825 string characters out of 2897301
  1165500 words of memory out of 3000000
- 46005 multiletter control sequences out of 15000+200000
+ 46006 multiletter control sequences out of 15000+200000
  547808 words of font info for 86 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,18n,103p,889b,2630s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tct
 i1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\tcrm1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\tcbx1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+00\tcbx1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\tcrm1000.pk> <C:\Users\jdbar\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\tcrm1200.pk><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/jdbar/AppData/Local/Prog
@@ -3037,9 +3043,9 @@ s/latxfont/line10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1
 /public/amsfonts/symbols/msam10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/jdbar/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on AnalisisDeVariableReal.pdf (185 pages, 3283264 bytes).
+Output written on AnalisisDeVariableReal.pdf (185 pages, 3284769 bytes).
 PDF statistics:
- 801 PDF objects out of 1000 (max. 8388607)
+ 802 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
