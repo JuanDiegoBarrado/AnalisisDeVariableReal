@@ -1,48 +1,110 @@
 \documentclass[10pt,a4paper,openright]{book}
 
 \title{ANÁLISIS DE VARIABLE REAL}
-\author{Juan Diego Barrado Daganzo e Iker Muñoz Martínez\footnote{Últimas versiones en https://github.com/JuanDiegoBarrado/AnalisisDeVariableReal}\\1º de Carrera} %\\ es salto de linea
-\date{\today}
+\author{Juan Diego Barrado Daganzo e Iker Muñoz Martínez\\1º de Carrera} %\\ es salto de linea
+\date{\today\footnote{Últimas versiones en https://github.com/JuanDiegoBarrado/AnalisisDeVariableReal}}
+
+%% Formateo del estilo de escritura y de la pagina
 \pagestyle{plain}
 \setlength{\parskip}{0.35cm} %edicion de espaciado
 \setlength{\parindent}{0cm} %edicion de sangría
 \clubpenalty=10000 %líneas viudas NO
 \widowpenalty=10000 %líneas viudas NO
-
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} % para establecer las medidas de los margenes
 \usepackage[spanish]{babel} %Para que el idioma por defecto sea español
+\usepackage{ulem} % para poder subrayar entornos especiales como las secciones
+\usepackage{multicol} %Paquetes columnas
+
+%% Texto matematico y simbolos especiales
 \usepackage{amsmath} %Paquetes para mates
 \usepackage{amsfonts} %Paquetes para mates
 \usepackage{amssymb} %Paquetes para mates
+\usepackage{stmaryrd} % paquete para mates
 \usepackage{latexsym} %Paquetes para mates
-\usepackage{multicol} %Paquetes columnas
 \usepackage{cancel} %Paquete tachar cosas
-\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
 
-\usepackage{titlesec} %Formato de capitulos y secciones
-	\titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{\thechapter}{20pt}{\Huge}[\titlerule{}]
-	\titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{\thesection}{1em}{}
-	\titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{\thesubsection}{1em}{}
-	\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{\thesubsubsection}{1em}{}
+%% Ruta de las fotos e inclusion de las mismas
+\usepackage{graphicx}
+\graphicspath{{./fotos/}}
 
+%% Inclusion de referencias cruzadas por defecto y específicas
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+	urlcolor=red,
+	linkcolor=blue,
+}
+
+%% Paquete para definir y utilizar colores por el documento
 \usepackage[dvipsnames,usenames]{color} %activar e incluir colores
 	\definecolor{capitulos}{RGB}{60,0,0}%gama de colores de los capitulos
 	\definecolor{secciones}{RGB}{95,8,5}%gama de colores de las secciones
 	\definecolor{subsecciones}{RGB}{140,36,31}%gama de colores de las subsections
 	\definecolor{subsubsecciones}{RGB}{188,109,79}%gama de colores de las subsubsections
-	
-\usepackage{graphicx} %Para incluir fotos
-\graphicspath{{./fotos/}}
+
+%% Paquete para la edición y el formateo de capítulos, secciones...
+\usepackage[explicit]{titlesec}
+	%% Definición del estilo de los capítulos, secciones, etc...
+    \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge \uppercase{#1}}[\titlerule]
+    \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{\uppercase{#1}}
+    \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
+    \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
+
+%% Paquete para el formateo de entornos del proyecto
+\usepackage{ntheorem}[thmmarks]
+	%% Definicion del aspecto de los entornos matematicos del proyecto
+	\theoremstyle{break}
+	\theoremheaderfont{\normalfont\bfseries\color{teoremas}}
+	\theorembodyfont{\itshape}
+	\theoremseparator{\vspace{0.2cm}}
+	\theorempreskip{\topsep}
+	\theorempostskip{\topsep}
+	\theoremindent0cm
+	\theoremnumbering{arabic}
+	\theoremsymbol{}
+	\theoremprework{\vspace{0.2cm} \hrule}
+	\theorempostwork{\vspace{0.2cm}\hrule}
+	    \newtheorem*{defi}{Definición}
+
+	\theoremprework{\vspace{0.25cm}}
+		\newtheorem*{theo}{Teorema}
+
+	\theoremprework{\vspace{0.25cm}}
+    	\newtheorem*{coro}{Corolario}
+
+	\theoremprework{\vspace{0.25cm}}
+    	\newtheorem*{lema}{Lema}
+
+	\theoremprework{\vspace{0.25cm}}
+    	\newtheorem*{prop}{Proposición}
+
+	\theoremheaderfont{\normalfont}
+	\theorembodyfont{\normalfont\color{demos}}
+	\theoremsymbol{\hfill\square}
+    	\newtheorem*{demo}{\underline{Demostración}:}
+
+	\theoremheaderfont{\normalfont}
+	\theorembodyfont{\sffamily}
+    	\newtheorem*{obs}{\underline{Observación}:}
+    	\newtheorem*{ej}{\underline{Ejemplo}:}
+
+%% Definicion de operadores especiales para simplificar la escritura matematica
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divg}{div}
+\newcommand{\dif}[1]{\ d#1}
+
+
+\usepackage{pstricks}
+\usepackage{pstcol} 
+\usepackage{pst-node}
+\usepackage{pst-plot}
 
 \usepackage{pgfplots}
 \usepackage{tkz-fct}
 
+\usepackage{centernot}
 \usepackage{appendix}
-
-\newtheorem{teorema}{Teorema}[chapter]
-\newtheorem{corolario}{Corolario}[teorema]
-\newtheorem{lema}[teorema]{Lema}
-\newtheorem{proposicion}{Proposición}[chapter]
-\newtheorem{definicion}{Definición}[chapter]
 
 \begin{document}
 \maketitle
@@ -51,10 +113,10 @@ Análisis de Variable Real © 2021 by Juan Diego Barrado \& Iker Muñoz is licen
 http://creativecommons.org/licenses/by-nc/4.0/
 \end{center}
 \mainmatter
-\chapter*{INTRODUCCIÓN A CONJUNTOS Y FUNCIONES}
-\section*{CONJUNTOS}
+\chapter{INTRODUCCIÓN A CONJUNTOS Y FUNCIONES}
+\section{CONJUNTOS}
 Un \textbf{Conjunto} es una ``colección'' o ``familia'' de objetos al que puede pertenecer o no un conjunto cualquiera, pero no puede hacer ambas cosas a la vez.
-\subsection*{\underline{Operaciones con conjuntos}}
+\subsection{\underline{Operaciones con conjuntos}}
 \begin{itemize}
 \item Inclusión: $A\subset B \Leftrightarrow \forall x \in A \Rightarrow x \in B$
 \item Equivalencia: $A \equiv B \Leftrightarrow A \subset B \wedge B \subset A$
@@ -69,7 +131,7 @@ $$\bigcap_{i\in I}A_i=\left\lbrace x: \forall i \in I : x\in A_i\right\rbrace$$
 $$\bigcup_{i\in I}A_i=\left\lbrace x: \exists i \in I: x\in A_i\right\rbrace$$
 \end{itemize}
 
-\subsection*{\underline{Producto Cartesiano}}
+\subsection{\underline{Producto Cartesiano}}
 Sean A y B conjuntos no vacíos, llamamos par ordenado a una pareja donde $a \in A$ y $b \in B$:
 $$(a,b)\neq (b,a) : a\in A \wedge b\in B$$
 El producto cartesiano es el conjunto:
@@ -79,22 +141,22 @@ $$A\times B=\left\lbrace (a,b) : a \in A \wedge b \in B\right\rbrace$$
 \includegraphics[scale=0.5]{producto cartesiano}
 \end{center}
  
-\subsection*{\underline{Correspondencia}}
+\subsection{\underline{Correspondencia}}
 Una correspondencia entre conjuntos es la asignación de cada elemento de un conjunto a otro del otro conjunto.\par
 Sean A y B conjuntos, la correspondencia es un subconjunto C del producto cartesiano de ambos conjuntos iniciales, es decir, una serie de pares ordenados del producto cartesiano. Sin embargo, a cada elemento del primer conjunto \textbf{sólo puede corresponderle como mucho un elemento del segundo conjunto}.
 $$\mbox{Si }(x,y) \in C\wedge (x,z)\in C\Rightarrow y=z$$
 Aunque es cierto que no todo elemento tiene que tener su correspondiente.
-\subsubsection*{Dominio}
+\subsubsection{Dominio}
 Si C es una correspondencia entre A y B, el dominio de C son aquellos elementos que sí poseen un correspondiente en B.
 $$dom(C)=\left\lbrace a\in A : \exists b \in B : (a,b)\in C\right\rbrace$$
-\subsubsection*{Rango o Imagen}
+\subsubsection{Rango o Imagen}
 El rango o imagen de la correspondencia son aquellos elementos del conjunto B que son el correspondiente de algún elemento del conjunto A.
 $$ran(C)=im(C)=\left\lbrace b\in B : \exists a \in A : (a,b)\in C\right\rbrace$$
-\subsubsection*{Observaciones}
+\subsubsection{Observaciones}
 Si el conjunto C es una correspondencia entre A y B y $(x,y)\in C$, decimos que a $x\in A$ le corresponde $y\in B$ o que $y\in B$ es la imagen de $x \in A$. Esta correspondencia entre ambos conjuntos se puede llamar \textbf{función} $(f)$ en cuyo caso se expresa como:
 $$dom(f)=\left\lbrace x \in A : \exists f(x)\in B\right\rbrace$$
 $$ran(f)=im(f)=\left\lbrace y\in B : \exists x \in A : y=f(x)\right\rbrace$$
-\subsection*{\underline{Funciones}}
+\subsection{\underline{Funciones}}
 Una correspondencia se denomina FUNCIÓN o aplicación si $dom(f)=A$, es decir, todo el conjunto posee un correspondiente en B como imagen.
 $$f: A\rightarrow B$$
 Sean A, el dominio, y B, el codominio, y una función entre esos dos conjuntos llamada $f$.
@@ -102,7 +164,7 @@ $$E\subset A\Rightarrow f(E)=\{\forall b\in B : \exists a \in E : b=f(a)\}$$
 De forma análoga:
 $$F\subset B\Rightarrow f^{-1}(F)=\{a \in A : f(a)\in F\}$$
 Es decir, la condición de función al aplicarse a elementos también afecta a conjuntos.
-\subsubsection*{Inyectividad}
+\subsubsection{Inyectividad}
 Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{inyectiva} cuando todo elemento de A posee una imagen distinta de la imagen de cualquier otro elemento de A:
 $$\forall a_1, a_2 \in A : a_1 \neq a_2\Rightarrow f(a_1)\neq f(a_2)$$
 
@@ -131,7 +193,7 @@ $$f^{-1}(G)?\rightarrow 1\leq y=f(x)=\frac{1}{x^2}\leq 4\Leftrightarrow 1\geq x^
 1\geq -x\geq \frac{1}{2}& \Rightarrow -1\leq x\leq -\frac{1}{2}
 \end{cases}$$
 
-\subsubsection*{Suprayectividad}
+\subsubsection{Suprayectividad}
 Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{suprayectiva} o \textit{sobre} cuando todo elemento de B es imagen\footnote{Lo que se traduce en que $im(f)=B$} de algún elemento de A:
 $$\forall b \in B : \exists a \in A : f(a)=b$$
 
@@ -143,14 +205,14 @@ Ej.:  "$f(x)=x^2$"
 $$y=x^2\Rightarrow x=\sqrt{y}\Rightarrow y\in (0,\infty)$$
 Luego no es suprayectiva porque $f: \mathbb R \rightarrow \mathbb R$
 
-\subsubsection*{Biyectividad}
+\subsubsection{Biyectividad}
 Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{biyectiva} cuando $f$ es inyectiva y suprayectiva simultáneamente.\par
 Para poder ser cierto $card(A) = card(B)$
 
-\subsubsection*{Observaciones}
+\subsubsection{Observaciones}
 No es difícil entre ver que la cantidad de elementos en los distintos conjuntos determinan en cierto modo (puesto que  para conjuntos infinitos no podemos contarlos) la obtención o no de los calificativos anteriores. De este hecho se desprende que:
 $$\mbox{Sea }f: A\rightarrow B\mbox{ suprayectiva}\Rightarrow \exists f: B\rightarrow A \mbox{ inyectiva} $$
-\subsection*{\underline{Numerabilidad de conjuntos}}
+\subsection{\underline{Numerabilidad de conjuntos}}
 Decimos que además un conjunto es NUMERABLE\footnote{Por ejemplo, $\mathbb R$ no es numerable} cuando entre él y $\mathbb N$ se puede establecer una función biyectiva. Hay un teorema que dice que:
 $$\forall n\in \mathbb N : A_n\mbox{ es numerable}\Rightarrow \bigcup_{n\in \mathbb N} A_n\mbox{ es numerable}$$
 Además se tiene que:
@@ -159,15 +221,15 @@ $$f:\mathbb N\stackrel{biyec.}{\rightarrow} \mathbb N \times \mathbb N \Rightarr
 \includegraphics[scale=0.25]{nxn numerable}
 \end{center}
 
-\subsubsection*{Teorema de Schöder-Berstein}
+\subsubsection{Teorema de Schöder-Berstein}
 Sean A y B dos conjuntos:
 $$\exists f: A\rightarrow B \mbox{ inyectiva}\wedge \exists g: A\rightarrow B \mbox{ suprayectiva}\Rightarrow \exists h: A\rightarrow B \mbox{ biyectiva}$$
 
-\subsubsection*{Composición de funciones}
+\subsubsection{Composición de funciones}
 Sea A, B, C conjuntos y $f: A\rightarrow B$, $g: B\rightarrow C$:
 $$gof(a)=g\left(f(a)\right),\forall a \in A\Rightarrow gof: A\rightarrow C$$
 
-\subsection*{\underline{Conjunto P(A)}}
+\subsection{\underline{Conjunto P(A)}}
 Sea A un conjunto, se le llama \textit{partes de A} o P(A) al conjunto formado por todos los subconjuntos de A:
 $$\mbox{Ej.: } A=\{a,b,c\}\rightarrow P(A)=\left\lbrace \{a\}, \{b\},\{c\}, \emptyset, \{a,b\}, \{a,c\}, \{b,c\}, A \right\rbrace$$
 Concretamente la función que relaciona A con su P(A) es una función inyectiva.
@@ -178,7 +240,7 @@ a & \longmapsto  & \; \{a\}
 Concretamente para el conjunto vacío:
 $$A=\emptyset \Rightarrow P(A)=\{\emptyset\} \Rightarrow P(P(A))=\{\emptyset, \{\emptyset\}\}$$
 
-\subsubsection*{Teorema de Cantor}
+\subsubsection{Teorema de Cantor}
 Sea A un conjunto cualquiera, entonces $\nexists f: A \rightarrow P(A)$  suprayectiva.\par
 \underline{Demostración}:\par
 Supongamos que sí:
@@ -199,7 +261,7 @@ De este razonamiento se desprende que $\mathbb N$ es numerable pero $P(\mathbb N
 \item Usando la hipótesis del continuo $\rightarrow card(P(\mathbb N))= card (\mathbb R)$
 \end{itemize}
 
-\subsection*{\underline{Principio de Inducción}}
+\subsection{\underline{Principio de Inducción}}
 Sea $\mathbb N=\{1, 2, 3,...\}$, este conjunto posee una propiedad que se llama de Buen Orden que dice:
 $$A\subset \mathbb N, A\neq \emptyset \Rightarrow \exists m \in A : \forall a \in A : m\leq a$$
 Lo que quiere decir que siempre encontraremos en ese subconjunto A un elemento que podremos calificar como el \textit{primero}.\par
@@ -210,7 +272,7 @@ Supongamos que $S\subsetneq \mathbb N$ y que $A=\mathbb N\mbox{\textbackslash} S
 $$\exists m \in A : \forall a \in A: m\leq a$$
 Sin embargo, $m=1\notin A$ porque $1\in S$, luego $m-1\in S\stackrel{Hip. 2}{\Rightarrow} (m-1)+1=m\in S \mbox{ \#}$\par
 O dicho de otra forma: si $1\in S\Rightarrow 2\in S \Rightarrow ... \Rightarrow \mathbb N=S\Rightarrow A=\mathbb N \mbox{\textbackslash} S=\mathbb N \mbox{\textbackslash} \mathbb N=\emptyset \mbox{ \#}$
-\subsubsection*{Corolario}
+\subsubsection{Corolario}
 Supongamos que tenemos una propiedad que depende de un número natural: $k \in \mathbb N : P(k)$ y supongamos que $P(1)$ es cierto. Si $P(k)\Rightarrow P(k+1)$ entonces $\forall n \in \mathbb N : P(n)$
 
 \underline{Demostración}:\par
@@ -221,14 +283,14 @@ Supongamos el conjunto $S$
 \end{itemize}
 Los dos hechos anteriores según el principio de inducción implican que $S=\mathbb N\Rightarrow \forall n \in \mathbb N : P(n)$
 
-\chapter*{CONJUNTOS DE NÚMEROS}
+\chapter{CONJUNTOS DE NÚMEROS}
 Los seres humanos a lo largo de la Historia han ido ``descubriendo'' o  ``inventando'' distintos conjuntos de números en función de las necesidades que iban surgiendo en cada momento. Hasta el momento tenemos:
 $$\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$$
 Entendemos como $\mathbb N$ al conjunto de los naturales $\mathbb N={1,2,3,4,...}$ y al conjunto de los enteros $\mathbb Z$ como el conjunto de los Naturales añadiéndoles el 0 y los negativos. El conjunto de los  racionales surge ante la necesidad de nuevos números como el que describe la diagonal de un cuadrado de lado 1: $\sqrt{2}$, estos están conformados por: $\mathbb Q={\frac{a}{b}: a,b\in \mathbb Z \wedge b\neq 0}$, además cada número racional está representado por un conjunto de fracciones equivalentes: $[\frac{a}{b}]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$. Llegamos por lo menos hasta el momento a los número reales de los que diremos que tienen una representación decimal arbitraria por el momento.
 
-\section*{PROPIEDADES ALGEBRAICAS DE $\mathbb R$}
+\section{PROPIEDADES ALGEBRAICAS DE $\mathbb R$}
 Sea $\mathbb K$ un conjunto de números tenemos las siguientes operaciones:
-\subsubsection*{Suma}
+\subsubsection{Suma}
 Sea $\mathbb K$ un conjunto de números tenemos que la adición $(+)$ cumple las siguientes propiedades:
 \begin{center}
 Operación interna
@@ -247,7 +309,7 @@ Operación interna
 Los $\mathbb {Z, Q, R, C}$ cumplen las 4 propiedades, pero $\mathbb N$ no puesto que cumplen solo las dos primeras.\par
 \textbf{Un conjunto de números $(\mathbb K, +)$ que verifica todas las propiedades recibe el nombre de GRUPO CONMUTATIVO.}
 
-\subsubsection*{Producto}
+\subsubsection{Producto}
 Sea $\mathbb K$ un conjunto de números tenemos que el producto $(\cdot)$ cumple las siguientes propiedades:
 \begin{center}
 Operación interna
@@ -271,10 +333,10 @@ La propiedad que relaciona ambas operaciones es la \textbf{propiedad distributiv
 \item[5.] $\forall a,b,c\in \mathbb K: a\cdot (b+c)=ab+ac$
 \end{enumerate}
 
-\subsection*{\underline{Estructura de Cuerpo}}
+\subsection{\underline{Estructura de Cuerpo}}
 Si $\mathbb K : (\mathbb K, +)$ es un grupo conmutativo y $(\mathbb K, \cdot)$ es un grupo conmutativo y se cumple la propiedad distributiva, decimos que $(\mathbb K, +, \cdot)$ es un \textbf{CUERPO CONMUTATIVO}.
 
-\subsubsection*{Consecuencias de la estructura de cuerpo}
+\subsubsection{Consecuencias de la estructura de cuerpo}
 Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo se cumplen las siguientes propiedades:
 \begin{enumerate}
 \item \textbf{El elemento neutro de la suma es único}.\par
@@ -347,7 +409,7 @@ $$a\cdot x=b \Rightarrow a^{-1}(ax)=a^{-1}b \Rightarrow x=\frac{b}{a}$$
  $$(a^{-1}b^{-1})(ab)=a^{-1} a \cdot b^{-1} b=1 \Rightarrow (a^{-1}b^{-1})=(ab)^{-1}$$
 \end{enumerate}
 
-\subsection*{\underline {Propiedades de orden}}
+\subsection{\underline {Propiedades de orden}}
 En $\mathbb R$ hay una ``relación de orden'' que se escribe como ``$\leq$'' que cumple que:
 \begin{itemize}
 \item Propiedad Reflexiva: $\forall x\in  \mathbb R: x \leq x$
@@ -363,7 +425,7 @@ Esta relación de orden tiene una serie de propiedades con respecto a las operac
 
 Si $(\mathbb K, +, \cdot)$ posee las propiedades de la relación de orden definidas para ``$\leq$'' , decimos que se trata de un cuerpo \textbf{TOTALMENTE ORDENADO}.
 
-\subsubsection*{Definiciones}
+\subsubsection{Definiciones}
 \begin{itemize}
 \item Decimos que un número $x\in \mathbb R$ es positivo$\Leftrightarrow (0\leq x \wedge x\neq 0)$
 \item Decimos que un número $x\in \mathbb R$ es negativo $\Leftrightarrow (-x)>0$
@@ -489,7 +551,7 @@ $$a>1\Rightarrow a^{-1}\cdot a>1\cdot a^{-1}\Rightarrow 1>\frac{1}{a}$$
 $$(0<a<1)\Rightarrow a<1\Rightarrow a^{-1}\cdot a<1\cdot a^{-1}\Rightarrow 1<\frac{1}{a}$$
 \end{enumerate}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Los números naturales están contenidos en los enteros como los enteros positivos.
 $$\forall n \in \mathbb N: n\geq 1 \wedge \mathbb N =\{n\in \mathbb Z: n\geq 1\}=\{n\in \mathbb Z : n>0\}$$
 Y además:
@@ -506,9 +568,9 @@ $$k=m-n>0\Rightarrow k\in \mathbb N \mbox{ pero como }n\leq m \leq n+1\Rightarro
 $$\mbox{ pero como }m\neq n+1\Rightarrow k\neq 1\Rightarrow k<1\mbox{ \# Por ser natural k }$$
 \end{enumerate}
 
-\subsection*{\underline{Algunas desigualdades}}
+\subsection{\underline{Algunas desigualdades}}
 Vamos a suponer demostrado (aunque lo haremos después) que si $a\in \mathbb R : a>0\Rightarrow \exists x\in \mathbb R : (x>0)\wedge (x^2=a)$
-\subsubsection*{Ecuaciones de 2º grado}
+\subsubsection{Ecuaciones de 2º grado}
 Sean $a,b,c\in \mathbb R  : a\neq 0$ y buscamos un $x\in \mathbb R$ que verifique que:
 $$ax^2+bx+c=0$$
 Siendo $\Delta=b^2-4ac$:
@@ -526,7 +588,7 @@ $$ax^2+bx+c=0\stackrel{a\neq 0}{\Leftrightarrow} x^2+\frac{bx}{a}+\frac{c}{a}=0\
 \item Si $\Delta=0\Rightarrow x+\frac{b}{2a}=0\Rightarrow x=-\frac{b}{2a}$
 \end{itemize}
 
-\subsubsection*{Desigualdades de 2º grado}
+\subsubsection{Desigualdades de 2º grado}
 Sean $a,b,c\in \mathbb R  : a>0$ y buscamos un $x\in \mathbb R$ que verifique que:
 $$ax^2+bx+c\geq 0$$
 Siendo $\Delta=b^2-4ac$:
@@ -542,7 +604,7 @@ $$ax^2+bx+c\geq 0\stackrel{a\neq 0}{\Leftrightarrow} x^2+\frac{bx}{a}+\frac{c}{a
 \item Si $\Delta>0\Rightarrow (x+\frac{b}{2a})^2 \geq \frac{\Delta}{4a^2}\Leftrightarrow \left((x+\frac{b}{2a})+\sqrt{\frac{\Delta}{4a^2}}\right)\left((x+\frac{b}{2a})-\sqrt{\frac{\Delta}{4a^2}}\right)$
 \end{itemize}
 
-\subsubsection*{Desigualdad de Cauchy}
+\subsubsection{Desigualdad de Cauchy}
 Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n\in \mathbb R$ y $b_1, b_2, ..., b_n\in \mathbb R$
 $$(a_1b_1+a_2b_2+...+a_nb_n)^2 \leq (a_1^2+...+a_n^2)\cdot (b_1^2+...+b_n^2)$$
 Además casi siempre suele ser una desigualdad estricta puesto que la igualdad solo ocurre cuando: $\exists c\in \mathbb R : \forall i=1,...n :a_i=c\cdot b_i$\par
@@ -553,7 +615,7 @@ Para los casos\footnote{Es obvio que nunca puede ser menor que 0 pero para el ca
 $$\Delta\leq 0\Leftrightarrow 4C^2-4AB\leq 0\Leftrightarrow 4C^2\leq 4AB\Leftrightarrow C^2\leq AB$$
 De este modo se ve fácilmente que para el caso de $C^2=AB\Rightarrow \Delta=0\Rightarrow \exists c\in \mathbb R : F(c)=0\Rightarrow \forall  i, a_i-c\cdot b_i=0$
 
-\subsubsection*{Desigualdad de Minkovski}
+\subsubsection{Desigualdad de Minkovski}
 Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n\in \mathbb R$ y $b_1, b_2, ..., b_n\in \mathbb R$
 $$\sqrt{(a_1+b_1)^2+...+(a_n+b_n)^2}\leq \sqrt{a_1^2+...+a_n^2}+\sqrt{b_1^2+...+b_n^2}$$
 Ademá, para que se de el caso de ``='': $\exists c\in \mathbb R : \forall i=1,...,n : a_i=c\cdot b_i$\par
@@ -562,7 +624,7 @@ $$\sum_{i=1}^n (a_i+b_i)^2=\sum_{i=1}^n (a_i)^2+2\sum_{i=1}^n (a_ib_i)+ \sum_{i=
 $$\Leftrightarrow \sqrt{\sum_{i=1}^n (a_i+b_i)^2}\leq \sqrt{A}+\sqrt{B}$$
 Concretamente para que se de el caso ``='': $2\sum_{i=1}^n (a_ib_i)=2\sqrt{A}+\sqrt{B}$
 
-\section*{VALOR ABSOLUTO}
+\section{VALOR ABSOLUTO}
 Sea $a\in \mathbb R$ entonces:
 $$
 |a|=
@@ -573,7 +635,7 @@ a & a>0 \\
 \end{cases}
 =max\{a,-a\}
 $$
-\subsubsection*{Propiedades}
+\subsubsection{Propiedades}
 \begin{enumerate}
 \item $|a|=0\Leftrightarrow a=0$
 \item $|-a|=|a|: \forall a \in \mathbb R$
@@ -597,14 +659,14 @@ $$
 \item Demostrada la propiedad 4. , se trata de decir que $c=a$
 \end{enumerate}
 
-\subsection*{\underline{Desigualdad triangular}}
+\subsection{\underline{Desigualdad triangular}}
 Sean $a,b\in \mathbb R$ entonces:
 $$|a+b|\leq|a|+|b|$$
 \underline{Demostración}:\par
 Tenemos que $-|a|\leq a\leq |a|$ y que $-|b|\leq b\leq |b|$, sumando ambas expresiones:
 $$-|a|-|b|\leq a+b\leq |a|+|b|\Leftrightarrow -(|a|+|b|)\leq a+b\leq (|a|+|b|)$$
 
-\subsubsection*{Corolarios}
+\subsubsection{Corolarios}
 \begin{enumerate}
 \item $||a|-|b||\leq |a-b|$
 \item $|a-b|\leq |a|+|b|$
@@ -618,11 +680,11 @@ $$||a|-|b||\leq c=|a-b|$$
 \item $|a-b|=|a+(-b)|\leq |a|+|-b|=|a|+|b|$
 \end{enumerate}
 
-\subsection*{\underline{Distancia entre dos números}}
+\subsection{\underline{Distancia entre dos números}}
 Se puede expresar la distancia entre dos números como:
 $$dist(a,b)=|a-b|$$
 
-\subsubsection*{Propiedades}
+\subsubsection{Propiedades}
 \begin{enumerate}
 \item $\forall x,y\in \mathbb R: d(x,y)\geq 0$ y $d(x,y)=0\Leftrightarrow x=y$
 
@@ -640,7 +702,7 @@ $$dist(a,b)=|a-b|$$
 \item $d(x,y)=|x-y|=|x-z+z-y|\leq |x-z|+|z-y|=d(x,z)+d(z,y)$
 \end{enumerate}
 
-\subsection*{\underline{Intervalos}}
+\subsection{\underline{Intervalos}}
 Sean $a,b\in \mathbb R: a<b$, definimos:
 \begin{enumerate}
 \item Intervalo abierto: $(a,b)=\{x\in \mathbb R: a<x<b\}$
@@ -648,20 +710,20 @@ Sean $a,b\in \mathbb R: a<b$, definimos:
 \item Intervalo semiabierto o semicerrado: $[a,b)=\{x\in \mathbb R: a\leq x<b\}$ y viceversa.
 \end{enumerate}
 
-\subsubsection*{Observación}
+\subsubsection{Observación}
 El conjunto de los números reales se puede expresar como $\mathbb R=(-\infty,\infty)$ y se suele representar en lo que conocemos como \textbf{Recta Real}.
 
-\subsubsection*{Entornos}
+\subsubsection{Entornos}
 Se llama \textbf{entorno abierto} al conjunto de números a distancia menor que $r$ de un número central $a$
 $$E(a,r)=\{x\in \mathbb R : dist(x,a)<r\}=\{x\in \mathbb R :|x-a|<r\}=\{x\in \mathbb R :a-r<x<a+r\}$$
 
 Se llama \textbf{entorno cerrado} al conjunto de números a distancia menor o igual que $r$ de un número central $a$
 $$\bar{E}(a,r)=\{x\in \mathbb R : dist(x,a)\leq r\}=\{x\in \mathbb R :|x-a|\leq r\}=\{x\in \mathbb R :a-r\leq x\leq a+r\}$$
 
-\section*{NÚMEROS COMPLEJOS}
+\section{NÚMEROS COMPLEJOS}
 Sean $\mathbb C=\{a,b\in \mathbb R: (a,b)\}$ donde $(a,b)$ es un par ordenado y donde definimos ciertas operaciones:
-\subsection*{\underline{Operaciones}}
-\subsubsection*{Suma}
+\subsection{\underline{Operaciones}}
+\subsubsection{Suma}
 Si tenemos que $(a,b),(c,d)\in \mathbb C$, se define la suma como:
 $$(a,b)+(c,d)=(a+c,b+d)$$
 \underline{Propiedades}:
@@ -673,7 +735,7 @@ $$(a,b)+(c,d)=(a+c,b+d)$$
 \end{itemize}
 En resumen, $(\mathbb C, +)$ es un \textbf{grupo conmutativo}.
 
-\subsubsection*{Producto por un escalar}
+\subsubsection{Producto por un escalar}
 Si tenemos que $(a,b)\in \mathbb C$ y $\lambda\in \mathbb R$, se define el producto por un escalar como:
 $$\lambda(a,b)=(\lambda a,\lambda b)$$
 \underline{Propiedades}:
@@ -685,7 +747,7 @@ $$\lambda(a,b)=(\lambda a,\lambda b)$$
 \item Distributiva: $\lambda[(a,b)+(c,d)]=\lambda(a,b)+\lambda(c,d)$
 \end{itemize}
 
-\subsubsection*{Producto}
+\subsubsection{Producto}
 Si tenemos que $(a,b),(c,d)\in \mathbb C$, se define el producto como:
 $$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$$
 \underline{Propiedades}:
@@ -698,7 +760,7 @@ $$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$$
 \end{itemize}
 En resumen, $(\mathbb C, \cdot)$ es un \textbf{grupo conmutativo}. Y en general, $(\mathbb C, + ,\cdot)$ es un \textbf{cuerpo conmutativo}.
 
-\subsubsection*{Observaciones}
+\subsubsection{Observaciones}
 Identificamos un número real $x\in \mathbb R$ con el número complejo $(x,0)\in \mathbb C$.
 $$f: \mathbb R\ni x\rightarrow (x,0)\in \mathbb C$$
 Que constituye una muy buena identificación porque conserva el producto y la suma dentro de los reales.\par
@@ -707,7 +769,7 @@ Si tenemos un número complejo cualquiera $(a,b)\in \mathbb C$ lo podemos escrib
 $$(a,b)=a+bi$$
 Donde $a$ constituye su parte real y $b$ se llama parte imaginaria.
 
-\subsection*{\underline{Definiciones}}
+\subsection{\underline{Definiciones}}
 \begin{itemize}
 \item Si $z=a+bi\in \mathbb C$ se le llama módulo de $z$ a:
 $$|z|=\sqrt{a^2+b^2}$$
@@ -725,7 +787,7 @@ $$sen(\theta)=\frac{b}{|z|}$$
 \item Si $z=a+bi\in \mathbb C\Rightarrow |z|=0\Leftrightarrow z=0\Leftrightarrow a=0=b$
 \end{itemize}
 
-\subsubsection*{Propiedades}
+\subsubsection{Propiedades}
 \begin{enumerate}
 \item Si $z=a+bi\in \mathbb C$, entonces: $z\cdot \bar{z}=|z|^2$\par
 En particular, $z\cdot (\frac{1}{|z|^2}\cdot \bar{z})=1$, siendo lo del paréntesis \textbf{su inverso}.
@@ -753,13 +815,13 @@ $$cos(\alpha + \beta)+ i\cdot sen(\alpha + \beta)= e^{i\cdot(\alpha + \beta)}$$
 \item $z=|z|e^{i\alpha}$ y $\omega=|\omega|e^{i\beta}$, entonces: $z\cdot \omega=|z|e^{i\alpha}\cdot |\omega|e^{i\beta}=|z|\cdot |\omega|\cdot e^{i(\alpha +\beta)}$
 \end{enumerate}
 
-\subsubsection*{Definición: la exponencial compleja}
+\subsubsection{Definición: la exponencial compleja}
 Nos es más que definir un poco más concretamente una de las propiedades anteriores.
 $$z=a+bi\in \mathbb C\Rightarrow e^z=e^{a+bi}=e^a\cdot e^{bi}=e^a\cdot (cos(b)+i\cdot sen(b))=e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)$$
 Concretamente cuando se trata de un número real: $b=0$, luego:
 $$e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)=e^a$$
 
-\subsubsection*{Formas de representación}
+\subsubsection{Formas de representación}
 En resumen a lo expresado anteriormente, hay 4 formas de representar un número complejo:
 \begin{itemize}
 \item Forma binomial: $a+bi$
@@ -767,7 +829,7 @@ En resumen a lo expresado anteriormente, hay 4 formas de representar un número 
 \item Forma polar: $|z|_\theta$
 \item Forma exponencial: $z=|z|\cdot e^{\theta\cdot i}$
 \end{itemize}
-\subsection*{\underline{Teorema Fundamental del Álgebra}}
+\subsection{\underline{Teorema Fundamental del Álgebra}}
 Supongamos que tenemos un polinomio $P(z)$ con coeficientes complejos, decimos que el número $z_0\in \mathbb C$ es raíz de $P(z)$ lo que es equivalente a decir que: $P(z)=(z-z_0)Q(z)$.\par
 Decimos que $z_0$ es raíz de $P(z)$ con multiplicidad $m\in \mathbb N\Leftrightarrow P(z)=(z-z_0)^mQ(z)$, donde $Q(z_0)\neq 0$.\par
 El teorema dice que si tenemos un polinomio cualquiera de coeficientes complejos, siempre existe una raíz al menos.
@@ -775,7 +837,7 @@ $$f(x)\in \mathbb C[x]\Rightarrow \exists z_0\in \mathbb C: P(z_0)=0$$
 Como consecuencia de dicho Teorema, si tenemos un polinomio $P(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots + a_1z+a_0: a_0,\cdots, a_n\in \mathbb C \wedge a_n\neq 0$, entonces $P(z)$ tiene $n$ raíces complejas (teniendo en cuenta su multiplicidad). Es decir, $\exists z_0,\cdots, z_k\in \mathbb C$ y $\exists m_0,\cdots, m_k\in \mathbb N$, tales que $\sum_{i=1}^k(m_i)=n$ y tales que:
 $$P(z)=a_n(z-z_1)^{m_1}\cdots (z-z_k)^{m^k}$$
 
-\subsubsection*{Raíces de números complejos}
+\subsubsection{Raíces de números complejos}
 Sea $z\in \mathbb C$ y $n\in \mathbb N$ buscamos $\omega \in \mathbb C: \omega^n=z$. Con lo cual para poder buscarlo, sabemos que buscamos un omega tal que:
 $$\omega=r\cdot e^{i\theta}\mbox{ donde }r=|\omega|, \theta=argumento$$
 De aquí se sigue que:
@@ -787,7 +849,7 @@ e^{in\theta}=e^{i\alpha} & \Rightarrow n\theta=\alpha\Rightarrow \theta=\frac{\a
 $$
 Donde $k=0,1,..., n-1$
 
-\section*{SUPREMOS E ÍNFIMOS}
+\section{SUPREMOS E ÍNFIMOS}
 Sea $A\subset R: A\neq \emptyset$, decimos que\footnote{En consecuencia, de esto se deduce que cualquier número superior a $M$ es cota superior de A y cualquier número menor que $m$ es cota inferior de A.}:
 \begin{itemize}
 \item $M\in R$ es cota superior del conjunto A $\Leftrightarrow \forall a\in A: a\leq M$.
@@ -805,12 +867,12 @@ Sea $A\subset R: A\neq \emptyset$, decimos\footnote{El supremo es la menor de la
 
 Decimos $S$ es el máximo de A si es supremo y $S\in A$ y del mismo modo decimos que $s$ es el mínimo de A si es ínfimo y $s\in A$.
 
-\subsection*{\underline{Propiedad del supremo}}
+\subsection{\underline{Propiedad del supremo}}
 Si $A\subset \mathbb R: A\neq \emptyset$ y está acotado superiormente, entonces existe el supremo.
 $$A\subset \mathbb R: A\neq \emptyset \mbox{ y acotado superiormente}\Rightarrow \exists S\in \mathbb R: S\mbox{ es supremo de A}$$
 En los $\mathbb Q$ no es cierto y es la diferencia fundamental de este cuerpo con respecto a los $\mathbb R$, porque par el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$, existe el supremo en $\mathbb R$, pero no en $\mathbb Q$.
 
-\subsubsection*{Proposición: consecuencias de supremo}
+\subsubsection{Proposición: consecuencias de supremo}
 Sea $A\subset \mathbb R: A\neq \emptyset$, acotado superiormente, el número $S\in \mathbb R$ es supremo $\Leftrightarrow$:
 \begin{enumerate}
 \item  Es único.
@@ -843,7 +905,7 @@ Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2
 \item Supongamos que no: $\forall a \in A: a<S-\varepsilon \vee S< a$. Si $S<a\Rightarrow S$ no es supremo, por lo tanto \# y si $S-\varepsilon> a: \forall a \in A\Rightarrow S-\varepsilon$ es supremo \#
 \end{enumerate}
 
-\subsubsection*{Proposición: consecuencia de ínfimo}
+\subsubsection{Proposición: consecuencia de ínfimo}
 Sea $A\subset \mathbb R: A\neq \emptyset$, acotado inferiormente, el número $s\in \mathbb R$ es ínfimo $\Leftrightarrow$:
 \begin{enumerate}
 \item  Es único.
@@ -879,7 +941,7 @@ $-S<m\leq a\Rightarrow S>-m\geq -a\Rightarrow -m$ es cota superior de B, \# porq
 \underline{Notación}:\par
 Sea $A\subset \mathbb R: A\neq \emptyset$, se denota al supremo de A como $sup(A)$ y se denota al ínfimo de A como $inf(A)$ y cuando no están acotados los conjuntos y por lo tanto no tiene supremo ni ínfimo pero se denota así: $sup(A)=+\infty$ y $inf(A)=-\infty$.
 
-\subsubsection*{Teorema de la existencia de raíces}
+\subsubsection{Teorema de la existencia de raíces}
 Sea $a\in \mathbb R: a>0$ y $n\in \mathbb N: n\geq 2$ entonces $\exists! r>0: r^n=a$.\par
 \underline{Demostración}:\par
 \begin{enumerate}
@@ -926,17 +988,17 @@ Por lo que al poder encontrar un $h$ que satisfaga dicha expresión llegamos a u
 \end{itemize}
 \end{enumerate}
 
-\subsubsection*{Supremos e ínfimos de subconjuntos}
+\subsubsection{Supremos e ínfimos de subconjuntos}
 Si tenemos que $S\subset A$ siendo ambos conjuntos de números reales, entonces:
 $$\sup S\leq \sup A$$
 $$\inf S\geq \inf A$$
 
-\subsection*{\underline{Propiedad Arquimediana de $\mathbb R$}}
+\subsection{\underline{Propiedad Arquimediana de $\mathbb R$}}
 Sea $x>0\in \mathbb R$ entonces $\exists n\in \mathbb N: x<n$, es decir, $\mathbb N$ no está acotado superiormente.\par
 \underline{Demostración}:\par
 Supongamos lo contrario, $\exists x>0\in \mathbb R: n\leq x: \forall n \in \mathbb N\Rightarrow \exists S=sup(\mathbb N)$, entonces por ser supremo: $\exists m \in \mathbb N : S-1<m\leq S\Rightarrow S<m+1$, pero como $m+1\in \mathbb N$ es absurdo.
 
-\subsubsection*{Propiedad Arquimediana del producto}
+\subsubsection{Propiedad Arquimediana del producto}
 Sea $x>1$, $y>0$, entonces $\exists n\in \mathbb N: x^n>y$ y es más:
 $$\forall y>0, x>1: \exists! n\in\mathbb N: x^n<y\leq x^{n+1}$$
 
@@ -949,7 +1011,7 @@ Si soy capaz de encontrar un epsilon que verifique que $x^m+\varepsilon<x^{m+1}$
 $$\Rightarrow S< x^m +\varepsilon <x^{m+1}\Rightarrow \varepsilon<x^{m+1}(x-1)$$
 Si escogemos un $\varepsilon< x-1\Rightarrow \varepsilon>0$ entonces lo anterior se verifica, así que como sí que existe un $\varepsilon$ positivo que cumple que $x^m+\varepsilon< x^{m+1}$ tenemos una contradicción.
 
-\subsubsection*{Proposiciones}
+\subsubsection{Proposiciones}
 \begin{enumerate}
 \item Si $x<0\in \mathbb R\Rightarrow \exists m\in \mathbb Z: m<x$, es decir, que $\mathbb Z$ no está acotado inferiormente.\par
 Demostración:
@@ -1030,7 +1092,7 @@ $$\mathbb R= \bigcup_{m\in \mathbb Z}((m-1)x, mx]$$
 \end{enumerate}
 
 Con todo lo visto anteriormente podemos probar otro resultado muy significativo:
-\subsection*{Densidad de $\mathbb Q$ en $\mathbb R$}
+\subsection{Densidad de $\mathbb Q$ en $\mathbb R$}
 Sean $a,b\in \mathbb R: a<b$, entonces $\exists r\in \mathbb Q: a<r<b$, es decir, en otras palabras:
 $$(a,b)\cap \mathbb Q\neq \emptyset$$
 Y de hecho es que hay infinitos.\par
@@ -1040,14 +1102,14 @@ Llamamos a $h=b-a>0$, por la propiedad arquimediana, $\exists n \in \mathbb N: \
 $$a<\frac{m+1}{n}=\frac{m}{n}+\frac{1}{n}< a+ h=b$$
 Con lo cual el número racional que buscábamos es $r=\frac{m+1}{n}$.
 
-\subsubsection*{Corolario: Densidad de los Irracionales en $\mathbb R$}
+\subsubsection{Corolario: Densidad de los Irracionales en $\mathbb R$}
 Si $a,b\in \mathbb R: a<b\Rightarrow \exists x\in \mathbb R\mbox{\textbackslash} \mathbb Q: a<x<b$, en otras palabras:
 $$(a,b)\cap (\mathbb R\mbox{\textbackslash} \mathbb Q)\neq \emptyset$$
 \underline{Demostración}:\par
 $$a<b\Rightarrow \frac{a}{\sqrt{2}}< \frac{b}{\sqrt{2}}\Rightarrow \exists r \in \mathbb Q: \frac{a}{\sqrt{2}}<r<\frac{b}{\sqrt{2}}\Rightarrow a <\sqrt{2}r<b$$
 Y es fácil ver que $r\in \mathbb R\mbox{\textbackslash}\mathbb Q$.
 
-\subsection*{\underline{Principio de intervalos encajados de Cantor}}
+\subsection{\underline{Principio de intervalos encajados de Cantor}}
 Supongamos que tenemos una familia de intervalos cerrados, es decir:
 $$F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$$
 Decimos que $F$ es de intervalos encajados\footnote{Uno está dentro del otro y así sucesivamente} $\Leftrightarrow n >m \Rightarrow I_n\subset I_m$, lo que es equivalente a decir que $I_{n+1}\subset I_{n}: \forall n\in \mathbb N$\par
@@ -1078,7 +1140,7 @@ x\mbox{ es cota inferior de B}\Rightarrow x\leq \eta\end{cases}\Rightarrow x\in 
 $$x\in [\xi,\eta]\Leftrightarrow a_n\leq \xi\leq x\leq \eta\leq b_n: \forall n \in \mathbb N\Rightarrow a_n\leq x\leq b_n\Rightarrow x\in [a_n,b_n]=I_n: \forall n\in \mathbb N\Rightarrow x\in \bigcap_{n\in \mathbb N}I_n$$
 \end{itemize}
 
-\subsubsection*{Corolario}
+\subsubsection{Corolario}
 Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces\footnote{Si $I=[a,b]$, entonces su longitud es $l(I)=b-a$}:
 $$\bigcap_{n\in \mathbb N}I_n\mbox{ es un único número}\Leftrightarrow \forall \varepsilon>0: \exists n\in \mathbb N: l(I_n)<\varepsilon$$
 
@@ -1114,7 +1176,7 @@ Por que entonces decimos que los intervalos no son de la longitud que queramos p
 
 \end{itemize}
 
-\subsubsection*{Observaciones}
+\subsubsection{Observaciones}
 \begin{itemize}
 \item Si los intervalos no son cerrados, es mentira el teorema.\par
 Sea $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$, entonces $I_{n+1}\subset I_n$ porque:
@@ -1124,7 +1186,7 @@ $$x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\
 Porque $n<\frac{1}{x}$ es absurdo porque los naturales no tienen cota superior.
 \end{itemize}
 
-\subsection*{\underline{Definición de la exponencial real}}
+\subsection{\underline{Definición de la exponencial real}}
 Se va a prescindir de las demostraciones de las operaciones con potencias y de los resultados para raíces porque se considera que son triviales y además se prescindirá de la demostración de los enunciados posteriormente descritos por la dificultad que revisten, pero se incluyen en estos apuntes por la importancia que revisten para resultados posteriores.
 
 Para poder definir lo que significa tener un número elevado a otro número real se atiende a la siguiente definición: sea $a,x\in \mathbb R$ y $r\in \mathbb Q$:
@@ -1133,8 +1195,8 @@ $$x=\sup\{r\in \mathbb Q: r<x\}=\inf\{r\in \mathbb Q: r>x\}$$
 Esto implica que entendamos la exponencial real como:
 $$a^x=\sup\{a^r: r<x\}=\inf\{a^r: r>x\}$$
 
-\chapter*{SUCESIONES Y SERIES}
-\section*{SUCESIONES}
+\chapter{Sucesiones y Series}
+\section{SUCESIONES}
 La sucesión de elementos de un conjunto es una lista numerada de elementos de un conjunto. Sea $M$ un conjunto cualquiera, no vacío, una sucesión de elementos de $M$ es una función:
 \begin{eqnarray*}
 f: \mathbb N &\rightarrow& M \\
@@ -1144,7 +1206,7 @@ Si $M=\mathbb R$ entonces decimos que es una \textbf{sucesión numérica}. Como 
 $$\{f(1),f(2),f(3), ...\}\Leftrightarrow \{x_1,x_2,x_3,...\}=\{x_n\}_{n\in \mathbb N}=\{x_n\}_{n=1}^{\infty}$$
 Y además diremos para indicar que es de $M$, diremos:
 $$\{x_n\}_{n=1}^{\infty}\subset M$$
-\subsection*{\underline{Operaciones con sucesiones numéricas}}
+\subsection{\underline{Operaciones con sucesiones numéricas}}
 Supongamos que tenemos dos sucesiones de números reales: $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset \mathbb R$ definimos:
 \begin{itemize}
 \item \textbf{Suma}: $\{x_n\}_{n=1}^{\infty}+\{y_n\}_{n=1}^{\infty}=\{x_n+y_n\}_{n=1}^{\infty}$
@@ -1158,7 +1220,7 @@ Supongamos que tenemos dos sucesiones de números reales: $\{x_n\}_{n=1}^{\infty
 Como el resto de operaciones se reduce a operaciones de elementos, estas heredan las propiedades de los números reales como asociativa, distributiva, ... Además, si se observa detenidamente, estas forman un ESPACIO VECTORIAL.
 \end{itemize}
 
-\subsection*{\underline{Convergencia de sucesiones}}
+\subsection{\underline{Convergencia de sucesiones}}
 El conjunto de $\{\frac{1}{n}: n\in \mathbb N\}$ es un conjunto, pero podemos pensar en la sucesión: $\{\frac{1}{n}\}_{n=1}^{\infty}$. Al ir dando valores a $n$ vemos que se acercan cada vez a 0, a este concepto le llamamos \textbf{convergencia}.\par
 
 Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$, decimos que esa sucesión \textbf{converge o tienen límite} en $l\in \mathbb R$:
@@ -1176,13 +1238,13 @@ n &\rightarrow& \infty
 \includegraphics[scale=0.35]{convergente}
 \end{center}
 
-\subsubsection*{Proposición: unicidad del límite}
+\subsubsection{Proposición: unicidad del límite}
 Si una sucesión tiene límite, este es único.\par
 \underline{Demostración}:\par
 $$\exists l_1,l_2: \lim_{n\rightarrow \infty}x_n=l_i$$
 Como son dos números reales $l_1<l_2$, tomamos $\varepsilon=\frac{l_2-l_1}{2}$, con esto sabemos que $\exists n_0\in \mathbb N: \forall n>n_0: |x_n-l_1|<\varepsilon$ y también $\exists m_0\in \mathbb N: \forall n>m_0: |x_n-l_2|<\varepsilon\Rightarrow n\geq max\{n_0,m_0\}\Rightarrow x_n\in E(l_1,\varepsilon)=(l_1-\varepsilon, l_2+\varepsilon)\wedge x_n\in E(l_2, \varepsilon)=(l_2-\varepsilon, l_2+\varepsilon)$, estos conjuntos deben ser disjuntos pensando en el dibujo mental, así se ve que: $l_1+\varepsilon\leq l_2-\varepsilon$ concretamente $=$ porque $2\varepsilon=l_2-l_1\Rightarrow \#$
 
-\subsubsection*{Proposición: acotamiento de sucesiones convergentes}
+\subsubsection{Proposición: acotamiento de sucesiones convergentes}
 Si $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ tiene límite $\Rightarrow \exists M>0: \forall n\in \mathbb N: |x_n|\leq M$, es decir, es acotada.\par
 
 \underline{Observación}: $\Leftarrow$ no es cierto\par
@@ -1196,7 +1258,7 @@ $$\Rightarrow \exists n_0: \forall n\geq n_0: |x_n-l|<1\Rightarrow |x_n|-|l|\leq
 Demostrado los valores de $n\geq n_0$, tenemos que demostrar que se cumple para $n=1,2,3,...,n_0-1$, que como es un conjunto finito podemos decir que uno de ellos es el mayor de todos y en consecuencia $\exists \tilde{M}>0: |x_n|\leq \tilde{M}: \forall n=1,2,..., n_0-1$.\par
 De este modo, nuestro número $M=max\{\tilde{M}, 1+l\}$
 
-\subsubsection*{Operaciones con sucesiones convergentes}
+\subsubsection{Operaciones con sucesiones convergentes}
 Sean $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty \subset \mathbb R$ que convergen a $x$ y a $y$ respectivamente, entonces:
 \begin{enumerate}
 \item $\{x_n\}_{n=1}^\infty+\{y_n\}_{n=1}^\infty$ converge a $x+y$
@@ -1273,14 +1335,14 @@ $$||x_n|-|x||\leq |x_n-x|<\varepsilon$$
 Esto último porque sabemos que dado $\varepsilon>0 : \exists n_0\in \mathbb N: \forall n\geq n_0$
 \end{enumerate}
 
-\subsection*{\underline{Sucesiones Monótonas}}
+\subsection{\underline{Sucesiones Monótonas}}
 Una sucesión de números de reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona creciente\footnote{Decimos que es estrictamente creciente si la desigualdad es estricta}} si:
 $$\forall n\in \mathbb N: x_n\leq x_{n+1}\Rightarrow \{x_n\}_{n=1}^\infty \uparrow$$
 
 Una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona decreciente\footnote{Decimos que es estrictamente decreciente si la desigualdad es estricta}} si:
 $$\forall n\in \mathbb N: x_{n+1}\leq x_n \Rightarrow \{x_n\}_{n=1}^\infty \downarrow$$
 
-\subsubsection*{Convergencia de sucesiones acotadas}
+\subsubsection{Convergencia de sucesiones acotadas}
 Si la sucesión es monótona creciente y acotada superiormente entonces es convergente. Además converge al \textbf{supremo} de los números de la sucesión.
 $$\{x_n\}_{n=1}^\infty \uparrow \wedge \mbox{ es acotada superiormente}\Rightarrow \lim_{n\rightarrow \infty} \{x_n\}=l=\sup\{x_n: \forall n\in \mathbb N\}$$
 
@@ -1301,7 +1363,7 @@ $$\forall n\geq n_0\Rightarrow l< x_n\leq x_{n_0} <l+\varepsilon \Rightarrow x_n
 Del mismo modo que antes, se cumplen las premisas de convergencia sin mentir en ningún punto.
 \end{enumerate}
 
-\subsubsection*{Convergencia y orden}
+\subsubsection{Convergencia y orden}
 Sean $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ convergentes a $x,y\in \mathbb R$ respectivamente, entonces:
 \begin{enumerate}
 \item Si $x_n\geq 0: \forall n \in \mathbb N\Rightarrow x\geq 0$
@@ -1331,14 +1393,14 @@ Esto puede hacerse porque estaba verificado que $w_n$ tendía a cero: dado $\var
 $$z_n=(z_n-x_n)+x_n\Rightarrow \lim_{n\rightarrow \infty} z_n=\lim_{n\rightarrow \infty} (z_n-x_n)+ \lim_{n\rightarrow \infty} x_n=0+x=x$$
 \end{enumerate}
 
-\subsection*{\underline{Sucesiones que convergen en infinito}}
+\subsection{\underline{Sucesiones que convergen en infinito}}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ decimos que converge o que tiende a $\infty$ si para cualquier constante que cojamos hay un término a partir del cual todos los términos son más grandes que esa constante.
 $$\lim_{n\rightarrow \infty} x_n=\infty \Leftrightarrow \forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\geq M$$
 
 Decimos que la sucesión $\{x_n\}_{n=1}^\infty$ converge o tiende a $-\infty$ cuando si para cualquier constante negativa que elijamos hay un índice a partir del cual todos los términos son más pequeños que esa constante.
 $$\lim_{n\rightarrow \infty} x_n=-\infty \Leftrightarrow \forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\leq -M$$
 
-\subsubsection*{Proposición: sucesiones monótonas no acotadas}
+\subsubsection{Proposición: sucesiones monótonas no acotadas}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$:
 \begin{enumerate}
 \item Si $\{x_n\}_{n=1}^\infty \uparrow$ y no acotada superiormente $\Rightarrow \lim_{n\rightarrow \infty} x_n=\infty$
@@ -1356,7 +1418,7 @@ Observamos que si las sucesión tiende a infinito o menos infinito no es acotada
 \item Sea $M>0$ como $\{x_n\}_{n=1}^\infty $ no es acotada inferiormente, entonces $\exists n_0\in \mathbb N: -M\geq x_{n_0}$. Si $n\geq n_0\Rightarrow -M\geq x_{n_0}\geq x_n$
 \end{enumerate}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $\{x_n\}_{n=1}^\infty \subset \mathbb R$, entonces:
 \begin{enumerate}
 \item Si $\lim_{n\rightarrow \infty} x_n=\pm \infty$, entonces $\lim_{n\rightarrow \infty} \frac{1}{x_n}=0$
@@ -1381,7 +1443,7 @@ $$\mbox{Sea }M>0,\mbox{ tomamos } \varepsilon=\frac{1}{M}\Rightarrow \exists n_0
 $$\mbox{Sea }M>0,\mbox{ tomamos }\varepsilon=\frac{1}{M}>0\Rightarrow \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-0|<\varepsilon\Leftrightarrow |x_n|=-x_n<\varepsilon=\frac{1}{M}\Rightarrow \frac{1}{x_n}<-M$$
 \end{enumerate}
 
-\subsubsection*{Corolario: operaciones con límites}
+\subsubsection{Corolario: operaciones con límites}
 \textbf{Notación}: se llama ``$\mathbb R$ ampliado'' a:
 $$\overline{\mathbb R}=\mathbb R\cup \{\infty\}\cup \{-\infty\}$$
 
@@ -1414,7 +1476,7 @@ Para ello entendemos las siguientes definiciones:
 
 Es decir, quedan excluidas las situaciones $\infty -\infty$, $0\cdot \infty$, $\frac{\infty}{\infty}$, $\frac{\infty}{0}$,  que son conocidas como las \textbf{indeterminaciones}.
 
-\subsubsection*{Criterio del cociente y de la raíz}
+\subsubsection{Criterio del cociente y de la raíz}
 Un buen criterio\footnote{La demostración es sencilla por medio de la definción de límite y se deja para el lector} para dilucidar si un límite es 0 o $\infty$ es el \textbf{criterio de la raíz} y el \textbf{criterio del cociente}:
 $$\lim_{n\rightarrow \infty}\left|\frac{x_{n+1}}{x_n}\right|<1\Rightarrow \lim_{n\rightarrow \infty} x_n=0$$
 $$\lim_{n\rightarrow \infty}\left|\frac{x_{n+1}}{x_n}\right|>1\Rightarrow \lim_{n\rightarrow \infty} |x_n|=\infty$$
@@ -1422,7 +1484,7 @@ $$\lim_{n\rightarrow \infty}\sqrt[n]{|x_n|}<1\Rightarrow \lim_{n\rightarrow \inf
 $$\lim_{n\rightarrow \infty}\sqrt[n]{|x_n|}>1\Rightarrow \lim_{n\rightarrow \infty} |x_n|=\infty$$
 
 
-\subsubsection*{Algunos ejemplos}
+\subsubsection{Algunos ejemplos}
 Ej.: Sea $p>0$, entonces $x_n=\frac{1}{n^p}: n\in \mathbb N$ veamos que $\lim_{n\rightarrow \infty} \frac{1}{n^p}=0$
 $$1\leq n<n+1\Rightarrow n^p< (n+1)^p\Rightarrow x_{n+1}=\frac{1}{(n+1)^p}<\frac{1}{n^p}=x_n\Rightarrow \{x\}_{n=1}^\infty \downarrow$$
 
@@ -1486,7 +1548,7 @@ Se observa que en la desigualdad a partir del sumatorio me he quedado solo con l
 
 
 
-\subsection*{\underline{Criterio de Stoltz}}
+\subsection{\underline{Criterio de Stoltz}}
 Supongamos que tenemos una sucesión de números reales, estrictamente creciente y que tiende a infinito: $\{y_n\}_{n=1}^\infty\subset \mathbb R: y_n<y_{n+1}: \lim_{n\rightarrow \infty} y_n=\infty$ y supongamos que tenemos otra sucesión cualquiera: $\{x_n\}_{n=1}^\infty\subset \mathbb R$, entonces:
 $$\lim_{n\rightarrow \infty} \frac{x_{n+1}-x_n}{y_{n+1}-y_n}=l\in \overline{\mathbb R}\Rightarrow \lim_{n\rightarrow \infty} \frac{x_n}{y_n}=l\in \overline{\mathbb R}$$
 
@@ -1549,12 +1611,12 @@ $$(1+p)^n\geq ... \geq \underbrace{n(n-1)(n-2)\cdots (n-k+1)}_{k \mbox{ término
 $$\frac{n^\alpha}{(1+p)^n}\leq \frac{n^\alpha}{n^k\cdot C}=\frac{1}{n^{k-\alpha}}\rightarrow 0\stackrel{Regla Sandwich}{\Rightarrow} SI$$
 \end{itemize}
 
-\subsection*{\underline{Subsucesiones}}
+\subsection{\underline{Subsucesiones}}
 Si $\{x_n\}_{n=1}^\infty\subset R$, definimos una subsucesión como $\{x_{n_k}\}_{k=1}^\infty=\{x_{n_1}, x_{n_2}, ..., x_{n_k}, ...\}: n_k<n_{k+1}$. Es decir, escojemos un conjunto de subíndices \textbf{ORDENADOS} de forma que la sucesión de subíndices escogidos sean estrictamente crecientes y formando de nuevo una sucesión más pequeña.\par
 Ej.:
 $$\{x_n\}_{n=1}^\infty =\{2,4,6,8,10,...\}\rightarrow \{x_{n_k}\}_{n=1}^\infty =\{4,8,12,...\}$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$, entonces $\{x_n\}_{n=1}^\infty$ converge a $l\in \mathbb R\Leftrightarrow \{x_{n_k}\}_{k=1}^\infty$ converge a $l$ $\forall$ subsucesión.
 
 \underline{Demostración}:
@@ -1569,7 +1631,7 @@ Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$, entonces $\{x_n\}_{n=1}^\infty$ con
 	$$\exists k_0: n_{k_0}\geq n_0\Rightarrow \forall k\geq k_0: n_k>n_{k_0}>n_0\Rightarrow \left|x_{n_k}-l\right|<\varepsilon\Rightarrow \lim_{n\rightarrow \infty} x_{n_k}=l$$
 \end{itemize}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Supongamos que tenemos una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, entonces:
 $$\{x_n\}_{n=1}^\infty\subset \mathbb R\mbox{ es NO acotada superiormente}\Leftrightarrow \exists \{x_{n_k}\}_{k=1}^\infty\subset \mathbb R: \lim_{k\rightarrow \infty} x_{n_k}=\infty$$
 Y de forma análoga se cumple para acotadas inferiormente y $\lim=-\infty$.\par
@@ -1604,7 +1666,7 @@ $$\exists n_3>n_2: x_{n_3}>3\Rightarrow \{x_n\}_{n>n_3}\mbox{ no acotado sup.}$$
 Por inducción se demuestra que $M=k\in \mathbb N: \exists n_k>n_{k-1}: x_{n_k}>k$. Por tanto, $\lim_{k\rightarrow \infty} x_{n_k}=\infty$ porque dado $M>0: \exists k_0\in \mathbb N: k_0>M\Rightarrow x_{n_{k_0}}>k_0>M\stackrel{k\geq k_0}{\Rightarrow} x_{n_k}>k>k_0\geq M$
 \end{itemize}
 
-\subsubsection*{Teorema de Bolzano-Weirstrass}
+\subsubsection{Teorema de Bolzano-Weirstrass}
 Supongamos que tenemos $\{x_n\}_{n=1}^\infty\subset R$ acotada, entonces $\exists \{x_{n_k}\}_{k=1}^\infty$ convergente.\par
 \underline{Demostración}:\par
 Supongamos que $a\leq x_n\leq b: \forall n\in \mathbb N$, utilizamos la siguiente notación: si $J$ es un intervalo y $n\in \mathbb N$, llamamos $I(J,n)=\{m\in \mathbb N :m>n: x_m\in J\}$, es decir, son los índices mayores que $n$ de manera que $x_m$ pertenece al conjunto.\par
@@ -1622,7 +1684,7 @@ Con ello hemos construido una familia de intervalos encajados $\{J_k\}_{k=1}^\in
 Veamos que $\{x_{n_k}\}_{k=1}^\infty$ converge a $\varphi$ ya que $\varphi\in J_k: \forall k$ y por construcción, como $n_k$ es el primer elemento de $I(J_{k-1},n_{k-1})$, entonces:
 $$x_{n_k}\in J_{k-1}\wedge \varphi\in J_{k-1}\Rightarrow \left|x_{n_k}-\varphi\right|\leq \frac{b-a}{2^{k-1}}\Rightarrow \mbox{Sea }\varepsilon>0:\exists k_0, \forall k\geq k_0 : \left|x_{n_k}-\varphi\right|\leq \frac{b-a}{2^{k-1}}<\varepsilon$$
 
-\subsection*{\underline{Sucesiones de Cauchy}}
+\subsection{\underline{Sucesiones de Cauchy}}
 \textbf{\underline{Observación previa}}:\par
 Si tenemos una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$ que converge a $l\in \mathbb R$, entonces $\forall \varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\frac{\varepsilon}{2}$. De este modo sabemos que $n,m\geq n_0$ entonces $|x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$
 
@@ -1632,13 +1694,13 @@ Es decir, como ambos elementos de la sucesión están dentro del intervalo de ce
 \includegraphics[scale=0.15]{Cauchy 1}
 \end{center}
 
-\subsubsection*{Sucesiones de Cauchy}
+\subsubsection{Sucesiones de Cauchy}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión se dice que es de Cauchy si:
 $$\forall \varepsilon>0, \exists n_0\in \mathbb N: \forall n,m\geq n_0: |x_n-x_m|<\varepsilon$$
 Y viendo lo anterior, acabamos de demostrar que una sucesión convergente es de Cauchy:
 $$\{x_n\}_{n=1}^\infty\xrightarrow{n\rightarrow \infty} l\Rightarrow \mbox{ es de Cauchy}$$
 
-\subsubsection*{Completitud de $\mathbb R$}
+\subsubsection{Completitud de $\mathbb R$}
 \textbf{\underline{Observación previa}}:\par
 Si una sucesión $\{x_n\}_{n=1}^\infty\subset \mathbb R$ es de Cauchy, entonces es acotada\footnote{Pero el recíproco no es cierto!!!, puede ser acotada pero no convergente}.\par
 \underline{Demostración}:\par
@@ -1665,7 +1727,7 @@ Porque como $k\geq k_0\Rightarrow |x_{n_k}-l|<\frac{\varepsilon}{2}$ y como $n,n
 
 Por tanto, dado un $\varepsilon>0,\exists n_0\in \mathbb N: k\geq k_0\Rightarrow n\geq n_0: |x_n-l|<\varepsilon$
 
-\subsection*{\underline{Límite inferior y superior de una sucesión}}
+\subsection{\underline{Límite inferior y superior de una sucesión}}
 Sea $\{x_n\}\subset \mathbb R$ una sucesión acotada y denotamos $N\in \mathbb N$, entonces llamamos:
 $$a_N=\inf\{x_n: n\geq \mathbb N\}\Rightarrow \{a_N\}\uparrow$$
 $$b_N=\sup\{x_n: n\geq \mathbb N\}\Rightarrow \{b_N\}\downarrow$$
@@ -1675,7 +1737,7 @@ Lo que implica que al ser sucesiones monótonas y ser acotadas, el límite de am
 $$\liminf_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}a_N$$
 $$\limsup_{n\rightarrow\infty}x_n=\lim_{n\rightarrow\infty}b_N$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Una sucesión $\{x_n\}_{n=1}^\infty$ converge si y sólo si su límite superior e inferior coinciden y ambos son el límite de la sucesión.
 $$\lim_{n\rightarrow \infty}x_n=l\Leftrightarrow \liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n=l$$
 
@@ -1691,20 +1753,20 @@ $$\Rightarrow l-\varepsilon \leq a_{n_0} \leq a_N \leq b_N \leq b_{n_0} \leq l+\
 $$\Rightarrow \lim_{n\rightarrow\infty}a_N=l= \lim_{n\rightarrow\infty}b_N$$
 \end{itemize}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Si un número es mayor que el límite superior de una sucesión, entonces (salvo una cantidad finita de índices) se tiene que $x_n<s$.\par
 
 \underline{Demostración}:\par
 Si tenemos que $\lim \{b_n\}\downarrow = l\Rightarrow \forall \varepsilon>0 : \exists n_0\in \mathbb N: \forall n\geq n_0: |b_n-l|<\varepsilon $ y en este caso podemos decir que $b_n-l<\varepsilon$. Ahora si vemos que $s>l$, entonces si escogemos $\varepsilon = |s-l|=s-l$, entonces por la definción de límite debe ocurrir que $b_n-l<s-l\Rightarrow b_n<s$ a partir de un cierto $n_0$.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Para cualquier subsucesión de $x_n$ si converge su límite se encuentra entre ambos límites superior e inferior.
 $$\exists x_{n_k}\xrightarrow{n\rightarrow\infty}x_0\Rightarrow \liminf x_n \leq x_0 \leq \limsup x_n$$
 
 \underline{Demostración}:\par
 $$\forall k\in \mathbb N: a_{n_k}\leq x_{n_k} \leq b_{n_k} \Rightarrow a\leq x_0 \leq b$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Para cualquier sucesión existe una subsucesión que converge al límite inferior y otra subsucesión que converge al límite superior.
 $$\exists \{x_{n_k}\}, \{x_{n_q}\}\subset \{x_n\}: x_{n_k}\xrightarrow{k\rightarrow \infty} \liminf x_n \mbox{ y } x_{n_q}\xrightarrow{q\rightarrow \infty} \limsup x_n$$
 
@@ -1717,8 +1779,8 @@ $$\limsup_{n\rightarrow\infty}x_n=\sup L$$
 Puede parecer que ya está demostrado en la propia definición de las sucesiones $a_N$ y $b_N$, pero en estos casos los índices no están ordenados, por lo que no son subsucesiones.
 Si suponemos que $a$ es el límite de inferior, entonces sea $\varepsilon_1=1$ ocurre que $\exists n_1\in \mathbb N: a_1\leq x_{n_1}<a+1$ y por inducción podemos construir la siguiente sucesión: sea $\varepsilon_k= \frac{1}{k} : \exists n_k > n_k -1: a_{n_{k-1}}\leq x_{n_k}\leq a_{n_{k-1}}+\varepsilon_k$, por lo que se construye $\{x_{n_k}\}_{k=1}^\infty$ de manera que $a_{n_{k-1}}\leq x_{n_k}\leq a_{n_{k-1}}+\frac{1}{k}$ que vemos que por la regla del sandwich tiende a lo dicho.
 
-\subsection*{\underline{Límites en el exponente}}
-\subsubsection*{Paso al exponente}
+\subsection{\underline{Límites en el exponente}}
+\subsubsection{Paso al exponente}
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión que converge a $x$ y $a>0$, entonces:
 $$\lim_{n\rightarrow \infty} x_n = x \mbox{ y }a>0\Rightarrow \lim_{n\rightarrow\infty} a^{x_n}=a^x$$
 
@@ -1730,7 +1792,7 @@ Además como $a^x>a^{x_n}:\forall n\in \mathbb N$, entonces está acotada, por l
 Visto el caso de una función monótona, para una función cualquiera se tiene que como $x_n\xrightarrow{n\rightarrow\infty} x\Rightarrow a_N\xrightarrow{n\rightarrow\infty}x\xleftarrow{n\rightarrow\infty} b_N$ siendo ambos los límites superiores e inferiores descritos en el apartado anterior, así que como $\{b_N\}\downarrow$ y $\{a_N\}\uparrow$:
 $$a_N\leq x_N\leq b_N \Rightarrow a^{a_N}\xrightarrow{n\rightarrow\infty}a^x\leq a^{x_N}\leq a^{b_N}\xrightarrow{n\rightarrow\infty}a^x\Rightarrow a^{x_N}\xrightarrow{N\rightarrow\infty}a^x$$
 
-\subsubsection*{Raíces de base variable}
+\subsubsection{Raíces de base variable}
 Sea $x_n\geq 0: \forall n\in \mathbb N$ y $\lim_{n\rightarrow\infty} x_n = x$, si $r\in \mathbb Q$, entonces:
 $$\lim_{n\rightarrow \infty}x_n = x: \forall n\in \mathbb N: x_n\geq 0 \mbox{ y }r\in \mathbb Q\Rightarrow \lim_{n\rightarrow\infty}x_n^{r} = x^r$$
 
@@ -1746,7 +1808,7 @@ $$a_N\leq x_N\leq b_N\Rightarrow \sqrt[m]{a_N}\xrightarrow{n\rightarrow\infty}\s
 
 De ello se puede deducir, contando con la demostración anterior que si $m\in \mathbb Q$ entonces se cumple la proposición dada (contando con lo demostrado en la proposición anterior a este apartado).
 
-\subsubsection*{Exponencial de base variable}
+\subsubsection{Exponencial de base variable}
 Esta proposición aúna las dos anteriores, diciendo que si $\lim_{n\rightarrow \infty}x_n = x$ y $\lim_{n\rightarrow\infty}a_n=a>0$, entonces:
 $$\lim_{n\rightarrow\infty}a_n=a>0 \mbox{ y } \lim_{n\rightarrow\infty}x_n=x\Rightarrow \lim_{n\rightarrow\infty}a_n^{x_n}=a^x$$
 
@@ -1755,7 +1817,7 @@ Para esta demostración necesitamos elaborar un poco el terreno la demostración
 $$z_N\leq a_N\leq y_N\Rightarrow z_N^{z'_n}\leq a_N^{z'_n}\leq a_N^{x_n}\leq a_N^{y'_n}\leq y_N^{y'_n}\Rightarrow z_N^{z'_n}\xrightarrow{n\rightarrow|\infty}a^x\leq a_N^{x_N}\leq y_N^{y'_n}\xrightarrow{n\rightarrow|\infty}a^x\Rightarrow a_N^{x_N}\xrightarrow{n\rightarrow|\infty}a^x$$
 
 
-\section*{SERIES NUMÉRICAS}
+\section{SERIES NUMÉRICAS}
 Este concepto está relacionado con la suma de infinitos números. Es necesario introducir (como en la mayoría de conceptos que tratan el infinito) el concepto de límite porque tal y como hemos definido la operación de la suma solo podemos sumar una cantidad finita de números, tan grande como queramos, pero al fin y al cabo finita, es decir:
 $$\sum_{i=1}^{n} x_i = x_1 + \cdots + x_n$$
 Como nosotros necesitamos que esta cantidad sea infinita, basta con calcular la suma hasta $n$ y después pasar al límite, porque si que sabemos calcular el límite de sucesiones y cada $x_n$ sería la suma hasta $n$ de la expresión.
@@ -1765,7 +1827,7 @@ $$\{s_n\}_{n=1}^\infty: s_n = x_1 + x_2 + \ldots x_n = \sum_{k=1}^{n} x_k$$
 Por tanto, formalmente hablando no vamos a decir que la suma infinita converge a nada, sino que vamos a decir que:
 $$\exists \lim_{n \to \infty} s_n = \exists\lim_{n \to \infty} \sum_{k=1}^{n} x_k$$
 
-\subsubsection*{Observaciones}
+\subsubsection{Observaciones}
 Las series pueden ``empezar'' en $n=0$, $n=2$ o $n=\gamma$ porque al fin y al cabo si la serie converge, empezar un poco más adelante no es tan importante puesto que la suma hasta ese índice de comienzo será finita y como la que hemos escogido será convergente, la suma de ambas cantidades será finita, luego la sucesión desde el índice inicial es convergente en consecuencia.
 
 \underline{\textbf{Ejemplo}}:
@@ -1777,9 +1839,9 @@ $$s_n = \frac{a}{2^0} + \frac{a}{2^1} + \ldots + \frac{a}{2^n} = \frac{1 - \frac
 Luego en definitiva tenemos que:
 $$\lim_{n \to \infty} s_n = \lim_{n \to \infty}  2\left(1 - \frac{1}{2^{n+1}}\right) = 2$$
 
-\subsection*{\underline{Criterios de convergencia}}
+\subsection{\underline{Criterios de convergencia}}
 En ocasiones será sencillo incluso calcular el valor concreto del límite de convergencia de una serie, pero en general puede ser muy complicado y enrevesado. En su lugar, optaremos por determinar cuando una serie es o no convergente para que en caso de requerirlo perdamos nuestro tiempo en calcular el límite en caso de que exista (puesto que existen métodos matemáticos para aproximar o vislumbrar dicho límite).
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si la serie es convergente, entonces la sucesión de los términos de la sucesión tiende a $0$.
 $$\sum^{\infty} x_n \mbox{ es convergente} \Rightarrow \lim_{n \rightarrow \infty} x_n =0$$
 Lo que no quiere decir que la sucesión de sumas parciales tienda a 0, ni que el recíproco sea cierto.
@@ -1811,7 +1873,7 @@ Por tanto:
 $$\lim_{n \to \infty} s_{2^n} = + \infty$$
 Pero $\{s_n\}_{n=1}^\infty$ es monótona creciente $\Rightarrow \forall k, \exists n: s_k >s_{2^n}$, por tanto, $\lim_{n \to \infty} s_n = + \infty$; luego $\sum_{n=0}^{\infty} \frac{1}{n}$ es divergente.
 
-\subsubsection*{Criterio de Cauchy}
+\subsubsection{Criterio de Cauchy}
 Decimos que $\sum^{\infty} x_n$ es convergente si y solo si se cumple el criterio de Cauchy para las sumas parciales porque al fin y al cabo son sucesiones en esencia.
 $$\forall \varepsilon >0 : \exists N\in \mathbb N: \forall n,m\geq N: |s_n-s_m|<\varepsilon$$
 Pero en este caso esto quiere decir que:
@@ -1831,7 +1893,7 @@ $$\left|\sum_{m+1}^{n} x_k\right| \leq \sum_{m+1}^{n} \left|x_k\right|  < \varep
 
 Como contraejemplo ejemplo para el recíproco se tiene la serie armónica alternada: $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ que converge a $\ln(2)$, pero $\sum_{n=1}^{\infty} |x_n|$ que es la serie armónica diverge.
 
-\subsubsection*{Criterio de comparación}
+\subsubsection{Criterio de comparación}
 Si tenemos dos sucesiones de forma que $0 \leq x_n \leq y_n: \forall n \geq K$, entonces:
 $$\sum_{n=1}^{\infty} y_n \mbox{ converge} \Rightarrow \sum_{n = 1}^{\infty} x_n \mbox{ converge}$$
 Y de modo análogo se tiene que si
@@ -1845,7 +1907,7 @@ Por tanto, si escogemos $M'=\min\{M,K\}$ entonces para $n>m\geq M'$ ocurre que:
 $$0 \leq \sum_{m+1}^{n} x_n \leq \sum_{m+1}^{n} y_n < \varepsilon \Rightarrow \sum_{n=1}^{\infty} x_n\mbox{ es convergente}$$
 
 
-\subsubsection*{Criterio de comparación en el límite}
+\subsubsection{Criterio de comparación en el límite}
 Supongamos que tenemos dos sucesiones que verifican $\{x_n\}_{n=1}^\infty$, $\{y_n\}_{n=1}^\infty$ de forma que: $x_n , y_n \geq 0 : \forall n \geq n_0$ y cuyo límite existe:
 $$r = \lim_{n \rightarrow \infty} \frac{x_n}{y_n}$$
 Entonces ocurre que:
@@ -1874,14 +1936,14 @@ De nuevo, tomando $\tilde{K} = \max \{K, K'\}$ y $n \geq \tilde{K}$, entonces:
 $$0 < \frac{x_n}{y_n} < \varepsilon \Rightarrow 0 < x_n < \varepsilon y_n \Rightarrow$$
 $$\Rightarrow \sum y_n \mbox{ converge }\Rightarrow \Sigma x_n \mbox{ converge}$$
 
-\subsection*{\underline{Convergencia absoluta y condicional}}
+\subsection{\underline{Convergencia absoluta y condicional}}
 Diremos que la serie $\sum_{n = 1}^{\infty} x_n$ converge absolutamente o es absolutamente convergente si la serie de los valores absolutos es convergente, es decir:
 $$\sum_{n = 1}^{\infty} x_n\mbox{ absolutamente convergente} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ converge}$$
 
 Diremos que la serie $\sum_{n = 1}^{\infty} x_n$ converge condicionalmente o es condicionalmente convergente si no es absolutamente convergente, es decir:
 $$\sum_{n = 1}^{\infty} x_n\mbox{ condicionalmente convergente} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ diverge pero } \sum_{n = 1}^{\infty} x_n \mbox{ converge}$$
 
-\subsubsection*{Criterios de convergencia absoluta}
+\subsubsection{Criterios de convergencia absoluta}
 \begin{itemize}
 \item \underline{\textbf{Criterio de la raíz}}:
 
@@ -1929,12 +1991,12 @@ Si consideramos ahora el segundo punto tenemos que $|x_{n+1}| \geq |x_n|: \foral
 $$\Rightarrow |x_n| \geq |x_k|: \forall n \geq K: x_n \cancel{\rightarrow} 0 \Rightarrow  \sum_{n=1}^\infty x_n \mbox{ diverge}$$
 \end{itemize}
 
-\subsubsection*{Criterio de la integral}
+\subsubsection{Criterio de la integral}
 Supongamos que tenemos $f:[0, \infty)\rightarrow \mathbb R$ que verifica que $f(x)\geq 0 $, que $f$ es decreciente y que $\lim_{x \rightarrow \infty} f(x) = 0$. Entonces decimos que:
 $$\int_{0}^{\infty} f(x)\ dx \mbox{ converge} \Leftrightarrow \sum_{n = 1 }^{\infty} f(n)\mbox{ converge}$$
 La demostración y explicación de este resultado se encuentra en el tema dedicado a las integrales, concretamente en la sección de integrales impropias.
 
-\subsubsection*{Criterio de Leibnitz}
+\subsubsection{Criterio de Leibnitz}
 Supongamos que tenemos una sucesión $\{x_n\}_{n=1}^\infty$ que verifica:
 \begin{itemize}
 \item $x_n > 0$
@@ -1970,7 +2032,7 @@ $$\begin{cases} \varepsilon > 0, \exists N : \forall n \geq N \Rightarrow |s_{2n
 Si escogemos como constante $\bar{N} = \max\{N, N'\}$, entonces se tiene que cumple ambas definiciones simultáneamente:
 $$n \geq \bar{N} \Rightarrow \begin{cases} |s_{2n} - L|<\varepsilon & n = 2k \\ |s_{2n+1} - L|<\varepsilon & n = 2k+1\end{cases} \Rightarrow \forall k \geq \bar{N}: |s_k-L|<\varepsilon$$
 
-\subsubsection*{Criterio de Condensación de Cauchy}
+\subsubsection{Criterio de Condensación de Cauchy}
 Sea $\{x_n\}_{n=1}^\infty \downarrow$ una sucesión decreciente de términos estrictamente positivos de forma que $x_n \rightarrow 0$. Si $s_n$ es la suma parcial de los primeros $n$ términos de la sucesión, entonces ocurre que:
 $$\sum_{n=1}^{\infty} x_n \mbox{ converge } \Leftrightarrow \sum_{n=1}^{\infty} 2^n x_{2^n} \mbox{ converge }$$
 
@@ -1998,10 +2060,10 @@ esta serie. De este modo, si esta converge, entonces la subsucesión $\{s_{2^n}\
 Este criterio resulta muy útil para decidir la convergencia de sucesiones en las que intervengan logaritmos, pues al tener $\ln (n)$ y sustituir $\ln (2^k)$ podemos sacar $k$ fuera para que nos quede una expresión más sencilla.
 
 
-\chapter*{FUNCIONES CONTINUAS}
-\section*{CONCEPTO DE LÍMITE}
-\subsection*{\underline{Definición: puntos de acumulación y aislados}}
-\subsubsection*{Punto de acumulación}
+\chapter{FUNCIONES CONTINUAS}
+\section{CONCEPTO DE LÍMITE}
+\subsection{\underline{Definición: puntos de acumulación y aislados}}
+\subsubsection{Punto de acumulación}
 Sea $D\subset \mathbb R$ decimos que $x_0\in \mathbb R$ es un \textbf{punto de acumulación de D} $\Leftrightarrow \forall \delta>0: \exists d\in D: d\in (x_0-\delta, x_0+\delta)\{x_0\}$, es decir, si para todo entorno hay otros puntos de D; en otras palabras:
 $$D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)\neq \emptyset$$
 Ej.: $D=(0,1)\cup (1,2]\cup \{3\}$, si dejamos puesto el propio número diríamos que este punto es punto de acumulación y vemos claramente por el dibujo que no es cierto.\par
@@ -2012,13 +2074,13 @@ Ej.: $D=(0,1)\cup (1,2]\cup \{3\}$, si dejamos puesto el propio número diríamo
 
 Por notación el conjunto de puntos de acumulación de $D$ es $D'$.
 
-\subsubsection*{Punto aislado}
+\subsubsection{Punto aislado}
 Si $D\subset \mathbb R$, $x_0\in D$ y no es un punto de acumulación, entonces decimos que es un \textbf{punto aislado} de D:
 $$\exists \delta >0 : D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)= \emptyset$$
 
 Es decir, en el ejemplo de arriba, 3 es un punto aislado. Todos los puntos de D \textbf{o son de acumulación o son aislados}.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $D\subset \mathbb R$ y $x_0\in \mathbb R$, entonces $x_0$ es un punto de aumulación de D $\Leftrightarrow \exists \{x_n\}_{n=1}^\infty \subset D: \lim_{n\rightarrow \infty} x_n=x_0$ de manera que $x_n\neq x_0: \forall n\in \mathbb N$.\par
 
 \underline{Demostración}:
@@ -2033,7 +2095,7 @@ Como sabemos que existe dicha sucesión entonces sabemos que siendo $\delta >0$,
 $$x_n\in (x_0-\delta , x_0+\delta)\mbox{\textbackslash} \{x_0\}\stackrel{x_n\in D}{\Rightarrow} D\cap\left((x_0-\delta , x_0+\delta)\mbox{\textbackslash} \{x_0\}\right) \neq \emptyset$$
 \end{itemize}
 
-\subsection*{\underline{Límite de una función en un punto}}
+\subsection{\underline{Límite de una función en un punto}}
 \textbf{\underline{Observación previa}}:\par
 El concepto intuitivo que queremos expresar es que si tenemos $D\subset R: D\neq \emptyset$ y $f: D\longrightarrow \mathbb R$, entonces queremos formalizar que si $x_0\in \mathbb R$ y $x\in D$ y $x\sim x_0$, entonces $f(x)\sim l: l\in \mathbb R$.El número $x_0$ es un punto de acumulación\footnote{Es notable decir que NO tiene por qué estar en D} para que siempre tenga cerca números del conjunto.
 
@@ -2049,7 +2111,7 @@ $$\lim_{x\rightarrow x_0} f(x)=l\Leftrightarrow \forall \varepsilon>0, \exists \
 En otras palabras, queremos decir que:
 $$\forall \varepsilon>0, \exists \delta>0 : x\in D,  0\stackrel{x\neq x_0}{<}|x-x_0|<\delta\Rightarrow |f(x)-l|<\varepsilon$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $D\subset \mathbb R$ y $f:D\longrightarrow \mathbb R$ y $x_0$ un punto de acumulación de D, entonces:
 \begin{enumerate}
 \item $\lim_{x\rightarrow x_0} f(x)=l\in \mathbb R \Leftrightarrow \forall \{x_n\}_{n=1}^\infty\subset D: x_n\neq x_0: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow 	f(x_n)\xrightarrow{n\rightarrow \infty} l$
@@ -2093,7 +2155,7 @@ $$x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash}\{x_0\}\right) \
 Y es fácil probar que: $(l_1-\varepsilon, l_1+\varepsilon)\cap (l_2-\varepsilon, l_2+\varepsilon)\neq \emptyset$
 \end{enumerate}
 
-\subsubsection*{Propiedades de los límites}
+\subsubsection{Propiedades de los límites}
 Sea $D\subset \mathbb R$ y $f,g: D\longrightarrow \mathbb R$ y $x_0$ un punto de acumulación de D. Si suponemos que $\lim_{x\rightarrow x_0}f(x)=l$ y $\lim_{x\rightarrow x_0}g(x)=m$, entonces:
 \begin{enumerate}
 \item $\lim_{x\rightarrow x_0}(g(x)+f(x))=m+l$
@@ -2160,7 +2222,7 @@ Con lo cual, dado $\varepsilon>0: \exists \delta_1>0: \begin{cases} x\in D\\ 0<|
 $$\forall \varepsilon>0: \exists \delta>0: \begin{cases} x\in D\\ 0<|x-x_0|<\delta\end{cases}\Rightarrow \frac{|g(x)-m|}{|g(x)|\cdot |m|}<\frac{2}{|m|^2}\cdot |g(x)-m|<\frac{2}{|m|^2}\cdot \frac{\varepsilon}{2}\cdot |m|^2=\varepsilon$$
 \end{enumerate}
 
-\subsubsection*{Definición formal de límite}
+\subsubsection{Definición formal de límite}
 Sea $D\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$:
 \begin{enumerate}
 \item Si $x_0\in \mathbb R$ es un punto de acumulación de D, decimos que:
@@ -2191,15 +2253,15 @@ $$\lim_{x\rightarrow -\infty}f(x)=-\infty \Leftrightarrow \forall M>0: \exists k
 Hemos redefinido por tanto la definición de límite para R ampliado.
 $$\lim_{x\rightarrow x_0}f(x)=l\mbox{ con }x_0,l\in \overline{R}$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $x_0, l\in \overline{\mathbb R}$, entonces:
 $$\lim_{x\rightarrow x_0}f(x)=l\Leftrightarrow \forall\{x_n\}_{n=1}^\infty \subset D: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} l$$
 
-\subsubsection*{Observación}
+\subsubsection{Observación}
 Si $x_0,l,m\in \overline{\mathbb R}$ y también $\lim_{x\rightarrow x_0}f(x)=l$ y $\lim_{x\rightarrow x_0}g(x)=m$, entonces las reglas de cálculo\footnote{Suma de límites, producto, diferencia...} de límites siguen siendo válidas, excepto que $\infty-\infty$, $\frac{\infty}{\infty}$, $0\cdot \infty$ y $\frac{0}{0}$ son \textbf{indeterminaciones}.
 
-\section*{CONCEPTO DE FUNCIÓN CONTINUA}
-\subsection*{\underline{Continuidad de una función}}
+\section{CONCEPTO DE FUNCIÓN CONTINUA}
+\subsection{\underline{Continuidad de una función}}
 Sea $D\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$ y $x_0\in D$, entonces decimos que:
 $$f\mbox{ es continua en }x_0 \Leftrightarrow \forall \varepsilon >0 : \exists \delta >0: x\in D\cap (x_0-\delta, x_0+\delta)\Rightarrow f(x)\in (f(x_0)-\varepsilon, f(x_0)+\varepsilon)$$
 
@@ -2208,7 +2270,7 @@ $$f\mbox{ es continua en }A \Leftrightarrow f\mbox{ es continua en }x_0: \forall
 
 Es decir, ahora no excluimos del intervalo al propio $x_0$ de la condición.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $D\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$ y sea $x_0\in D$ un punto de acumulación de D, entonces:
 \begin{enumerate}
 \item $f\mbox{ es continua en }x_0 \Leftrightarrow \lim_{x\rightarrow x_0} f(x)=f(x_0)$
@@ -2232,10 +2294,10 @@ $$x=x_0\Rightarrow |f(x_0)-f(x_0)|=0<\varepsilon\Rightarrow \mbox{ también lo v
 \item Es también inmediata porque ya demostramos que para la definición de límite se cumplía lo de las sucesiones convergentes al mismo, pero añadíamos que la condición era que $x\neq x_0$ por lo que si tomamos la sucesión con $x=x_0$ entonces es fácil ver que se verifica la convergencia de sucesiones hacia $f(x_0)$.
 \end{enumerate}
 
-\subsubsection*{Observación}
+\subsubsection{Observación}
 En la caracterización de continuidad que acabamos de hacer hemos pedido dos cosas, que $x_0\in D$ y que sea punto de acumulación, pero si $f: D \longrightarrow \mathbb R$ y $x_0\in D$ y NO es un punto de acumulación, entonces según la definición que hemos dado $f(x_0)$ SIEMPRE ES CONTINUA\footnote{En el fondo porque para cualquier intervalo de radio $\varepsilon$ cuyo centro es su propia imagen, siempre hay puntos que vayan de un intervalo a otro porque él es el centro de su propio intervalo de radio $\delta$}.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $D\subset \mathbb R$ y $f,g: D\longrightarrow \mathbb R$ y $x_0\in D$ un punto de acumulación de D, entonces:
 \begin{enumerate}
 \item $f,g\mbox{  continuas en }x_0\Rightarrow f+g, a\cdot f, f\cdot g, \frac{f}{g}$ siempre son continuas\footnote{Siendo $g(x)\neq 0$ y $a\in \mathbb R$} en $x_0$
@@ -2262,7 +2324,7 @@ $$\Rightarrow \delta =\varepsilon \mbox{ lo cumple}$$
 Y con lo probado antes de que todas las funciones continuas si se suman o se multiplican dan funciones continuas, queda probado que todos los polinomios son continuos.
 \end{enumerate}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $D, E\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$ y $g: E\longrightarrow \mathbb R$ tales que $f(D)\subset E$, entonces:
 \begin{enumerate}
 \item Si $x_0\in D$ y $f$ es continua en $x_0$ y $g$ es continua en $f(x_0)$ (que $\in E$), entonces:
@@ -2292,7 +2354,7 @@ $$\Rightarrow g\circ f\mbox{ cont. en } x_0$$
 
 \end{enumerate}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $I\subset \mathbb R$ un intervalo y $f: I\longrightarrow \mathbb R$ una función continua e inyectiva (en consecuencia, biyectiva sobre el conjunto $f(I)$ porque es suprayectiva sobre su imagen), entonces:
 $$\exists f^{-1}: f(I)\longrightarrow I\mbox{ y es continua}$$
 
@@ -2314,7 +2376,7 @@ Esto es cierto porque si la subsucesión convergente, aunque sea subsucesión de
 \item Si $I$ es un intervalo cualquiera, sea $y_0\in f(I)$ y sea $x_0=f^{-1}(y_0)$ podemos encontrar SIEMPRE $a,b\in \mathbb R: x_0\in [a,b]\in I$ y entonces podemos volver al caso anterior.
 \end{itemize}
 
-\subsection*{\underline{Límites laterales}}
+\subsection{\underline{Límites laterales}}
 Sea $f: (a,b)\longrightarrow \mathbb R$, entonces:
 \begin{enumerate}
 \item Si $x_0\in (a,b]$, entonces el número $l\in \mathbb R$ es el límite por la izquierda de $f$ en $x_0$ si y sólo si:
@@ -2324,7 +2386,7 @@ $$\lim_{x\rightarrow x_0^-}f(x)=l\Leftrightarrow \forall \varepsilon>0, \exists 
 $$\lim_{x\rightarrow x_0^+}f(x)=l\Leftrightarrow \forall \varepsilon>0, \exists \delta>0: x\in (x_0, x_0+\delta)\Rightarrow |f(x)-l|<\varepsilon$$
 \end{enumerate}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $f: (a,b)\longrightarrow \mathbb R$, entonces:
 \begin{enumerate}
 \item $\lim_{x\rightarrow x_0^-}f(x)=l\Leftrightarrow \forall \{x_n\}_{n=1}^\infty \subset (a,b): x_n\xrightarrow{n\rightarrow \infty} x_0: x_n<x_0: \forall n\in \mathbb N\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty}l$
@@ -2358,7 +2420,7 @@ Sea $f: (a,b)\longrightarrow \mathbb R$, entonces:
 
 \end{enumerate}
 
-\subsubsection*{Proposición: condiciones de continuidad}
+\subsubsection{Proposición: condiciones de continuidad}
 Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, entonces:
 \begin{enumerate}
 \item $\exists \lim_{x\rightarrow x_0} f(x)=l\Leftrightarrow f(x_0^-)=f(x_0^+)=l$
@@ -2385,7 +2447,7 @@ Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, entonces:
 \item Demostrado porque para ser continua el límite tiene que ser igual a $f(x_0)$ y para que exista el límite tiene que ser igual a él los límites laterales.
 \end{enumerate}
 
-\subsection*{\underline{Discontinuidades}}
+\subsection{\underline{Discontinuidades}}
 Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, si $f$ no es continua en $x_0$, entonces:
 \begin{itemize}
 \item $\exists f(x_0^+), f(x_0^-)$
@@ -2397,7 +2459,7 @@ Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, si $f$ no es continua 
 \item \textbf{Discontinuidad esencial}: $\nexists f(x_0^-)$ o $\nexists f(x_0^+)$
 \end{itemize}
 
-\subsection*{\underline{Límites laterales en el infinito}}
+\subsection{\underline{Límites laterales en el infinito}}
 Sea $f: (a,b)\longrightarrow \mathbb R$, entonces decimos:
 \begin{itemize}
 \item Si $x_0\in (a,b]$ decimos que:
@@ -2413,7 +2475,7 @@ $$\lim_{x\rightarrow x_0^+}f(x)=\infty\Leftrightarrow \forall M>0: \exists \delt
 $$\lim_{x\rightarrow x_0^+}f(x)=-\infty\Leftrightarrow \forall M>0: \exists \delta>0: x\in (x_0,x_0+\delta)\Rightarrow f(x)< -M$$
 \end{itemize}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $f: (a,b)\longrightarrow \mathbb R$, entonces decimos:
 \begin{itemize}
 \item Si $x_0\in (a,b)$ decimos que:
@@ -2435,8 +2497,8 @@ $$\lim_{x\rightarrow x_0^+}f(x)=\infty\Leftrightarrow \forall \{x_n\}_{n=1}^\inf
 $$\lim_{x\rightarrow x_0^+}f(x)=-\infty\Leftrightarrow \forall \{x_n\}_{n=1}^\infty \subset (a,b): x_n\xrightarrow{n\rightarrow\infty} x_0: x_n>x_0: \forall n\in \mathbb N\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} -\infty$$
 \end{itemize}
 
-\subsection*{\underline{Propiedades de Funciones Continuas}}
-\subsubsection*{Teorema de Wierstrass}
+\subsection{\underline{Propiedades de Funciones Continuas}}
+\subsubsection{Teorema de Wierstrass}
 Sea $f:[a,b] \rightarrow \mathbb R$ continua, entonces:
 \begin{itemize}
 \item La función es acotada, es decir:
@@ -2461,7 +2523,7 @@ $$\forall n\in \mathbb N: \exists x_n\in [a,b]: S-\frac{1}{n}<f(x_n)\leq S$$
 Esto forma una sucesión de números. Como sabemos que $\{x_n\}\subset[a,b]$, entonces por el Teorema de Bolzano-Wierstrass, tenemos que $\exists \{x_{n_k}\}$ que converge (a $d$) por lo que tenemos que $f(x_{n_k})$ converge a $f(d)$ y como $f(x_n)$ converge a $S$, entonces $f(d)=S$.
 \end{enumerate}
 
-\subsubsection*{Teorema de Bolzano}
+\subsubsection{Teorema de Bolzano}
 Si tenemos una función continua tal que $f:[a,b] \rightarrow \mathbb R$, si la función toma signos distintos en los extremos del intervalo, entonces existe un valor dentro de ese intervalo donde la función toma el valor nulo, es decir:
 $$f(a)<0 \mbox{ y } f(b)>0\Rightarrow \exists c\in (a,b): f(c)=0$$
 
@@ -2469,7 +2531,7 @@ $$f(a)<0 \mbox{ y } f(b)>0\Rightarrow \exists c\in (a,b): f(c)=0$$
 Supongamos que $f(a)<0$ y $f(b)>0$, entonces sea $A=\{t\in [a,b]: f(t)<0\}$ tenemos que $a\in A$ y $b$ es cota superior de $A$ y, en consecuencia, existe el supremo que llamaremos $\exists \sup(A)=c$. Entonces existe una sucesión de puntos de $A$ que converge a su supremo porque $\forall n\in \mathbb N: \exists t_n\in A: c-\frac{1}{n}< t_n\leq c$, es decir, $\exists\{t_n\}\subset A: t_n\xrightarrow{n\rightarrow \infty}c$. Como $f$ es continua, entonces $f(t_n)\xrightarrow{n\rightarrow \infty}f(c)\Rightarrow f(c)\leq 0)$ y ahora probamos que $f(c)=0$.\par
 Si $f(c)<0\Rightarrow \exists\delta>0: \forall x\in (c-\delta, c+\delta): f(x)<0\Rightarrow (c-\delta, c+\delta)\subset A$, lo que contradice que $c=\sup A\Rightarrow \#\Rightarrow f(c)=0\Rightarrow c\in (a,b)$ porque $f(a)\neq 0$ y $f(b)\neq 0$.
 
-\subsubsection*{Teorema del valor intermedio}
+\subsubsection{Teorema del valor intermedio}
 Si tenemos una función continua tal que $f:[a,b] \rightarrow \mathbb R$ y llamamos $A=f(a)$ y $B=f(b)$, si $C$ es un número intermedio entre $A$ y $B$, entonces existe un $c\in(a,b): f(c)=C$, es decir, que si la función alcanza dos valores, entonces alcanza todos los intermedios.
 
 \underline{Demostración}:\par
@@ -2477,7 +2539,7 @@ Llamamos $g(x)=f(x)-C$ de manera que $g:[a,b] \rightarrow \mathbb R$ y es contin
 $$\begin{cases}g(a)=f(a)-C=A-C \\ 
 g(b)=f(b)-C=B-C \end{cases} \Rightarrow \mbox{ signos distintos}\stackrel{Bolzano}{\Rightarrow} \exists c\in (a,b): g(c)=0$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Si tenemos una función continua tal que $f:[a,b] \rightarrow \mathbb R$ entonces $f([a,b])$ es un intervalo cerrado y acotado. Además, será el intervalo formado por el ínfimo de las imágenes y por el supremo de las imágenes, como hemos visto en el Teorema de Wierstrass.
 
 \underline{Demostración}:\par
@@ -2488,14 +2550,14 @@ $$f(c)\leq f(x)\leq f(d)\Rightarrow f([a,b])\subset [f(c), f(d)]$$
 Veamos ahora $``\supset''$:\par
 Sea $y\in [f(c), f(d)]$ suponiendo que es distinto de $f(c)$ y $f(d)$ como $f:[c,d]\rightarrow \mathbb R$ continua por el teorema de valores intermedios, entonces $\exists x\in [c,d]: f(x)=y\Rightarrow y\in f([c,d])\subset f([a,b])$.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $I\subset \mathbb R$ un intervalo, si $f: I\rightarrow |\mathbb R$ y es continua, entonces $f(I)$ es un intervalo.
 
 \underline{Demostración}:\par
 Sea $\alpha, \beta\in f(I)$, veamos que $[\alpha, \beta]\subset f(I)\Rightarrow f(I)$ es un intervalo:
 Teniendo en cuenta lo primero podemos asegurar que $\exists a, b \in I: \alpha=f(a) \wedge \beta=f(b)$. Podemos suponer sin pérdida de generalidad que $a<b\Rightarrow [a,b]\subset I$ y como $f:[a,b]\rightarrow \mathbb R$ es continua, entonces si $y \in [\alpha,\beta]$ tenemos que $\exists c\in [a,b]\subset I: f(c)=y\in f(I)$.
 
-\subsection*{\underline{Propiedades de funciones monótonas}}
+\subsection{\underline{Propiedades de funciones monótonas}}
 Sea $f:[a,b]\rightarrow \mathbb R$, decimos\footnote{Le añadimos el sobrenombre de \textbf{estricta} si la desigualdad es estricta} que:
 \begin{itemize}
 \item Es \textbf{monótona creciente} si:
@@ -2505,7 +2567,7 @@ $$\forall x,y\in [a,b]: x<y\Rightarrow f(x)\leq f(y)$$
 $$\forall x,y\in [a,b]: x<y\Rightarrow f(x)\geq f(y)$$
 
 \end{itemize}
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Supongamos que $f:[a,b]\rightarrow \mathbb R$ es monótona creciente\footnote{Con las decrecientes ocurre de forma análoga.}, entonces:
 $$\forall x\in (a,b):\exists f(x^-)\mbox{ y }f(x^+): f(x^-)\leq f(x)\leq f(x^+)$$
 Además se verifica que:
@@ -2530,13 +2592,13 @@ Del mismo modo, sea $\delta= t_2-x$, si escogemos un $t$ de manera que $x<t<t_2\
 
 Si $x<y$, entonces sea $t: x<t<y$. Sabemos que $f(x^+)\leq f(t)$ y como también $f(t)\leq f(y^-)$, entonces tenemos que $f(x^+)\leq f(t)\leq f(y^-)$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $f:[a,b]\rightarrow \mathbb R$ es monótona, entonces el conjunto de discontinuidades es, a lo sumo, \textbf{numerable}.
 
 \underline{Demostración}: \par
 Supongamos que $f$ es creciente\footnote{Con las decrecientes pasa lo mismo}. Llamamos $D=\{x\in (a,b): f \mbox{ es discontinua}\}$, sabemos también que $f$ es discontinua $\Leftrightarrow f(x^-)< f(x^+)$, entonces $\forall x \in D: \exists q_x\in \mathbb Q: f(x^-)<q_x<f(x^+)$. Entonces tenemos $s:D \rightarrow \mathbb Q$ donde a cada $x\rightarrow q_x$. Veamos que esta aplicación es inyectiva, por que sabemos que una función es siempre suprayectiva sobre su imagen y demostrar la inyectividad supone poder establecer una biyección con los naturales. Si $x_1<x_2\Rightarrow s(x_1)=q_{x_1}<f(x_1^+)\leq f(x_2^-)< q_{x_2}=s(x_2)$, por lo que es numerable.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $f:[a,b]\rightarrow \mathbb R$ continua, entonces:
 \begin{enumerate}
 \item $f$ es inyectiva $\Leftrightarrow f$ es estrictamente monótona.
@@ -2577,7 +2639,7 @@ Con lo cual, sabiendo que $a=d$ y que $b=c$, entonces veamos que es estrictament
 \end{enumerate} 
 \vspace{0.25cm}
 
-\subsection*{\underline{Continuidad uniforme}}
+\subsection{\underline{Continuidad uniforme}}
 \underline{\textbf{Observación previa}:}\par
 La definicion de continuidad vista es: supongamos que tenemos $f: D\rightarrow \mathbb R$ donde $D\subset \mathbb R$ de manera que $f$ es continua en $D$, es decir:
 $$\forall x\in D: \forall \varepsilon>0: \exists \delta>0 : x,y \in D: |x-y|<\delta\Rightarrow |f(x)-f(y)|<\varepsilon$$
@@ -2598,7 +2660,7 @@ Dos observaciones importantes:
 \end{enumerate}
 \textbf{Ejemplo}: $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$ es continua pero no uniformemente continua. Esto es así porque sea $\varepsilon=1$, $\delta >0$ y $x,x+\delta$ entonces tenemos que: $|f(x)-f(x+\delta)|=|x^2|-(x+\delta)^2=\delta|\delta +2x|$. Si dado el delta yo escojo un $x$ de manera que $\delta +2x > \frac{1}{\delta}$, entonces $\delta|\delta +2x|>1$, por lo que no es uniformemente continua porque hemos encontrado un $x$ que no satisface la propiedad.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $f:[a,b]\rightarrow \mathbb R$ continua, es uniformemente continua en un intervalo cerrado y acotado.
 
 \underline{Demostración}:\par
@@ -2607,8 +2669,8 @@ Supongamos que $f$ no es uniformemente continua, entonces $\exists \varepsilon> 
 Pero por otro lado, las imágenes están lejos porque como f es continua, entonces $f(x_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$ y $f(y_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$, pero tenemos que $|f(x_{n_k})-f(y_{n_k})|\geq 0$ y es absurdo porque cuando se tiende a infinito tenemos que $|l-l|=0<\varepsilon\Rightarrow \#$
 \vspace{3cm}
 
-\subsection*{\underline{Continuidad de funciones elementales}}
-\subsubsection*{Regla del Sandwich para funciones}
+\subsection{\underline{Continuidad de funciones elementales}}
+\subsubsection{Regla del Sandwich para funciones}
 Si tenemos que $D\subset \mathbb R$, $x_0$ es un punto de acumulación, $f,g,h: D\rightarrow\mathbb R$ y ocurre que para $\delta_0>0$ vemos que $f(x)\leq g(x)\leq h(x)$, si $\lim_{x\rightarrow x_0} f(x)=m=\lim_{x\rightarrow x_0} h(x)$, entonces se tiene que:
 $$f(x)\xrightarrow{x\rightarrow x_0} m \leq g(x)\leq h(x)\xrightarrow{x\rightarrow x_0}m\Rightarrow g(x)\xrightarrow{x\rightarrow x_0}m$$
 
@@ -2620,7 +2682,7 @@ $$\forall \varepsilon>0: \exists \delta_2>0: 0<|x-x_0|<\delta_2\Rightarrow |h(x)
 Luego si dado un $\varepsilon>0$, cogemos $\delta=\min\{\delta_0, \delta_1,\delta_2\}$ tenemos que:
 $$m-\varepsilon< f(x) \leq g(x) \leq h(x) < m+\varepsilon\Rightarrow |g(x)-m|<\varepsilon$$
 
-\subsubsection*{Continuidad de funciones exponenciales}
+\subsubsection{Continuidad de funciones exponenciales}
 Sean $f: D\rightarrow (0,\infty)$ y $g: D\rightarrow \mathbb R$, se tiene que la función $h: D\rightarrow \mathbb R$:
 $$h(x)=f(x)^{g(x)}: x\in D \mbox{ es continua}$$
 
@@ -2633,10 +2695,10 @@ Del mismo modo, tenemos que $f(x)=x^a$ es continua porque por el mismo razonamie
 
 Basta con ver que al ser estas dos funciones continuas, la composición de ambas: $h(x)=f(x)^{g(x)}$ es continua.
 
-\subsubsection*{Continuidad del seno y del coseno}
+\subsubsection{Continuidad del seno y del coseno}
 El coseno y el seno son funciones continuas.
 
-\subsubsection*{Continuidad de los logaritmos}
+\subsubsection{Continuidad de los logaritmos}
 Definimos el logaritmo\footnote{Cuando la base del logaritmo es el número \textit{e} decimos que es un \textit{logaritmo neperiano}} como la función inversa a la exponencial, su imagen va de los positivos a los reales.
 \begin{eqnarray*} log_a x: (0,\infty) &\longrightarrow& \mathbb R \\ a^x &\longmapsto& x \end{eqnarray*}
 
@@ -2659,9 +2721,9 @@ $$a^{\log_a xy}= xy=a^{log_a x}\cdot a^{log_a y}=a^{\log_a x + \log_a y}\Rightar
 El resto de propiedades se demuestran de forma análoga.
 
 
-\chapter*{CÁLCULO DIFERENCIAL}
-\section*{DEFINICIÓN DE DERIVADA}
-\subsection*{\underline{Definición y derivabilidad}}
+\chapter{CÁLCULO DIFERENCIAL}
+\section{DEFINICIÓN DE DERIVADA}
+\subsection{\underline{Definición y derivabilidad}}
 Una función $f: I\rightarrow \mathbb R$ donde $I$ es un intervalo y $c$ es un punto del intervalo, se dice derivable o diferenciable en $c$ si $\exists L\in \mathbb R$ que verifica que:
 $$\forall \varepsilon>0: \exists \delta>0 : 0<|x-c|<\delta\Rightarrow \left|\frac{f(x)-f(c)}{x-c}-L\right|<\varepsilon$$
 
@@ -2678,19 +2740,19 @@ Veamos el mismo ejemplo con la definición, nuestro candidato es $f'(c)=2c$, la 
 $$\left|\frac{f(x)-f(c)}{x-c}-2c\right| = \left|\frac{x^2-c^2}{x-c}-2c\right| = |x+c-2c|= |x-c|<\delta \Rightarrow \delta <\varepsilon$$
 Luego bastaría con escoger un delta de manera que este sea menor que el epsilon dado.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Si $f$ es derivable en $c$, entonces la derivada es única.
 
 \underline{Demostración}:\par
 $f$ es derivable en $c$ $\Leftrightarrow \exists \lim_{x\rightarrow c}\varphi(x) $, pero sabemos que el límite es único, en consecuencia, la derivada debe ser un único valor.
 
-\subsubsection*{Función derivada}
+\subsubsection{Función derivada}
 Si $f:I\rightarrow \mathbb R$ es derivable en todo $I$, podemos definir la función derivada que llamaremos $f': I\rightarrow \mathbb R$ de manera que $c\rightarrow f'(c)$.
 
 \underline{Ejemplo:}\par
 Sea $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2\Rightarrow f'(x)=2x$ como hemos visto antes.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $f$ es derivable en $c$, entonces $f$ es continua en $c$.
 
 Sin embargo, en general el recíproco no es cierto, es decir, existe funciones continuas que no son derivables en algún punto de su dominio.
@@ -2706,7 +2768,7 @@ Luego no es derivable
 Sea $f:I\rightarrow \mathbb R$, $c\in I$, $\lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c}=f'(c)\in \mathbb R$, vemos que si $x\neq c$, entonces $f(x)-f(c)=\frac{f(x)-f(c)}{x-c} \cdot (x-c)$, pero sabemos que $\lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c} = f'(c)$ y que además $\lim_{x\rightarrow c} x-c =0$. Esto implica que
 $$\exists \lim_{x\rightarrow c} (f(x)-f(c)) = \lim_{x\rightarrow c}\frac{f(x)-f(c)}{x-c} \cdot \lim_{x\rightarrow c}(x-c)= f'(c)\cdot 0 = 0 \Leftrightarrow \lim_{x\rightarrow c} f(x)= f(c)\Rightarrow f(x)\mbox{ continua en }c$$
 
-\subsubsection*{Interpretación geométrica de la derivada}
+\subsubsection{Interpretación geométrica de la derivada}
 Supongamos que tenemos una función $f:I \rightarrow \mathbb R$ y $c\in I$, vemos que la existencia de la derivada quiere decir que existe este cociente incremental $\frac{f(x)-f(c)}{x-c}$.
 
 \begin{center}
@@ -2715,8 +2777,8 @@ Supongamos que tenemos una función $f:I \rightarrow \mathbb R$ y $c\in I$, vemo
 
 Es fácil ver el triángulo que marcamos en el dibujo y entender entonces el concepto geométrico\footnote{A pesar de darse esta explicación geométrica, en ningún caso intervendrá en cualesquiera de las demostraciones posteriores puesto que prevalece la definición de derivada dada} que se quiere explicar, realmente lo que analizamos es la \textbf{tangente} de dicho ángulo, es decir, es la pendiente de la recta tangente a la curva en ese punto.
 
-\subsection*{\underline{Operaciones y derivabilidad}}
-\subsubsection*{Teorema}
+\subsection{\underline{Operaciones y derivabilidad}}
+\subsubsection{Teorema}
 Sean $f,g: I\rightarrow \mathbb R$, $c\in I$ y $f,g$ derivables en $c$, se tiene que:
 \begin{enumerate}
 \item La función $f+g: I\rightarrow \mathbb R$ es derivable en $c$ y:
@@ -2741,7 +2803,7 @@ $$=f'(c)g(c)+f(c)g'(c)$$
 
 4. Completamente análoga utilizando el truco usado en la 3.
 
-\subsubsection*{Corolario}
+\subsubsection{Corolario}
 Si tenemos que $f_1, f_2, ..., f_n: I \rightarrow \mathbb R$ son funciones derivables en $c\in I$, entonces se tiene que:
 \begin{enumerate}
 \item $(f_1+...+f_n)'(c)=f_1'(c)+...+f'_n(c)$
@@ -2764,7 +2826,7 @@ Si tenemos $f(x)=x^n= x\cdot x\cdots x$, entonces tenemos que por el corolario t
 
 Con lo cual, podemos verlo en un caso general diciendo que $g(x)= f(x)^n$, por lo que $g'(c)= n\cdot f'(c)\cdot f(c)^{n-1}$.
 
-\subsubsection*{Lema de Caratheodery}
+\subsubsection{Lema de Caratheodery}
 Dada $f:I \rightarrow \mathbb R$ es derivable en $c\in I\Leftrightarrow\exists\varphi: I\rightarrow \mathbb R$ continua en $c$ de manera que $f(x)-f(c)=\varphi(x)(x-c): \forall x \in I$. Y en ese caso $f'(c)=\varphi(c)$
 
 \underline{Demostración}:
@@ -2778,7 +2840,7 @@ Si $f$ es derivable en $c$, entonces $\varphi=\begin{cases} \frac{f(x)-f(c)}{x-c
 Si tenemos que $\varphi: I \rightarrow \mathbb R$ continua en c y $f(x)-f(c)=\varphi(x)(x-c) : x\in I$, entonces $x\neq c\Rightarrow \frac{f(x)-f(c)}{x-c}=\varphi(x)$ y como $\lim_{x\rightarrow c}\frac{f(x)-f(c)}{x-c} = \lim_{x\rightarrow c} \varphi(x)=\varphi(c)$, como el límite existe entonces f es derivable en c y $f'(c)=\varphi(c)$.
 \end{itemize}
 
-\subsubsection*{Regla de la Cadena}
+\subsubsection{Regla de la Cadena}
 Sea $f: I \rightarrow \mathbb R $, $c\in I: f$ derivable en $c$, siendo $f(I)\subset J$ y que $g: J\rightarrow \mathbb R$ es una función derivable en $d=f(c)$. Entonces la composición $g\circ f (x)$ es derivable en $c$ y decimos que:
 $$(g\circ f)'(c)=g'(f(c))\cdot f'(c)$$
 
@@ -2794,7 +2856,7 @@ Por tanto, si llamamos $\chi(x)= \psi((f(x))\varphi(x): x\in I$, tenemos que $(g
 
 Como esta función es producto de dos, entonces es continua si ambos factores son continuos. Sabemos que $\varphi$ es continua en $c$, $f$ es continua en $c$ porque es derivable en $c$ y $\psi$ es continua en $d$ se tiene que: $\psi \circ f$ es continua en $c$ por composición de funciones continuas. Del mismo modo, por ser producto de funciones continuas se tiene que $(\psi \circ f)\cdot \varphi$ es continua en $c$ y esto último determina que $g\circ f$ es derivable en $c$ y además $(g\circ f)'(c)=\chi(x)= \psi((f(c))\varphi(c)=g'(f(c))\cdot f'(c)$.
 
-\subsubsection*{Derivada de la función inversa}
+\subsubsection{Derivada de la función inversa}
 Sea $f:I\rightarrow \mathbb R$ donde $I$ es un intervalo y además $f$ es continua e inyectiva, entonces se tiene que:
 $$(f^{-1})'(y)=\frac{1}{f'(x)}$$
 Por ser inyectiva y continua, entonces debe ser estrictamente monótona y por ser inyectiva es biyectiva sobre su imagen, por lo que puedo definir\footnote{En lo que sigue de demostración se denotará $f(I)$ por el intervalo $J$} $g(y): J\rightarrow I$.  Si escojo $c\in I$ y suponemos que $f$ es derivable de manera que $f'(c)\neq 0$  entonces $g(y)$ es derivable en $d=f(c)$ y además $g'(d)=\frac{1}{f'(c)}$, como $g=f^{-1}$, entonces se tiene la afirmación del principio.
@@ -2826,17 +2888,17 @@ Sea $y=x^m: x>0$ tenemos una función definida de forma que $y: \mathbb R^+ \rig
 Sea $y=sen(x)$, sabemos que $y'=cos(x)$ y la función inversa del seno se llama el $x=arcsen(y)$, de forma que según lo visto: $(arcsen(y))'=\frac{1}{(sen(x))'}=\frac{1}{cos(x)}$, entonces si $y=sen(x)$ y también tenemos $cos(x)=\sqrt{1-sen^2(x)}$, luego sustituyendo en lo anterior:
 $$(arcsen(y))'=\frac{1}{\sqrt{1-y^2}}$$
 
-\section*{CRECIMIENTO Y DECRECIMIENTO}
-\subsection*{\underline{Teorema del valor medio}}
-\subsubsection*{Extremos relativos y relativos estrictos}
+\section{CRECIMIENTO Y DECRECIMIENTO}
+\subsection{\underline{Teorema del valor medio}}
+\subsubsection{Extremos relativos y relativos estrictos}
 Decimos\footnote{Lo llamamos estricto si la desigualdad $f(x)\geq \mbox{ ó }\leq f(c)$ es estricta, en ambos casos \textbf{Y SE CAMBIA LA CONDICIÓN A $0<|x-c|<\delta$}} que $f:I\rightarrow \mathbb R$ tiene un \textbf{máximo relativo} en $c\in I$ si $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\leq f(c)$.
 
 Decimos que $f:I\rightarrow \mathbb R$ tiene un \textbf{mínimo relativo} en $c\in I$ si $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\geq f(c)$.
 
-\subsubsection*{Punto interior}
+\subsubsection{Punto interior}
 Si $I$ es un conjuntos de $\mathbb R$ entonces $c\in \mathring{I}$ (punto interior de $I$) si $\exists \delta_0 >0: (c-\delta_0, c+\delta_0)\subset I$. En particular, si $I$ es un intervalo $I=[a,b]$, entonces $(a,b)\in \mathring{I}$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f: I\rightarrow \mathbb R$ y supongamos que $f$ tiene un extremo relativo en $c\in \mathring{I}$. Si $f$ es derivable en $c$, entonces $f'(c)=0$.
 
 \underline{Demostración}:
@@ -2844,7 +2906,7 @@ Sea $f: I\rightarrow \mathbb R$ y supongamos que $f$ tiene un extremo relativo e
 Si $f$ es derivable en $c$, entonces $\exists \lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c}\Rightarrow \exists \lim_{x\rightarrow c^+} \frac{f(x)-f(c)}{x-c} = \exists \lim_{x\rightarrow c^-} \frac{f(x)-f(c)}{x-c}$. Supongamos que $c$ es un máximo\footnote{Con el mínimo se hace exactamente igual}, entonces $\exists\delta_0 >0 : |x-c|<\delta_0\Rightarrow f(x)\leq f(c)$, por lo tanto tenemos que
 $$\frac{f(x)-f(c)}{x-c}=\begin{cases}\leq 0 &\mbox{si } c<x<c+\delta_0  \Rightarrow \lim_{x\rightarrow c^+}\frac{f(x)-f(c)}{x-c} \leq 0\\ \geq 0 &\mbox{si } c-\delta_0 < x <c  \Rightarrow \lim_{x\rightarrow c^-}\frac{f(x)-f(c)}{x-c} \geq 0\end{cases}\Rightarrow \lim_{x\rightarrow c}\frac{f(x)-f(c)}{x-c}= 0$$
 
-\subsubsection*{Teorema de Rolle}
+\subsubsection{Teorema de Rolle}
 Sea $f: [a,b]\rightarrow \mathbb R$ continua en $[a,b]$ y derivable en $(a,b)$. Si el valor en los dos extremos es 0, existe algún punto del intervalo donde la derivada se anula.
 $$f(a)=f(b)=0\Rightarrow \exists c\in (a,b): f'(c)=0$$
 
@@ -2860,7 +2922,7 @@ En caso contrario, $\exists x_0\in (a,b):f(x_0)\neq 0$. En primer lugar, suponga
 
 El caso menor es análogo.
 
-\subsubsection*{Teorema del valor medio}
+\subsubsection{Teorema del valor medio}
 Sea $f:[a,b]\rightarrow\mathbb R$ continua en $[a,b]$ y derivable en $(a,b)$. Entonces ocurre:
 $$\exists c \in (a,b): f'(c)=\frac{f(b)-f(a)}{b-a}$$
 Se observa que imponiendo las condiciones particulares del teorema de Rolle, este último engloba al anterior.
@@ -2875,10 +2937,10 @@ $$\psi(x)=\underbrace{\frac{f(b)-f(a)}{b-a}\cdot (x-a)+f(a)}_{polinomio}-f(x)$$
 Como $\psi$ es suma de funciones continuas y derivables, es continua y derivable. Además vemos que $\psi(a)=\frac{f(b)-f(a)}{b-a}\cdot (a-a)+f(a)-f(a)=0$ y que $\psi(b)=\frac{f(b)-f(a)}{b-a}\cdot (b-a)+f(a)-f(b)=0$ por lo que nos encontramos en las condiciones del teorema de Rolle, es decir:
 $$\exists c\in (a,b): \psi'(c)=0\Rightarrow \frac{f(b)-f(a)}{b-a}-f'(c)=0\Rightarrow f'(c)=\frac{f(b)-f(a)}{b-a}$$
 
-\subsection*{\underline{Crecimiento y decrecimiento de funciones}}
+\subsection{\underline{Crecimiento y decrecimiento de funciones}}
 Sea $f:I\rightarrow \mathbb R$ es creciente\footnote{Es extensible dicha afirmación a decrecientes cambiando los signos convenientemente.} en $I$ si $\forall x_1, x_2\in I: x_1<x_2\Rightarrow f(x_1)\leq f(x_2)$. Como anotación diremos que es estrictamente creciente si ocurre que: $f(x_1)<f(x_2)$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Es fácil observar que si $f$ es creciente, entonces $\frac{f(x_2)-f(x_1}{x_2-x_1}\geq 0$ y si es estrictamente creciente tenemos que $\frac{f(x_2)-f(x_1}{x_2-x_1}> 0$.
 
 Sea $f:I\rightarrow\mathbb R$ una función continua y derivable en $\mathring{I}$, entonces:
@@ -2903,7 +2965,7 @@ Sea $f:I\rightarrow\mathbb R$ una función continua y derivable en $\mathring{I}
 \item Completamente análoga al punto 1.
 \end{enumerate}
 
-\subsubsection*{Corolario}
+\subsubsection{Corolario}
 De modo intuitivo se deduce que si $f:I\rightarrow\mathbb R$ continua en $I$ y derivable en $\mathring{I}$:
 $$f'(x)>0: \forall x\in \mathring{I}\Rightarrow f\mbox{ estrictamente creciente}$$
 $$f'(x)<0: \forall x\in \mathring{I}\Rightarrow f\mbox{ estrictamente decreciente}$$
@@ -2913,7 +2975,7 @@ PERO EL RECÍPROCO ES COMPLETAMENTE FALSO, por ejemplo, $f(x)=x^3$
 
 Si $x_1<x_2$ como hemos hecho en la demostración del teorema anterior, aplicamos el teorema del valor medio a $f$ en $[x_1,x_2]$. Del mismo modo, el apartado 2 es totalmente análogo.
 
-\subsubsection*{Observación}
+\subsubsection{Observación}
 Podríamos llegar a pensar que sea $f:I\rightarrow\mathbb R$ continua en $I$ y derivable en $\mathring{I}$ se tiene que si en un punto la derivada es estrictamente positiva implica que en los alrededores de ese punto la función es creciente, es decir:
 $$f'(x_0)>0\Rightarrow \exists \delta>0: \forall x\in (x_0-\delta, x_0+\delta): f'(x)\geq 0$$
 Lo que queremos decir es que si $x$ está muy cerca de $x_0$ entonces su derivada tiene que ser positiva, es decir:
@@ -2935,7 +2997,7 @@ $$f'(0)=\lim_{x\rightarrow 0}\frac{f(x)-f(0)}{x-0}=\lim_{x\rightarrow 0}\frac{x+
 
 Con lo cual, $f'(x)=\begin{cases}1+4x\sen\left(\frac{1}{x}\right)-2\cos\left(\frac{1}{x}\right) & x\neq 0\\ 1 & x=0\end{cases}$. Por lo tanto tenemos que a pesar de que la derivada en 0 es positiva, ocurre que para cualquier intervalo que escojamos alrededor de $0$ existen puntos donde la función crece y decrece, porque puedo escoger sucesiones que convergen a 0 pero cuya derivada es negativa y otras cuya derivada es positiva, por lo que no puedo afirmar nada sobre un intervalo alrededor de 0.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $f:I\rightarrow\mathbb R$ es derivable en $x_0$ y $f'(x_0)>0$, entonces sabemos que:
 $$\lim_{x\rightarrow x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0)>0\Rightarrow \exists \delta>0. x\in (x_0-\delta, x_0+\delta)\cap I\Rightarrow \frac{f(x)-f(x_0)}{x-x_0}>0$$
 Y en particular\footnote{Ocurre de modo análogo cuando $f'(x_0)<0$}:
@@ -2949,7 +3011,7 @@ Tomamos $\varepsilon = \frac{f'(x_0)}{2}>0$, luego:
 $$\exists \delta>0 : 0<|x-x_0|<\delta\Rightarrow \left|\frac{f(x)-f(x_0)}{x-x_0} - f'(x_0)\right|<\frac{f'(x_0)}{2}\Rightarrow \frac{-f'(x_0)}{2}< \frac{f(x)-f(x_0)}{x-x_0} - f'(x_0)< \frac{f'(x_0)}{2}\Rightarrow $$
 $$\Rightarrow 0< \frac{f'(x_0)}{2} <\frac{f(x)-f(x_0)}{x-x_0}<\frac{3}{2}f'(x_0)$$
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f:I\rightarrow \mathbb R$ una función continua en $c\in \mathring{I}$ y derivable en $(c,c+\delta)$ y $(c-\delta, c)$.
 $$f'(x)\geq 0: x\in (c, c+\delta)\mbox{ y }f'(x)\leq 0: x\in (c-\delta, c)\Rightarrow c\mbox{ mínimo relativo}$$
 $$f'(x)\leq 0: x\in (c, c+\delta)\mbox{ y }f'(x)\geq 0: x\in (c-\delta,c)\Rightarrow c\mbox{ máximo relativo}$$
@@ -2966,7 +3028,7 @@ Lo que en conjunto implica que sea cual sea $x$ de ese intervalo, $f(x)\geq f(c)
 
 La demostración del máximo es completamente análoga.
 
-\subsubsection*{Teorema de Darboux}
+\subsubsection{Teorema de Darboux}
 Sea $f:[a,b]\rightarrow \mathbb R$ de manera que $f$  es derivable en $[a,b]$. La derivada toma todos los valores intermedios entre $f'(a)$ y $f'(b)$.
 $$\forall k\in \mathbb R: f'(a)<k<f'(b)\mbox{ o } f'(a)>k>f'(b)\Rightarrow \exists c\in (a,b): f'(c)=k$$
 
@@ -2984,13 +3046,13 @@ Luego $c\neq a$ y $c\neq b$, por lo que $c\in (a,b)$ y $g'(c)=0\Rightarrow 0=g'(
 
 El otro caso es completamente análogo a lo anterior.
 
-\subsection*{\underline{Aplicaciones del Teorema del valor Medio}}
-\subsubsection*{Aproximaciones}
+\subsection{\underline{Aplicaciones del Teorema del valor Medio}}
+\subsubsection{Aproximaciones}
 Vamos a aproximar, por ejemplo, la raíz de 105. Sabemos que $\sqrt{100}=10$ y que $\sqrt{121}=11$ luego el número que buscamos debe estar entre 10 y 11. Entonces sea $f(x)=\sqrt{x}$ aplicamos el teorema del valor medio entre 100 y $105$:
 $$\exists c\in (100, 105):f'(c)=\frac{f(105)-f(100)}{105-100}=\frac{\sqrt{105}-\sqrt{100}}{5}$$
 Y también sabemos que $f'(c)=\frac{1}{2\sqrt{c}}$, luego se tiene que $\sqrt{105}=10+5f'(c)$. Si como hipótesis teníamos que $10<c<11$ es fácil llegar a que $\underbrace{10+\frac{5}{22}}_{\simeq 10,227}< \sqrt{105} < \underbrace{10+\frac{1}{4}}_{\simeq 10,25}$.
 
-\subsubsection*{Desigualdades}
+\subsubsection{Desigualdades}
 Vamos a probar que $e^x \geq 1+x:\forall x \in \mathbb R$. Es evidente que $1=e^0$ así que tomamos $f(x)=e^x$ luego por el teorema del valor medio se tiene que:
 \begin{itemize}
 \item $x>0$
@@ -3004,7 +3066,7 @@ Como $0<e^c<1$ y $x<0$, entonces $xe^x>x\Rightarrow e^x>1+x$
 $$e^0=1+0$$
 \end{itemize}
 
-\subsection*{\underline{Regla de L'Hopital}}
+\subsection{\underline{Regla de L'Hopital}}
 Por qué en algunos casos uno se espera que esos dos límites coincidan:
 
 Ej.:
@@ -3014,7 +3076,7 @@ $$\lim_{x\rightarrow a} \frac{f(x)}{g(x)}=\lim_{x\rightarrow a} \frac{f(x)-f(a)}
 Ahora si imponemos que $f$ y $g$ sean derivables en $a$ se tiene que:
 $$=\frac{f'(a)}{g'(a)}$$
 
-\subsubsection*{L'Hôpital 1}
+\subsubsection{L'Hôpital 1}
 Sea $f,g: (a,b) \rightarrow \mathbb R$ donde $-\infty \leq a < b \leq \infty$, $f$ y $g$ derivables en $(a,b)$ con $g'(x)\neq 0: \forall x\in (a,b)$. Supongamos que $\lim_{x\rightarrow a^+} f(x)=\lim_{x\rightarrow a^+} g(x)=0$, si existe el $\lim_{x\rightarrow a^+} \frac{f'(x)}{g'(x)}=L\in \overline{\mathbb R}$ entonces $\lim_{x\rightarrow a^+}\frac{f'(x)}{g'(x)}=L$
 
 \underline{Demostración}
@@ -3055,7 +3117,7 @@ Para cambiar la demostración para que sea $L\in \overline{\mathbb R}$ entonces:
 
 CAMBIA COSAS QUE NO HE VISTO.
 
-\subsubsection*{L'Hôpital 2}
+\subsubsection{L'Hôpital 2}
 Sea $-\infty\leq a < b \leq \infty$, $f,g: [a,b]\rightarrow \mathbb R$ derivables en $(a,b)$, supongamos que $g'(x)\neq 0: \forall x\in (a,b)$ y $\lim_{x\rightarrow a^+}g(x)=\pm\infty$, entonces:
 $$\lim_{x\rightarrow a^+}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a^+}\frac{f'(x)}{g'(x)}=L\in \overline{\mathbb R}$$
 
@@ -3063,7 +3125,7 @@ $$\lim_{x\rightarrow a^+}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a^+}\frac{f'(x)}{g
 
 La demostración es muy parecido a lo anterior y se deja para mirar en los libros en caso de no saber hacerla.
 
-\subsubsection*{Ejemplos de aplicación del Teorema de L'Hôpital}
+\subsubsection{Ejemplos de aplicación del Teorema de L'Hôpital}
 Supongamos que $\lim_{x\rightarrow \infty} e^{-x} \cdot x^2$, es fácil ver que nos queda una indeterminación de tipo $\frac{\infty}{\infty}$ porque se puede reescribir $\lim_{x\rightarrow \infty}\frac{x^2}{e^x}$. Como se cumplen las hipótesis de L'Hopital podemos hacer:
 $$\lim_{x\rightarrow \infty} e^{-x} \cdot x^2=\lim_{x\rightarrow \infty}\frac{x^2}{e^x}\stackrel{\mbox{L'Hôpital}}{=}\lim_{x\rightarrow \infty}\frac{2x}{e^x}\stackrel{\mbox{L'Hôpital}}{=}\lim_{x\rightarrow \infty}\frac{2}{e^x}=0$$
 
@@ -3073,8 +3135,8 @@ $$\lim_{x\rightarrow \infty} \frac{ln(x)}{x}=\lim_{x\rightarrow \infty}\frac{\fr
 Veamos el caso $\lim_{x\rightarrow \infty} e^{-\alpha \cdot x}\cdot x^n$, la pregunta es saber si habrá valores de $\alpha$ o de $n$ para los que pasen cosas distintas (¿quién gana?):
 $$\lim_{x\rightarrow \infty} e^{-\alpha x}x^n=\lim_{x\rightarrow \infty}\frac{x^n}{e^{\alpha x}}=\lim_{x\rightarrow \infty} \frac{n\cdot x^n}{\alpha e^{\alpha x}}=\cdots =\lim_{x\rightarrow \infty} \frac{n!}{\alpha^n e^{\alpha x}}=0$$
 
-\subsection*{\underline{Teorema de Taylor}}
-\subsubsection*{Polinomio de Taylor}
+\subsection{\underline{Teorema de Taylor}}
+\subsubsection{Polinomio de Taylor}
 Supongamos que tenemos una función $f:\mathbb R\rightarrow \mathbb R$ vemos que la recta tangente es la recta que mejor aproxima a la función en un punto:
 
 \begin{center}
@@ -3102,7 +3164,7 @@ $$p_n(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2+\frac{f'''(x_0)}{3!}(
 
 Basta con probar que las sucesivas derivadas del polinomio que hemos construido van coincidiendo con lo que se espera de ellas y de este modo quedaría probado.
 
-\subsubsection*{Teorema de Taylor}
+\subsubsection{Teorema de Taylor}
 Vamos a considerar $I=[a,b]$, que la función $f:I\rightarrow \mathbb R$ verifica que $f,f',f'', ..., f^{(n)}$ existen y son continuas en $I$ y además que $f^{(n+1)}$ existe en el intervalo abierto $(a,b)$. Entonces si $x_0\in [a,b]$ se tiene que:
 $$\forall x\in I: f(x)=p_n(x; x_0)+\underbrace{\frac{f^{(n+1)}(c)}{(n+1)!}\cdot (x-x_0)^{n+1}}_{\mbox{Resto de Lagrange}}$$
 \footnote{Es el error que existe entre la aproximación del polinomio de Taylor y la función requerida}
@@ -3125,7 +3187,7 @@ $$\exists c \in (x_0,x)\vee (x,x_0): \frac{F(x)-F(x_0)}{G(x)-G(x_0)}=\frac{F'(c)
 $$=(x-x_0)^{n+1}\cdot \frac{-f^{(n+1)}(c)(x-c)^n}{-1\cdot n!(n+1)(x-c)^n}\Rightarrow f(x)-p_n(x;x_0)=R_n$$
 
 
-\subsubsection*{Aplicaciones del Teorema de Taylor}
+\subsubsection{Aplicaciones del Teorema de Taylor}
 Veamos el caso de $f(x)=e^x$, ocurre que $f'(x)=e^x$ y en particular $\forall n\in \mathbb N : f^{(n)}(x)=e^x$ , si tomamos $x_0=0$, entonces $f(0)=1=f'(0)=f''(0)=\cdots = f^{(n)}(0)$ y el polinomio de taylor queda como:
 $$e^x=\underbrace{1+x+\frac{1}{2}x^2+\frac{1}{3!}x^3+\cdots + \frac{1}{n!}x^n}_{p_n(x;0)}+\underbrace{\frac{e^c}{(n+1)!}x^{n+1}}_{R_n(x;0)}$$
 ¿Pero para qué sirve esto? Pues vamos a aproximar el número $e$:
@@ -3137,7 +3199,7 @@ Con lo cual despejando $e$ y ya que lo tenemos acotado, podemos dar valores de $
 Ej.: ¿Qué valor tiene que tomar $n$ para aproximar $e$ con un error menor que $10^5$?
 $$\frac{3}{(n+1)!}<10^5\Rightarrow n>8$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sea $f:I\rightarrow \mathbb R$ donde $I$ es un intervalo y $x_0\in \mathring{I}$. Supongamos además que $\exists f, f', f'', ..., f^{(n)}$ y son continuas en un entorno de $x_0$, es decir, en $(x_0-\delta, x_0+\delta)$. Si $f'(x_0)=f''(x_0)=\cdots = f^{(n-1)}(x_0)=0$ y $f^{(n)}(x_0)\neq 0$, entonces:
 \begin{itemize}
 \item $n$ es par y $f^{(n)}(x_0)>0\Rightarrow x_0$ es mínimo relativo estricto
@@ -3167,7 +3229,7 @@ $$f(x)=f(x_0)+\underbrace{\frac{f^{(n)}}{n!}(x-x_0)^n}_{???}$$
 Como ahora $f^{(n)}(c)$ es fijo el término que no podemos determinar el signo que toma lo demás y en consecuencia no puede ser máximo ni mínimo. 
 \end{itemize}
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 El polinomio de Taylor aproxima a la función mejor que cualquier otro polinomio.
 
 Sea $f: I\rightarrow\mathbb R$ y que $f, f'', ..., f^{(n)}, f^{(n+1)}$ son continuas. Siendo $x_0\in \mathring{I}$, si $p_n(x;x_0)$ es el polinomio de Taylor, de grado $n$, centrado en $x_0$ y llamamos $Q_n(x)$ otro polinomio de grado $\leq n$ vamos a probar que:
@@ -3201,7 +3263,7 @@ Y esto último es siempre positivo porque cuando $x\rightarrow x_0$ el término 
 $$=\frac{|f(x)-p_n(x;x_0)|}{|f(x)-Q_n(x)|}\leq \frac{\frac{M_{n+1}}{(n+1)!}|x-x_0|^{n+1}}{|x-x_0|^{i_0}\left( \frac{|p_{i_0}-q_{i_0}|}{2} - \frac{M_{n+1}}{(n+1)!}|x-x_0|^{n-i_0+1} \right)} = \frac{\frac{M_{n+1}}{(n+1)!}|x-x_0|^{n-i_0+1}}{\frac{|p_{i_0}-q_{i_0}|}{2} - \frac{M_{n+1}}{(n+1)!}|x-x_0|^{n-i_0+1}}$$
 Y es trivial ver que cuando $x\rightarrow x_0$ el denominador tiende a una constante y el numerador tiende a 0, luego el resultado de pasar al límite es 0 por la regla del sandwich (porque ese cociente es positivo).
 
-\subsection*{\underline{Convexidad y concavidad}}
+\subsection{\underline{Convexidad y concavidad}}
 De forma intuitiva, decimos que una función es convexa cuando tiene la forma de ``una sonrisa'' y ocurre que siempre que uno dos puntos de la función en un intervalo $I$ la gráfica de la función queda por arriba o por debajo de la recta.
 
 \begin{center}
@@ -3227,7 +3289,7 @@ $$=x_0+(1-\underbrace{\frac{x_1-z}{x_1-x_0}}_{=t})(x_1-x_0)= x_0+(1-t)(x_1-x_0)$
 
 En el fondo lo que decimos es que la proyección del punto sobre la recta siempre está por encima de la imagen cuando nos encontramos en un intervalo de convexidad.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Supongamos que $f:I\rightarrow\mathbb R$, donde $I$ es un intervalo abierto, es una función con dos derivadas en $I$, entonces $f$ es convexa en $I$ si y sólo si $f''(x)>0: \forall x\in I$.
 
 Vamos a ver por qué debe ocurrir de forma intuitiva, que $f''(x)>0$ entonces $f'(x)$ es creciente en ese intervalo y vimos que la interpretación geométrica de la derivada era la pendiente de la recta tangente a la curva en un punto; por lo que las rectas tangentes van siendo cada vez más pronunciadas y eso es lo que es la idea de convexidad.
@@ -3262,7 +3324,7 @@ $$\lim_{h\rightarrow 0} \frac{f'(a+h)-f'(a)+f'(a)-f'(a-h)}{2h}= \frac{1}{2}\left
 $$=\frac{1}{2}\left(f''(a)+ f''(a)\right)=f''(a)$$
 \end{itemize}
 
-\subsection*{\underline{Método de Newton para calcular raíces de f(x)}}
+\subsection{\underline{Método de Newton para calcular raíces de f(x)}}
 Si calculamos la recta tangente a la función en un punto cercano a una raíz, vemos que esta corta cerca de la raíz. Si hacemos lo mismo con los sucesivos puntos de corte de cada una de las tangentes, los puntos de corte cada vez se aproximan más a la raíz que buscamos aproximar.
 \begin{center}
 \includegraphics[scale=1.6]{metodo Newton}
@@ -3274,7 +3336,7 @@ $$0-f(x')=f'(x')(x''-x')\Leftrightarrow \frac{-f(x')}{f'(x')}=x''-x'$$
 Es decir, tenemos una sucesión de puntos para realizar las sucesivas iteraciones del algoritmo y que cada vez están más cerca de la raíz:
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$$
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f: [a,b]\rightarrow \mathbb R$ de manera que:
 \begin{itemize}
 \item $f(a)\cdot f(b)<0$ (signos distintos)
@@ -3308,15 +3370,15 @@ $$|x_n-r|\leq (K\delta)^n |x_0-r|\Rightarrow x_n-r\xrightarrow{n\rightarrow \inf
 Además la convergencia de esta sucesión es muy rápida, llamemos al error de la aproximación $e_n=|x_n-r|$, luego $e_{n+1}\leq Ke_n^2\Rightarrow Ke_{n+1}\leq (Ke_n)^2$ luego si suponemos que en la primera iteración el error es de $10^{-1}$, tenemos:
 $$Ke_1=10^{-1}\Rightarrow Ke_2=10^{-2}\Rightarrow Ke_3=10^{-4}\Rightarrow Ke_4=10^{-8}$$
 
-\subsubsection*{Ejemplos}
+\subsubsection{Ejemplos}
 Veamos por ejemplo el método para calcular la raíz $\sqrt{2}$ de la función $f(x)=x^2-2$.
 
 Es notable que $f(1)<0$ y $f(2)>0$, que $\forall x\in [1,2]: f'(x)\geq 2$ y $f''(x)=2$ luego estamos en las condiciones del Teorema:
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}=x_n-\frac{x_n^2-2}{2x_n}=\frac{x_n}{2}+\frac{1}{x_n}$$
 Comenzamos con $x_1=1$, entonces $x_2=\frac{3}{2}$, $x_3=\frac{17}{12}$ y así podemos seguir aproximando hasta conseguir el error deseado.
 
-\chapter*{CÁLCULO INTEGRAL}
-\subsection*{\underline{Prólogo}}
+\chapter{CÁLCULO INTEGRAL}
+\subsection{\underline{Prólogo}}
 Si bien la derivación abordaba las rectas tangentes a funciones y poseen múltiples aplicaciones en la física, ingeniería, ... las integrales resuelven un problema fundamental como es el cálculo de áreas, es decir, conocer el área bajo la curva de una función.
 
 Cuando las cosas son rectas, poseemos métodos geométricos (como la triangularización) para poder dividir el problema en otros más pequeños que sí se resolver y luego unir todas las áreas.
@@ -3333,8 +3395,8 @@ El problema viene cuando encontramos funciones que no son rectas, sino que descr
 
 Como cada vez que disminuyo la base de los rectángulos, la aproximación es mejor, entonces la suma de las áreas converge a su valor real cuando la longitud del segmento tiende a 0. Con lo cual, si dividimos en infinitos trozos haciendo rectángulos con esos trozos entonces tenemos el área bajo la curva.
 
-\section*{DEFINICIÓN DE INTEGRAL}
-\subsection*{\underline{Integral de Riemann}}
+\section{DEFINICIÓN DE INTEGRAL}
+\subsection{\underline{Integral de Riemann}}
 Pasando un poco a la definición más formal, tenemos que dado el intervalo $[a,b]=I$, una \textbf{partición} viene dada por:
 $$\wp=\{x_0=a<x-1<x_2<\cdots <x_n=b\}$$
 $$DIBUJO$$
@@ -3344,7 +3406,7 @@ En particular, la \textbf{partición uniforme o equiespaciada} se define como un
 $$\wp=\{x_0=a < x_1< \cdots < x_n=b\}: x_i = a + i \cdot \underbrace{\frac{b-a}{n}}_{=||\wp||}$$
 Definimos pues ahora una \textbf{partición marcada o etiquetada} denotada por $\mathring{\wp}$ como una partición $\wp$ y unos puntos $\forall i = 1, ..., n: \exists! t_i\in [x_{i-1}, x_i]$ (uno por intervalo) a los que llamaremos marcas.
 
-\subsubsection*{Suma de Riemann e Integral}
+\subsubsection{Suma de Riemann e Integral}
 \underline{\textbf{Suma de Riemann}}
 
 Dada una función $f: [a,b]\rightarrow \mathbb R$ y una partición marcada $\mathring{\wp}=\{a=x_0<x_1<\cdots < x_n = b\}: \exists! t_i\in [x_{i-1}, x_i]$, entonces definimos la suma de Riemann de $f$ en $\mathring{P}$ como:
@@ -3359,7 +3421,7 @@ En definitiva, lo que decimos es que si en esa suma de Riemann, hacemos que $n$ 
 
 Vamos a denotar por $R[a,b]$ que son Riemann integrables en $[a,b]$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $\exists L \in \mathbb R$, entonces $\exists! L\in \mathbb R$, es decir, este valor es único. A este número le llamaremos la \textbf{integral de f entre a y b} y lo denotaremos por:
 $$\int_a^b f(x)dx$$
 Si nos fijamos el símbolo $\int$ viene de una ``s'' alargada de la palabra suma y el símbolo $dx$ viene de $\Delta x$ que es $(x_i-x_{i-1})$ pero con la connotación de que este incremento es casi nulo, \textbf{diferencial}. 
@@ -3371,7 +3433,7 @@ $$\begin{cases}\varepsilon>0: \exists \delta: ||\mathring{\wp}||<\delta\Rightarr
 Luego tomando una partición de forma que $||\wp||<\min\{\delta, \delta'\}$ tenemos que:
 $$\begin{cases}|S(f,\mathring{\wp})-L|<\varepsilon \\ |S(f,\mathring{\wp})-L'|<\varepsilon\end{cases}\Rightarrow |L-L'|=|L-S(f,\mathring{\wp})+S(f,\mathring{\wp})-L'|\leq |L-S(f,\mathring{\wp})|+|S(f,\mathring{\wp})-L'|<2\varepsilon\Rightarrow L=L'$$
 
-\subsubsection*{Ejemplos}
+\subsubsection{Ejemplos}
 Supongamos que $f(x)=k\in \mathbb R$ definida en $[a,b]$. Tenemos pues que si definimos una partición marcada de la forma que lo hemos estado haciendo antes, entonces:
 $$S(f,\mathring{\wp})= \sum_{i=1}^n\underbrace{f(t_i)}_{=k}(x_i-x_{i-1})=k\sum_{i=1}^n(x_i-x_{i-1})=k\cdot (b-a)$$
 Con lo cual esta tiene que ser la integral porque si elijo $L=k(b-a)\Rightarrow S(f,\mathring{\wp})-L=0<\varepsilon: \forall \varepsilon$.
@@ -3388,8 +3450,8 @@ $$\leq \sum_{i=1}^n \delta (x_i-x_{i-1})=\delta \sum_{i=1}^n (x_i-x_{i-1})= \del
 Por lo tanto, volviendo a la definición:
 $$\delta = \varepsilon >0 \Rightarrow \forall \varepsilon >0: \exists \delta >0: ||\wp||<\delta\Rightarrow |S(f,\wp)-\frac{1}{2}|<\delta =\varepsilon$$
 
-\subsection*{\underline{Criterios de Integrabilidad}}
-\subsubsection*{Teorema}
+\subsection{\underline{Criterios de Integrabilidad}}
+\subsubsection{Teorema}
 Si $g\in R[a,b]$ y $f:[a,b]\rightarrow \mathbb R$ es una función que coincide  con $g$ excepto en una cantidad finita de puntos que llamaremos $\{c_0, \cdots, c_n\}$, entonces $f\in R[a,b]$ y además:
 $$\int_{a}^bf(x)dx=\int_a^bg(x)dx$$
 \underline{Demostración}:
@@ -3411,7 +3473,7 @@ Así que ya queda demostrado para un único punto.
 
 Después por inducción tenemos que si tenemos $g\in R[a,b]$ y $f\in R[a,b]\backslash\{c_1, c_2\}$, entonces construimos $h\in R[a,b]\backslash\{c_1\}$. Por o probado $\int_a^b g = \int_a^b h= \int_a^b f$. Así que el argumento por inducción se ve claro.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f\in[a,b]\rightarrow \mathbb R$ la función $f(x)=\begin{cases}\alpha & x\in [a,c) \\ \beta & x\in [c,b]\end{cases}$, entonces $f\in R[a,b]$ y ocurre:
 $$\int_a^b f = \alpha (c-a)+\beta(b-c)$$
 Lo que viene a explicar, aunque no sea de forma general, este teorema es que las discontinuidades de salto están permitidas.
@@ -3431,7 +3493,7 @@ $$\leq 6 \max\{|\alpha|,|\beta|\}||\wp||$$
 Por lo tanto:
 $$\forall \varepsilon >0 : \delta = \frac{\varepsilon}{6\max\{|\alpha|, |\beta|\}}: ||\wp||<\delta\Rightarrow \left|S(f,\wp)-L\right|\leq 6 \max\{|\alpha|,|\beta|\}||\wp|| \leq 6 \max\{|\alpha|,|\beta|\} \frac{\varepsilon}{6\max\{|\alpha|, |\beta|\}} = \varepsilon$$
 
-\subsubsection*{Teorema: acotamiento de la integrabilidad}
+\subsubsection{Teorema: acotamiento de la integrabilidad}
 Toda función $f\in R[a,b]$ es acotada, es decir:
 $$\exists M>0:\forall x\in [a,b] :|f(x)|\leq M$$
 Es decir, que la veracidad de este resultado implica que las funciones con discontinuidades de salto infinito o esenciales, no son integrables.
@@ -3451,7 +3513,7 @@ Con lo cual, si meto el término de $i_0$ de nuevo en el sumatorio, obviamente e
 $$\ast \leq \frac{n}{b-a}\left[1 + |L| + \sum_{i=1}^n |f(x_i)|\frac{b-a}{n}\right]=M$$
 Es decir, todo lo que queda al final es un único valor constante que no de depende de nada, con lo cual lo podemos llamar $M$ y queda demostrado.
 
-\subsubsection*{Operaciones con integrales}
+\subsubsection{Operaciones con integrales}
 Si $f,g\in R[a,b]$ y $k\in \mathbb R$, entonces ocurre:
 \begin{enumerate}
 \item $kf\in R[a,b]\Rightarrow \int_a^b kf = k\int_a^b f$
@@ -3476,7 +3538,7 @@ $$\begin{cases} \int_{a}^{b} f -\frac{\varepsilon}{2} < S(f,\mathring{\wp}) < \i
 $$\Rightarrow \int_{a}^{b}f\leq \int_{a}^{b}g +\varepsilon\Rightarrow \int_{a}^{b}f\leq \int_{a}^{b}g$$
 \end{enumerate}
 
-\subsubsection*{Función escalera}
+\subsubsection{Función escalera}
 \underline{\textbf{Función característica}}
 
 Si tenemos un subconjunto $A\subset I=[a,b]$, definimos la \textbf{función característica} como:
@@ -3496,7 +3558,7 @@ De hecho podemos escribir:
 $$\alpha(x)=\sum_{i=0}^{n}\alpha_i\chi_{I_i}(x) = \int_{a}^{b}\alpha = \sum_{i=1}^{n}\alpha_i (c_i-c_{i-1})$$
 Y además ocurre que $\alpha(x)\in R[a,b]$ porque las funciones características son integrables, los $\alpha$ son constantes y además a pesar de que puede haber intervalos con ambos extremos abiertos o no cerrados por ambos lados, como cuando una función se diferencia de otra sigue siendo integrable con la misma integral, entonces aún así sigue siendo integrable.
 
-\subsubsection*{Criterio de Cauchy}
+\subsubsection{Criterio de Cauchy}
 Sea $f:[a,b]\rightarrow \mathbb R$ entonces $f\in R[a,b]$ si y sólo si:
 $$\forall \varepsilon > 0: \exists \eta > 0 : ||\mathring{\wp}|| \mbox{ y } ||\mathring{\mathcal{Q}}|| < \eta \Rightarrow \left| S(f,\mathring{\wp})- S(f, \mathring{\mathcal{Q}})\right| < \varepsilon $$
 Lo que otorga un criterio muy potente \textbf{que no requiere de tener candidato a integral} para poder afirmar que es integrable o no.
@@ -3527,7 +3589,7 @@ Con lo cual ocurre que:
 $$|S(f,\wp)-L|=|S(f,\wp)-S(f,\wp_{\tilde{n}})+S(f, \wp_{\tilde{n}})-L|\leq |S(f,\wp )- S(f,\wp_{\tilde{n}})|+|s_n-L|\leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon$$
 \end{itemize}
 
-\subsubsection*{Criterio del Sandwich para integrabilidad}
+\subsubsection{Criterio del Sandwich para integrabilidad}
 Sea $f:[a,b]\rightarrow \mathbb R$ entonces $f\in R[a,b]$ si y sólo si:
 $$\forall \varepsilon >0 : \exists \alpha_\varepsilon, \omega_\varepsilon: [a,b]\rightarrow \mathbb R : \alpha_\varepsilon, \omega_\varepsilon \in R[a,b]: \alpha_\varepsilon \leq f(x)\leq \omega_\varepsilon (x): \forall x\in [a,b]$$
 Además tenemos que ambas funciones auxiliares deben verificar que:
@@ -3568,7 +3630,7 @@ $$\Rightarrow \left|S(f,\mathring{\wp})- S(f,\mathring{\mathcal{Q}})\right| < 3\
 Luego por el Criterio de Cauchy es integrable
 \end{itemize}
 
-\subsubsection*{Criterios de no integrabilidad}
+\subsubsection{Criterios de no integrabilidad}
 Son unas condiciones suficientes para afirmar que una función no es integrable:
 \begin{itemize}
 \item Si existe una sucesión de particiones marcadas $\mathring{\wp_n}$ de forma que $||\mathring{\wp_n}||\xrightarrow{n\rightarrow \infty} 0 $ y $S(f,\mathring{\wp_n})\cancel{\longrightarrow} l$, entonces $f\notin R[a,b]$
@@ -3584,7 +3646,7 @@ Por el criterio de Cauchy, la sucesión de número reales $s_n = S(f,\mathring{\
 Del mismo modo, se contradicen las hipótesis del Criterio de Cauchy ya que la sucesión no puede tener dos límites distintos por la unicidad del límite.
 \end{itemize}
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si definimos:
 \begin{itemize}
 \item $R[a,b]$ como el conjunto de funciones integrables de Riemann.
@@ -3651,7 +3713,7 @@ $$\int_{a}^{b}\omega_\varepsilon(x) dx = \sum_{i = 1}^{n_0} f(c_i)\cdot (c_i-c_{
 $$\int_{a}^{b} \omega_\varepsilon - \alpha_\varepsilon = \frac{b-a}{n_0}(f(c_0)+f(c_{n_0})) = \frac{b-a}{n_0}\cdot (f(b)-f(a))$$
 Con lo cual como esa diferencia es constante y ese valor es menor que delta, puedo tomar un delta lo suficientemente pequeño como para que no importe esa constante.
 
-\subsection*{\underline{Propiedad de aditividad de la integral}}
+\subsection{\underline{Propiedad de aditividad de la integral}}
 Sea $[a,b]$ un intervalo y $c\in [a,b]$, entonces:
 $$f \in \mathcal{R}[a,b]\Leftrightarrow f|_{[a,c]} \in \mathcal{R} [a,c] y f|_{[c,b]} \in \mathcal{R} [c,b]$$
 Y además se tiene que:
@@ -3684,7 +3746,7 @@ $$|S(f,\dot{P}_1) - S(f,\dot{Q}_1)|= |S(f,\mathring{P}_1) + S(f,\mathring{R}) - 
 LA DEJA PARA NOSOTROS.
 \end{itemize}
 
-\subsubsection*{Propiedades}
+\subsubsection{Propiedades}
 \begin{enumerate}
 \item Si $f\in R[a,b]$ y tenemos que $a<c<d<b$, entonces $f\in R[c,d]$ donde además:
 $$\int_{c}^{d} f = \int_{a}^{d} f - \int_{a}^{c} f$$
@@ -3709,7 +3771,7 @@ $$\int_{\alpha}^{\alpha} f = 0$$
 \item Trivial
 \end{enumerate}
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $f\in R[a,b]$ y $\alpha,\beta,\gamma\in [a,b]$ cualesquiera, entonces:
 $$\int_{\alpha}^{\beta} f+ \int_{\beta}^{\gamma} f = \int_{\alpha}^{\gamma} f$$
 Es notable destacar que no hemos impuesto ningún tipo de orden entre estos número para realizar dicha afirmación.
@@ -3737,12 +3799,12 @@ Aunque no sabemos el orden, en alguna de las permutaciones se tendrá el orden q
 $$\alpha < \beta < \gamma \Rightarrow L(\alpha < \beta < \gamma ) = 0\Rightarrow L(\beta , \alpha , \gamma) = \cdots  = - L(\gamma , \beta , \alpha) = 0$$
 \end{itemize}
 
-\subsection*{\underline{Teorema Fundamental del Cálculo}}
+\subsection{\underline{Teorema Fundamental del Cálculo}}
 La integrabilidad permite determinar si merece la pena gastar el tiempo en calcular o no una integral, pero ¿quién es la derivada? En ocasiones, el cálculo de este valor por medio de la definición se vuelve sumamente complejo y no es práctico a la hora de llevarlo a cabo.
 
 Una de las claves del desarrollo matemático moderno ha sido el enunciado de este Teorema porque es la llave que conecta la derivación con la integración y que otorga un pilar sobre el que apoyarse para poder calcular la integral de infinitud de funciones de forma sencilla.
 
-\subsubsection*{Regla de Barrow}
+\subsubsection{Regla de Barrow}
 Sea $f\in R[a,b]$, supongamos que $\exists F: [a,b]\rightarrow\mathbb R$ continua en $[a,b]$ y derivable en $(a,b)$ de forma que $F'(x) = f(x): \forall x\in \mathbb R$, entonces se tiene que:
 $$\int_{a}^{b} f(x)dx = F(b)-F(a)$$
 Es decir, el cálculo de integrales se reduce ahora a un cálculo de antiderivadas.
@@ -3779,7 +3841,7 @@ $$\int_{c_{i-1}}^{c_i} f = F(c_i) - F(c_{i-1})$$
 Por la aditividad de la integral podemos decir que:
 $$\int_{a}^{b} f = \sum_{i=1}^{n+1} \int_{c_{i-1}}^{c_i} f = \sum_{i=1}^{n+1} F(c_i) - F(c_{i-1})= F(c_{n+1}) - F(c_0)  = F(b) - F(a)$$
 
-\subsubsection*{Teorema Fundamental del Cálculo}
+\subsubsection{Teorema Fundamental del Cálculo}
 Si $f\in R[a,b]$, definimos la función $F:[a,b]\rightarrow \mathbb R$ como:
 $$F(z)=\int_{a}^{z} f$$
 Que denominaremos \textbf{integral indefinida con base a}, es decir, que definimos una nueva función que es la integral desde el punto base hasta otro punto $z$, por tanto es sencillo ver que si muevo $z$ el valor cambia luego está bien definida.
@@ -3833,9 +3895,9 @@ $$\Rightarrow f(c) - \varepsilon < \frac{F(z) - F(c)}{z-c} < f(c) + \varepsilon 
 $$\Leftrightarrow \left| \frac{F(z) - F(c)}{z-c} - f(c) \right| < \varepsilon: c < z < c+\delta$$
 Y el razonamiento para $c-\delta < z <c$ es completamente análogo y queda demostrado por tanto que la derivada de la integral es la función de la que partíamos.
 
-\section*{CÁLCULO DE INTEGRALES}
-\subsection*{\underline{Métodos de integración}}
-\subsubsection*{Cambio de variable}
+\section{CÁLCULO DE INTEGRALES}
+\subsection{\underline{Métodos de integración}}
+\subsubsection{Cambio de variable}
 Supongamos que tenemos una función $f:I\rightarrow \mathbb R$ y una función $\varphi: J\rightarrow \mathbb R$ de forma que $f\in C^0(I,\mathbb R)$ y $\varphi\in C^1(J,\mathbb R)$ de modo que $\varphi(J)\subset I$. Si $\alpha,\beta\in J$ entonces:
 $$\int_{\alpha}^{\beta} f(\varphi(t))\cdot \varphi'(t)dt = \int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)dx$$
 
@@ -3871,7 +3933,7 @@ $$\int f(x)dx$$
 Entonces para calcular esta primitiva, basta con aplicar el cambio de variable visto considerando que $ t^2 = x \Rightarrow 2tdt=dx$ se tiene:
 $$\int t e^{t^2} dt  = \int e^x \frac{1}{2} dx = \frac{1}{2} e^x + C \Rightarrow F(t)=\frac{1}{2}e^{t^2} + C$$
 
-\subsubsection*{Integración por partes}
+\subsubsection{Integración por partes}
 Sean $F,G\in C^1(I,\mathbb R)$, $f=F'$ y $g=G'$, entonces si $\alpha,\beta\in I$ se tiene que:
 $$\int_{\alpha}^{\beta} f(x)G(x)dx = F(\beta)G(\beta) - F(\alpha)G(\alpha)-\int_{\alpha}^{\beta} F(x)g(x)dx$$
 
@@ -3897,7 +3959,7 @@ $$\int_0^\pi x\sen(x) dx = [-x\cos (x)]^\pi_0 - \int_0^\pi -\cos (x)dx = \pi + \
 También podemos emplearlo para el cálculo de primitivas
 $$\int_1^2 \ln(x) dx = \begin{bmatrix} u = \ln (x) \Rightarrow du =\frac{1}{x} dx \\ v = x \Rightarrow dv = 1dx\end{bmatrix} =[x\ln(x)]^2_1 - \int_1^2 x \frac{1}{x} dx = 2 \ln (2) - 1$$
 
-\subsubsection*{Criterio de Lebesque de Integración}
+\subsubsection{Criterio de Lebesque de Integración}
 Hemos visto que las funciones continuas son integrables y las que no lo son, en función del número y tipo de discontinuidades que posean pueden serlo o no. Este criterio otorga una herramienta muy potente para poder caracterizar una función integrable Rieman.
 
 \underline{\textbf{Conjunto de Medida Nulo}}
@@ -3930,7 +3992,7 @@ Sea $f:[a,b]\rightarrow \mathbb R$ una función acotada y denotamos por $D(f)$ a
 $$f\in R[a,b]\Leftrightarrow D(f) \mbox{ es de medida nula}$$
 La demostración es muy compleja y no se requiere en este curso.
 
-\subsubsection*{Proposiciones}
+\subsubsection{Proposiciones}
 \begin{itemize}
 \item Si $D\subset C$ y $C$ es de medida nula, entonces $D$ es de medida nula.
 \item Si tenemos $C_1, ..., C_n$ una cantidad finita de conjuntos de medida nula, entonces:
@@ -3939,7 +4001,7 @@ $$\bigcup_{i =1}^{n} C_i\mbox{ es de medida nula}$$
 $$\{C_n\}_{n=1}^\infty\mbox{ de medida nula }\Rightarrow \bigcup_{n=1}^{\infty} C_n \mbox{ es de medida nula}$$
 \end{itemize}
 
-\subsubsection*{Proposición: integrabilidad de la composición}
+\subsubsection{Proposición: integrabilidad de la composición}
 Si $f: [a,b]\rightarrow \mathbb R$ de forma que $f\in R[a,b]$ y $\varphi: [c,d]\rightarrow \mathbb R$ continua con $f[a,b]\subset[c,d]$, entonces:
 $$\varphi \circ f: [a,b]\rightarrow \mathbb R\Rightarrow \varphi\circ f \in R[a,b]$$
 
@@ -3974,7 +4036,7 @@ Por supuesto que sí porque $\varphi$ es una función continua.
 Sí lo es porque la suma es integrable y la diferencia también que junto con el valor absoluto ya hemos dicho que sí.
 \end{itemize}
 
-\subsection*{\underline{Integrales Impropias}}
+\subsection{\underline{Integrales Impropias}}
 Puede surgir el problema de querer calcular este área que es finita, pero está definida en un intervalo que no es acotado:
 $$\begin{tikzpicture}
 \begin{axis}[
@@ -4017,7 +4079,7 @@ domain=0:4,samples=50,
 $$\int_{0}^{\infty} e^{-x}\ dx = \lim_{c \rightarrow \infty} \int_{0}^{c} e^{-x} \ dx = \lim_{c \rightarrow \infty} 1 - e^{-c} = 1$$
 En cierto modo, estamos calculando áreas de regiones infinitas y por estar fuera de la definición propiamente dicha de integral se las conoce como integrales impropias.
 
-\subsubsection*{Integrales impropias de 1ª especie}
+\subsubsection{Integrales impropias de 1ª especie}
 Dada $f:[a,\infty)\rightarrow  \mathbb R$ de forma que $f\in R[a,b]: \forall b>a$, diremos que la \textbf{integral impropia} converge si existe y es finito:
 $$\exists \lim_{b \to \infty} \int_{a}^{b} f(x)dx $$
 De esta forma podemos definir la integral impropia como:
@@ -4042,7 +4104,7 @@ Por el contrario, para el caso $p=1$, tenemos que:
 $$\ln(b)-\ln(1) = \ln(b) \underset{b \to +\infty}{\longrightarrow}+\infty$$
 Y, en consecuencia, $\displaystyle \int_{1}^{+\infty} \frac{dx}{x^p}$ es covergente $\Leftrightarrow  p > 1$ y además $\displaystyle \int_{1}^{+\infty} \frac{dx}{x^p} = \frac{1}{p-1}$.
 
-\subsubsection*{Criterio de Cauchy para integrales impropias}
+\subsubsection{Criterio de Cauchy para integrales impropias}
 Es importante tratar de dar un criterio para saber si una integral impropia es o no convergente sin conocer el límite de convergencia puesto que en ocasiones será muy complejo. Si tratamos la integral como una expresión de la que queremos hallar el límite:
 $$\exists \lim_{b \to +\infty} \underbrace{\int_{a}^{b} f(x)\ dx}_{=I_b} \Leftrightarrow \forall \varepsilon > 0, \exists M \geq a: \mbox{ si } b'>b\geq M \Rightarrow |I_{b'} - I_b| < \varepsilon$$
 Por tanto, si el Criterio de Cauchy lo aplicamos a las integrales se tiene que:
@@ -4079,7 +4141,7 @@ $$\int_{a}^{\infty} f \mbox{ es convergente} \Leftrightarrow \int_{a'}^{\infty} 
 Por tanto, la convergencia o divergencia de la integral impropia no depende de lo que le ocurra a la función en el intervalo $[a,a']$ (a pesar de poder ser tan grande como queramos) porque al fin y al cabo esta cantidad será finita, lo verdaderamente importante es ver que ocurre con la función cerca de $\infty$.
 
 
-\subsubsection*{Criterios de comparación de integrales impropias}
+\subsubsection{Criterios de comparación de integrales impropias}
 Supongamos que tenemos dos funciones $f,g: [a, \infty)\rightarrow \mathbb R$ donde $f,g\in R[a,b]: \forall b> a$ y $0\leq f(x)\leq g(x)$, entonces:
 $$\int_{a}^{\infty} g(x) \ dx \mbox{ convergente }\Rightarrow \int_{a}^{\infty} f(x) \ dx \mbox{ convergente } $$
 
@@ -4155,7 +4217,7 @@ $$\int_{2}^{+\infty} \frac{dx}{\ln(x)x^p}\mbox{ converge }\Leftrightarrow\displa
 Así que se tiene que:
 $$ \int_{e}^{+\infty} \frac{dx}{x^p}\mbox{ converge} \Rightarrow \int_{e}^{+\infty} \frac{dx}{\ln(x)x^p}\mbox{ converge}\Rightarrow \int_{2}^{+\infty} \frac{dx}{\ln(x)x^p}\mbox{ converge}$$
 
-\subsubsection*{Teorema de comparación en el límite}
+\subsubsection{Teorema de comparación en el límite}
 Hemos visto anteriormente que si $0\leq f(x)\leq g(x):\forall x \in (a,\infty)$, entonces la convergencia de la integral de $g(x)$ implica la convergencia de la integral de $f(x)$, pero vimos que, en realidad, podíamos relajar condiciones como que $f(x)\leq g(x): \forall x\in (a',\infty) : a' > a$. El objetivo de este teorema es mejorar dicho criterio para prescindir de todas aquellas premisas que no son tan necesarias, debilitando las condiciones del Teorema.
 
 Suponemos que $f,g\in [a,\infty)\rightarrow \mathbb R$ de forma que $f,g\in R[a,b]:\forall b > a$ y que cumplen $f(x),g(x)\geq 0$. Si se verifica que:
@@ -4204,12 +4266,12 @@ $$\lim_{x \rightarrow \infty} \frac{f(x)}{g(x)} = 0$$
 Luego entonces ocurre que:
 $$\int_{0}^{+\infty} g(x)\ dx\mbox{ converge}\Rightarrow \int_{0}^{+\infty} f(x)\ dx\mbox{ converge}$$
 
-\subsubsection*{Integrales Impropias de 2ª especie}
+\subsubsection{Integrales Impropias de 2ª especie}
 Puede ocurrir que el área que queremos hallar no es que esté en un intervalo que es infinito sino que esté en intervalo en el que las imágenes no son acotadas y se plantea el mismo problema que teníamos en las impropias de primera especie, por tanto, es razonable pensar que la solución es la misma.
 
 Los criterios de comparación y comparación en el límite que se han dado anteriormente funcionan también para integrales de 2ª especie.
 
-\subsubsection*{Criterio de convergencia entre series e integrales}
+\subsubsection{Criterio de convergencia entre series e integrales}
 Supongamos que tenemos $f:[0, \infty)\rightarrow \mathbb R$ que verifica que $f(x)\geq 0 $, que $f$ es decreciente y que $\lim_{x \rightarrow \infty} f(x) = 0$. Entonces decimos que:
 $$\int_{0}^{\infty} f(x)\ dx \mbox{ converge} \Leftrightarrow \sum_{n = 1 }^{\infty} f(n)\mbox{ converge}$$
 El siguiente dibujo pone de manifiesto lo que el teorema viene a decir: las series numéricas, que podemos simplificar en concepto a suma infinita de ciertos números, están muy relacionadas con la suma de las áreas de los trozos en los que hemos partido $f(x)$ puesto que vuelve a ser el problema de hallar una suma infinita de números.
@@ -4354,7 +4416,7 @@ Con esta serie por el teorema visto sabemos que:
 $$\sum_{n=1}^{\infty} \frac{1}{n^p}\mbox{ converge}\Leftrightarrow \displaystyle \int_{1}^{+\infty} \frac{dx}{x^p} \mbox{ converge}$$
 Y sabemos que $ \displaystyle \int_{1}^{+\infty} \frac{dx}{x^p} $ converge si $p>1$ luego podemos concluir que $\sum_{n=1}^{\infty} \frac{1}{n^p} \mbox{ converge }$.
 
-\subsection*{\underline{Integral de Darboux}}
+\subsection{\underline{Integral de Darboux}}
 La integral de Darboux es una interpretación alternativa de la integral de Riemann que permite construir de forma distinta el concepto que se ha desarrollado en los puntos anteriores y para la cual se aplican todos los teoremas y razonamientos vistos anteriormente.
 
 Supongamos que $f:[a,b]\rightarrow \mathbb R$ es acotada, de esta forma podemos definir:
@@ -4401,7 +4463,7 @@ $$L(f)\leq U(f)$$
 
 Por tanto, diremos que $f\in R[a,b]$ en el sentido de Darboux si $L(f) = U(f)$ que además ocurre que $L(f)=U(f) = \int_{a}^{b} f(x)\ dx$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f:[a,b]\rightarrow \mathbb R$ acotada, entonces se verifica:
 $$f\in R[a,b]\Leftrightarrow L(f) = U(f)$$
 Es decir, que la interpretación de Darboux y la de Riemann son completamente equivalentes y si una función es integrable debe acogerse a ambas por igual. Por tanto, también ocurre que:
@@ -4462,7 +4524,7 @@ $$L - \varepsilon \leq L(f) = U(f) \leq L+ \varepsilon \Rightarrow U(f) = L(f) =
 \end{itemize}
 %%\end{document}
 
-\chapter*{SUCESIONES Y SERIES DE \\ FUNCIONES}
+\chapter{SUCESIONES Y SERIES DE \\ FUNCIONES}
 Hasta ahora hemos considerado las sucesiones y series de números y también hemos discutido cuestiones referidas a funciones que en ocasiones estaban pendientes de un parámetro. Este capítulo aúna ambos temas en un único objeto matemático: \textbf{las sucesiones de funciones}.
 
 Consideremos por ejemplo la sucesión $f_n(x) = x^n$, para los distintos valores de $n$ vamos a tener polinomios de grado distinto:
@@ -4538,9 +4600,9 @@ De hecho no es difícil ver que la sucesión de funciones tiene el siguiente com
 $$\begin{cases} \forall x \in [0,1) & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = 0 \\ x=1 & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = 1 \\ \forall x \in (1,\infty) & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = \infty \\ \forall x \in (-1,0] & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = 0 \\ x=-1 & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = \nexists\\ \forall x \in (-\infty,-1) & \Rightarrow \lim_{n \rightarrow \infty}f_n(x) = \nexists \end{cases}$$
 Para ver la abstracción que trae consigo este tema y la de posibilidades que puede tener para otras áreas de las matemáticas, gracias a esta sucesión de funciones yo podría definir otra función que sería la función que define el límite de la sucesión en función del valor de $x$ seleccionado:
 $$f(x)=\begin{cases} 0 & x\in (-1,1) \\ 1 & x= 1\end{cases}\Rightarrow f_n(x)\xrightarrow{n\rightarrow\infty} f(x)$$
-\section*{SUCESIONES DE FUNCIONES}
-\subsection*{\underline{Definición y conceptos básicos}}
-\subsubsection*{Convergencia puntual}
+\section{SUCESIONES DE FUNCIONES}
+\subsection{\underline{Definición y conceptos básicos}}
+\subsubsection{Convergencia puntual}
 Dada una sucesión de funciones $f_n: A\rightarrow \mathbb R$ donde $A\subset \mathbb R$ es un subconjunto de $\mathbb R$ (no necesariamente un intervalo), diremos que la sucesión de funciones $\{f_n\}_{n=1}^\infty$ \textbf{converge puntualmente} a una función $f: A_0\rightarrow \mathbb R$ donde $A_0\subseteq A$ es un subconjunto de $A$ si:
 $$x \in A_0: \lim_{n \rightarrow \infty} f_n(x) = f(x)$$
 \underline{Ejemplos}:
@@ -4579,7 +4641,7 @@ $$\exists N \in \mathbb{N}: N > \frac{2}{x} \Leftrightarrow \frac{2}{N} < x\Righ
 \end{itemize}
 Es decir, $\forall x \in [0,1] : f_n (x) \underset{n \to \infty}{\longrightarrow} 0 $, por tanto, en general $f(x) = 0 : \forall x \in [0,1]$.
 
-\subsubsection*{Convergencia uniforme}
+\subsubsection{Convergencia uniforme}
 Diremos que la sucesión de funciones $f_n: A\rightarrow\mathbb R$ converge uniformemente en $A_0$ a la función $f: A_0\rightarrow\mathbb R$ (que denotaremos por $f_n\rightrightarrows f$) si:
 $$\forall \varepsilon> 0: \exists N\in \mathbb N:|f_n(x)-f(x)|<\varepsilon , \  \forall n\geq N: \forall x \in A_0$$
 La diferencia notable con respecto a la convergencia puntual es que en este caso no es un único punto el que converge a partir de un cierto $n$, sino que son todos los puntos los que cada vez se asemejan más a la función a partir de un cierto $n$.
@@ -4646,14 +4708,14 @@ La diferencia fundamental con respecto al otro ejemplo es que a partir de un cie
 $$\exists n_0\in \mathbb N : n_0 > \frac{1}{\varepsilon} \Rightarrow |\frac{x^n}{n}| \leq \frac{1}{n} \leq \frac{1}{n_0} < \varepsilon \mbox{ si } n \geq n_0$$
 Mientras que en la otra sucesión de funciones para cualquier $n$ siempre voy a tener puntos cuyo valor sea $1$, por lo que no puede verificarse esta condición tan fuerte.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si la sucesión de funciones converge uniformemente en $A_0$, entonces converge puntualmente en $A_0$.
 $$f_n(x)\rightrightarrows f(x) \Rightarrow f_n(x)\rightarrow f(x)$$
 \underline{Demostración}:
 
 Es trivial por las definiciones que se han dado, ya que al converger uniformemente, entonces se verifica la desigualdad para todo $x$ y si lo fijamos obtenemos la definición de convergencia puntual.
 
-\subsubsection*{Norma del Supremo}
+\subsubsection{Norma del Supremo}
 Dada $f: A_0 \to \mathbb{R}$ acotada, definimos la \textbf{norma del supremo}, también conocida como norma infinito, a la cantidad:
 $$||f||_{A_0} = \underset{x \in A_0}{\sup} \{|f(x)|\}$$
 De esta forma, si observamos la siguiente equivalencia en la convergencia uniforme:
@@ -4661,8 +4723,8 @@ $$f_n \rightrightarrows f \Leftrightarrow \forall \varepsilon> 0: \exists N\in \
 Podemos redefinir el concepto de convergencia uniforme conforme a la siguiente definición:
 $$\forall \varepsilon > 0, \exists N = N(\varepsilon) \in \mathbb{N} \Rightarrow ||f_n - f|| _{A_0}< \varepsilon : \forall n \geq N : \forall x \in A_0 $$
 
-\subsection*{\underline{Criterios y propiedades}}
-\subsubsection*{Criterio de Cauchy}
+\subsection{\underline{Criterios y propiedades}}
+\subsubsection{Criterio de Cauchy}
 Sea $\{f_n\}_{n=1}^\infty$ una sucesión de funciones acotadas en un conjunto $A\subseteq \mathbb R$, entonces esta converge uniformemente a una cierta función $f: A_0\rightarrow \mathbb R$ si ocurre que:
 $$f_n\rightrightarrows f \Leftrightarrow \forall \varepsilon > 0: \exists K \in \mathbb N: n,m\geq K\Rightarrow ||f_n-f_m||_{A_0}<\varepsilon$$
 Luego de nuevo tenemos un criterio para determinar la convergencia uniforme sin necesidad de saber esa función a la converge $f_n$.
@@ -4692,7 +4754,7 @@ $$\begin{cases}\lim_{m \to \infty} \gamma_m = |f_n (x) - f(x)| \\ 0  \leq \gamma
 Por tanto, $f_n \rightrightarrows f$ uniformemente en $A_0$
 \end{itemize}
 
-\subsubsection*{Criterio de no Convergencia Uniforme}
+\subsubsection{Criterio de no Convergencia Uniforme}
 Si una sucesión de funciones no converge uniformemente, entonces podemos decir que:
 $$f_n\cancel{\rightrightarrows} f \Leftrightarrow \exists \varepsilon_0 > 0 : \exists \{f_{n_k}\}_{k=1}^\infty\  \wedge \ \exists x_{n_k} A_0: |f_{n_k} (x_{n_k}) - f(x_{n_k}) | > \varepsilon_0$$
 
@@ -4728,7 +4790,7 @@ Luego, por la definición que se ha dado de convergencia uniforme con respecto a
 $$||f_n - f||_{[0,M]} \stackrel{f=0}{=} ||f_n||_{[0,M]} = \underset{x \in [0,M]}{\sup} \left| \frac{x}{x+n} \right|= \frac{M}{M+n} < \varepsilon : n \geq N(\varepsilon)$$
 $$\Rightarrow f_n \rightrightarrows 0 \mbox{ en } [0,M]$$
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $\{f_n\}$ una sucesión de funciones continuas en $A \subset \mathbb{R}$ que converge uniformemente a $f: A \to \mathbb{R}$, entonces $f$ es continua en $A$, es decir:
 $$f_n\rightrightarrows f \ \wedge \ f_n \mbox{ continua  en }A: \forall n\in \mathbb N\Rightarrow f \mbox{ continua en }A$$
 \underline{Demostración}:
@@ -4743,7 +4805,7 @@ $$\leq |f(y) - f_N (y)| + |f_N (y) - f_N (x)| + |f_N (x) - f(x)| \leq || f - f_N
 $$\leq 2 \cdot \frac{\varepsilon}{3} + \frac{\varepsilon}{3}  = \varepsilon : \mbox{ si } |y-x| < \delta \Rightarrow \mbox{ f es continua en } x$$
 Como $x$ es arbitrario, entonces $f$ es continua en $A$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $\{f_n\}$ una sucesión de funciones definidas en un intervalo acotado $J$. Supongamos que $f_n$ es derivable $\forall n = 1,2, \ldots$ en $J$ y:
 \begin{itemize}
 \item $\exists x_0 \in J : \{f_n (x_0)\}_{n = 1}^\infty$ es convergente
@@ -4787,7 +4849,7 @@ Si $0 < |y-x| < \delta$
 $$\Rightarrow \left| \frac{f(y) - f(x)}{y-x} - g(x) \right| < 3 \varepsilon$$
 Por tanto, $f$ es derivable y $f'(x) = g(x)$, que podemos expresar también como $(\lim f_n)' = \lim(f'_n)$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $f_n \in R[a,b]$ y $f_n \rightrightarrows f$ en $[a,b]$, entonces la función límite $f$ es integrable Riemann y la integral de la sucesión es la integral de la función límite.
 $$\forall n\in \mathbb N:  f_n\in R[a,b] \ \wedge \ f_n\rightrightarrows f \Rightarrow f\in R[a,b] \ \wedge \int_{a}^{b} f_n \rightarrow \int_{a}^{b} f$$
 Es decir, en realidad lo que estamos queriendo decir es que:
@@ -4841,14 +4903,14 @@ $$
 \end{tikzpicture}$$
 La convergencia puntual a la función $f(x) = 0$ es trivial, pero vemos que $\int_{0}^{1} f_n = 1 : \forall n \in \mathbb N \neq 0 = \int_{0}^{1} f(x)$, es decir, el área del triángulo es constantemente 1 que es distinto del área que tiene la función límite.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f_n\in R[a,b]: \forall n \in \mathbb N$ y $f_n(x)\rightarrow f(x): \forall x \in [a,b]$ de forma que $f\in R[a,b]$. Si $\exists M > 0: |f_n(x)|\leq M : \forall x \in [a,b] \ \wedge \ \forall n \in \mathbb N$, entonces si podemos afirmar que:
 $$\int_{a}^{b} f_n \rightarrow \int_{a}^{b} f$$
 \underline{Demostración}:
 
 No disponemos de las herramientas suficientes en este curso para poder demostrar este teorema (que se verá mucho más adelante).
 
-\subsubsection*{Teorema de Dini}
+\subsubsection{Teorema de Dini}
 Sea $f_n  : [a,b] \to \mathbb{R}$ una sucesión de funciones continuas que convergen monótonamente y puntualmente a una función continua $f: [a,b] \to \mathbb{R}$, entonces la convergencia es uniforme.
 
 \underline{Demostración}:
@@ -4877,12 +4939,12 @@ Como $g_{n_{k_0}}$ es continua y $x_{n_k}\rightarrow x$, entonces:
 $$g_{n_{k_0}} (x) = \lim_{k \to \infty} g_{n_{k_0}} (x_{n_k}) \geq \varepsilon \Rightarrow g_r (x) \geq g_{n_{k_0}} (x) \geq \varepsilon \Rightarrow x \in K_r : \forall r \in \mathbb{N}$$
 Lo cual es absurdo porque sabemos que $g_n(x)$ converge puntualmente a 0.
 
-\section*{SERIES DE FUNCIONES}
+\section{SERIES DE FUNCIONES}
 Si tenemos $\{f_n\}_{n = 0}^\infty$ una sucesión de funciones definidas en $A \subset \mathbb{R}$, podemos definir la serie asociada como la sucesión de sumas parciales, es decir:
 $$\{s_n\}_{n = 1}^\infty = \sum_{n=0}^{\infty} f_n (x) : s_n (x) = f_0 (x) + f_1 (x) + \ldots + f_n (x) = \sum_{n=1}^{n} f_n (x)$$
 
-\subsection*{\underline{Convergencia y propiedades}}
-\subsubsection*{Tipos de convergencia}
+\subsection{\underline{Convergencia y propiedades}}
+\subsubsection{Tipos de convergencia}
 En función del tipo de convergencia que tenga, diremos que la serie $\displaystyle \sum_{n=0}^{\infty} f_n (x)$ converge:
 \begin{itemize}
 \item \textbf{Puntualmente} en $A$ si $\{s_n\}_{n = 1}^\infty$ converge puntualmente  $A$.
@@ -4900,14 +4962,14 @@ $$\sum_{n=0}^{\infty} |x^n| = \sum_{n=0}^{\infty} |x|^n = \frac{1}{1 - |x|} \Rig
 \item Si $|x| > 1 \Rightarrow |x|^n \underset{n \to \infty}{\longrightarrow} \infty \Rightarrow \sum_{n=0}^{\infty} x^n$ diverge
 \end{itemize}
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Si $\{f_n\}_{n = 0}^\infty$ es una sucesión de funciones continuas en $A$ y $\sum_{n=0}^{\infty} f_n (x)$ converge uniformemente en $A$ a una función $S(x)$, entonces $S$ es continua en $A$.
 $$\lim_{n \to \infty} \sum_{k=1}^{n} f_k (x) = S(x) \mbox{ (uniformemente)} \Rightarrow S(x) \mbox{ cont.}$$
 \underline{Demostración}:
 
 Si $f_n$ es continua en $A : \forall n \in \mathbb N\Rightarrow \{s_n\}_{n = 0}^\infty$ es una sucesión de funciones continua. Como $s_n \rightrightarrows s$ en $A \Rightarrow S(x)$ es una función continua en $A$.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f_n : I \to \mathbb{R}$ donde I es un intervalo acotado tal que:
 \begin{itemize}
 \item $\exists x_0 \in I :  \displaystyle\sum_{n = 0}^{\infty} f_n (x_0) \mbox{ es convergente }$
@@ -4920,7 +4982,7 @@ $$\frac{d}{dx}\left( \sum_{n = 0}^{\infty} f_n (x) \right) = \sum_{n = 0}^{\inft
 
 Se deduce trivialmente de la demostración que se hizo para sucesiones, puesto que basta solo estudiar ese teorema para la sucesión $\{s_n\}$ que es la que caracteriza la serie.
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $f_n \in \mathcal{R}[a,b] : \forall n \in \mathbb N$ y $\sum_{n = 0}^{\infty} f_n (x)$ converge uniformemente a $S:[a,b] \to \mathbb{R}$, entonces $S \in \mathcal{R}[a,b] \mbox{ y } \int_{a}^{b} S = \sum_{n=0}^{\infty} \int_{a}^{b} f_n$, es decir:
 $$\int_{a}^{b} \left(\sum_{n = 0}^{\infty} f_n \right) \ dx= \sum_{n=0}^{\infty} \int_{a}^{b} f_n \ dx$$
 
@@ -4928,7 +4990,7 @@ $$\int_{a}^{b} \left(\sum_{n = 0}^{\infty} f_n \right) \ dx= \sum_{n=0}^{\infty}
 
 Se deduce trivialmente de la demostración que se hizo para sucesiones, puesto que basta solo estudiar ese teorema para la sucesión $\{s_n\}$ que es la que caracteriza la serie.
 
-\subsubsection*{Criterio de Convergencia Uniforme de Cauchy para series}
+\subsubsection{Criterio de Convergencia Uniforme de Cauchy para series}
 El criterio para sucesiones de funciones $\{f_n\}_{n = 0}^\infty$ afirmaba que:
 $$\forall \varepsilon > 0, \exists N : n,m \geq N \Rightarrow ||f_n  - f||_A  < \varepsilon$$
 Si sustituimos $f_n$ por $S_n =  \sum_{k=0}^{n} f_k$ y suponemos $m < n$, entonces:
@@ -4938,7 +5000,7 @@ Luego, dada una serie $\sum f_n (x)$, esta converge absoluta y uniformemente en 
 $$\forall \varepsilon > 0, \exists N : n,m \geq N \mbox{ y } m < n \Rightarrow \sum_{k=m + 1}^{n} |f_k (x)| < \varepsilon : \forall x \in A$$
 Además, a modo de observación, como $ |\sum_{k=m + 1}^{n} f_k (x)| \leq \sum_{k=m + 1}^{n} |f_k (x)| $, entonces si $\sum f_n (x)$ converge absoluta y uniformemente en $A$ se tiene que $\sum f_n (x)$ converge uniformemente en $A$.
 
-\subsubsection*{Criterio M de Weierstrass}
+\subsubsection{Criterio M de Weierstrass}
 Sea $\{f_n\}_{n = 0}^\infty$ una sucesión de funciones definidas en A que verifica:
 $$\forall n \in \mathbb{N}: \exists M_n \in \mathbb{R},\  M_n \geq 0: |f_n (x)| \leq M_n : \forall x \in A$$
 Entonces si $\sum_{n= 0}^{\infty} M_n$ es convergente se tiene que $\sum_{n = 0}^{\infty} f_n(x)$ converge absolutamente y uniformemente en $A$.
@@ -4950,19 +5012,19 @@ $$\forall \varepsilon >0, \exists N : n > m \geq N \Rightarrow \sum_{k=m+1}^{n} 
 Pero como $|f_k (x)| \leq M_k : \forall k \in \mathbb{N} \mbox{ y } \forall x \in A$, entonces:
 $$\sum_{k=m+1}^{n} |f_k (x)| \leq \sum_{k=m+1}^{n} M_k < \varepsilon : \forall x \in A \Rightarrow \sum_{n=0}^{\infty} f_n (x) \mbox{ converge absoluta y uniformemente en A}$$
 
-\subsection*{\underline{Series de Potencias}}
+\subsection{\underline{Series de Potencias}}
 Una serie de potencias centrada en $x_0$ es la serie de funciones:
 $$\sum_{n=0}^{\infty} a_n (x - x_0)^n$$
 De hecho, es posible considerarla centrada en $0$ porque a efectos prácticos para estudiar la convergencia el cambio de variable $y = x - x_0$ posibilita que estudiemos la convergencia sobre la nueva variable:
 $$\sum_{n = 0}^{\infty} a_n y^n \sim \sum_{n=0}^{\infty} a_n (x - x_0)^n$$
 Lo cual nos permite simplificar la notación a $\sum_{n=0}^{\infty} a_n x^n$
 
-\subsubsection*{Radio de convergencia}
+\subsubsection{Radio de convergencia}
 Sea $\rho =  \underset{n \to \infty}\limsup |a_n|^{\frac{1}{n}} \in [0, +\infty) \cup \{+ \infty\}$ y definimos el radio de convergencia de la serie de potencias como:
 $$R = \begin{cases} \frac{1}{\rho}  & 0 < \rho < \infty \\ +\infty   & \rho = 0 \\ 0   & \rho = +\infty \end{cases}$$
 Y más tarde veremos que este valor es el que determina el intervalos sobre el que es convergente la serie de potencias.
 
-\subsubsection*{Teorema de Cauchy - Hadamard}
+\subsubsection{Teorema de Cauchy - Hadamard}
 La serie de potencias $\sum_{n= 0}^{\infty} a_n x^n$ es absolutamente convergente en $(-R , R)$ y es divergente fuera de ese intervalo, sin embargo, los extremos no quedan determinados; hay que estudiarlos.
 
 Además, si $[a,b]$ es un intervalo cerrado y acotado tal que $[a,b] \subset (-R , R)$, entonces, la serie de potencias converge absoluta y uniformemente en $[a,b]$
@@ -5003,7 +5065,7 @@ Por el Teorema de Cauchy-Hadamard, la serie converge absoluta y uniformemente en
 \item Si $x = -1: \sum_{n=1}^{\infty} \frac{(-1)^n}{n} \mbox{ es la serie armónica alternada, que sabemos que es condicionalmente convergente }$
 \end{itemize}
 
-\subsubsection*{Corolario}
+\subsubsection{Corolario}
 \begin{itemize}
 \item El radio de convergencia de $\sum_{n=0}^{\infty} a_n x^n$ no depende de los primeros términos de la sucesión, es decir, si tenemos $\sum_{n=0}^{\infty} a_n x^n$ y $\sum_{n=0}^{\infty} \tilde{a}_n x^n$ tales que $a_n = \tilde{a}_n : \forall n \geq n_0$, entonces el radio de convergencia es el mismo para ambas series.
 
@@ -5025,7 +5087,7 @@ La demostración de este corolario se basa en la definición de $\rho = \underse
 $$\tilde{\rho} = \underset{n \to \infty}\limsup |a_{n+1} (n+1)|^\frac{1}{n} = \underset{n \to \infty}\limsup \underbrace{(n+1)^\frac{1}{n}}_{\to 1} \cdot |a_{n+1}|^\frac{1}{n} = \underset{n \to \infty}\limsup |a_{n+1}|^\frac{1}{n} = [|a_{n+1}|^\frac{1}{n+1}]^\frac{n+1}{n} = \rho$$
 \end{itemize}
 
-\subsubsection*{Teorema}
+\subsubsection{Teorema}
 Sea $\sum_{n=0}^{\infty} a_n x^n$ con radio de convergencia $R>0$. Entonces, si $[a,b] \subset (-R, R)$, tenemos:
 \begin{itemize}
 \item La serie converge absolutamente en $(-R, R)$ a una función $f(x)$ definida como:
@@ -5076,7 +5138,7 @@ $$\int_{0}^{1} \frac{dx}{1-x} = \lim_{\varepsilon \to 0}  \int_{0}^{1-\varepsilo
 \end{itemize}
 Luego la conclusión es que hay que tener cuidado con aplicar estos teoremas en los límites del intervalo de convergencia.
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Si  $\sum_{n= 0}^{\infty} a_n x^n $ tiene radio de convergencia $R$ y en $x = R$ o $x = -R$ la serie converge absolutamente, entonces la serie de potencias converge uniformemente en $[-R, R]$.
 
 Si la convergencia en $R$ o $-R$ es condicional, entonces el teorema no es cierto. Por ejemplo, tomamos
@@ -5090,7 +5152,7 @@ Luego si converge absolutamente en uno de los extremos, automáticamente tambié
 Sea $|x| \leq R$, entonces $|a_n x^n| \leq |a_n| R^n = M_n$. Aplicando el criterio M de Weierstrass, tenemos que:
 $$\sum_{n=0}^{\infty} a_n x^n \mbox{ converge absolutamente en } [-R,R]$$
 
-\subsubsection*{Proposición}
+\subsubsection{Proposición}
 Sean $\sum_{n=0}^{\infty} a_n x^n$ y $\sum_{n=0}^{\infty} b_n x^n$ que tienen radio de convergencia $R_a, R_b >0$. Si $\sum_{n=0}^{\infty} a_n x^n = \sum_{n=0}^{\infty} b_n x^n$ para $x \in (-\delta, \delta) : \delta > 0$, entonces:
 $$\sum_{n=0}^{\infty} a_n x^n = f(x)\mbox{ y }\sum_{n=0}^{\infty} b_n x^n = f(x) : |x| < \delta \Rightarrow a_n = b_n : \forall n = 0, 1, \ldots$$
 
@@ -5098,7 +5160,7 @@ $$\sum_{n=0}^{\infty} a_n x^n = f(x)\mbox{ y }\sum_{n=0}^{\infty} b_n x^n = f(x)
 $$\sum_{n=0}^{\infty} a_n x^n = f(x) = \sum_{n=0}^{\infty} b_n x^n \begin{cases} a_0 = f(0) = b_0 \\ a_1 = f'(0) = b_1 \\ 2 a_2 = f''(0) = 2 b_2 \\ \vdots \\ k! a_k = f^{(k)}(0) = k! b_k \end{cases}$$
 Por inducción se tiene que $a_n = b_n$.
 
-\subsubsection*{Series de Taylor}
+\subsubsection{Series de Taylor}
 Hemos probado que la aplicación que a cada conjunto de serie de potencias le aplica una función definida en un entorno de 0 es inyectiva. Sin embargo, una buena pregunta es ¿si tenemos una función $f(x)$, existirá una serie de potencias $\sum_{n= 0}^{\infty} a_n x^n $ tal que $f(x) = \sum_{n= 0}^{\infty} a_n x^n : |x| < \delta$?
 
 Tal y como hemos visto en la proposición anterior, ocurre que:
@@ -5136,11 +5198,11 @@ Es decir, si consideramos  $0 < \alpha < \frac{1}{2}$ y el conjunto $[-\alpha, \
 $$\underset{|x| \leq \alpha} {\sup} \left|f(x) - \sum_{k=0}^{n} x^n\right| \leq \left(\frac{\alpha}{1 - \alpha}\right)^{n+1} \cdot \frac{1}{1-\alpha} \xrightarrow{n\rightarrow\infty} 0$$
 Por tanto, se tiene que $\sum_{n=0}^{\infty} x^n = \frac{1}{1-x} : |x| \leq \alpha$.
 
-\subsection*{\underline{Definición de exponencial, seno y coseno}}
+\subsection{\underline{Definición de exponencial, seno y coseno}}
 En este tema se va a dar una definición alternativa a la que se dió de función exponencial y logarítmica. Además, se va a definir de forma analítica las funciones trigonométricas conocidas y todo ello en términos de series de potencias.
 
 \newpage
-\subsubsection*{Exponencial y Logarítmica}
+\subsubsection{Exponencial y Logarítmica}
 \underline{\textbf{Exponencial}}
 
 En la parte de propiedades de los números reales, definimos lo que significa $a^r: r\in \mathbb Q$, luego hasta ahí no hay problema. Lo complicado viene al introducir el concepto de exponente real, que en su momento definimos como:
@@ -5283,7 +5345,7 @@ $$f(x) = x^x = e^{x \log(x)} \Rightarrow f'(x) = e^{x \log(x)} [\log(x) + 1] = x
 \appendix
 \part*{Apéndice de síntesis}
 \chapter{INTRODUCCIÓN A CONJUNTOS Y FUNCIONES}
-\begin{definicion}[Inyectividad]
+\begin{defi}[Inyectividad]
 Una función es \textbf{inyectiva} si y solo si a elementos distintos, sus imágenes son distintas.
 $$x_1\neq x_2 \Rightarrow f(x_1)\neq f(x_2)$$
 \end{definicion}
