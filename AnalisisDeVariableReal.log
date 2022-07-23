@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  23 JUL 2022 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.10.8)  23 JUL 2022 18:41
 entering extended mode
 **./AnalisisDeVariableReal.tex
 (AnalisisDeVariableReal.tex
@@ -1604,7 +1604,7 @@ Overfull \hbox (5.53996pt too wide) in paragraph at lines 115--116
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 122.
+Package xcolor Warning: Incompatible color definition on input line 123.
 
 (AnalisisDeVariableReal.toc
 LaTeX Info: Redefining \. on input line 1.
@@ -1620,174 +1620,166 @@ LaTeX Info: Redefining \% on input line 2.
 ]
 Cap\'{\i }tulo 1.
 
-Package xcolor Warning: Incompatible color definition on input line 126.
+Package xcolor Warning: Incompatible color definition on input line 127.
 
 
-Overfull \hbox (13.41162pt too wide) in paragraph at lines 126--126
+Overfull \hbox (13.41162pt too wide) in paragraph at lines 127--127
 |\OT1/cmr/bx/n/24.88 INTRODUCCI[]ON A CON-JUN-TOS
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 127.
+Package xcolor Warning: Incompatible color definition on input line 128.
 
 
-Package xcolor Warning: Incompatible color definition on input line 129.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 129.
+Package xcolor Warning: Incompatible color definition on input line 130.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 129.
+(hyperref)                removing `math shift' on input line 130.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 129.
+(hyperref)                removing `\@@underline' on input line 130.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 129.
+(hyperref)                removing `\hbox' on input line 130.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 129.
+(hyperref)                removing `\mathsurround' on input line 130.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 129.
+(hyperref)                removing `\z@' on input line 130.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 130.
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-37.
+38.
 (C:\Users\jdbar\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 137.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
 
 
-Package xcolor Warning: Incompatible color definition on input line 144.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 144.
+Package xcolor Warning: Incompatible color definition on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 144.
+(hyperref)                removing `math shift' on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 144.
+(hyperref)                removing `\@@underline' on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 144.
+(hyperref)                removing `\hbox' on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 144.
+(hyperref)                removing `\mathsurround' on input line 145.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 144.
+(hyperref)                removing `\z@' on input line 145.
 
-<./fotos/producto cartesiano.jpg, id=743, 782.925pt x 344.03531pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 145.
+
+<./fotos/producto cartesiano.jpg, id=770, 782.925pt x 344.03531pt>
 File: ./fotos/producto cartesiano.jpg Graphic file (type jpg)
 <use ./fotos/producto cartesiano.jpg>
 Package pdftex.def Info: ./fotos/producto cartesiano.jpg  used on input line 15
-1.
+2.
 (pdftex.def)             Requested size: 391.46155pt x 172.01723pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.152 \end{center}
+l.153 \end{center}
                    [1
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 154.
+Package xcolor Warning: Incompatible color definition on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 154.
+(hyperref)                removing `math shift' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 154.
+(hyperref)                removing `\@@underline' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 154.
+(hyperref)                removing `\hbox' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 154.
+(hyperref)                removing `\mathsurround' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 154.
+(hyperref)                removing `\z@' on input line 155.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 154.
+(hyperref)                removing `math shift' on input line 155.
 
 
-Package xcolor Warning: Incompatible color definition on input line 159.
+Package xcolor Warning: Incompatible color definition on input line 160.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 159.
+Package xcolor Warning: Incompatible color definition on input line 163.
 
 
-Package xcolor Warning: Incompatible color definition on input line 162.
+Package xcolor Warning: Incompatible color definition on input line 166.
 
 
-Package xcolor Warning: Incompatible color definition on input line 165.
-
-
-Package xcolor Warning: Incompatible color definition on input line 169.
+Package xcolor Warning: Incompatible color definition on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 169.
+(hyperref)                removing `math shift' on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 169.
+(hyperref)                removing `\@@underline' on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 169.
+(hyperref)                removing `\hbox' on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 169.
+(hyperref)                removing `\mathsurround' on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 169.
+(hyperref)                removing `\z@' on input line 170.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 169.
+(hyperref)                removing `math shift' on input line 170.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 $$f: A\rightarrow B$$
+l.172 $$f: A\rightarrow B$$
                             [2 <./fotos/producto cartesiano.jpg>]
 
-Package xcolor Warning: Incompatible color definition on input line 177.
+Package xcolor Warning: Incompatible color definition on input line 178.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 177.
-
-
-Overfull \hbox (1.78139pt too wide) detected at line 204
+Overfull \hbox (1.78139pt too wide) detected at line 205
 \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G\OT1/cmr/m/n/10 )? \OMS/
 cmsy/m/n/10 ! \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 y \OT1/cmr/
 m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
@@ -1797,563 +1789,511 @@ m/n/10 = \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 206.
+Package xcolor Warning: Incompatible color definition on input line 207.
 
 [3]
 
-Package xcolor Warning: Incompatible color definition on input line 218.
+Package xcolor Warning: Incompatible color definition on input line 219.
 
 
-Package xcolor Warning: Incompatible color definition on input line 222.
+Package xcolor Warning: Incompatible color definition on input line 223.
 
 
-Package xcolor Warning: Incompatible color definition on input line 225.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 225.
+Package xcolor Warning: Incompatible color definition on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 225.
+(hyperref)                removing `math shift' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 225.
+(hyperref)                removing `\@@underline' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 225.
+(hyperref)                removing `\hbox' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 225.
+(hyperref)                removing `\mathsurround' on input line 226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 225.
+(hyperref)                removing `\z@' on input line 226.
 
-<./fotos/nxn numerable.png, id=764, 668.4975pt x 411.5375pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 226.
+
+<./fotos/nxn numerable.png, id=791, 668.4975pt x 411.5375pt>
 File: ./fotos/nxn numerable.png Graphic file (type png)
 <use ./fotos/nxn numerable.png>
-Package pdftex.def Info: ./fotos/nxn numerable.png  used on input line 231.
+Package pdftex.def Info: ./fotos/nxn numerable.png  used on input line 232.
 (pdftex.def)             Requested size: 167.12396pt x 102.88412pt.
 
-Package xcolor Warning: Incompatible color definition on input line 234.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 234.
+Package xcolor Warning: Incompatible color definition on input line 235.
 
 [4 <./fotos/nxn numerable.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 238.
+Package xcolor Warning: Incompatible color definition on input line 239.
 
 
-Package xcolor Warning: Incompatible color definition on input line 242.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 242.
+Package xcolor Warning: Incompatible color definition on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 242.
+(hyperref)                removing `math shift' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 242.
+(hyperref)                removing `\@@underline' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 242.
+(hyperref)                removing `\hbox' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 242.
+(hyperref)                removing `\mathsurround' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 242.
-
-
-Package xcolor Warning: Incompatible color definition on input line 253.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 253.
-
-
-Package xcolor Warning: Incompatible color definition on input line 274.
+(hyperref)                removing `\z@' on input line 243.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 274.
+(hyperref)                removing `math shift' on input line 243.
+
+
+Package xcolor Warning: Incompatible color definition on input line 254.
+
+
+Package xcolor Warning: Incompatible color definition on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 274.
+(hyperref)                removing `math shift' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 274.
+(hyperref)                removing `\@@underline' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 274.
+(hyperref)                removing `\hbox' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 274.
+(hyperref)                removing `\mathsurround' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 274.
+(hyperref)                removing `\z@' on input line 275.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 275.
 
 [5]
 
-Package xcolor Warning: Incompatible color definition on input line 285.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 285.
+Package xcolor Warning: Incompatible color definition on input line 286.
 
 [6]
 Cap\'{\i }tulo 2.
 
-Package xcolor Warning: Incompatible color definition on input line 296.
+Package xcolor Warning: Incompatible color definition on input line 297.
 
 
-Package xcolor Warning: Incompatible color definition on input line 301.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 301.
+Package xcolor Warning: Incompatible color definition on input line 302.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 301.
+(hyperref)                removing `math shift' on input line 302.
 
 
-Package xcolor Warning: Incompatible color definition on input line 303.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 302.
+
+
+Package xcolor Warning: Incompatible color definition on input line 304.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 303.
+(hyperref)                than one, level fixed on input line 304.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 303.
-
-
-Package xcolor Warning: Incompatible color definition on input line 322.
+Package xcolor Warning: Incompatible color definition on input line 323.
 
 [7
 
 ]
 
-Package xcolor Warning: Incompatible color definition on input line 346.
+Package xcolor Warning: Incompatible color definition on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 346.
+(hyperref)                removing `math shift' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 346.
+(hyperref)                removing `\@@underline' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 346.
+(hyperref)                removing `\hbox' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 346.
+(hyperref)                removing `\mathsurround' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 346.
+(hyperref)                removing `\z@' on input line 347.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 346.
+(hyperref)                removing `math shift' on input line 347.
 
 
-Package xcolor Warning: Incompatible color definition on input line 349.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 349.
+Package xcolor Warning: Incompatible color definition on input line 350.
 
 [8]
 
-Package xcolor Warning: Incompatible color definition on input line 422.
+Package xcolor Warning: Incompatible color definition on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 422.
+(hyperref)                removing `math shift' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 422.
+(hyperref)                removing `\@@underline' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 422.
+(hyperref)                removing `\hbox' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 422.
+(hyperref)                removing `\mathsurround' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 422.
+(hyperref)                removing `\z@' on input line 423.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 422.
+(hyperref)                removing `math shift' on input line 423.
 
 [9]
 
-Package xcolor Warning: Incompatible color definition on input line 438.
+Package xcolor Warning: Incompatible color definition on input line 439.
 
 [10] [11]
 
-Package xcolor Warning: Incompatible color definition on input line 564.
+Package xcolor Warning: Incompatible color definition on input line 565.
 
 [12]
 
-Package xcolor Warning: Incompatible color definition on input line 581.
+Package xcolor Warning: Incompatible color definition on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 581.
+(hyperref)                removing `math shift' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 581.
+(hyperref)                removing `\@@underline' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 581.
+(hyperref)                removing `\hbox' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 581.
+(hyperref)                removing `\mathsurround' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 581.
+(hyperref)                removing `\z@' on input line 582.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 581.
+(hyperref)                removing `math shift' on input line 582.
 
 
-Package xcolor Warning: Incompatible color definition on input line 583.
+Package xcolor Warning: Incompatible color definition on input line 584.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 583.
-
-
-Package xcolor Warning: Incompatible color definition on input line 601.
+Package xcolor Warning: Incompatible color definition on input line 602.
 
 [13]
 
-Package xcolor Warning: Incompatible color definition on input line 617.
+Package xcolor Warning: Incompatible color definition on input line 618.
 
 
-Package xcolor Warning: Incompatible color definition on input line 628.
+Package xcolor Warning: Incompatible color definition on input line 629.
 
 [14]
 
-Package xcolor Warning: Incompatible color definition on input line 637.
+Package xcolor Warning: Incompatible color definition on input line 638.
 
 
-Package xcolor Warning: Incompatible color definition on input line 648.
+Package xcolor Warning: Incompatible color definition on input line 649.
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 648.
+(hyperref)                than one, level fixed on input line 649.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 648.
-
-
-Package xcolor Warning: Incompatible color definition on input line 672.
+Package xcolor Warning: Incompatible color definition on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 672.
+(hyperref)                removing `math shift' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 672.
+(hyperref)                removing `\@@underline' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 672.
+(hyperref)                removing `\hbox' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 672.
+(hyperref)                removing `\mathsurround' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 672.
+(hyperref)                removing `\z@' on input line 673.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 672.
+(hyperref)                removing `math shift' on input line 673.
 
 
-Package xcolor Warning: Incompatible color definition on input line 679.
+Package xcolor Warning: Incompatible color definition on input line 680.
 
 [15]
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 679.
-
-
-Package xcolor Warning: Incompatible color definition on input line 693.
+Package xcolor Warning: Incompatible color definition on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 693.
+(hyperref)                removing `math shift' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 693.
+(hyperref)                removing `\@@underline' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 693.
+(hyperref)                removing `\hbox' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 693.
+(hyperref)                removing `\mathsurround' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 693.
+(hyperref)                removing `\z@' on input line 694.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 693.
+(hyperref)                removing `math shift' on input line 694.
 
 
-Package xcolor Warning: Incompatible color definition on input line 697.
+Package xcolor Warning: Incompatible color definition on input line 698.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 697.
-
-
-Package xcolor Warning: Incompatible color definition on input line 715.
+Package xcolor Warning: Incompatible color definition on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 715.
+(hyperref)                removing `math shift' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 715.
+(hyperref)                removing `\@@underline' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 715.
+(hyperref)                removing `\hbox' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 715.
+(hyperref)                removing `\mathsurround' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 715.
+(hyperref)                removing `\z@' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 715.
+(hyperref)                removing `math shift' on input line 716.
 
 
-Package xcolor Warning: Incompatible color definition on input line 723.
+Package xcolor Warning: Incompatible color definition on input line 724.
 
 
-Package xcolor Warning: Incompatible color definition on input line 726.
+Package xcolor Warning: Incompatible color definition on input line 727.
 
 [16]
 
-Package xcolor Warning: Incompatible color definition on input line 733.
-
-
-Package xcolor Warning: Incompatible color definition on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 735.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 735.
+Package xcolor Warning: Incompatible color definition on input line 734.
 
 
 Package xcolor Warning: Incompatible color definition on input line 736.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 736.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 736.
 
 
-Package xcolor Warning: Incompatible color definition on input line 748.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@underline' on input line 736.
 
 
-Package xcolor Warning: Incompatible color definition on input line 760.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 736.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathsurround' on input line 736.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 736.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 736.
+
+
+Package xcolor Warning: Incompatible color definition on input line 737.
+
+
+Package xcolor Warning: Incompatible color definition on input line 749.
+
+
+Package xcolor Warning: Incompatible color definition on input line 761.
 
 [17]
 
-Package xcolor Warning: Incompatible color definition on input line 773.
+Package xcolor Warning: Incompatible color definition on input line 774.
 
 
-Package xcolor Warning: Incompatible color definition on input line 782.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 782.
+Package xcolor Warning: Incompatible color definition on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 782.
+(hyperref)                removing `math shift' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 782.
+(hyperref)                removing `\@@underline' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 782.
+(hyperref)                removing `\hbox' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 782.
+(hyperref)                removing `\mathsurround' on input line 783.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 782.
+(hyperref)                removing `\z@' on input line 783.
 
 
-Package xcolor Warning: Incompatible color definition on input line 800.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 783.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 800.
+Package xcolor Warning: Incompatible color definition on input line 801.
 
 [18]
 
-Package xcolor Warning: Incompatible color definition on input line 828.
+Package xcolor Warning: Incompatible color definition on input line 829.
 
 
-Package xcolor Warning: Incompatible color definition on input line 834.
+Package xcolor Warning: Incompatible color definition on input line 835.
 
 
-Package xcolor Warning: Incompatible color definition on input line 842.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 842.
+Package xcolor Warning: Incompatible color definition on input line 843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 842.
+(hyperref)                removing `math shift' on input line 843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 842.
+(hyperref)                removing `\@@underline' on input line 843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 842.
+(hyperref)                removing `\hbox' on input line 843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 842.
+(hyperref)                removing `\mathsurround' on input line 843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 842.
+(hyperref)                removing `\z@' on input line 843.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 843.
 
 [19]
 
-Package xcolor Warning: Incompatible color definition on input line 850.
+Package xcolor Warning: Incompatible color definition on input line 851.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 850.
+Package xcolor Warning: Incompatible color definition on input line 863.
 
 
-Package xcolor Warning: Incompatible color definition on input line 862.
-
-
-Package xcolor Warning: Incompatible color definition on input line 880.
+Package xcolor Warning: Incompatible color definition on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 880.
+(hyperref)                removing `math shift' on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 880.
+(hyperref)                removing `\@@underline' on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 880.
+(hyperref)                removing `\hbox' on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 880.
+(hyperref)                removing `\mathsurround' on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 880.
+(hyperref)                removing `\z@' on input line 881.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 880.
+(hyperref)                removing `math shift' on input line 881.
 
 [20]
 
-Package xcolor Warning: Incompatible color definition on input line 885.
+Package xcolor Warning: Incompatible color definition on input line 886.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 885.
-
-
-Package xcolor Warning: Incompatible color definition on input line 918.
+Package xcolor Warning: Incompatible color definition on input line 919.
 
 [21]
 
-Package xcolor Warning: Incompatible color definition on input line 954.
+Package xcolor Warning: Incompatible color definition on input line 955.
 
 [22]
-Overfull \hbox (20.30946pt too wide) detected at line 996
+Overfull \hbox (20.30946pt too wide) detected at line 997
 \OML/cmm/m/it/10 r[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 h [] > a \OMS/cmsy/m/n
 /10 , \OML/cmm/m/it/10 r[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 a > h [] \OMS/cm
 sy/m/n/10 , \OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 < h < [][]h \OMS/cmsy/m/n/10  \
@@ -2361,53 +2301,49 @@ OT1/cmr/m/n/10 1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1001.
+Package xcolor Warning: Incompatible color definition on input line 1002.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1006.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1006.
+Package xcolor Warning: Incompatible color definition on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 1006.
+(hyperref)                removing `math shift' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1006.
+(hyperref)                removing `\@@underline' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `\hbox' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `math shift' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 1006.
+(hyperref)                removing `math shift' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1006.
+(hyperref)                removing `\mathsurround' on input line 1007.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1006.
+(hyperref)                removing `\z@' on input line 1007.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1007.
 
 [23]
 
-Package xcolor Warning: Incompatible color definition on input line 1011.
+Package xcolor Warning: Incompatible color definition on input line 1012.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1011.
-
-
-Overfull \hbox (46.14114pt too wide) detected at line 1017
+Overfull \hbox (46.14114pt too wide) detected at line 1018
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 y > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; x > 
 \OT1/cmr/m/n/10 1 : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/
 msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 y > x[] \OMS/cmsy/m/n/10 ) f\OM
@@ -2419,10 +2355,10 @@ L/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[] ) 9 [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1024.
+Package xcolor Warning: Incompatible color definition on input line 1025.
 
 [24]
-Overfull \hbox (33.58252pt too wide) detected at line 1085
+Overfull \hbox (33.58252pt too wide) detected at line 1086
 \OML/cmm/m/it/10 x < \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 )  \OML/cmm/m/it/10 x >
  \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ) 9\OT1/cmr/m/n/10 !\OML/cmm/m/it/10 n \OMS
 /cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/cmsy/m
@@ -2437,75 +2373,71 @@ it/10 n \OT1/cmr/m/n/10 + 1 = \OML/cmm/m/it/10 m
 
 [25]
 
-Package xcolor Warning: Incompatible color definition on input line 1105.
+Package xcolor Warning: Incompatible color definition on input line 1106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1105.
+(hyperref)                removing `math shift' on input line 1106.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1115.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1115.
+Package xcolor Warning: Incompatible color definition on input line 1116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1115.
+(hyperref)                removing `math shift' on input line 1116.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1115.
+(hyperref)                removing `math shift' on input line 1116.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1122.
+Package xcolor Warning: Incompatible color definition on input line 1123.
 
 [26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1122.
+(hyperref)                removing `math shift' on input line 1123.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 1122.
+(hyperref)                removing `\@@underline' on input line 1123.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1122.
+(hyperref)                removing `\hbox' on input line 1123.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 1122.
+(hyperref)                removing `\mathsurround' on input line 1123.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1122.
+(hyperref)                removing `\z@' on input line 1123.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1122.
+(hyperref)                removing `math shift' on input line 1123.
 
-<./fotos/Intervalos encajados.jpg, id=993, 692.5875pt x 228.10219pt>
+<./fotos/Intervalos encajados.jpg, id=1028, 692.5875pt x 228.10219pt>
 File: ./fotos/Intervalos encajados.jpg Graphic file (type jpg)
 <use ./fotos/Intervalos encajados.jpg>
 Package pdftex.def Info: ./fotos/Intervalos encajados.jpg  used on input line 1
-128.
+129.
 (pdftex.def)             Requested size: 138.51505pt x 45.61961pt.
 
-Overfull \hbox (36.12018pt too wide) detected at line 1150
+Overfull \hbox (36.12018pt too wide) detected at line 1151
 \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 ; \OT
 1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 , \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/
 cmm/m/it/10  \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10  \OML/cmm
@@ -2520,158 +2452,154 @@ U/msb/m/n/10 N \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 [] \OML
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1153.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1153.
+Package xcolor Warning: Incompatible color definition on input line 1154.
 
 [27 <./fotos/Intervalos encajados.jpg>]
-<./fotos/corolario cantor.jpg, id=1001, 1051.67906pt x 433.62pt>
+<./fotos/corolario cantor.jpg, id=1036, 1051.67906pt x 433.62pt>
 File: ./fotos/corolario cantor.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor.jpg>
-Package pdftex.def Info: ./fotos/corolario cantor.jpg  used on input line 1167.
+Package pdftex.def Info: ./fotos/corolario cantor.jpg  used on input line 1168.
 
 (pdftex.def)             Requested size: 262.91911pt x 108.40472pt.
-<./fotos/corolario cantor 2.jpg, id=1002, 707.64375pt x 427.5975pt>
+<./fotos/corolario cantor 2.jpg, id=1037, 707.64375pt x 427.5975pt>
 File: ./fotos/corolario cantor 2.jpg Graphic file (type jpg)
 <use ./fotos/corolario cantor 2.jpg>
 Package pdftex.def Info: ./fotos/corolario cantor 2.jpg  used on input line 118
-1.
+2.
 (pdftex.def)             Requested size: 176.9105pt x 106.89911pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1189.
+Package xcolor Warning: Incompatible color definition on input line 1190.
 
 [28 <./fotos/corolario cantor.jpg> <./fotos/corolario cantor 2.jpg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1199.
+Package xcolor Warning: Incompatible color definition on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 1199.
+(hyperref)                removing `\@@underline' on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 1199.
+(hyperref)                removing `\hbox' on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 1199.
+(hyperref)                removing `\mathsurround' on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 1199.
+(hyperref)                removing `\z@' on input line 1200.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1200.
 
 [29] [30
 
 ]
 Cap\'{\i }tulo 3.
 
-Package xcolor Warning: Incompatible color definition on input line 1208.
+Package xcolor Warning: Incompatible color definition on input line 1209.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1211.
+Package xcolor Warning: Incompatible color definition on input line 1212.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1214.
+Package xcolor Warning: Incompatible color definition on input line 1215.
 
 Package hyperref Info: bookmark level for unknown defi defaults to 0 on input l
-ine 1214.
+ine 1215.
 Package hyperref Info: bookmark level for unknown obs defaults to 0 on input li
-ne 1224.
+ne 1225.
 
-Package xcolor Warning: Incompatible color definition on input line 1228.
+Package xcolor Warning: Incompatible color definition on input line 1229.
 
 Package hyperref Info: bookmark level for unknown prop defaults to 0 on input l
-ine 1228.
+ine 1229.
 
-Package xcolor Warning: Incompatible color definition on input line 1243.
+Package xcolor Warning: Incompatible color definition on input line 1244.
 
 [31]
 
-Package xcolor Warning: Incompatible color definition on input line 1249.
+Package xcolor Warning: Incompatible color definition on input line 1250.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1259.
+Package xcolor Warning: Incompatible color definition on input line 1260.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1262.
+Package xcolor Warning: Incompatible color definition on input line 1263.
 
 Package hyperref Info: bookmark level for unknown demo defaults to 0 on input l
-ine 1263.
+ine 1264.
 
-Package xcolor Warning: Incompatible color definition on input line 1268.
+Package xcolor Warning: Incompatible color definition on input line 1269.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1271.
+Package xcolor Warning: Incompatible color definition on input line 1272.
 
 [32]
 
-Package xcolor Warning: Incompatible color definition on input line 1284.
+Package xcolor Warning: Incompatible color definition on input line 1285.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1303.
+Package xcolor Warning: Incompatible color definition on input line 1304.
 
 [33]
-<./fotos/x a cero.jpeg, id=1053, 2248.4pt x 634.37pt>
+<./fotos/x a cero.jpeg, id=1088, 2248.4pt x 634.37pt>
 File: ./fotos/x a cero.jpeg Graphic file (type jpg)
 <use ./fotos/x a cero.jpeg>
-Package pdftex.def Info: ./fotos/x a cero.jpeg  used on input line 1337.
+Package pdftex.def Info: ./fotos/x a cero.jpeg  used on input line 1338.
 (pdftex.def)             Requested size: 112.42657pt x 31.72035pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1362.
+Package xcolor Warning: Incompatible color definition on input line 1363.
 
 [34 <./fotos/x a cero.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1371.
+Package xcolor Warning: Incompatible color definition on input line 1372.
 
-<./fotos/limite negativo.jpeg, id=1061, 807.015pt x 287.57437pt>
+<./fotos/limite negativo.jpeg, id=1096, 807.015pt x 287.57437pt>
 File: ./fotos/limite negativo.jpeg Graphic file (type jpg)
 <use ./fotos/limite negativo.jpeg>
-Package pdftex.def Info: ./fotos/limite negativo.jpeg  used on input line 1376.
+Package pdftex.def Info: ./fotos/limite negativo.jpeg  used on input line 1377.
 
 (pdftex.def)             Requested size: 201.75325pt x 71.89342pt.
 
-Package xcolor Warning: Incompatible color definition on input line 1390.
+Package xcolor Warning: Incompatible color definition on input line 1391.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1393.
+Package xcolor Warning: Incompatible color definition on input line 1394.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1401.
+Package xcolor Warning: Incompatible color definition on input line 1402.
 
 [35 <./fotos/limite negativo.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1406.
+Package xcolor Warning: Incompatible color definition on input line 1407.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1422.
+Package xcolor Warning: Incompatible color definition on input line 1423.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1428.
+Package xcolor Warning: Incompatible color definition on input line 1429.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1436.
+Package xcolor Warning: Incompatible color definition on input line 1437.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1449.
+Package xcolor Warning: Incompatible color definition on input line 1450.
 
 [36]
 
-Package xcolor Warning: Incompatible color definition on input line 1458.
+Package xcolor Warning: Incompatible color definition on input line 1459.
 
 
-Overfull \hbox (32.56601pt too wide) detected at line 1467
+Overfull \hbox (32.56601pt too wide) detected at line 1468
 []\OML/cmm/m/it/10 M > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []" \OT1/cmr/m/n/10 
 = [] \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 
 N \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OM
@@ -2683,7 +2611,7 @@ m/it/10 x[] < " \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 M < []
  []
 
 
-Overfull \hbox (66.45485pt too wide) detected at line 1470
+Overfull \hbox (66.45485pt too wide) detected at line 1471
 []\OML/cmm/m/it/10 M > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []" \OT1/cmr/m/n/10 
 = [] \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ) 9\OML/cmm/m/it/10 
 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\OML
@@ -2696,29 +2624,29 @@ m/m/it/10 M
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1474.
+Package xcolor Warning: Incompatible color definition on input line 1475.
 
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 1474.
+(Font)              using `U/stmry/m/n' instead on input line 1475.
 
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1474.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 1475.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1474.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 1475.
 
-Package xcolor Warning: Incompatible color definition on input line 1487.
+Package xcolor Warning: Incompatible color definition on input line 1488.
 
 [37]
 
-Package xcolor Warning: Incompatible color definition on input line 1502.
+Package xcolor Warning: Incompatible color definition on input line 1503.
 
 Package hyperref Info: bookmark level for unknown theo defaults to 0 on input l
-ine 1502.
+ine 1503.
 Package hyperref Info: bookmark level for unknown ej defaults to 0 on input lin
-e 1515.
+e 1516.
 
-Overfull \hbox (67.12126pt too wide) detected at line 1535
+Overfull \hbox (67.12126pt too wide) detected at line 1536
 []\OMS/cmsy/m/n/10 9\OML/cmm/m/it/10  \OT1/cmr/m/n/10 : 0 \OML/cmm/m/it/10 < 
  \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 r[] \OT1/cmr/m/n/10 : \OMS/cmsy/m/n/10 8\O
 ML/cmm/m/it/10 n \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OMS/cmsy/m/n/10 ) []  [] 
@@ -2730,7 +2658,7 @@ msy/m/n/10 2 \U/msb/m/n/10 N\OMS/cmsy/m/n/10 g[]
  []
 
 
-Overfull \hbox (17.68317pt too wide) detected at line 1544
+Overfull \hbox (17.68317pt too wide) detected at line 1545
 \OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 < \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 r\OMS/c
 msy/m/n/10 j \OML/cmm/m/it/10 < \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) \OT1/cmr/m
 /n/10 0 \OMS/cmsy/m/n/10  j\OML/cmm/m/it/10 r[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n
@@ -2741,7 +2669,7 @@ L/cmm/m/it/10 r[] \OT1/cmr/m/n/10 = 0
  []
 
 [38]
-Overfull \hbox (8.34692pt too wide) detected at line 1575
+Overfull \hbox (8.34692pt too wide) detected at line 1576
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) [] 
  \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ) [] \OT1/cmr/m/n/10 = 1 + \OML/cmm/m/it/10
  k[] \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 k[] > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/1
@@ -2751,7 +2679,7 @@ L/cmm/m/it/10 k[] \OT1/cmr/m/n/10 = 1 + []
  []
 
 
-Overfull \hbox (30.04227pt too wide) detected at line 1576
+Overfull \hbox (30.04227pt too wide) detected at line 1577
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 1 \OMS
 /cmsy/m/n/10  []  \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 , \OT1/cmr/m/n/10 0 \
 OMS/cmsy/m/n/10  \OML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/1
@@ -2761,20 +2689,20 @@ T1/cmr/m/n/10 1 + 0 = 1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1581.
+Package xcolor Warning: Incompatible color definition on input line 1582.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1585.
+Package xcolor Warning: Incompatible color definition on input line 1586.
 
 [39]
-Overfull \hbox (4.106pt too wide) detected at line 1604
+Overfull \hbox (4.106pt too wide) detected at line 1605
 [] \OT1/cmr/m/n/10 + [] [] [] [] + [] [] \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 n[]
  \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/c
 msy/m/n/10  \OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 : [] \OML/cmm/m/it/10 < []
  []
 
 
-Overfull \hbox (30.37665pt too wide) detected at line 1610
+Overfull \hbox (30.37665pt too wide) detected at line 1611
 [] \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 M [] \OMS/cmsy/m/n/10 8
 \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n[] \OT1/cmr/m/n/10 : []
  \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10
@@ -2785,7 +2713,7 @@ y[]\OT1/cmr/m/n/10 ) = [] + 2\OML/cmm/m/it/10 M[] \OMS/cmsy/m/n/10  \OT1/cmr/m
  []
 
 
-Overfull \hbox (1.43906pt too wide) detected at line 1611
+Overfull \hbox (1.43906pt too wide) detected at line 1612
 \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 M \OT1/cmr/m/n/10 + [] = 2\OML/cmm/m/it/10 
 M \OT1/cmr/m/n/10 + [] \OMS/cmsy/m/n/10   \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 M[]
  [] \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 n[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \
@@ -2796,23 +2724,23 @@ OT1/cmr/m/n/10 : \OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 n[] \OT
 
 [40]
 
-Package xcolor Warning: Incompatible color definition on input line 1647.
+Package xcolor Warning: Incompatible color definition on input line 1648.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1650.
+Package xcolor Warning: Incompatible color definition on input line 1651.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1661.
+Package xcolor Warning: Incompatible color definition on input line 1662.
 
 [41]
 
-Package xcolor Warning: Incompatible color definition on input line 1663.
+Package xcolor Warning: Incompatible color definition on input line 1664.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1677.
+Package xcolor Warning: Incompatible color definition on input line 1678.
 
 
-Overfull \hbox (4.84607pt too wide) in paragraph at lines 1677--1678
+Overfull \hbox (4.84607pt too wide) in paragraph at lines 1678--1679
 []\OT1/cmr/m/it/10 Sea $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 
 g[]  \U/msb/m/n/10 R$ \OT1/cmr/m/it/10 una su-ce-sion numeri-ca, esta es no
  aco-ta-da su-pe-rior-men-te[][][][][] si y solo si $\OMS/cmsy/m/n/10 9f\OML/c
@@ -2820,48 +2748,48 @@ mm/m/it/10 x[]\OMS/cmsy/m/n/10 g[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1679.
+Package xcolor Warning: Incompatible color definition on input line 1680.
 
-<./fotos/proposicion subsucesiones.jpeg, id=1153, 928.21782pt x 536.0025pt>
+<./fotos/proposicion subsucesiones.jpeg, id=1189, 928.21782pt x 536.0025pt>
 File: ./fotos/proposicion subsucesiones.jpeg Graphic file (type jpg)
 <use ./fotos/proposicion subsucesiones.jpeg>
 Package pdftex.def Info: ./fotos/proposicion subsucesiones.jpeg  used on input 
-line 1692.
+line 1693.
 (pdftex.def)             Requested size: 139.22665pt x 80.3969pt.
 [42 <./fotos/proposicion subsucesiones.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 1710.
+Package xcolor Warning: Incompatible color definition on input line 1711.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1713.
+Package xcolor Warning: Incompatible color definition on input line 1714.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1730.
+Package xcolor Warning: Incompatible color definition on input line 1731.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1735.
+Package xcolor Warning: Incompatible color definition on input line 1736.
 
 [43]
 
-Package xcolor Warning: Incompatible color definition on input line 1742.
+Package xcolor Warning: Incompatible color definition on input line 1743.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1745.
+Package xcolor Warning: Incompatible color definition on input line 1746.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1750.
+Package xcolor Warning: Incompatible color definition on input line 1751.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1752.
+Package xcolor Warning: Incompatible color definition on input line 1753.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1759.
+Package xcolor Warning: Incompatible color definition on input line 1760.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1762.
+Package xcolor Warning: Incompatible color definition on input line 1763.
 
 
-Overfull \hbox (30.87723pt too wide) detected at line 1766
+Overfull \hbox (30.87723pt too wide) detected at line 1767
 []\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 9\O
 ML/cmm/m/it/10 k[] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m/n/10 : \OML/cm
 m/m/it/10 k \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 k[] \OT1/cmr/m/n/10 : \OMS/cmsy
@@ -2874,23 +2802,23 @@ j\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1776.
+Package xcolor Warning: Incompatible color definition on input line 1777.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1778.
+Package xcolor Warning: Incompatible color definition on input line 1779.
 
 [44]
 
-Package xcolor Warning: Incompatible color definition on input line 1786.
+Package xcolor Warning: Incompatible color definition on input line 1787.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1793.
+Package xcolor Warning: Incompatible color definition on input line 1794.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1796.
+Package xcolor Warning: Incompatible color definition on input line 1797.
 
 
-Overfull \hbox (44.32188pt too wide) detected at line 1804
+Overfull \hbox (44.32188pt too wide) detected at line 1805
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 l \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 " \OM
 S/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \O
 MS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 b[] \
@@ -2903,43 +2831,39 @@ m/n/10 + \OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ) [] )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1810.
+Package xcolor Warning: Incompatible color definition on input line 1811.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1813.
+Package xcolor Warning: Incompatible color definition on input line 1814.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1818.
+Package xcolor Warning: Incompatible color definition on input line 1819.
 
 [45]
 
-Package xcolor Warning: Incompatible color definition on input line 1821.
+Package xcolor Warning: Incompatible color definition on input line 1822.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1826.
+Package xcolor Warning: Incompatible color definition on input line 1827.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1828.
-
-
-Package xcolor Warning: Incompatible color definition on input line 1841.
+Package xcolor Warning: Incompatible color definition on input line 1829.
 
 
 Package xcolor Warning: Incompatible color definition on input line 1842.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 1842.
+Package xcolor Warning: Incompatible color definition on input line 1843.
 
 [46]
 
-Package xcolor Warning: Incompatible color definition on input line 1854.
+Package xcolor Warning: Incompatible color definition on input line 1855.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1870.
+Package xcolor Warning: Incompatible color definition on input line 1871.
 
 
-Overfull \hbox (36.71242pt too wide) detected at line 1876
+Overfull \hbox (36.71242pt too wide) detected at line 1877
 \OML/cmm/m/it/10 z[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 z[] \OMS/cmsy/m/n/10 
  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10
@@ -2950,120 +2874,120 @@ sy/m/n/10  \OML/cmm/m/it/10 y[] [] a[] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 a[]
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 1879.
+Package xcolor Warning: Incompatible color definition on input line 1880.
 
 [47]
 
-Package xcolor Warning: Incompatible color definition on input line 1884.
+Package xcolor Warning: Incompatible color definition on input line 1885.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1909.
+Package xcolor Warning: Incompatible color definition on input line 1910.
 
 [48]
 
-Package xcolor Warning: Incompatible color definition on input line 1913.
+Package xcolor Warning: Incompatible color definition on input line 1914.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1916.
+Package xcolor Warning: Incompatible color definition on input line 1917.
 
 
 Underfull \vbox (badness 4582) has occurred while \output is active []
 
  [49]
 
-Package xcolor Warning: Incompatible color definition on input line 1961.
+Package xcolor Warning: Incompatible color definition on input line 1962.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1967.
+Package xcolor Warning: Incompatible color definition on input line 1968.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1979.
+Package xcolor Warning: Incompatible color definition on input line 1980.
 
 Package hyperref Info: bookmark level for unknown coro defaults to 0 on input l
-ine 1979.
+ine 1980.
 [50]
 
-Package xcolor Warning: Incompatible color definition on input line 1983.
+Package xcolor Warning: Incompatible color definition on input line 1984.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1989.
+Package xcolor Warning: Incompatible color definition on input line 1990.
 
 
-Package xcolor Warning: Incompatible color definition on input line 1996.
+Package xcolor Warning: Incompatible color definition on input line 1997.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2009.
+Package xcolor Warning: Incompatible color definition on input line 2010.
 
 [51]
 
-Package xcolor Warning: Incompatible color definition on input line 2025.
+Package xcolor Warning: Incompatible color definition on input line 2026.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2028.
+Package xcolor Warning: Incompatible color definition on input line 2029.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2036.
+Package xcolor Warning: Incompatible color definition on input line 2037.
 
 [52]
 
-Package xcolor Warning: Incompatible color definition on input line 2061.
+Package xcolor Warning: Incompatible color definition on input line 2062.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2085.
+Package xcolor Warning: Incompatible color definition on input line 2086.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2089.
+Package xcolor Warning: Incompatible color definition on input line 2090.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2093.
+Package xcolor Warning: Incompatible color definition on input line 2094.
 
 [53]
 
-Package xcolor Warning: Incompatible color definition on input line 2103.
+Package xcolor Warning: Incompatible color definition on input line 2104.
 
 [54]
 
-Package xcolor Warning: Incompatible color definition on input line 2129.
+Package xcolor Warning: Incompatible color definition on input line 2130.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2133.
+Package xcolor Warning: Incompatible color definition on input line 2134.
 
 [55] [56
 
 ]
 Cap\'{\i }tulo 4.
 
-Package xcolor Warning: Incompatible color definition on input line 2157.
+Package xcolor Warning: Incompatible color definition on input line 2158.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2160.
+Package xcolor Warning: Incompatible color definition on input line 2161.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2163.
+Package xcolor Warning: Incompatible color definition on input line 2164.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2166.
+Package xcolor Warning: Incompatible color definition on input line 2167.
 
-<./fotos/Cauchy 2.jpeg, id=1282, 838.63312pt x 280.79906pt>
+<./fotos/Cauchy 2.jpeg, id=1318, 838.63312pt x 280.79906pt>
 File: ./fotos/Cauchy 2.jpeg Graphic file (type jpg)
 <use ./fotos/Cauchy 2.jpeg>
-Package pdftex.def Info: ./fotos/Cauchy 2.jpeg  used on input line 2182.
+Package pdftex.def Info: ./fotos/Cauchy 2.jpeg  used on input line 2183.
 (pdftex.def)             Requested size: 167.72365pt x 56.15881pt.
 [57]
 
-Package xcolor Warning: Incompatible color definition on input line 2185.
+Package xcolor Warning: Incompatible color definition on input line 2186.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2187.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2188.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2195.
+Package xcolor Warning: Incompatible color definition on input line 2196.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2198.
+Package xcolor Warning: Incompatible color definition on input line 2199.
 
 
-Overfull \hbox (48.43878pt too wide) detected at line 2202
+Overfull \hbox (48.43878pt too wide) detected at line 2203
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 D \O
 T1/cmr/m/n/10 : \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 2 [] \OT1/cmr/m/n/10 : \O
 ML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \OM
@@ -3074,37 +2998,37 @@ x[]\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = 0 \OMS/cmsy/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2211.
+Package xcolor Warning: Incompatible color definition on input line 2212.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2214.
+Package xcolor Warning: Incompatible color definition on input line 2215.
 
-<./fotos/limite.jpg, id=1293, 413.29407pt x 261.22594pt>
+<./fotos/limite.jpg, id=1329, 413.29407pt x 261.22594pt>
 File: ./fotos/limite.jpg Graphic file (type jpg)
 <use ./fotos/limite.jpg>
-Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2223.
+Package pdftex.def Info: ./fotos/limite.jpg  used on input line 2224.
 (pdftex.def)             Requested size: 165.31468pt x 104.48851pt.
 [58 <./fotos/Cauchy 2.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2230.
+Package xcolor Warning: Incompatible color definition on input line 2231.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2238.
+Package xcolor Warning: Incompatible color definition on input line 2239.
 
-<./fotos/limite doble.jpeg, id=1305, 984.67876pt x 310.15875pt>
+<./fotos/limite doble.jpeg, id=1341, 984.67876pt x 310.15875pt>
 File: ./fotos/limite doble.jpeg Graphic file (type jpg)
 <use ./fotos/limite doble.jpeg>
-Package pdftex.def Info: ./fotos/limite doble.jpeg  used on input line 2261.
+Package pdftex.def Info: ./fotos/limite doble.jpeg  used on input line 2262.
 (pdftex.def)             Requested size: 295.4059pt x 93.04834pt.
 [59 <./fotos/limite.jpg> <./fotos/limite doble.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2275.
+Package xcolor Warning: Incompatible color definition on input line 2276.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2284.
+Package xcolor Warning: Incompatible color definition on input line 2285.
 
 [60]
-Overfull \hbox (4.36256pt too wide) detected at line 2319
+Overfull \hbox (4.36256pt too wide) detected at line 2320
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 : \OMS/cmsy/m/n/10 9\O
 ML/cmm/m/it/10  > \OT1/cmr/m/n/10 0 : \OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2 \O
 ML/cmm/m/it/10 D \OMS/cmsy/m/n/10 ^ j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML
@@ -3119,7 +3043,7 @@ n/10 j  [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 "
  []
 
 
-Overfull \hbox (47.83014pt too wide) detected at line 2335
+Overfull \hbox (47.83014pt too wide) detected at line 2336
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 [] > \OT1/cmr/m/n/10 0 : [] \OMS/cmsy/m/n/1
 0 ) j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OM
 S/cmsy/m/n/10   \OML/cmm/m/it/10 m\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < [] \OMS
@@ -3132,46 +3056,46 @@ cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  j\OML/cmm/m
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2343.
+Package xcolor Warning: Incompatible color definition on input line 2344.
 
 [61]
 
-Package xcolor Warning: Incompatible color definition on input line 2375.
+Package xcolor Warning: Incompatible color definition on input line 2376.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2383.
+Package xcolor Warning: Incompatible color definition on input line 2384.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2386.
+Package xcolor Warning: Incompatible color definition on input line 2387.
 
 [62]
 
-Package xcolor Warning: Incompatible color definition on input line 2393.
+Package xcolor Warning: Incompatible color definition on input line 2394.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2400.
+Package xcolor Warning: Incompatible color definition on input line 2401.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2421.
+Package xcolor Warning: Incompatible color definition on input line 2422.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2431.
+Package xcolor Warning: Incompatible color definition on input line 2432.
 
 [63]
 
-Package xcolor Warning: Incompatible color definition on input line 2449.
+Package xcolor Warning: Incompatible color definition on input line 2450.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2458.
+Package xcolor Warning: Incompatible color definition on input line 2459.
 
-<./fotos/continuidad de composicion.jpeg, id=1371, 847.66687pt x 282.30469pt>
+<./fotos/continuidad de composicion.jpeg, id=1407, 847.66687pt x 282.30469pt>
 File: ./fotos/continuidad de composicion.jpeg Graphic file (type jpg)
 <use ./fotos/continuidad de composicion.jpeg>
 Package pdftex.def Info: ./fotos/continuidad de composicion.jpeg  used on input
- line 2465.
+ line 2466.
 (pdftex.def)             Requested size: 296.68785pt x 98.8081pt.
 
-Overfull \hbox (9.00485pt too wide) detected at line 2474
+Overfull \hbox (9.00485pt too wide) detected at line 2475
 []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OML/cmm/m/it/10
  D \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 x[] [] x[] [] f\OT1/cmr/m/n/10 (\OML/cmm/
 m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/i
@@ -3182,46 +3106,46 @@ mr/m/n/10 )) \OMS/cmsy/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2480.
+Package xcolor Warning: Incompatible color definition on input line 2481.
 
 [64 <./fotos/continuidad de composicion.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2483.
+Package xcolor Warning: Incompatible color definition on input line 2484.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2502.
+Package xcolor Warning: Incompatible color definition on input line 2503.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2514.
+Package xcolor Warning: Incompatible color definition on input line 2515.
 
 [65]
 
-Package xcolor Warning: Incompatible color definition on input line 2523.
+Package xcolor Warning: Incompatible color definition on input line 2524.
 
-<./fotos/unicidad limite lateral.jpeg, id=1397, 949.29657pt x 354.57469pt>
+<./fotos/unicidad limite lateral.jpeg, id=1433, 949.29657pt x 354.57469pt>
 File: ./fotos/unicidad limite lateral.jpeg Graphic file (type jpg)
 <use ./fotos/unicidad limite lateral.jpeg>
 Package pdftex.def Info: ./fotos/unicidad limite lateral.jpeg  used on input li
-ne 2542.
+ne 2543.
 (pdftex.def)             Requested size: 237.32356pt x 88.64345pt.
 
-Package xcolor Warning: Incompatible color definition on input line 2548.
+Package xcolor Warning: Incompatible color definition on input line 2549.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2556.
+Package xcolor Warning: Incompatible color definition on input line 2557.
 
 [66 <./fotos/unicidad limite lateral.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2576.
+Package xcolor Warning: Incompatible color definition on input line 2577.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2596.
+Package xcolor Warning: Incompatible color definition on input line 2597.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2614.
+Package xcolor Warning: Incompatible color definition on input line 2615.
 
 
-Overfull \hbox (2.31148pt too wide) detected at line 2626
+Overfull \hbox (2.31148pt too wide) detected at line 2627
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -3232,7 +3156,7 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 [67]
-Overfull \hbox (2.03372pt too wide) detected at line 2632
+Overfull \hbox (2.03372pt too wide) detected at line 2633
 [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OM
 S/cmsy/m/n/10  1 , 8f\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 g[]  \OT1/cmr/m/n/10
  (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) : \OML/cmm/m/it/10 x[] [] x[] \OT1/cmr
@@ -3243,80 +3167,80 @@ t/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) [] \OMS/cmsy/m/n/1
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2636.
-
-
 Package xcolor Warning: Incompatible color definition on input line 2637.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2645.
+Package xcolor Warning: Incompatible color definition on input line 2638.
+
+
+Package xcolor Warning: Incompatible color definition on input line 2646.
 
 [68]
 
-Package xcolor Warning: Incompatible color definition on input line 2663.
+Package xcolor Warning: Incompatible color definition on input line 2664.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2666.
+Package xcolor Warning: Incompatible color definition on input line 2667.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2671.
+Package xcolor Warning: Incompatible color definition on input line 2672.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2676.
+Package xcolor Warning: Incompatible color definition on input line 2677.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2683.
+Package xcolor Warning: Incompatible color definition on input line 2684.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2685.
+Package xcolor Warning: Incompatible color definition on input line 2686.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2695.
+Package xcolor Warning: Incompatible color definition on input line 2696.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2697.
+Package xcolor Warning: Incompatible color definition on input line 2698.
 
 [69]
 
-Package xcolor Warning: Incompatible color definition on input line 2702.
+Package xcolor Warning: Incompatible color definition on input line 2703.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2709.
+Package xcolor Warning: Incompatible color definition on input line 2710.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2729.
+Package xcolor Warning: Incompatible color definition on input line 2730.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2731.
+Package xcolor Warning: Incompatible color definition on input line 2732.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2737.
+Package xcolor Warning: Incompatible color definition on input line 2738.
 
 [70]
 
-Package xcolor Warning: Incompatible color definition on input line 2740.
+Package xcolor Warning: Incompatible color definition on input line 2741.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2749.
+Package xcolor Warning: Incompatible color definition on input line 2750.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2756.
+Package xcolor Warning: Incompatible color definition on input line 2757.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2777.
+Package xcolor Warning: Incompatible color definition on input line 2778.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2779.
+Package xcolor Warning: Incompatible color definition on input line 2780.
 
 [71]
 
-Package xcolor Warning: Incompatible color definition on input line 2784.
+Package xcolor Warning: Incompatible color definition on input line 2785.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2790.
+Package xcolor Warning: Incompatible color definition on input line 2791.
 
 
-Overfull \hbox (9.16077pt too wide) detected at line 2795
+Overfull \hbox (9.16077pt too wide) detected at line 2796
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x[]; x[] \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 
 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ] : \OML/cmm/m/it/10 x[] < x[] \OMS/cmsy/
 m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10
@@ -3329,84 +3253,80 @@ x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 f\OT1
 m/it/10 f[]
  []
 
-<./fotos/inyectivas continuas son monotonas.jpeg, id=1473, 1058.45438pt x 584.9
+<./fotos/inyectivas continuas son monotonas.jpeg, id=1510, 1058.45438pt x 584.9
 3532pt>
 File: ./fotos/inyectivas continuas son monotonas.jpeg Graphic file (type jpg)
 <use ./fotos/inyectivas continuas son monotonas.jpeg>
 Package pdftex.def Info: ./fotos/inyectivas continuas son monotonas.jpeg  used 
-on input line 2802.
+on input line 2803.
 (pdftex.def)             Requested size: 211.68712pt x 116.98499pt.
-<./fotos/inyectividad a monotonia en continuas1.jpeg, id=1474, 822.82407pt x 44
+<./fotos/inyectividad a monotonia en continuas1.jpeg, id=1511, 822.82407pt x 44
 4.15938pt>
 File: ./fotos/inyectividad a monotonia en continuas1.jpeg Graphic file (type jp
 g)
 <use ./fotos/inyectividad a monotonia en continuas1.jpeg>
 Package pdftex.def Info: ./fotos/inyectividad a monotonia en continuas1.jpeg  u
-sed on input line 2809.
+sed on input line 2810.
 (pdftex.def)             Requested size: 205.7055pt x 111.03957pt.
 [72 <./fotos/inyectivas continuas son monotonas.jpeg>]
-
-Package xcolor Warning: Incompatible color definition on input line 2823.
-
 
 Package xcolor Warning: Incompatible color definition on input line 2824.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 2824.
+Package xcolor Warning: Incompatible color definition on input line 2825.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2836.
+Package xcolor Warning: Incompatible color definition on input line 2837.
 
 [73 <./fotos/inyectividad a monotonia en continuas1.jpeg>]
 
-Package xcolor Warning: Incompatible color definition on input line 2849.
+Package xcolor Warning: Incompatible color definition on input line 2850.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2852.
+Package xcolor Warning: Incompatible color definition on input line 2853.
 
 [74] [75] [76
 
 ]
 Cap\'{\i }tulo 5.
 
-Package xcolor Warning: Incompatible color definition on input line 2875.
+Package xcolor Warning: Incompatible color definition on input line 2876.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2878.
+Package xcolor Warning: Incompatible color definition on input line 2879.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2881.
+Package xcolor Warning: Incompatible color definition on input line 2882.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2884.
+Package xcolor Warning: Incompatible color definition on input line 2885.
 
 LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
-2891.
-LaTeX Font Info:    No file OMScmss.fd. on input line 2891.
+2892.
+LaTeX Font Info:    No file OMScmss.fd. on input line 2892.
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbackslash' on input line 2891.
+(Font)              for symbol `textbackslash' on input line 2892.
 
 [77]
 
-Package xcolor Warning: Incompatible color definition on input line 2904.
+Package xcolor Warning: Incompatible color definition on input line 2905.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2906.
+Package xcolor Warning: Incompatible color definition on input line 2907.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2910.
+Package xcolor Warning: Incompatible color definition on input line 2911.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2922.
+Package xcolor Warning: Incompatible color definition on input line 2923.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2924.
+Package xcolor Warning: Incompatible color definition on input line 2925.
 
 
-Overfull \hbox (18.38974pt too wide) detected at line 2926
+Overfull \hbox (18.38974pt too wide) detected at line 2927
 \OMS/cmsy/m/n/10 9 []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/c
 mm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 f\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )) = [] [] \OMS/cmsy/m/n/10  []\OT1/cmr
@@ -3420,114 +3340,114 @@ it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 c
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 2940.
+Package xcolor Warning: Incompatible color definition on input line 2941.
 
 [78]
-<./fotos/Interpretacion derivada.png, id=1531, 351.20685pt x 199.69342pt>
+<./fotos/Interpretacion derivada.png, id=1569, 351.20685pt x 199.69342pt>
 File: ./fotos/Interpretacion derivada.png Graphic file (type png)
 <use ./fotos/Interpretacion derivada.png>
 Package pdftex.def Info: ./fotos/Interpretacion derivada.png  used on input lin
-e 2948.
+e 2949.
 (pdftex.def)             Requested size: 224.7716pt x 127.80334pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2953.
+Package xcolor Warning: Incompatible color definition on input line 2954.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2956.
+Package xcolor Warning: Incompatible color definition on input line 2957.
 
 [79 <./fotos/Interpretacion derivada.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 2969.
+Package xcolor Warning: Incompatible color definition on input line 2970.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2982.
+Package xcolor Warning: Incompatible color definition on input line 2983.
 
 
-Package xcolor Warning: Incompatible color definition on input line 2988.
+Package xcolor Warning: Incompatible color definition on input line 2989.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3003.
+Package xcolor Warning: Incompatible color definition on input line 3004.
 
 Package hyperref Info: bookmark level for unknown lema defaults to 0 on input l
-ine 3003.
+ine 3004.
 
-Package xcolor Warning: Incompatible color definition on input line 3006.
+Package xcolor Warning: Incompatible color definition on input line 3007.
 
 [80]
 
-Package xcolor Warning: Incompatible color definition on input line 3018.
+Package xcolor Warning: Incompatible color definition on input line 3019.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3022.
+Package xcolor Warning: Incompatible color definition on input line 3023.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3034.
+Package xcolor Warning: Incompatible color definition on input line 3035.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3040.
+Package xcolor Warning: Incompatible color definition on input line 3041.
 
 [81]
 
-Package xcolor Warning: Incompatible color definition on input line 3067.
+Package xcolor Warning: Incompatible color definition on input line 3068.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3072.
+Package xcolor Warning: Incompatible color definition on input line 3073.
 
 [82]
 
-Package xcolor Warning: Incompatible color definition on input line 3075.
+Package xcolor Warning: Incompatible color definition on input line 3076.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3083.
+Package xcolor Warning: Incompatible color definition on input line 3084.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3093.
+Package xcolor Warning: Incompatible color definition on input line 3094.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3096.
+Package xcolor Warning: Incompatible color definition on input line 3097.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3101.
+Package xcolor Warning: Incompatible color definition on input line 3102.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3105.
+Package xcolor Warning: Incompatible color definition on input line 3106.
 
-<./fotos/Teorema de Rolle.png, id=1577, 285.91026pt x 231.07382pt>
+<./fotos/Teorema de Rolle.png, id=1615, 285.91026pt x 231.07382pt>
 File: ./fotos/Teorema de Rolle.png Graphic file (type png)
 <use ./fotos/Teorema de Rolle.png>
-Package pdftex.def Info: ./fotos/Teorema de Rolle.png  used on input line 3108.
+Package pdftex.def Info: ./fotos/Teorema de Rolle.png  used on input line 3109.
 
 (pdftex.def)             Requested size: 257.31683pt x 207.9645pt.
 [83]
 
-Package xcolor Warning: Incompatible color definition on input line 3115.
+Package xcolor Warning: Incompatible color definition on input line 3116.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3119.
+Package xcolor Warning: Incompatible color definition on input line 3120.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3132.
+Package xcolor Warning: Incompatible color definition on input line 3133.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3138.
+Package xcolor Warning: Incompatible color definition on input line 3139.
 
 [84 <./fotos/Teorema de Rolle.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3156.
+Package xcolor Warning: Incompatible color definition on input line 3157.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3163.
+Package xcolor Warning: Incompatible color definition on input line 3164.
 
 [85]
 
-Package xcolor Warning: Incompatible color definition on input line 3193.
+Package xcolor Warning: Incompatible color definition on input line 3194.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3199.
+Package xcolor Warning: Incompatible color definition on input line 3200.
 
 
-Overfull \hbox (51.38857pt too wide) detected at line 3202
+Overfull \hbox (51.38857pt too wide) detected at line 3203
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10  > \OT1/cmr/m/n/10 0 : 0 \OML/cmm/m/it/10 <
  \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\O
 MS/cmsy/m/n/10 j \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) [] \OML/cmm/m/it/10 < 
@@ -3537,91 +3457,87 @@ MS/cmsy/m/n/10 j \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) [] \OML/cmm/m/it/10 <
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3213.
+Package xcolor Warning: Incompatible color definition on input line 3214.
 
 [86]
 
-Package xcolor Warning: Incompatible color definition on input line 3217.
+Package xcolor Warning: Incompatible color definition on input line 3218.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3227.
+Package xcolor Warning: Incompatible color definition on input line 3228.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3232.
+Package xcolor Warning: Incompatible color definition on input line 3233.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3251.
+Package xcolor Warning: Incompatible color definition on input line 3252.
 
 [87]
 
-Package xcolor Warning: Incompatible color definition on input line 3273.
+Package xcolor Warning: Incompatible color definition on input line 3274.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3281.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 3281.
+Package xcolor Warning: Incompatible color definition on input line 3282.
 
 [88]
 
-Package xcolor Warning: Incompatible color definition on input line 3322.
+Package xcolor Warning: Incompatible color definition on input line 3323.
 
 [89]
 
-Package xcolor Warning: Incompatible color definition on input line 3330.
+Package xcolor Warning: Incompatible color definition on input line 3331.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3340.
+Package xcolor Warning: Incompatible color definition on input line 3341.
 
 
 LaTeX Warning: Reference `Series de Funciones' on page 90 undefined on input li
-ne 3341.
+ne 3342.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3343.
+Package xcolor Warning: Incompatible color definition on input line 3344.
 
-<./fotos/polinomio de taylor 1.png, id=1641, 272.62607pt x 151.17612pt>
+<./fotos/polinomio de taylor 1.png, id=1680, 272.62607pt x 151.17612pt>
 File: ./fotos/polinomio de taylor 1.png Graphic file (type png)
 <use ./fotos/polinomio de taylor 1.png>
 Package pdftex.def Info: ./fotos/polinomio de taylor 1.png  used on input line 
-3346.
+3347.
 (pdftex.def)             Requested size: 245.36119pt x 136.05724pt.
 [90 <./fotos/polinomio de taylor 1.png>]
-<./fotos/de taylor 2.png, id=1648, 814.242pt x 470.9595pt>
+<./fotos/de taylor 2.png, id=1687, 814.242pt x 470.9595pt>
 File: ./fotos/de taylor 2.png Graphic file (type png)
 <use ./fotos/de taylor 2.png>
-Package pdftex.def Info: ./fotos/de taylor 2.png  used on input line 3350.
+Package pdftex.def Info: ./fotos/de taylor 2.png  used on input line 3351.
 (pdftex.def)             Requested size: 203.56pt x 117.73958pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3371.
+Package xcolor Warning: Incompatible color definition on input line 3372.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3380.
+Package xcolor Warning: Incompatible color definition on input line 3381.
 
 [91 <./fotos/de taylor 2.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3385.
+Package xcolor Warning: Incompatible color definition on input line 3386.
 
 
-Overfull \hbox (18.44788pt too wide) detected at line 3389
+Overfull \hbox (18.44788pt too wide) detected at line 3390
 \OML/cmm/m/it/10 F[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = \OMS
 /cmsy/m/n/10   []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3403.
+Package xcolor Warning: Incompatible color definition on input line 3404.
 
 [92]
 
-Package xcolor Warning: Incompatible color definition on input line 3418.
+Package xcolor Warning: Incompatible color definition on input line 3419.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3426.
+Package xcolor Warning: Incompatible color definition on input line 3427.
 
 
-Overfull \hbox (16.85695pt too wide) detected at line 3428
+Overfull \hbox (16.85695pt too wide) detected at line 3429
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/c
 mm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ; \OML/cmm/m/i
 t/10 x[]\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/
@@ -3634,14 +3550,14 @@ msy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) + [] + [](\OML/cmm/m/it/10 x
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3448.
+Package xcolor Warning: Incompatible color definition on input line 3449.
 
 [93]
 
-Package xcolor Warning: Incompatible color definition on input line 3450.
+Package xcolor Warning: Incompatible color definition on input line 3451.
 
 
-Overfull \hbox (8.16663pt too wide) detected at line 3462
+Overfull \hbox (8.16663pt too wide) detected at line 3463
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 p[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/
 cmr/m/n/10 ; \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/
 m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = (\OML/cmm/m/i
@@ -3650,24 +3566,24 @@ t/10 p[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 q[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it
  []
 
 
-Overfull \hbox (19.5811pt too wide) detected at line 3474
+Overfull \hbox (19.5811pt too wide) detected at line 3475
 \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] \OT1/cmr/m/n/10 = []
  []
 
 [94]
 
-Package xcolor Warning: Incompatible color definition on input line 3478.
+Package xcolor Warning: Incompatible color definition on input line 3479.
 
-<./fotos/convexidad.png, id=1679, 341.85762pt x 189.56627pt>
+<./fotos/convexidad.png, id=1719, 341.85762pt x 189.56627pt>
 File: ./fotos/convexidad.png Graphic file (type png)
 <use ./fotos/convexidad.png>
-Package pdftex.def Info: ./fotos/convexidad.png  used on input line 3482.
+Package pdftex.def Info: ./fotos/convexidad.png  used on input line 3483.
 (pdftex.def)             Requested size: 239.29869pt x 132.69547pt.
 
-Package xcolor Warning: Incompatible color definition on input line 3485.
+Package xcolor Warning: Incompatible color definition on input line 3486.
 
 
-Overfull \hbox (5.95142pt too wide) detected at line 3491
+Overfull \hbox (5.95142pt too wide) detected at line 3492
 \OML/cmm/m/it/10 tx[] \OT1/cmr/m/n/10 + (1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 
 t\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 x[] \
 OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 tx[] 
@@ -3678,25 +3594,25 @@ MS/cmsy/m/n/10 ) \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 tx[]
 /cmm/m/it/10 x[] \OMS/cmsy/m/n/10  []
  []
 
-<./fotos/convexidad 2.png, id=1681, 801.59476pt x 416.15475pt>
+<./fotos/convexidad 2.png, id=1721, 801.59476pt x 416.15475pt>
 File: ./fotos/convexidad 2.png Graphic file (type png)
 <use ./fotos/convexidad 2.png>
-Package pdftex.def Info: ./fotos/convexidad 2.png  used on input line 3499.
+Package pdftex.def Info: ./fotos/convexidad 2.png  used on input line 3500.
 (pdftex.def)             Requested size: 240.48029pt x 124.84738pt.
 [95 <./fotos/convexidad.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3504.
+Package xcolor Warning: Incompatible color definition on input line 3505.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3507.
+Package xcolor Warning: Incompatible color definition on input line 3508.
 
 
-Overfull \hbox (1.45576pt too wide) detected at line 3518
+Overfull \hbox (1.45576pt too wide) detected at line 3519
 [] \OMS/cmsy/m/n/10 ) [] )
  []
 
 
-Overfull \hbox (28.03539pt too wide) detected at line 3519
+Overfull \hbox (28.03539pt too wide) detected at line 3520
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 tf\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1
 /cmr/m/n/10 ) + (1 \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/c
 mm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/
@@ -3711,7 +3627,7 @@ m/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n
  []
 
 
-Overfull \hbox (16.50769pt too wide) detected at line 3526
+Overfull \hbox (16.50769pt too wide) detected at line 3527
 \OML/cmm/m/it/10 a \OT1/cmr/m/n/10 = [](\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10   \
 OML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) + [](\OML/cmm/m/it/10 a \OT1/cmr/m/n/10 + \O
 ML/cmm/m/it/10 h\OT1/cmr/m/n/10 ) [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cm
@@ -3727,69 +3643,69 @@ n/10  \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 )
  []
 
 
-Overfull \hbox (28.00632pt too wide) detected at line 3532
+Overfull \hbox (28.00632pt too wide) detected at line 3533
 [] [] \OT1/cmr/m/n/10 = [] [] =
  []
 
 [96 <./fotos/convexidad 2.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3541.
+Package xcolor Warning: Incompatible color definition on input line 3542.
 
-<./fotos/metodo Newton.png, id=1696, 213.11478pt x 127.05876pt>
+<./fotos/metodo Newton.png, id=1736, 213.11478pt x 127.05876pt>
 File: ./fotos/metodo Newton.png Graphic file (type png)
 <use ./fotos/metodo Newton.png>
-Package pdftex.def Info: ./fotos/metodo Newton.png  used on input line 3544.
+Package pdftex.def Info: ./fotos/metodo Newton.png  used on input line 3545.
 (pdftex.def)             Requested size: 340.98409pt x 203.29428pt.
 [97 <./fotos/metodo Newton.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3554.
+Package xcolor Warning: Incompatible color definition on input line 3555.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3563.
+Package xcolor Warning: Incompatible color definition on input line 3564.
 
 [98] [99] [100
 
 ]
 Cap\'{\i }tulo 6.
 
-Package xcolor Warning: Incompatible color definition on input line 3594.
+Package xcolor Warning: Incompatible color definition on input line 3595.
 
-<./fotos/area facil.png, id=1719, 319.20137pt x 190.30745pt>
+<./fotos/area facil.png, id=1759, 319.20137pt x 190.30745pt>
 File: ./fotos/area facil.png Graphic file (type png)
 <use ./fotos/area facil.png>
-Package pdftex.def Info: ./fotos/area facil.png  used on input line 3600.
+Package pdftex.def Info: ./fotos/area facil.png  used on input line 3601.
 (pdftex.def)             Requested size: 255.36143pt x 152.24615pt.
-<./fotos/integral de curvas.png, id=1720, 618.31pt x 344.28625pt>
+<./fotos/integral de curvas.png, id=1760, 618.31pt x 344.28625pt>
 File: ./fotos/integral de curvas.png Graphic file (type png)
 <use ./fotos/integral de curvas.png>
 Package pdftex.def Info: ./fotos/integral de curvas.png  used on input line 360
-6.
+7.
 (pdftex.def)             Requested size: 247.31961pt x 137.71205pt.
 [101 <./fotos/area facil.png> <./fotos/integral de curvas.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3611.
+Package xcolor Warning: Incompatible color definition on input line 3612.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3613.
+Package xcolor Warning: Incompatible color definition on input line 3614.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3621.
+Package xcolor Warning: Incompatible color definition on input line 3622.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3627.
+Package xcolor Warning: Incompatible color definition on input line 3628.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3633.
+Package xcolor Warning: Incompatible color definition on input line 3634.
 
 [102]
 
-Package xcolor Warning: Incompatible color definition on input line 3642.
+Package xcolor Warning: Incompatible color definition on input line 3643.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3644.
+Package xcolor Warning: Incompatible color definition on input line 3645.
 
 
-Overfull \hbox (27.84927pt too wide) detected at line 3648
+Overfull \hbox (27.84927pt too wide) detected at line 3649
 [] \OMS/cmsy/m/n/10 ) j\OML/cmm/m/it/10 L \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 L
 []\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 L \OM
 S/cmsy/m/n/10   \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/c
@@ -3804,7 +3720,7 @@ cmr/m/n/10 2\OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 L \OT1/cmr/m
  []
 
 
-Overfull \hbox (46.40488pt too wide) detected at line 3659
+Overfull \hbox (46.40488pt too wide) detected at line 3660
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/cmr/m/n/10 ) = []
  \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t[]\OT1/cmr/m/n/10 )(\OML/
 cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) = [] \
@@ -3815,23 +3731,23 @@ y/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) = [] = []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3671.
+Package xcolor Warning: Incompatible color definition on input line 3672.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3673.
+Package xcolor Warning: Incompatible color definition on input line 3674.
 
 [103]
 
-Package xcolor Warning: Incompatible color definition on input line 3676.
+Package xcolor Warning: Incompatible color definition on input line 3677.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3696.
+Package xcolor Warning: Incompatible color definition on input line 3697.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3699.
+Package xcolor Warning: Incompatible color definition on input line 3700.
 
 [104]
-Overfull \hbox (63.81pt too wide) detected at line 3711
+Overfull \hbox (63.81pt too wide) detected at line 3712
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0 : \OML/cmm/m/it/10  \
 OT1/cmr/m/n/10 = [] : \OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 }\OMS/cmsy/m/n/10 jj 
 \OML/cmm/m/it/10 <  \OMS/cmsy/m/n/10 ) []  \OT1/cmr/m/n/10 6 []\OMS/cmsy/m/n/
@@ -3843,13 +3759,13 @@ r/m/n/10 = \OML/cmm/m/it/10 "
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3718.
+Package xcolor Warning: Incompatible color definition on input line 3719.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3723.
+Package xcolor Warning: Incompatible color definition on input line 3724.
 
 
-Overfull \hbox (36.66388pt too wide) detected at line 3730
+Overfull \hbox (36.66388pt too wide) detected at line 3731
 \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cm
 r/m/n/10 ) = [] \OMS/cmsy/m/n/10  [] ) j\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  []  []  
@@ -3857,105 +3773,105 @@ L/cmm/m/it/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  []  []  
 
 [105]
 
-Package xcolor Warning: Incompatible color definition on input line 3738.
+Package xcolor Warning: Incompatible color definition on input line 3739.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3746.
+Package xcolor Warning: Incompatible color definition on input line 3747.
 
 
-Overfull \hbox (55.05052pt too wide) detected at line 3753
+Overfull \hbox (55.05052pt too wide) detected at line 3754
 [] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10  [] [] \OML/cmm/m/it/10 < "
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 3763.
+Package xcolor Warning: Incompatible color definition on input line 3764.
 
 [106]
 
-Package xcolor Warning: Incompatible color definition on input line 3773.
+Package xcolor Warning: Incompatible color definition on input line 3774.
 
-<./fotos/función escalera.png, id=1772, 401.5pt x 321.2pt>
+<./fotos/función escalera.png, id=1812, 401.5pt x 321.2pt>
 File: ./fotos/función escalera.png Graphic file (type png)
 <use ./fotos/función escalera.png>
-Package pdftex.def Info: ./fotos/función escalera.png  used on input line 3777
+Package pdftex.def Info: ./fotos/función escalera.png  used on input line 3778
 .
 (pdftex.def)             Requested size: 200.7495pt x 160.59961pt.
 
-Package xcolor Warning: Incompatible color definition on input line 3787.
+Package xcolor Warning: Incompatible color definition on input line 3788.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3791.
+Package xcolor Warning: Incompatible color definition on input line 3792.
 
 [107 <./fotos/función escalera.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3822.
+Package xcolor Warning: Incompatible color definition on input line 3823.
 
-<./fotos/criterio sandwich para integrales.png, id=1783, 843.61868pt x 365.2868
+<./fotos/criterio sandwich para integrales.png, id=1823, 843.61868pt x 365.2868
 8pt>
 File: ./fotos/criterio sandwich para integrales.png Graphic file (type png)
 <use ./fotos/criterio sandwich para integrales.png>
 Package pdftex.def Info: ./fotos/criterio sandwich para integrales.png  used on
- input line 3828.
+ input line 3829.
 (pdftex.def)             Requested size: 379.6249pt x 164.37756pt.
 [108]
 
-Package xcolor Warning: Incompatible color definition on input line 3831.
+Package xcolor Warning: Incompatible color definition on input line 3832.
 
 [109 <./fotos/criterio sandwich para integrales.png>]
 
-Package xcolor Warning: Incompatible color definition on input line 3866.
+Package xcolor Warning: Incompatible color definition on input line 3867.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3874.
+Package xcolor Warning: Incompatible color definition on input line 3875.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3882.
+Package xcolor Warning: Incompatible color definition on input line 3883.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3896.
+Package xcolor Warning: Incompatible color definition on input line 3897.
 
 [110] [111]
 
-Package xcolor Warning: Incompatible color definition on input line 3953.
+Package xcolor Warning: Incompatible color definition on input line 3954.
 
 [112]
 
-Package xcolor Warning: Incompatible color definition on input line 3979.
+Package xcolor Warning: Incompatible color definition on input line 3980.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3984.
+Package xcolor Warning: Incompatible color definition on input line 3985.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3994.
+Package xcolor Warning: Incompatible color definition on input line 3995.
 
 
-Package xcolor Warning: Incompatible color definition on input line 3997.
+Package xcolor Warning: Incompatible color definition on input line 3998.
 
 [113]
-
-Package xcolor Warning: Incompatible color definition on input line 4028.
-
 
 Package xcolor Warning: Incompatible color definition on input line 4029.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4035.
+Package xcolor Warning: Incompatible color definition on input line 4030.
+
+
+Package xcolor Warning: Incompatible color definition on input line 4036.
 
 [114]
 
-Package xcolor Warning: Incompatible color definition on input line 4062.
+Package xcolor Warning: Incompatible color definition on input line 4063.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4075.
+Package xcolor Warning: Incompatible color definition on input line 4076.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4088.
+Package xcolor Warning: Incompatible color definition on input line 4089.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4091.
+Package xcolor Warning: Incompatible color definition on input line 4092.
 
 [115]
-Overfull \hbox (8.30437pt too wide) detected at line 4103
+Overfull \hbox (8.30437pt too wide) detected at line 4104
 \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; \OT1/cmr/m/n/10 ) = 
 [][] \OML/cmm/m/it/10 f \OT1/cmr/m/n/10 + [][] \OML/cmm/m/it/10 f \OT1/cmr/m/n/
 10 + [][] = \OMS/cmsy/m/n/10   [][] \OML/cmm/m/it/10 f \OMS/cmsy/m/n/10   [][] 
@@ -3967,16 +3883,16 @@ m/n/10  \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ; ; \OT1/cmr/m/n
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4114.
+Package xcolor Warning: Incompatible color definition on input line 4115.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4119.
+Package xcolor Warning: Incompatible color definition on input line 4120.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4123.
+Package xcolor Warning: Incompatible color definition on input line 4124.
 
 [116]
-Overfull \hbox (63.92665pt too wide) detected at line 4131
+Overfull \hbox (63.92665pt too wide) detected at line 4132
 \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1/cmr/m/n/10 ) = []
  [] = [] [] = \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m
 /n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
@@ -3989,50 +3905,50 @@ OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4139.
+Package xcolor Warning: Incompatible color definition on input line 4140.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4143.
+Package xcolor Warning: Incompatible color definition on input line 4144.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4152.
+Package xcolor Warning: Incompatible color definition on input line 4153.
 
 [117]
 
-Package xcolor Warning: Incompatible color definition on input line 4158.
+Package xcolor Warning: Incompatible color definition on input line 4159.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4163.
+Package xcolor Warning: Incompatible color definition on input line 4164.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4180.
+Package xcolor Warning: Incompatible color definition on input line 4181.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4184.
+Package xcolor Warning: Incompatible color definition on input line 4185.
 
 [118]
 
-Package xcolor Warning: Incompatible color definition on input line 4208.
+Package xcolor Warning: Incompatible color definition on input line 4209.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4211.
+Package xcolor Warning: Incompatible color definition on input line 4212.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4214.
+Package xcolor Warning: Incompatible color definition on input line 4215.
 
 [119]
 
-Package xcolor Warning: Incompatible color definition on input line 4218.
+Package xcolor Warning: Incompatible color definition on input line 4219.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4250.
+Package xcolor Warning: Incompatible color definition on input line 4251.
 
 [120]
 
-Package xcolor Warning: Incompatible color definition on input line 4254.
+Package xcolor Warning: Incompatible color definition on input line 4255.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4278.
+Package xcolor Warning: Incompatible color definition on input line 4279.
 
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
@@ -4040,24 +3956,20 @@ Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
 
-Package xcolor Warning: Incompatible color definition on input line 4322.
+Package xcolor Warning: Incompatible color definition on input line 4323.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 4322.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4325.
+Package xcolor Warning: Incompatible color definition on input line 4326.
 
 [122]
 
-Package xcolor Warning: Incompatible color definition on input line 4359.
+Package xcolor Warning: Incompatible color definition on input line 4360.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4389.
+Package xcolor Warning: Incompatible color definition on input line 4390.
 
 
-Overfull \hbox (11.1819pt too wide) detected at line 4390
+Overfull \hbox (11.1819pt too wide) detected at line 4391
 [][] \OML/cmm/m/it/10 f[] \OMS/cmsy/m/n/10 , [][] \OML/cmm/m/it/10 f\OT1/cmr/m/
 n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx \OT1/cmr/m/n/10 :
  \OML/cmm/m/it/10 a[] > a[] \OMS/cmsy/m/n/10 , [][] \OML/cmm/m/it/10 f\OT1/cmr/
@@ -4067,24 +3979,24 @@ m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx \OT1/cmr/m/n/10
 
 [123]
 
-Package xcolor Warning: Incompatible color definition on input line 4398.
+Package xcolor Warning: Incompatible color definition on input line 4399.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4402.
+Package xcolor Warning: Incompatible color definition on input line 4403.
 
 Missing character: There is no ; in font nullfont!
 [124]
 Missing character: There is no ; in font nullfont!
 
 
-Package xcolor Warning: Incompatible color definition on input line 4476.
+Package xcolor Warning: Incompatible color definition on input line 4477.
 
 [125]
 
-Package xcolor Warning: Incompatible color definition on input line 4492.
+Package xcolor Warning: Incompatible color definition on input line 4493.
 
 
-Overfull \hbox (28.47679pt too wide) detected at line 4503
+Overfull \hbox (28.47679pt too wide) detected at line 4504
 [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OM
 L/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 ) [][] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 ) [][
@@ -4093,34 +4005,43 @@ OML/cmm/m/it/10 dx[] \OMS/cmsy/m/n/10 )
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4522.
+Package xcolor Warning: Incompatible color definition on input line 4523.
 
 [126]
 
-Package xcolor Warning: Incompatible color definition on input line 4527.
+Package xcolor Warning: Incompatible color definition on input line 4528.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4531.
+Package xcolor Warning: Incompatible color definition on input line 4532.
 
 [127] [128]
 
-Package xcolor Warning: Incompatible color definition on input line 4679.
+Package xcolor Warning: Incompatible color definition on input line 4680.
 
 [129]
 
-Package xcolor Warning: Incompatible color definition on input line 4727.
+Package xcolor Warning: Incompatible color definition on input line 4728.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4732.
+Package xcolor Warning: Incompatible color definition on input line 4733.
 
 [130] [131] [132]
 Cap\'{\i }tulo 7.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 4786.
+Package xcolor Warning: Incompatible color definition on input line 4787.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4786.
+Overfull \hbox (6.9551pt too wide) in paragraph at lines 4787--4787
+|\OT1/cmr/bx/n/24.88 SUCESIONES Y SE-RIES DE FUN-
+ []
+
+
+Package xcolor Warning: Incompatible color definition on input line 4791.
+
+
+Overfull \hbox (26.38275pt too wide) detected at line 4858
+[]
+ []
 
 [133
 
@@ -4129,13 +4050,10 @@ Package xcolor Warning: Incompatible color definition on input line 4786.
 Package xcolor Warning: Incompatible color definition on input line 4864.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4865.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4866.
+Package xcolor Warning: Incompatible color definition on input line 4870.
 
 [134]
-Overfull \hbox (7.92851pt too wide) detected at line 4902
+Overfull \hbox (7.92851pt too wide) detected at line 4906
 \OMS/cmsy/m/n/10 9\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cm
 r/m/n/10 : \OML/cmm/m/it/10 N > [] \OMS/cmsy/m/n/10 , [] \OML/cmm/m/it/10 < x \
 OMS/cmsy/m/n/10 ) 8\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 N \OT
@@ -4147,33 +4065,33 @@ cmr/m/n/10 ) = 0
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 4907.
+Package xcolor Warning: Incompatible color definition on input line 4911.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [135]
 
-Package xcolor Warning: Incompatible color definition on input line 4979.
-
-
-Package xcolor Warning: Incompatible color definition on input line 4982.
+Package xcolor Warning: Incompatible color definition on input line 4983.
 
 
 Package xcolor Warning: Incompatible color definition on input line 4986.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4998.
+Package xcolor Warning: Incompatible color definition on input line 4990.
 
 
-Package xcolor Warning: Incompatible color definition on input line 4999.
+Package xcolor Warning: Incompatible color definition on input line 5002.
 
 [136]
 
-Package xcolor Warning: Incompatible color definition on input line 5003.
+Package xcolor Warning: Incompatible color definition on input line 5005.
 
 
-Overfull \hbox (6.16122pt too wide) detected at line 5018
+Package xcolor Warning: Incompatible color definition on input line 5009.
+
+
+Overfull \hbox (6.16122pt too wide) detected at line 5024
 \OML/cmm/m/it/10 " > \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; []K\OT1/cmr/m/n/10 (\O
 ML/cmm/m/it/10 "\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 N \OT1/cmr/m
 /n/10 : \OML/cmm/m/it/10 n; m \OMS/cmsy/m/n/10  \OML/cmm/m/it/10 K\OT1/cmr/m/n
@@ -4188,34 +4106,37 @@ cmm/m/it/10 f[] \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 f[]\OMS/cmsy/m/n/10 jj[] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5029.
+Package xcolor Warning: Incompatible color definition on input line 5035.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5033.
+Package xcolor Warning: Incompatible color definition on input line 5039.
 
 [137]
 
-Package xcolor Warning: Incompatible color definition on input line 5065.
+Package xcolor Warning: Incompatible color definition on input line 5071.
 
 [138]
 
-Package xcolor Warning: Incompatible color definition on input line 5069.
+Package xcolor Warning: Incompatible color definition on input line 5074.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5081.
+Package xcolor Warning: Incompatible color definition on input line 5078.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5093.
+Package xcolor Warning: Incompatible color definition on input line 5090.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5102.
 
 [139]
 
-Package xcolor Warning: Incompatible color definition on input line 5125.
+Package xcolor Warning: Incompatible color definition on input line 5134.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5131.
+Package xcolor Warning: Incompatible color definition on input line 5140.
 
 [140]
-Overfull \hbox (41.69077pt too wide) detected at line 5152
+Overfull \hbox (41.69077pt too wide) detected at line 5161
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f; []\OT1
 /cmr/m/n/10 ) \OMS/cmsy/m/n/10   \OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cmm/m/
 it/10 f[]; []\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] \OMS/cmsy
@@ -4229,52 +4150,45 @@ OMS/cmsy/m/n/10   \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10  \OML
 
 [141]
 
-Package xcolor Warning: Incompatible color definition on input line 5180.
+Package xcolor Warning: Incompatible color definition on input line 5189.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5183.
+Package xcolor Warning: Incompatible color definition on input line 5192.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5187.
+Package xcolor Warning: Incompatible color definition on input line 5196.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5190.
+Package xcolor Warning: Incompatible color definition on input line 5199.
 
 [142]
 
-Package xcolor Warning: Incompatible color definition on input line 5216.
+Package xcolor Warning: Incompatible color definition on input line 5225.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5221.
+Package xcolor Warning: Incompatible color definition on input line 5230.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5222.
+Package xcolor Warning: Incompatible color definition on input line 5231.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 5222.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5223.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5244.
+Package xcolor Warning: Incompatible color definition on input line 5232.
 
 [143]
 
-Package xcolor Warning: Incompatible color definition on input line 5247.
+Package xcolor Warning: Incompatible color definition on input line 5253.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5251.
+Package xcolor Warning: Incompatible color definition on input line 5256.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5262.
+Package xcolor Warning: Incompatible color definition on input line 5260.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5266.
+Package xcolor Warning: Incompatible color definition on input line 5271.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5273.
+Package xcolor Warning: Incompatible color definition on input line 5275.
 
 
 Package xcolor Warning: Incompatible color definition on input line 5282.
@@ -4284,23 +4198,26 @@ Package xcolor Warning: Incompatible color definition on input line 5282.
 Package xcolor Warning: Incompatible color definition on input line 5291.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5297.
+Package xcolor Warning: Incompatible color definition on input line 5300.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5304.
+Package xcolor Warning: Incompatible color definition on input line 5306.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5307.
+Package xcolor Warning: Incompatible color definition on input line 5313.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5316.
 
 [145]
 
-Package xcolor Warning: Incompatible color definition on input line 5318.
+Package xcolor Warning: Incompatible color definition on input line 5327.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5325.
+Package xcolor Warning: Incompatible color definition on input line 5334.
 
 
-Overfull \hbox (10.37425pt too wide) in paragraph at lines 5326--5327
+Overfull \hbox (10.37425pt too wide) in paragraph at lines 5335--5336
 []\OT1/cmr/m/it/10 La se-rie de po-ten-cias $[][] \OML/cmm/m/it/10 a[]x[]$ \OT1
 /cmr/m/it/10 es ab-so-lu-ta-men-te con-ver-gen-te en $\OT1/cmr/m/n/10 (\OMS/cms
 y/m/n/10  \OML/cmm/m/it/10 R; R\OT1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , di-ver-gen-
@@ -4309,22 +4226,22 @@ te en $\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10  1\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5328.
+Package xcolor Warning: Incompatible color definition on input line 5337.
 
 [146]
-Overfull \hbox (48.06038pt too wide) in paragraph at lines 5365--5366
+Overfull \hbox (48.06038pt too wide) in paragraph at lines 5374--5375
 []\OT1/cmss/m/n/10 Si $\OML/cmm/m/it/10 x \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10  \
 OT1/cmr/m/n/10 1 : [][] [][]$ 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5370.
+Package xcolor Warning: Incompatible color definition on input line 5379.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5378.
+Package xcolor Warning: Incompatible color definition on input line 5387.
 
 
-Overfull \hbox (32.32623pt too wide) in paragraph at lines 5383--5384
+Overfull \hbox (32.32623pt too wide) in paragraph at lines 5392--5393
 []\OT1/cmr/m/n/10 De mo-do analo-go, los lmi-tes su-pe-rio-res coin-ci-den: 
 $[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]b[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/1
 0 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OMS/cmsy/m/n/10 j[]j\OML/cmm/m/it/
@@ -4332,7 +4249,7 @@ $[]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]b[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/1
  []
 
 [147]
-Overfull \hbox (2.82228pt too wide) detected at line 5386
+Overfull \hbox (2.82228pt too wide) detected at line 5395
 [] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 (\
 OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []
  [] \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 a[]\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10
@@ -4342,41 +4259,33 @@ OML/cmm/m/it/10 n \OT1/cmr/m/n/10 + 1)\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 5391.
+Package xcolor Warning: Incompatible color definition on input line 5400.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5409.
+Package xcolor Warning: Incompatible color definition on input line 5418.
 
 [148]
 
-Package xcolor Warning: Incompatible color definition on input line 5442.
+Package xcolor Warning: Incompatible color definition on input line 5451.
 
 
-Package xcolor Warning: Incompatible color definition on input line 5444.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5459.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5462.
+Package xcolor Warning: Incompatible color definition on input line 5453.
 
 [149]
 
-Package xcolor Warning: Incompatible color definition on input line 5467.
+Package xcolor Warning: Incompatible color definition on input line 5468.
 
 
-Overfull \hbox (56.10487pt too wide) detected at line 5479
-[][]\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\O
-T1/cmr/m/n/10 ; 0)\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] [] [] 0 \OMS/cmsy/m/n
-/10 ) [] []\OML/cmm/m/it/10 x[] \U/msa/m/n/10  \OML/cmm/m/it/10 f\OT1/cmr/m/n/
-10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[\OMS/cmsy/m/n/10  \OML/cmm/m/it/10 ; 
-\OT1/cmr/m/n/10 ] \OMS/cmsy/m/n/10 ) \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cm
-m/m/it/10 x\OT1/cmr/m/n/10 ) = [] []\OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 : \OMS
-/cmsy/m/n/10 j\OML/cmm/m/it/10 x\OMS/cmsy/m/n/10 j  \OML/cmm/m/it/10 
- []
+Package xcolor Warning: Incompatible color definition on input line 5471.
 
 
-Overfull \hbox (0.26785pt too wide) detected at line 5494
+Package xcolor Warning: Incompatible color definition on input line 5480.
+
+
+Package xcolor Warning: Incompatible color definition on input line 5485.
+
+[150]
+Overfull \hbox (0.26785pt too wide) detected at line 5508
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cms
 y/m/n/10   [] \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 = []\OML/cmm/m/it/10 x[] \OT
 1/cmr/m/n/10 : \OML/cmm/m/it/10  \OMS/cmsy/m/n/10 2 \OT1/cmr/m/n/10 (0\OML/cmm
@@ -4387,43 +4296,14 @@ y/m/n/10 ) [] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x\OMS/cmsy
 
  []
 
-[150]
 
-Package xcolor Warning: Incompatible color definition on input line 5505.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5505.
+Package xcolor Warning: Incompatible color definition on input line 5520.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@underline' on input line 5505.
+Package xcolor Warning: Incompatible color definition on input line 5523.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 5505.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 5505.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 5505.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 5505.
-
-
-Package xcolor Warning: Incompatible color definition on input line 5508.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 5508.
-
-[151]
-Overfull \hbox (3.92183pt too wide) detected at line 5553
+[151] [152]
+Overfull \hbox (3.92183pt too wide) detected at line 5568
 \OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 R[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x; \OT1
 /cmr/m/n/10 0)\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 j\OML/cm
 m/m/it/10 x\OMS/cmsy/m/n/10 j[] \OT1/cmr/m/n/10 = []\OMS/cmsy/m/n/10 j\OML/cmm/
@@ -4432,8 +4312,8 @@ m/it/10 z\OT1/cmr/m/n/10 )\OMS/cmsy/m/n/10 j  []  []\OML/cmm/m/it/10 M [] \OT
 1/cmr/m/n/10 0
  []
 
-[152]
-Overfull \hbox (7.06015pt too wide) detected at line 5585
+[153]
+Overfull \hbox (7.06015pt too wide) detected at line 5600
 \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cms
 y/m/n/10  \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10  \OML/cmm/m/it/1
 0 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x \O
@@ -4444,25 +4324,25 @@ y/m/n/10 ) \OML/cmm/m/it/10 E [] \OT1/cmr/m/n/10 = [] = [] = \OML/cmm/m/it/10 e
 []
  []
 
-[153] [154]
+[154]
 \tf@thm=\write6
 \openout6 = `AnalisisDeVariableReal.thm'.
 
  [155]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5646.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 5646.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 5661.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 5661.
  (AnalisisDeVariableReal.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5646.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5646.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 5661.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 5661.
 
 Package rerunfilecheck Info: File `AnalisisDeVariableReal.out' has not changed.
 
-(rerunfilecheck)             Checksum: 17EE6EB2849053D1F4AD79797095204E;10193.
+(rerunfilecheck)             Checksum: F2D6C925F262D4DEE52715AFEF8FC198;11009.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4470,13 +4350,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 5661.
  ) 
 Here is how much of TeX's memory you used:
- 40011 strings out of 480790
- 906862 string characters out of 2897301
- 1400244 words of memory out of 3000000
- 54233 multiletter control sequences out of 15000+200000
+ 40078 strings out of 480790
+ 909024 string characters out of 2897301
+ 1401138 words of memory out of 3000000
+ 54257 multiletter control sequences out of 15000+200000
  553294 words of font info for 107 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  66i,18n,103p,889b,2701s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -4523,9 +4403,9 @@ ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Us
 ers/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb><C:/Users/jdbar/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/symbols/msbm7.pfb>
-Output written on AnalisisDeVariableReal.pdf (165 pages, 3353290 bytes).
+Output written on AnalisisDeVariableReal.pdf (165 pages, 3363361 bytes).
 PDF statistics:
- 2453 PDF objects out of 2487 (max. 8388607)
- 913 named destinations out of 1000 (max. 500000)
- 1327 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2507 PDF objects out of 2984 (max. 8388607)
+ 956 named destinations out of 1000 (max. 500000)
+ 1335 words of extra memory for PDF output out of 10000 (max. 10000000)
 

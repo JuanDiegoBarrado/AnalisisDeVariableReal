@@ -312,8 +312,8 @@
 \contentsline {theo}{{Teorema}{58}{Uniformidad de la derivada}}{139}{theo.58}%
 \contentsline {demo}{{\underline {Demostración}:}{92}{}}{139}{demo.92}%
 \contentsline {theo}{{Teorema}{59}{Uniformidad de la integral}}{140}{theo.59}%
-\contentsline {demo}{{\underline {Demostración}:}{93}{}}{140}{demo.93}%
-\contentsline {obs}{{\underline {Observación}:}{44}{}}{141}{obs.44}%
+\contentsline {demo}{{\underline {Demostración}:}{93}{}}{141}{demo.93}%
+\contentsline {obs}{{\underline {Observación}:}{44}{}}{142}{obs.44}%
 \contentsline {theo}{{Teorema}{60}{}}{142}{theo.60}%
 \contentsline {demo}{{\underline {Demostración}:}{94}{}}{142}{demo.94}%
 \contentsline {theo}{{Teorema}{61}{de Dini}}{142}{theo.61}%
@@ -325,12 +325,12 @@
 \contentsline {theo}{{Teorema}{63}{Uniformidad de la derivada}}{144}{theo.63}%
 \contentsline {demo}{{\underline {Demostración}:}{97}{}}{144}{demo.97}%
 \contentsline {theo}{{Teorema}{64}{Uniformidad de la integral}}{144}{theo.64}%
-\contentsline {demo}{{\underline {Demostración}:}{98}{}}{144}{demo.98}%
+\contentsline {demo}{{\underline {Demostración}:}{98}{}}{145}{demo.98}%
 \contentsline {theo}{{Teorema}{65}{Criterio de Convergencia Uniforme de Cauchy para series}}{145}{theo.65}%
 \contentsline {obs}{{\underline {Observación}:}{45}{}}{145}{obs.45}%
 \contentsline {theo}{{Teorema}{66}{Criterio M de Weierstrass}}{145}{theo.66}%
 \contentsline {demo}{{\underline {Demostración}:}{99}{}}{145}{demo.99}%
-\contentsline {defi}{{Definición}{41}{Serie de Potencias}}{145}{defi.41}%
+\contentsline {defi}{{Definición}{41}{Serie de Potencias}}{146}{defi.41}%
 \contentsline {obs}{{\underline {Observación}:}{46}{}}{146}{obs.46}%
 \contentsline {defi}{{Definición}{42}{Radio de convergencia}}{146}{defi.42}%
 \contentsline {theo}{{Teorema}{67}{de Cauchy - Hadamard}}{146}{theo.67}%
@@ -344,6 +344,9 @@
 \contentsline {obs}{{\underline {Observación}:}{48}{}}{149}{obs.48}%
 \contentsline {prop}{{Proposición}{39}{}}{149}{prop.39}%
 \contentsline {demo}{{\underline {Demostración}:}{103}{}}{149}{demo.103}%
-\contentsline {obs}{{\underline {Observación}:}{49}{}}{149}{obs.49}%
-\contentsline {prop}{{Proposición}{40}{}}{149}{prop.40}%
+\contentsline {obs}{{\underline {Observación}:}{49}{}}{150}{obs.49}%
+\contentsline {prop}{{Proposición}{40}{}}{150}{prop.40}%
 \contentsline {demo}{{\underline {Demostración}:}{104}{}}{150}{demo.104}%
+\contentsline {obs}{{\underline {Observación}:}{50}{}}{150}{obs.50}%
+\contentsline {defi}{{Definición}{43}{Serie de Taylor}}{150}{defi.43}%
+\contentsline {ej}{{\underline {Ejemplo}:}{40}{}}{151}{ej.40}%

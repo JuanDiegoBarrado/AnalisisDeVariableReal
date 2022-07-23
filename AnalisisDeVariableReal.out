@@ -1,84 +1,84 @@
-\BOOKMARK [0][-]{chapter.1}{INTRODUCCI\323N A CONJUNTOS Y FUNCIONES}{}% 1
-\BOOKMARK [1][-]{section.1.1}{CONJUNTOS}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n a Conjuntos y Funciones}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Conjuntos}{chapter.1}% 2
 \BOOKMARK [2][-]{subsection.1.1.1}{Operaciones con conjuntos}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Producto Cartesiano}{section.1.1}% 4
 \BOOKMARK [2][-]{subsection.1.1.3}{Correspondencia}{section.1.1}% 5
-\BOOKMARK [3][-]{section*.2}{Dominio}{subsection.1.1.3}% 6
-\BOOKMARK [3][-]{section*.2}{Rango o Imagen}{subsection.1.1.3}% 7
-\BOOKMARK [3][-]{section*.2}{Observaciones}{subsection.1.1.3}% 8
+\BOOKMARK [3][-]{subsubsection.1.1.3.1}{Dominio}{subsection.1.1.3}% 6
+\BOOKMARK [3][-]{subsubsection.1.1.3.2}{Rango o Imagen}{subsection.1.1.3}% 7
+\BOOKMARK [3][-]{subsubsection.1.1.3.3}{Observaciones}{subsection.1.1.3}% 8
 \BOOKMARK [2][-]{subsection.1.1.4}{Funciones}{section.1.1}% 9
-\BOOKMARK [3][-]{section*.3}{Inyectividad}{subsection.1.1.4}% 10
-\BOOKMARK [3][-]{section*.3}{Suprayectividad}{subsection.1.1.4}% 11
-\BOOKMARK [3][-]{section*.3}{Biyectividad}{subsection.1.1.4}% 12
-\BOOKMARK [3][-]{section*.3}{Observaciones}{subsection.1.1.4}% 13
+\BOOKMARK [3][-]{subsubsection.1.1.4.1}{Inyectividad}{subsection.1.1.4}% 10
+\BOOKMARK [3][-]{subsubsection.1.1.4.2}{Suprayectividad}{subsection.1.1.4}% 11
+\BOOKMARK [3][-]{subsubsection.1.1.4.3}{Biyectividad}{subsection.1.1.4}% 12
+\BOOKMARK [3][-]{subsubsection.1.1.4.4}{Observaciones}{subsection.1.1.4}% 13
 \BOOKMARK [2][-]{subsection.1.1.5}{Numerabilidad de conjuntos}{section.1.1}% 14
-\BOOKMARK [3][-]{section*.4}{Teorema de Sch\366der-Berstein}{subsection.1.1.5}% 15
-\BOOKMARK [3][-]{section*.4}{Composici\363n de funciones}{subsection.1.1.5}% 16
+\BOOKMARK [3][-]{subsubsection.1.1.5.1}{Teorema de Sch\366der-Berstein}{subsection.1.1.5}% 15
+\BOOKMARK [3][-]{subsubsection.1.1.5.2}{Composici\363n de funciones}{subsection.1.1.5}% 16
 \BOOKMARK [2][-]{subsection.1.1.6}{Conjunto P\(A\)}{section.1.1}% 17
-\BOOKMARK [3][-]{section*.5}{Teorema de Cantor}{subsection.1.1.6}% 18
+\BOOKMARK [3][-]{subsubsection.1.1.6.1}{Teorema de Cantor}{subsection.1.1.6}% 18
 \BOOKMARK [2][-]{subsection.1.1.7}{Principio de Inducci\363n}{section.1.1}% 19
-\BOOKMARK [3][-]{section*.6}{Corolario}{subsection.1.1.7}% 20
+\BOOKMARK [3][-]{subsubsection.1.1.7.1}{Corolario}{subsection.1.1.7}% 20
 \BOOKMARK [0][-]{chapter.2}{CONJUNTOS DE N\332MEROS}{}% 21
 \BOOKMARK [1][-]{section.2.1}{PROPIEDADES ALGEBRAICAS DE R}{chapter.2}% 22
-\BOOKMARK [2][-]{section*.7}{Suma}{section.2.1}% 23
-\BOOKMARK [3][-]{Item.4}{Producto}{section.2.1}% 24
+\BOOKMARK [2][-]{subsubsection.2.1.0.1}{Suma}{section.2.1}% 23
+\BOOKMARK [3][-]{subsubsection.2.1.0.2}{Producto}{subsubsection.2.1.0.1}% 24
 \BOOKMARK [2][-]{subsection.2.1.1}{Estructura de Cuerpo}{section.2.1}% 25
-\BOOKMARK [3][-]{section*.8}{Consecuencias de la estructura de cuerpo}{subsection.2.1.1}% 26
+\BOOKMARK [3][-]{subsubsection.2.1.1.1}{Consecuencias de la estructura de cuerpo}{subsection.2.1.1}% 26
 \BOOKMARK [2][-]{subsection.2.1.2}{Propiedades de orden}{section.2.1}% 27
-\BOOKMARK [3][-]{Item.23}{Definiciones}{subsection.2.1.2}% 28
-\BOOKMARK [3][-]{Item.44}{Proposici\363n}{subsection.2.1.2}% 29
+\BOOKMARK [3][-]{subsubsection.2.1.2.1}{Definiciones}{subsection.2.1.2}% 28
+\BOOKMARK [3][-]{subsubsection.2.1.2.2}{Proposici\363n}{subsection.2.1.2}% 29
 \BOOKMARK [2][-]{subsection.2.1.3}{Algunas desigualdades}{section.2.1}% 30
-\BOOKMARK [3][-]{section*.9}{Ecuaciones de 2\272 grado}{subsection.2.1.3}% 31
-\BOOKMARK [3][-]{section*.9}{Desigualdades de 2\272 grado}{subsection.2.1.3}% 32
-\BOOKMARK [3][-]{section*.9}{Desigualdad de Cauchy}{subsection.2.1.3}% 33
-\BOOKMARK [3][-]{section*.9}{Desigualdad de Minkovski}{subsection.2.1.3}% 34
+\BOOKMARK [3][-]{subsubsection.2.1.3.1}{Ecuaciones de 2\272 grado}{subsection.2.1.3}% 31
+\BOOKMARK [3][-]{subsubsection.2.1.3.2}{Desigualdades de 2\272 grado}{subsection.2.1.3}% 32
+\BOOKMARK [3][-]{subsubsection.2.1.3.3}{Desigualdad de Cauchy}{subsection.2.1.3}% 33
+\BOOKMARK [3][-]{subsubsection.2.1.3.4}{Desigualdad de Minkovski}{subsection.2.1.3}% 34
 \BOOKMARK [1][-]{section.2.2}{VALOR ABSOLUTO}{chapter.2}% 35
-\BOOKMARK [2][-]{section*.10}{Propiedades}{section.2.2}% 36
+\BOOKMARK [2][-]{subsubsection.2.2.0.1}{Propiedades}{section.2.2}% 36
 \BOOKMARK [2][-]{subsection.2.2.1}{Desigualdad triangular}{section.2.2}% 37
-\BOOKMARK [3][-]{section*.11}{Corolarios}{subsection.2.2.1}% 38
+\BOOKMARK [3][-]{subsubsection.2.2.1.1}{Corolarios}{subsection.2.2.1}% 38
 \BOOKMARK [2][-]{subsection.2.2.2}{Distancia entre dos n\372meros}{section.2.2}% 39
-\BOOKMARK [3][-]{section*.12}{Propiedades}{subsection.2.2.2}% 40
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{Propiedades}{subsection.2.2.2}% 40
 \BOOKMARK [2][-]{subsection.2.2.3}{Intervalos}{section.2.2}% 41
-\BOOKMARK [3][-]{Item.69}{Observaci\363n}{subsection.2.2.3}% 42
-\BOOKMARK [3][-]{Item.69}{Entornos}{subsection.2.2.3}% 43
+\BOOKMARK [3][-]{subsubsection.2.2.3.1}{Observaci\363n}{subsection.2.2.3}% 42
+\BOOKMARK [3][-]{subsubsection.2.2.3.2}{Entornos}{subsection.2.2.3}% 43
 \BOOKMARK [1][-]{section.2.3}{N\332MEROS COMPLEJOS}{chapter.2}% 44
 \BOOKMARK [2][-]{subsection.2.3.1}{Operaciones}{section.2.3}% 45
-\BOOKMARK [3][-]{section*.13}{Suma}{subsection.2.3.1}% 46
-\BOOKMARK [3][-]{section*.13}{Producto por un escalar}{subsection.2.3.1}% 47
-\BOOKMARK [3][-]{section*.13}{Producto}{subsection.2.3.1}% 48
-\BOOKMARK [3][-]{section*.13}{Observaciones}{subsection.2.3.1}% 49
+\BOOKMARK [3][-]{subsubsection.2.3.1.1}{Suma}{subsection.2.3.1}% 46
+\BOOKMARK [3][-]{subsubsection.2.3.1.2}{Producto por un escalar}{subsection.2.3.1}% 47
+\BOOKMARK [3][-]{subsubsection.2.3.1.3}{Producto}{subsection.2.3.1}% 48
+\BOOKMARK [3][-]{subsubsection.2.3.1.4}{Observaciones}{subsection.2.3.1}% 49
 \BOOKMARK [2][-]{subsection.2.3.2}{Definiciones}{section.2.3}% 50
-\BOOKMARK [3][-]{section*.14}{Propiedades}{subsection.2.3.2}% 51
-\BOOKMARK [3][-]{Item.79}{Definici\363n: la exponencial compleja}{subsection.2.3.2}% 52
-\BOOKMARK [3][-]{Item.79}{Formas de representaci\363n}{subsection.2.3.2}% 53
+\BOOKMARK [3][-]{subsubsection.2.3.2.1}{Propiedades}{subsection.2.3.2}% 51
+\BOOKMARK [3][-]{subsubsection.2.3.2.2}{Definici\363n: la exponencial compleja}{subsection.2.3.2}% 52
+\BOOKMARK [3][-]{subsubsection.2.3.2.3}{Formas de representaci\363n}{subsection.2.3.2}% 53
 \BOOKMARK [2][-]{subsection.2.3.3}{Teorema Fundamental del \301lgebra}{section.2.3}% 54
-\BOOKMARK [3][-]{section*.15}{Ra\355ces de n\372meros complejos}{subsection.2.3.3}% 55
+\BOOKMARK [3][-]{subsubsection.2.3.3.1}{Ra\355ces de n\372meros complejos}{subsection.2.3.3}% 55
 \BOOKMARK [1][-]{section.2.4}{SUPREMOS E \315NFIMOS}{chapter.2}% 56
 \BOOKMARK [2][-]{subsection.2.4.1}{Propiedad del supremo}{section.2.4}% 57
-\BOOKMARK [3][-]{section*.16}{Proposici\363n: consecuencias de supremo}{subsection.2.4.1}% 58
-\BOOKMARK [3][-]{Item.87}{Proposici\363n: consecuencia de \355nfimo}{subsection.2.4.1}% 59
-\BOOKMARK [3][-]{Item.95}{Teorema de la existencia de ra\355ces}{subsection.2.4.1}% 60
-\BOOKMARK [3][-]{Item.98}{Supremos e \355nfimos de subconjuntos}{subsection.2.4.1}% 61
+\BOOKMARK [3][-]{subsubsection.2.4.1.1}{Proposici\363n: consecuencias de supremo}{subsection.2.4.1}% 58
+\BOOKMARK [3][-]{subsubsection.2.4.1.2}{Proposici\363n: consecuencia de \355nfimo}{subsection.2.4.1}% 59
+\BOOKMARK [3][-]{subsubsection.2.4.1.3}{Teorema de la existencia de ra\355ces}{subsection.2.4.1}% 60
+\BOOKMARK [3][-]{subsubsection.2.4.1.4}{Supremos e \355nfimos de subconjuntos}{subsection.2.4.1}% 61
 \BOOKMARK [2][-]{subsection.2.4.2}{Propiedad Arquimediana de R}{section.2.4}% 62
-\BOOKMARK [3][-]{section*.17}{Propiedad Arquimediana del producto}{subsection.2.4.2}% 63
-\BOOKMARK [3][-]{section*.17}{Proposiciones}{subsection.2.4.2}% 64
+\BOOKMARK [3][-]{subsubsection.2.4.2.1}{Propiedad Arquimediana del producto}{subsection.2.4.2}% 63
+\BOOKMARK [3][-]{subsubsection.2.4.2.2}{Proposiciones}{subsection.2.4.2}% 64
 \BOOKMARK [2][-]{subsection.2.4.3}{Densidad de Q en R}{section.2.4}% 65
-\BOOKMARK [3][-]{section*.18}{Corolario: Densidad de los Irracionales en R}{subsection.2.4.3}% 66
+\BOOKMARK [3][-]{subsubsection.2.4.3.1}{Corolario: Densidad de los Irracionales en R}{subsection.2.4.3}% 66
 \BOOKMARK [2][-]{subsection.2.4.4}{Principio de intervalos encajados de Cantor}{section.2.4}% 67
-\BOOKMARK [3][-]{section*.19}{Corolario}{subsection.2.4.4}% 68
-\BOOKMARK [3][-]{section*.19}{Observaciones}{subsection.2.4.4}% 69
+\BOOKMARK [3][-]{subsubsection.2.4.4.1}{Corolario}{subsection.2.4.4}% 68
+\BOOKMARK [3][-]{subsubsection.2.4.4.2}{Observaciones}{subsection.2.4.4}% 69
 \BOOKMARK [2][-]{subsection.2.4.5}{Definici\363n de la exponencial real}{section.2.4}% 70
 \BOOKMARK [0][-]{chapter.3}{Sucesiones y Series}{}% 71
 \BOOKMARK [1][-]{section.3.1}{Sucesiones}{chapter.3}% 72
 \BOOKMARK [2][-]{subsection.3.1.1}{Convergencia}{section.3.1}% 73
-\BOOKMARK [3][-]{Item.127}{Divergencia}{subsection.3.1.1}% 74
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{Divergencia}{subsection.3.1.1}% 74
 \BOOKMARK [2][-]{subsection.3.1.2}{Subsucesiones}{section.3.1}% 75
 \BOOKMARK [2][-]{subsection.3.1.3}{Sucesiones de Cauchy}{section.3.1}% 76
 \BOOKMARK [2][-]{subsection.3.1.4}{L\355mite inferior y superior de una sucesi\363n}{section.3.1}% 77
 \BOOKMARK [2][-]{subsection.3.1.5}{L\355mites en el exponente}{section.3.1}% 78
-\BOOKMARK [3][-]{section*.20}{Paso al exponente}{subsection.3.1.5}% 79
-\BOOKMARK [3][-]{section*.20}{Ra\355ces de base variable}{subsection.3.1.5}% 80
-\BOOKMARK [3][-]{section*.20}{Exponencial de base variable}{subsection.3.1.5}% 81
+\BOOKMARK [3][-]{subsubsection.3.1.5.1}{Paso al exponente}{subsection.3.1.5}% 79
+\BOOKMARK [3][-]{subsubsection.3.1.5.2}{Ra\355ces de base variable}{subsection.3.1.5}% 80
+\BOOKMARK [3][-]{subsubsection.3.1.5.3}{Exponencial de base variable}{subsection.3.1.5}% 81
 \BOOKMARK [1][-]{section.3.2}{Series Num\351ricas}{chapter.3}% 82
 \BOOKMARK [2][-]{subsection.3.2.1}{Criterios de convergencia}{section.3.2}% 83
 \BOOKMARK [2][-]{subsection.3.2.2}{Convergencia absoluta y condicional}{section.3.2}% 84
@@ -88,49 +88,50 @@
 \BOOKMARK [2][-]{subsection.4.1.2}{L\355mite y propiedades}{section.4.1}% 88
 \BOOKMARK [1][-]{section.4.2}{Concepto de funci\363n Continua}{chapter.4}% 89
 \BOOKMARK [2][-]{subsection.4.2.1}{Teoremas Fundamentales de Funciones Continuas}{section.4.2}% 90
-\BOOKMARK [3][-]{demo.40}{Continuidad uniforme}{subsection.4.2.1}% 91
+\BOOKMARK [3][-]{subsubsection.4.2.1.1}{Continuidad uniforme}{subsection.4.2.1}% 91
 \BOOKMARK [2][-]{subsection.4.2.2}{Funciones Mon\363tonas}{section.4.2}% 92
 \BOOKMARK [2][-]{subsection.4.2.3}{Continuidad de funciones elementales}{section.4.2}% 93
-\BOOKMARK [3][-]{section*.21}{Regla del Sandwich para funciones}{subsection.4.2.3}% 94
-\BOOKMARK [3][-]{section*.21}{Continuidad de funciones exponenciales}{subsection.4.2.3}% 95
-\BOOKMARK [3][-]{section*.21}{Continuidad del seno y del coseno}{subsection.4.2.3}% 96
-\BOOKMARK [3][-]{section*.21}{Continuidad de los logaritmos}{subsection.4.2.3}% 97
+\BOOKMARK [3][-]{subsubsection.4.2.3.1}{Regla del Sandwich para funciones}{subsection.4.2.3}% 94
+\BOOKMARK [3][-]{subsubsection.4.2.3.2}{Continuidad de funciones exponenciales}{subsection.4.2.3}% 95
+\BOOKMARK [3][-]{subsubsection.4.2.3.3}{Continuidad del seno y del coseno}{subsection.4.2.3}% 96
+\BOOKMARK [3][-]{subsubsection.4.2.3.4}{Continuidad de los logaritmos}{subsection.4.2.3}% 97
 \BOOKMARK [0][-]{chapter.5}{C\341lculo Diferencial}{}% 98
 \BOOKMARK [1][-]{section.5.1}{Derivabilidad}{chapter.5}% 99
 \BOOKMARK [2][-]{subsection.5.1.1}{Concepto de Derivada}{section.5.1}% 100
-\BOOKMARK [3][-]{ej.17}{Interpretaci\363n geom\351trica de la derivada}{subsection.5.1.1}% 101
+\BOOKMARK [3][-]{subsubsection.5.1.1.1}{Interpretaci\363n geom\351trica de la derivada}{subsection.5.1.1}% 101
 \BOOKMARK [2][-]{subsection.5.1.2}{Criterios de Derivabilidad}{section.5.1}% 102
 \BOOKMARK [1][-]{section.5.2}{Crecimiento y Decrecimiento}{chapter.5}% 103
 \BOOKMARK [2][-]{subsection.5.2.1}{Teorema del Valor Medio}{section.5.2}% 104
-\BOOKMARK [3][-]{obs.25}{Aplicaciones del Teorema del valor Medio}{subsection.5.2.1}% 105
+\BOOKMARK [3][-]{subsubsection.5.2.1.1}{Aplicaciones del Teorema del valor Medio}{subsection.5.2.1}% 105
 \BOOKMARK [2][-]{subsection.5.2.2}{Regla de L'Hopital}{section.5.2}% 106
-\BOOKMARK [3][-]{section*.22}{L'H\364pital 1}{subsection.5.2.2}% 107
-\BOOKMARK [3][-]{section*.22}{L'H\364pital 2}{subsection.5.2.2}% 108
-\BOOKMARK [3][-]{section*.22}{Ejemplos de aplicaci\363n del Teorema de L'H\364pital}{subsection.5.2.2}% 109
+\BOOKMARK [3][-]{subsubsection.5.2.2.1}{L'H\364pital 1}{subsection.5.2.2}% 107
+\BOOKMARK [3][-]{subsubsection.5.2.2.2}{L'H\364pital 2}{subsection.5.2.2}% 108
+\BOOKMARK [3][-]{subsubsection.5.2.2.3}{Ejemplos de aplicaci\363n del Teorema de L'H\364pital}{subsection.5.2.2}% 109
 \BOOKMARK [1][-]{section.5.3}{Otros Resultados}{chapter.5}% 110
 \BOOKMARK [2][-]{subsection.5.3.1}{Teorema de Taylor}{section.5.3}% 111
-\BOOKMARK [3][-]{obs.27}{Aplicaciones del Teorema de Taylor}{subsection.5.3.1}% 112
+\BOOKMARK [3][-]{subsubsection.5.3.1.1}{Aplicaciones del Teorema de Taylor}{subsection.5.3.1}% 112
 \BOOKMARK [2][-]{subsection.5.3.2}{Convexidad y Concavidad}{section.5.3}% 113
 \BOOKMARK [2][-]{subsection.5.3.3}{M\351todo de Newton para calcular ra\355ces de f\(x\)}{section.5.3}% 114
 \BOOKMARK [0][-]{chapter.6}{C\341lculo Integral}{}% 115
 \BOOKMARK [1][-]{section.6.1}{Teor\355a de la Integraci\363n}{chapter.6}% 116
 \BOOKMARK [2][-]{subsection.6.1.1}{Criterios de Integrabilidad}{section.6.1}% 117
-\BOOKMARK [3][-]{ej.26}{Aditividad de la Integral}{subsection.6.1.1}% 118
+\BOOKMARK [3][-]{subsubsection.6.1.1.1}{Aditividad de la Integral}{subsection.6.1.1}% 118
 \BOOKMARK [2][-]{subsection.6.1.2}{Teorema Fundamental del C\341lculo}{section.6.1}% 119
 \BOOKMARK [1][-]{section.6.2}{C\341lculo de Integrales}{chapter.6}% 120
 \BOOKMARK [2][-]{subsection.6.2.1}{M\351todos de integraci\363n}{section.6.2}% 121
 \BOOKMARK [2][-]{subsection.6.2.2}{Integrales Impropias}{section.6.2}% 122
-\BOOKMARK [3][-]{section*.23}{Integrales Impropias de 1\252 Especie}{subsection.6.2.2}% 123
-\BOOKMARK [3][-]{ej.31}{Integrales Impropias de 2\252 especie}{subsection.6.2.2}% 124
+\BOOKMARK [3][-]{subsubsection.6.2.2.1}{Integrales Impropias de 1\252 Especie}{subsection.6.2.2}% 123
+\BOOKMARK [3][-]{subsubsection.6.2.2.2}{Integrales Impropias de 2\252 especie}{subsection.6.2.2}% 124
 \BOOKMARK [2][-]{subsection.6.2.3}{Integral de Darboux}{section.6.2}% 125
-\BOOKMARK [0][-]{chapter.7}{Sucesiones y series de \040funciones}{}% 126
+\BOOKMARK [0][-]{chapter.7}{Sucesiones y series de funciones}{}% 126
 \BOOKMARK [1][-]{section.7.1}{Sucesiones de Funciones}{chapter.7}% 127
-\BOOKMARK [2][-]{subsection.7.1.1}{Definici\363n y conceptos b\341sicos}{section.7.1}% 128
-\BOOKMARK [2][-]{subsection.7.1.2}{Criterios y propiedades}{section.7.1}% 129
-\BOOKMARK [1][-]{section.7.2}{Series de Funciones}{chapter.7}% 130
-\BOOKMARK [2][-]{subsection.7.2.1}{Convergencia y propiedades}{section.7.2}% 131
-\BOOKMARK [3][-]{section*.24}{Tipos de convergencia}{subsection.7.2.1}% 132
-\BOOKMARK [2][-]{subsection.7.2.2}{Series de Potencias}{section.7.2}% 133
-\BOOKMARK [3][-]{demo.104}{Series de Taylor}{subsection.7.2.2}% 134
-\BOOKMARK [2][-]{subsection.7.2.3}{Definici\363n de exponencial, seno y coseno}{section.7.2}% 135
-\BOOKMARK [3][-]{section*.25}{Exponencial y Logar\355tmica}{subsection.7.2.3}% 136
+\BOOKMARK [2][-]{subsection.7.1.1}{Convergencia}{section.7.1}% 128
+\BOOKMARK [3][-]{subsubsection.7.1.1.1}{Criterios}{subsection.7.1.1}% 129
+\BOOKMARK [3][-]{subsubsection.7.1.1.2}{Conservaci\363n de propiedades por convergencia}{subsection.7.1.1}% 130
+\BOOKMARK [1][-]{section.7.2}{Series de Funciones}{chapter.7}% 131
+\BOOKMARK [2][-]{subsection.7.2.1}{Convergencia y propiedades}{section.7.2}% 132
+\BOOKMARK [3][-]{subsubsection.7.2.1.1}{Tipos de convergencia}{subsection.7.2.1}% 133
+\BOOKMARK [2][-]{subsection.7.2.2}{Series de Potencias}{section.7.2}% 134
+\BOOKMARK [3][-]{subsubsection.7.2.2.1}{Series de Taylor}{subsection.7.2.2}% 135
+\BOOKMARK [2][-]{subsection.7.2.3}{Definici\363n de exponencial, seno y coseno}{section.7.2}% 136
+\BOOKMARK [3][-]{subsubsection.7.2.3.1}{Exponencial y Logar\355tmica}{subsection.7.2.3}% 137
