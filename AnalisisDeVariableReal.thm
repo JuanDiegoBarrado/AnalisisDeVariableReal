@@ -2,130 +2,348 @@
 \contentsline {obs}{{\underline {Observación}:}{1}{}}{31}{obs.1}%
 \contentsline {prop}{{Proposición}{1}{Operaciones con sucesiones numéricas}}{31}{prop.1}%
 \contentsline {defi}{{Definición}{2}{Convergencia}}{32}{defi.2}%
+\contentsline {obs}{{\underline {Observación}:}{2}{}}{32}{obs.2}%
 \contentsline {prop}{{Proposición}{2}{Unicidad del límite}}{32}{prop.2}%
 \contentsline {demo}{{\underline {Demostración}:}{1}{}}{32}{demo.1}%
 \contentsline {prop}{{Proposición}{3}{Acotamiento por convergencia}}{32}{prop.3}%
 \contentsline {demo}{{\underline {Demostración}:}{2}{}}{32}{demo.2}%
-\contentsline {obs}{{\underline {Observación}:}{2}{}}{33}{obs.2}%
+\contentsline {obs}{{\underline {Observación}:}{3}{}}{33}{obs.3}%
 \contentsline {prop}{{Proposición}{4}{Operaciones con sucesiones convergentes}}{33}{prop.4}%
 \contentsline {demo}{{\underline {Demostración}:}{3}{}}{33}{demo.3}%
-\contentsline {defi}{{Definición}{3}{Monotonía}}{35}{defi.3}%
-\contentsline {prop}{{Proposición}{5}{}}{35}{prop.5}%
+\contentsline {prop}{{Proposición}{5}{Convergencia y Orden}}{35}{prop.5}%
 \contentsline {demo}{{\underline {Demostración}:}{4}{}}{35}{demo.4}%
-\contentsline {prop}{{Proposición}{6}{Convergencia y Orden}}{35}{prop.6}%
+\contentsline {defi}{{Definición}{3}{Monotonía}}{35}{defi.3}%
+\contentsline {prop}{{Proposición}{6}{}}{36}{prop.6}%
 \contentsline {demo}{{\underline {Demostración}:}{5}{}}{36}{demo.5}%
 \contentsline {defi}{{Definición}{4}{Divergencia}}{36}{defi.4}%
 \contentsline {prop}{{Proposición}{7}{Divergencia y Monotonía}}{36}{prop.7}%
 \contentsline {demo}{{\underline {Demostración}:}{6}{}}{36}{demo.6}%
-\contentsline {obs}{{\underline {Observación}:}{3}{}}{36}{obs.3}%
+\contentsline {obs}{{\underline {Observación}:}{4}{}}{37}{obs.4}%
 \contentsline {prop}{{Proposición}{8}{}}{37}{prop.8}%
 \contentsline {demo}{{\underline {Demostración}:}{7}{}}{37}{demo.7}%
 \contentsline {defi}{{Definición}{5}{$\mathbb {R}$ ampliado}}{37}{defi.5}%
 \contentsline {prop}{{Proposición}{9}{Operaciones con límites infinitos}}{37}{prop.9}%
-\contentsline {obs}{{\underline {Observación}:}{4}{}}{38}{obs.4}%
+\contentsline {obs}{{\underline {Observación}:}{5}{}}{38}{obs.5}%
 \contentsline {theo}{{Teorema}{1}{Criterio del Cociente y la Raíz}}{38}{theo.1}%
 \contentsline {ej}{{\underline {Ejemplo}:}{1}{}}{38}{ej.1}%
 \contentsline {ej}{{\underline {Ejemplo}:}{2}{}}{38}{ej.2}%
 \contentsline {ej}{{\underline {Ejemplo}:}{3}{}}{39}{ej.3}%
 \contentsline {ej}{{\underline {Ejemplo}:}{4}{}}{39}{ej.4}%
 \contentsline {theo}{{Teorema}{2}{Criterio de Stoltz}}{39}{theo.2}%
-\contentsline {demo}{{\underline {Demostración}:}{8}{}}{39}{demo.8}%
-\contentsline {obs}{{\underline {Observación}:}{5}{}}{40}{obs.5}%
-\contentsline {ej}{{\underline {Ejemplo}:}{5}{}}{40}{ej.5}%
+\contentsline {demo}{{\underline {Demostración}:}{8}{}}{40}{demo.8}%
+\contentsline {obs}{{\underline {Observación}:}{6}{}}{41}{obs.6}%
+\contentsline {ej}{{\underline {Ejemplo}:}{5}{}}{41}{ej.5}%
 \contentsline {ej}{{\underline {Ejemplo}:}{6}{}}{41}{ej.6}%
-\contentsline {defi}{{Definición}{6}{Subsucesiones}}{41}{defi.6}%
-\contentsline {ej}{{\underline {Ejemplo}:}{7}{}}{41}{ej.7}%
-\contentsline {prop}{{Proposición}{10}{}}{41}{prop.10}%
-\contentsline {demo}{{\underline {Demostración}:}{9}{}}{41}{demo.9}%
+\contentsline {defi}{{Definición}{6}{Subsucesión}}{41}{defi.6}%
+\contentsline {ej}{{\underline {Ejemplo}:}{7}{}}{42}{ej.7}%
+\contentsline {prop}{{Proposición}{10}{}}{42}{prop.10}%
+\contentsline {demo}{{\underline {Demostración}:}{9}{}}{42}{demo.9}%
 \contentsline {prop}{{Proposición}{11}{}}{42}{prop.11}%
 \contentsline {demo}{{\underline {Demostración}:}{10}{}}{42}{demo.10}%
-\contentsline {theo}{{Teorema}{3}{de Bolzano-Weirstrass}}{42}{theo.3}%
-\contentsline {demo}{{\underline {Demostración}:}{11}{}}{42}{demo.11}%
+\contentsline {theo}{{Teorema}{3}{de Bolzano-Weirstrass}}{43}{theo.3}%
+\contentsline {demo}{{\underline {Demostración}:}{11}{}}{43}{demo.11}%
 \contentsline {defi}{{Definición}{7}{Sucesión de Cauchy}}{43}{defi.7}%
-\contentsline {prop}{{Proposición}{12}{}}{43}{prop.12}%
-\contentsline {prop}{{Proposición}{13}{}}{43}{prop.13}%
+\contentsline {prop}{{Proposición}{12}{}}{44}{prop.12}%
 \contentsline {demo}{{\underline {Demostración}:}{12}{}}{44}{demo.12}%
-\contentsline {theo}{{Teorema}{4}{Completitud de $\mathbb R$}}{44}{theo.4}%
+\contentsline {prop}{{Proposición}{13}{}}{44}{prop.13}%
 \contentsline {demo}{{\underline {Demostración}:}{13}{}}{44}{demo.13}%
-\contentsline {defi}{{Definición}{8}{}}{44}{defi.8}%
+\contentsline {theo}{{Teorema}{4}{Completitud de $\mathbb R$}}{44}{theo.4}%
+\contentsline {demo}{{\underline {Demostración}:}{14}{}}{44}{demo.14}%
+\contentsline {defi}{{Definición}{8}{}}{45}{defi.8}%
 \contentsline {defi}{{Definición}{9}{Límite Inferior y Superior}}{45}{defi.9}%
 \contentsline {prop}{{Proposición}{14}{}}{45}{prop.14}%
-\contentsline {demo}{{\underline {Demostración}:}{14}{}}{45}{demo.14}%
-\contentsline {prop}{{Proposición}{15}{}}{45}{prop.15}%
 \contentsline {demo}{{\underline {Demostración}:}{15}{}}{45}{demo.15}%
-\contentsline {prop}{{Proposición}{16}{}}{45}{prop.16}%
-\contentsline {demo}{{\underline {Demostración}:}{16}{}}{45}{demo.16}%
-\contentsline {prop}{{Proposición}{17}{}}{46}{prop.17}%
+\contentsline {prop}{{Proposición}{15}{}}{45}{prop.15}%
+\contentsline {demo}{{\underline {Demostración}:}{16}{}}{46}{demo.16}%
+\contentsline {prop}{{Proposición}{16}{}}{46}{prop.16}%
 \contentsline {demo}{{\underline {Demostración}:}{17}{}}{46}{demo.17}%
-\contentsline {obs}{{\underline {Observación}:}{6}{}}{46}{obs.6}%
+\contentsline {prop}{{Proposición}{17}{}}{46}{prop.17}%
+\contentsline {demo}{{\underline {Demostración}:}{18}{}}{46}{demo.18}%
+\contentsline {obs}{{\underline {Observación}:}{7}{}}{46}{obs.7}%
 \contentsline {defi}{{Definición}{10}{Serie numérica}}{48}{defi.10}%
-\contentsline {obs}{{\underline {Observación}:}{7}{}}{48}{obs.7}%
+\contentsline {obs}{{\underline {Observación}:}{8}{}}{48}{obs.8}%
 \contentsline {ej}{{\underline {Ejemplo}:}{8}{}}{48}{ej.8}%
-\contentsline {theo}{{Teorema}{5}{}}{48}{theo.5}%
-\contentsline {demo}{{\underline {Demostración}:}{18}{}}{49}{demo.18}%
-\contentsline {obs}{{\underline {Observación}:}{8}{}}{49}{obs.8}%
+\contentsline {theo}{{Teorema}{5}{}}{49}{theo.5}%
+\contentsline {demo}{{\underline {Demostración}:}{19}{}}{49}{demo.19}%
+\contentsline {obs}{{\underline {Observación}:}{9}{}}{49}{obs.9}%
 \contentsline {ej}{{\underline {Ejemplo}:}{9}{}}{49}{ej.9}%
 \contentsline {ej}{{\underline {Ejemplo}:}{10}{}}{49}{ej.10}%
 \contentsline {theo}{{Teorema}{6}{Criterio de Cauchy}}{50}{theo.6}%
-\contentsline {demo}{{\underline {Demostración}:}{19}{}}{50}{demo.19}%
-\contentsline {ej}{{\underline {Ejemplo}:}{11}{}}{50}{ej.11}%
-\contentsline {coro}{{Corolario}{1}{}}{50}{coro.1}%
-\contentsline {theo}{{Teorema}{7}{Criterio de comparación}}{50}{theo.7}%
 \contentsline {demo}{{\underline {Demostración}:}{20}{}}{50}{demo.20}%
-\contentsline {theo}{{Teorema}{8}{Criterio de comparación en el límite}}{51}{theo.8}%
+\contentsline {ej}{{\underline {Ejemplo}:}{11}{}}{51}{ej.11}%
+\contentsline {coro}{{Corolario}{1}{}}{51}{coro.1}%
+\contentsline {theo}{{Teorema}{7}{Criterio de comparación}}{51}{theo.7}%
 \contentsline {demo}{{\underline {Demostración}:}{21}{}}{51}{demo.21}%
-\contentsline {defi}{{Definición}{11}{Convergencia Absoluta y Condicional}}{51}{defi.11}%
+\contentsline {theo}{{Teorema}{8}{Criterio de comparación en el límite}}{51}{theo.8}%
+\contentsline {demo}{{\underline {Demostración}:}{22}{}}{51}{demo.22}%
+\contentsline {defi}{{Definición}{11}{Convergencia Absoluta y Condicional}}{52}{defi.11}%
 \contentsline {theo}{{Teorema}{9}{Criterio de la Raíz y del Cociente}}{52}{theo.9}%
-\contentsline {demo}{{\underline {Demostración}:}{22}{}}{52}{demo.22}%
-\contentsline {theo}{{Teorema}{10}{Criterio de la integral}}{53}{theo.10}%
 \contentsline {demo}{{\underline {Demostración}:}{23}{}}{53}{demo.23}%
-\contentsline {theo}{{Teorema}{11}{Criterio de Leibnitz}}{53}{theo.11}%
-\contentsline {demo}{{\underline {Demostración}:}{24}{}}{53}{demo.24}%
-\contentsline {theo}{{Teorema}{12}{Criterio de Condensación de Cauchy}}{54}{theo.12}%
+\contentsline {theo}{{Teorema}{10}{Criterio de la integral}}{53}{theo.10}%
+\contentsline {demo}{{\underline {Demostración}:}{24}{}}{54}{demo.24}%
+\contentsline {theo}{{Teorema}{11}{Criterio de Leibnitz}}{54}{theo.11}%
 \contentsline {demo}{{\underline {Demostración}:}{25}{}}{54}{demo.25}%
-\contentsline {obs}{{\underline {Observación}:}{9}{}}{55}{obs.9}%
+\contentsline {theo}{{Teorema}{12}{Criterio de Condensación de Cauchy}}{55}{theo.12}%
+\contentsline {demo}{{\underline {Demostración}:}{26}{}}{55}{demo.26}%
+\contentsline {obs}{{\underline {Observación}:}{10}{}}{55}{obs.10}%
 \contentsline {defi}{{Definición}{12}{Punto de Acumulación}}{57}{defi.12}%
-\contentsline {obs}{{\underline {Observación}:}{10}{}}{57}{obs.10}%
+\contentsline {obs}{{\underline {Observación}:}{11}{}}{57}{obs.11}%
 \contentsline {ej}{{\underline {Ejemplo}:}{12}{}}{57}{ej.12}%
-\contentsline {defi}{{Definición}{13}{Punto Aislado}}{57}{defi.13}%
-\contentsline {ej}{{\underline {Ejemplo}:}{13}{}}{57}{ej.13}%
+\contentsline {defi}{{Definición}{13}{Punto Aislado}}{58}{defi.13}%
+\contentsline {ej}{{\underline {Ejemplo}:}{13}{}}{58}{ej.13}%
 \contentsline {prop}{{Proposición}{18}{}}{58}{prop.18}%
-\contentsline {demo}{{\underline {Demostración}:}{26}{}}{58}{demo.26}%
+\contentsline {demo}{{\underline {Demostración}:}{27}{}}{58}{demo.27}%
 \contentsline {defi}{{Definición}{14}{Límite de una Función}}{58}{defi.14}%
-\contentsline {obs}{{\underline {Observación}:}{11}{}}{58}{obs.11}%
+\contentsline {obs}{{\underline {Observación}:}{12}{}}{59}{obs.12}%
 \contentsline {prop}{{Proposición}{19}{Caracterización del Límite}}{59}{prop.19}%
-\contentsline {demo}{{\underline {Demostración}:}{27}{}}{59}{demo.27}%
+\contentsline {demo}{{\underline {Demostración}:}{28}{}}{59}{demo.28}%
 \contentsline {theo}{{Teorema}{13}{Operaciones con Límites}}{60}{theo.13}%
-\contentsline {demo}{{\underline {Demostración}:}{28}{}}{60}{demo.28}%
-\contentsline {defi}{{Definición}{15}{Límites en $\bar {\mathbb {R}}$}}{61}{defi.15}%
+\contentsline {demo}{{\underline {Demostración}:}{29}{}}{60}{demo.29}%
+\contentsline {defi}{{Definición}{15}{Límites en $\bar {\mathbb {R}}$}}{62}{defi.15}%
 \contentsline {prop}{{Proposición}{20}{}}{62}{prop.20}%
-\contentsline {obs}{{\underline {Observación}:}{12}{}}{62}{obs.12}%
-\contentsline {defi}{{Definición}{16}{Continuidad en un punto}}{62}{defi.16}%
-\contentsline {prop}{{Proposición}{21}{}}{62}{prop.21}%
-\contentsline {demo}{{\underline {Demostración}:}{29}{}}{62}{demo.29}%
-\contentsline {obs}{{\underline {Observación}:}{13}{}}{63}{obs.13}%
-\contentsline {prop}{{Proposición}{22}{Operaciones con Continuidad}}{63}{prop.22}%
+\contentsline {obs}{{\underline {Observación}:}{13}{}}{62}{obs.13}%
+\contentsline {defi}{{Definición}{16}{Continuidad en un punto}}{63}{defi.16}%
+\contentsline {prop}{{Proposición}{21}{}}{63}{prop.21}%
 \contentsline {demo}{{\underline {Demostración}:}{30}{}}{63}{demo.30}%
-\contentsline {prop}{{Proposición}{23}{Continuidad de la Composición}}{63}{prop.23}%
+\contentsline {obs}{{\underline {Observación}:}{14}{}}{63}{obs.14}%
+\contentsline {prop}{{Proposición}{22}{Operaciones con Continuidad}}{63}{prop.22}%
 \contentsline {demo}{{\underline {Demostración}:}{31}{}}{64}{demo.31}%
-\contentsline {prop}{{Proposición}{24}{}}{64}{prop.24}%
+\contentsline {prop}{{Proposición}{23}{Continuidad de la Composición}}{64}{prop.23}%
 \contentsline {demo}{{\underline {Demostración}:}{32}{}}{64}{demo.32}%
-\contentsline {defi}{{Definición}{17}{Límites Laterales}}{65}{defi.17}%
-\contentsline {prop}{{Proposición}{25}{}}{65}{prop.25}%
+\contentsline {prop}{{Proposición}{24}{}}{65}{prop.24}%
 \contentsline {demo}{{\underline {Demostración}:}{33}{}}{65}{demo.33}%
-\contentsline {theo}{{Teorema}{14}{Caracterización de la continuidad}}{66}{theo.14}%
+\contentsline {defi}{{Definición}{17}{Límites Laterales}}{65}{defi.17}%
+\contentsline {prop}{{Proposición}{25}{}}{66}{prop.25}%
 \contentsline {demo}{{\underline {Demostración}:}{34}{}}{66}{demo.34}%
-\contentsline {defi}{{Definición}{18}{Discontinuidades}}{66}{defi.18}%
-\contentsline {defi}{{Definición}{19}{Límites Laterales en $\bar {\mathbb {R}}$}}{66}{defi.19}%
+\contentsline {theo}{{Teorema}{14}{Caracterización de la continuidad}}{66}{theo.14}%
+\contentsline {demo}{{\underline {Demostración}:}{35}{}}{66}{demo.35}%
+\contentsline {defi}{{Definición}{18}{Discontinuidades}}{67}{defi.18}%
+\contentsline {defi}{{Definición}{19}{Límites Laterales en $\bar {\mathbb {R}}$}}{67}{defi.19}%
 \contentsline {prop}{{Proposición}{26}{}}{67}{prop.26}%
-\contentsline {theo}{{Teorema}{15}{de Wierstrass}}{67}{theo.15}%
-\contentsline {demo}{{\underline {Demostración}:}{35}{}}{68}{demo.35}%
-\contentsline {obs}{{\underline {Observación}:}{14}{}}{68}{obs.14}%
-\contentsline {theo}{{Teorema}{16}{de Bolzano}}{68}{theo.16}%
+\contentsline {theo}{{Teorema}{15}{de Wierstrass}}{68}{theo.15}%
 \contentsline {demo}{{\underline {Demostración}:}{36}{}}{68}{demo.36}%
-\contentsline {theo}{{Teorema}{17}{del valor intermedio}}{68}{theo.17}%
+\contentsline {obs}{{\underline {Observación}:}{15}{}}{69}{obs.15}%
+\contentsline {theo}{{Teorema}{16}{de Bolzano}}{69}{theo.16}%
 \contentsline {demo}{{\underline {Demostración}:}{37}{}}{69}{demo.37}%
-\contentsline {prop}{{Proposición}{27}{}}{69}{prop.27}%
+\contentsline {theo}{{Teorema}{17}{del valor intermedio}}{69}{theo.17}%
 \contentsline {demo}{{\underline {Demostración}:}{38}{}}{69}{demo.38}%
-\contentsline {prop}{{Proposición}{28}{}}{69}{prop.28}%
+\contentsline {prop}{{Proposición}{27}{}}{69}{prop.27}%
 \contentsline {demo}{{\underline {Demostración}:}{39}{}}{69}{demo.39}%
+\contentsline {prop}{{Proposición}{28}{}}{70}{prop.28}%
+\contentsline {demo}{{\underline {Demostración}:}{40}{}}{70}{demo.40}%
+\contentsline {defi}{{Definición}{20}{Continuidad uniforme}}{70}{defi.20}%
+\contentsline {obs}{{\underline {Observación}:}{16}{}}{70}{obs.16}%
+\contentsline {ej}{{\underline {Ejemplo}:}{14}{}}{70}{ej.14}%
+\contentsline {theo}{{Teorema}{18}{}}{70}{theo.18}%
+\contentsline {demo}{{\underline {Demostración}:}{41}{}}{70}{demo.41}%
+\contentsline {defi}{{Definición}{21}{Función Monótona}}{71}{defi.21}%
+\contentsline {theo}{{Teorema}{19}{}}{71}{theo.19}%
+\contentsline {demo}{{\underline {Demostración}:}{42}{}}{71}{demo.42}%
+\contentsline {obs}{{\underline {Observación}:}{17}{}}{71}{obs.17}%
+\contentsline {theo}{{Teorema}{20}{}}{72}{theo.20}%
+\contentsline {demo}{{\underline {Demostración}:}{43}{}}{72}{demo.43}%
+\contentsline {prop}{{Proposición}{29}{}}{72}{prop.29}%
+\contentsline {demo}{{\underline {Demostración}:}{44}{}}{72}{demo.44}%
+\contentsline {defi}{{Definición}{22}{Derivabilidad}}{77}{defi.22}%
+\contentsline {obs}{{\underline {Observación}:}{18}{}}{77}{obs.18}%
+\contentsline {ej}{{\underline {Ejemplo}:}{15}{}}{78}{ej.15}%
+\contentsline {prop}{{Proposición}{30}{}}{78}{prop.30}%
+\contentsline {demo}{{\underline {Demostración}:}{45}{}}{78}{demo.45}%
+\contentsline {defi}{{Definición}{23}{Función Derivada}}{78}{defi.23}%
+\contentsline {ej}{{\underline {Ejemplo}:}{16}{}}{78}{ej.16}%
+\contentsline {theo}{{Teorema}{21}{}}{78}{theo.21}%
+\contentsline {demo}{{\underline {Demostración}:}{46}{}}{78}{demo.46}%
+\contentsline {obs}{{\underline {Observación}:}{19}{}}{78}{obs.19}%
+\contentsline {ej}{{\underline {Ejemplo}:}{17}{}}{78}{ej.17}%
+\contentsline {theo}{{Teorema}{22}{Operaciones con Derivabilidad}}{79}{theo.22}%
+\contentsline {demo}{{\underline {Demostración}:}{47}{}}{80}{demo.47}%
+\contentsline {coro}{{Corolario}{2}{}}{80}{coro.2}%
+\contentsline {demo}{{\underline {Demostración}:}{48}{}}{80}{demo.48}%
+\contentsline {ej}{{\underline {Ejemplo}:}{18}{}}{80}{ej.18}%
+\contentsline {lema}{{Lema}{1}{de Caratheodery}}{80}{lema.1}%
+\contentsline {demo}{{\underline {Demostración}:}{49}{}}{81}{demo.49}%
+\contentsline {theo}{{Teorema}{23}{Regla de la Cadena}}{81}{theo.23}%
+\contentsline {demo}{{\underline {Demostración}:}{50}{}}{81}{demo.50}%
+\contentsline {theo}{{Teorema}{24}{Derivada de la función inversa}}{81}{theo.24}%
+\contentsline {demo}{{\underline {Demostración}:}{51}{}}{82}{demo.51}%
+\contentsline {obs}{{\underline {Observación}:}{20}{}}{82}{obs.20}%
+\contentsline {ej}{{\underline {Ejemplo}:}{19}{}}{82}{ej.19}%
+\contentsline {defi}{{Definición}{24}{Extremos relativos}}{83}{defi.24}%
+\contentsline {defi}{{Definición}{25}{Punto Interior}}{83}{defi.25}%
+\contentsline {ej}{{\underline {Ejemplo}:}{20}{}}{83}{ej.20}%
+\contentsline {theo}{{Teorema}{25}{Caracterización de los extremos relativos}}{83}{theo.25}%
+\contentsline {demo}{{\underline {Demostración}:}{52}{}}{83}{demo.52}%
+\contentsline {theo}{{Teorema}{26}{de Rolle}}{83}{theo.26}%
+\contentsline {demo}{{\underline {Demostración}:}{53}{}}{83}{demo.53}%
+\contentsline {theo}{{Teorema}{27}{del valor medio}}{84}{theo.27}%
+\contentsline {demo}{{\underline {Demostración}:}{54}{}}{84}{demo.54}%
+\contentsline {obs}{{\underline {Observación}:}{21}{}}{84}{obs.21}%
+\contentsline {theo}{{Teorema}{28}{}}{84}{theo.28}%
+\contentsline {demo}{{\underline {Demostración}:}{55}{}}{85}{demo.55}%
+\contentsline {coro}{{Corolario}{3}{}}{85}{coro.3}%
+\contentsline {demo}{{\underline {Demostración}:}{56}{}}{85}{demo.56}%
+\contentsline {obs}{{\underline {Observación}:}{22}{}}{85}{obs.22}%
+\contentsline {ej}{{\underline {Ejemplo}:}{21}{}}{85}{ej.21}%
+\contentsline {prop}{{Proposición}{31}{}}{86}{prop.31}%
+\contentsline {demo}{{\underline {Demostración}:}{57}{}}{86}{demo.57}%
+\contentsline {obs}{{\underline {Observación}:}{23}{}}{86}{obs.23}%
+\contentsline {theo}{{Teorema}{29}{}}{87}{theo.29}%
+\contentsline {demo}{{\underline {Demostración}:}{58}{}}{87}{demo.58}%
+\contentsline {theo}{{Teorema}{30}{de Darboux}}{87}{theo.30}%
+\contentsline {demo}{{\underline {Demostración}:}{59}{}}{87}{demo.59}%
+\contentsline {obs}{{\underline {Observación}:}{24}{}}{87}{obs.24}%
+\contentsline {obs}{{\underline {Observación}:}{25}{}}{87}{obs.25}%
+\contentsline {defi}{{Definición}{26}{Polinomio de Taylor}}{91}{defi.26}%
+\contentsline {obs}{{\underline {Observación}:}{26}{}}{91}{obs.26}%
+\contentsline {theo}{{Teorema}{31}{de Taylor}}{92}{theo.31}%
+\contentsline {demo}{{\underline {Demostración}:}{60}{}}{92}{demo.60}%
+\contentsline {obs}{{\underline {Observación}:}{27}{}}{92}{obs.27}%
+\contentsline {ej}{{\underline {Ejemplo}:}{22}{}}{93}{ej.22}%
+\contentsline {prop}{{Proposición}{32}{}}{93}{prop.32}%
+\contentsline {demo}{{\underline {Demostración}:}{61}{}}{93}{demo.61}%
+\contentsline {prop}{{Proposición}{33}{}}{94}{prop.33}%
+\contentsline {demo}{{\underline {Demostración}:}{62}{}}{94}{demo.62}%
+\contentsline {defi}{{Definición}{27}{Convexidad}}{95}{defi.27}%
+\contentsline {theo}{{Teorema}{32}{Caracterización de la Convexidad}}{96}{theo.32}%
+\contentsline {demo}{{\underline {Demostración}:}{63}{}}{96}{demo.63}%
+\contentsline {obs}{{\underline {Observación}:}{28}{}}{97}{obs.28}%
+\contentsline {theo}{{Teorema}{33}{}}{98}{theo.33}%
+\contentsline {demo}{{\underline {Demostración}:}{64}{}}{98}{demo.64}%
+\contentsline {ej}{{\underline {Ejemplo}:}{23}{}}{99}{ej.23}%
+\contentsline {defi}{{Definición}{28}{Partición y Norma}}{102}{defi.28}%
+\contentsline {defi}{{Definición}{29}{Particiones Marcadas y Equiespaciadas}}{102}{defi.29}%
+\contentsline {defi}{{Definición}{30}{Suma de Riemann}}{102}{defi.30}%
+\contentsline {defi}{{Definición}{31}{Integral de Riemann}}{102}{defi.31}%
+\contentsline {theo}{{Teorema}{34}{}}{103}{theo.34}%
+\contentsline {demo}{{\underline {Demostración}:}{65}{}}{103}{demo.65}%
+\contentsline {ej}{{\underline {Ejemplo}:}{24}{}}{103}{ej.24}%
+\contentsline {ej}{{\underline {Ejemplo}:}{25}{}}{103}{ej.25}%
+\contentsline {theo}{{Teorema}{35}{}}{104}{theo.35}%
+\contentsline {demo}{{\underline {Demostración}:}{66}{}}{104}{demo.66}%
+\contentsline {theo}{{Teorema}{36}{}}{104}{theo.36}%
+\contentsline {demo}{{\underline {Demostración}:}{67}{}}{105}{demo.67}%
+\contentsline {obs}{{\underline {Observación}:}{29}{}}{105}{obs.29}%
+\contentsline {theo}{{Teorema}{37}{Acotamiento por integrabilidad}}{105}{theo.37}%
+\contentsline {demo}{{\underline {Demostración}:}{68}{}}{105}{demo.68}%
+\contentsline {theo}{{Teorema}{38}{Operaciones con Integrabilidad}}{106}{theo.38}%
+\contentsline {demo}{{\underline {Demostración}:}{69}{}}{106}{demo.69}%
+\contentsline {defi}{{Definición}{32}{Función Característica}}{107}{defi.32}%
+\contentsline {obs}{{\underline {Observación}:}{30}{}}{107}{obs.30}%
+\contentsline {defi}{{Definición}{33}{Función Escalera}}{107}{defi.33}%
+\contentsline {obs}{{\underline {Observación}:}{31}{}}{107}{obs.31}%
+\contentsline {theo}{{Teorema}{39}{Criterio de Cauchy}}{107}{theo.39}%
+\contentsline {demo}{{\underline {Demostración}:}{70}{}}{108}{demo.70}%
+\contentsline {obs}{{\underline {Observación}:}{32}{}}{108}{obs.32}%
+\contentsline {theo}{{Teorema}{40}{Criterio del Sandwich}}{108}{theo.40}%
+\contentsline {demo}{{\underline {Demostración}:}{71}{}}{109}{demo.71}%
+\contentsline {obs}{{\underline {Observación}:}{33}{}}{110}{obs.33}%
+\contentsline {prop}{{Proposición}{34}{Criterios de no integrabilidad}}{110}{prop.34}%
+\contentsline {demo}{{\underline {Demostración}:}{72}{}}{110}{demo.72}%
+\contentsline {theo}{{Teorema}{41}{}}{110}{theo.41}%
+\contentsline {demo}{{\underline {Demostración}:}{73}{}}{110}{demo.73}%
+\contentsline {obs}{{\underline {Observación}:}{34}{}}{112}{obs.34}%
+\contentsline {defi}{{Definición}{34}{Conjunto de Medida Nula}}{112}{defi.34}%
+\contentsline {obs}{{\underline {Observación}:}{35}{}}{113}{obs.35}%
+\contentsline {theo}{{Teorema}{42}{de Lebesque de Integración}}{113}{theo.42}%
+\contentsline {prop}{{Proposición}{35}{Operaciones con Medida Nula}}{113}{prop.35}%
+\contentsline {prop}{{Proposición}{36}{Integrabilidad de la composición}}{113}{prop.36}%
+\contentsline {demo}{{\underline {Demostración}:}{74}{}}{114}{demo.74}%
+\contentsline {ej}{{\underline {Ejemplo}:}{26}{}}{114}{ej.26}%
+\contentsline {prop}{{Proposición}{37}{Aditividad de la Integral}}{114}{prop.37}%
+\contentsline {demo}{{\underline {Demostración}:}{75}{}}{114}{demo.75}%
+\contentsline {prop}{{Proposición}{38}{}}{115}{prop.38}%
+\contentsline {demo}{{\underline {Demostración}:}{76}{}}{115}{demo.76}%
+\contentsline {theo}{{Teorema}{43}{}}{116}{theo.43}%
+\contentsline {demo}{{\underline {Demostración}:}{77}{}}{116}{demo.77}%
+\contentsline {theo}{{Teorema}{44}{Regla de Barrow}}{117}{theo.44}%
+\contentsline {demo}{{\underline {Demostración}:}{78}{}}{117}{demo.78}%
+\contentsline {coro}{{Corolario}{4}{}}{117}{coro.4}%
+\contentsline {demo}{{\underline {Demostración}:}{79}{}}{117}{demo.79}%
+\contentsline {defi}{{Definición}{35}{Integral Indefinida}}{118}{defi.35}%
+\contentsline {theo}{{Teorema}{45}{}}{118}{theo.45}%
+\contentsline {demo}{{\underline {Demostración}:}{80}{}}{118}{demo.80}%
+\contentsline {theo}{{Teorema}{46}{Fundamental del Cálculo}}{118}{theo.46}%
+\contentsline {demo}{{\underline {Demostración}:}{81}{}}{119}{demo.81}%
+\contentsline {obs}{{\underline {Observación}:}{36}{}}{119}{obs.36}%
+\contentsline {theo}{{Teorema}{47}{Cambio de Variable}}{120}{theo.47}%
+\contentsline {demo}{{\underline {Demostración}:}{82}{}}{120}{demo.82}%
+\contentsline {ej}{{\underline {Ejemplo}:}{27}{}}{120}{ej.27}%
+\contentsline {theo}{{Teorema}{48}{Integración por partes}}{121}{theo.48}%
+\contentsline {demo}{{\underline {Demostración}:}{83}{}}{121}{demo.83}%
+\contentsline {ej}{{\underline {Ejemplo}:}{28}{}}{121}{ej.28}%
+\contentsline {defi}{{Definición}{36}{Integral Impropia de 1ª especie}}{122}{defi.36}%
+\contentsline {obs}{{\underline {Observación}:}{37}{}}{123}{obs.37}%
+\contentsline {ej}{{\underline {Ejemplo}:}{29}{}}{123}{ej.29}%
+\contentsline {theo}{{Teorema}{49}{Criterio de Cauchy}}{123}{theo.49}%
+\contentsline {obs}{{\underline {Observación}:}{38}{}}{123}{obs.38}%
+\contentsline {coro}{{Corolario}{5}{}}{124}{coro.5}%
+\contentsline {obs}{{\underline {Observación}:}{39}{}}{124}{obs.39}%
+\contentsline {theo}{{Teorema}{50}{Criterio de comparación de integrales impropias}}{124}{theo.50}%
+\contentsline {demo}{{\underline {Demostración}:}{84}{}}{124}{demo.84}%
+\contentsline {ej}{{\underline {Ejemplo}:}{30}{}}{124}{ej.30}%
+\contentsline {theo}{{Teorema}{51}{Criterio de comparación en el límite}}{125}{theo.51}%
+\contentsline {demo}{{\underline {Demostración}:}{85}{}}{126}{demo.85}%
+\contentsline {ej}{{\underline {Ejemplo}:}{31}{}}{126}{ej.31}%
+\contentsline {theo}{{Teorema}{52}{Criterio de convergencia entre series e integrales}}{127}{theo.52}%
+\contentsline {demo}{{\underline {Demostración}:}{86}{}}{127}{demo.86}%
+\contentsline {obs}{{\underline {Observación}:}{40}{}}{128}{obs.40}%
+\contentsline {obs}{{\underline {Observación}:}{41}{}}{128}{obs.41}%
+\contentsline {ej}{{\underline {Ejemplo}:}{32}{}}{128}{ej.32}%
+\contentsline {ej}{{\underline {Ejemplo}:}{33}{}}{129}{ej.33}%
+\contentsline {ej}{{\underline {Ejemplo}:}{34}{}}{129}{ej.34}%
+\contentsline {theo}{{Teorema}{53}{}}{130}{theo.53}%
+\contentsline {demo}{{\underline {Demostración}:}{87}{}}{130}{demo.87}%
+\contentsline {defi}{{Definición}{37}{Convergencia Puntual}}{134}{defi.37}%
+\contentsline {ej}{{\underline {Ejemplo}:}{35}{}}{134}{ej.35}%
+\contentsline {defi}{{Definición}{38}{Convergencia Uniforme}}{135}{defi.38}%
+\contentsline {obs}{{\underline {Observación}:}{42}{}}{135}{obs.42}%
+\contentsline {ej}{{\underline {Ejemplo}:}{36}{}}{135}{ej.36}%
+\contentsline {theo}{{Teorema}{54}{}}{136}{theo.54}%
+\contentsline {demo}{{\underline {Demostración}:}{88}{}}{136}{demo.88}%
+\contentsline {defi}{{Definición}{39}{Norma del Supremo}}{136}{defi.39}%
+\contentsline {obs}{{\underline {Observación}:}{43}{}}{136}{obs.43}%
+\contentsline {theo}{{Teorema}{55}{Criterio de Cauchy}}{137}{theo.55}%
+\contentsline {demo}{{\underline {Demostración}:}{89}{}}{137}{demo.89}%
+\contentsline {theo}{{Teorema}{56}{Criterio de no Convergencia Uniforme}}{137}{theo.56}%
+\contentsline {demo}{{\underline {Demostración}:}{90}{}}{138}{demo.90}%
+\contentsline {ej}{{\underline {Ejemplo}:}{37}{}}{138}{ej.37}%
+\contentsline {theo}{{Teorema}{57}{Uniformidad de la continuidad}}{139}{theo.57}%
+\contentsline {demo}{{\underline {Demostración}:}{91}{}}{139}{demo.91}%
+\contentsline {theo}{{Teorema}{58}{Uniformidad de la derivada}}{139}{theo.58}%
+\contentsline {demo}{{\underline {Demostración}:}{92}{}}{139}{demo.92}%
+\contentsline {theo}{{Teorema}{59}{Uniformidad de la integral}}{140}{theo.59}%
+\contentsline {demo}{{\underline {Demostración}:}{93}{}}{140}{demo.93}%
+\contentsline {obs}{{\underline {Observación}:}{44}{}}{141}{obs.44}%
+\contentsline {theo}{{Teorema}{60}{}}{142}{theo.60}%
+\contentsline {demo}{{\underline {Demostración}:}{94}{}}{142}{demo.94}%
+\contentsline {theo}{{Teorema}{61}{de Dini}}{142}{theo.61}%
+\contentsline {demo}{{\underline {Demostración}:}{95}{}}{142}{demo.95}%
+\contentsline {defi}{{Definición}{40}{Tipos de Convergencia}}{143}{defi.40}%
+\contentsline {ej}{{\underline {Ejemplo}:}{38}{}}{143}{ej.38}%
+\contentsline {theo}{{Teorema}{62}{Uniformidad de la continuidad}}{144}{theo.62}%
+\contentsline {demo}{{\underline {Demostración}:}{96}{}}{144}{demo.96}%
+\contentsline {theo}{{Teorema}{63}{Uniformidad de la derivada}}{144}{theo.63}%
+\contentsline {demo}{{\underline {Demostración}:}{97}{}}{144}{demo.97}%
+\contentsline {theo}{{Teorema}{64}{Uniformidad de la integral}}{144}{theo.64}%
+\contentsline {demo}{{\underline {Demostración}:}{98}{}}{144}{demo.98}%
+\contentsline {theo}{{Teorema}{65}{Criterio de Convergencia Uniforme de Cauchy para series}}{145}{theo.65}%
+\contentsline {obs}{{\underline {Observación}:}{45}{}}{145}{obs.45}%
+\contentsline {theo}{{Teorema}{66}{Criterio M de Weierstrass}}{145}{theo.66}%
+\contentsline {demo}{{\underline {Demostración}:}{99}{}}{145}{demo.99}%
+\contentsline {defi}{{Definición}{41}{Serie de Potencias}}{145}{defi.41}%
+\contentsline {obs}{{\underline {Observación}:}{46}{}}{146}{obs.46}%
+\contentsline {defi}{{Definición}{42}{Radio de convergencia}}{146}{defi.42}%
+\contentsline {theo}{{Teorema}{67}{de Cauchy - Hadamard}}{146}{theo.67}%
+\contentsline {demo}{{\underline {Demostración}:}{100}{}}{146}{demo.100}%
+\contentsline {obs}{{\underline {Observación}:}{47}{}}{147}{obs.47}%
+\contentsline {ej}{{\underline {Ejemplo}:}{39}{}}{147}{ej.39}%
+\contentsline {coro}{{Corolario}{6}{}}{147}{coro.6}%
+\contentsline {demo}{{\underline {Demostración}:}{101}{}}{147}{demo.101}%
+\contentsline {theo}{{Teorema}{68}{}}{148}{theo.68}%
+\contentsline {demo}{{\underline {Demostración}:}{102}{}}{148}{demo.102}%
+\contentsline {obs}{{\underline {Observación}:}{48}{}}{149}{obs.48}%
+\contentsline {prop}{{Proposición}{39}{}}{149}{prop.39}%
+\contentsline {demo}{{\underline {Demostración}:}{103}{}}{149}{demo.103}%
+\contentsline {obs}{{\underline {Observación}:}{49}{}}{149}{obs.49}%
+\contentsline {prop}{{Proposición}{40}{}}{149}{prop.40}%
+\contentsline {demo}{{\underline {Demostración}:}{104}{}}{150}{demo.104}%
