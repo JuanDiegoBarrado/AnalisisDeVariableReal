@@ -125,9 +125,10 @@ http://creativecommons.org/licenses/by-nc/4.0/
 
 \mainmatter
 \chapter{Introducción a Conjuntos y Funciones}
-\section{Conjuntos}
-Un \textbf{Conjunto} es una ``colección'' o ``familia'' de objetos al que puede pertenecer o no un conjunto cualquiera, pero no puede hacer ambas cosas a la vez.
-\subsection{\underline{Operaciones con conjuntos}}
+Este curso de análisis de variable real gira en torno a dos conceptos fundamentales: conjunto y funciones. Estos dos conceptos básicos de las matemáticas tienen que ser conocidos en profundidad y manejados con soltura, pues componen las piezas más pequeñas sobre las que se va  a trabajar a lo largo del documento. Por ello, se ha generado este capítulo auxiliar al principio para poner en antecedentes a todos los lectores que no estén familiarizados con dichos elementos.
+
+\begin{defi}[Conjunto]
+Un \textbf{conjunto} es una colección o familia de objetos al que puede pertenecer o no un elemento cualquiera, pero no ambas simultáneamente. Las operaciones que podemos realizar con ellos son las siguientes:
 \begin{itemize}
 \item Inclusión: $A\subset B \Leftrightarrow \forall x \in A \Rightarrow x \in B$
 \item Equivalencia: $A \equiv B \Leftrightarrow A \subset B \wedge B \subset A$
@@ -141,49 +142,66 @@ $$\bigcap_{i\in I}A_i=\left\lbrace x: \forall i \in I : x\in A_i\right\rbrace$$
 \item Uniones múltiples: Sea $I$ un conjunto de de índices y $\forall i \in I$
 $$\bigcup_{i\in I}A_i=\left\lbrace x: \exists i \in I: x\in A_i\right\rbrace$$
 \end{itemize}
+\end{defi}
 
-\subsection{\underline{Producto Cartesiano}}
-Sean A y B conjuntos no vacíos, llamamos par ordenado a una pareja donde $a \in A$ y $b \in B$:
+\begin{defi}[Producto Cartesiano]
+Sean $A$ y $B$ conjuntos no vacíos, llamamos par ordenado a una pareja donde $a \in A$ y $b \in B$:
 $$(a,b)\neq (b,a) : a\in A \wedge b\in B$$
-El producto cartesiano es el conjunto:
+Por tanto, definimos el producto cartesiano como:
 $$A\times B=\left\lbrace (a,b) : a \in A \wedge b \in B\right\rbrace$$
-
 \begin{center}
 \includegraphics[scale=0.5]{producto cartesiano}
 \end{center}
+\end{defi}
  
-\subsection{\underline{Correspondencia}}
-Una correspondencia entre conjuntos es la asignación de cada elemento de un conjunto a otro del otro conjunto.\par
-Sean A y B conjuntos, la correspondencia es un subconjunto C del producto cartesiano de ambos conjuntos iniciales, es decir, una serie de pares ordenados del producto cartesiano. Sin embargo, a cada elemento del primer conjunto \textbf{sólo puede corresponderle como mucho un elemento del segundo conjunto}.
-$$\mbox{Si }(x,y) \in C\wedge (x,z)\in C\Rightarrow y=z$$
-Aunque es cierto que no todo elemento tiene que tener su correspondiente.
-\subsubsection{Dominio}
-Si C es una correspondencia entre A y B, el dominio de C son aquellos elementos que sí poseen un correspondiente en B.
+\begin{defi}[Correspondencia]
+Sean $A$ y $B$ conjuntos, definimos \textbf{una correspondencia entre ambos} como un $C\subset A \times B$ tal que $\forall a \in A : \exists! b \in B : (a,b)\in C$, es decir, un conjunto formado por pares ordenados en los que cada elemento de $A$ tiene un único elemento de $B$ asociado.
+\end{defi}
+
+\begin{obs}
+La definición no obliga a que todo elemento tenga un correspondiente.
+\end{obs}
+
+\begin{defi}[Dominio y Rango]
+Sea $C$ una correspondencia entre $A$ y $B$, definimos el \textbf{dominio de C} como los elementos que poseen un correspondiente en $B$, es decir:
 $$dom(C)=\left\lbrace a\in A : \exists b \in B : (a,b)\in C\right\rbrace$$
-\subsubsection{Rango o Imagen}
-El rango o imagen de la correspondencia son aquellos elementos del conjunto B que son el correspondiente de algún elemento del conjunto A.
+Del mismo modo,  definimos el \textbf{rango o imagen de C} como los elementos de $B$ que están emparejados con algún elemento de $A$, es decir:
 $$ran(C)=im(C)=\left\lbrace b\in B : \exists a \in A : (a,b)\in C\right\rbrace$$
-\subsubsection{Observaciones}
-Si el conjunto C es una correspondencia entre A y B y $(x,y)\in C$, decimos que a $x\in A$ le corresponde $y\in B$ o que $y\in B$ es la imagen de $x \in A$. Esta correspondencia entre ambos conjuntos se puede llamar \textbf{función} $(f)$ en cuyo caso se expresa como:
+\end{defi}
+
+\begin{obs}
+Si $C$ es una correspondencia entre $A$ y $B$ y $(x,y)\in C$, es habitual referirse a $y\in B$ como la imagen de $x \in A$. 
+\end{obs}
+
+\begin{defi}[Función]
+Sea $C$ una correspondencia entre $A$ y $B$, la llamamos \textbf{función o aplicación} si y sólo si $dom(f)=A$, es decir, si todo elemento de $A$ tiene un correspondiente en $B$.
+$$f: A\rightarrow B$$
+\end{defi}
+
+\begin{obs}
+A los conjuntos $A$ y $B$ se los suele llamar dominio y codominio respectivamente, además las definiciones de elementos de las correspondencias se pueden reducir a:
 $$dom(f)=\left\lbrace x \in A : \exists f(x)\in B\right\rbrace$$
 $$ran(f)=im(f)=\left\lbrace y\in B : \exists x \in A : y=f(x)\right\rbrace$$
-\subsection{\underline{Funciones}}
-Una correspondencia se denomina FUNCIÓN o aplicación si $dom(f)=A$, es decir, todo el conjunto posee un correspondiente en B como imagen.
-$$f: A\rightarrow B$$
-Sean A, el dominio, y B, el codominio, y una función entre esos dos conjuntos llamada $f$.
+Además, si observamos como la función trata a conjuntos completos, vemos que:
 $$E\subset A\Rightarrow f(E)=\{\forall b\in B : \exists a \in E : b=f(a)\}$$
-De forma análoga:
 $$F\subset B\Rightarrow f^{-1}(F)=\{a \in A : f(a)\in F\}$$
-Es decir, la condición de función al aplicarse a elementos también afecta a conjuntos.
-\subsubsection{Inyectividad}
-Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{inyectiva} cuando todo elemento de A posee una imagen distinta de la imagen de cualquier otro elemento de A:
+es decir, la condición de función al aplicarse a elementos también afecta a conjuntos.
+\end{obs}
+
+\begin{defi}[Inyectividad]
+Sean $A$ y $B$ conjuntos y $f: A \rightarrow B$ una función entre ambos, decimos que $f$ es \textbf{inyectiva} cuando no hay elementos de $A$ con la misma imagen en $B$:
 $$\forall a_1, a_2 \in A : a_1 \neq a_2\Rightarrow f(a_1)\neq f(a_2)$$
+Para ello, es necesario que $card(A)\leq card(B)$
+\end{defi}
 
-Para poder ser cierto $card(A)\leq card(B)$\par
+\begin{obs}
+En la práctica, para calcular si una función es inyectiva o no, tomaremos $f(x_1)=f(x_2)$ y si eso resulta en $x_1=x_2$ entonces es inyectiva, si no, no.
 
-En la práctica, para calcular si una función es inyectiva o no, tomaremos $f(x_1)=f(x_2)$ y si eso resulta en $x_1=x_2$ entonces es inyectiva, si no no.\par
+También se puede coger un elemento $y$ que pertenezca a la imagen, despejar $x$ de $y=f(x)$ y ver si para un mismo $y$ hay varios valores de $x$.
+\end{obs}
 
-Ej.:  "$f(x)=x^2$"
+\begin{ej}
+Tomamos la función $f(x)=x^2$:
 $$f(x_1)=f(x_2)\Rightarrow x_1^2=x_2^2\Rightarrow x_1^2-x_2^2=0 \Rightarrow$$
 $$\Rightarrow (x_1-x_2)(x_1+x_2)=0 \Rightarrow
 \begin{cases}
@@ -191,69 +209,103 @@ x_1-x_2=0 \Rightarrow & x_1=x_2 \\
 x_1+x_2=0 \Rightarrow & x_1=-x_2 \\
 \end{cases}
 \Rightarrow \mbox{ no es inyectiva}$$
+\end{ej}
 
-También se puede coger un elemento $y$ que pertenezca a la imagen, despejar $x$ de $y=f(x)$ y ver si para un mismo $y$ hay varios valores de $x$:\par
-Ej.: $f: \mathbb R^+ \rightarrow \mathbb R^+ : f(x)=\frac{x^2}{1+x}$
+\begin{ej}
+Tomamos la función $f: \mathbb R^+ \rightarrow \mathbb R^+ : f(x)=\frac{x^2}{1+x}$:
 $$y\in im(f)\Rightarrow y=f(x)=\frac{x^2}{1+x}\Leftrightarrow x^2-yx-y=0$$
 $$x=\frac{y\pm \sqrt{y^2+4y}}{2}\mbox{ pero como }\frac{y\pm \sqrt{y^2+4y}}{2}<0\Rightarrow x\notin \mathbb R^+\Rightarrow inyectiva$$
-Ej.: ``$E=\{x\in \mathbb R : 1\leq x\leq 2\}$, $G=\{y\in \mathbb R : 1\leq y\leq 4\}$ y $f(x)=\frac{1}{x^2}$''
+\end{ej}
+
+\begin{ej}
+Supongamos estos dos conjuntos $E=\{x\in \mathbb R : 1\leq x\leq 2\}$, $G=\{y\in \mathbb R : 1\leq y\leq 4\}$ y la siguiente función $f(x)=\frac{1}{x^2}$, entonces:
 $$f(E)?\rightarrow 1\leq x\leq 2\Leftrightarrow 1\leq x^2\leq 4\Leftrightarrow 1\geq x\geq \frac{1}{4}=f(E)$$
 $$f^{-1}(G)?\rightarrow 1\leq y=f(x)=\frac{1}{x^2}\leq 4\Leftrightarrow 1\geq x^2\geq \frac{1}{4}\Leftrightarrow 1\geq |x|\geq \frac{1}{2} 
 \begin{cases}
 1\geq x\geq \frac{1}{2}& \Rightarrow 1\geq x\geq \frac{1}{2} \\
 1\geq -x\geq \frac{1}{2}& \Rightarrow -1\leq x\leq -\frac{1}{2}
 \end{cases}$$
+\end{ej}
 
-\subsubsection{Suprayectividad}
-Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{suprayectiva} o \textit{sobre} cuando todo elemento de B es imagen\footnote{Lo que se traduce en que $im(f)=B$} de algún elemento de A:
+\begin{defi}[Suprayectividad]
+Sean $A$ y $B$ conjuntos y $f: A \rightarrow B$ una función entre ambos, decimos que $f$ es \textbf{suprayectiva o sobreyectiva} cuando todos los elementos de $B$ son imágenes\footnote{Lo que se traduce en que $im(f)=B$} de algún elemento de $A$, es decir:
 $$\forall b \in B : \exists a \in A : f(a)=b$$
+Para ello, es necesario que $card(A)\geq card(B)$
+\end{defi}
 
-Para poder ser cierto $card(A)\geq card(B)$\par
+\begin{obs}
+En la práctica, para calcular si una función es inyectiva o no, tomaremos $y=f(x)$ y despejaremos $x$, si $y$ toma como posibles valores los mismos que los valores del codominio, es suprayectiva.
+\end{obs}
 
-En la práctica, para calcular si una función es inyectiva o no, tomaremos $y=f(x)$ y despejaremos $x$, si $y$ toma como posibles valores los mismos que los valores del codominio, es suprayectiva.\par
-
-Ej.:  "$f(x)=x^2$"
+\begin{ej}
+Tomamos la función $f(x)=x^2$:
 $$y=x^2\Rightarrow x=\sqrt{y}\Rightarrow y\in (0,\infty)$$
 Luego no es suprayectiva porque $f: \mathbb R \rightarrow \mathbb R$
+\end{ej}
 
-\subsubsection{Biyectividad}
-Sean A y B conjuntos y $f: A \rightarrow B$ una función, se dice que $f$ es \textbf{biyectiva} cuando $f$ es inyectiva y suprayectiva simultáneamente.\par
-Para poder ser cierto $card(A) = card(B)$
+\begin{defi}[Biyectividad]
+Sean $A$ y $B$ conjuntos y $f: A \rightarrow B$ una función entre ambos, decimos que $f$ es \textbf{biyectiva} cuando es inyectiva y suprayectiva simultáneamente.
 
-\subsubsection{Observaciones}
+Para ello, es necesario que $card(A) = card(B)$.
+\end{defi}
+
+\begin{obs}
 No es difícil entre ver que la cantidad de elementos en los distintos conjuntos determinan en cierto modo (puesto que  para conjuntos infinitos no podemos contarlos) la obtención o no de los calificativos anteriores. De este hecho se desprende que:
 $$\mbox{Sea }f: A\rightarrow B\mbox{ suprayectiva}\Rightarrow \exists f: B\rightarrow A \mbox{ inyectiva} $$
-\subsection{\underline{Numerabilidad de conjuntos}}
-Decimos que además un conjunto es NUMERABLE\footnote{Por ejemplo, $\mathbb R$ no es numerable} cuando entre él y $\mathbb N$ se puede establecer una función biyectiva. Hay un teorema que dice que:
+\end{obs}
+
+\begin{defi}[Conjunto Numerable]
+Sea $A$ un conjunto cualquiera, decimos que es \textbf{numerable}\footnote{Por ejemplo, $\mathbb R$ no es numerable} cuando existe una función biyectiva entre $\mathbb N$ y dicho conjunto.
+\end{defi}
+
+
+\begin{prop}
+La unión numerable de conjuntos numerables es numerable:
 $$\forall n\in \mathbb N : A_n\mbox{ es numerable}\Rightarrow \bigcup_{n\in \mathbb N} A_n\mbox{ es numerable}$$
-Además se tiene que:
+El producto cartesiano de conjuntos numerables es numerable:
 $$f:\mathbb N\stackrel{biyec.}{\rightarrow} \mathbb N \times \mathbb N \Rightarrow \mathbb N \times \mathbb N\mbox{ es numerable}$$
 \begin{center}
 \includegraphics[scale=0.25]{nxn numerable}
 \end{center}
+\end{prop}
 
-\subsubsection{Teorema de Schöder-Berstein}
-Sean A y B dos conjuntos:
-$$\exists f: A\rightarrow B \mbox{ inyectiva}\wedge \exists g: A\rightarrow B \mbox{ suprayectiva}\Rightarrow \exists h: A\rightarrow B \mbox{ biyectiva}$$
+\begin{theo}[de Schöder-Berstein]
+Sean $A$ y $B$ conjuntos, entonces:
+$$\exists f: A\rightarrow B \mbox{ iny.}\mbox{ y } \exists g: A\rightarrow B \mbox{ supra. }\Rightarrow \exists h: A\rightarrow B \mbox{ biy.}$$
+\end{theo}
 
-\subsubsection{Composición de funciones}
-Sea A, B, C conjuntos y $f: A\rightarrow B$, $g: B\rightarrow C$:
+\begin{defi}[Composición de funciones]
+Sean $A$, $B$ y $C$ conjuntos y $f: A\rightarrow B$, $g: B\rightarrow C$ dos funciones, definimos la \textbf{composición de $f$ con $g$} como la función:
 $$gof(a)=g\left(f(a)\right),\forall a \in A\Rightarrow gof: A\rightarrow C$$
+\end{defi}
 
-\subsection{\underline{Conjunto P(A)}}
-Sea A un conjunto, se le llama \textit{partes de A} o P(A) al conjunto formado por todos los subconjuntos de A:
-$$\mbox{Ej.: } A=\{a,b,c\}\rightarrow P(A)=\left\lbrace \{a\}, \{b\},\{c\}, \emptyset, \{a,b\}, \{a,c\}, \{b,c\}, A \right\rbrace$$
-Concretamente la función que relaciona A con su P(A) es una función inyectiva.
+\begin{defi}[Conjunto $P(A)$]
+Sea $A$ un conjunto, definimos el conjunto \textit{partes de A} como:
+$$P(A) = \{D \subset A\}$$
+es decir, aquel formado por todos los subconjuntos de $A$.
+\end{defi}
+
+\begin{ej}
+Sea $A=\{a,b,c\}$, entonces $P(A)=\left\lbrace \{a\}, \{b\},\{c\}, \emptyset, \{a,b\}, \{a,c\}, \{b,c\}, A \right\rbrace$
+\end{ej}
+
+\begin{prop}
+La función que relaciona $A$ con su $P(A)$ inyectiva.
 \begin{eqnarray*}
 f: A & \rightarrow & P(A)\mbox{ inyectiva}\Rightarrow card(A)\leq card(B)\\
 a & \longmapsto  & \; \{a\}
 \end{eqnarray*}
+\end{prop}
+
+\begin{obs}
 Concretamente para el conjunto vacío:
 $$A=\emptyset \Rightarrow P(A)=\{\emptyset\} \Rightarrow P(P(A))=\{\emptyset, \{\emptyset\}\}$$
+\end{obs}
 
-\subsubsection{Teorema de Cantor}
-Sea A un conjunto cualquiera, entonces $\nexists f: A \rightarrow P(A)$  suprayectiva.\par
-\underline{Demostración}:\par
+\begin{theo}[de Cantor]
+Sea $A$ un conjunto cualquiera, entonces $\nexists f: A \rightarrow P(A)$  suprayectiva.
+\end{theo}
+\begin{demo}
 Supongamos que sí:
 \begin{eqnarray*}
 \exists f: A &\rightarrow & P(A)\mbox{ suprayectiva} \\
@@ -271,87 +323,124 @@ De este razonamiento se desprende que $\mathbb N$ es numerable pero $P(\mathbb N
 \item Usando el axioma de elección $\rightarrow card(P(\mathbb N))\leq card (\mathbb R)$
 \item Usando la hipótesis del continuo $\rightarrow card(P(\mathbb N))= card (\mathbb R)$
 \end{itemize}
+\end{demo}
 
-\subsection{\underline{Principio de Inducción}}
+\subsection{Principio de Inducción}
+En este pequeño espacio aparte, vamos estudiar el concepto de la inducción matemática. Este modo de demostración, fundamental y básico no sólo en esta asignatura, está presente en multitud de demostraciones importantes y es muy útil para demostrar enunciados que hagan referencia a cantidades discretas, en las que interviene algún elemento natural arbitrario.
+
 Sea $\mathbb N=\{1, 2, 3,...\}$, este conjunto posee una propiedad que se llama de Buen Orden que dice:
 $$A\subset \mathbb N, A\neq \emptyset \Rightarrow \exists m \in A : \forall a \in A : m\leq a$$
-Lo que quiere decir que siempre encontraremos en ese subconjunto A un elemento que podremos calificar como el \textit{primero}.\par
-Ahora bien, el principio de inducción dice que sea $S\subset \mathbb N$:
+Lo que quiere decir que siempre encontraremos en ese subconjunto A un elemento que podremos calificar como el \textit{primero}.
+
+\begin{theo}[Principio de Inducción]
+Sea $S\subset \mathbb N$, entonces:
 $$1\in S\wedge (k\in S\Rightarrow k+1\in S)\Rightarrow S=\mathbb N$$
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 Supongamos que $S\subsetneq \mathbb N$ y que $A=\mathbb N\mbox{\textbackslash} S\neq 0$. Por la propiedad del Buen Orden:
 $$\exists m \in A : \forall a \in A: m\leq a$$
 Sin embargo, $m=1\notin A$ porque $1\in S$, luego $m-1\in S\stackrel{Hip. 2}{\Rightarrow} (m-1)+1=m\in S \mbox{ \#}$\par
 O dicho de otra forma: si $1\in S\Rightarrow 2\in S \Rightarrow ... \Rightarrow \mathbb N=S\Rightarrow A=\mathbb N \mbox{\textbackslash} S=\mathbb N \mbox{\textbackslash} \mathbb N=\emptyset \mbox{ \#}$
-\subsubsection{Corolario}
-Supongamos que tenemos una propiedad que depende de un número natural: $k \in \mathbb N : P(k)$ y supongamos que $P(1)$ es cierto. Si $P(k)\Rightarrow P(k+1)$ entonces $\forall n \in \mathbb N : P(n)$
+\end{demo}
 
-\underline{Demostración}:\par
+\begin{coro}
+Supongamos que tenemos una propiedad que depende de un número natural: $k \in \mathbb N : P(k)$ y supongamos que $P(1)$ es cierto. Si $P(k)\Rightarrow P(k+1)$ entonces $\forall n \in \mathbb N : P(n)$.
+\end{coro}
+\begin{demo}
 Supongamos el conjunto $S$
 \begin{itemize}
 \item $1\in S$
 \item $k\in S\Rightarrow k+1\in S$
 \end{itemize}
 Los dos hechos anteriores según el principio de inducción implican que $S=\mathbb N\Rightarrow \forall n \in \mathbb N : P(n)$
+\end{demo}
 
-\chapter{CONJUNTOS DE NÚMEROS}
-Los seres humanos a lo largo de la Historia han ido ``descubriendo'' o  ``inventando'' distintos conjuntos de números en función de las necesidades que iban surgiendo en cada momento. Hasta el momento tenemos:
+\chapter{Números Reales}
+Los seres humanos a lo largo de la Historia han ido descubriendo distintos conjuntos útiles en función de las necesidades que iban surgiendo en cada momento. Hasta el momento, entre los fundamentales para este curso, tenemos:
 $$\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$$
-Entendemos como $\mathbb N$ al conjunto de los naturales $\mathbb N={1,2,3,4,...}$ y al conjunto de los enteros $\mathbb Z$ como el conjunto de los Naturales añadiéndoles el 0 y los negativos. El conjunto de los  racionales surge ante la necesidad de nuevos números como el que describe la diagonal de un cuadrado de lado 1: $\sqrt{2}$, estos están conformados por: $\mathbb Q={\frac{a}{b}: a,b\in \mathbb Z \wedge b\neq 0}$, además cada número racional está representado por un conjunto de fracciones equivalentes: $[\frac{a}{b}]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$. Llegamos por lo menos hasta el momento a los número reales de los que diremos que tienen una representación decimal arbitraria por el momento.
+Donde entendemos cada conjunto como:
+\begin{itemize}
+\item $\mathbb N = \{1,2,3,4,...\}$ como el conjunto de los naturales
+\item $\mathbb Z = \{..., -1, 0 ,1, ...\}$ como el conjunto de los enteros, formados por los naturales, el 0 y los negativos.
+\item $\mathbb Q={\frac{a}{b}: a,b\in \mathbb Z \wedge b\neq 0}$ como el conjunto de los racionales en los que cada número racional está representado por un conjunto de fracciones equivalentes: $[\frac{a}{b}]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$.
+\item $\mathbb{R}$ como el conjunto de los reales, formados por los irracionales y los racionales.
+\end{itemize}
 
-\section{PROPIEDADES ALGEBRAICAS DE $\mathbb R$}
-Sea $\mathbb K$ un conjunto de números tenemos las siguientes operaciones:
-\subsubsection{Suma}
-Sea $\mathbb K$ un conjunto de números tenemos que la adición $(+)$ cumple las siguientes propiedades:
-\begin{center}
-Operación interna
-\end{center}
+\section{Propiedades Algebraicas de $\mathbb R$}
+Naturalmente, sin un conocimiento profundo de la estructura interna del cuerpo de los números reales y de las propiedades que tienen dichos números no podemos desarrollar un curso exhaustivo de análisis en variable real. Por tanto, en primer lugar, vamos a estudiar qué características tiene el cuerpo de los números reales y de qué forma interactúan con elementos matemáticos como desigualdades, valores absolutos, operaciones...
+
+\subsection{Estructura de Cuerpo}
+Las primeras propiedades a desarrollar van a ser las consecuencias directas de la estructura de cuerpo conmutativo y unitario que tiene el cuerpo de los números reales.
+
+\begin{defi}[Suma]
+Sea $\mathbb K$ un conjunto de números, definimos \textbf{la suma} como la operación interna que cumple las siguientes propiedades:
 \begin{eqnarray*}
 +: \mathbb K \times\mathbb K & \stackrel{+}{\rightarrow} & \mathbb K \\
 (a,b) & \longmapsto  & a+b
 \end{eqnarray*}
-
 \begin{enumerate}
 \item Propiedad conmutativa: $\forall a, b \in \mathbb K: a+b=b+a$
 \item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a+b)+c=a+(b+c)$
 \item Propiedad elemento neutro: $\exists 0_k\in \mathbb K : \forall a \in \mathbb K : a+0_k=0_k+a=a$
 \item Propiedad elemento opuesto: $\forall a \in \mathbb K : \exists (-a) : a+(-a)=0_k$
 \end{enumerate}
-Los $\mathbb {Z, Q, R, C}$ cumplen las 4 propiedades, pero $\mathbb N$ no puesto que cumplen solo las dos primeras.\par
-\textbf{Un conjunto de números $(\mathbb K, +)$ que verifica todas las propiedades recibe el nombre de GRUPO CONMUTATIVO.}
+\end{defi}
 
-\subsubsection{Producto}
-Sea $\mathbb K$ un conjunto de números tenemos que el producto $(\cdot)$ cumple las siguientes propiedades:
-\begin{center}
-Operación interna
-\end{center}
+\begin{obs}
+La dupla $(\mathbb K, +)$ que verifica todas las propiedades recibe el nombre de grupo conmutativo. Algunos ejemplos son $\mathbb {Z, Q, R, C}$ porque se cumplen las 4 propiedades, pero $\mathbb N$ no puesto que cumplen solo las dos primeras.
+\end{obs}
+
+
+\begin{defi}[Producto]
+Sea $\mathbb K$, definimos \textbf{el producto} como la operación interna que cumple las siguientes propiedades:
 \begin{eqnarray*}
 \cdot: \mathbb K \times\mathbb K & \stackrel{\cdot}{\rightarrow} & \mathbb K \\
 (a,b) & \longmapsto  & a\cdot b
 \end{eqnarray*}
-
 \begin{enumerate}
 \item Propiedad conmutativa: $\forall a, b \in \mathbb K: a\cdot b=b\cdot a$
 \item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a\cdot b)\cdot c=a\cdot (b\cdot c)$
 \item Propiedad elemento neutro: $\exists 1_k\in \mathbb K : \forall a \in \mathbb K : a\cdot 1_k=1_k\cdot a=a$
 \item Propiedad elemento inverso: $\forall a \in \mathbb K : \exists a^{-1} : a\cdot a^{-1}=1_k$
 \end{enumerate}
-Los $\mathbb {Q, R, C}$ cumplen las 4 propiedades, pero $\mathbb {N,Z}$ no puesto que cumplen solo las tres primeras.\par
-\textbf{Un conjunto de números $(\mathbb K, \cdot)$ que verifica todas las propiedades recibe el nombre de GRUPO CONMUTATIVO.}\par
-En ambos casos de cada operación, si $\mathbb K$ es un GRUPO CONMUTATIVO, podemos definir las operaciones contrarias ``resta'' como la suma del opuesto y la ``división'' como el producto del inverso.\par
-La propiedad que relaciona ambas operaciones es la \textbf{propiedad distributiva}\footnote{Que se cumple en TODOS los conjuntos.}
+\end{defi}
+
+\begin{obs}
+La dupla $(\mathbb K, \cdot)$ que verifica todas las propiedades recibe el nombre de grupo conmutativo. Algunos ejemplos son $\mathbb {Q, R, C}$ porque cumplen las 4 propiedades, pero $\mathbb {N,Z}$ no puesto que cumplen solo las tres primeras.
+\end{obs}
+
+\begin{obs}
+La propiedad que relaciona\footnote{Que se cumple en todos los conjuntos anteriores.} ambas operaciones es la \textbf{propiedad distributiva}:
 \begin{enumerate}
 \item[5.] $\forall a,b,c\in \mathbb K: a\cdot (b+c)=ab+ac$
 \end{enumerate}
+\end{obs}
 
-\subsection{\underline{Estructura de Cuerpo}}
-Si $\mathbb K : (\mathbb K, +)$ es un grupo conmutativo y $(\mathbb K, \cdot)$ es un grupo conmutativo y se cumple la propiedad distributiva, decimos que $(\mathbb K, +, \cdot)$ es un \textbf{CUERPO CONMUTATIVO}.
+\begin{defi}[Cuerpo Conmutativo]
+Sean $(\mathbb K, +)$ y $(\mathbb K, \cdot)$ ambos grupos conmutativos en los que se cumple la propiedad distributiva, decimos que $(\mathbb K, +, \cdot)$ es un \textbf{cuerpo conmutativo}.
+\end{defi}
 
-\subsubsection{Consecuencias de la estructura de cuerpo}
-Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo se cumplen las siguientes propiedades:
+\begin{prop}[Propiedades de Cuerpo Conmutativo]
+Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo, se cumplen las siguientes propiedades:
 \begin{enumerate}
-\item \textbf{El elemento neutro de la suma es único}.\par
- Supongamos que hay dos elementos neutros, $e, e'$:
+\item \textbf{El elemento neutro de la suma es único}.
+\item \textbf{El elemento neutro del producto es único}. 
+\item \textbf{Si $x+a=a\Rightarrow x=0$}\par 
+\item \textbf{Si $a\neq 0\in \mathbb K \Rightarrow x\cdot a=a\Rightarrow x=1$}.
+\item \textbf{El elemento opuesto de $x\in \mathbb K$ es único y en particular $-(-x)=x$}.
+\item \textbf{El elemento inverso de $x\neq 0\in \mathbb K$ es único, en particular $(x^{-1})^{-1}$}.
+\item \textbf{$\forall x\in \mathbb K: x\cdot 0=0$, por tanto, el 0 no tiene inverso}. 
+\item \textbf{$\forall x\in \mathbb K : -x=(-1)\cdot x$}.
+\item \textbf{Conocidos $a, b\in \mathbb{K}$, la ecuación $x+a=b$ tiene una única solución $x=b-a$}.
+\item \textbf{Si $a\neq 0$, la ecuación $a\cdot x=b$ tiene una única solución: $x=\frac{b}{a}$}.
+\item \textbf{Si $ab=ac \mbox{ y } a\neq 0 \Rightarrow b=c$}. 
+\item \textbf{Si $ab=0\Rightarrow a=0 \mbox{ o } b=0$}.
+\item \textbf{Si $a, b \neq 0 \Rightarrow \exists (ab)^{-1} = a^{-1}b^{-1}$}.
+\end{enumerate}
+\end{prop}
+\begin{demo}
+\begin{enumerate}
+\item Supongamos que hay dos elementos neutros, $e, e'$:
  \begin{equation*}
  \begin{cases}
  e'+e=e & \mbox{si } e'\mbox{ es el elemento neutro} \\
@@ -359,8 +448,7 @@ Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo se cumplen las siguientes prop
  \end{cases}
  \Rightarrow e=e'
  \end{equation*}
-\item \textbf{El elemento neutro del producto es único}.\par
- Supongamos que hay dos elementos neutros, $e, e'$:
+\item Supongamos que hay dos elementos neutros, $e, e'$:
  \begin{equation*}
  \begin{cases}
  e'\cdot e=e & \mbox{si } e'\mbox{ es el elemento neutro} \\
@@ -368,206 +456,164 @@ Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo se cumplen las siguientes prop
  \end{cases}
  \Rightarrow e=e'
  \end{equation*}
- 
-\item \textbf{Si $x+a=a\Rightarrow x=0$}\par
- Supongamos que:
- $$x+a=a\Leftrightarrow x+a+(-a)=a+(-a)\Leftrightarrow x+0=0 \Leftrightarrow x=0$$
- 
-\item \textbf{Si $a\in \mathbb K , a\neq 0\Rightarrow x\cdot a=a\Rightarrow x=1$}\par
- Como $a\neq 0, \exists a^{-1}\in \mathbb K$ y entonces:
+\item Supongamos que:
+$$x+a=a\Leftrightarrow x+a+(-a)=a+(-a)\Leftrightarrow x+0=0 \Leftrightarrow x=0$$
+\item Como $a\neq 0, \exists a^{-1}\in \mathbb K$ y entonces:
 $$x\cdot a=a \Leftrightarrow x\cdot a \cdot a^{-1}=a\cdot a^{-1}\Leftrightarrow x\cdot 1=1 \Leftrightarrow x=1$$
-
-\item \textbf{El elemento opuesto de $x\in \mathbb K$ es único y en particular $$-(-x)=x$$}\par
- Supongamos que $x_1, x_2$ son ambos opuestos de $x$:
- $$x_1=0+x_1=(x_2+x)+x_1=x_2+(x+x_1)=x_2+0=x_2$$
-
-\item \textbf{El elemento inverso de $x\in \mathbb K , x\neq 0$ es único, en particular $(x^{-1})^{-1}$}\par
- Supongamos que $x_1, x_2$ son inversos de $x$ entonces:
- $$x_1=1\cdot x_1=(x_2\cdot x)\cdot x_1=x_2\cdot (x\cdot x_1)=x_2\cdot 1=x_2$$
- 
-\item \textbf{$x\cdot 0=0, \forall x\in \mathbb K$, lo que implica que 0 no puede tener inverso}.\par
- Supongamos que:
- $$x=x\cdot 1=x\cdot (1+0)=x\cdot 1+ x\cdot 0=x+ x\cdot 0 \Rightarrow 0=x\cdot 0$$
- 
-\item \textbf{$\forall x\in \mathbb K : -x=(-1)\cdot x$}\par
- Supongamos que:
- $$0=x\cdot 0=x(1+(-1))=x+(-1)x \Rightarrow -x=(-1)x$$
- 
-\item \textbf{Conocidos $a, b$, la ecuación $x+a=b$ tiene una única solución $x=b-a$}\par
- Supongamos que:
- $$x+a=b \Rightarrow (x+a)+(-a)=b+(-a)\Leftrightarrow x=b+(-a)=b-a$$
- 
-\item \textbf{Si $a\neq 0$, la ecuación $a\cdot x=b$ tiene una única solución : $x=\frac{b}{a}$}\par
-Supongamos que:
+\item Supongamos que $x_1, x_2$ son ambos opuestos de $x$:
+$$x_1=0+x_1=(x_2+x)+x_1=x_2+(x+x_1)=x_2+0=x_2$$
+\item Supongamos que $x_1, x_2$ son inversos de $x$ entonces:
+$$x_1=1\cdot x_1=(x_2\cdot x)\cdot x_1=x_2\cdot (x\cdot x_1)=x_2\cdot 1=x_2$$
+\item Supongamos que:
+$$x=x\cdot 1=x\cdot (1+0)=x\cdot 1+ x\cdot 0=x+ x\cdot 0 \Rightarrow 0=x\cdot 0$$
+\item Supongamos que:
+$$0=x\cdot 0=x(1+(-1))=x+(-1)x \Rightarrow -x=(-1)x$$
+\item Supongamos que:
+$$x+a=b \Rightarrow (x+a)+(-a)=b+(-a)\Leftrightarrow x=b+(-a)=b-a$$
+\item Supongamos que:
 $$a\cdot x=b \Rightarrow a^{-1}(ax)=a^{-1}b \Rightarrow x=\frac{b}{a}$$
+\item Supongamos que:
+$$ab=ac \Leftrightarrow a^{-1}(ab)=a^{-1}(ac) \Leftrightarrow a^{-1}a\cdot b=a^{-1}a\cdot c \Leftrightarrow b=c$$
+\item Supongamos que:
+\begin{equation*}
+\begin{cases}
+a=0 & (a=0\vee b=0) \equiv V \\
+a\neq 0 & \exists a^{-1}\in \mathbb K : a^{-1}(ab)=0\cdot a^{-1}\Leftrightarrow b=0\Rightarrow (a=0 \vee b=0)\equiv T
+\end{cases} 
+\end{equation*}
+\item Para la primera parte, por la propiedad 12. si $ab=0\Rightarrow (a=0\vee b=0)\Leftrightarrow (a\neq 0 \wedge b\neq 0) \Rightarrow ab\neq 0$.
 
-\item \textbf{Si $ab=ac \wedge a\neq 0 \Rightarrow b=c$}\par
- Supongamos que:
- $$ab=ac \Leftrightarrow a^{-1}(ab)=a^{-1}(ac) \Leftrightarrow a^{-1}a\cdot b=a^{-1}a\cdot c \Leftrightarrow b=c$$
- 
-\item \textbf{Si $ab=0\Rightarrow a=0 \vee b=0$}\par
- Supongamos que:
- \begin{equation*}
- \begin{cases}
-  a=0 & (a=0\vee b=0) \equiv V \\
-  a\neq 0 & \exists a^{-1}\in \mathbb K : a^{-1}(ab)=0\cdot a^{-1}\Leftrightarrow b=0\Rightarrow (a=0 \vee b=0)\equiv T
- \end{cases} 
- \end{equation*}
- 
-\item \textbf{Si $a, b \neq 0 \Rightarrow ab\neq 0 \Rightarrow \exists (ab)^{-1}:  (ab)^{-1}= a^{-1}b^{-1}$}\par
- Para la primera parte, por la propiedad 12. si $ab=0\Rightarrow (a=0\vee b=0)\Leftrightarrow (a\neq 0 \wedge b\neq 0) \Rightarrow ab\neq 0$\par
- Demostrado que $ab\neq 0$, $ab\neq 0\Rightarrow \exists (ab)^{-1}$
- $$(a^{-1}b^{-1})(ab)=a^{-1} a \cdot b^{-1} b=1 \Rightarrow (a^{-1}b^{-1})=(ab)^{-1}$$
+Demostrado que $ab\neq 0$, $ab\neq 0\Rightarrow \exists (ab)^{-1}$
+$$(a^{-1}b^{-1})(ab)=a^{-1} a \cdot b^{-1} b=1 \Rightarrow (a^{-1}b^{-1})=(ab)^{-1}$$
 \end{enumerate}
+\end{demo}
 
-\subsection{\underline {Propiedades de orden}}
-En $\mathbb R$ hay una ``relación de orden'' que se escribe como ``$\leq$'' que cumple que:
+\subsection{Propiedades de orden}
+Además de ser un cuerpo, el conjunto de los números reales posee una ``relación de orden'' que se escribe como ``$\leq$'' intrínseca que dota de una serie de propiedades a dicho conjunto. Esta relación toma especial relevancia puesto que las desigualdades están muy presentes durante el resto del documento y un manejo adecuado de las mismas es esencial para entender las demostraciones posteriores.
+
+\begin{defi}[Relación de Orden]
+Sea $\leq$ una relación binaria de un conjunto $A$ en sí mismo, decimos que ésta es una \textbf{relación de orden} si y sólo si verifica las siguientes propiedades:
 \begin{itemize}
-\item Propiedad Reflexiva: $\forall x\in  \mathbb R: x \leq x$
-\item Propiedad Antisimétrica: $(x\leq y) \wedge (y\leq x) \Rightarrow x=y$
-\item Propiedad Transitiva: $(x\leq y) \wedge (y \leq z) \Rightarrow x\leq z$
-\item Propiedad de Orden Total: $\forall x,y\in \mathbb R: (x\leq y) \vee (y\leq x)$
+\item \textbf{Propiedad Reflexiva}: $\forall x\in  A: x \leq x$
+\item \textbf{Propiedad Antisimétrica}: $(x\leq y) \wedge (y\leq x) \Rightarrow x=y$
+\item \textbf{Propiedad Transitiva}: $(x\leq y) \wedge (y \leq z) \Rightarrow x\leq z$
+\item \textbf{Propiedad de Orden Total}: $\forall x,y\in A: (x\leq y) \vee (y\leq x)$
 \end{itemize}
+Si a un cuerpo $(\mathbb K, +, \cdot)$ se le agrega una relación de orden definidas como $\leq$ , decimos que se trata de un cuerpo \textbf{totalmente ordenado}. 
+\end{defi}
+
+\begin{obs}
 Esta relación de orden tiene una serie de propiedades con respecto a las operaciones:
 \begin{enumerate}
 \item $x\leq y \Rightarrow \forall z \in \mathbb R : x+z\leq y+z$
 \item $(x\geq 0 \wedge y \geq 0)\Rightarrow xy\geq 0$
 \end{enumerate}
+\end{obs}
 
-Si $(\mathbb K, +, \cdot)$ posee las propiedades de la relación de orden definidas para ``$\leq$'' , decimos que se trata de un cuerpo \textbf{TOTALMENTE ORDENADO}.
-
-\subsubsection{Definiciones}
+\begin{defi}[Positividad y Negatividad]
+Sea $x\in \mathbb{R}$ un número, decimos que dicho número es:
 \begin{itemize}
-\item Decimos que un número $x\in \mathbb R$ es positivo$\Leftrightarrow (0\leq x \wedge x\neq 0)$
-\item Decimos que un número $x\in \mathbb R$ es negativo $\Leftrightarrow (-x)>0$
+\item \textbf{Positivo}: $ x> 0 \Leftrightarrow (0\leq x \mbox{ y } x\neq 0)$
+\item \textbf{Negativo}: $ x < 0 \Leftrightarrow (-x)>0$
 \end{itemize}
+\end{defi}
 
+\begin{prop}
+En general, para cualquier cuerpo $(\mathbb K, +, \cdot)$ con relación de orden $\leq$ se verifica:
 \begin{enumerate}
 \item Si $(a>0) \wedge (b>0)\Rightarrow a+b>0$
-$$a>0\Rightarrow a\geq 0\Rightarrow a+b\geq b \stackrel{Trans}{\Rightarrow} a+b\geq b\geq 0 \Rightarrow a+b\geq 0$$
-$$\mbox{Si } a+b=0 \Rightarrow 0\geq b\geq 0\Rightarrow b=0 \mbox{ \#}\Rightarrow a+b\neq 0 \Rightarrow a+b>0$$
-\vspace{0.5cm}
-
 \item Si $(a>0)\wedge (b>0)\Rightarrow ab>0$
-$$(a\geq 0) \wedge (b\geq 0)\Rightarrow (a>0) \wedge (b>0) \Rightarrow ab\geq 0$$
-$$\mbox{Si }ab=0\Rightarrow (a=0)\vee (b=0)\mbox{ \#}\Rightarrow ab\neq 0 \Rightarrow ab>0$$
-\vspace{0.5cm}
-
 \item Si $(a<0)\wedge (b<0)\Rightarrow ab>0$
-$$(-a>0)\wedge (-b>0)\Rightarrow (-a)(-b)>0\Rightarrow (-1)a(-1)b=(-1)(-1)ab=ab>0$$
-\vspace{0.5cm}
-
 \item Si $(a>0)\wedge (b<0)\Rightarrow ab<0$
-$$(a>0)\wedge(-b)>0\Rightarrow a(-b)>0\Leftrightarrow a(-1)b=(-1)ab=(-ab)>0\Rightarrow ab<0$$
-\vspace{0.5cm}
-
 \item Si $a,b\in \mathbb R$ decimos que $a>b\Leftrightarrow a-b>0$
 \end{enumerate}
-
-Concretamente en el contexto de $(\mathbb R, \leq)$ se cumplen además las siguientes propiedades:
-
+Concretamente en el contexto de $(\mathbb R, \leq)$, se cumplen además las siguientes propiedades:
 \begin{enumerate}
 \item Si $(a>b)\wedge (b>c)\Rightarrow a>c$
-$$(a>b)\wedge (b>c)\Rightarrow (a\geq b)\wedge (b\geq c)\Rightarrow a\geq b \geq c\stackrel{Trans.}{\Rightarrow} a\geq c$$
-$$\mbox{Si } a=c\Rightarrow (b\leq c) \wedge (c\leq b)\Rightarrow c=b\mbox{ \#}\Rightarrow a>c$$
-\vspace{0.5cm}
-
 \item Si $a>b\Rightarrow a+x>b+x: \forall x\in \mathbb R$
-$$a>b\Rightarrow a\geq b \Rightarrow a+x\geq b+x \Rightarrow a+x+(-x)\geq b+x+(-x)\Leftrightarrow a\geq b \mbox{ \#}\Rightarrow a+x>b+x$$
-\vspace{0.5cm}
-
 \item Si $a\neq 0\Rightarrow a^2=a\cdot a>0$
-$$\begin{cases}
+\item \textbf{Tricotomía del Orden}: Si $a\in \mathbb R\Rightarrow (a>0)\vee (a<0)\vee (a=0)$
+\item $1>0$
+\item Si $(a>b) \wedge (c\geq d)\Rightarrow a+c>b+d$
+\item Si $(a>b) \wedge (c>0)\Rightarrow ac>bc$
+\item Si $(a>b)\wedge (c<0)\Rightarrow ac<bc$
+\item Si $(a>0)\Rightarrow (a^{-1}>0)$
+\item Si $a<b\Rightarrow a<\frac{a+b}{2}<b$\par
+Concretamente, entre dos números reales distintos hay infinitos números reales. En particular, si $0<b\Rightarrow 0\leq \frac{b}{2}\leq b$ y en consecuencia, hay infinitos números positivos sin que ninguno de ellos sea "el más pequeño".
+$$a<b\Rightarrow 2a<a+b \Rightarrow a<\frac{a+b}{2}\mbox{ pero también }a+b<2b\Rightarrow \frac{a+b}{2}<b \Rightarrow a<\frac{a+b}{2}<b$$
+\item Si $0\leq a\leq \varepsilon: \forall \varepsilon>0 \Rightarrow a=0$
+\item Si $ab>0\Rightarrow [(a>0)\wedge (b>0)]\vee [(a<0)\wedge (b<0)]$
+\item Si $ab<0\Rightarrow [(a<0)\wedge (b>0)]\vee [(a>0)\wedge (b<0)]$
+\item Si $(a>b>0)\wedge (c>d>0)\Rightarrow ac>bd$
+\item Si $0<a<b\Rightarrow \forall n \in \mathbb N : (0<a^n<b^n)\wedge (0<\frac{1}{b}<\frac{1}{a})$
+\item Si $(a>1)\Rightarrow (\frac{1}{a}<1)$ y si $(0<a<1)\Rightarrow (\frac{1}{a}>1)$
+\end{enumerate}
+\end{prop}
+\begin{demo}
+\begin{enumerate}
+\item $$a>0\Rightarrow a\geq 0\Rightarrow a+b\geq b \stackrel{Trans}{\Rightarrow} a+b\geq b\geq 0 \Rightarrow a+b\geq 0$$
+$$\mbox{Si } a+b=0 \Rightarrow 0\geq b\geq 0\Rightarrow b=0 \mbox{ \#}\Rightarrow a+b\neq 0 \Rightarrow a+b>0$$
+\item $$(a\geq 0) \wedge (b\geq 0)\Rightarrow (a>0) \wedge (b>0) \Rightarrow ab\geq 0$$
+$$\mbox{Si }ab=0\Rightarrow (a=0)\vee (b=0)\mbox{ \#}\Rightarrow ab\neq 0 \Rightarrow ab>0$$
+\item $$(-a>0)\wedge (-b>0)\Rightarrow (-a)(-b)>0\Rightarrow (-1)a(-1)b=(-1)(-1)ab=ab>0$$
+\item $$(a>0)\wedge(-b)>0\Rightarrow a(-b)>0\Leftrightarrow a(-1)b=(-1)ab=(-ab)>0\Rightarrow ab<0$$
+\end{enumerate}
+
+\begin{enumerate}
+\item $$(a>b)\wedge (b>c)\Rightarrow (a\geq b)\wedge (b\geq c)\Rightarrow a\geq b \geq c\stackrel{Trans.}{\Rightarrow} a\geq c$$
+$$\mbox{Si } a=c\Rightarrow (b\leq c) \wedge (c\leq b)\Rightarrow c=b\mbox{ \#}\Rightarrow a>c$$
+\item $$a>b\Rightarrow a\geq b \Rightarrow a+x\geq b+x \Rightarrow a+x+(-x)\geq b+x+(-x)\Leftrightarrow a\geq b \mbox{ \#}\Rightarrow a+x>b+x$$
+\item $$\begin{cases}
 a\geq 0 \Rightarrow & a>0\Rightarrow a^2>0 \\
 a\leq 0 \Rightarrow & a<0 \Rightarrow a^2>0
 \end{cases}$$
-\vspace{0.5cm}
-
-\item \textbf{Tricotomía del Orden}: Si $a\in \mathbb R\Rightarrow (a>0)\vee (a<0)\vee (a=0)$
-$$\begin{cases}
+\item $$\begin{cases}
 a=0\Rightarrow & a=0 \\
 a\geq 0 \Rightarrow & a>0 \\
 a\leq 0 \Rightarrow & a<0 \\
 \end{cases}$$
-\vspace{0.5cm}
-
-\item $1>0$
-$$1=1\cdot 1>0 \mbox{ Porque el elemento neutro es positivo}$$
-\vspace{0.5cm}
-
-\item Si $(a>b) \wedge (c\geq d)\Rightarrow a+c>b+d$
-$$\mbox{Como } a>b\Rightarrow a+c>b+c\mbox{, y de modo paralelo: } c+b>d+b\mbox{. Luego: }\Rightarrow a+c>b+d$$
-\vspace{0.5cm}
-
-\item Si $(a>b) \wedge (c>0)\Rightarrow ac>bc$
-$$(a>b)\Rightarrow (a-b>0)\mbox{, y como } (c>0)\Rightarrow c(a-b)>0 \Rightarrow ac-bc>0\Rightarrow ac>bc$$
-\vspace{0.5cm}
-
-\item Si $(a>b)\wedge (c<0)\Rightarrow ac<bc$
-$$(a>b)\Rightarrow (a-b>0)\mbox{, y como }(-c)>0 \Rightarrow $$
+\item $$1=1\cdot 1>0 \mbox{ Porque el elemento neutro es positivo}$$
+\item $$\mbox{Como } a>b\Rightarrow a+c>b+c\mbox{, y de modo paralelo: } c+b>d+b\mbox{. Luego: }\Rightarrow a+c>b+d$$
+\item $$(a>b)\Rightarrow (a-b>0)\mbox{, y como } (c>0)\Rightarrow c(a-b)>0 \Rightarrow ac-bc>0\Rightarrow ac>bc$$
+\item $$(a>b)\Rightarrow (a-b>0)\mbox{, y como }(-c)>0 \Rightarrow $$
 $$\Rightarrow (-c)(a-b)>0 \Rightarrow (-1)c(a-b)>0\Rightarrow c(a-b)<0\Rightarrow ac-cb<0\Rightarrow ac<bc$$
-\vspace{0.5cm}
-
-\item Si $(a>0)\Rightarrow (a^{-1}>0)$
-$$a>0\Rightarrow \exists a^{-1}$$
+\item $$a>0\Rightarrow \exists a^{-1}$$
 $$a^{-1}<0\Rightarrow 1=a\cdot a^{-1}<0 \mbox{ \#}\Rightarrow a^{-1}>0$$
-\vspace{0.5cm}
-
-\item Si $a<b\Rightarrow a<\frac{a+b}{2}<b$\par
-Concretamente, entre dos números reales distintos hay infinitos números reales. En particular, si $0<b\Rightarrow 0\leq \frac{b}{2}\leq b$ y en consecuencia, hay infinitos números positivos sin que ninguno de ellos sea "el más pequeño".
-$$a<b\Rightarrow 2a<a+b \Rightarrow a<\frac{a+b}{2}\mbox{ pero también }a+b<2b\Rightarrow \frac{a+b}{2}<b \Rightarrow a<\frac{a+b}{2}<b$$
-\vspace{0.5cm}
-
-\item Si $0\leq a\leq \varepsilon: \forall \varepsilon>0 \Rightarrow a=0$
-$$\mbox{Si }a\neq 0\Rightarrow a>0\Rightarrow a>\varepsilon=\frac{a}{2}>0\mbox{ \#}\Rightarrow a=0$$
-\vspace{0.5cm}
-
-\item Si $ab>0\Rightarrow [(a>0)\wedge (b>0)]\vee [(a<0)\wedge (b<0)]$
-$$\mbox{Tomamos }a\neq 0, b\neq 0\Rightarrow 
+\item $$\mbox{Si }a\neq 0\Rightarrow a>0\Rightarrow a>\varepsilon=\frac{a}{2}>0\mbox{ \#}\Rightarrow a=0$$
+\item $$\mbox{Tomamos }a\neq 0, b\neq 0\Rightarrow 
 \begin{cases}
 a>0 \Rightarrow b>0 & \mbox{Si fuese } b<0\Rightarrow ab<0 \mbox{ \#}\\
 a<0 \Rightarrow b<0 & \mbox{Si fuese } b>0\Rightarrow ab<0 \mbox{ \#}
 \end{cases}
 $$
-\vspace{0.5cm}
-
-\item Si $ab<0\Rightarrow [(a<0)\wedge (b>0)]\vee [(a>0)\wedge (b<0)]$
-$$\mbox{Tomamos }a\neq 0, b\neq 0\Rightarrow 
+\item $$\mbox{Tomamos }a\neq 0, b\neq 0\Rightarrow 
 \begin{cases}
 a>0 \Rightarrow b<0 & \mbox{Si fuese } b>0\Rightarrow ab>0 \mbox{ \#}\\
 a<0 \Rightarrow b>0 & \mbox{Si fuese } b<0\Rightarrow ab>0 \mbox{ \#}
 \end{cases}
 $$
-\vspace{0.5cm}
-
-\item Si $(a>b>0)\wedge (c>d>0)\Rightarrow ac>bd$
-$$
+\item $$
 \begin{cases}
 \mbox{Como } (a>b) \wedge (c>0)\Rightarrow ac>bc   \\
 \mbox{Como } (c>d) \wedge (b>0)\Rightarrow bc>db   \\
 \end{cases}
 \Rightarrow ac>bd
 $$
-\vspace{0.5cm}
-
-\item Si $0<a<b\Rightarrow \forall n \in \mathbb N : (0<a^n<b^n)\wedge (0<\frac{1}{b}<\frac{1}{a})$
-$$\mbox{Por la propiedad anterior }\Rightarrow a^2<b^2\Rightarrow a^3<b^3\stackrel{induccion}{\Rightarrow} a^n<b^n\Rightarrow a^{n+1}<b^{n+1}$$
+\item $$\mbox{Por la propiedad anterior }\Rightarrow a^2<b^2\Rightarrow a^3<b^3\stackrel{induccion}{\Rightarrow} a^n<b^n\Rightarrow a^{n+1}<b^{n+1}$$
 $$a^{n+1}=a^n\cdot a<b^n\cdot a\Rightarrow b^n\cdot a\stackrel{?}{<}b^{n+1}\Rightarrow b^n\cdot a< b^n\cdot b \Rightarrow a<b \mbox{, QED}$$
-\vspace{0.25cm}
 $$\mbox{Si } \frac{1}{b}>\frac{1}{a}\Rightarrow a\geq b \mbox{ \#}\Rightarrow \frac{1}{a}>\frac{1}{b}$$
-\vspace{0.5cm}
-
-\item Si $(a>1)\Rightarrow (\frac{1}{a}<1)$ y si $(0<a<1)\Rightarrow (\frac{1}{a}>1)$
-$$a>1\Rightarrow a^{-1}\cdot a>1\cdot a^{-1}\Rightarrow 1>\frac{1}{a}$$
+\item $$a>1\Rightarrow a^{-1}\cdot a>1\cdot a^{-1}\Rightarrow 1>\frac{1}{a}$$
 $$(0<a<1)\Rightarrow a<1\Rightarrow a^{-1}\cdot a<1\cdot a^{-1}\Rightarrow 1<\frac{1}{a}$$
 \end{enumerate}
+\end{demo}
 
-\subsubsection{Proposición}
-Los números naturales están contenidos en los enteros como los enteros positivos.
-$$\forall n \in \mathbb N: n\geq 1 \wedge \mathbb N =\{n\in \mathbb Z: n\geq 1\}=\{n\in \mathbb Z : n>0\}$$
-Y además:
-$$\forall n,m\in \mathbb Z : n\leq m\leq n+1\Rightarrow m=n\vee m=n+1$$
-\underline{Demostración}:
+\begin{prop}
+Los números naturales están contenidos en los enteros como los enteros positivos:
+$$\forall n \in \mathbb N: n\geq 1 \mbox{ y } \mathbb N =\{n\in \mathbb Z: n\geq 1\}=\{n\in \mathbb Z : n>0\}$$
+Y cualquier número entero entro otros dos consecutivos es necesariamente uno de esos:
+$$\forall n,m\in \mathbb Z : n\leq m\leq n+1\Rightarrow m=n\mbox{ o } m=n+1$$
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Como $1\geq 0\Rightarrow 2\geq 1 \Rightarrow ...$, demostramos por inducción sobre n:\par
 Sea $S=\{n\in \mathbb N: n\geq 1\}$, $1\in S$ porque $1\geq 1$ y como $1\geq 1\Rightarrow 2\geq 2$ entonces tenemos que para un elemento $k$ del conjunto, otro $k+1$ también pertenece a él, en consecuencia por el principio de inducción: $\mathbb N=S$\par
@@ -578,75 +624,85 @@ $$m\notin \mathbb N \Rightarrow (-m)\in \mathbb N \Rightarrow (-m)\geq  1\mbox{ 
 $$k=m-n>0\Rightarrow k\in \mathbb N \mbox{ pero como }n\leq m \leq n+1\Rightarrow m-n<\leq 1 \Rightarrow k\leq 1$$
 $$\mbox{ pero como }m\neq n+1\Rightarrow k\neq 1\Rightarrow k<1\mbox{ \# Por ser natural k }$$
 \end{enumerate}
+\end{demo}
 
-\subsection{\underline{Algunas desigualdades}}
+\subsubsection{Desigualdades Notables}
 Vamos a suponer demostrado (aunque lo haremos después) que si $a\in \mathbb R : a>0\Rightarrow \exists x\in \mathbb R : (x>0)\wedge (x^2=a)$
-\subsubsection{Ecuaciones de 2º grado}
-Sean $a,b,c\in \mathbb R  : a\neq 0$ y buscamos un $x\in \mathbb R$ que verifique que:
-$$ax^2+bx+c=0$$
-Siendo $\Delta=b^2-4ac$:
+
+\begin{theo}[Discriminante en ecuaciones]
+Sean $a,b,c\in \mathbb R  : a\neq 0$, la ecuación $ax^2+bx+c=0$ y el discriminante $\Delta=b^2-4ac$, entonces:
 \begin{itemize}
 \item Si $\Delta<0\Rightarrow \nexists x\in \mathbb R : ax^2+bx+c=0$
 \item Si $\Delta>0 \Rightarrow \exists x\in \mathbb R : x=\frac{-b\pm\sqrt{\Delta}}{2a}$
 \item Si $\Delta=0 \Rightarrow \exists! x\in \mathbb R : x=\frac{-b}{2a}$
 \end{itemize}
-
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
 $$ax^2+bx+c=0\stackrel{a\neq 0}{\Leftrightarrow} x^2+\frac{bx}{a}+\frac{c}{a}=0\Leftrightarrow (x+\frac{b}{2a})^2-\frac{b^2}{4a^2}+\frac{c}{a}=0\Leftrightarrow (x+\frac{b}{2a})^2=\frac{\Delta}{4a^2}$$
 \begin{itemize}
 \item Si $\Delta>0\Rightarrow \mbox{ Q.E.D.}$
 \item Si $\Delta<0\Rightarrow 0<(x+\frac{b}{2a})^2 \neq \frac{\Delta}{4a^2}<0$
 \item Si $\Delta=0\Rightarrow x+\frac{b}{2a}=0\Rightarrow x=-\frac{b}{2a}$
 \end{itemize}
+\end{demo}
 
-\subsubsection{Desigualdades de 2º grado}
-Sean $a,b,c\in \mathbb R  : a>0$ y buscamos un $x\in \mathbb R$ que verifique que:
-$$ax^2+bx+c\geq 0$$
-Siendo $\Delta=b^2-4ac$:
+\begin{theo}[Discrimintante en inecuaciones]
+Sean $a,b,c\in \mathbb R$ donde $a>0$, la inecuación $ax^2+bx+c\geq 0$ y el discriminante $\Delta=b^2-4ac$, entonces:
 \begin{itemize}
 \item Si $\Delta\leq 0\Rightarrow \forall x$ es cierto
 \item Si $\Delta>0 \Rightarrow \exists x \in \mathbb R : x\geq \frac{-b\pm\sqrt{\Delta}}{2a} \wedge x\leq \frac{-b\pm\sqrt{\Delta}}{2a}$
 \end{itemize}
-
-\underline{Demostración}:
+\end{theo}
+\begin{demo}
 $$ax^2+bx+c\geq 0\stackrel{a\neq 0}{\Leftrightarrow} x^2+\frac{bx}{a}+\frac{c}{a}\geq 0\Leftrightarrow (x+\frac{b}{2a})^2-\frac{b^2}{4a^2}+\frac{c}{a}\geq 0\Leftrightarrow (x+\frac{b}{2a})^2\geq \frac{\Delta}{4a^2}$$
 \begin{itemize}
 \item Si $\Delta\leq 0\Rightarrow 0<(x+\frac{b}{2a})^2 \geq \frac{\Delta}{4a^2}<0$
 \item Si $\Delta>0\Rightarrow (x+\frac{b}{2a})^2 \geq \frac{\Delta}{4a^2}\Leftrightarrow \left((x+\frac{b}{2a})+\sqrt{\frac{\Delta}{4a^2}}\right)\left((x+\frac{b}{2a})-\sqrt{\frac{\Delta}{4a^2}}\right)$
 \end{itemize}
+\end{demo}
 
-\subsubsection{Desigualdad de Cauchy}
-Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n\in \mathbb R$ y $b_1, b_2, ..., b_n\in \mathbb R$
+\begin{theo}[Desigualdad de Cauchy]
+Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n, b_1, b_2, ..., b_n\in \mathbb R$, entonces:
 $$(a_1b_1+a_2b_2+...+a_nb_n)^2 \leq (a_1^2+...+a_n^2)\cdot (b_1^2+...+b_n^2)$$
-Además casi siempre suele ser una desigualdad estricta puesto que la igualdad solo ocurre cuando: $\exists c\in \mathbb R : \forall i=1,...n :a_i=c\cdot b_i$\par
-\underline{Demostración}:\par
+Además, la igualdad sólo ocurre cuando:
+$$\exists c\in \mathbb R : \forall i=1,...n :a_i=c\cdot b_i$$
+\end{theo}
+\begin{demo}
 Sea $F(t)=(a_1-tb_1)^2+...+(a_n-tb_n)^2 : t\in \mathbb R$, se observa que la función siempre cumple que ``$\geq 0$'' por ser suma de cuadrados. Desarrollando los binomios\footnote{Llamamos a cada cosa con una letra mayúscula para simplificar la demostración}:
 $$F(t)=\sum_{i=1}^n (a_i)^2 -2t\sum_{i=1}^n (a_ib_i) + t^2\sum_{i=1}^n (b_i)^2=A-2Ct+Bt^2$$
 Para los casos\footnote{Es obvio que nunca puede ser menor que 0 pero para el caso $B=0\Rightarrow \forall i, b_i=0$ y se ve fácilmente en la fórmula inicial que eso siempre es cierto} en los que $B>0\Rightarrow$:
 $$\Delta\leq 0\Leftrightarrow 4C^2-4AB\leq 0\Leftrightarrow 4C^2\leq 4AB\Leftrightarrow C^2\leq AB$$
 De este modo se ve fácilmente que para el caso de $C^2=AB\Rightarrow \Delta=0\Rightarrow \exists c\in \mathbb R : F(c)=0\Rightarrow \forall  i, a_i-c\cdot b_i=0$
+\end{demo}
 
-\subsubsection{Desigualdad de Minkovski}
-Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n\in \mathbb R$ y $b_1, b_2, ..., b_n\in \mathbb R$
+\begin{theo}[Desigualdad de Minkovski]
+Sea $n\in \mathbb N$ y $a_1, a_2, ..., a_n, b_1, b_2, ..., b_n\in \mathbb R$, entonces:
 $$\sqrt{(a_1+b_1)^2+...+(a_n+b_n)^2}\leq \sqrt{a_1^2+...+a_n^2}+\sqrt{b_1^2+...+b_n^2}$$
-Ademá, para que se de el caso de ``='': $\exists c\in \mathbb R : \forall i=1,...,n : a_i=c\cdot b_i$\par
-\underline{Demostración}:\par
+Además, la igualdad sólo ocurre cuando:
+$$\exists c\in \mathbb R : \forall i=1,...,n : a_i=c\cdot b_i$$
+\end{theo}
+\begin{demo}
 $$\sum_{i=1}^n (a_i+b_i)^2=\sum_{i=1}^n (a_i)^2+2\sum_{i=1}^n (a_ib_i)+ \sum_{i=1}^n (b_i)^2\stackrel{Cauchy}{\leq}A+2\sqrt{A}\sqrt{B}+B=(\sqrt{A}+\sqrt{B})^2\Leftrightarrow$$
 $$\Leftrightarrow \sqrt{\sum_{i=1}^n (a_i+b_i)^2}\leq \sqrt{A}+\sqrt{B}$$
 Concretamente para que se de el caso ``='': $2\sum_{i=1}^n (a_ib_i)=2\sqrt{A}+\sqrt{B}$
+\end{demo}
 
-\section{VALOR ABSOLUTO}
-Sea $a\in \mathbb R$ entonces:
+\subsection{Distancias y Valor Absoluto}
+El concepto de distancia toma especial relevancia en apartados como la definición de límite, las sucesiones de Cauchy y otros elementos matemáticos que iremos viendo más adelante. Por ello, es muy útil recordar todos los enunciados relativos al valor absoluto (pues es la métrica que se emplea en $\mathbb{R}$).
+
+\begin{defi}[Valor Absoluto]
+Sea $a\in \mathbb R$, definimos la función \textbf{valor absoluto} como la función $|\cdot| : \mathbb{R}\rightarrow \mathbb{R}$ tal que:
 $$
-|a|=
+|a|=max\{a,-a\} =
 \begin{cases}
 a & a>0 \\
 0 & a=0 \\
 -a & a<0
 \end{cases}
-=max\{a,-a\}
 $$
-\subsubsection{Propiedades}
+\end{defi}
+
+\begin{prop}[Propiedades del Valor Absoluto]
 \begin{enumerate}
 \item $|a|=0\Leftrightarrow a=0$
 \item $|-a|=|a|: \forall a \in \mathbb R$
@@ -654,7 +710,8 @@ $$
 \item $\forall c\geq 0: |a|\leq c \Leftrightarrow -c\leq a\leq c$
 \item $\forall a \in \mathbb R: -|a|\leq a\leq |a|$
 \end{enumerate}
-\underline{Demostraciones}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Dada por la propia definición
 \item Por definición: $max\{a,-a\}=max\{-a,-(-a)\}$
@@ -669,20 +726,25 @@ $$
 \item $|a|=max\{a,-a\}\leq c\Leftrightarrow a\leq c$ y $-a\leq c\Leftrightarrow a\leq c$ y $a\geq -c\Leftrightarrow -c\leq a\leq c$
 \item Demostrada la propiedad 4. , se trata de decir que $c=a$
 \end{enumerate}
+\end{demo}
 
-\subsection{\underline{Desigualdad triangular}}
-Sean $a,b\in \mathbb R$ entonces:
+\begin{theo}[Desigualdad triangular]
+Sean $a,b\in \mathbb R$ números reales, entonces:
 $$|a+b|\leq|a|+|b|$$
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 Tenemos que $-|a|\leq a\leq |a|$ y que $-|b|\leq b\leq |b|$, sumando ambas expresiones:
 $$-|a|-|b|\leq a+b\leq |a|+|b|\Leftrightarrow -(|a|+|b|)\leq a+b\leq (|a|+|b|)$$
+\end{demo}
 
-\subsubsection{Corolarios}
+\begin{coro}
+Sean $a,b\in \mathbb{R}$ números reales, entonces:
 \begin{enumerate}
 \item $||a|-|b||\leq |a-b|$
 \item $|a-b|\leq |a|+|b|$
 \end{enumerate}
-\underline{Demostración}:
+\end{coro}
+\begin{demo}
 \begin{enumerate}
 \item Como $a=a-b+b\stackrel{Des.triang.}{\Rightarrow} |a|\leq |a-b|+|b|\Rightarrow |a|-|b|\leq |a-b|=c$.\par
 Del mismo modo, $b=b-a+a\Rightarrow |b|\leq |b-a|+|a|\Rightarrow |b-a|=|a-b|\leq |b|-|a|\Rightarrow |a|-|b|\geq -|a-b|=-c$
@@ -690,12 +752,15 @@ $$||a|-|b||\leq c=|a-b|$$
 
 \item $|a-b|=|a+(-b)|\leq |a|+|-b|=|a|+|b|$
 \end{enumerate}
+\end{demo}
 
-\subsection{\underline{Distancia entre dos números}}
-Se puede expresar la distancia entre dos números como:
+\begin{defi}[Distancia entre números]
+Sean $a,b\in \mathbb{R}$ números reales, definimos la \textbf{distancia entre $a$ y $b$} como:
 $$dist(a,b)=|a-b|$$
+dicha función conforma una métrica en $\mathbb{R}$.
+\end{defi}
 
-\subsubsection{Propiedades}
+\begin{prop}[Propiedades de la Distancia]
 \begin{enumerate}
 \item $\forall x,y\in \mathbb R: d(x,y)\geq 0$ y $d(x,y)=0\Leftrightarrow x=y$
 
@@ -703,8 +768,8 @@ $$dist(a,b)=|a-b|$$
 
 \item Propiedad triangular: $\forall x,y,z\in \mathbb R : d(x,y)\leq d(x,z)+d(z,y)$
 \end{enumerate}
-
-\underline{Demostración}:
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item $d(x,y)=|x-y|\geq 0 : \forall x,y\in \mathbb R$
 
@@ -712,32 +777,39 @@ $$dist(a,b)=|a-b|$$
 
 \item $d(x,y)=|x-y|=|x-z+z-y|\leq |x-z|+|z-y|=d(x,z)+d(z,y)$
 \end{enumerate}
+\end{demo}
 
-\subsection{\underline{Intervalos}}
-Sean $a,b\in \mathbb R: a<b$, definimos:
+\begin{defi}[Intervalos]
+Sean $a,b\in \mathbb R$ donde $a<b$, definimos:
 \begin{enumerate}
-\item Intervalo abierto: $(a,b)=\{x\in \mathbb R: a<x<b\}$
-\item Intervalo cerrado: $[a,b]=\{x\in \mathbb R: a\leq x\leq b\}$
-\item Intervalo semiabierto o semicerrado: $[a,b)=\{x\in \mathbb R: a\leq x<b\}$ y viceversa.
+\item \textbf{Intervalo abierto}: $(a,b)=\{x\in \mathbb R: a<x<b\}$
+\item \textbf{Intervalo cerrado}: $[a,b]=\{x\in \mathbb R: a\leq x\leq b\}$
+\item \textbf{Intervalo semiabierto o semicerrado}: $[a,b)=\{x\in \mathbb R: a\leq x<b\}$ y viceversa.
 \end{enumerate}
+\end{defi}
 
-\subsubsection{Observación}
+\begin{obs}
 El conjunto de los números reales se puede expresar como $\mathbb R=(-\infty,\infty)$ y se suele representar en lo que conocemos como \textbf{Recta Real}.
+\end{obs}
 
-\subsubsection{Entornos}
-Se llama \textbf{entorno abierto} al conjunto de números a distancia menor que $r$ de un número central $a$
+\begin{defi}[Entornos]
+Sea $a\in \mathbb{R}$ un número y $r\in \mathbb{R}$ una distancia, definimos un \textbf{entorno abierto} como el conjunto de números a distancia menor que $r$ de un número central $a$:
 $$E(a,r)=\{x\in \mathbb R : dist(x,a)<r\}=\{x\in \mathbb R :|x-a|<r\}=\{x\in \mathbb R :a-r<x<a+r\}$$
-
-Se llama \textbf{entorno cerrado} al conjunto de números a distancia menor o igual que $r$ de un número central $a$
+Sea $a\in \mathbb{R}$ un número y $r\in \mathbb{R}$ una distancia, definimos un \textbf{entorno cerrado} como el conjunto de números a distancia menor o igual que $r$ de un número central $a$:
 $$\bar{E}(a,r)=\{x\in \mathbb R : dist(x,a)\leq r\}=\{x\in \mathbb R :|x-a|\leq r\}=\{x\in \mathbb R :a-r\leq x\leq a+r\}$$
+\end{defi}
 
-\section{NÚMEROS COMPLEJOS}
-Sean $\mathbb C=\{a,b\in \mathbb R: (a,b)\}$ donde $(a,b)$ es un par ordenado y donde definimos ciertas operaciones:
-\subsection{\underline{Operaciones}}
-\subsubsection{Suma}
-Si tenemos que $(a,b),(c,d)\in \mathbb C$, se define la suma como:
+\section{Números Complejos}
+A pesar de que el curso es sobre el análisis real, viene bien conocer unas nociones básicas sobre el cuerpo de los números complejos y las propiedades del mismo. En esta sección, vamos a dar una definición simplificada del cuerpo $\mathbb{C}$ para poder entrar de lleno en las propiedades y enunciados propios de este espacio.
+
+\begin{defi}[Cuerpo de los Números Complejos]
+Sea $\mathbb C=\{a,b\in \mathbb R: (a,b\in \mathbb{R}^2)\}$, la operación $+: \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b) + (c,d) = (a+c, b+d)$ y la operación $\cdot : \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b)\cdot (c,d)=(ac-bd,ad+bc)$, definimos el \textbf{cuerpo de los números complejos} como la terna $(\mathbb{C}, +, \cdot)$ y es conmutativo.
+\end{defi}
+
+\begin{prop}[Suma de Complejos]
+La operación $+: \mathbb{C}\times \mathbb{C} \rightarrow \mathbb{C}$ definida como:
 $$(a,b)+(c,d)=(a+c,b+d)$$
-\underline{Propiedades}:
+posee las siguientes propiedades:
 \begin{itemize}
 \item Conmutativa: $(a,b)+(c,d)=(c,d)+(a,b)=(a+c,b+d)$
 \item Asociativa: $\left((a,b)+(c,d)\right)+(e,f)=(a,b)+\left((c,d)+(e,f)\right)$
@@ -745,23 +817,12 @@ $$(a,b)+(c,d)=(a+c,b+d)$$
 \item Elemento opuesto: $(-a,-b)\rightarrow (a,b)+(-a,-b)=(0,0)$
 \end{itemize}
 En resumen, $(\mathbb C, +)$ es un \textbf{grupo conmutativo}.
+\end{prop}
 
-\subsubsection{Producto por un escalar}
-Si tenemos que $(a,b)\in \mathbb C$ y $\lambda\in \mathbb R$, se define el producto por un escalar como:
-$$\lambda(a,b)=(\lambda a,\lambda b)$$
-\underline{Propiedades}:
-\begin{itemize}
-\item Conmutativa: $\lambda(a,b)=(a,b)\lambda$
-\item Asociativa: $\lambda(\mu \cdot (a,b))=(\lambda\mu)Cdot (a,b)$
-\item Elemento neutro: $1\cdot (a,b)=(a,b)$
-\item Distributiva: $(\lambda+\mu)(a,b)=\lambda (a,b)+\mu (a,b)$\par
-\item Distributiva: $\lambda[(a,b)+(c,d)]=\lambda(a,b)+\lambda(c,d)$
-\end{itemize}
-
-\subsubsection{Producto}
-Si tenemos que $(a,b),(c,d)\in \mathbb C$, se define el producto como:
+\begin{prop}[Producto de Complejos]
+Si tenemos que $(a,b),(c,d)\in \mathbb C$, definida como:
 $$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$$
-\underline{Propiedades}:
+posee las siguientes propiedades
 \begin{itemize}
 \item Conmutativa: $(a,b)\cdot (c,d)=(c,d)\cdot (a,b)$
 \item Asociativa: $\left((a,b)\cdot(c,d)\right)\cdot (e,f)=(a,b)\cdot \left((c,d)\cdot (e,f)\right)$
@@ -769,37 +830,52 @@ $$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$$
 \item Elemento inverso: $(a,b)^{-1}\rightarrow (a,b)\neq 0\Rightarrow \exists (a,b)^{-1}\in \mathbb C: (a,b)\cdot (a,b)^{-1}=(1,0)$
 \item Distributiva: $(a,b)[(c,d)\cdot(e,f)]=(a,b)\cdot (c,d)+(a,b)(e,f)$
 \end{itemize}
-En resumen, $(\mathbb C, \cdot)$ es un \textbf{grupo conmutativo}. Y en general, $(\mathbb C, + ,\cdot)$ es un \textbf{cuerpo conmutativo}.
+En resumen, $(\mathbb C, \cdot)$ es un \textbf{grupo conmutativo}.
+\end{prop}
 
-\subsubsection{Observaciones}
-Identificamos un número real $x\in \mathbb R$ con el número complejo $(x,0)\in \mathbb C$.
-$$f: \mathbb R\ni x\rightarrow (x,0)\in \mathbb C$$
-Que constituye una muy buena identificación porque conserva el producto y la suma dentro de los reales.\par
-Llamamos $i$ al número complejo $(0,1)\in \mathbb C$ y se le conoce como \textbf{unidad imaginaria}. Pero se observa que $i^2=(-1,0)\in \mathbb R$ por lo que podemos decir que si $i^2=-1\Rightarrow i=\sqrt{-1}$, siendo este la unidad fundamental de los números imaginarios.\par
+\begin{prop}[Producto por un Escalar]
+La operación $\cdot : \mathbb{C}\times \mathbb{R}\rightarrow \mathbb{C}$ definida como:
+$$\lambda(a,b)=(\lambda a,\lambda b)$$
+posee las siguientes propiedades:
+\begin{itemize}
+\item Conmutativa: $\lambda(a,b)=(a,b)\lambda$
+\item Asociativa: $\lambda(\mu \cdot (a,b))=(\lambda\mu)\cdot (a,b)$
+\item Elemento neutro: $1\cdot (a,b)=(a,b)$
+\item Distributiva: $(\lambda+\mu)(a,b)=\lambda (a,b)+\mu (a,b)$\par
+\item Distributiva: $\lambda[(a,b)+(c,d)]=\lambda(a,b)+\lambda(c,d)$
+\end{itemize}
+\end{prop}
+
+\begin{obs}
+Identificamos un número real $x\in \mathbb R$ con el número complejo $(x,0)\in \mathbb C$:
+$$f: x\in \mathbb R \rightarrow (x,0)\in \mathbb C$$
+por tanto, podemos decir que $\mathbb{R}\subset \mathbb{C}$.
+
+La unidad fundamental de los complejos queda definida como $i$ y denota el número complejo $(0,1)\in \mathbb C$. Sin embargo, vemos que $i^2=(-1,0)\in \mathbb R$, de lo que nace la notación $i^2=-1\Rightarrow i=\sqrt{-1}$ más conocida como la unidad imaginaria mencionada anteriormente.
+
 Si tenemos un número complejo cualquiera $(a,b)\in \mathbb C$ lo podemos escribir como $(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)$ con lo cual cualquier número complejo puede expresarse como:
 $$(a,b)=a+bi$$
 Donde $a$ constituye su parte real y $b$ se llama parte imaginaria.
+\end{obs}
 
-\subsection{\underline{Definiciones}}
-\begin{itemize}
-\item Si $z=a+bi\in \mathbb C$ se le llama módulo de $z$ a:
+\begin{defi}[Módulo, Argumento y Conjugado]
+Sea el número complejo $z=a+bi\in \mathbb C$, definimos el \textbf{módulo de $z$} como:
 $$|z|=\sqrt{a^2+b^2}$$
+Sea $\theta\in (0,2\pi]$ un número\footnote{En la representación bidimensional de $\mathbb{C}$, constituye el ángulo, con el eje x del plano, del vector que representa a $z$.} real, decimos que es el \textbf{argumento de $z\neq 0$} si y sólo si:
+\begin{align*}
+cos(\theta)=\frac{a}{|z|} & & sen(\theta)=\frac{b}{|z|}
+\end{align*}
+Sea el número complejo $z=a+bi\in \mathbb C$, definimos el \textbf{conjugado de $z$} como el número complejo $\bar{z}=a-bi$.
+\end{defi}
 
-\item Sea $\theta=(0,2\pi]$ entonces decimos que $\theta$ es el argumento\footnote{Que constituye el ángulo del vector que representa al número complejo con el eje x del plano} de $z\neq 0$ si:
-$$cos(\theta)=\frac{a}{|z|}$$
-$$sen(\theta)=\frac{b}{|z|}$$
-
-\item El conjugado $\bar{z}$ de $z$ es el número complejo $\bar{z}=a-bi$
-
+\begin{prop}
+\begin{itemize}
 \item Si $\theta \in \mathbb R$, $e^{\theta\cdot i}=cos(\theta)+i\cdot sen(\theta)$
 
 \item Si $x\in \mathbb R : x= x+0i\in \mathbb C$, el módulo de ese número real es su valor absoluto: $|x|$
 
 \item Si $z=a+bi\in \mathbb C\Rightarrow |z|=0\Leftrightarrow z=0\Leftrightarrow a=0=b$
-\end{itemize}
 
-\subsubsection{Propiedades}
-\begin{enumerate}
 \item Si $z=a+bi\in \mathbb C$, entonces: $z\cdot \bar{z}=|z|^2$\par
 En particular, $z\cdot (\frac{1}{|z|^2}\cdot \bar{z})=1$, siendo lo del paréntesis \textbf{su inverso}.
 
@@ -810,9 +886,9 @@ En particular, $z\cdot (\frac{1}{|z|^2}\cdot \bar{z})=1$, siendo lo del parénte
 \item Si $z\in \mathbb C$, entonces: $z=|z|e^{i\theta}$ donde $\theta$ es un argumento de $z$ \textbf{(Forma polar)}.
 
 \item Si $z, \omega \in \mathbb C$ y escribimos ambos como: $z=|z|e^{i\alpha}$ y $\omega=|\omega|e^{i\beta}$, entonces: $z\cdot \omega=|z|\cdot |\omega|\cdot e^{i(\alpha +\beta)}$\par
-\end{enumerate}
-
-\underline{Demostración}:
+\end{itemize}
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item $z\cdot \bar{z}=(a+bi)(a-bi)=a^2+b^2=|z|^2$
 \item ya está
@@ -825,22 +901,26 @@ $$cos(\alpha + \beta)+ i\cdot sen(\alpha + \beta)= e^{i\cdot(\alpha + \beta)}$$
 
 \item $z=|z|e^{i\alpha}$ y $\omega=|\omega|e^{i\beta}$, entonces: $z\cdot \omega=|z|e^{i\alpha}\cdot |\omega|e^{i\beta}=|z|\cdot |\omega|\cdot e^{i(\alpha +\beta)}$
 \end{enumerate}
+\end{demo}
 
-\subsubsection{Definición: la exponencial compleja}
-Nos es más que definir un poco más concretamente una de las propiedades anteriores.
-$$z=a+bi\in \mathbb C\Rightarrow e^z=e^{a+bi}=e^a\cdot e^{bi}=e^a\cdot (cos(b)+i\cdot sen(b))=e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)$$
-Concretamente cuando se trata de un número real: $b=0$, luego:
+\begin{defi}[Exponencial compleja]
+Sea $z=a+bi\in \mathbb C$, definimos la \textbf{exponencial compleja} como:
+$$e^z = e^{a+bi}=e^a\cdot e^{bi}=e^a\cdot (cos(b)+i\cdot sen(b))=e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)$$
+Concretamente, cuando $z\in \mathbb{R}$, es decir, $b=0$:
 $$e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)=e^a$$
+\end{defi}
 
-\subsubsection{Formas de representación}
-En resumen a lo expresado anteriormente, hay 4 formas de representar un número complejo:
+\begin{obs}
+A modo de recopilación de los enunciados anteriores, hay 4 formas de representar un número complejo:
 \begin{itemize}
 \item Forma binomial: $a+bi$
 \item Forma trigonométrica: $|z|cos(\theta)+ |z|sen(\theta)i$
 \item Forma polar: $|z|_\theta$
 \item Forma exponencial: $z=|z|\cdot e^{\theta\cdot i}$
 \end{itemize}
-\subsection{\underline{Teorema Fundamental del Álgebra}}
+\end{obs}
+
+\subsection{Teorema Fundamental del Álgebra}
 Supongamos que tenemos un polinomio $P(z)$ con coeficientes complejos, decimos que el número $z_0\in \mathbb C$ es raíz de $P(z)$ lo que es equivalente a decir que: $P(z)=(z-z_0)Q(z)$.\par
 Decimos que $z_0$ es raíz de $P(z)$ con multiplicidad $m\in \mathbb N\Leftrightarrow P(z)=(z-z_0)^mQ(z)$, donde $Q(z_0)\neq 0$.\par
 El teorema dice que si tenemos un polinomio cualquiera de coeficientes complejos, siempre existe una raíz al menos.
@@ -860,42 +940,48 @@ e^{in\theta}=e^{i\alpha} & \Rightarrow n\theta=\alpha\Rightarrow \theta=\frac{\a
 $$
 Donde $k=0,1,..., n-1$
 
-\section{SUPREMOS E ÍNFIMOS}
-Sea $A\subset R: A\neq \emptyset$, decimos que\footnote{En consecuencia, de esto se deduce que cualquier número superior a $M$ es cota superior de A y cualquier número menor que $m$ es cota inferior de A.}:
-\begin{itemize}
-\item $M\in R$ es cota superior del conjunto A $\Leftrightarrow \forall a\in A: a\leq M$.
+\section{Supremos e Ínfimos}
+En esta sección vamos a definir qué significa estar acotado y cuáles son las mejores cotas para un conjunto, es decir, cuál es el valor que representa mejor la ``barrera'' entre el conjunto en cuestión y el resto de $\mathbb{R}$. Este concepto es central y esencial en la asignatura pues interviene en absolutamente el resto de temas del curso.
 
-\item $m\in \mathbb R$ es una cota inferior de A $\Leftrightarrow \forall a\in A: m\leq a$.
+\begin{defi}[Cotas]
+Sea $A\subset R: A\neq \emptyset$, decimos que:
+\begin{itemize}
+\item $M\in R$ es \textbf{cota superior} de A si y sólo si $\forall a\in A: a\leq M$.
+
+\item $m\in \mathbb R$ es \textbf{cota inferior} de A si y sólo si $\forall a\in A: m\leq a$.
 \end{itemize}
-Cuando un conjunto posee cota superior decimos que está acotado superiormente, y cuando pose inferior, inferiormente.\par
+Si $A$ posee cota superior o inferior decimos que está \textbf{acotado superiormente} o \textbf{acotado inferiormente} respectivamente.
+\end{defi}
 
-Sea $A\subset R: A\neq \emptyset$, decimos\footnote{El supremo es la menor de las cotas superiores y el ínfimo la mayor de las menores.} que:
+\begin{defi}[Ínfimos y Supremos]
+Sea $A\subset R: A\neq \emptyset$, decimos que:
 \begin{itemize}
-\item $S\in \mathbb R$ es supremo de A $\Leftrightarrow S\leq M: \forall M\in \mathbb R$, siendo $M$ una cota superior.
+\item $S\in \mathbb R$ es \textbf{supremo} de A si y sólo si $\forall M\in \mathbb R: S\leq M $, siendo $M$ cota superior.
 
-\item $s\in \mathbb R$ es el ínfimo de A $\Leftrightarrow m\leq s: \forall m\in \mathbb R$, donde $m$ es cota inferior de A.
-\end{itemize}\par
+\item $s\in \mathbb R$ es \textbf{ínfimo} de A si y sólo si $\forall m\in \mathbb R: m\leq s$, siendo $m$ cota inferior.
+\end{itemize}
+Además, si $\sup A \in A$ lo llamamos \textbf{máximo} y $\inf A \in A$ lo llamamos \textbf{mínimo}.
+\end{defi}
 
-Decimos $S$ es el máximo de A si es supremo y $S\in A$ y del mismo modo decimos que $s$ es el mínimo de A si es ínfimo y $s\in A$.
+\begin{theo}[Propiedad del Supremo]
+Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado superiormente, entonces existe el supremo.
+\end{theo}
 
-\subsection{\underline{Propiedad del supremo}}
-Si $A\subset \mathbb R: A\neq \emptyset$ y está acotado superiormente, entonces existe el supremo.
-$$A\subset \mathbb R: A\neq \emptyset \mbox{ y acotado superiormente}\Rightarrow \exists S\in \mathbb R: S\mbox{ es supremo de A}$$
+\begin{obs}
 En los $\mathbb Q$ no es cierto y es la diferencia fundamental de este cuerpo con respecto a los $\mathbb R$, porque par el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$, existe el supremo en $\mathbb R$, pero no en $\mathbb Q$.
+\end{obs}
 
-\subsubsection{Proposición: consecuencias de supremo}
-Sea $A\subset \mathbb R: A\neq \emptyset$, acotado superiormente, el número $S\in \mathbb R$ es supremo $\Leftrightarrow$:
+\begin{prop}
+Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado superiormente, el número $S\in \mathbb R$ es supremo si y sólo si:
 \begin{enumerate}
-\item  Es único.
+\item Es único.
 \item Es cota superior de A
 \item $\forall y\in \mathbb R: y<S\Rightarrow \exists a\in \mathbb A: y<a\leq S$.
 \item $\forall \varepsilon>0: \exists a\in A: S- \varepsilon <a\leq S$.
 \end{enumerate}
-
-\underline{Demostraciones}:
-
+\end{prop}
+\begin{demo}
 \begin{enumerate}
-
 \item Demostramos la unicidad:\par
 Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2$. Si suponemos\footnote{Al revés es igual} que $S_1<S_2$, como $S_1$ es cota superior de A y $S_2$ es supremo, $S_2\leq S_1$ \#.
 
@@ -915,19 +1001,18 @@ Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2
 	
 \item Supongamos que no: $\forall a \in A: a<S-\varepsilon \vee S< a$. Si $S<a\Rightarrow S$ no es supremo, por lo tanto \# y si $S-\varepsilon> a: \forall a \in A\Rightarrow S-\varepsilon$ es supremo \#
 \end{enumerate}
+\end{demo}
 
-\subsubsection{Proposición: consecuencia de ínfimo}
-Sea $A\subset \mathbb R: A\neq \emptyset$, acotado inferiormente, el número $s\in \mathbb R$ es ínfimo $\Leftrightarrow$:
+\begin{prop}
+Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado inferiormente, el número $s\in \mathbb R$ es ínfimo si y sólo si:
 \begin{enumerate}
-\item  Es único.
+\item Es único.
 \item Es cota inferior de A
 \item $\forall y\in \mathbb R: s<y\Rightarrow \exists a\in \mathbb A: s\leq a<y$.
 \item $\forall \varepsilon>0: \exists a\in A: s\leq a<s+\varepsilon$.
-\item $A\neq \emptyset$ y acotado inferiormente$\Rightarrow \exists s\in \mathbb R$ ínfimo de A.
 \end{enumerate}
-
-\underline{Demostraciones}:
-
+\end{prop}
+\begin{demo}
 \begin{enumerate}
 \item Demostramos la unicidad:\par
 Si $s_1\neq s_2$ son ínfimos, entonces $s_1<s_2$ o al revés pero la demostración es igual. Si $s_1<s_2$ como $s_2$ es cota inferior y $s_1$ es ínfimo: $s_2\leq s_1$ \#
@@ -948,13 +1033,16 @@ Aquí vemos que $-S$ es el ínfimo de A porque $-S$ es cota inferior de A y prob
 Sea $m$ una cota inferior de A, $m\leq -S$, porque si no lo fuese:
 $-S<m\leq a\Rightarrow S>-m\geq -a\Rightarrow -m$ es cota superior de B, \# porque $S$ es el supremo de B.
 \end{enumerate}
+\end{demo}
 
-\underline{Notación}:\par
-Sea $A\subset \mathbb R: A\neq \emptyset$, se denota al supremo de A como $sup(A)$ y se denota al ínfimo de A como $inf(A)$ y cuando no están acotados los conjuntos y por lo tanto no tiene supremo ni ínfimo pero se denota así: $sup(A)=+\infty$ y $inf(A)=-\infty$.
+\begin{obs}
+Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto no acotado, entonces lo denotamos de esta forma $sup(A)=+\infty$ y $inf(A)=-\infty$.
+\end{obs}
 
-\subsubsection{Teorema de la existencia de raíces}
-Sea $a\in \mathbb R: a>0$ y $n\in \mathbb N: n\geq 2$ entonces $\exists! r>0: r^n=a$.\par
-\underline{Demostración}:\par
+\begin{theo}[de la existencia de raíces]
+Sea $a\in \mathbb R: a>0$ y $n\in \mathbb N: n\geq 2$, entonces $\exists! r>0: r^n=a$.
+\end{theo}
+\begin{demo}
 \begin{enumerate}
 \item Demostramos primero la unicidad:\par
 Supongamos que hay 2: $r_1\neq r_2$, podemos suponer entonces que: $r_1<r_2\Rightarrow r_1^n<r_2^n$ \# porque $a<a$ es absurdo.
@@ -998,22 +1086,31 @@ $$r^n-h\left[(r+1)^n-r^n\right]>a\Leftrightarrow r^n-a>h\left[(r+1)^n-r^n\right]
 Por lo que al poder encontrar un $h$ que satisfaga dicha expresión llegamos a una contradicción porque que $(r-h)^n>a$ implica que $r-h$ es cota superior de A, pero no puede ser porque $r$ es el supremo del conjunto y $r-h$ sería una cota superior, inferior al supremo $r$.
 \end{itemize}
 \end{enumerate}
+\end{demo}
 
-\subsubsection{Supremos e ínfimos de subconjuntos}
-Si tenemos que $S\subset A$ siendo ambos conjuntos de números reales, entonces:
-$$\sup S\leq \sup A$$
-$$\inf S\geq \inf A$$
+\begin{prop}
+Sea $A\subset \mathbb{R}$ un conjunto real y $S\subset A$ un subconjunto suyo, entonces:
+\begin{align*}
+\sup S\leq \sup A && \inf S\geq \inf A
+\end{align*}
+\end{prop}
 
-\subsection{\underline{Propiedad Arquimediana de $\mathbb R$}}
-Sea $x>0\in \mathbb R$ entonces $\exists n\in \mathbb N: x<n$, es decir, $\mathbb N$ no está acotado superiormente.\par
-\underline{Demostración}:\par
+
+\subsection{Densidad de $\mathbb{Q}$ en $\mathbb{R}$}
+Gracias a las propiedades del supremos y del ínfimo, vamos a demostrar que para cualquier número real que escojamos podemos encontrar un racional y un irracional tan cerca como queramos de dicho número. A esta propiedad se la conoce como densidad.
+
+\begin{theo}[Propiedad Arquimediana de $\mathbb R$]
+Para todo $x\in \mathbb R$ positivo, entonces $\exists n\in \mathbb N: x<n$, es decir, $\mathbb N$ no está acotado superiormente.
+\end{theo}
+\begin{demo}
 Supongamos lo contrario, $\exists x>0\in \mathbb R: n\leq x: \forall n \in \mathbb N\Rightarrow \exists S=sup(\mathbb N)$, entonces por ser supremo: $\exists m \in \mathbb N : S-1<m\leq S\Rightarrow S<m+1$, pero como $m+1\in \mathbb N$ es absurdo.
+\end{demo}
 
-\subsubsection{Propiedad Arquimediana del producto}
-Sea $x>1$, $y>0$, entonces $\exists n\in \mathbb N: x^n>y$ y es más:
-$$\forall y>0, x>1: \exists! n\in\mathbb N: x^n<y\leq x^{n+1}$$
-
-\underline{Demostración}:\par
+\begin{theo}[Propiedad Arquimediana del producto]
+Sean $x,y\in \mathbb{R} : x>1, \ y>0$, entonces $\exists n\in \mathbb N: x^n > y$, incluso:
+$$\forall x,y \in \mathbb{R} : y>0, \ x>1: \exists! n\in\mathbb N: x^n<y\leq x^{n+1}$$
+\end{theo}
+\begin{demo}
 Supongamos que no:
 $$\exists y>0, x>1: \forall n\in \mathbb N: y>x^n\Rightarrow\{x^n\}\mbox{ es acotado sup.}\Rightarrow \exists \sup=S\Rightarrow S-\varepsilon< x^m\leq S: \forall \varepsilon>0:\exists m\in \mathbb N\Rightarrow$$
 
@@ -1021,40 +1118,39 @@ Si soy capaz de encontrar un epsilon que verifique que $x^m+\varepsilon<x^{m+1}$
 
 $$\Rightarrow S< x^m +\varepsilon <x^{m+1}\Rightarrow \varepsilon<x^{m+1}(x-1)$$
 Si escogemos un $\varepsilon< x-1\Rightarrow \varepsilon>0$ entonces lo anterior se verifica, así que como sí que existe un $\varepsilon$ positivo que cumple que $x^m+\varepsilon< x^{m+1}$ tenemos una contradicción.
+\end{demo}
 
-\subsubsection{Proposiciones}
+\begin{prop}
 \begin{enumerate}
-\item Si $x<0\in \mathbb R\Rightarrow \exists m\in \mathbb Z: m<x$, es decir, que $\mathbb Z$ no está acotado inferiormente.\par
-Demostración:
-$$x<0\Rightarrow -x>0\stackrel{P.A.}{\Rightarrow} \exists n \in \mathbb N: -x<n\Leftrightarrow x>-n\in \mathbb Z$$
-\vspace{0.15cm}
-
-\item Si $x,y\in \mathbb R: x,y>0\Rightarrow \exists n \in \mathbb N : y<nx$.\par
-Demostración:
-$$\frac{y}{x}>0\stackrel{P.A.}{\Rightarrow} \exists n \in \mathbb N : \frac{y}{x}<n \Leftrightarrow y<nx$$
-\vspace{0.15cm}
-
-\item Si $x>0\Rightarrow \exists n \in \mathbb N : \frac{1}{n}<x$\par
-Demostración:\par
-$$\frac{1}{x}>0\stackrel{P.A.}{\Rightarrow }\exists n \in \mathbb N : \frac{1}{x}<n\Leftrightarrow x>\frac{1}{n}$$			
-\vspace{0.15cm}
-
-\item Si $x>0$, entonces $inf\{\frac{x}{n}: n\in \mathbb N\}=0$\par
-Demostración:
-$$\mbox{0 es cota inferior de } \left\lbrace\frac{x}{n}: n\in \mathbb N\right\rbrace=A\Rightarrow 0\leq \frac{x}{n}: \forall n\in \mathbb N \Rightarrow \exists inf(A)=s\geq 0$$
-$$\mbox{Si }s>0\Rightarrow 0<s\leq \frac{x}{n}\Leftrightarrow n\leq \frac{x}{s}\Rightarrow \mbox{ \# porque los naturales no tiene cota superior}$$
-\vspace{0.15cm}
-
-\item Si $x<0$, entonces $sup\{\frac{x}{n}: n\in \mathbb N\}=0$\par
-Demostración:\par
-$$\mbox{0 es cota superior de } \left\lbrace\frac{x}{n}: n\in \mathbb N\right\rbrace=A\Rightarrow 0\geq \frac{x}{n}: \forall n\in \mathbb N\Rightarrow \exists sup(A)=S \leq 0$$
-$$\mbox{Si }S<0\Rightarrow S\geq \frac{x}{n}\Rightarrow \frac{x}{S}\geq n: \forall n \in \mathbb N\Rightarrow \mbox{ \# porque los naturales no tiene cota superior}$$
-\vspace{0.15cm}
-
+\item Si $x<0\in \mathbb R\Rightarrow \exists m\in \mathbb Z: m<x$, es decir, que $\mathbb Z$ no está acotado inferiormente.
+\item Si $x,y\in \mathbb R: x,y>0\Rightarrow \exists n \in \mathbb N : y<nx$.
+\item Si $x>0\Rightarrow \exists n \in \mathbb N : \frac{1}{n}<x$
+\item Si $x>0$, entonces $inf\{\frac{x}{n}: n\in \mathbb N\}=0$
+\item Si $x<0$, entonces $sup\{\frac{x}{n}: n\in \mathbb N\}=0$
 \item Si $x>0\in \mathbb R\Rightarrow \exists! n \in \mathbb N: n-1\leq x< n$, es decir, en otras palabras\footnote{Y además dichos conjuntos son disjuntos dos a dos.}:
 $$[0,\infty)=\bigcup_{n\in \mathbb N}[n-1,n)$$
-Demostración:\par
-Si $x>0$, sea $A=\{m\in \mathbb N: x<m\}\neq \emptyset$, entonces por la propiedad de Buen Orden, A tiene un primer elemento definido como $n\in A$, que implica que $x<n$
+\item Análogamente, si $x>0$, entonces $\exists! n \in \mathbb N: n-1< x\leq n$, es decir, en otras palabras\footnote{Y además dichos conjuntos son disjuntos dos a dos.}:
+$$(0,\infty)=\bigcup_{n\in \mathbb N}(n-1,n]$$
+\item Si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1\leq x < m$, en otras palabras:
+$$\mathbb R =\bigcup_{m\in \mathbb Z}[m-1,m)$$
+\item Análogamente, si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1< x\leq m$, en otras palabras:
+$$\mathbb R =\bigcup_{m\in \mathbb Z}(m-1,m]$$
+\item Si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x\leq y <mx$, es decir, en otras palabras:
+$$\mathbb R= \bigcup_{m\in \mathbb Z}[(m-1)x, mx)$$
+\item Análogamente, si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x< y \leq mx$, es decir, en otras palabras:
+$$\mathbb R= \bigcup_{m\in \mathbb Z}((m-1)x, mx]$$
+\end{enumerate}
+\end{prop}
+\begin{demo}
+\begin{enumerate}
+\item $$x<0\Rightarrow -x>0\stackrel{P.A.}{\Rightarrow} \exists n \in \mathbb N: -x<n\Leftrightarrow x>-n\in \mathbb Z$$
+\item $$\frac{y}{x}>0\stackrel{P.A.}{\Rightarrow} \exists n \in \mathbb N : \frac{y}{x}<n \Leftrightarrow y<nx$$
+\item $$\frac{1}{x}>0\stackrel{P.A.}{\Rightarrow }\exists n \in \mathbb N : \frac{1}{x}<n\Leftrightarrow x>\frac{1}{n}$$			
+\item $$\mbox{0 es cota inferior de } \left\lbrace\frac{x}{n}: n\in \mathbb N\right\rbrace=A\Rightarrow 0\leq \frac{x}{n}: \forall n\in \mathbb N \Rightarrow \exists inf(A)=s\geq 0$$
+$$\mbox{Si }s>0\Rightarrow 0<s\leq \frac{x}{n}\Leftrightarrow n\leq \frac{x}{s}\Rightarrow \mbox{ \# porque los naturales no tiene cota superior}$$
+\item $$\mbox{0 es cota superior de } \left\lbrace\frac{x}{n}: n\in \mathbb N\right\rbrace=A\Rightarrow 0\geq \frac{x}{n}: \forall n\in \mathbb N\Rightarrow \exists sup(A)=S \leq 0$$
+$$\mbox{Si }S<0\Rightarrow S\geq \frac{x}{n}\Rightarrow \frac{x}{S}\geq n: \forall n \in \mathbb N\Rightarrow \mbox{ \# porque los naturales no tiene cota superior}$$
+\item Si $x>0$, sea $A=\{m\in \mathbb N: x<m\}\neq \emptyset$, entonces por la propiedad de Buen Orden, A tiene un primer elemento definido como $n\in A$, que implica que $x<n$
 $$\begin{cases}n=1 &\Rightarrow 0\leq x<1=n\\
 n\neq 1 &\Rightarrow n-1\notin A\Leftrightarrow n-1\leq x< n\end{cases}$$
 Ahora demostramos la unicidad:
@@ -1072,70 +1168,51 @@ Ahora demostramos la doble inclusión para demostrar que la unión de esos inter
 Por último hay que ver que son disjuntos dos a dos:
 $$n,m\in \mathbb N: n\neq m\Rightarrow n<m\Rightarrow n+1\leq m\Rightarrow n\leq m-1\Rightarrow [n-1,n)\cap [m-1,m)\neq \emptyset$$
 Esto es así porque $x\in [n-1,n)\Rightarrow x<n$ y $x\in [m-1,m)\Rightarrow x\geq m+1$, todo implica que $m-1<n$ \#
-\vspace{0.15cm}
-
-\item Análogamente, si $x>0$, entonces $\exists! n \in \mathbb N: n-1< x\leq n$, es decir, en otras palabras\footnote{Y además dichos conjuntos son disjuntos dos a dos.}:
-$$(0,\infty)=\bigcup_{n\in \mathbb N}(n-1,n]$$
-Demostración: análoga a la anterior.
-\vspace{0.15cm}
-
-\item Si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1\leq x < m$, en otras palabras:
-$$\mathbb R =\bigcup_{m\in \mathbb Z}[m-1,m)$$
-Demostración:
-$$x\geq 0\Rightarrow \exists! n \in \mathbb N : n-1\leq x<n$$
+\item Análoga a la anterior.
+\item $$x\geq 0\Rightarrow \exists! n \in \mathbb N : n-1\leq x<n$$
 $$x<0\Rightarrow -x>0 \Rightarrow \exists! n \in \mathbb N: n-1<-x\leq n\Leftrightarrow -n\leq x< -(n-1)\Leftrightarrow m-1=-n\leq x< -n+1=m$$
 El resto de la demostración es como en los puntos anteriores
-\vspace{0.15cm}
-
-\item Análogamente, si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1< x\leq m$, en otras palabras:
-$$\mathbb R =\bigcup_{m\in \mathbb Z}(m-1,m]$$
-Demostración: igual que antes
-\vspace{0.15cm}
-
-\item Si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x\leq y <mx$, es decir, en otras palabras:
-$$\mathbb R= \bigcup_{m\in \mathbb Z}[(m-1)x, mx)$$
-Demostración:
-$$\frac{y}{x}\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1\leq \frac{y}{x}< m\Rightarrow (m-1)x\leq y< mx$$
-\vspace{0.15cm}
-
-\item Análogamente, si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x< y \leq mx$, es decir, en otras palabras:
-$$\mathbb R= \bigcup_{m\in \mathbb Z}((m-1)x, mx]$$
+\item Igual que antes
+\item $$\frac{y}{x}\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1\leq \frac{y}{x}< m\Rightarrow (m-1)x\leq y< mx$$
 \end{enumerate}
+\end{demo}
 
-Con todo lo visto anteriormente podemos probar otro resultado muy significativo:
-\subsection{Densidad de $\mathbb Q$ en $\mathbb R$}
-Sean $a,b\in \mathbb R: a<b$, entonces $\exists r\in \mathbb Q: a<r<b$, es decir, en otras palabras:
+\begin{theo}[Densidad de $\mathbb Q$ en $\mathbb R$]
+Sean $a,b\in \mathbb R: a<b$, entonces $\exists r\in \mathbb Q: a<r<b$, es decir:
 $$(a,b)\cap \mathbb Q\neq \emptyset$$
-Y de hecho es que hay infinitos.\par
-
-\underline{Demostración}:\par
+Y de hecho hay infinitos.
+\end{theo}
+\begin{demo}
 Llamamos a $h=b-a>0$, por la propiedad arquimediana, $\exists n \in \mathbb N: \frac{1}{n}<h$ y además, $\exists m \in \mathbb Z: m\leq a\cdot n< m+1$. Entonces ocurre que:
 $$a<\frac{m+1}{n}=\frac{m}{n}+\frac{1}{n}< a+ h=b$$
 Con lo cual el número racional que buscábamos es $r=\frac{m+1}{n}$.
+\end{demo}
 
-\subsubsection{Corolario: Densidad de los Irracionales en $\mathbb R$}
-Si $a,b\in \mathbb R: a<b\Rightarrow \exists x\in \mathbb R\mbox{\textbackslash} \mathbb Q: a<x<b$, en otras palabras:
+\begin{theo}[Densidad de los Irracionales en $\mathbb R$]
+Si $a,b\in \mathbb R: a<b$, entonces $\exists x\in \mathbb R\mbox{\textbackslash} \mathbb Q: a<x<b$, en otras palabras:
 $$(a,b)\cap (\mathbb R\mbox{\textbackslash} \mathbb Q)\neq \emptyset$$
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 $$a<b\Rightarrow \frac{a}{\sqrt{2}}< \frac{b}{\sqrt{2}}\Rightarrow \exists r \in \mathbb Q: \frac{a}{\sqrt{2}}<r<\frac{b}{\sqrt{2}}\Rightarrow a <\sqrt{2}r<b$$
 Y es fácil ver que $r\in \mathbb R\mbox{\textbackslash}\mathbb Q$.
+\end{demo}
 
-\subsection{\underline{Principio de intervalos encajados de Cantor}}
-Supongamos que tenemos una familia de intervalos cerrados, es decir:
-$$F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$$
-Decimos que $F$ es de intervalos encajados\footnote{Uno está dentro del otro y así sucesivamente} $\Leftrightarrow n >m \Rightarrow I_n\subset I_m$, lo que es equivalente a decir que $I_{n+1}\subset I_{n}: \forall n\in \mathbb N$\par
-
+\begin{defi}[Intervalos Encajados]
+Sea $F$ una familia de intervalos cerrados, es decir, $F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$, decimos que es de \textbf{intervalos encajados} si y sólo si:
+$$ \forall n, m\in \mathbb{N} : n >m : I_n\subset I_m$$
 \begin{center}
 \includegraphics[scale=0.20]{Intervalos encajados}
 \end{center}
+También se puede expresar como:
+$$\forall n\in \mathbb N : I_{n+1}\subset I_{n}$$
+\end{defi}
 
-El teorema dice que sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados:
-$$\bigcap_{n\in \mathbb N}I_n\neq \emptyset \mbox{ y además }\bigcap_{n\in \mathbb N} I_n=[\xi, \eta]$$
-
-Donde $\xi=sup\{a_n: n\in \mathbb N\}$ y $\eta=inf\{b_n: n\in \mathbb N\}$. Además de esta expresión se deduce que: $\xi\leq \eta$\par
-\vspace{3cm}
-
-\underline{Demostración}:\par
+\begin{theo}[Principio de intervalos encajados de Cantor]
+Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces:
+$$\bigcap_{n\in \mathbb N}I_n = [\xi, \eta] \neq \emptyset$$
+donde $\xi=sup\{a_n: n\in \mathbb N\}$ y $\eta=inf\{b_n: n\in \mathbb N\}$.
+\end{theo}
+\begin{demo}
 Llamamos $A=\{a_n: n\in \mathbb N\}$ y $B=\{b_n: n\in \mathbb N\}$, veamos que $\forall n\in \mathbb N: a_n\leq b_m$:
 $$\mbox{Si }n\geq m\Rightarrow I_n\subset I_m\Leftrightarrow [a_n,b_n]\subset [a_m, b_m]\Rightarrow a_m\leq a_n\leq b_n\leq b_m$$
 $$\mbox{Si }m>n\Rightarrow I_m\subset I_n\Rightarrow [a_m,b_m]\subset[a_n,b_n]\Rightarrow a_n\leq a_m\leq b_m\leq b_n$$
@@ -1150,12 +1227,17 @@ x\mbox{ es cota inferior de B}\Rightarrow x\leq \eta\end{cases}\Rightarrow x\in 
 \item ``$\supset$'':
 $$x\in [\xi,\eta]\Leftrightarrow a_n\leq \xi\leq x\leq \eta\leq b_n: \forall n \in \mathbb N\Rightarrow a_n\leq x\leq b_n\Rightarrow x\in [a_n,b_n]=I_n: \forall n\in \mathbb N\Rightarrow x\in \bigcap_{n\in \mathbb N}I_n$$
 \end{itemize}
+\end{demo}
 
-\subsubsection{Corolario}
+\begin{obs}
+Del teorema anterior deducimos que $\xi\leq \eta$.
+\end{obs}
+
+\begin{coro}
 Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces\footnote{Si $I=[a,b]$, entonces su longitud es $l(I)=b-a$}:
 $$\bigcap_{n\in \mathbb N}I_n\mbox{ es un único número}\Leftrightarrow \forall \varepsilon>0: \exists n\in \mathbb N: l(I_n)<\varepsilon$$
-
-\underline{Demostración}:\par
+\end{coro}
+\begin{demo}
 Por el teorema demostrado: $\bigcap_{n\in \mathbb N}I_n=[\xi,\eta]$, por lo que es un único número $\Leftrightarrow \xi=\eta$:
 
 \begin{itemize}
@@ -1186,8 +1268,9 @@ $$\xi<\eta\Rightarrow \forall n \in \mathbb N: a_n\leq \xi<\eta\leq b_n\Rightarr
 Por que entonces decimos que los intervalos no son de la longitud que queramos porque tiene que ser mayores que un valor $\delta$ determinado.
 
 \end{itemize}
+\end{demo}
 
-\subsubsection{Observaciones}
+\begin{obs}
 \begin{itemize}
 \item Si los intervalos no son cerrados, es mentira el teorema.\par
 Sea $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$, entonces $I_{n+1}\subset I_n$ porque:
@@ -1196,9 +1279,10 @@ Vemos que la intersección es vacía:
 $$x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\frac{1}{n}\Rightarrow \#$$
 Porque $n<\frac{1}{x}$ es absurdo porque los naturales no tienen cota superior.
 \end{itemize}
+\end{obs}
 
-\subsection{\underline{Definición de la exponencial real}}
-Se va a prescindir de las demostraciones de las operaciones con potencias y de los resultados para raíces porque se considera que son triviales y además se prescindirá de la demostración de los enunciados posteriormente descritos por la dificultad que revisten, pero se incluyen en estos apuntes por la importancia que revisten para resultados posteriores.
+\subsection{Definición de la exponencial real}
+Se va a prescindir de las demostraciones de las operaciones con potencias y de los resultados para raíces porque se considera que son triviales y además se prescindirá de la demostración de los enunciados posteriormente descritos por la dificultad que revisten, pero se incluyen en estos apuntes por la importancia que tienen para resultados posteriores.
 
 Para poder definir lo que significa tener un número elevado a otro número real se atiende a la siguiente definición: sea $a,x\in \mathbb R$ y $r\in \mathbb Q$:
 $$x=\sup\{r\in \mathbb Q: r<x\}=\inf\{r\in \mathbb Q: r>x\}$$
