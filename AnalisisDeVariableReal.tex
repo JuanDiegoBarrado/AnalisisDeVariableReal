@@ -1859,6 +1859,8 @@ Por tanto, dado un $\varepsilon>0,\exists n_0\in \mathbb N: k\geq k_0\Rightarrow
 \end{demo}
 
 \subsection{Límite inferior y superior de una sucesión}
+Muchas veces tenemos sucesiones que no convergen a ningún valor concreto, pero que siempre oscilan entre varios valores posibles, por ejemplo, la sucesión $\{(-1)^n\}_{n=1}^\infty$. Es cierto que dicha sucesión no converge, pero si podemos acotar un conjunto sobre el que siempre se encuentran los posibles límites de cada subsucesión. Estas dos cotas del intervalo son precisamente las nociones de límite superior e inferior.
+
 \begin{defi}
 Sea $\{x_n\}\subset \mathbb R$ una sucesión acotada y denotamos $N\in \mathbb N$, entonces definimos las sucesiones:
 $$a_N=\inf\{x_n: n\geq N\}\Rightarrow \{a_N\}\uparrow$$
@@ -1924,23 +1926,26 @@ $$\limsup_{n\rightarrow\infty}x_n=\sup L$$
 \end{obs}
 
 \subsection{Límites en el exponente}
-\subsubsection{Paso al exponente}
+Hasta ahora hemos demostrado que el límite se distribuye razonablemente en la suma y el producto de sucesiones. Sin embargo, una propiedad útil y que aún no hemos demostrado sería saber si también ocurre lo mismo con la exponencial, es decir, ¿si $x_n \xrightarrow{n\rightarrow \infty} x$ y $y_n \xrightarrow{n\rightarrow \infty} y$ la sucesión $x_n^{y_n} \xrightarrow{n\rightarrow \infty} x^y$?
+
+\begin{theo}[Exponencial de exponente variable]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión que converge a $x$ y $a>0$, entonces:
 $$\lim_{n\rightarrow \infty} x_n = x \mbox{ y }a>0\Rightarrow \lim_{n\rightarrow\infty} a^{x_n}=a^x$$
-
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 Veamos primero que si $\{x_n\}$ es monótona, entonces esto ocurre:
 $$\{x_n\}\uparrow\Rightarrow a^{x_n}<a^{x_{n+1}}<a^x \Rightarrow \{a^{x_n}\} \uparrow$$
 Además como $a^x>a^{x_n}:\forall n\in \mathbb N$, entonces está acotada, por lo que existe el supremo y además este es el límite de dicha sucesión. En consecuencia, por ser cota superior $a^x\geq \xi$ donde $\xi=\sup\{a^{x_n}\}$. Por la definición que se dió de exponencial real, el supremo de $a^{x_n}$ es $a^x$ por ser $x_n\in \mathbb R$.
 
 Visto el caso de una función monótona, para una función cualquiera se tiene que como $x_n\xrightarrow{n\rightarrow\infty} x\Rightarrow a_N\xrightarrow{n\rightarrow\infty}x\xleftarrow{n\rightarrow\infty} b_N$ siendo ambos los límites superiores e inferiores descritos en el apartado anterior, así que como $\{b_N\}\downarrow$ y $\{a_N\}\uparrow$:
 $$a_N\leq x_N\leq b_N \Rightarrow a^{a_N}\xrightarrow{n\rightarrow\infty}a^x\leq a^{x_N}\leq a^{b_N}\xrightarrow{n\rightarrow\infty}a^x\Rightarrow a^{x_N}\xrightarrow{N\rightarrow\infty}a^x$$
+\end{demo}
 
-\subsubsection{Raíces de base variable}
-Sea $x_n\geq 0: \forall n\in \mathbb N$ y $\lim_{n\rightarrow\infty} x_n = x$, si $r\in \mathbb Q$, entonces:
-$$\lim_{n\rightarrow \infty}x_n = x: \forall n\in \mathbb N: x_n\geq 0 \mbox{ y }r\in \mathbb Q\Rightarrow \lim_{n\rightarrow\infty}x_n^{r} = x^r$$
-
-\underline{Demostración}:\par
+\begin{theo}[Exponencial de base variable]
+Sea $r\in \mathbb Q$ y $\{x_n\}_{n=1}^\infty$ una sucesión tal que $\forall n\in \mathbb N: x_n\geq 0$ y $\lim_{n\rightarrow\infty} x_n = x$, entonces:
+$$\lim_{n\rightarrow\infty}x_n^{r} = x^r$$
+\end{theo}
+\begin{demo}
 Comenzamos con el mismo razonamiento que para la demostración anterior, si $\{x_n\}\uparrow$ que converge a $x$ y $m\in \mathbb N$, entonces:
 $$x_n\leq x_{n+1}\leq x\Rightarrow \sqrt[m]{x_n}\leq \sqrt[m]{x_{n+1}}\leq \sqrt[m]{x} \Rightarrow \{\sqrt[m]{x_n}\}\uparrow$$
 
@@ -1951,15 +1956,16 @@ En consecuencia, como $\{a_N\}\uparrow$ y $\{b_N\}\downarrow$, podemos acotar a 
 $$a_N\leq x_N\leq b_N\Rightarrow \sqrt[m]{a_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}\leq \sqrt[m]{x_n}\leq \sqrt[m]{b_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}\Rightarrow \sqrt[m]{x_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}$$
 
 De ello se puede deducir, contando con la demostración anterior que si $m\in \mathbb Q$ entonces se cumple la proposición dada (contando con lo demostrado en la proposición anterior a este apartado).
+\end{demo}
 
-\subsubsection{Exponencial de base variable}
-Esta proposición aúna las dos anteriores, diciendo que si $\lim_{n\rightarrow \infty}x_n = x$ y $\lim_{n\rightarrow\infty}a_n=a>0$, entonces:
+\begin{theo}[Exponencial de base y exponente variable]
+Sean $\{x_n\}_{n=1}^\infty$ y $\{a_n\}_{n=1}^\infty$ sucesiones tal que $\lim_{n\rightarrow \infty}x_n = x$ y $\lim_{n\rightarrow\infty}a_n=a>0$, entonces:
 $$\lim_{n\rightarrow\infty}a_n=a>0 \mbox{ y } \lim_{n\rightarrow\infty}x_n=x\Rightarrow \lim_{n\rightarrow\infty}a_n^{x_n}=a^x$$
-
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 Para esta demostración necesitamos elaborar un poco el terreno la demostración final. Primero de todo tenemos que si $\lim_{n\rightarrow \infty} a_n=a\Rightarrow \lim_{n\rightarrow \infty}a_n^x=a^x$, cuya demostración utilizando las técnicas y resultados anteriores es trivial. Es fácil demostrar, teniendo en cuenta la definición de exponencial real que se dió, que si $x>0\Rightarrow a^x=\sup\{b^x: b<a\}=\inf\{c^x: a<c\}$ y del mismo modo que si $x<0\Rightarrow a^x=\inf\{b^x: b<a\}=\sup\{c^x: a<c\}$. Del mismo modo, es sencillo demostrar por casos que si $\{x_n\}$ es monótona convergente a $x$ y $a_n$ es monótona convergente a $a$, entonces $\lim_{n\rightarrow\infty} a_n^{x_n}=a^x$ con lo que basándonos en estos resultados tenemos que contando como $z_N$ la sucesión que tiende al límite inferior y $y_N$ la del superior:
 $$z_N\leq a_N\leq y_N\Rightarrow z_N^{z'_n}\leq a_N^{z'_n}\leq a_N^{x_n}\leq a_N^{y'_n}\leq y_N^{y'_n}\Rightarrow z_N^{z'_n}\xrightarrow{n\rightarrow|\infty}a^x\leq a_N^{x_N}\leq y_N^{y'_n}\xrightarrow{n\rightarrow|\infty}a^x\Rightarrow a_N^{x_N}\xrightarrow{n\rightarrow|\infty}a^x$$
-
+\end{demo}
 
 \section{Series Numéricas}
 El concepto nace de problemas como la suma de infinitos números. Para poder desarrollar dicha teoría, es necesario introducir (como en la mayoría de conceptos que tratan el infinito) el concepto de límite porque tal y como hemos definido la operación de la suma solo podemos sumar una cantidad finita de números. Tan grande como queramos, pero al fin y al cabo finita, es decir:
@@ -2298,7 +2304,7 @@ El concepto intuitivo que queremos expresar es que si tenemos $D\subset R: D\neq
 
 \begin{defi}[Límite de una Función]
 Sea $D\subset \mathbb R: D\neq \emptyset$, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces decimos que $l\in \mathbb R$ es el \textbf{límite de $f(x)$ cuando $x$ tiende a $x_0$} si y sólo si:
-$$\forall \varepsilon>0, \exists \delta>0 : x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)\Rightarrow f(x)\in (l-\varepsilon, l+\varepsilon)$$
+$$\lim_{x\rightarrow x_0} f(x) = l \Leftrightarrow \forall \varepsilon>0, \exists \delta>0 : x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)\Rightarrow f(x)\in (l-\varepsilon, l+\varepsilon)$$
 \end{defi}
 
 \begin{obs}
@@ -2906,23 +2912,35 @@ Con lo cual, sabiendo que $a=d$ y que $b=c$, entonces veamos que es estrictament
 \end{demo}
 
 \subsection{Continuidad de funciones elementales}
-\subsubsection{Regla del Sandwich para funciones}
-Si tenemos que $D\subset \mathbb R$, $x_0$ es un punto de acumulación, $f,g,h: D\rightarrow\mathbb R$ y ocurre que para $\delta_0>0$ vemos que $f(x)\leq g(x)\leq h(x)$, si $\lim_{x\rightarrow x_0} f(x)=m=\lim_{x\rightarrow x_0} h(x)$, entonces se tiene que:
-$$f(x)\xrightarrow{x\rightarrow x_0} m \leq g(x)\leq h(x)\xrightarrow{x\rightarrow x_0}m\Rightarrow g(x)\xrightarrow{x\rightarrow x_0}m$$
+Como hemos visto que la suma, el producto y la composición de funciones continuas respeta la continuidad, si tenemos un buen alijo de funciones simples que se haya demostrado que sean continuas tendremos entonces una herramienta muy potente para demostrar que cualquier función lo es. Bastará con descomponerla en otras más pequeñas relacionadas entre sí por operaciones que respeten la continuidad.
 
-\underline{Demostración}:\par
+\begin{theo}[Regla del Sandwich para funciones]
+Sea $D\subset \mathbb R$, $x_0\in D'$ y $f,g,h: D\rightarrow\mathbb R$ dos funciones que verifican que :
+\begin{itemize}
+\item $\forall delta_0>0 : f(x)\leq g(x)\leq h(x)$
+\item $\lim_{x\rightarrow x_0} f(x)=m$
+\item $\lim_{x\rightarrow x_0} h(x) = m$
+\end{itemize}
+entonces se tiene que:
+$$\overbrace{f(x)}^{\xrightarrow{x\rightarrow x_0} m} \leq g(x)\leq \overbrace{h(x)}^{\xrightarrow{x\rightarrow x_0}m}\Rightarrow g(x)\xrightarrow{x\rightarrow x_0}m$$
+\end{theo}
+\begin{demo}
 Considerando que ambas funciones ``tapa'' tienden a $m$ tenemos que:
 $$\forall \varepsilon>0 : \exists \delta_1>0 : 0<|x-x_0|<\delta_1\Rightarrow |f(x)-m|<\varepsilon$$
 $$\forall \varepsilon>0: \exists \delta_2>0: 0<|x-x_0|<\delta_2\Rightarrow |h(x)-m|<\varepsilon$$
-
 Luego si dado un $\varepsilon>0$, cogemos $\delta=\min\{\delta_0, \delta_1,\delta_2\}$ tenemos que:
 $$m-\varepsilon< f(x) \leq g(x) \leq h(x) < m+\varepsilon\Rightarrow |g(x)-m|<\varepsilon$$
+\end{demo}
 
-\subsubsection{Continuidad de funciones exponenciales}
-Sean $f: D\rightarrow (0,\infty)$ y $g: D\rightarrow \mathbb R$, se tiene que la función $h: D\rightarrow \mathbb R$:
-$$h(x)=f(x)^{g(x)}: x\in D \mbox{ es continua}$$
-
-\underline{Demostración}:\par
+\begin{theo}[Continuidad de la exponencial]
+Sean $f: D\rightarrow (0,\infty)$ y $g: D\rightarrow \mathbb R$, entonces la función:
+\begin{eqnarray*}
+h: D &\longrightarrow \mathbb R \\
+x &\longmapsto f(x)^{g(x)}
+\end{eqnarray*}
+es una función continua. 
+\end{theo}
+\begin{demo}
 Para demostrar esta proposición vamos a demostrar pequeños resultados intermedios:
 $$f(x)=a^x \mbox{ es continua} \Leftrightarrow \forall\{x_n\}_{n=1}^\infty\subset D: x_n\xrightarrow{n\rightarrow\infty} x\Rightarrow f(x_n)\xrightarrow{n\rightarrow} f(x)$$
 Como vimos en el tema de sucesiones, el límite se puede pasar al exponente así que se tiene que: $f(x_n)=a^x_n\xrightarrow{n\rightarrow\infty} a^x\Rightarrow f$ es continua. Por el teorema que dice que la composición de funciones continuas es continua, se tiene que: $f(x)=a^{g(x)}$ es continua.
@@ -2930,14 +2948,15 @@ Como vimos en el tema de sucesiones, el límite se puede pasar al exponente así
 Del mismo modo, tenemos que $f(x)=x^a$ es continua porque por el mismo razonamiento: $f(x_n)=x_n^a\xrightarrow{n\rightarrow\infty} x^a$, luego se cumple. En consecuencia, tenemos que por la composición: $f(x)=g(x)^a$ es continua.
 
 Basta con ver que al ser estas dos funciones continuas, la composición de ambas: $h(x)=f(x)^{g(x)}$ es continua.
+\end{demo}
 
-\subsubsection{Continuidad del seno y del coseno}
-El coseno y el seno son funciones continuas.
+\begin{theo}
+La funciones trigonométricas seno y coseno, es decir, $\sin x$ y $\cos x$ son funciones continuas.
+\end{theo}
 
-\subsubsection{Continuidad de los logaritmos}
-Definimos el logaritmo\footnote{Cuando la base del logaritmo es el número \textit{e} decimos que es un \textit{logaritmo neperiano}} como la función inversa a la exponencial, su imagen va de los positivos a los reales.
+\begin{theo}[Continuidad del logaritmo]
+Sea $a\in \mathbb{R}$ un número positivo, definimos el \textbf{logaritmo en base $a$} como la función inversa a la exponencial, es decir:
 \begin{eqnarray*} log_a x: (0,\infty) &\longrightarrow& \mathbb R \\ a^x &\longmapsto& x \end{eqnarray*}
-
 Además observamos las siguientes propiedades:
 \begin{itemize}
 \item $\log_a xy = \log_a x + \log_a y$
@@ -2947,15 +2966,15 @@ Además observamos las siguientes propiedades:
 \item $\log_a a = 1$
 \item $\log_a 0 \rightarrow -\infty$
 \end{itemize}
-
-\underline{Demostración}:\par
+\end{theo}
+\begin{demo}
 Como ya demostramos que $f(x)=a^x$, era continua, monótona e inyectiva y también estaba demostrado que toda función es sobreyectiva sobre su imagen, vemos que la inversa existe: a esta es a la que denominamos \textit{logaritmo}. Veamos que su dominio es $(0,\infty)$:\par
 Si $a>1$, entonces $\lim_n\rightarrow \infty a^n = \infty$ y $\lim_n\rightarrow \infty a^-n = 0$, por lo que la imagen siempre es positiva. Como $\mathbb R$ es un intervalo, sabemos que la imagen de un intervalo por una función continua es de nuevo un intervalo lo que implica que $f(\mathbb R)\subset (0,\infty)$ y como las imágenes de antes tendían a 0 y a $\infty$ necesariamente la imagen es $(0,\infty)$. El caso de que $0<a<1$ es análogo. En consecuencia, imagen de $a^x$ es el dominio de la función inversa.
 
 Para las propiedades, tal y como hemos definido el logaritmo este representa el exponente al que debe elevarse la base para que pueda ser x, con lo cual $a^{\log_a x} = x$ así que:
 $$a^{\log_a xy}= xy=a^{log_a x}\cdot a^{log_a y}=a^{\log_a x + \log_a y}\Rightarrow \log_a xy = \log_a x +\log_a y$$
 El resto de propiedades se demuestran de forma análoga.
-
+\end{demo}
 
 \chapter{Cálculo Diferencial}
 En este capítulo desarrollamos otro de los temas centrales del cálculo y el análisis matemático: la derivación. El problema surge del estudio de cambios en el valor de la función ante cambios infinitesimales de la entrada de la misma. Además, dicho concepto se relaciona íntimamente con las curvas y rectas tangentes a distintas superficies y con la optimización de funciones a través de máximos y mínimos.
