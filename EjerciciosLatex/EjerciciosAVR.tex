@@ -1,0 +1,174 @@
+\documentclass[10pt,a4paper,openright]{book}
+
+%% Formateo del título del documento
+\title{\Huge EJERCICIOS ANÁLISIS DE VARIABLE REAL}
+\author{Juan Diego Barrado Daganzo} %\\ es salto de linea
+\date{\today\footnote{Este documento se actualiza, para consultar las últimas versiones entrar en el enlace \url{https://github.com/JuanDiegoBarrado/???}}}
+
+%% Formateo del estilo de escritura y de la pagina
+\pagestyle{plain}
+\setlength{\parskip}{0.35cm} %edicion de espaciado
+\setlength{\parindent}{0cm} %edicion de sangría
+\clubpenalty=10000 %líneas viudas NO
+\widowpenalty=10000 %líneas viudas NO
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=3cm]{geometry} % para establecer las medidas de los margenes
+\usepackage[spanish]{babel} %Para que el idioma por defecto sea español
+\usepackage{ulem} % para poder subrayar entornos especiales como las secciones
+
+%% Texto matematico y simbolos especiales
+\usepackage{amsmath} %Paquetes para mates
+\usepackage{amsfonts} %Paquetes para mates
+\usepackage{amssymb} %Paquetes para mates
+\usepackage{stmaryrd} % paquete para mates
+\usepackage{latexsym} %Paquetes para mates
+\usepackage{cancel} %Paquete tachar cosas
+
+%% Ruta de las fotos e inclusion de las mismas
+\usepackage{graphicx}
+\graphicspath{{./fotos/}}
+
+%% Paquete para subfigures dentro del entorno figure
+\usepackage{subcaption}
+
+%% Inclusion de referencias cruzadas por defecto y específicas
+\usepackage[colorlinks=true]{hyperref}
+\hypersetup{
+	urlcolor=red,
+	linkcolor=blue,
+}
+
+%% Paquete para definir y utilizar colores por el documento
+\usepackage[dvipsnames,usenames]{xcolor} %activar e incluir colores
+	%% definicion de los colores que se van a utilizar en cada cabecera
+    \definecolor{capitulos}{RGB}{60,0,0}% gama de colores de los capitulos
+    \definecolor{secciones}{RGB}{95,8,5}% gama de colores de las secciones
+    \definecolor{subsecciones}{RGB}{140,36,31}% gama de colores de las subsections
+    \definecolor{subsubsecciones}{RGB}{188,109,79}% gama de colores de las subsubsections
+    \definecolor{teoremas}{RGB}{164,56,32}% gama de colores para los teoremas
+    \definecolor{demos}{RGB}{105,105,105} % gama de colores para el cuerpo de las demostraciones
+
+%% Paquete para la edición y el formateo de capítulos, secciones...
+\usepackage[explicit]{titlesec}
+	%% Definición del estilo de los capítulos, secciones, etc...
+    \titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{capitulos}}{}{0pt}{\Huge \uppercase{#1}}[\titlerule]
+    \titleformat{\section}{\normalfont\Large\bfseries\color{secciones}}{}{0pt}{\uppercase{#1}}
+    \titleformat{\subsection}{\normalfont\large\bfseries\color{subsecciones}}{}{0pt}{\uline{#1}}
+    \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
+
+%% Paquete para el formateo de entornos del proyecto
+\newtheorem{ej}{Ejercicio}
+\newtheorem{sol}{Solución Ejercicio}
+
+%% Definicion de operadores especiales para simplificar la escritura matematica
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\divg}{div}
+\newcommand{\dif}[1]{\ d#1}
+
+%% Paquete e instrucciones para la generacion de los dibujos
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usepackage{tkz-fct}
+\usepackage{pstricks}
+\usepackage{pstcol} 
+\usepackage{pst-node}
+\usepackage{pst-plot}
+
+%% Paquete para la tachar cosas
+\usepackage{centernot}
+
+%% Paquete para tener un apéndice
+\usepackage{appendix}
+
+%% Paquete para comentar bloques de código de LaTeX
+\usepackage{verbatim}
+
+\begin{document}
+\maketitle
+\frontmatter
+\section*{QUIÉNES SOMOS}
+Somos un grupo de estudiantes de la Universidad Complutense de Madrid, concretamente del Doble Grado de Informática y Matemáticas que queremos compartir unos apuntes de calidad y, como mínimo, ordenados para que os sea más fácil llevar la asignatura al día (sobre todo a estudiantes de Doble Grado).
+
+Estos apuntes son posibles gracias a la colaboración de más alumnos como tú que deciden aportar un granito de arena al proyecto. Puedes contribuir de la siguiente manera:
+\begin{itemize}
+\item Notificando erratas
+\item Modificando erratas
+\item Proponiendo mejoras
+\item Aportando ejemplos nuevos
+\item Aportando nuevas versiones
+\end{itemize}
+Para contribuir no tienes más que ponerte en contacto con \href{mailto:juandbar@ucm.es}{juandbar@ucm.es} o dejarnos un \textit{Pull Request} en \url{https://github.com/JuanDiegoBarrado/CalculoDiferencial}. Los detalles para que la contribución de todos sea lo más homogénea posible estarán en el fichero \textit{Contribute.md} de dicho repositorio o, en caso de no aparecer correctamente, podéis poneros en contacto con el correo anteriormente mencionado.
+
+Muchas gracias, esperamos que este documento te sea útil.
+
+\section*{AGRADECIMIENTOS}
+Queremos dar gracias especialmente al Profesor Javier Soria, por ser el profesor que impartió la asignatura de \textit{Cálculo Diferencial} durante la elaboración de estos apuntes y por darnos \textit{feedback} sobre la calidad y las posibles mejoras de los mismos.
+
+También queremos dar las gracias a los Profesores Víctor Manuel Sánchez, Jose María Martínez Ansemil y Socorro Ponte Miramontes, por elaborar otros manuales más formales sobre la asignatura que nos han permitido contrastar adecuadamente los nuestros y entender adecuadamente los contenidos aquí expuestos.
+\vfill
+Cálculo Diferencial © 2021 by Juan Diego Barrado \& Iker Muñoz is licensed under Attribution-NonCommercial 4.0 International. To view a copy of this license, visit
+\begin{center}
+\url{http://creativecommons.org/licenses/by-nc/4.0/}
+\end{center}
+
+\mainmatter
+\hypersetup{linkcolor=black} %% Conseguimos que el índice salga en negro
+\setcounter{tocdepth}{3}% para que salgan las subsubsecciones en el indice
+\setcounter{secnumdepth}{4}% para que salgan los números de las subsubsecciones en el indice
+\tableofcontents
+\hypersetup{linkcolor=blue} % retornamos el color de las referencias a azul, para que quede resaltado
+
+\chapter{Conjuntos y Funciones}
+\begin{ej}
+Sea $A:=\{n\in \mathbb{N} : n \leq 20\}$, $B:=\{3n-1 : n\in \mathbb{N}\}$ y $C:=\{2n+1 : n\in \mathbb{N}\}$, describir los conjuntos:
+\begin{enumerate}
+\item $A\cap B\cap C$
+\item $(A\cap B)\setminus C$
+\item $(A\cap C)\setminus B$
+\end{enumerate}
+\end{ej}
+\begin{sol}
+Cosas de prueba
+\begin{enumerate}
+\item En primer lugar, si $m\in B \cap A$, entonces nos preguntamos por los elementos de $B$ que son menores o iguales que $20$, es decir:
+$$3n-1 \leq 20 \Leftrightarrow \underbrace{n \leq \frac{21}{3} = 7}_{\mbox{\footnotesize{Esto indica que $1\leq n \leq 7$}}} \Rightarrow B\cap A = \underbrace{\{2,5,8,11,14,17,20\}}_{\mbox{\footnotesize{Por eso sólo hay 7}}}$$
+Del mismo modo, podemos expresar $A\cap C$ como:
+$$2n+1 \leq 20 \Leftrightarrow n \leq \frac{19}{2} \stackrel{n\in \mathbb{N}}{\Rightarrow} \underbrace{n\leq \frac{18}{2} = 9}_{\mbox{\footnotesize{De nuevo, $1\leq n\leq 9$}}} \Rightarrow C\cap A = \{3,5,7,9,11,13,15,17,19\}$$
+Luego, $A\cap B\cap C = A\cap B \cap A \cap C$, es decir, los comunes a los $2$ conjuntos anteriores, por tanto:
+$$A\cap B \cap C = \{5,11,17\}$$
+
+\item Como ya tenemos calculada $A\cap B$, calcular $(A\cap B)\setminus C$ no es más que quitar los elementos de $C$. Es más, como los elementos de $A\cap B$ son menores que $20$ (por definición) realmente tenemos que quitar los elementos de $C$ menores que $20$ (pues los otros seguro que no están para quitarlos) y, por tanto, tenemos que quitar los elementos de $C\cap A$, luego:
+$$(A\cap B)\setminus C = \{2,8,14,20\}$$
+
+\item De nuevo, tenemos calculada $A\cap C$ y hay que quitar los elementos de $B$, pero como los elementos de $A \cap C$ son menores que $20$ sólo hay que quitar los elementos de $B$ menores que $20$ (porque los demás no están) y, por tanto, hay que quitar $B\cap A$:
+$$(A\cap C)\setminus B = \{3,7,9,13,15,19\}$$
+\end{enumerate}
+\end{sol}
+
+\begin{ej}
+Mediante diagramas, identifica los siguientes conjuntos:
+\end{ej}
+
+\begin{ej}
+Sea $I$ un conjunto de índices y para cada $i \in I$ sea $A_i$ un conjunto. Si $B$ es otro conjunto demuestra que:
+$$\left(\bigcup_{i\in I} A_i\right) \cap B = \bigcup_{i\in I} (A_i\cap B)$$
+\end{ej}
+\begin{sol}
+En este tipo de ejercicios, para demostrar la igualdad de dos conjuntos se suele demostrar que uno está contenido en el otro y viceversa.
+\begin{itemize}
+\item $\subset$
+
+Para hacer el contenido de izquierda a derecha, suponemos que cogemos un elemento del de la izquierda y hay que ver que está en la derecha:
+$$x\in \left(\bigcup_{i\in I} A_i\right) \cap B \Rightarrow x \in \left(\bigcup_{i\in I} A_i\right) \ \wedge \ x \in B \Rightarrow (\exists i  \in I : x\in A_i) \ \wedge \ x\in B \Rightarrow $$
+$$\Rightarrow \exists i \in I : (x\in A_i \ \wedge \ x\in B) \Rightarrow \exists i \in I : (x\in A_i \cap B) \Rightarrow \bigcup_{i\in I}(A_i\cap B)$$
+
+\item $\supset$
+
+Para ver el contenido de derecha a izquierda, volvemos a partir de un elemento de la derecha y tenemos que ver que está en la izquierda. En este caso, se puede coger la demostración anterior empezando por el final, puesto que a pesar de que se han puesto implicaciones, de hecho son equivalencias.
+$$x\in \left(\bigcup_{i\in I} A_i\right) \cap B \Leftrightarrow x \in \left(\bigcup_{i\in I} A_i\right) \ \wedge \ x \in B \Leftrightarrow (\exists i  \in I : x\in A_i) \ \wedge \ x\in B \Leftrightarrow $$
+$$\Leftrightarrow \exists i \in I : (x\in A_i \ \wedge \ x\in B) \Leftrightarrow \exists i \in I : (x\in A_i \cap B) \Leftrightarrow \bigcup_{i\in I}(A_i\cap B)$$
+\end{itemize}
+\end{sol}
+
+\end{document}

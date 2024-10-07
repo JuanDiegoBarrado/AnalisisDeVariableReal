@@ -21,6 +21,7 @@
 \usepackage{stmaryrd} % paquete para mates
 \usepackage{latexsym} %Paquetes para mates
 \usepackage{cancel} %Paquete tachar cosas
+\usepackage{multicol}
 
 %% Ruta de las fotos e inclusion de las mismas
 \usepackage{graphicx}
@@ -55,12 +56,12 @@
     \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\color{subsubsecciones}}{}{0pt}{#1}
 
 %% Paquete para el formateo de entornos del proyecto
-\usepackage{ntheorem}[thmmarks]
+\usepackage[thmmarks]{ntheorem}
 	%% Definicion del aspecto de los entornos matematicos del proyecto
 	\theoremstyle{break}
 	\theoremheaderfont{\normalfont\bfseries\color{teoremas}}
 	\theorembodyfont{\itshape}
-	\theoremseparator{\vspace{0.2cm}}
+	\theoremseparator{}
 	\theorempreskip{\topsep}
 	\theorempostskip{\topsep}
 	\theoremindent0cm
@@ -68,29 +69,32 @@
 	\theoremsymbol{}
 	\theoremprework{\vspace{0.2cm} \hrule}
 	\theorempostwork{\vspace{0.2cm}\hrule}
-	    \newtheorem*{defi}{Definición}
+	    \newtheorem{defi}{Definición}[chapter]
 
 	\theoremprework{\vspace{0.25cm}}
-		\newtheorem*{theo}{Teorema}
+		\newtheorem{theo}{Teorema}[chapter]
 
 	\theoremprework{\vspace{0.25cm}}
-    	\newtheorem*{coro}{Corolario}
+    	\newtheorem{coro}{Corolario}[theo]
 
 	\theoremprework{\vspace{0.25cm}}
-    	\newtheorem*{lema}{Lema}
+    	\newtheorem{lema}{Lema}[chapter]
 
 	\theoremprework{\vspace{0.25cm}}
-    	\newtheorem*{prop}{Proposición}
+    	\newtheorem{prop}{Proposición}[chapter]
 
 	\theoremheaderfont{\normalfont}
 	\theorembodyfont{\normalfont\color{demos}}
-	\theoremsymbol{\hfill\square}
-    	\newtheorem*{demo}{\underline{Demostración}:}
+	\theoremseparator{:}
+	\theoremsymbol{$\square$}
+    	\newtheorem*{demo}{\underline{Demostración}}
 
 	\theoremheaderfont{\normalfont}
 	\theorembodyfont{\sffamily}
-    	\newtheorem*{obs}{\underline{Observación}:}
-    	\newtheorem*{ej}{\underline{Ejemplo}:}
+	\theoremsymbol{}
+	\theoremseparator{:}
+    	\newtheorem{obs}{\underline{Observación}}[chapter]
+    	\newtheorem{ej}{\underline{Ejemplo}}[chapter]
 
 %% Definicion de operadores especiales para simplificar la escritura matematica
 \DeclareMathOperator{\dom}{dom}
@@ -103,6 +107,8 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
 \usepackage{tkz-fct}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
 \usepackage{pstricks}
 \usepackage{pstcol} 
 \usepackage{pst-node}
@@ -152,7 +158,8 @@ http://creativecommons.org/licenses/by-nc/4.0/
 \hypersetup{linkcolor=blue}
 
 \mainmatter
-\chapter{Introducción a Conjuntos y Funciones}
+\chapter{Introducción a conjuntos y funciones}
+\label{chap:intro_a_conjuntos_y_funciones}
 Este curso de análisis de variable real gira en torno a dos conceptos fundamentales: conjunto y funciones. Estos dos conceptos básicos de las matemáticas tienen que ser conocidos en profundidad y manejados con soltura, pues componen las piezas más pequeñas sobre las que se va  a trabajar a lo largo del documento. Por ello, se ha generado este capítulo auxiliar al principio para poner en antecedentes a todos los lectores que no estén familiarizados con dichos elementos.
 
 \begin{defi}[Conjunto]
@@ -384,69 +391,81 @@ Los dos hechos anteriores según el principio de inducción implican que $S=\mat
 \end{demo}
 
 \chapter{Números Reales}
-Los seres humanos a lo largo de la Historia han ido descubriendo distintos conjuntos útiles en función de las necesidades que iban surgiendo en cada momento. Hasta el momento, entre los fundamentales para este curso, tenemos:
-$$\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$$
-Donde entendemos cada conjunto como:
+Los seres humanos a lo largo de la Historia han ido descubriendo distintos conjuntos útiles en función de las necesidades que iban surgiendo en cada momento. Hasta el momento, entre los fundamentales para este curso, tenemos $\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ donde entendemos cada conjunto como:
 \begin{itemize}
 \item $\mathbb N = \{1,2,3,4,...\}$ como el conjunto de los naturales
 \item $\mathbb Z = \{..., -1, 0 ,1, ...\}$ como el conjunto de los enteros, formados por los naturales, el 0 y los negativos.
 \item $\mathbb Q={\frac{a}{b}: a,b\in \mathbb Z \wedge b\neq 0}$ como el conjunto de los racionales en los que cada número racional está representado por un conjunto de fracciones equivalentes: $[\frac{a}{b}]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$.
 \item $\mathbb{R}$ como el conjunto de los reales, formados por los irracionales y los racionales.
 \end{itemize}
+Y, como el curso es de Análisis de Variable \textbf{Real}, es lógico dedicar todo un capítulo en ahondar y definir de cero qué significa eso de \textit{Real} y de qué cualidades del mismo nos podemos aprovechar en el resto de capítulos.
 
 \section{Propiedades Algebraicas de $\mathbb R$}
-Naturalmente, sin un conocimiento profundo de la estructura interna del cuerpo de los números reales y de las propiedades que tienen dichos números no podemos desarrollar un curso exhaustivo de análisis en variable real. Por tanto, en primer lugar, vamos a estudiar qué características tiene el cuerpo de los números reales y de qué forma interactúan con elementos matemáticos como desigualdades, valores absolutos, operaciones...
+En esta sección lo primero que haremos será hacer un estudio intensivo de tres características fundamentales de los números reales para el Análisis: su estructura algebraica de cuerpo, su orden total y sus propiedades métricas.
 
-\subsection{Estructura de Cuerpo}
-Las primeras propiedades a desarrollar van a ser las consecuencias directas de la estructura de cuerpo conmutativo y unitario que tiene el cuerpo de los números reales.
+Aunque inicialmente no se entienda del todo qué significan estas, en general lo que estaremos haciendo será cimentar y dar unas bases sólidas a todas aquellas propiedades que dábamos por hecho y nos dan grandes ventajas a la hora de operar y trabajar con los reales, pero que realmente no todos los conjuntos tienen.
+
+\subsection{Estructura de cuerpo}
+La primera de las características mencionadas es la de \textit{estructura de cuerpo}, pero ¿qué significa esto? Pues bien, que el conjunto de los reales, junto con las operaciones suma y producto que cumplen ciertas propiedades, adquiere una serie de cualidades que nos son muy útiles para operar con ellos. Por ejemplo, sería razonable que si observamos la siguiente ecuación
+\[
+a\cdot x = b
+\] 
+la solución de la misma que diésemos fuera $x = a^{-1}\cdot b = b/a$. Sin embargo, aquí hemos asumido algunas cosas, como que siempre existe $a^{-1}$. Cuando trabajamos en los reales esto es cierto, pero si en la ecuación del enunciado los valores $a$ y $b$ hubiesen sido matrices ya no lo hubiera sido y en ocasiones no habría solución. Otra propiedad similar es poder hacer la deducción
+\[
+a \cdot b = 0 \Rightarrow a = 0 \mbox{ o } b= 0
+\]
+Para ya ponernos manos a la obra, en la primera propiedad de \textit{estructura de cuerpo} vamos a demostrar todas estas cuestiones algebraicas que hacen que los números reales funcionen razonablemente bien al operar con ellos. Para ello, comenzamos definiendo qué es la estructura de cuerpo y qué elementos la conforman.
 
 \begin{defi}[Suma]
-Sea $\mathbb K$ un conjunto de números, definimos \textbf{la suma} como la operación interna que cumple las siguientes propiedades:
+Sea $\mathbb K$ un conjunto de números, definimos la operación \textbf{la suma} como
 \begin{eqnarray*}
 +: \mathbb K \times\mathbb K & \stackrel{+}{\rightarrow} & \mathbb K \\
 (a,b) & \longmapsto  & a+b
 \end{eqnarray*}
+y si $(K, +)$ cumple las siguientes propiedades:
 \begin{enumerate}
 \item Propiedad conmutativa: $\forall a, b \in \mathbb K: a+b=b+a$
 \item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a+b)+c=a+(b+c)$
 \item Propiedad elemento neutro: $\exists 0_k\in \mathbb K : \forall a \in \mathbb K : a+0_k=0_k+a=a$
 \item Propiedad elemento opuesto: $\forall a \in \mathbb K : \exists (-a) : a+(-a)=0_k$
 \end{enumerate}
+decimos que $(K,+)$ es un \textbf{grupo conmutativo}.
 \end{defi}
 
-\begin{obs}
-La dupla $(\mathbb K, +)$ que verifica todas las propiedades recibe el nombre de grupo conmutativo. Algunos ejemplos son $\mathbb {Z, Q, R, C}$ porque se cumplen las 4 propiedades, pero $\mathbb N$ no puesto que cumplen solo las dos primeras.
-\end{obs}
-
+\begin{ej}
+Con la definición que se ha dado de $+$, los conjuntos $\mathbb {Z, Q, R, C}$ equipados con la operación $+$ son grupos conmutativos, pero $\mathbb N$ no, pues cumple sólo las dos primeras.
+\end{ej}
 
 \begin{defi}[Producto]
-Sea $\mathbb K$, definimos \textbf{el producto} como la operación interna que cumple las siguientes propiedades:
+Sea $\mathbb K$ un conjunto de números, definimos la operación \textbf{producto} como:
 \begin{eqnarray*}
 \cdot: \mathbb K \times\mathbb K & \stackrel{\cdot}{\rightarrow} & \mathbb K \\
 (a,b) & \longmapsto  & a\cdot b
 \end{eqnarray*}
+y si $(K, \cdot)$ cumple las siguientes propiedades:
 \begin{enumerate}
 \item Propiedad conmutativa: $\forall a, b \in \mathbb K: a\cdot b=b\cdot a$
 \item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a\cdot b)\cdot c=a\cdot (b\cdot c)$
 \item Propiedad elemento neutro: $\exists 1_k\in \mathbb K : \forall a \in \mathbb K : a\cdot 1_k=1_k\cdot a=a$
 \item Propiedad elemento inverso: $\forall a \in \mathbb K : \exists a^{-1} : a\cdot a^{-1}=1_k$
 \end{enumerate}
+decimos que $(K,\cdot)$ es un \textbf{grupo conmutativo}.
 \end{defi}
 
-\begin{obs}
-La dupla $(\mathbb K, \cdot)$ que verifica todas las propiedades recibe el nombre de grupo conmutativo. Algunos ejemplos son $\mathbb {Q, R, C}$ porque cumplen las 4 propiedades, pero $\mathbb {N,Z}$ no puesto que cumplen solo las tres primeras.
-\end{obs}
-
-\begin{obs}
-La propiedad que relaciona\footnote{Que se cumple en todos los conjuntos anteriores.} ambas operaciones es la \textbf{propiedad distributiva}:
-\begin{enumerate}
-\item[5.] $\forall a,b,c\in \mathbb K: a\cdot (b+c)=ab+ac$
-\end{enumerate}
-\end{obs}
+\begin{ej}
+Con la definición que se ha dado de producto, los conjuntos $\mathbb {Q, R, C}$ equipados con la operación $\cdot$ son grupos conmutativos, pero $\mathbb {N,Z}$ no, pues cumplen solo las tres primeras.
+\end{ej}
 
 \begin{defi}[Cuerpo Conmutativo]
-Sean $(\mathbb K, +)$ y $(\mathbb K, \cdot)$ ambos grupos conmutativos en los que se cumple la propiedad distributiva, decimos que $(\mathbb K, +, \cdot)$ es un \textbf{cuerpo conmutativo}.
+Sea $K$ un conjunto, $+$ la operación suma y $\cdot$ la operación producto, decimos que $(K,+,\cdot)$ es un \textbf{cuerpo conmutativo} si y sólo si verifica:
+\begin{itemize}
+\item $(K, +)$ es un grupo conmutativo
+\item $(K, \cdot)$ es un grupo conmutativo
+\item Propiedad distributiva: $\forall a,b,c\in \mathbb K: a\cdot (b+c)=ab+ac$
+\end{itemize}
 \end{defi}
+
+Ahora que tenemos claro qué es un cuerpo conmutativo, estamos preparados para ver qué propiedades algebraicas nos ofrece a la hora de trabajar con sus elementos. Recordemos que muchas de las siguientes propiedades nos son familiares, pero no todos los conjuntos equipados con operaciones cualquiera las poseen.
 
 \begin{prop}[Propiedades de Cuerpo Conmutativo]
 Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo, se cumplen las siguientes propiedades:
@@ -517,26 +536,30 @@ $$(a^{-1}b^{-1})(ab)=a^{-1} a \cdot b^{-1} b=1 \Rightarrow (a^{-1}b^{-1})=(ab)^{
 \end{demo}
 
 \subsection{Propiedades de orden}
-Además de ser un cuerpo, el conjunto de los números reales posee una ``relación de orden'' que se escribe como ``$\leq$'' intrínseca que dota de una serie de propiedades a dicho conjunto. Esta relación toma especial relevancia puesto que las desigualdades están muy presentes durante el resto del documento y un manejo adecuado de las mismas es esencial para entender las demostraciones posteriores.
+La segunda de las propiedades mencionadas era la de orden total. Además de ser un cuerpo, el conjunto de los números reales posee una ``relación de orden'' intrínseca que escribimos como ``$\leq$'' y que nos ofrece una serie de propiedades muy importantes a la hora de trabajar con desigualdades (lo cual es más que habitual en este curso).
 
-\begin{defi}[Relación de Orden]
+\begin{defi}[Relación de orden y orden total]
 Sea $\leq$ una relación binaria de un conjunto $A$ en sí mismo, decimos que ésta es una \textbf{relación de orden} si y sólo si verifica las siguientes propiedades:
 \begin{itemize}
 \item \textbf{Propiedad Reflexiva}: $\forall x\in  A: x \leq x$
 \item \textbf{Propiedad Antisimétrica}: $(x\leq y) \wedge (y\leq x) \Rightarrow x=y$
 \item \textbf{Propiedad Transitiva}: $(x\leq y) \wedge (y \leq z) \Rightarrow x\leq z$
+\end{itemize}
+Además, decimos que dicha relación es de \textbf{orden total} si y sólo si también verifica la siguiente propiedad:
+\begin{itemize}
 \item \textbf{Propiedad de Orden Total}: $\forall x,y\in A: (x\leq y) \vee (y\leq x)$
 \end{itemize}
-Si a un cuerpo $(\mathbb K, +, \cdot)$ se le agrega una relación de orden definidas como $\leq$ , decimos que se trata de un cuerpo \textbf{totalmente ordenado}. 
 \end{defi}
 
 \begin{obs}
-Esta relación de orden tiene una serie de propiedades con respecto a las operaciones:
+Si a un cuerpo $(\mathbb K, +, \cdot)$ se le agrega una relación de orden definidas como $\leq$ , decimos que se trata de un cuerpo \textbf{totalmente ordenado}. Además, esta operación de orden tiene una serie de propiedades con respecto a las operaciones de la estructura de cuerpo:
 \begin{enumerate}
-\item $x\leq y \Rightarrow \forall z \in \mathbb R : x+z\leq y+z$
+\item $x\leq y \Rightarrow \forall z \in \mathbb{K} : x+z\leq y+z$
 \item $(x\geq 0 \wedge y \geq 0)\Rightarrow xy\geq 0$
 \end{enumerate}
 \end{obs}
+
+Muchas veces hablamos de números positivos o negativos, esto es, que $x > 0$ o $x < 0$. Sin embargo, no hemos definido qué significa el operador $<$, luego veamos a qué nos referimos cuando lo utilizamos, siempre en términos de la relación $\leq$ que dota de orden a los reales.
 
 \begin{defi}[Positividad y Negatividad]
 Sea $x\in \mathbb{R}$ un número, decimos que dicho número es:
@@ -547,7 +570,7 @@ Sea $x\in \mathbb{R}$ un número, decimos que dicho número es:
 \end{defi}
 
 \begin{prop}
-En general, para cualquier cuerpo $(\mathbb K, +, \cdot)$ con relación de orden $\leq$ se verifica:
+Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo con una relación de orden $\leq$, se verifican las siguientes propiedades:
 \begin{enumerate}
 \item Si $(a>0) \wedge (b>0)\Rightarrow a+b>0$
 \item Si $(a>0)\wedge (b>0)\Rightarrow ab>0$
@@ -555,7 +578,7 @@ En general, para cualquier cuerpo $(\mathbb K, +, \cdot)$ con relación de orden
 \item Si $(a>0)\wedge (b<0)\Rightarrow ab<0$
 \item Si $a,b\in \mathbb R$ decimos que $a>b\Leftrightarrow a-b>0$
 \end{enumerate}
-Concretamente en el contexto de $(\mathbb R, \leq)$, se cumplen además las siguientes propiedades:
+Sea $(\mathbb R, \leq)$ el cuerpo en cuestión, además se verifican las siguientes:
 \begin{enumerate}
 \item Si $(a>b)\wedge (b>c)\Rightarrow a>c$
 \item Si $a>b\Rightarrow a+x>b+x: \forall x\in \mathbb R$
@@ -567,8 +590,9 @@ Concretamente en el contexto de $(\mathbb R, \leq)$, se cumplen además las sigu
 \item Si $(a>b)\wedge (c<0)\Rightarrow ac<bc$
 \item Si $(a>0)\Rightarrow (a^{-1}>0)$
 \item Si $a<b\Rightarrow a<\frac{a+b}{2}<b$\par
-Concretamente, entre dos números reales distintos hay infinitos números reales. En particular, si $0<b\Rightarrow 0\leq \frac{b}{2}\leq b$ y en consecuencia, hay infinitos números positivos sin que ninguno de ellos sea "el más pequeño".
-$$a<b\Rightarrow 2a<a+b \Rightarrow a<\frac{a+b}{2}\mbox{ pero también }a+b<2b\Rightarrow \frac{a+b}{2}<b \Rightarrow a<\frac{a+b}{2}<b$$
+$$
+a<b\Rightarrow 2a<a+b \Rightarrow a<\frac{a+b}{2}\mbox{ pero también }a+b<2b\Rightarrow \frac{a+b}{2}<b \Rightarrow a<\frac{a+b}{2}<b
+$$
 \item Si $0\leq a\leq \varepsilon: \forall \varepsilon>0 \Rightarrow a=0$
 \item Si $ab>0\Rightarrow [(a>0)\wedge (b>0)]\vee [(a<0)\wedge (b<0)]$
 \item Si $ab<0\Rightarrow [(a<0)\wedge (b>0)]\vee [(a>0)\wedge (b<0)]$
@@ -655,7 +679,7 @@ $$\mbox{ pero como }m\neq n+1\Rightarrow k\neq 1\Rightarrow k<1\mbox{ \# Por ser
 \end{demo}
 
 \subsubsection{Desigualdades Notables}
-Vamos a suponer demostrado (aunque lo haremos después) que si $a\in \mathbb R : a>0\Rightarrow \exists x\in \mathbb R : (x>0)\wedge (x^2=a)$
+Una vez que hemos definido bien lo que significa el operador $\leq$ y hemos visto las consecuencias y propiedades que éste tiene sobre los números reales, vamos a comentar una serie de desigualdades que pueden venirnos bien conocer para algunos resultados. Comenzaremos suponiendo demostrado (aunque lo haremos después) que $a\in \mathbb R : a>0\Rightarrow \exists x\in \mathbb R : (x>0)\wedge (x^2=a)$.
 
 \begin{theo}[Discriminante en ecuaciones]
 Sean $a,b,c\in \mathbb R  : a\neq 0$, la ecuación $ax^2+bx+c=0$ y el discriminante $\Delta=b^2-4ac$, entonces:
@@ -715,19 +739,19 @@ $$\Leftrightarrow \sqrt{\sum_{i=1}^n (a_i+b_i)^2}\leq \sqrt{A}+\sqrt{B}$$
 Concretamente para que se de el caso ``='': $2\sum_{i=1}^n (a_ib_i)=2\sqrt{A}+\sqrt{B}$
 \end{demo}
 
-\subsection{Distancias y Valor Absoluto}
-El concepto de distancia toma especial relevancia en apartados como la definición de límite, las sucesiones de Cauchy y otros elementos matemáticos que iremos viendo más adelante. Por ello, es muy útil recordar todos los enunciados relativos al valor absoluto (pues es la métrica que se emplea en $\mathbb{R}$).
+\subsection{Propiedades métricas}
+La última de las propiedades comentadas es que en los números reales podemos medir cómo de cerca están unos valores de otros, esto es, existe una noción de distancia. Por ello, empezaremos estudiando las propiedades del valor absoluto (que es la métrica usual\footnote{Existen más métricas en $\mathbb{R}$ con distintas propiedades (distintas formas de medir que modifican las distancias), pero en este curso nos limitaremos a utilizar la habitual.} en $\mathbb{R}$) para después ahondar en las definiciones de distancia, que serán de gran importancia en muchos de los capítulos posteriores.
 
 \begin{defi}[Valor Absoluto]
-Sea $a\in \mathbb R$, definimos la función \textbf{valor absoluto} como la función $|\cdot| : \mathbb{R}\rightarrow \mathbb{R}$ tal que:
-$$
+Sea $\mathbb{R}$ el conjunto de los números reales, definimos la función $|\cdot| : \mathbb{R}\rightarrow \mathbb{R}$ \textbf{valor absoluto} como:
+\[
 |a|=max\{a,-a\} =
 \begin{cases}
 a & a>0 \\
 0 & a=0 \\
 -a & a<0
 \end{cases}
-$$
+\]
 \end{defi}
 
 \begin{prop}[Propiedades del Valor Absoluto]
@@ -782,6 +806,8 @@ $$||a|-|b||\leq c=|a-b|$$
 \end{enumerate}
 \end{demo}
 
+En el Análisis, siempre dicho de forma poco rigurosa, será habitual hablar con los términos \textit{cerca} o \textit{suficientemente cerca}. Sin ir más lejos, las definiciones de límite, supremo, continuidad, etc. se apoyan en estos términos (insistimos, hablando vulgarmente) y por eso es importante tener clara la definición de distancia, pues nos permite medir en cierta manera ese ``lejos'' o ``cerca'' de las definiciones.
+
 \begin{defi}[Distancia entre números]
 Sean $a,b\in \mathbb{R}$ números reales, definimos la \textbf{distancia entre $a$ y $b$} como:
 $$dist(a,b)=|a-b|$$
@@ -828,10 +854,10 @@ $$\bar{E}(a,r)=\{x\in \mathbb R : dist(x,a)\leq r\}=\{x\in \mathbb R :|x-a|\leq 
 \end{defi}
 
 \section{Números Complejos}
-A pesar de que el curso es sobre el análisis real, viene bien conocer unas nociones básicas sobre el cuerpo de los números complejos y las propiedades del mismo. En esta sección, vamos a dar una definición simplificada del cuerpo $\mathbb{C}$ para poder entrar de lleno en las propiedades y enunciados propios de este espacio.
+Según se avanza en los cursos de Matemáticas, uno se va haciendo consciente de que los complejos no es sino una compleción de los números reales y en multitud de ocasiones hay problemas reales que se resuelven de forma más sencilla (o únicamente) pasando por los complejos. En consecuencia, no está de más conocer unas nociones básicas sobre el cuerpo\footnote{En este documento se va a dar una definición más simple del cuerpo $\mathbb{C}$ para no perder tiempo en ello y entrar directamente a estudiar sus propiedades.} de los números complejos y las propiedades del mismo para cuando sea necesario.
 
 \begin{defi}[Cuerpo de los Números Complejos]
-Sea $\mathbb C=\{a,b\in \mathbb R: (a,b\in \mathbb{R}^2)\}$, la operación $+: \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b) + (c,d) = (a+c, b+d)$ y la operación $\cdot : \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b)\cdot (c,d)=(ac-bd,ad+bc)$, definimos el \textbf{cuerpo de los números complejos} como la terna $(\mathbb{C}, +, \cdot)$ y es conmutativo.
+Sea $\mathbb C=\{(a,b)\in \mathbb{R}^2)\}$ el conjunto de los complejos, la operación $+: \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b) + (c,d) = (a+c, b+d)$ y la operación $\cdot : \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b)\cdot (c,d)=(ac-bd,ad+bc)$, definimos el \textbf{cuerpo de los números complejos} como la terna $(\mathbb{C}, +, \cdot)$, que constituye un cuerpo conmutativo.
 \end{defi}
 
 \begin{prop}[Suma de Complejos]
@@ -848,8 +874,10 @@ En resumen, $(\mathbb C, +)$ es un \textbf{grupo conmutativo}.
 \end{prop}
 
 \begin{prop}[Producto de Complejos]
-Si tenemos que $(a,b),(c,d)\in \mathbb C$, definida como:
-$$(a,b)\cdot (c,d)=(ac-bd,ad+bc)$$
+La operación $\cdot : \mathbb{C} \times \mathbb{C} \rightarrow \mathbb{C}$ definida como
+\[
+(a,b)\cdot (c,d)=(ac-bd,ad+bc)
+\]
 posee las siguientes propiedades
 \begin{itemize}
 \item Conmutativa: $(a,b)\cdot (c,d)=(c,d)\cdot (a,b)$
@@ -863,7 +891,9 @@ En resumen, $(\mathbb C, \cdot)$ es un \textbf{grupo conmutativo}.
 
 \begin{prop}[Producto por un Escalar]
 La operación $\cdot : \mathbb{C}\times \mathbb{R}\rightarrow \mathbb{C}$ definida como:
-$$\lambda(a,b)=(\lambda a,\lambda b)$$
+\[
+\lambda \cdot (a,b)=(\lambda a,\lambda b)
+\]
 posee las siguientes propiedades:
 \begin{itemize}
 \item Conmutativa: $\lambda(a,b)=(a,b)\lambda$
@@ -875,32 +905,59 @@ posee las siguientes propiedades:
 \end{prop}
 
 \begin{obs}
-Identificamos un número real $x\in \mathbb R$ con el número complejo $(x,0)\in \mathbb C$:
-$$f: x\in \mathbb R \rightarrow (x,0)\in \mathbb C$$
-por tanto, podemos decir que $\mathbb{R}\subset \mathbb{C}$.
+El conjunto $\mathbb{R}$ de los reales está incluido en el conjunto $\mathbb C$ de los complejos a través de la aplicación inclusión $j: x \longmapsto (x,0)\in \mathbb{C}$. De esta manera, es lógico pensar que si la unidad de los reales era el $(1,0)$, la unidad de los complejos será $(0,1)$ y que denotaremos por $i$. Por la definición del producto, tenemos que $i^2=(-1,0)\in \mathbb R$ y es justo de este hecho de  donde nace la notación $i^2=-1\Rightarrow i=\sqrt{-1}$ más conocida.
 
-La unidad fundamental de los complejos queda definida como $i$ y denota el número complejo $(0,1)\in \mathbb C$. Sin embargo, vemos que $i^2=(-1,0)\in \mathbb R$, de lo que nace la notación $i^2=-1\Rightarrow i=\sqrt{-1}$ más conocida como la unidad imaginaria mencionada anteriormente.
-
-Si tenemos un número complejo cualquiera $(a,b)\in \mathbb C$ lo podemos escribir como $(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)$ con lo cual cualquier número complejo puede expresarse como:
-$$(a,b)=a+bi$$
-Donde $a$ constituye su parte real y $b$ se llama parte imaginaria.
+Al utilizar esta nueva unidad, podemos escribir los números complejos $(a,b)\in \mathbb C$ ya no como pares sino como suma de su parte real e imaginaria, pues $(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)$, de donde se obtiene la notación habitual
+\[
+(a,b)=a+bi
+\]
+El valor $a$ constituye su parte real y $b$, parte imaginaria.
 \end{obs}
 
-\begin{defi}[Módulo, Argumento y Conjugado]
-Sea el número complejo $z=a+bi\in \mathbb C$, definimos el \textbf{módulo de $z$} como:
-$$|z|=\sqrt{a^2+b^2}$$
-Sea $\theta\in (0,2\pi]$ un número\footnote{En la representación bidimensional de $\mathbb{C}$, constituye el ángulo, con el eje x del plano, del vector que representa a $z$.} real, decimos que es el \textbf{argumento de $z\neq 0$} si y sólo si:
+La interpretación de un número complejo como un par ordenado $(a,b)\in \mathbb{R}^2$ permite considerarlo como vector en lugar de como número complejo. Si bien es cierto que con sus coordenadas podemos conocer de forma única al vector que nos referimos, hay otras formas de ``orientarnos'' en el plano.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+  % Ejes coordenados
+  \draw[-latex] (-2,0) -- (3,0) node[right] {$x$};
+  \draw[-latex] (0,-2) -- (0,3) node[above] {$y$};
+  
+  % Dibujo del vector (1,2)
+  \draw[-o, thick] (0,0) to (1,2) node[right]{$(1,2)$};
+  % Llave con etiqueta
+  \draw[decorate,decoration={brace,amplitude=10pt},xshift=-4pt,yshift=0pt]
+    (0,0) -- (1,2) node[midway, left,xshift=-10pt] {$\sqrt{5}$};
+
+  % Punto en el origen
+  \fill (0,0) circle (2pt) node {};
+
+  % Marcas del módulo y argumento
+  \draw[-latex] (0.5,0) arc (0:56.31:0.5) node[midway, right] {$\theta = \pi/3$};
+\end{tikzpicture}
+\caption{Representación del número complejo $1 + 2i$}
+\end{figure}
+
+Podemos dar la distancia que hay que andar desde el origen y la dirección en la que habría que andar y de esta manera también tendríamos determinado sin lugar a confusión el vector al que nos queremos referir. Precisamente estas nociones de ``distancia andada'' y ``dirección en la que andar'' son las que presentamos como módulo y argumento.
+
+\begin{defi}[Módulo y argumento]
+Sea $z=a+bi\in \mathbb C$ un número complejo, definimos su \textbf{módulo} como:
+\[
+|z|=\sqrt{a^2+b^2}
+\]
+Sea $\theta\in (0,2\pi]$ un número real, decimos que es el \textbf{argumento\footnote{Por convenio, el argumento siempre se empieza a medir desde el eje positivo de abcisas y en sentido antihorario.} de $z\neq 0$} si y sólo si:
 \begin{align*}
 cos(\theta)=\frac{a}{|z|} & & sen(\theta)=\frac{b}{|z|}
 \end{align*}
-Sea el número complejo $z=a+bi\in \mathbb C$, definimos el \textbf{conjugado de $z$} como el número complejo $\bar{z}=a-bi$.
+\end{defi}
+
+\begin{defi}[Conjugado]
+Sea $z=a+bi\in \mathbb C$ un número complejo, definimos su \textbf{conjugado} como el número complejo $\bar{z}=a-bi$.
 \end{defi}
 
 \begin{prop}
 \begin{itemize}
-\item Si $\theta \in \mathbb R$, $e^{\theta\cdot i}=cos(\theta)+i\cdot sen(\theta)$
-
-\item Si $x\in \mathbb R : x= x+0i\in \mathbb C$, el módulo de ese número real es su valor absoluto: $|x|$
+\item Si $\theta \in \mathbb R$, $e^{\theta i}=cos(\theta)+i\cdot sen(\theta)$
 
 \item Si $z=a+bi\in \mathbb C\Rightarrow |z|=0\Leftrightarrow z=0\Leftrightarrow a=0=b$
 
@@ -969,52 +1026,69 @@ $$
 Donde $k=0,1,..., n-1$
 
 \section{Supremos e Ínfimos}
-En esta sección vamos a definir qué significa estar acotado y cuáles son las mejores cotas para un conjunto, es decir, cuál es el valor que representa mejor la ``barrera'' entre el conjunto en cuestión y el resto de $\mathbb{R}$. Este concepto es central y esencial en la asignatura pues interviene en absolutamente el resto de temas del curso.
+En general, no sólo trabajaremos con el conjunto total de los números reales sino que en ocasiones manejaremos subconjuntos concretos. Cuando estos subconjuntos están ``delimitados'', esto es, se encuentran dentro de un intervalo concreto (finito por alguno de los dos lados) conviene estudiar una propiedad que hace único el conjunto de los números reales.
+
+Para saber de qué se trata, observemos el conjunto de los números positivos $\mathcal T^+ := \{a\in \mathbb{R} : a > 0\}$. Notamos que cualquier número por debajo del $0$ no pertenece al conjunto, luego el $0$ hace de ``frontera'' de dicho conjunto por abajo. Sin embargo, atendiendo a la justificación \textit{ningún número por debajo pertenece al conjunto} también podríamos decir que es ``frontera'' el $-1$, el $-1/2$, ... entonces ¿por qué es especial el $0$? Porque es la mejor ``frontera'', es decir, es la más cercana al conjunto que no se deja ningún número fuera. Para demostrarlo, basta comprobar que cualquier otro valor cumple alguna de las dos siguientes alternativas:
+\begin{itemize}
+\item Es peor ``frontera'', que es el caso de los menores que $0$ porque el propio $0$ ya sabemos que hace esta función y está más cerca que cualquier negativo.
+\item Se deja algún número que está en $\mathcal{T}^+$, que es el caso de los mayores que $0$ porque cualquier otro posible ``frontera'' $b > 0$ verifica que $0< b/2 < b$, es decir, se le escapa $b/2$.
+\end{itemize}
+Este concepto de la mejor ``frontera'', o hablando más formalmente, de la mejor \textit{cota} es precisamente el caracteriza la noción de supremo e ínfimo y es esencial porque forma parte de la naturaleza de los números reales.
 
 \begin{defi}[Cotas]
-Sea $A\subset R: A\neq \emptyset$, decimos que:
+Sea $A\subset \mathbb R$ un subconjunto no vacío, decimos que:
 \begin{itemize}
 \item $M\in R$ es \textbf{cota superior} de A si y sólo si $\forall a\in A: a\leq M$.
 
 \item $m\in \mathbb R$ es \textbf{cota inferior} de A si y sólo si $\forall a\in A: m\leq a$.
 \end{itemize}
-Si $A$ posee cota superior o inferior decimos que está \textbf{acotado superiormente} o \textbf{acotado inferiormente} respectivamente.
+y si $A$ posee cota superior o inferior decimos\footnote{Cuando simplemente decimos que está acotado, estamos diciendo que lo está tanto superiormente como inferiormente.} que está \textbf{acotado superiormente o inferiormente}.
 \end{defi}
+
+La definición anterior formaliza eso que hemos llamado vulgarmente ``frontera'' en la introducción de la sección y que a partir de ahora llamaremos \textit{cota}. Ahora queda definir qué significa eso de ser la ``mejor''. Si la definición anterior ya formaliza el ``no dejarse ningún valor fuera'', falta formalizar el ``no hay otra cota más cerca'' ¿Cómo lo hacemos? De la manera más lógica y tal y como ocurría en el ejemplo: si estamos hablando de una cota superior, ser la mejor es que cualquier otra cota sea más ``superior'' que ella y hablando de cotas inferiores de forma análoga.
 
 \begin{defi}[Ínfimos y Supremos]
-Sea $A\subset R: A\neq \emptyset$, decimos que:
+Sea $A\subset \mathbb{R}$ un subconjunto no vacío, decimos que:
 \begin{itemize}
-\item $S\in \mathbb R$ es \textbf{supremo} de A si y sólo si $\forall M\in \mathbb R: S\leq M $, siendo $M$ cota superior.
+\item $S\in \mathbb R$ es \textbf{supremo} de A si y sólo si es cota superior y cualquier otra cota $M\in \mathbb R$ es mayor o igual que $S$.
 
-\item $s\in \mathbb R$ es \textbf{ínfimo} de A si y sólo si $\forall m\in \mathbb R: m\leq s$, siendo $m$ cota inferior.
+\item $s\in \mathbb R$ es \textbf{ínfimo} de A si y sólo si es cota inferior y cualquier otra cota es $m\in \mathbb R$ es menor o igual que $s$.
 \end{itemize}
-Además, si $\sup A \in A$ lo llamamos \textbf{máximo} y $\inf A \in A$ lo llamamos \textbf{mínimo}.
+y si $\sup A = S\in A$ o el $\inf A = s \in A$, los llamamos \textbf{máximo y mínimo} respectivamente.
 \end{defi}
 
-\begin{theo}[Propiedad del Supremo]
-Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado superiormente, entonces existe el supremo.
+Y, como ya no hay lugar a dudas sobre a qué nos referimos cuando decimos ínfimo y supremo, lo que toca es justificar que éstos existen y son únicos cuando trabajamos con conjunto acotados (pues si hay supremo o ínfimo ya son cotas para el conjunto). La primera no es un teorema sino que es uno de los axiomas fundamentales de las matemáticas, la existencia por contra sí que es demostrable con las herramientas que tenemos.
+
+\begin{theo}[Axioma del supremo]
+Sea $A\subset \mathbb R$ un subconjunto no vacío y acotado superiormente, entonces existe el supremo.
 \end{theo}
 
 \begin{obs}
-En los $\mathbb Q$ no es cierto y es la diferencia fundamental de este cuerpo con respecto a los $\mathbb R$, porque par el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$, existe el supremo en $\mathbb R$, pero no en $\mathbb Q$.
+La propiedad anterior es una de las propiedades fundamentales del cuerpo de los números reales y lo diferencia de muchos otros. Por ejemplo, en $\mathbb Q$ el axioma no es cierto porque el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$ está acotado tanto en $\mathbb{R}$ como en $\mathbb{Q}$, pero sólo existe supremo ($\sqrt{2}$) en $\mathbb R$, pero no\footnote{Veremos más adelante por qué hay infinitos racionales tan cerca como se quiera del valor $\sqrt{2}$} en $\mathbb Q$.
 \end{obs}
 
 \begin{prop}
-Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado superiormente, el número $S\in \mathbb R$ es supremo si y sólo si:
+Sea $A\subset \mathbb{R}$ un subconjunto no vacío y acotado superiormente, entonces el supremo es único.
+\end{prop}
+\begin{demo}
+Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2$. Si suponemos que $S_1<S_2$, como $S_1$ es cota superior de A y $S_2$ es supremo, $S_2\leq S_1$ y por tanto llegamos a absurdo. El mismo argumento intercambiando $S_2$ por $S_1$ tiene el igual resultado.
+\end{demo}
+
+\begin{obs}
+A alguno puede molestarle que se haya demostrado demostrado existencia y unicidad únicamente para el supremo y ya no sólo para estas dos cuestiones, sino que en el resto del documento se suela hablar únicamente de supremo. El motivo es que un conjunto y su ínfimo se pueden transformar en otro conjunto y su supremo sin más que multiplicar todos los elementos involucrados por $-1$ (pues ya vimos que esto invierte las desigualdades), es decir, todo lo demostrado para supremos por extensión se puede considerar cierto para ínfimos.
+\end{obs}
+
+Aunque la definición que hemos dado antes es muy lógica e intuitiva para formalizar lo que son estos dos conceptos, a la hora de trabajar con ella no queda muy claro cómo podemos demostrar que un candidato concreto es efectivamente supremo o ínfimo. Por eso, vamos a dar las siguientes caracterizaciones que se dejan manejar más fácilmente en la práctica.
+
+\begin{prop}[Caracterización del supremo]
+Sea $A\subset \mathbb R$ un subconjunto no vacío y acotado superiormente, el número $S\in \mathbb R$ es supremo si y sólo si verifica las siguientes propiedades:
 \begin{enumerate}
-\item Es único.
-\item Es cota superior de A
-\item $\forall y\in \mathbb R: y<S\Rightarrow \exists a\in \mathbb A: y<a\leq S$.
-\item $\forall \varepsilon>0: \exists a\in A: S- \varepsilon <a\leq S$.
+\item $\forall y < S, \ \exists a\in \mathbb A: y<a\leq S$.
+\item $\forall \varepsilon>0, \ \exists a\in A: S- \varepsilon <a\leq S$.
 \end{enumerate}
 \end{prop}
 \begin{demo}
 \begin{enumerate}
-\item Demostramos la unicidad:\par
-Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2$. Si suponemos\footnote{Al revés es igual} que $S_1<S_2$, como $S_1$ es cota superior de A y $S_2$ es supremo, $S_2\leq S_1$ \#.
-
-\item Es por definición
-
 \item Demostramos la doble implicación:
 	\begin{itemize}
 	\item ``$\Rightarrow$'':\par
@@ -1034,17 +1108,12 @@ Supongamos que $S_1\neq S_2$ son ambos supremos de A, luego $S_1<S_2$ o $S_1>S_2
 \begin{prop}
 Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto acotado inferiormente, el número $s\in \mathbb R$ es ínfimo si y sólo si:
 \begin{enumerate}
-\item Es único.
-\item Es cota inferior de A
-\item $\forall y\in \mathbb R: s<y\Rightarrow \exists a\in \mathbb A: s\leq a<y$.
-\item $\forall \varepsilon>0: \exists a\in A: s\leq a<s+\varepsilon$.
+\item $\forall y> s, \ \exists a\in \mathbb A: s\leq a<y$.
+\item $\forall \varepsilon>0, \ \exists a\in A: s\leq a<s+\varepsilon$.
 \end{enumerate}
 \end{prop}
 \begin{demo}
 \begin{enumerate}
-\item Demostramos la unicidad:\par
-Si $s_1\neq s_2$ son ínfimos, entonces $s_1<s_2$ o al revés pero la demostración es igual. Si $s_1<s_2$ como $s_2$ es cota inferior y $s_1$ es ínfimo: $s_2\leq s_1$ \#
-
 \item Demostramos la doble implicación:
 	\begin{itemize}
 	\item ``$\Rightarrow$'':\par
@@ -1064,8 +1133,10 @@ $-S<m\leq a\Rightarrow S>-m\geq -a\Rightarrow -m$ es cota superior de B, \# porq
 \end{demo}
 
 \begin{obs}
-Sea $A\subset \mathbb R: A\neq \emptyset$ un conjunto no acotado, entonces lo denotamos de esta forma $sup(A)=+\infty$ y $inf(A)=-\infty$.
+Cuando un subconjunto $A\subset \mathbb R$ no vacío es no acotado, solemos denotarlo empleando $sup(A)=+\infty$ y $inf(A)=-\infty$.
 \end{obs}
+
+Cuando avancemos en el documento veremos que el supremo y el ínfimo están muy presentes en el resto de capítulos (aunque sea de forma intrínseca), pero para ir abriendo boca e identificar la importancia que tiene vamos a ver que toman un papel crucial en aspectos tan básicos del Análisis como justificar que siempre existe la raíz enésima de un número.
 
 \begin{theo}[de la existencia de raíces]
 Sea $a\in \mathbb R: a>0$ y $n\in \mathbb N: n\geq 2$, entonces $\exists! r>0: r^n=a$.
@@ -1125,16 +1196,24 @@ Sea $A\subset \mathbb{R}$ un conjunto real y $S\subset A$ un subconjunto suyo, e
 
 
 \subsection{Densidad de $\mathbb{Q}$ en $\mathbb{R}$}
-Gracias a las propiedades del supremos y del ínfimo, vamos a demostrar que para cualquier número real que escojamos podemos encontrar un racional y un irracional tan cerca como queramos de dicho número. A esta propiedad se la conoce como densidad.
+En una de las anotaciones a pie de página, se explicó que posteriormente se iba a demostrar que, escogido cualquier número real, podemos encontrar un racional tan cerca como queramos del mismo. Esta propiedad se cumple no sólo para los racionales sino también para los irracionales y es lo que se conoce como densidad de estos conjuntos en el conjunto de los reales.
+
+Este concepto tiene relevancia porque permite saber que siempre tendremos a ciertos individuos \textit{tan cerca como queramos} de cierto valor y esto cobra especial importancia cuando se habla de límites, continuidad, etc.
 
 \begin{theo}[Propiedad Arquimediana de $\mathbb R$]
-Para todo $x\in \mathbb R$ positivo, entonces $\exists n\in \mathbb N: x<n$, es decir, $\mathbb N$ no está acotado superiormente.
+\label{theo:arquimediana}
+Para todo $x\in \mathbb R$ positivo, existe $n\in \mathbb N$ mayor que él, es decir, $\mathbb N$ no está acotado superiormente.
 \end{theo}
 \begin{demo}
-Supongamos lo contrario, $\exists x>0\in \mathbb R: n\leq x: \forall n \in \mathbb N\Rightarrow \exists S=sup(\mathbb N)$, entonces por ser supremo: $\exists m \in \mathbb N : S-1<m\leq S\Rightarrow S<m+1$, pero como $m+1\in \mathbb N$ es absurdo.
+Supongamos lo contrario, $\exists x>0\in \mathbb R, \forall n \in \mathbb{N} : n\leq x \Rightarrow \exists S=sup(\mathbb N)$, entonces por ser supremo: $\exists m \in \mathbb N : S-1<m\leq S\Rightarrow S<m+1$, pero como $m+1\in \mathbb N$ es absurdo.
 \end{demo}
 
+\begin{obs}
+Conocer que el conjunto de los naturales no está acotado superiormente nos va a dar alas para cuando se nos pregunte por las cotas de conjuntos donde se involucren variables enteras, pues en muchas ocasiones bastará con llegar al absurdo de que los naturales están acotados para demostrar lo que queramos.
+\end{obs}
+
 \begin{theo}[Propiedad Arquimediana del producto]
+\label{theo:arquimediana_prod}
 Sean $x,y\in \mathbb{R} : x>1, \ y>0$, entonces $\exists n\in \mathbb N: x^n > y$, incluso:
 $$\forall x,y \in \mathbb{R} : y>0, \ x>1: \exists! n\in\mathbb N: x^n<y\leq x^{n+1}$$
 \end{theo}
@@ -1150,23 +1229,23 @@ Si escogemos un $\varepsilon< x-1\Rightarrow \varepsilon>0$ entonces lo anterior
 
 \begin{prop}
 \begin{enumerate}
-\item Si $x<0\in \mathbb R\Rightarrow \exists m\in \mathbb Z: m<x$, es decir, que $\mathbb Z$ no está acotado inferiormente.
-\item Si $x,y\in \mathbb R: x,y>0\Rightarrow \exists n \in \mathbb N : y<nx$.
-\item Si $x>0\Rightarrow \exists n \in \mathbb N : \frac{1}{n}<x$
+\item Si $x<0\in \mathbb R$, entonces $\exists m\in \mathbb Z: m<x$, es decir, que $\mathbb Z$ no está acotado inferiormente.
+\item Si $x,y\in \mathbb R: x,y>0$, entonces $\exists n \in \mathbb N : y<nx$.
+\item Si $x>0$, entonces $\exists n \in \mathbb N : \frac{1}{n}<x$
 \item Si $x>0$, entonces $inf\{\frac{x}{n}: n\in \mathbb N\}=0$
 \item Si $x<0$, entonces $sup\{\frac{x}{n}: n\in \mathbb N\}=0$
-\item Si $x>0\in \mathbb R\Rightarrow \exists! n \in \mathbb N: n-1\leq x< n$, es decir, en otras palabras\footnote{Y además dichos conjuntos son disjuntos dos a dos.}:
-$$[0,\infty)=\bigcup_{n\in \mathbb N}[n-1,n)$$
-\item Análogamente, si $x>0$, entonces $\exists! n \in \mathbb N: n-1< x\leq n$, es decir, en otras palabras\footnote{Y además dichos conjuntos son disjuntos dos a dos.}:
-$$(0,\infty)=\bigcup_{n\in \mathbb N}(n-1,n]$$
+\item Si $x>0\in \mathbb R\Rightarrow \exists! n \in \mathbb N: n-1\leq x< n$, en otras palabras:
+$$[0,\infty)=\bigsqcup_{n\in \mathbb N}[n-1,n)$$
+\item Análogamente, si $x>0$, entonces $\exists! n \in \mathbb N: n-1< x\leq n$, en otras palabras:
+$$(0,\infty)=\bigsqcup_{n\in \mathbb N}(n-1,n]$$
 \item Si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1\leq x < m$, en otras palabras:
-$$\mathbb R =\bigcup_{m\in \mathbb Z}[m-1,m)$$
+$$\mathbb R =\bigsqcup_{m\in \mathbb Z}[m-1,m)$$
 \item Análogamente, si $x\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: m-1< x\leq m$, en otras palabras:
-$$\mathbb R =\bigcup_{m\in \mathbb Z}(m-1,m]$$
-\item Si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x\leq y <mx$, es decir, en otras palabras:
-$$\mathbb R= \bigcup_{m\in \mathbb Z}[(m-1)x, mx)$$
-\item Análogamente, si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x< y \leq mx$, es decir, en otras palabras:
-$$\mathbb R= \bigcup_{m\in \mathbb Z}((m-1)x, mx]$$
+$$\mathbb R =\bigsqcup_{m\in \mathbb Z}(m-1,m]$$
+\item Si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x\leq y <mx$, en otras palabras:
+$$\mathbb R= \bigsqcup_{m\in \mathbb Z}[(m-1)x, mx)$$
+\item Análogamente, si $x>0$ y $y\in \mathbb R\Rightarrow \exists! m \in \mathbb Z: (m-1)x< y \leq mx$, en otras palabras:
+$$\mathbb R= \bigsqcup_{m\in \mathbb Z}((m-1)x, mx]$$
 \end{enumerate}
 \end{prop}
 \begin{demo}
@@ -1208,7 +1287,7 @@ El resto de la demostración es como en los puntos anteriores
 \begin{theo}[Densidad de $\mathbb Q$ en $\mathbb R$]
 Sean $a,b\in \mathbb R: a<b$, entonces $\exists r\in \mathbb Q: a<r<b$, es decir:
 $$(a,b)\cap \mathbb Q\neq \emptyset$$
-Y de hecho hay infinitos.
+y de hecho hay infinitos.
 \end{theo}
 \begin{demo}
 Llamamos a $h=b-a>0$, por la propiedad arquimediana, $\exists n \in \mathbb N: \frac{1}{n}<h$ y además, $\exists m \in \mathbb Z: m\leq a\cdot n< m+1$. Entonces ocurre que:
@@ -1225,13 +1304,12 @@ $$a<b\Rightarrow \frac{a}{\sqrt{2}}< \frac{b}{\sqrt{2}}\Rightarrow \exists r \in
 Y es fácil ver que $r\in \mathbb R\mbox{\textbackslash}\mathbb Q$.
 \end{demo}
 
+Para terminar la sección, vamos comentar un resultado debido a Cantor que nos será útil de vez en cuando en el resto del documento y que precisamente se apoya en las nociones de supremo e ínfimo que hemos comentado para su demostración.
+
 \begin{defi}[Intervalos Encajados]
 Sea $F$ una familia de intervalos cerrados, es decir, $F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$, decimos que es de \textbf{intervalos encajados} si y sólo si:
 $$ \forall n, m\in \mathbb{N} : n >m : I_n\subset I_m$$
-\begin{center}
-\includegraphics[scale=0.20]{Intervalos encajados}
-\end{center}
-También se puede expresar como:
+que también puede expresarse como:
 $$\forall n\in \mathbb N : I_{n+1}\subset I_{n}$$
 \end{defi}
 
@@ -1294,19 +1372,19 @@ $$l(I_m)=b_m-a_m< \xi+\frac{\varepsilon}{2}-a_m\leq \xi+\frac{\varepsilon}{2}-a_
 
 $$\xi<\eta\Rightarrow \forall n \in \mathbb N: a_n\leq \xi<\eta\leq b_n\Rightarrow l(I_n)=b_n-a_n\geq \eta-a_n\geq \eta-\xi=\delta>0\Rightarrow \mbox{ \#}$$
 Por que entonces decimos que los intervalos no son de la longitud que queramos porque tiene que ser mayores que un valor $\delta$ determinado.
-
 \end{itemize}
 \end{demo}
 
 \begin{obs}
-\begin{itemize}
-\item Si los intervalos no son cerrados, es mentira el teorema.\par
-Sea $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$, entonces $I_{n+1}\subset I_n$ porque:
-$$x\in I_{n+1}\Leftrightarrow 0<x<\frac{1}{n+1}<\frac{1}{n}\Rightarrow x\in \left(0,\frac{1}{n}\right)=I_n$$
-Vemos que la intersección es vacía:
-$$x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\frac{1}{n}\Rightarrow \#$$
-Porque $n<\frac{1}{x}$ es absurdo porque los naturales no tienen cota superior.
-\end{itemize}
+Si los intervalos no son cerrados, el teorema no es cierto pues, por ejemplo, si consideramos la familia $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$ de intervalos abiertos, vemos que son encajados
+\[
+x\in I_{n+1}\Leftrightarrow 0<x<\frac{1}{n+1}<\frac{1}{n}\Rightarrow x\in \left(0,\frac{1}{n}\right)=I_n
+\]
+pero su intersección es vacía porque
+\[
+x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\frac{1}{n}\Rightarrow \nexists x \in \bigcap_{n\in \mathbb{N}} I_n
+\]
+debido a que los naturales no tienen cota superior.
 \end{obs}
 
 \subsection{Definición de la exponencial real}
@@ -1319,27 +1397,35 @@ Esto implica que entendamos la exponencial real como:
 $$a^x=\sup\{a^r: r<x\}=\inf\{a^r: r>x\}$$
 
 \chapter{Sucesiones y Series}
-En este capítulo vamos a estudiar las propiedades fundamentales de dos elementos matemáticos básicos para poder desarrollar todo el estudio posterior de funciones de variable real: las sucesiones y las series. Veremos unas cuantas propiedades y definiciones que luego se podrán hacer extensibles al caso continuo y aprenderemos cómo trabajar con estas funciones discretizadas.
+No es raro que algunos de nosotros hayamos visto en algún momento de nuestra vida algún ejercicio de completar la secuencia como el siguiente:
+\[
+1, 1/2, 1/4, 1/8, ???
+\]
+Si prolongamos esta secuencia de forma indefinida tendremos lo que se conoce como una \textit{sucesión} numérica. Sin embargo, las sucesiones no tienen por qué seguir ningún patrón concreto: la secuencia $1, 3, 27, -1, -2, ...$ también corresponde a una sucesión. Las series, a su vez, veremos que no son más que sucesiones en las que cada término es una suma acumulada a la que se le ha añadido algo más, pero todo a su tiempo.
+
+Las sucesiones y las series son una parte muy importante del curso porque están presentes en cosas muy básicas (la definición de la exponencial real), pero facilitan y fundamentan cosas más complejas (como la caracterización de la continuidad de las funciones reales). Además, también tiene gran interés en ser estudiadas como un fin en sí mismo. Multitud de situaciones de la vida real se rigen por sucesiones númericas y conocer las virtudes y defectos de la mismas nos permite trasladar el conocimiento a todas estas áreas.
 
 \section{Sucesiones}
-El primero de estos objetos matemáticos a estudiar son las sucesiones. Una sucesión de elementos de un conjunto es una lista infinita y numerada de elementos del mismo. Este tipo de estructura se usa para estudiar desde el crecimiento de ciertas poblaciones como para las propiedades intrínsecas a algunas funciones concretas.
+Como ya hemos comentado al inicio del capítulo, el primero de los nuevos objetos matemáticos que vamos a estudiar son las sucesiones. Una sucesión de elementos de un conjunto es una lista infinita y numerada de elementos del mismo que se puede entender como una función ``discretizada''. El término discretizada se utiliza porque, a diferencia de sus primas hermanas las funciones reales donde el término $x$ puede tomar cualquier valor real, en nuestro caso la variable se denotará $n$ para indicar que sólo puede tomar valores enteros, esto es, discretos.
 
 \begin{defi}[Sucesión]
-Sea $M$ un conjunto no vacío, una \textbf{sucesión de elementos de $M$}, que denotamos por $\{x_n\}_{n=1}^\infty\subset M$, se define como una función:
+Sea $M$ un conjunto no vacío, definimos una \textbf{sucesión de elementos\footnote{Si $M=\mathbb R$ entonces decimos que se trata de una \textbf{sucesión numérica}.} de $M$} como una función:
 \begin{eqnarray*}
 f: \mathbb N &\rightarrow& M \\
 n &\longmapsto& x_n
 \end{eqnarray*}
-Si $M=\mathbb R$ entonces decimos que se trata de una \textbf{sucesión numérica}. 
+y la denotaremos por $\{x_n\}_{n=1}^\infty\subset M$
 \end{defi}
 
-\begin{obs}
-Como se trata de una lista numerada de elementos, es razonable utilizar la notación que se ha dado anteriormente, pues:
-$$\{f(1),f(2),f(3), ...\}\Leftrightarrow \{x_1,x_2,x_3,...\}=\{x_n\}_{n\in \mathbb N}=\{x_n\}_{n=1}^{\infty}$$
-\end{obs}
+Si nos fijamos la notación anterior es muy adecuada, pues, a pesar de tratarse de una función, en el fondo estamos determinando una lista numerada de elementos que se escribiría de la siguiente manera:
+\[
+\{f(1),f(2),f(3), ...\}\Leftrightarrow \{x_1,x_2,x_3,...\}=\{x_n\}_{n\in \mathbb N}=\{x_n\}_{n=1}^{\infty}
+\]
 
-\begin{prop}[Operaciones con sucesiones numéricas]
-Sean $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset \mathbb R$ dos sucesiones numéricas, entonces definimos:
+Cuando ya hemos diseñado con exactitud el nuevo objeto matemático ¿qué es lo que toca hacer? Efectivamente, describir como se comporta dicho objeto con respecto a las operaciones habituales que nos parece razonable hacer sobre el mismo. En nuestro caso, como se trata de sucesiones numéricas, lo suyo sería describir cómo se comportan las sucesiones con respecto a las operaciones que constituyen el cuerpo de los reales.
+
+\begin{defi}[Operaciones con sucesiones numéricas]
+Sean $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset \mathbb R$ dos sucesiones numéricas, definimos las operaciones entre ellas de la siguiente manera:
 \begin{itemize}
 \item \textbf{Suma}: $\{x_n\}_{n=1}^{\infty}+\{y_n\}_{n=1}^{\infty}=\{x_n+y_n\}_{n=1}^{\infty}$
 
@@ -1349,25 +1435,74 @@ Sean $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset 
 
 \item \textbf{Cociente de sucesiones}: $\frac{\{x_n\}_{n=1}^{\infty}}{\{y_n\}_{n=1}^{\infty}}=\left\lbrace\frac{x_n}{y_n}\right\rbrace_{n=1}^{\infty}$
 \end{itemize}
-
-Como las operaciones entre sucesiones se reducen a operaciones entre sus elementos, éstas heredan las propiedades de los números reales (asociativa, distributiva, ...). Por tanto, podemos observar que esta definición confiere a las sucesiones numéricas de estructura de \textbf{espacio vectorial}.
-\end{prop}
-
-\subsection{Convergencia}
-Si tomamos la sucesión $\{\frac{1}{n}\}_{n=1}^{\infty}$ podemos ver que conforme los valores de $n$ aumentan, es decir, conforme avanzamos en la sucesión los elementos de la misma cada vez son más próximos a 0.
-$$\frac{1}{1}, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \cdots$$
-A esta noción de acercarse cada vez más a un valor es a lo que conocemos como convergencia. Sin embargo, ha de darse una definición formal de la misma, pues podría ocurrir que nos acerquemos sólo para algunos índices concretos o que nos acerquemos a distintos valores cada vez, etc. ¿Ésta última sucesión converge?
-$$\frac{1}{1}, 1, \frac{1}{2}, 1, \frac{1}{3}, 1, \frac{1}{4}, \cdots$$
-
-\begin{defi}[Convergencia]
-Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión numérica, decimos que ésta\textbf{converge o tienen límite en $l\in \mathbb R$} si y sólo si:
-$$\forall \varepsilon>0: \exists n_0\in \mathbb N : \forall n\geq n_0: x_n\in (l-\varepsilon, l+\varepsilon)= E(l,\varepsilon)=|x_n-l|<\varepsilon$$
-Se denota como $x_n \xrightarrow{n\rightarrow \infty}l$ o como $\lim_{n\rightarrow\infty}x_n = l$.
 \end{defi}
 
 \begin{obs}
-Esto es, que fijado un $\varepsilon$ concreto, puedo encontrar un índice $n_0$ a partir del cual todos los demas $n\geq n_0$ verifican su $x_n$ correspondiente está a distancia menor que $\varepsilon$.
+Como hemos reducido las operaciones entre sucesiones a operaciones entre sus elementos igualmente numerados, éstas heredan las propiedades que tenían los números reales con estas operaciones (asociativa, distributiva, ...).
+
+Lo relevante de este asunto, aunque a priori no se entienda de momento del todo, es que esta definición confiere a las sucesiones numéricas de estructura de \textbf{espacio vectorial} y para quien haya estudiado Álgebra Lineal permite utilizar los enunciados de esta disciplina para trabajar con sucesiones.
 \end{obs}
+
+\subsection{Convergencia}
+\label{subsec:convergencia}
+Si retomamos la sucesión de la introducción del capítulo podemos ver que conforme los valores de $n$ aumentan, es decir, conforme avanzamos en la sucesión los elementos de la misma cada vez son más próximos a 0.
+\[
+\left\lbrace\frac{1}{2^n}\right\rbrace_{n=1}^{\infty} = \frac{1}{1}, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \cdots
+\]
+Esta aproximación hacia un valor es lo que conocemos como \textit{convergencia} o \textit{límite} de una sucesión. Sin embargo y como todo, precisamos una definición formal para clarificar que significa eso de ``acercarse''. Para ver esta necesidad de formalismos, ¿serías capaz de decir si la siguiente sucesión converge? ¿A qué valor?
+\[
+\frac{1}{1}, 1, \frac{1}{2}, 1, \frac{1}{4}, 1, \frac{1}{8}, \cdots
+\]
+
+\begin{defi}[Convergencia]
+Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión numérica, decimos que ésta \textbf{converge o tienen límite en $l\in \mathbb R$} si y sólo si:
+$$\forall \varepsilon>0: \exists n_0\in \mathbb N : \forall n\geq n_0: x_n\in (l-\varepsilon, l+\varepsilon)= E(l,\varepsilon)=|x_n-l|<\varepsilon$$
+y lo denotaremos por $x_n \xrightarrow{n\rightarrow \infty}l$ o $\lim_{n\rightarrow\infty}x_n = l$.
+\end{defi}
+
+Vamos a desentrañar bien qué quiere decir la definición anterior utilizando como ejemplo la sucesión $\{1/2^n\}_{n=0}^\infty$ del capítulo. Como intuitivamente sabemos que el límite es $0$, el enunciado dice que para cualquier $\varepsilon$ que escojamos existirá un término de la sucesión a partir del cual todos los demás estén dentro del entorno $E(0,\varepsilon)$. 
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+% Intervalo del epsilon
+\fill[blue!30, draw=none] (-0.95,0.75) rectangle (0.95,-0.75);
+\draw [latex-latex, thick] (-0.95,-1) -- (0.95,-1);
+\node[below] at (0,-1) {\footnotesize{$2\varepsilon = 2/15$}};
+% Eje x
+\draw [latex-latex, thick] (-7,0) to (7,0) {};
+% Marca con etiqueta del 0
+\draw (0,-0.15) -- (0,0.15);
+\node[below] at (0,-0.15) {$0$};
+% Términos de la sucesión
+\draw[thick, red, fill=red] (6,0) circle (0.08);
+\node[below] at (6,-0.15) {\footnotesize{$\frac{1}{2}$}};
+\node[above] at (6,0.15) {$x_1$};
+\draw[thick, red, fill=red] (3,0) circle (0.08);
+\node[below] at (3,-0.15) {\footnotesize{$\frac{1}{4}$}};
+\node[above] at (3,0.15) {$x_2$};
+\draw[thick, red, fill=red] (1.5,0) circle (0.08);
+\node[below] at (1.5,-0.15) {\footnotesize{$\frac{1}{8}$}};
+\node[above] at (1.5,0.15) {$x_3$};
+\draw[thick, red, fill=red] (0.75,0) circle (0.08);
+\node[below] at (0.75,-0.15) {\footnotesize{$\frac{1}{16}$}};
+\node[above] at (0.75,0.15) {$x_4$};
+\draw[thick, red] (0.325,-0.1) -- (0.325, 0.1);
+\draw[thick, red] (0.1625,-0.09) -- (0.1625, 0.09);
+\node[above] at (0.325,0.15) {\footnotesize{$\cdots$}};
+\draw[thick, red] (0.08125,-0.08) -- (0.08125, 0.08);
+\end{tikzpicture}
+\caption{Representación de la convergencia de la sucesión $\{1/2^n\}_{n=1}^\infty$.}
+\label{fig:convergencia}
+\end{figure}
+
+Por tanto, si por ejemplo escogemos $\varepsilon = 1/15$ vemos que el $n_0$ a partir del cual todos los $n\geq n_0$ están dentro del entorno es el $n_0=4$ porque el $1/2^4 = 1/16$ es el primer término que está dentro y a partir del cual TODOS los términos de la sucesión nunca vuelven a estar más lejos de $1/15$ unidades. Esto que se ha hecho para $\varepsilon= 1/15$ se puede hacer para cualquier valor que se desee y de nuevo encontraremos otro término de la sucesión que caerá dentro del intervalo, etc. Es lo que decíamos intuitivamente de ``acercarse infinitamente''.
+
+\begin{obs}
+Nótese que la sucesión de la introducción del subapartado no converge ni a $0$ ni a $1$ ni a ambos a la vez. Si escogemos $0$ como límite, siempre tendremos términos (los impares que van al $1$) que no estarán dentro de su entorno $E(0,\varepsilon)$ y análogamente ocurre con el $1$. Claramente no podemos tomar los dos límites a la vez porque se nos escapan, por un motivo u otro, los términos que convergen al otro valor.
+\end{obs}
+
+Este hecho de que no pueda haber varios límites porque si la sucesión se acerca infinitamente a uno necesariamente no puede acercarse también infinitamente al otro (porque si no ambos límites estarían infinitamente cerca, es decir, serían el mismo) no es algo aislado. Es precisamente lo que demuestra la \textit{Unicidad del límite}.
  
 \begin{prop}[Unicidad del límite]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión convergente, entonces el límite de convergencia es único.
@@ -1377,6 +1512,8 @@ Supongamos que existen dos:
 $$\exists l_1,l_2: \lim_{n\rightarrow \infty}x_n=l_i$$
 Como son dos números reales $l_1<l_2$, tomamos $\varepsilon=\frac{l_2-l_1}{2}$, con esto sabemos que $\exists n_0\in \mathbb N: \forall n>n_0: |x_n-l_1|<\varepsilon$ y también $\exists m_0\in \mathbb N: \forall n>m_0: |x_n-l_2|<\varepsilon\Rightarrow n\geq max\{n_0,m_0\}\Rightarrow x_n\in E(l_1,\varepsilon)=(l_1-\varepsilon, l_2+\varepsilon)\wedge x_n\in E(l_2, \varepsilon)=(l_2-\varepsilon, l_2+\varepsilon)$, estos conjuntos deben ser disjuntos pensando en el dibujo mental, así se ve que: $l_1+\varepsilon\leq l_2-\varepsilon$ concretamente $=$ porque $2\varepsilon=l_2-l_1\Rightarrow \#$
 \end{demo}
+
+En la figura \ref{fig:convergencia}, podemos observar un dato curioso: toda la sucesión salvo un número finito de términos cabe en un intervalo centrado en el límite. Esto quiere decir que la gran mayoría de la sucesión está acotada (porque cabe en el intervalo) y el resto de términos que no caben es un conjunto finito, luego podemos escoger el mayor distancia tenga al límite y entonces TODA la sucesión cabe en ese intervalo grande. Por tanto, los términos de una sucesión convergente forman un conjunto acotado.
 
 \begin{prop}[Acotamiento por convergencia]
 Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión convergente, entonces $\exists M>0: \forall n\in \mathbb N: |x_n|\leq M$, es decir, está acotada.
@@ -1389,10 +1526,14 @@ De este modo, nuestro número $M=max\{\tilde{M}, 1+l\}$
 \end{demo}
 
 \begin{obs}
-La afirmación recíproca $\Leftarrow$ no es cierta. Teniendo la sucesión $\{x_n=(-1)^n\}_{n=1}^\infty$, supongamos que existe un $l$ que cumple la definición:
-$$\exists l \in \mathbb R: \forall \varepsilon>0: \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\varepsilon$$
-Si $n$ es par, $|1-l|<\varepsilon$; si $n$ es impar, $|-1-l|<\varepsilon$. Tomamos $\varepsilon=\frac{1}{2}$, entonces $|1-l|<\frac{1}{2} \wedge |-1-l|<\frac{1}{2}\Rightarrow x\in (\frac{1}{2}, \frac{3}{2})\cap (\frac{-3}{2}, \frac{-1}{2})=\emptyset$
+El recíproco, es decir, que un conjunto de términos de una sucesión que esté acotado debe converger, no es cierto y para verlo vamos a poner un contraejemplo. Tomemos la sucesión $\{x_n=(-1)^n\}_{n=1}^\infty$ y supongamos que existe un $l$ al que converge, es decir, tal que:
+\[
+\exists l \in \mathbb R: \forall \varepsilon>0: \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\varepsilon
+\]
+Si $n$ es par, $|1-l|<\varepsilon$ y si $n$ es impar, $|-1-l|<\varepsilon$. Tomando entonces $\varepsilon=\frac{1}{2}$, se tiene que $|1-l|<\frac{1}{2}$  y $|-1-l|<\frac{1}{2}$, luego $x\in (\frac{1}{2}, \frac{3}{2})\cap (\frac{-3}{2}, \frac{-1}{2})=\emptyset$ así que es absurdo.
 \end{obs}
+
+Hasta ahora no lo hemos hecho, pero realmente la única forma que tenemos por el momento de calcular los límites de una sucesión es con la propia definición que es, cuanto menos, engorrosa. Una forma de facilitar las cosas sería saber si las operaciones entre sucesiones se pueden extender a los límites que estas tengan porque, de serlo, reduciría el cálculo de límites de sucesiones complejas al cálculo en sucesiones más sencillas y luego simplemente operar.
 
 \begin{prop}[Operaciones con sucesiones convergentes]
 Sean $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty \subset \mathbb R$ sucesiones convergentes a $x$ e $y$ respectivamente, entonces:
@@ -1472,6 +1613,8 @@ Esto último porque sabemos que dado $\varepsilon>0 : \exists n_0\in \mathbb N: 
 \end{enumerate}
 \end{demo}
 
+Al igual que tenía sentido preguntarse por el comportamiento de la convergencia ante las operaciones algebraicas de $\mathbb{R}$, tiene sentido preguntarse por su comportamiento ante las propiedades de \textit{orden total} que vimos en el capítulo anterior. Esta vez, no nos servirán tanto (aunque también) para conocer la convergencia, sino para acotar dicha convergencia. 
+
 \begin{prop}[Convergencia y Orden]
 Sean $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ sucesiones convergentes a $x,y\in \mathbb R$ respectivamente, entonces:
 \begin{enumerate}
@@ -1500,21 +1643,30 @@ $$z_n=(z_n-x_n)+x_n\Rightarrow \lim_{n\rightarrow \infty} z_n=\lim_{n\rightarrow
 \end{enumerate}
 \end{demo}
 
-\subsubsection{Divergencia}
-En ocasiones, una sucesión no converge a un valor concreto sino que se acerca con uniformidad a valores cada vez más grandes o más pequeños, es decir, a $\pm\infty$. Precisamente esta idea es la noción de convergencia y para poder trabajar con ella es necesario redefinir las operaciones con límites y qué significa eso de tender a infinito.
+Con respecto a estas relaciones de orden que hemos analizado, falta por observar un caso particular que se produce cuando la sucesión toma valores cada vez más grandes o cada vez más pequeños de forma continuada, es decir, cuando trabajamos con sucesiones que siempre crecen o decrecen.
 
 \begin{defi}[Monotonía]
-Una sucesión de números de reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona creciente\footnote{Decimos que es estrictamente creciente si la desigualdad es estricta}} si:
-$$\forall n\in \mathbb N: x_n\leq x_{n+1}\Rightarrow \{x_n\}_{n=1}^\infty \uparrow$$
-Una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona decreciente\footnote{Decimos que es estrictamente decreciente si la desigualdad es estricta}} si:
-$$\forall n\in \mathbb N: x_{n+1}\leq x_n \Rightarrow \{x_n\}_{n=1}^\infty \downarrow$$
+Una sucesión de números de reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona creciente\footnote{Decimos que es estrictamente creciente si la desigualdad es estricta}} si y sólo si:
+\[
+\{x_n\}_{n=1}^\infty \uparrow \Leftrightarrow \forall n\in \mathbb N: x_n\leq x_{n+1}
+\]
+Una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona decreciente\footnote{Decimos que es estrictamente decreciente si la desigualdad es estricta}} si y sólo si:
+\[
+\{x_n\}_{n=1}^\infty \downarrow \Leftrightarrow \forall n\in \mathbb N: x_{n+1}\leq x_n
+\]
 \end{defi}
+
+Con la definición que hemos dado hay una cosa que parece casi evidente: si tenemos una sucesión creciente\footnote{Lo mismo podría decirse de una sucesión decreciente con cota inferior.} y acotada superiormente esta se va a ir ``aplastando'' cada vez más hacia esa cota superior. Más concretamente, la \textit{mejor cota} es sobre la que se aplastará cada vez más la sucesión, lo cual motiva el siguiente enunciado.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión monótona creciente y acotada superiormente, entonces es convergente al \textbf{supremo} de los elementos de la sucesión.
-$$\{x_n\}_{n=1}^\infty \uparrow \wedge \mbox{ es acotada superiormente}\Rightarrow \lim_{n\rightarrow \infty} \{x_n\}=l=\sup\{x_n: \forall n\in \mathbb N\}$$
+\[
+\{x_n\}_{n=1}^\infty \uparrow \wedge \mbox{ es acotada superiormente}\Rightarrow \lim_{n\rightarrow \infty} = \sup\{x_n: \forall n\in \mathbb N\}
+\]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión monótona decreciente y acotada inferiormente, entonces es convergente al \textbf{ínfimo} de los elementos de la sucesión.
-$$\{x_n\}_{n=1}^\infty \uparrow \wedge \mbox{ es acotada inferiormente}\Rightarrow \lim_{n\rightarrow \infty} \{x_n\}=l=\inf\{x_n: \forall n\in \mathbb N\}$$
+\[
+\{x_n\}_{n=1}^\infty \uparrow \wedge \mbox{ es acotada inferiormente}\Rightarrow \lim_{n\rightarrow \infty} \{x_n\} = \inf\{x_n: \forall n\in \mathbb N\}
+\]
 \end{prop}
 \begin{demo}
 \begin{enumerate}
@@ -1532,20 +1684,29 @@ Del mismo modo que antes, se cumplen las premisas de convergencia sin mentir en 
 \end{enumerate}
 \end{demo}
 
+\subsubsection{Divergencia}
+Cuando una sucesión no converge a ningún valor concreto no podemos decir directamente que no converge, hay ciertas diferencias que obligan a hilar un poco más fino. Veamos un ejemplo, si consideramos la sucesión $\{(-1)^n\}_{n=1}^\infty$ claramente podemos decir que no converge a ningún valor porque simplemente salta de $1$ a $-1$ todo el rato sin saber qué ocurrirá según $n\rightarrow \infty$. En contraposición, la sucesión $\{n\}_{n=1}^\infty$ es cierto que no converge a ningún valor \textit{real}, pero ciertamente podríamos decir que está ``converge'' a $\infty$ conforme avanza $n$.
+
+Lo mismo podríamos decir utilizando de ejemplo otra sucesión para $-\infty$ y el caso es que a ``converger'' a $\pm\infty$ es lo que precisamente conocemos como \textit{divergencia}.
+
 \begin{defi}[Divergencia]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica decimos que ésta \textbf{diverge o tiende a $\infty$}\footnote{Del mismo modo, la definición para la divergencia a menos infinito viene dada por $\forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\leq -M$} si y sólo si:
-$$\lim_{n\rightarrow \infty} x_n=-\infty \Leftrightarrow \forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\geq M$$
-Es decir, que diverge si para cualquier constante que escojamos hay un término a partir del cual todos los demás son más grandes que dicha constante.
+\[
+\forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\geq M
+\]
+y lo denotamos por $\lim_{n\rightarrow\infty} x_n = \infty$.
 \end{defi}
 
-\begin{prop}[Divergencia y Monotonía]
+Justo antes de empezar con la divergencia hicimos un comentario acerca de la convergencia de sucesiones monótonas que no están acotadas. Una pregunta que nos pudo surgir es la siguiente: ¿y si la sucesión es creciente, pero no está acotada? En ese caso lo que ocurre es que la sucesión crece indefinidamente, es decir, se hace infinitamente grande (pues de lo contrario si habría cota).
+
+\begin{theo}[Divergencia y Monotonía]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, entonces
 \begin{enumerate}
 \item $\{x_n\}_{n=1}^\infty \uparrow$ y no acotada superiormente $\Rightarrow \lim_{n\rightarrow \infty} x_n=\infty$
 
 \item $\{x_n\}_{n=1}^\infty \downarrow$ y no acotada inferiormente $\Rightarrow \lim_{n\rightarrow \infty} x_n=-\infty$
 \end{enumerate}
-\end{prop}
+\end{theo}
 \begin{demo}
 \begin{enumerate}
 \item Sea $M>0$ como $\{x_n\}_{n=1}^\infty $ no es acotada superiormente, entonces $\exists n_0\in \mathbb N: M\leq x_{n_0}$. Si $n\geq n_0\Rightarrow M\leq x_{n_0}\leq x_n$
@@ -1554,9 +1715,11 @@ Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, entonces
 \end{enumerate}
 \end{demo}
 
-\begin{obs}
-Cabe destacar que gracias a esta proposición vemos que si la sucesión diverge, entonces no es acotada.
-\end{obs}
+\begin{coro}
+Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, si es divergente entonces no es acotada.
+\end{coro}
+
+Nuestros pasos se encaminan a presentar otro enunciado, esta vez incluyendo la divergencia como posibilidad, que nos permita trabajar con los límites con las operaciones permitidas entre sucesiones para simplificar los cálculos. No obstante, primero hay que solucionar un asunto delicado y es que no existe $\infty^{-1}$, es decir, que dividir por sucesiones divergente de momento no está permitido.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty \subset \mathbb R$ una sucesión numérica, entonces:
@@ -1584,18 +1747,33 @@ $$\mbox{Sea }M>0,\mbox{ tomamos }\varepsilon=\frac{1}{M}>0\Rightarrow \exists n_
 \end{enumerate}
 \end{demo}
 
+De esta manera, ya estamos preparados para poder definir cómo se comporta el nuevo elemento $\pm \infty$ con respecto a las operaciones habituales con números reales. Hemos preferido dar este resultado como definición para ahorrar tiempo con demostraciones, pero pensando en que se operan sucesiones cuando operamos sus límites se entiende perfectamente el porqué de cada una de las propiedades.
+
 \begin{defi}[$\mathbb{R}$ ampliado]
-Denotamos por ``$\mathbb R$ ampliado'' al conjunto
-$$\overline{\mathbb R}=\mathbb R\cup \{\infty\}\cup \{-\infty\}$$
-Además, entendemos las siguientes operaciones en dicho conjunto:
+Sea $\mathbb{R}$ el conjunto de los números reales, definimos como \textbf{$\mathbb R$ ampliado} a
+\[
+\overline{\mathbb R}=\mathbb R\cup \{\infty\}\cup \{-\infty\}
+\]
+y extendemos las operaciones habituales de $\mathbb{R}$ de la siguiente manera:
 \begin{enumerate}
-\item Si $x=\infty$, entonces $x+y=\infty$ si $y\in \mathbb R\cup \{\infty\}$
-\item $a\cdot x=\infty$ si $a\in (0,\infty)$ y $a\cdot x=-\infty $ si $a\in (-\infty, 0)$
-\item $xy=\infty$ si $y\in (0,\infty)\cup\{\infty\} \mbox{ y } xy=-\infty$ si $y\in (-\infty,0)\cup\{-\infty\} $
-\item $\frac{x}{y}=\infty $ si $y\in (0,\infty) \mbox{ y } \frac{x}{y}=-\infty $ si $y\in (-\infty,0) $
-\item Si $x=\infty$ y $x\leq y$, entonces $y=\infty$
+\item Sea $x\in \mathbb R\cup \{\infty\}$, entonces $x+\infty = \infty$.
+\item Sea $x\in (0,\infty)\cup\{\infty\}$, entonces $x\cdot \infty = \infty$.
+\item Sea $x\in (-\infty, 0)\cup\{-\infty\}$, entonces $x\cdot \infty = -\infty $.
+\item Sea $x\in (0,\infty)$, entonces $\frac{\infty}{x} = \infty$.
+\item Sea $x\in (-\infty, 0)$, entonces $\frac{\infty}{x} = -\infty$.
+\item Sea $\infty \leq y$, entonces $y=\infty$.
 \end{enumerate}
 \end{defi}
+
+\begin{obs}[Indeterminaciones]
+Es importante destacar que en la definición anterior se han excluido ciertas situaciones que se pueden dar en la práctica por las transformaciones algebraicas que utilicemos, concretamente:
+\begin{align*}
+\boxed{\infty -\infty} & & \boxed{0\cdot \infty} & & \boxed{\frac{\infty}{\infty}} & & \boxed{\frac{\infty}{0}}
+\end{align*}
+Estas son las conocidas \textbf{indeterminaciones} y precisamente llevan ese nombre porque al operar sucesiones dichos límites no siempre se obtiene los mismos resultados y dependen en su totalidad del caso concreto que observemos.
+\end{obs}
+
+Pues ahora sí, ya tenemos el resultado que nos da la seguridad de poder operar con los límites (esta vez ampliados) tal y como lo veníamos haciendo hasta ahora, eso sí, sin perder de vista las indeterminaciones que se nos han presentado y que no están contempladas como operaciones válidas en $\overline{\mathbb{R}}$
 
 \begin{prop}[Operaciones con límites infinitos]
 Sea $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ dos sucesiones convergentes a $x,y\in \overline{\mathbb R}$ respectivamente, entonces:
@@ -1608,9 +1786,7 @@ Sea $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ dos sucesio
 \end{enumerate}
 \end{prop}
 
-\begin{obs}
-Vemos que quedan excluidas las situaciones $\infty -\infty$, $0\cdot \infty$, $\frac{\infty}{\infty}$, $\frac{\infty}{0}$, que son conocidas como \textbf{indeterminaciones}.
-\end{obs}
+Por último, vamos a añadir un par de resultados que simplifiquen la labor de determinar cuál es el límite de la sucesión que tenemos entre manos y que hasta ahora no se habían dado porque no teníamos definida ni la divergencia ni las operaciones entre límites de $\overline{\mathbb{R}}$.
 
 \begin{theo}[Criterio del Cociente y la Raíz]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión numérica, entonces:
@@ -1625,61 +1801,101 @@ Cabe destacar que el caso en que dichos límites sean exactamente 1 no aporta ni
 
 
 \begin{ej}
-Sea $p>0$, entonces $x_n=\frac{1}{n^p}: n\in \mathbb N$ veamos que $\lim_{n\rightarrow \infty} \frac{1}{n^p}=0$
-$$1\leq n<n+1\Rightarrow n^p< (n+1)^p\Rightarrow x_{n+1}=\frac{1}{(n+1)^p}<\frac{1}{n^p}=x_n\Rightarrow \{x\}_{n=1}^\infty \downarrow$$
-Desde luego se observa que el ínfimo de los elementos de la sucesión es 0, y como hemos demostrado que toda sucesión decreciente acotada inferiormente converge a su supremo, lo demostramos:
-$$\mbox{Si }\exists \alpha: 0<\alpha\leq \frac{1}{n^p}: \forall n\in \mathbb N\Leftrightarrow n^p\leq \frac{1}{\alpha}\Rightarrow n\leq \left(\frac{1}{\alpha}\right)^{\frac{1}{p}}: \forall n \in \mathbb N\Rightarrow \#$$
-Porque los naturales no pueden tener cota superior.
+Consideremos la sucesión $\{\frac{1}{n^p}_{n=1}^\infty$ donde $p>0$ y comprobemos que converge a $0$:
+\[
+1\leq n<n+1\Rightarrow n^p < (n+1)^p \Rightarrow \frac{1}{(n+1)^p} < \frac{1}{n^p} \Rightarrow x_{n+1} < x_n \Rightarrow \{x\}_{n=1}^\infty \downarrow
+\]
+Como es una sucesión decreciente o converge a su ínfimo porque está acotada o diverge a $-\infty$. Desde luego, está acotada por el valor $0$ y precisamente es el ínfimo del conjunto de sus términos:
+$$\exists \alpha, \ 0 < \alpha \leq \frac{1}{n^p}: \forall n\in \mathbb N \Leftrightarrow n^p\leq \frac{1}{\alpha}\Rightarrow n\leq \left(\frac{1}{\alpha}\right)^{\frac{1}{p}}: \forall n \in \mathbb N\Rightarrow \#$$
+Llegamos a absurdo porque ya comentamos en el teorema \ref{theo:arquimediana} que los naturales no están acotados superiormente.
 \end{ej}
 
 \begin{ej}
-Si $r\in \mathbb R$, entonces $x_n=r^n: n\in \mathbb N$
+Consideremos en este ejemplo la sucesión $\{r^n\}_{n=1}^\infty$ donde $r\in \mathbb R$ haciendo una distinción de casos:
 \begin{itemize}
-\item Si $r=0$:
-$$x_n=0\Rightarrow \lim_{n\rightarrow \infty}x_n=0$$
+\item $r=0$
 
-\item Si $r=1$:
-$$x_n=1\Rightarrow \lim_{n\rightarrow \infty}x_n=1$$
+Este caso es muy sencillo, pues la base de la potencia es siempre el $0$ y éste elevado a cualquier potencia sigue siendo $0$, es decir, $x_n=0\Rightarrow \lim_{n\rightarrow \infty}x_n=0$.
 
-\item Si $0<r<1$
-$$r^{n+1}<r^n\Leftrightarrow x_{n+1}<x_n: \forall n\in \mathbb N\Rightarrow \{x_n\}_{n=1}^\infty \downarrow \stackrel{acot. inf.}\Rightarrow \exists \lim =\inf$$
+\item $r=1$
 
-Probamos que el ínfimo es 0 de nuevo:
-$$\mbox{Si }\exists\alpha: 0<\alpha \leq r^n: \forall n\in \mathbb N\Rightarrow \frac{1}{\alpha}\geq\frac{1}{r^n}=\left(\frac{1}{r}\right)^n:\forall n\in \mathbb N\Rightarrow \# \mbox{ porque }\frac{1}{r}>1 \mbox{ y }\{x^n: x>1\wedge n\in \mathbb N\}\mbox{ no acot.}$$
+De nuevo, y por el mismo motivo que antes, este caso es muy sencillo porque $1$ elevado a cualquier potencia permanece siendo $1$, es decir, $x_n=1\Rightarrow \lim_{n\rightarrow \infty}x_n=1$.
 
-\item Si $r>1$
-$$r^{n+1}>r^n\Leftrightarrow x_{n+1}>x_n\Rightarrow \{x_n\}\uparrow \Rightarrow \{x_n\}\mbox{ no esta acotada sup.}$$
+\item $0<r<1$
 
-Porque si realmente lo estuviese entonces:
-$$r^n\leq M: \forall n\in \mathbb N: r>1\Rightarrow \#\mbox{ por la propiedad arquimediana del producto}\Rightarrow \lim_{n\rightarrow\infty} r^n=\infty$$
+Este caso si requiere de mayor precisión. Primero vemos que la sucesión es decreciente pues las potencias de un valor entre $0$ y $1$ cada vez son más pequeñas:
+\[
+r^{n+1} < r^n \Leftrightarrow \forall n \in \mathbb{N} : x_{n+1} < x_n \Rightarrow \{x_n\}_{n=1}^\infty \downarrow
+\]
+Además, como la sucesión está acotada inferiormente por el $0$ su límite es el ínfimo, que de nuevo vuelve a ser este valor:
+\[
+\exists\alpha, \ 0 < \alpha \leq r^n : \forall n\in \mathbb N \Rightarrow \frac{1}{\alpha}\geq \frac{1}{r^n} = \left(\frac{1}{r}\right)^n : \forall n\in \mathbb N \Rightarrow \# 
+\]
+Y llegamos a contradicción porque el valor $\frac{1}{r}$ es mayor estrictamente a $1$ y el conjunto de valores $\{x^n: x>1 \mbox{ y } n\in \mathbb N\}$ no está acotado por el teorema \ref{theo:arquimediana_prod}.
 
-\item Si $-1<r<0$:
-$$0<|r|<1\Rightarrow 0\leq |r^n|=|r|^n\stackrel{\mbox{caso } 0<r<1}{\Rightarrow }\lim_{n\rightarrow \infty} |r|^n=0\stackrel{Regla Sandwich}{\Rightarrow} \lim_{n\rightarrow \infty} |r^n|=0\Rightarrow \lim_{n\rightarrow \infty} r^n=0$$
+\item $r>1$
 
-\item Si $r=-1$:
-$$\mbox{No hay límite}$$
+En este caso, tenemos una sucesión creciente de valores, pues:
+\[
+r^{n+1} > r^n \Leftrightarrow x_{n+1} > x_n \Rightarrow \{x_n\}_{n=1}^\infty \uparrow
+\]
+y por la observación que hemos hecho sobre el absurdo final del caso anterior, sabemos de sobra que el conjunto $\{x^n\}_{n=1}^\infty$ no está acotado para $x>1$, luego $\lim_{n\rightarrow\infty} r^n = \infty$.
 
-\item Si $r<-1$:
+\item $-1<r<0$
 
-$$\begin{cases}x_{2k}=r^{2k}=(r^2)^k\stackrel{n\rightarrow \infty}{\rightarrow} \infty \\
-x_{2k+1}=r^{2k+1}=r^{2k}\cdot r \stackrel{n\rightarrow \infty}{\rightarrow} -\infty\end{cases}\Rightarrow \nexists \lim$$
+En este caso, si tomamos la sucesión en valor absoluto ésta converge a $0$ porque vuelve a ser el caso $0<r<1$ ya resuelto antes:
+\[
+0 < |r| < 1 \Rightarrow 0 \leq |r^n| = |r|^n \Rightarrow \lim_{n\rightarrow \infty} |r^n| \leq \lim_{n\rightarrow \infty} |r|^n = 0 \Rightarrow \lim_{n\rightarrow \infty} |r^n| = 0
+\]
+Sin embargo, esto último quiere decir que
+\[
+\forall \varepsilon > 0, \ \exists n_0\in \mathbb{N}, \ \forall n\geq n_0 : ||r^n|| < \varepsilon
+\]
+y como $||r^n|| = |r^n|$ tenemos entonces que $\lim_{n\rightarrow\infty} r^n = 0$.
+
+\item $r=-1$
+
+Este caso es el de la sucesión que ha salido en algún ejemplo $\{(-1)^n\}_{n=1}^\infty$ que no hace más que saltar de un valor a otro entre pares e impares, por lo que no converge a ninguno de ellos.
+
+\item $r<-1$
+
+En este caso, los términos de la sucesión se hacen infinitamente grandes en valor absoluto, por lo que lo lógico sería pensar que la posible convergencia es a $\infty$, pero como alterna todo el rato entre positivos y negativos cuando cambia paridad en el índice, no podríamos decidirnos entre si es $+\infty$ o $-\infty$.
+
+Para dar una demostración un poco más formal, vamos a utilizar algo que veremos a continuación en el apartado \nameref{sub:subsucesiones}:
+\[
+\begin{cases}x_{2k}=r^{2k}=(r^2)^k\stackrel{n\rightarrow \infty}{\rightarrow} \infty \\
+x_{2k+1}=r^{2k+1}=r^{2k}\cdot r \stackrel{n\rightarrow \infty}{\rightarrow} -\infty\end{cases}\Rightarrow \nexists \lim_{n\rightarrow\infty} r^n
+\]
 \end{itemize}
 \end{ej}
 
 
 \begin{ej}
-Sea $a>0$, $x_n=\sqrt[n]{a}$, veamos que $\lim_{n\rightarrow \infty}x_n=1$:
+Consideremos ahora la sucesión $\{\sqrt[n]{a}\}_{n=1}^\infty$ donde $a > 0$ que en cualquier caso converge a $1$:
 \begin{itemize}
-\item Si $a=1$
-$$\sqrt[n]{1}=1:\forall n\in \mathbb N\Rightarrow \lim =1$$
+\item $a=1$
+
+Ocurre de forma similar al ejemplo anterior, como la raíz de cualquier orden de $1$ vuelve a ser $1$, el límite es $1$, es decir, $\forall n \in \mathbb{N}: \sqrt[n]{1}=1 \Rightarrow \lim_{n\rightarrow\infty} \sqrt[n]{1} = \lim_{n\rightarrow\infty} 1 = 1$.
 
 \item Si $a>1$
-$$\frac{1}{n+1}<\frac{1}{n}\Rightarrow a^{\frac{1}{n+1}}<a^{\frac{1}{n}}\Leftrightarrow \sqrt[n+1]{a}<\sqrt[n]{a}\Leftrightarrow x_{n+1}< x_n\Rightarrow \{x_n\}_{n=1}^\infty \downarrow$$
-Ahora basta con probar que el ínfimo de dicha sucesión es el 1 y por las proposiciones citadas, estaría demostrado que es su límite.
-$$\exists m: 1<m\leq \sqrt[n]{a}: \forall n\in \mathbb N\Rightarrow \alpha^n\leq a \forall n\in \mathbb N\Rightarrow \#\mbox{ por la prop. Arqui. Produc porque }\alpha>1$$
 
-\item Si $0<a<1$
-$$\frac{1}{a}>1\Rightarrow \sqrt[n]{\frac{1}{a}}=\frac{1}{\sqrt[n]{a}}\Rightarrow \lim_{n\rightarrow \infty} \frac{1}{\sqrt[n]{a}}=\frac{1}{\lim_{n\rightarrow \infty} \sqrt[n]{a}}=\frac{1}{1}=1$$
+En este caso pasa al contrario de lo que pasaba en el mismo caso para la potencia en lugar de la raíz, la sucesión es decreciente:
+\[
+\frac{1}{n+1}<\frac{1}{n}\Rightarrow a^{\frac{1}{n+1}}<a^{\frac{1}{n}}\Leftrightarrow \sqrt[n+1]{a}<\sqrt[n]{a}\Leftrightarrow x_{n+1}< x_n\Rightarrow \{x_n\}_{n=1}^\infty \downarrow
+\]
+Y como una sucesión decreciente converge a su ínfimo o diverge a $-\infty$, basta con probar ínfimo de dicha sucesión es el $1$:
+\[
+\exists m: 1<m\leq \sqrt[n]{a}: \forall n\in \mathbb N\Rightarrow m^n\leq a : \forall n\in \mathbb N \Rightarrow \#
+\]
+porque ya hemos dicho que el conjunto $\{x^n\}_{n=1}^\infty$ no está acotado si $x>1$.
+
+\item $0<a<1$
+
+Para este último caso, vamos a hacer la demostración utilizando las propiedades de operaciones entre límites de sucesiones convergentes:
+\[
+\sqrt[n]{a} = \frac{1}{\sqrt[n]{\frac{1}{a}}} \Rightarrow \lim_{n\rightarrow \infty} \sqrt[n]{a} = \frac{\lim_{n\rightarrow \infty} 1}{\lim_{n\rightarrow \infty} \sqrt[n]{\frac{1}{a}}} = \frac{1}{1}
+\]
+porque ya hemos probado que $\sqrt[n]{\frac{1}{a}}$ converge a $1$ al ser $\frac{1}{a} > 1$.
 \end{itemize}
 \end{ej}
 
@@ -1730,10 +1946,14 @@ $$\frac{-x_{n+1}-(-x_n)}{y_{n+1}-y_n}=\frac{-(x_{n+1}-x_n)}{y_{n+1}-y_n} \righta
 \end{demo}
 
 \begin{obs}
-El recíproco es completamente falso, pues
-$$\frac{x_n}{y_n}=\frac{(-1)^n}{n}\Rightarrow \lim_{n\rightarrow \infty} \frac{(-1)^n}{n}=0$$
-pero vemos que:
-$$\frac{x_{n+1}-x_n}{y_{n+1}-y_n}=\frac{(-2)(-1)^n}{1}\Rightarrow \nexists \lim x_n$$
+El recíproco es completamente falso, pues podemos escoger como contraejemplo a las sucesiones $x_n = (-1)^n$ y $y_n = n$. Estas dos sucesiones verifican la consecuencia, pues
+\[
+\lim_{n\rightarrow \infty} \frac{x_n}{y_n} = \lim_{n\rightarrow \infty} \frac{(-1)^n}{n}=0
+\]
+y aun así no verifican la condición del teorema porque
+\[
+\frac{x_{n+1}-x_n}{y_{n+1}-y_n}=\frac{(-2)(-1)^n}{1}\Rightarrow \nexists \lim_{n\rightarrow\infty} x_n
+\]
 \end{obs}
 
 \begin{ej}
@@ -1758,7 +1978,8 @@ $$\frac{n^\alpha}{(1+p)^n}\leq \frac{n^\alpha}{n^k\cdot C}=\frac{1}{n^{k-\alpha}
 \end{ej}
 
 \subsection{Subsucesiones}
-En ocasiones, el estudio de una sucesión se entiende mejor eliminando índices o cogiendo algunos valores de esa lista ordenada. Este concepto de sucesión más pequeña a partir de una sucesión es lo que conocemos por subsucesión. A priori, parece que el estudio de dicho elemento ofrece una visión más reducida de lo que ocurre con la sucesión, pero éstas tienen una serie de resultados de vital importancia y poco intuitivos.
+\label{sub:subsucesiones}
+En ocasiones, el estudio de una sucesión se entiende mejor eliminando índices o cogiendo algunos valores de esa lista ordenada. Este concepto de sucesión más pequeña a partir de una sucesión es lo que conocemos por \textit{subsucesión}. A priori, parece que el estudio de dicho elemento nos ofrece una visión más reducida de lo que ocurre con la sucesión, pero precisamente esta simplificación es la que en muchos casos ofrece resultados sorprendentes.
 
 \begin{defi}[Subsucesión]
 Sea $\{x_n\}_{n=1}^\infty\subset R$, se define una \textbf{subsucesión} de la misma como
@@ -1769,6 +1990,8 @@ es decir, es un conjunto de \textbf{subíndices ordenados crecientemente} que fo
 \begin{ej}
 $$\{x_n\}_{n=1}^\infty =\{2,4,6,8,10,...\}\rightarrow \{x_{n_k}\}_{n=1}^\infty =\{4,8,12,...\}$$
 \end{ej}
+
+Seguro que en alguno de los ejemplos anteriores (o en ejercicios de clase) alguno habremos pensado: ``Con los términos pares podría demostrar esto o lo otro y con los impares aquello también''. Pues esa predisposición a ``partir'' la sucesión en otras subsucesiones que funcionan mejor es, para algunas cuestiones, una forma de facilitar el trabajo. En esa línea, presentamos los siguientes teoremas.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$, ésta converge a $l\in \mathbb R$ si y sólo si $\forall \{x_{n_k}\}_{k=1}^\infty : x_{n_k}\xrightarrow{k\rightarrow \infty} l$.
@@ -1843,7 +2066,9 @@ $$x_{n_k}\in J_{k-1}\wedge \varphi\in J_{k-1}\Rightarrow \left|x_{n_k}-\varphi\r
 \subsection{Sucesiones de Cauchy}
 Supongamos que tenemos una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$ que converge a $l\in \mathbb R$, entonces:
 $$\forall \varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\frac{\varepsilon}{2}$$
-De este modo, sabemos que $n,m\geq n_0$ entonces $|x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$, es decir, como ambos elementos de la sucesión están dentro del intervalo de centro el límite, la distancia entre ambos es menor que ese intervalo.
+De este modo, sabemos que para $n,m\geq n_0$ entonces $|x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$, es decir, como ambos elementos de la sucesión están dentro del intervalo de centro el límite, la distancia entre ambos es menor que ese intervalo.
+
+Obviando la parte de la convergencia inicial, las sucesiones cuyos términos a partir de un cierto índice están suficientemente cerca unos de otros (todos de todos) tienen nombre propio y es lo que conocemos como \textit{sucesiones de Cauchy}.
 
 \begin{defi}[Sucesión de Cauchy]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión, se dice que es una \textbf{sucesión de Cauchy} si y sólo si:
@@ -1887,26 +2112,33 @@ Por tanto, dado un $\varepsilon>0,\exists n_0\in \mathbb N: k\geq k_0\Rightarrow
 \end{demo}
 
 \subsection{Límite inferior y superior de una sucesión}
-Muchas veces tenemos sucesiones que no convergen a ningún valor concreto, pero que siempre oscilan entre varios valores posibles, por ejemplo, la sucesión $\{(-1)^n\}_{n=1}^\infty$. Es cierto que dicha sucesión no converge, pero si podemos acotar un conjunto sobre el que siempre se encuentran los posibles límites de cada subsucesión. Estas dos cotas del intervalo son precisamente las nociones de límite superior e inferior.
+Muchas veces tenemos sucesiones que no convergen a ningún valor concreto, pero que siempre oscilan entre varios valores posibles, por ejemplo, la sucesión $\{(-1)^n\}_{n=1}^\infty$. Es cierto que dicha sucesión no converge, pero si podemos encontrar un conjunto acotado que contenga los posibles límites de cada subsucesión convergente. La cota superior e inferior de este conjunto son precisamente las que corresponden a las nociones de \textit{límite superior e inferior}.
 
 \begin{defi}
-Sea $\{x_n\}\subset \mathbb R$ una sucesión acotada y denotamos $N\in \mathbb N$, entonces definimos las sucesiones:
-$$a_N=\inf\{x_n: n\geq N\}\Rightarrow \{a_N\}\uparrow$$
-$$b_N=\sup\{x_n: n\geq N\}\Rightarrow \{b_N\}\downarrow$$
+Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión acotada y denotamos $N\in \mathbb N$, entonces definimos las sucesiones:
+\begin{align*}
+a_N=\inf\{x_n: n\geq N\} & & b_N=\sup\{x_n: n\geq N\}
+\end{align*}
+donde $\{a_N\}_{N=1}^\infty \uparrow$ y $\{b_N\}_{N=1}^\infty \downarrow$.
 \end{defi}
 
-Ver la monotonía de ambas es sencillo, pero lo realmente relevante de ambas es:
-$$\forall n\in \mathbb N: a_1\leq a_N\leq b_N\leq b_1$$
-Por tanto, como son sucesiones monótonas y acotadas, el límite de ambas existen y es precisamente lo que llamamos \textbf{límite inferior y superior de una sucesión}.
+La monotonía de cada una es algo sencillo de ver. Sin embargo, lo realmente relevante de ambas es que el primer término de cada una acota a la otra y una siempre es mayor o igual que la otra, es decir:
+\[
+\forall n\in \mathbb N: a_1\leq a_N\leq b_N\leq b_1
+\]
+Por tanto, tenemos dos sucesiones monótonas y acotadas, luego el límite de ambas existe y es justo a dicho límite de cada una a lo que conocemos como límite inferior y superior de una sucesión.
+
 \begin{defi}[Límite Inferior y Superior]
-Sea $\{x_n\}\subset \mathbb R$ una sucesión acotada y $\{a_N\}$ y $\{b_N\}$ sus sucesiones superior e inferior, definimos el \textbf{límite superior e inferior} de la sucesión $\{x_n\}$ como:
+Sea $\{x_n\}_{n=0}^\infty\subset \mathbb R$ una sucesión acotada y $\{a_N\}$ y $\{b_N\}$ sus sucesiones superior e inferior, definimos el \textbf{límite superior e inferior} de la sucesión $\{x_n\}_{n=1}^\infty$ como:
 $$\liminf_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}a_N$$
 $$\limsup_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}b_N$$
 \end{defi}
 
 \begin{prop}
-Sea $\{x_n\}_{n=1}^\infty$ una sucesión numérica, ésta converge si y sólo si su límite superior e inferior coinciden y ambos son el límite de la sucesión.
-$$\lim_{n\rightarrow \infty}x_n=l\Leftrightarrow \liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n=l$$
+Sea $\{x_n\}_{n=0}^\infty$ una sucesión numérica, ésta converge si y sólo si su límite superior e inferior coinciden y ambos son el límite de la sucesión.
+\[
+\lim_{n\rightarrow \infty}x_n=l\Leftrightarrow \liminf_{n\rightarrow\infty}x_n= \limsup_{n\rightarrow\infty}x_n=l
+\]
 \end{prop}
 \begin{demo}
 \begin{itemize}
@@ -1923,7 +2155,9 @@ $$\Rightarrow \lim_{n\rightarrow\infty}a_N=l= \lim_{n\rightarrow\infty}b_N$$
 
 \begin{prop}
 Sea $s\in \mathbb{R}$ y $\{x_n\}_{n=1}^\infty\subset \mathbb{R}$ una sucesión numérica, entonces:
-$$s > \limsup_{n\rightarrow\infty} x_n \Rightarrow \exists n_0 \in \mathbb{N} : \forall n \geq n_0: x_n<s$$
+\[
+\limsup_{n\rightarrow\infty} x_n < s \Rightarrow \exists n_0 \in \mathbb{N} : \forall n \geq n_0: x_n<s
+\]
 \end{prop}
 \begin{demo}
 Si tenemos que $\lim \{b_n\}\downarrow = l\Rightarrow \forall \varepsilon>0 : \exists n_0\in \mathbb N: \forall n\geq n_0: |b_n-l|<\varepsilon $ y en este caso podemos decir que $b_n-l<\varepsilon$. Ahora si vemos que $s>l$, entonces si escogemos $\varepsilon = |s-l|=s-l$, entonces por la definción de límite debe ocurrir que $b_n-l<s-l\Rightarrow b_n<s$ a partir de un cierto $n_0$.
@@ -1931,7 +2165,9 @@ Si tenemos que $\lim \{b_n\}\downarrow = l\Rightarrow \forall \varepsilon>0 : \e
 
 \begin{prop}
 Sea $\{x_{n_k}\}_{k=1}^\infty\subset \{x_n\}_{n=1}^\infty\subset \mathbb{R}$ una subsucesión convergente, entonces su límite se encuentra entre el superior e inferior de la sucesión global.
-$$ x_{n_k}\xrightarrow{n\rightarrow\infty}x_0 \Rightarrow \liminf x_n \leq x_0 \leq \limsup x_n$$
+\[
+\liminf x_n \leq \lim_{k\rightarrow \infty} x_{n_k} \leq \limsup x_n
+\]
 \end{prop}
 \begin{demo}
 $$\forall k\in \mathbb N: a_{n_k}\leq x_{n_k} \leq b_{n_k} \Rightarrow a\leq x_0 \leq b$$
@@ -1946,23 +2182,21 @@ Si suponemos que $a$ es el límite de inferior, entonces sea $\varepsilon_1=1$ o
 \end{demo}
 
 \begin{obs}
-Con ello queda probado que, si definimos el conjunto de todos los puntos de $\mathbb{R}$ para los que existe alguna subsucesión convergente:
-$$L=\{x_0\in \mathbb R: \exists \{x_{n_k}\}, \ x_{n_k}\xrightarrow{k\rightarrow \infty} x_0\}\}$$
-entonces podemos redefinir ambos límites como:
-$$\liminf_{n\rightarrow\infty}x_n=\inf L$$
-$$\limsup_{n\rightarrow\infty}x_n=\sup L$$
+Con ello queda probado que, si definimos el conjunto $L=\{x_0\in \mathbb R: \exists \{x_{n_k}\}, \ x_{n_k}\xrightarrow{k\rightarrow \infty} x_0\}\}$ de todos los puntos de $\mathbb{R}$ para los que existe alguna subsucesión convergente, entonces podemos redefinir ambos límites como:
+\begin{align*}
+\liminf_{n\rightarrow\infty}x_n=\inf L && \limsup_{n\rightarrow\infty}x_n=\sup L
+\end{align*}
 \end{obs}
 
 \subsection{Límites en el exponente}
 Hasta ahora hemos demostrado que el límite se distribuye razonablemente en la suma y el producto de sucesiones. Sin embargo, una propiedad útil y que aún no hemos demostrado sería saber si también ocurre lo mismo con la exponencial, es decir, ¿si $x_n \xrightarrow{n\rightarrow \infty} x$ y $y_n \xrightarrow{n\rightarrow \infty} y$ la sucesión $x_n^{y_n} \xrightarrow{n\rightarrow \infty} x^y$?
 
 \begin{theo}[Exponencial de exponente variable]
-Sea $\{x_n\}_{n=1}^\infty$ una sucesión que converge a $x$ y $a>0$, entonces:
-$$\lim_{n\rightarrow \infty} x_n = x \mbox{ y }a>0\Rightarrow \lim_{n\rightarrow\infty} a^{x_n}=a^x$$
+Sea $\{x_n\}_{n=1}^\infty$ una sucesión convergente a $x\in \mathbb{R}$ y $a>0$, entonces $\lim_{n\rightarrow\infty} a^{x_n}=a^x$.
 \end{theo}
 \begin{demo}
-Veamos primero que si $\{x_n\}$ es monótona, entonces esto ocurre:
-$$\{x_n\}\uparrow\Rightarrow a^{x_n}<a^{x_{n+1}}<a^x \Rightarrow \{a^{x_n}\} \uparrow$$
+Veamos primero que si $\{x_n\}_{n=1}^\infty$ es monótona, entonces esto ocurre:
+$$\{x_n\}_{n=1}^\infty\uparrow\Rightarrow a^{x_n}<a^{x_{n+1}}<a^x \Rightarrow \{a^{x_n}\} \uparrow$$
 Además como $a^x>a^{x_n}:\forall n\in \mathbb N$, entonces está acotada, por lo que existe el supremo y además este es el límite de dicha sucesión. En consecuencia, por ser cota superior $a^x\geq \xi$ donde $\xi=\sup\{a^{x_n}\}$. Por la definición que se dió de exponencial real, el supremo de $a^{x_n}$ es $a^x$ por ser $x_n\in \mathbb R$.
 
 Visto el caso de una función monótona, para una función cualquiera se tiene que como $x_n\xrightarrow{n\rightarrow\infty} x\Rightarrow a_N\xrightarrow{n\rightarrow\infty}x\xleftarrow{n\rightarrow\infty} b_N$ siendo ambos los límites superiores e inferiores descritos en el apartado anterior, así que como $\{b_N\}\downarrow$ y $\{a_N\}\uparrow$:
@@ -1974,88 +2208,101 @@ Sea $r\in \mathbb Q$ y $\{x_n\}_{n=1}^\infty$ una sucesión tal que $\forall n\i
 $$\lim_{n\rightarrow\infty}x_n^{r} = x^r$$
 \end{theo}
 \begin{demo}
-Comenzamos con el mismo razonamiento que para la demostración anterior, si $\{x_n\}\uparrow$ que converge a $x$ y $m\in \mathbb N$, entonces:
+Comenzamos con el mismo razonamiento que para la demostración anterior, si $\{x_n\}_{n=1}^\infty\uparrow$ que converge a $x$ y $m\in \mathbb N$, entonces:
 $$x_n\leq x_{n+1}\leq x\Rightarrow \sqrt[m]{x_n}\leq \sqrt[m]{x_{n+1}}\leq \sqrt[m]{x} \Rightarrow \{\sqrt[m]{x_n}\}\uparrow$$
 
 Como es creciente y está acotada por $\sqrt[m]{x}$, su supremo existe y es el límite de dicha sucesión, en consecuencia, por ser cota superior $\xi\leq \sqrt[m]{x}$ donde $\xi=\sup\{\sqrt[m]{x_n}\}$. Veamos que el caso ``$<$'' no es posible:
 $$\sqrt[m]{x_n}\leq \xi< \sqrt[m]{x}\Rightarrow x_n\xrightarrow{n\rightarrow\infty}x\leq \xi^m<x\xrightarrow{n\rightarrow\infty}x\Rightarrow \xi^m\xrightarrow{n\rightarrow\infty}x\Rightarrow \xi^m=x\Rightarrow \xi=\sqrt[m]{x}$$
 
-En consecuencia, como $\{a_N\}\uparrow$ y $\{b_N\}\downarrow$, podemos acotar a cualquier sucesión convergente por esas dos y así demostrarlo para $\{x_n\}$ cualquiera que converja a $x$.
+En consecuencia, como $\{a_N\}\uparrow$ y $\{b_N\}\downarrow$, podemos acotar a cualquier sucesión convergente por esas dos y así demostrarlo para $\{x_n\}_{n=1}^\infty$ cualquiera que converja a $x$.
 $$a_N\leq x_N\leq b_N\Rightarrow \sqrt[m]{a_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}\leq \sqrt[m]{x_n}\leq \sqrt[m]{b_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}\Rightarrow \sqrt[m]{x_N}\xrightarrow{n\rightarrow\infty}\sqrt[m]{x}$$
 
 De ello se puede deducir, contando con la demostración anterior que si $m\in \mathbb Q$ entonces se cumple la proposición dada (contando con lo demostrado en la proposición anterior a este apartado).
 \end{demo}
 
+Los dos teoremas anteriores nos han demostrado que si fijamos la base o el exponente, entonces se sigue verificando la expresión en el límite. Sin embargo, esto no demuestra que cuando AMBAS partes son variables la expresión en el límite sea la misma.
+
 \begin{theo}[Exponencial de base y exponente variable]
-Sean $\{x_n\}_{n=1}^\infty$ y $\{a_n\}_{n=1}^\infty$ sucesiones tal que $\lim_{n\rightarrow \infty}x_n = x$ y $\lim_{n\rightarrow\infty}a_n=a>0$, entonces:
-$$\lim_{n\rightarrow\infty}a_n=a>0 \mbox{ y } \lim_{n\rightarrow\infty}x_n=x\Rightarrow \lim_{n\rightarrow\infty}a_n^{x_n}=a^x$$
+Sean $\{x_n\}_{n=1}^\infty$ y $\{a_n\}_{n=1}^\infty$ sucesiones convergentes a $x\in \mathbb{R}$ y $a>0$ respectivamente, entonces:
+\[
+\lim_{n\rightarrow\infty}a_n^{x_n}=a^x
+\]
 \end{theo}
 \begin{demo}
-Para esta demostración necesitamos elaborar un poco el terreno la demostración final. Primero de todo tenemos que si $\lim_{n\rightarrow \infty} a_n=a\Rightarrow \lim_{n\rightarrow \infty}a_n^x=a^x$, cuya demostración utilizando las técnicas y resultados anteriores es trivial. Es fácil demostrar, teniendo en cuenta la definición de exponencial real que se dió, que si $x>0\Rightarrow a^x=\sup\{b^x: b<a\}=\inf\{c^x: a<c\}$ y del mismo modo que si $x<0\Rightarrow a^x=\inf\{b^x: b<a\}=\sup\{c^x: a<c\}$. Del mismo modo, es sencillo demostrar por casos que si $\{x_n\}$ es monótona convergente a $x$ y $a_n$ es monótona convergente a $a$, entonces $\lim_{n\rightarrow\infty} a_n^{x_n}=a^x$ con lo que basándonos en estos resultados tenemos que contando como $z_N$ la sucesión que tiende al límite inferior y $y_N$ la del superior:
+Para esta demostración necesitamos elaborar un poco el terreno la demostración final. Primero de todo tenemos que si $\lim_{n\rightarrow \infty} a_n=a\Rightarrow \lim_{n\rightarrow \infty}a_n^x=a^x$, cuya demostración utilizando las técnicas y resultados anteriores es trivial. Es fácil demostrar, teniendo en cuenta la definición de exponencial real que se dió, que si $x>0\Rightarrow a^x=\sup\{b^x: b<a\}=\inf\{c^x: a<c\}$ y del mismo modo que si $x<0\Rightarrow a^x=\inf\{b^x: b<a\}=\sup\{c^x: a<c\}$. Del mismo modo, es sencillo demostrar por casos que si $\{x_n\}_{n=1}^\infty$ es monótona convergente a $x$ y $a_n$ es monótona convergente a $a$, entonces $\lim_{n\rightarrow\infty} a_n^{x_n}=a^x$ con lo que basándonos en estos resultados tenemos que contando como $z_N$ la sucesión que tiende al límite inferior y $y_N$ la del superior:
 $$z_N\leq a_N\leq y_N\Rightarrow z_N^{z'_n}\leq a_N^{z'_n}\leq a_N^{x_n}\leq a_N^{y'_n}\leq y_N^{y'_n}\Rightarrow z_N^{z'_n}\xrightarrow{n\rightarrow|\infty}a^x\leq a_N^{x_N}\leq y_N^{y'_n}\xrightarrow{n\rightarrow|\infty}a^x\Rightarrow a_N^{x_N}\xrightarrow{n\rightarrow|\infty}a^x$$
 \end{demo}
 
 \section{Series Numéricas}
-El concepto nace de problemas como la suma de infinitos números. Para poder desarrollar dicha teoría, es necesario introducir (como en la mayoría de conceptos que tratan el infinito) el concepto de límite porque tal y como hemos definido la operación de la suma solo podemos sumar una cantidad finita de números. Tan grande como queramos, pero al fin y al cabo finita, es decir:
-$$\sum_{i=1}^{n} x_i = x_1 + \cdots + x_n$$
-Como nosotros necesitamos que esta cantidad sea infinita, una posible solución es calcular la suma hasta $n$. Las diferentes sumas hasta $n$, $n+1$, etc. conforman una sucesión de sumas y calcular la suma infinita sería lo mismo que calcular el límite de dicha sucesión, lo cual puedo hacerlo puesto que se ha reducido el problema al manejo de sucesiones.
+Hasta ahora, por muy grande que haya podido ser, las sumas que hemos realizado siempre han sido sumas de tipo finito, pero alguno podría preguntarse ¿qué ocurre si sumamos infinitos términos? Esta idea es precisamente la que hay detrás de las series numéricas, que consisten fundamentalmente en calcular hacia que valor converge una suma cuando está se va haciendo infinita.
+
+Sin embargo, como hemos dicho, hasta ahora sólo sabemos sumar cantidades de tipo finito, luego ¿cómo planteamos una operación que involucra infinitos términos? Pues como hacemos casi siempre que encontramos algún concepto que involucra de algún modo el ``infinito'': los límites. La posible solución sería calcular la suma hasta término $1-\mbox{ésimo}$, $2-\mbox{ésimo}$, $3-\mbox{ésimo}$, ... y considerarlos como términos de una sucesión. ¿Cuál será entonces la suma de los infinitos términos? Pues el límite de convergencia de dicha sucesión.
 
 \begin{defi}[Serie numérica]
-Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, se define la \textbf{serie numérica} asociada como la sucesión de sumas parciales, es decir:
-$$\{s_n\}_{n=1}^\infty: s_n = x_1 + x_2 + \ldots x_n = \sum_{k=1}^{n} x_k$$
-Además, decimos que dicha \textbf{serie converge} si converge la sucesión de sumas parciales, es decir:
+Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, se define la \textbf{serie numérica} asociada como la sucesión de sumas parciales:
+\[
+\{s_n\}_{n=1}^\infty \mbox{ donde } s_n = x_1 + x_2 + \ldots x_n = \sum_{k=1}^{n} x_k
+\]
+y decimos que ésta es \textbf{convergente} si y sólo si converge la sucesión de sumas parciales, es decir:
 $$\sum_{n=1}^\infty x_n = \lim_{n\rightarrow\infty} s_n$$
 \end{defi}
 
 \begin{obs}
-Las series pueden ``empezar'' en $n=0$, $n=2$ o $n=\gamma$ porque al fin y al cabo si la serie converge, empezar un poco más adelante no es tan importante. Esto se debe a que la suma hasta ese índice de comienzo será finita y como la que hemos escogido será convergente, la suma de ambas cantidades será finita, luego la sucesión desde el índice inicial es convergente en consecuencia.
+Para la convergencia, e insisto que exclusivamente para la convergencia, las series pueden ``empezar'' en $n=0$, $n=2$ o $n=\gamma$ porque al fin y al cabo si la serie converge, empezar un poco más adelante no es tan importante. Esto se debe a que la suma hasta ese índice de comienzo será finita y, como la que hemos escogido será convergente, la suma de ambas cantidades será finita, luego la sucesión desde el índice inicial es convergente en consecuencia.
 \end{obs}
 
 \begin{ej}
-Tomamos la sucesión $ \displaystyle \sum_{n=0}^{\infty} \frac{1}{2^n}$ de forma que:
-$$s_n =\frac{1}{2^0} + \frac{1}{2^1} + \ldots + \frac{1}{2^n} = \sum_{k=0}^{n} \frac{1}{2^k}$$
-Calculamos ahora la suma finita hasta $n$ para conocer el término general de la sucesión $s_n$:
+Tomamos la serie $ \displaystyle \sum_{n=0}^{\infty} \frac{1}{2^n}$ de forma que la sucesión de las sumas parciales tiene la forma $s_n =\frac{1}{2^0} + \frac{1}{2^1} + \ldots + \frac{1}{2^n} = \sum_{k=0}^{n} \frac{1}{2^k}$. Calculamos la suma finita hasta $n$ para conocer el término general de la sucesión $s_n$:
 \begin{align*}
 s_n &= \frac{1}{2^0} + \frac{1}{2^1} + \ldots + \frac{1}{2^n} \\
 \frac{1}{2}\cdot s_n &= \frac{1}{2^1} + \frac{1}{2^2} + \ldots + \frac{1}{2^{n+1}} \\
-s_n - \frac{1}{2}\cdot s_n &= \frac{1}{2}\cdot s_n = 1 - \frac{1}{2^{n+1}}
+s_n - \frac{1}{2}\cdot s_n &= \frac{1}{2}\cdot s_n = 1 - \frac{1}{2^{n+1}} \\
+s_n &= 2\left(1 - \frac{1}{2^{n+1}}\right)
 \end{align*}
-$$s_n= 2\left(1 - \frac{1}{2^{n+1}}\right)$$
-Luego en definitiva tenemos que:
-$$\lim_{n \to \infty} s_n = \lim_{n \to \infty}  2\left(1 - \frac{1}{2^{n+1}}\right) = 2$$
+y de este modo podemos calcular el límite de la misma para conocer la convergencia de la serie:
+\[
+\lim_{n \to \infty} s_n = \lim_{n \to \infty}  2\left(1 - \frac{1}{2^{n+1}}\right) = 2
+\]
 \end{ej}
 
 \subsection{Criterios de convergencia}
-En ocasiones, como en el ejemplo anterior, será sencillo incluso calcular el valor concreto del límite de convergencia de una serie, pero en general no siempre será tan fácil. En su lugar, optaremos por determinar cuando una serie es o no convergente para que, en caso de requerirlo, perdamos nuestro tiempo calculando el límite (si existe) puesto que existen métodos matemáticos para aproximar o vislumbrar dicho límite.
+En ocasiones, como en el ejemplo anterior, será sencillo incluso calcular el valor concreto del límite de convergencia de una serie, pero en general no siempre será tan fácil. En su lugar, optaremos por determinar cuando una serie es o no convergente para que, en caso de requerirlo, perdamos nuestro tiempo calculando el límite (si existe) a través de otros métodos matemáticos que aproximen o den idea de dicho límite.
 
 \begin{theo}
 Sea $\sum_{n=1}^\infty x_n$ una serie convergente\footnote{Es habitual encontrar la notación $\sum_{n=1}^\infty x_n < \infty$ para denotar que algo es convergente (también es usual en integrales)}, entonces la sucesión de términos que se suman tiende a $0$, es decir:
 $$\sum_{n=1}^{\infty} x_n <\infty \Rightarrow \lim_{n \rightarrow \infty} x_n =0$$
 \end{theo}
 \begin{demo}
-$$\sum_{n=1}^{\infty} x_n \mbox{ convergente } \Leftrightarrow \exists \lim_{n \to \infty} s_n = L: s_n = x_1 + x_2 + \ldots x_n = \sum_{k=1}^{n} x_k$$
-De este modo, si tomamos estas dos sucesiones se verifica que:
-$$\begin{cases}s_n \to L \\ s_{n-1} \to L\end{cases} \Rightarrow x_n = s_n - s_{n-1} \xrightarrow{n\rightarrow\infty} L-L = 0$$
+La serie $\sum_{n=1}^{\infty} x_n$ es convergente si y sólo si $\exists \lim_{n \to \infty} s_n = L$ donde $s_n = \sum_{k=1}^{n} x_k$. Por tanto, si tomamos estas dos sucesiones se verifica que:
+$$
+\begin{cases}
+s_n \rightarrow L \\
+s_{n-1} \rightarrow L
+\end{cases}
+\Rightarrow x_n = s_n - s_{n-1} \Rightarrow \lim_{n\rightarrow\infty} x_n = L - L = 0
+$$
 \end{demo}
 
 \begin{obs}
-Cabe destacar que esto no significa que la sucesión de sumas parciales, es decir, la serie tienda a 0 ni tampoco que el recíproco sea cierto.
+El teorema anterior simplemente nos indica que, en caso de que la serie converja, la sucesión de términos que se van sumando tiene que ``ir haciéndose más pequeña'', pero esto no significa que la sucesión de sumas parciales sea cada vez más pequeña.
 \end{obs}
 
 \begin{ej}
+Veamos una serie de ejemplos para poner en práctica lo explicado hasta ahora:
 \begin{enumerate}
+\item Consideremos la sucesión $\sum_{n=1}^\infty n$. Como $x_n = n$ y el límite de esta sucesión de términos no es $0$, la serie es divergente.
 
-\item $\sum n = 1 + 2 + 3 + \ldots$ no converge pues su $x_n = n \Rightarrow \lim_{n \to \infty} +\infty \neq 0 \Rightarrow \sum n$ es divergente
+\item Consideremos la sucesión $\sum_{n=0}^{\infty} (-1)^n$ cuyo término general de las sumas parciales es de la siguiente forma:
+\[
+s_n = 1 - 1 + 1 - 1 + \ldots + (-1)^n =
+\begin{cases}
+0 \mbox { si $n$ impar } \\
+1 \mbox { si $n$ par }
+\end{cases}
+\]
+y como la sucesión de sumas parciales no es convergente, la serie no es convergente.
 
-\item $\sum_{n=0}^{\infty} (-1)^n , s_n = 1 - 1 + 1 - 1 + \ldots + (-1)^n = \begin{cases} 0 \mbox { si $n$ impar } \\ 1 \mbox { si $n$ par } \end{cases} \Rightarrow $ no es convergente
-\end{enumerate}
-\end{ej}
-
-\begin{ej}
-Para ver que el recíproco no es cierto, tomamos de ejemplo la serie $\sum_{i = 1 }^{\infty} \frac{1}{n}$ llamada la serie armónica. Esta serie verifica que:
-$$s_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots \frac{1}{n}\Rightarrow \forall n\in \mathbb N : s_n > 0$$
-$$\{ s_n\}_{n=1}^\infty \uparrow \ \Rightarrow  0< s_n < s_{n+1}: \forall n \in \mathbb N$$
-Cuando desarrollamos los sucesivos términos tenemos las siguientes desigualdades:
+\item Para comprobar que el recíproco no es cierto, tomamos de ejemplo la serie $\sum_{i = 1 }^{\infty} \frac{1}{n}$ llamada la serie armónica. La sucesión de sumas parciales claramente es una sucesión creciente y siempre positiva, pero además cuando desarrollamos los sucesivos términos observamos las siguientes desigualdades:
 \begin{align*}
 s_1 &= 1 \\
 s_2 &= 1 + \frac{1}{2} \\
@@ -2072,9 +2319,8 @@ Por tanto, es razonable pensar que la posible regla de inducción sea:
 $$s_{2^n} > 1 + \frac{1}{2} + \ldots + \frac{1}{2} = 1 + \frac{n-2}{2}$$
 así que para demostrarlo:
 $$s_{2^{n+1}} = s_{2^n} + \frac{1}{2^n + 1} + \ldots + \frac{1}{2^n + 2^n} \overset{HI}{>} 1 +  \frac{n-2}{2} + \frac{1}{2^{n + 1}} + \ldots  + \frac{1}{2^{n + 1}} = 1+\frac{n-2}{2}+\frac{2^n}{2^{n+1}}= 1 + \frac{n-1}{2}$$
-En consecuencia:
-$$\lim_{n \to \infty} s_{2^n} = + \infty$$
-Pero $\{s_n\}_{n=1}^\infty$ es monótona creciente $\Rightarrow \forall k, \exists n: s_k >s_{2^n}$, por tanto, $\lim_{n \to \infty} s_n = + \infty$; luego $\sum_{n=0}^{\infty} \frac{1}{n}$ es divergente.
+En consecuencia, sabemos que $s_{2^n} \xrightarrow{n\rightarrow\infty} + \infty$, pero sabíamos $\{s_n\}_{n=1}^\infty$ era monótona creciente y acabamos de ver que hay una subsucesión divergente, luego es $\{s_n\}_{n=1}^\infty$ es no acotada, que junto a creciente implica divergente.
+\end{enumerate}
 \end{ej}
 
 \begin{theo}[Criterio de Cauchy]
@@ -2095,8 +2341,11 @@ Como contraejemplo ejemplo para el recíproco se tiene la serie armónica altern
 \end{ej}
 
 \begin{coro}
+\label{coro:convergencia_abs-convergencia}
 Sea $\sum_{n=1}^{\infty} x_n$ una serie numérica cuyos términos no son todos necesariamente positivos, entonces:
-$$\sum_{n=1}^{\infty} |x_n|\mbox{ converge}\Rightarrow \sum_{n=1}^{\infty} x_n\mbox{ converge}$$
+\[
+\sum_{n=1}^{\infty} |x_n|\mbox{ converge}\Rightarrow \sum_{n=1}^{\infty} x_n\mbox{ converge}
+\]
 \end{coro}
 
 \begin{theo}[Criterio de comparación]
@@ -2142,15 +2391,23 @@ $$\Rightarrow \sum y_n \mbox{ converge }\Rightarrow \Sigma x_n \mbox{ converge}$
 \end{demo}
 
 \subsection{Convergencia absoluta y condicional}
-Estos conceptos toman gran relevancia sobre todo para el capítulo \nameref{sucesiones y series de funciones} puesto que permiten diferenciar entre unas más leves y otras condiciones más restrictivas de convergencia que ofrecen menos o más estabilidad en la misma.
+Ahora que ya hemos visto lo que son las series y qué significa que estas converjan, vamos a matizar un poco cómo es esta convergencia. Aunque se trate de sumas, podemos estar sumando algún término negativo que en lugar de ``aportar'' a la suma esté restando valor a la misma, es decir, que puede que si tomásemos en valor absoluto los términos que se van sumando la serie no converja, pero gracias a que algunos ``restan'' la serie original si converja. Estos dos tipos de convergencia, son precisamente los que dan lugar a las dos clases de convergencia que existen la \textit{convergencia absoluta} y la \textit{convergencia condicional}.
 
 \begin{defi}[Convergencia Absoluta y Condicional]
-Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converge absolutamente o es absolutamente convergente} si la serie de los valores absolutos es convergente, es decir:
-$$\sum_{n = 1}^{\infty} x_n\mbox{ abs. conv.} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ conv.}$$
+Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converge absolutamente o es absolutamente convergente} si y sólo si la serie de los valores absolutos es convergente, es decir:
+\[
+\sum_{n = 1}^{\infty} x_n\mbox{ abs. conv.} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ conv.}
+\]
 
-Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converge condicionalmente o es condicionalmente convergente} si es convergente pero no absolutamente convergente, es decir:
-$$\sum_{n = 1}^{\infty} x_n\mbox{ cond. conv.} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ div. y } \sum_{n = 1}^{\infty} x_n \mbox{ conv.}$$
+Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converge condicionalmente o es condicionalmente convergente} si y sólo si es convergente pero no absolutamente convergente, es decir:
+\[
+\sum_{n = 1}^{\infty} x_n\mbox{ cond. conv.} \Leftrightarrow \sum_{n=1}^{\infty} |x_n|\mbox{ div. y } \sum_{n = 1}^{\infty} x_n \mbox{ conv.}
+\]
 \end{defi}
+
+\begin{obs}
+Si una serie es convergente, necesariamente debe ser o absolutamente convergente o condicionalmente convergente. Esto es así porque la convergencia absoluta es un hecho más fuerte que la de convergencia a secas, pues la una implica a la otra por el Corolario \ref{coro:convergencia_abs-convergencia} y, en consecuencia, las series que convergen absolutamente son un subconjunto de las series convergentes. Como su complementario son las que son condicionalmente convergentes y éstas también son subconjunto de las convergentes, queda demostrado que si se es convergente se es la una o la otra.
+\end{obs}
 
 \begin{theo}[Criterio de la Raíz y del Cociente]
 \begin{itemize}
@@ -2202,8 +2459,17 @@ $$\Rightarrow |x_n| \geq |x_k|: \forall n \geq K: x_n \cancel{\rightarrow} 0 \Ri
 \end{demo}
 
 \begin{theo}[Criterio de la integral]
-Sea $f:[0, \infty)\rightarrow \mathbb R$ una función integrable, $f(x)\geq 0 $, decreciente y cuyo $\lim_{x \rightarrow \infty} f(x) = 0$, entonces decimos que:
-$$\int_{0}^{\infty} f(x) \dif{x} \mbox{ converge} \Leftrightarrow \sum_{n = 1 }^{\infty} f(n)\mbox{ converge}$$
+Sea $f:[0, \infty)\rightarrow \mathbb R$ una función que verifica las siguientes condiciones:
+\begin{itemize}
+\item $f\in R[0,\infty)$
+\item $f(x)\geq 0 $
+\item $f\downarrow$
+\item $\lim_{x \rightarrow \infty} f(x) = 0$
+\end{itemize}
+entonces decimos que:
+\[
+\int_{0}^{\infty} f(x) \dif{x} \mbox{ converge} \Leftrightarrow \sum_{n = 1 }^{\infty} f(n)\mbox{ converge}
+\]
 \end{theo}
 \begin{demo}
 La demostración y explicación de este resultado se encuentra en el tema dedicado a las integrales, concretamente en la sección \nameref{Integrales Impropias}.
@@ -2274,41 +2540,155 @@ Este criterio resulta muy útil para decidir la convergencia de sucesiones en la
 
 
 \chapter{Funciones Continuas}
-Las funciones son el concepto central y fundamental del análisis de variable real y sobre ellas se sustenta la mayor parte de la teoría que se analiza. Si las funciones de por sí ya revisten gran importancia, las posibilidades que nos ofrecen las continuas, por la cantidad de resultados beneficiosos demostrados para las mismas, hacen que trabajar con dichas funciones sea muy productivo y eficiente. Por ello, merece la pena hacer un estudio exhaustivo de las mismas para manejar bien las posibilidades que nos ofrecen.
+Ya hemos visto en el capítulo \nameref{chap:intro_a_conjuntos_y_funciones} lo que significa el término \textit{función}: una correspondencia entre elementos de dos conjuntos a los que cada elemento de partida le corresponde un único elemento en la llegada. Sin embargo, si no añadimos más información al respecto, podemos trabajar con funciones muy distintas que se dejarán manejar peor o mejor. Por ejemplo, si observamos las funciones de la Figura \ref{fig:funciones_continuas} ¿cuál de las dos nos parece más amable para trabajar con ella? Lógicamente la de la izquierda, pero ¿por qué?
+
+\begin{figure}[h]
+\begin{multicols}{2}
+\centering
+\begin{tikzpicture}[scale=0.6]
+  % Ejes de coordenadas
+  \draw[-stealth] (-3,0) -- (3,0) node[right] {$x$};
+  \draw[-stealth] (0,-3) -- (0,3) node[above] {$y$};
+  
+  % Función en rojo
+  \draw[red, domain=-2:0.9, smooth, thick] plot (\x, {2*(\x*\x*\x) + 4*(\x*\x) - 1});
+  
+  % Etiquetas
+  \node[below left] at (0,0) {$0$};
+  \foreach \x in {-2,-1,1,2}
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+  \foreach \y in {-2,-1,1,2}
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+    \node[above] at (current bounding box.north) {$f(x) = 2x^3+4x^2-1$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=5.5]
+ \draw [-stealth] (-0.1,0) -- (1.1,0);
+\draw [-stealth] (0,-0.1) -- (0,0.6);
+\foreach \X in {1,...,7}
+{\ifnum\X=1
+\else
+\draw (0.02,1/\X) -- (-0.02,1/\X) node[left,xshift={(-(1+pow(-1,\X)))*3pt}]{$\frac{1}{\X}$};
+\fi
+}
+\foreach \X [evaluate=\X as \Ymax using {int(\X-1)}]in {25,24,...,2}
+{\foreach \Y in {1,...,\Ymax}
+ {\ifnum\X<6
+ \draw (\Y/\X,0.02) -- (\Y/\X,-0.02) node[below,fill=white]{$\frac{\Y}{\X}$};
+ \else
+ \draw[ultra thin] (\Y/\X,0.01) -- (\Y/\X,-0.01);
+ \fi
+ \pgfmathtruncatemacro{\TST}{gcd(\X,\Y)}
+ \ifnum\TST=1
+ \fill[red] ({\Y/\X},1/\X) circle(0.2pt); 
+ \fi
+ }
+}
+\foreach \X in {0,1,...,80}
+{\fill[red] (\X/80,0) circle(0.2pt); }
+\node[above] at (current bounding box.north) {$f(x) = \begin{cases} \frac{1}{q} & x=\frac{p}{q} \in \mathbb{Q} \\ 0 & x\not\in\mathbb{Q} \end{cases}$};
+\end{tikzpicture}
+\end{multicols}
+\caption{Representación de la función $f(x) = 2x^3+4x^2-1$ y la función de Thomae.}
+\label{fig:funciones_continuas}
+\end{figure}
+
+Lo que diferencia a ambas funciones es que la de la izquierda es continua en todo su dominio y la de la derecha lo es\footnote{La demostración es apta para este curso, pero se omite por ser la función de Thomae solamente un medio para la introducción del capítulo.} sólo en los irracionales. Al fin y al cabo, la continuidad es una condición de regularidad que establece que ``lo que pasa cerca del punto es lo que vale la función en el punto'', de ahí el interés en trabajar con este tipo de funciones, pues lo que tiene algún tipo de regularidad se puede estudiar y analizar.
 
 \section{Concepto de Límite}
-En primer lugar, el objetivo será definir el concepto básico de límite. Dicho concepto tiene una idea intuitiva muy similar al visto en las sucesiones, sin embargo, la definición formal del mismo dista mucho de ser la misma. En este apartado se van a ver las propiedades fundamentales para trabajar con límites y operar con los mismos.
+La primera parte de la definición informal de continuidad que hemos comentado en la introducción era ``lo que pasa cerca del punto''. La noción de \textit{límite} viene a formalizar esta idea de ``lo que pasa cerca'' y, para entender mejor a qué nos referimos, vamos a ver el ejemplo de la Figura \ref{fig:ejem_limite}.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+  % Ejes de coordenadas
+  \draw[-stealth] (-3,0) -- (3,0) node[right] {$x$};
+  \draw[-stealth] (0,-3) -- (0,3) node[above] {$y$};
+  
+  % Función en rojo
+  \draw[red, domain=-2:0.9, smooth, thick] plot (\x, {2*(\x*\x*\x) + 4*(\x*\x) - 1});
+  
+  % Etiquetas
+  \node[below left] at (0,0) {$0$};
+  \foreach \x in {-2,-1,1,2}
+    \draw (\x,0.1) -- (\x,-0.1) node[below] {$\x$};
+  \foreach \y in {-2,-1,1,2}
+    \draw (0.1,\y) -- (-0.1,\y) node[left] {$\y$};
+    
+  % Puntos parche
+  \fill[red] (0,1) circle (0.1);
+  \fill[draw=red, fill=white] (0,-1) circle (0.1);
+    \node[above] at (current bounding box.north) {$f(x) = \begin{cases} 2x^3+4x^2-1 & x\neq 0 \\ 1 & x=0 \end{cases}$};
+\end{tikzpicture}
+\caption{Ejemplificación del concepto de límite.}
+\label{fig:ejem_limite}
+\end{figure}
+
+Si escogemos valores de $x$ cada vez más cercanos al $0$, las imágenes de dichos valores se acercarán cada vez más a $-1$. Decimos en ese caso que el límite en $0$ es $-1$ porque hacia donde \textit{tienden} las imágenes cuando la variable $x$ \textit{tiende} hacia $0$. Además, se ha escogido concretamente esa función para hacer evidente que no se corresponde con el valor que toma la función en el $0$ y esto es muy importante. \textit{Límite} es un término que hace referencia a la \textit{vecindad} de un punto, pero que prescinde completamente de la información de la función en dicho punto.
+
+Para entrar ya en materia, lo primero que vamos a hacer es dar unas nociones ínfimas de topología y, después, podremos entrar de lleno en la definición formal de límite (pues hasta ahora todo ha sido de forma imprecisa) y en las propiedades de esta función.
 
 \subsection{Topología fundamental}
-Para poder comprender las nociones de límite, es necesario dar unas nociones básicas de topología para simplificar y comprender en profundidad los enunciados sobre límites que se van a dar posteriormente.
+La topología es una rama más amplia de las matemáticas que se centra, de forma muy simplificada y no completa, en clasificar qué papel juegan los subconjuntos (incluyendo puntos) dentro del total. Por ejemplo, saber si un conjunto es abierto, cerrado, si hay puntos tan cerca como se quiera unos de otros...
+
+En nuestro caso, sólo precisamos de la topología para entender bien qué son las nociones de \textit{punto de acumulación} y \textit{punto aislado}, pues nos servirán para establecer cuando ``siempre hay valores cerca'' y así asegurarnos de que hablar de límites, continuidad, etc., que son nociones que involucran ``mirar cada vez más cerca'', tienen sentido, pues hay puntos donde mirar.
 
 \begin{defi}[Punto de Acumulación]
 Sea $D\subset \mathbb R$, decimos que $x_0\in \mathbb R$ es un \textbf{punto de acumulación de D} si y sólo si:
 $$\forall \delta>0: \exists d\in D: d\in (x_0-\delta, x_0+\delta)\setminus\{x_0\}$$
-Denotamos al conjunto\footnote{Nótese que $D'\nsubseteq D$.} de puntos de acumulación de $D$ por $D'$.
+y denotamos por $D'$ al conjunto\footnote{Nótese que $D'\nsubseteq D$.} de puntos de acumulación de $D$.
 \end{defi}
 
+La definición anterior aunque sea confusa no viene a decir otra cosa sino que cualquier entorno alrededor de $x_0$ contiene otros puntos del conjunto (sin contar con $x_0$), luego también podemos verlo como:
+\[
+D\cap \left((x_0-\delta, x_0+\delta)\setminus \{x_0\}\right)\neq \emptyset
+\]
+Es decir, en los puntos de acumulación da igual cuán cerca o lejos estrechemos el cerco sobre el punto que siempre vamos a encontrar, tan cerca como queramos, a otro punto del mismo conjunto que él. Son puntos que, en cierta manera, ``nunca están solos''.
+
+
 \begin{obs}
-La definición anterior viene a decir que para todo entorno alrededor de $x_0$ podemos encontrar otros puntos de $D$ que no sean dicho $x_0$, luego también podemos verlo como:
-$$D\cap \left((x_0-\delta, x_0+\delta)\setminus \{x_0\}\right)\neq \emptyset$$
+Aunque no parezca relevante, para formalizar esa idea de ``puntos que nunca están solos'', es importante no tener en cuenta al propio punto del conjunto. Observemos el ejemplo de la Figura \ref{fig:punto_aislado} que representa el conjunto $D=(0,1)\cup (1,2]\cup \{3\}$.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+% Eje x
+\draw[thick, latex-latex, black] (-6,0) -- (6,0);
+% Puntos clave
+\draw[thick, black] (-5,-0.15) -- (-5,0.15);
+\node[below] at (-5,-0.15) {0};
+\draw[thick, black] (-2,-0.15) -- (-2,0.15);
+\node[below] at (-2,-0.15) {1};
+\draw[thick, black] (1,-0.15) -- (1,0.15);
+\node[below] at (1,-0.15) {2};
+\draw[thick, black] (4,-0.15) -- (4,0.15);
+\node[below] at (4,-0.15) {3};
+\node at (0,1) {$\color{red} (0,1)\cup (1,2]\cup \{3\}$};
+% Intervalo (0,1)
+\draw[thick, red] (-5,0) -- (-2,0);
+\draw[red] (-5,0) circle (0.1);
+\draw[red] (-2,0) circle (0.1);
+% Intervalo (1,2]
+\draw[thick, red] (-2,0) -- (1,0);
+\fill[red] (1,0) circle (0.1);
+% Valor {3}
+\fill[red] (4,0) circle (0.1);
+\end{tikzpicture}
+\caption{Importancia de la exclusión del propio punto en la definición de acumulación.}
+\label{fig:punto_aislado}
+\end{figure}
+
+Si permitiésemos tener en cuenta el propio punto para la definición, diríamos que el $3$ es de acumulación, pero salta a la vista que ese punto sí es de los que están ``solos'' en el conjunto.
 \end{obs}
 
-\begin{ej}
-$D=(0,1)\cup (1,2]\cup \{3\}$, si dejamos puesto el propio número diríamos que este punto es punto de acumulación y vemos claramente por el dibujo que no es cierto.
-\end{ej}
-
-\begin{center}
-\includegraphics[scale=0.20]{Cauchy 2}
-\end{center}
+Parece lógico entonces decir que cuando un punto no es de acumulación entonces sí es de esos que está ``solo'' o, como dice la definición formal, \textit{aislado}.
 
 \begin{defi}[Punto Aislado]
 Sea $D\subset \mathbb R$ y $x_0\in D$, decimos que es un \textbf{punto aislado} de $D$ si no es de acumulación:
 $$\exists \delta >0 : D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)= \emptyset$$
 \end{defi}
 
-\begin{ej}
-En el ejemplo de arriba, 3 es un punto aislado. Todos los puntos de D \textbf{o son de acumulación o son aislados}.
-\end{ej}
+Y, de nuevo, seguimos el patrón habitual en matemáticas: tras una definición rigurosa que formaliza el concepto formulamos una caracterización más manejable para trabajar con ella. La idea de ser un punto que no está aislado es que podemos ``saltar'' de punto en punto del conjunto hacia él, acercándonos tanto como queramos sin llegar a él, es decir, podemos hacer sucesiones.
 
 \begin{prop}
 Sea $D\subset \mathbb R$ y $x_0\in D$, entonces:
@@ -2327,36 +2707,51 @@ $$x_n\in (x_0-\delta , x_0+\delta)\mbox{\textbackslash} \{x_0\}\stackrel{x_n\in 
 \end{itemize}
 \end{demo}
 
-\subsection{Límite y propiedades}
-El concepto intuitivo que queremos expresar es que si tenemos $D\subset R: D\neq \emptyset$ y $f: D\longrightarrow \mathbb R$, entonces queremos formalizar que si $x_0\in \mathbb R$ y $x\in D$ y $x\sim x_0$, entonces $f(x)\sim l: l\in \mathbb R$. El número $x_0$ es un punto de acumulación\footnote{Es notable decir que NO tiene por qué estar en D} para que siempre tenga cerca números del conjunto.
+\subsection{Definición formal de límite}
+Ya hemos contado al inicio de la sección por donde iban a ir los tiros en la definición de límite: el valor al que se acercan las imágenes si nos vamos acercando al punto. Sin embargo, la formalización invierte, en cierta manera, la sucesión de eventos que hemos descrito. En lugar de ``me acerco al punto y miro a dónde se acercan las imágenes'' opta por ``me acerco a la imagen y miro si hay un entorno alrededor del punto que esté tan cerca''.
 
 \begin{defi}[Límite de una Función]
-Sea $D\subset \mathbb R: D\neq \emptyset$, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces decimos que $l\in \mathbb R$ es el \textbf{límite de $f(x)$ cuando $x$ tiende a $x_0$} si y sólo si:
-$$\lim_{x\rightarrow x_0} f(x) = l \Leftrightarrow \forall \varepsilon>0, \exists \delta>0 : x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)\Rightarrow f(x)\in (l-\varepsilon, l+\varepsilon)$$
+Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, decimos que $l\in \mathbb R$ es el \textbf{límite de $f(x)$ cuando $x$ tiende a $x_0$} si y sólo si:
+\[
+\forall \varepsilon>0, \ \exists \delta>0 : x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)\Rightarrow f(x)\in (l-\varepsilon, l+\varepsilon)
+\]
+y lo denotamos por $\lim_{x\rightarrow x_0} f(x) = l$.
 \end{defi}
 
-\begin{obs}
-Es decir, estamos diciendo que escogido un intervalo sobre el eje de las y, podemos encontrar una amplitud $\delta$ para que un entorno de dicha amplitud en el eje de las $x$ esté contenido completamente en el intervalo tubular de las y prefijado con anterioridad.
+Para desgranar mejor la definición que hemos dado y ligarla con lo que hemos dicho al inicio del apartado, vamos a observar la Figura \ref{fig:definicion_formal_limite}. Lo que hacemos es seguir estos pasos:
+\begin{enumerate}
+\item Escogemos un entorno alrededor del límite de radio $\varepsilon$ (banda azul).
+\item Buscamos un entorno alrededor del punto de radio $\delta$ (banda amarilla).
+\item Verificamos que el conjunto de las imágenes está dentro del entorno alrededor del límite (banda verde contenida en banda azul).
+\end{enumerate}
 
-\begin{center}
+\begin{figure}[h]
+\centering
 \includegraphics[scale=0.40]{limite}
-\end{center}
+\caption{Representación de la definición formal de límite.}
+\label{fig:definicion_formal_limite}
+\end{figure}
 
-De forma más simplificada y habitual, podemos escribir dicha definición como:
-$$\forall \varepsilon>0, \exists \delta>0 : x\in D, \ 0\stackrel{x\neq x_0}{<}|x-x_0|<\delta\Rightarrow |f(x)-l|<\varepsilon$$
+La definición de límite dice que, si existe el límite, los pasos descritos anteriormente se van a poder realizar: para cada entorno alrededor del límite, podremos encontrar un entorno alrededor del punto cuyas imágenes caigan dentro del entorno alrededor del límite.
+
+\begin{obs}
+Una forma un poco más visual y completamente equivalente de escribir la definición de límite que se ha dado es utilizando valores absolutos
+\[
+\forall \varepsilon>0, \ \exists \delta>0 : x\in D \mbox{ y } 0 < |x-x_0| < \delta\Rightarrow |f(x)-l|<\varepsilon
+\]
+donde la desigualdad estricta $0 < |x-x_0|$ implícitamente implica que $x \neq x_0$.
 \end{obs}
 
-\begin{prop}[Caracterización del Límite]
-Sea $D\subset \mathbb R$, $f:D\longrightarrow \mathbb R$ y $x_0\in D'$, entonces:
-\begin{enumerate}
-\item $\lim_{x\rightarrow x_0} f(x)=l\in \mathbb R \Leftrightarrow \forall \{x_n\}_{n=1}^\infty\subset D, \ x_n\neq x_0: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow 	f(x_n)\xrightarrow{n\rightarrow \infty} l$
+Alguno puede que se haya asustado al ver la definición de límite y encontrar tan enrevesado o complicado lo que en cursos anteriores siempre fue tan sencillo. Sin embargo, es importante tener una definición formal fuerte y rigurosa sobre la que cimentar toda la teoría posterior. Además, para trabajar luego con el concepto, ya hemos explicado que se suele hacer otra cosa siempre después de dar una definición complicada...
 
-\item $\exists \lim_{x\rightarrow x_0} f(x)\Rightarrow \exists! \lim_{x\rightarrow x_0} f(x)$
-\end{enumerate}
+\begin{prop}[Caracterización del Límite]
+Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces:
+\[
+\lim_{x\rightarrow x_0} f(x)=l\in \mathbb R \Leftrightarrow \forall \{x_n\}_{n=1}^\infty\subset D, \ x_n\neq x_0: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow 	f(x_n)\xrightarrow{n\rightarrow \infty} l
+\]
 \end{prop}
 \begin{demo}
-\begin{enumerate}
-\item Comprobamos que se dan ambas implicaciones:
+Comprobamos que se dan ambas implicaciones:
 	\begin{itemize}
 	\item ``$\Rightarrow$'': \par
 	Sea $\{x_n\}_{n=1}^\infty\subset D$ y $x_n\neq x_0: \forall n\in \mathbb N$ y tal que $x_n\xrightarrow{n\rightarrow \infty} x_0$, veamos que $f(x_n)\xrightarrow{x_n\rightarrow \infty} l$:
@@ -2373,8 +2768,17 @@ Sea $D\subset \mathbb R$, $f:D\longrightarrow \mathbb R$ y $x_0\in D'$, entonces
 	$$\forall n\in \mathbb N, \exists x_n\in D\cap \left((x_0-\frac{1}{n}, x_0+\frac{1}{n})\mbox{\textbackslash} \{x_0\}\right): |f(x_n)-l|>\varepsilon$$
 	Entonces los números anteriores forman una sucesión que: $\{x_n\}_{n=1}^\infty\subset D: x_n\neq x_0: \forall n\in \mathbb N: |x_n-x_0|<\frac{1}{n}\Rightarrow \lim_{n\rightarrow\infty} x_n=x_0$, pero $\{f(x_n)\}_{n=1}^\infty \mbox{ }\stackrel{n\rightarrow\infty}{\cancel{\longrightarrow}}\mbox{ } l\Rightarrow$ \#	
 	\end{itemize}
-	
-\item Supongamos que hay dos $l_1$ y $l_2$ que son distintos, por lo que $l_1<l_2$, entonces:
+\end{demo}
+
+Esta caracterización recupera en parte la idea de ``si nos acercamos al punto, las imágenes se acercan al límite'', gracias a las sucesiones. Sin embargo, la clave está en que esto tiene que ocurrir para cualquier forma de acercarse, es decir, a través de cualquier sucesión.
+
+A partir de ahora, lo que vamos a hacer es copiar de manera idéntica lo que se hizo en el apartado de \nameref{subsec:convergencia}. Demostrar que el límite es único, las operaciones que se pueden hacer con el límite, ampliar las operaciones a $\overline{\mathbb{R}}$... En definitiva, trabajar el concepto para que luego el cálculo de límites sea más algebraico y se simplifique todo.
+
+\begin{theo}[Unicidad del límite]
+Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces si existe el límite este es único.
+\end{theo}
+\begin{demo}
+Supongamos que hay dos $l_1$ y $l_2$ que son distintos, por lo que $l_1<l_2$, entonces:
 
 \begin{center}
 \includegraphics[scale=0.30]{limite doble}
@@ -2388,11 +2792,10 @@ $$\exists \delta_2>0: x\in D\cap \left((x_0-\delta_2, x_0+\delta_2)\mbox{\textba
 Si tomamos $\delta=min\{\delta_1, \delta_2\}$, entonces:
 $$x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash}\{x_0\}\right) \Rightarrow f(x)\in (l_1-\varepsilon, l_1+\varepsilon)\cap (l_2-\varepsilon, l_2+\varepsilon)$$
 Y es fácil probar que: $(l_1-\varepsilon, l_1+\varepsilon)\cap (l_2-\varepsilon, l_2+\varepsilon)\neq \emptyset$
-\end{enumerate}
 \end{demo}
 
 \begin{theo}[Operaciones con Límites]
-Sea $D\subset \mathbb R$, $f,g: D\longrightarrow \mathbb R$ y $x_0\in D'$. Suponemos $\lim_{x\rightarrow x_0}f(x)=l$ y $\lim_{x\rightarrow x_0}g(x)=m$, entonces:
+Sea $D\subset \mathbb R$no nulo, $f, g: D\longrightarrow \mathbb R$ funciones reales con límites $\lim_{x\rightarrow x_0}f(x)=l$ y $\lim_{x\rightarrow x_0}g(x)=m$ y $x_0\in D'$, entonces:
 \begin{enumerate}
 \item $\lim_{x\rightarrow x_0}(g(x)+f(x))=m+l$
 \item $\lim_{x\rightarrow x_0}(a\cdot f(x))=a\cdot l$
@@ -2460,9 +2863,7 @@ $$\forall \varepsilon>0: \exists \delta>0: \begin{cases} x\in D\\ 0<|x-x_0|<\del
 \end{demo}
 
 \begin{defi}[Límites en $\bar{\mathbb{R}}$]
-Sea $D\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$, para definir la expresión
-$$\lim_{x\rightarrow x_0}f(x) = l \in \bar{\mathbb{R}}$$
-tenemos en cuenta las siguientes definiciones:
+Sea $D\subset \mathbb R$ y $f: D\longrightarrow \mathbb R$ una función real, ampliamos la definición de límite para $\overline{\mathbb{R}}$ en base a las siguientes definiciones:
 \begin{enumerate}
 \item Si $x_0\in D'$, decimos que:
 $$\lim_{x\rightarrow x_0}f(x)=\infty\Leftrightarrow\forall M>0: \exists \delta>0: x\in D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash}\{x_0\}\right)\Rightarrow f(x)\geq M$$
@@ -2490,17 +2891,19 @@ $$\lim_{x\rightarrow -\infty}f(x)=-\infty \Leftrightarrow \forall M>0: \exists k
 \end{enumerate}
 \end{defi}
 
-\begin{prop}
-Sea $x_0, l\in \overline{\mathbb R}$, entonces:
-$$\lim_{x\rightarrow x_0}f(x)=l\Leftrightarrow \forall\{x_n\}_{n=1}^\infty \subset D: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} l$$
+\begin{prop}[Recaracterización de límite]
+Sea $f:D\rightarrow \mathbb{R}$ una función numérica y $x_0, l\in \overline{\mathbb R}$, entonces:
+\[
+\lim_{x\rightarrow x_0}f(x)=l\Leftrightarrow \forall\{x_n\}_{n=1}^\infty \subset D: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} l
+\]
 \end{prop}
 
 \begin{obs}
-Si $x_0,l,m\in \overline{\mathbb R}$ y también $\lim_{x\rightarrow x_0}f(x)=l$ y $\lim_{x\rightarrow x_0}g(x)=m$, entonces las reglas de cálculo\footnote{Suma de límites, producto, diferencia...} de límites siguen siendo válidas, excepto las denominadas \textbf{indeterminaciones} $\infty-\infty$, $\frac{\infty}{\infty}$, $0\cdot \infty$ y $\frac{0}{0}$ para las que no se puede afirmar nada (habrá que calcular los límites de otra forma salvando dichas expresiones).
+Esta recaracterización, esta vez para el límite ampliado, de nuevo vuelve a ser vía sucesiones. Esto permite saber que las reglas de cálculo\footnote{Suma de límites, producto, diferencia...} de límites siguen siendo válidas, excepto las denominadas \textbf{indeterminaciones} $\infty-\infty$, $\frac{\infty}{\infty}$, $0\cdot \infty$ y $\frac{0}{0}$ para las que no se puede afirmar nada (habrá que calcular los límites de otra forma salvando dichas expresiones).
 \end{obs}
 
 \section{Concepto de función Continua}
-Una vez desarrollado el concepto de límite, estamos preparados para poder entender el tema central del capítulo: la continuidad. A pesar de que la idea intuitiva es que el valor de la función en un punto se corresponda con el de sus vecinos más próximos, la definición formal ofrece una serie de requerimientos técnicos más estrictos que dota de excepcionales propiedades al conjunto de las funciones continuas.
+En la introducción del capítulo hemos aclarado que la idea informal de continuidad es la de que los valores de la función ``cerca'' del punto coinciden con el valor de la función en el punto. La parte de ``cerca'' ha quedado zanjada y formalizada en la noción de límite que hemos desarrollado en el capítulo anterior. Por tanto, para conseguir formalizar el término \textit{continuidad en un punto} es necesario que articulemos todo. ¿Qué puede querer decir que el valor de la función cerca coincida con el valor de la función en el punto? Efectivamente, que el propio límite sea la imagen del punto donde estamos estudiando la continuidad.
 
 \begin{defi}[Continuidad en un punto]
 Sea $D\subset \mathbb R$, $f: D\longrightarrow \mathbb R$ y $x_0\in D$, entonces decimos que $f$ es continua en $x_0$ si y sólo si
@@ -2508,11 +2911,12 @@ $$\forall \varepsilon >0 : \exists \delta >0: x\in D\cap (x_0-\delta, x_0+\delta
 La continuidad en un conjunto se traduce en la continuidad en cada uno de sus puntos.
 \end{defi}
 
-\begin{prop}
-Sea $D\subset \mathbb R$, $f: D\longrightarrow \mathbb R$ y $x_0\in D'$, entonces:
+Es importante remarcar una cosa y para ello vamos a volver a fijarnos en las dos funciones de la Figura \ref{fig:funciones_continuas} de la introducción del capítulo. A veces tenemos la mala costumbre de tomar las explicaciones informales que se dan a modo de intuición como teoremas mismos. Con lo que hemos ido explicando, uno podría pensar: ``Una función continua es aquella que se pinta sin levantar el lápiz del papel'', es decir, que si hay ``saltos'' entre los puntos que están cerca entonces no puede ser continua ahí. Sin embargo, en la función de Thomae (a la derecha en la misma figura) hemos dicho que en los irracionales sí es continua y, recordemos, siempre hay racionales tan cerca como se quiera de un irracional (por ser real), luego tenemos infinitos saltos tan cerca como queramos y, aún así, la función es continua en esos valores.
+
+\begin{prop}[Caracterización de la continuidad]
+Sea $D\subset \mathbb R$ no nulo, $f: D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces:
 \begin{enumerate}
 \item $f\mbox{ cont. en }x_0 \Leftrightarrow \lim_{x\rightarrow x_0} f(x)=f(x_0)$
-
 \item $f\mbox{ cont. en }x_0 \Leftrightarrow \forall \{x_n\}_{n=1}^\infty\subset D: x_n\xrightarrow{n\rightarrow \infty} x_0\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} f(x_0)$
 \end{enumerate}
 \end{prop}
@@ -2534,19 +2938,21 @@ $$x=x_0\Rightarrow |f(x_0)-f(x_0)|=0<\varepsilon\Rightarrow \mbox{ también lo v
 \end{demo}
 
 \begin{obs}
-En la caracterización de continuidad que acabamos de hacer hemos pedido dos cosas: $x_0\in D$ y $x_0\in D'$, pero si $x_0\in D$ y $x_0\notin D'$, entonces según la definición que hemos dado $f$ siempre es continua\footnote{En el fondo porque para cualquier intervalo de radio $\varepsilon$ cuyo centro es su propia imagen, siempre hay puntos que vayan de un intervalo a otro porque él es el centro de su propio intervalo de radio $\delta$.} en $x_0$.
+En la caracterización de continuidad que hemos dado, se ha pedido que $x_0\in D'$, pero en la definición formal de continuidad basta con que $x_0\in D$. Llegados a este punto, uno se habrá fijado además que en la definición formal se permite considerar a $x_0$ entre esos puntos del conjunto cuya imagen cae cerca de $f(x_0)$. Juntando estas dos cosas vemos que lo único que puede estropear la continuidad son los puntos cercanos ¡pues la imagen de $x_0$ siempre estará cerca de $f(x_0)$, concretamente a distancia $0$!, es decir, que si $x_0$ es un punto aislado \textbf{la función es continua\footnote{Sin embargo, en la caracterización se ha pedido que $x_0\in D'$ porque para poder hablar de límite es necesario dicha condición, esto es, la caracterización se centra en los puntos donde no es trivial la continuidad.} trivialmente.}
 \end{obs}
 
-\begin{prop}[Operaciones con Continuidad]
-Sea $D\subset \mathbb R$, $f,g: D\longrightarrow \mathbb R$ dos funciones continuas en $x_0$ y $x_0\in D'$, entonces:
+Viendo el paralelismo que existe entre la definición de continuidad y la definición de límite, no es de extrañar que podamos extrapolar muchos de los resultados para estos últimos a la continuidad de funciones.
+
+\begin{theo}[Operaciones con Continuidad]
+Sea $D\subset \mathbb R$ no nulo, $f,g: D\longrightarrow \mathbb R$ dos funciones continuas en $x_0\in D'$, entonces:
 \begin{enumerate}
-\item $f+g, a\cdot f, f\cdot g, \frac{f}{g}$ son continua\footnote{Siendo $g(x)\neq 0$ y $a\in \mathbb R$} en $x_0$.
-
-\item El conjunto de funciones continuas en $D$, $C(D)$, es un espacio vectorial.
-
-\item Los polinomios, es decir, $f(x)=\sum_{i=0}^n a_ix^i: x\in D\mbox{ y } a_i\in \mathbb R$ son siempre funciones continuas.
+\item $h(x) := f(x) + g(x)$ es continua en $x_0$.
+\item $h(x) := a \cdot f(x)$ es continua en $x_0$.
+\item $h(x) := f(x) \cdot g(x)$ continua en $x_0$.
+\item $h(x) := \frac{f(x)}{g(x)}$ es continua en $x_0$ si $g(x_0)\neq 0$.
 \end{enumerate}
-\end{prop}
+y, en consecuencia, podemos decir que el conjunto $C(D)$ de funciones continuas en $D$ es un espacio vectorial.
+\end{theo}
 \begin{demo}
 \begin{enumerate}
 \item Sale de las propiedades de los límites:
@@ -2555,14 +2961,18 @@ El resto igual
 
 \item Si $f,g\in C(D)\Rightarrow f+g\in C(D)\wedge a\cdot f\in C(D): \forall a\in \mathbb R$
 La comprobación es trivial.
+\end{enumerate}
+\end{demo}
 
-\item Basta con probar que $f_0(x)=1$ y $f_1(x)=x$ son continuas.
+\begin{coro}
+Sea $D\subset \mathbb{R}$ no nulo y $f(x)=\sum_{i=0}^n a_ix^i$ un polinomio en $\mathbb{R}$, siempre es una función continua.
+\end{coro}
+\begin{demo}
+Basta con probar que $f_0(x)=1$ y $f_1(x)=x$ son continuas.
 $$f_0(x)=1\wedge x_0 \in D: \mbox{ Dado }\varepsilon>0: \forall \delta >0: |x-x_0|<\delta\Rightarrow |f_0(x)-f_0(x_0)|=0<\varepsilon$$
 $$f_1(x)=x\wedge x_0 \in D:\mbox{ Dado }\varepsilon>0: \forall \delta >0: |x-x_0|<\delta\Rightarrow |f_1(x)-f_1(x_0)|=|x-x_0|<\varepsilon\Rightarrow$$
 $$\Rightarrow \delta =\varepsilon \mbox{ lo cumple}$$
-
 Y con lo probado antes de que todas las funciones continuas si se suman o se multiplican dan funciones continuas, queda probado que todos los polinomios son continuos.
-\end{enumerate}
 \end{demo}
 
 \begin{prop}[Continuidad de la Composición]
@@ -2602,9 +3012,9 @@ $$\exists f^{-1}: f(I)\longrightarrow I\mbox{ continua}$$
 \begin{demo}
 \begin{itemize}
 \item Supongamos primero que el intervalo es cerrado y acotado: $I=[a,b]$ y sea $y_0\in f(I)=D$, escogemos una sucesión convergente a un número de la imagen, entonces: sea $\{y_n\}_{n=1}^\infty \subset D: y_n\xrightarrow{n\rightarrow \infty} y_0$. Veamos que $f^{-1}(y_n)\xrightarrow{n\rightarrow\infty} f^{-1}(y_0)$:
-$$\mbox{Sea }x_n=f^{-1}(y_n)\mbox{ y }x_0=f^{-1}(y_0)\Rightarrow \{x_n\}\subset I\mbox{ y }x_0\in I$$
+$$\mbox{Sea }x_n=f^{-1}(y_n)\mbox{ y }x_0=f^{-1}(y_0)\Rightarrow \{x_n\}_{n=1}^\infty\subset I\mbox{ y }x_0\in I$$
 
-Por el \textbf{Teorema de Bolzano-Wierstrass}, entonces $\{x_n\}$ tiene subsucesiones convergentes. Cojamos una cualquiera, sea $\{x_{n_k}\}_{k=1}^\infty$ una subsucesión que converge a $l\in [a,b]$, entonces $x_{n_k}\xrightarrow{k\rightarrow \infty }l\mbox{ y como f es continua, entonces } f(x_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$, por lo tanto:
+Por el \textbf{Teorema de Bolzano-Wierstrass}, entonces $\{x_n\}_{n=1}^\infty$ tiene subsucesiones convergentes. Cojamos una cualquiera, sea $\{x_{n_k}\}_{k=1}^\infty$ una subsucesión que converge a $l\in [a,b]$, entonces $x_{n_k}\xrightarrow{k\rightarrow \infty }l\mbox{ y como f es continua, entonces } f(x_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$, por lo tanto:
 $$\underbrace{f(x_{n_k})}_{y_{n_k}}\xrightarrow{k\rightarrow \infty}f(l)\Leftrightarrow y_{n_k}\xrightarrow{k\rightarrow \infty}\underbrace{f(l)}_{y_0}\Rightarrow \underbrace{y_0}_{f(x_0)}=f(l)\Leftrightarrow y_0=f(x_0)=f(l)\stackrel{Biyec.}{\Rightarrow}x_0=l$$
 
 Veamos que efectivamente $x_n\xrightarrow{n\rightarrow\infty}x_0$, hemos demostrado que cualquier subsucesión convergente de $\{x_n\}_{n=1}^\infty$ converge a $x_0$, pero no hemos demostrado que todas converjan. Supongamos que hay una que no converge:
@@ -2644,7 +3054,7 @@ Sea $f: (a,b)\longrightarrow \mathbb R$, entonces:
 \item 
 	\begin{itemize}
 	\item ``$\Rightarrow$'':\par
-	Sea $\{x_n\}\subset (a,b):  x_n\xrightarrow{n\rightarrow \infty} x_0: x_n< x_0: \forall n\in \mathbb N$. Sabemos porque es límite que dado $\varepsilon>0, \exists \delta>0: x\in(x_0-\delta, x_0)\Rightarrow |f(x)-l|<\varepsilon$, pero como sabemos que la sucesión converge a $x_0$, entonces dado $\varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: x_n\in (x_0-\delta, x_0)\Rightarrow |f(x_n)-l|<\varepsilon$
+	Sea $\{x_n\}_{n=1}^\infty\subset (a,b):  x_n\xrightarrow{n\rightarrow \infty} x_0: x_n< x_0: \forall n\in \mathbb N$. Sabemos porque es límite que dado $\varepsilon>0, \exists \delta>0: x\in(x_0-\delta, x_0)\Rightarrow |f(x)-l|<\varepsilon$, pero como sabemos que la sucesión converge a $x_0$, entonces dado $\varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: x_n\in (x_0-\delta, x_0)\Rightarrow |f(x_n)-l|<\varepsilon$
 	
 	\item ``$\Leftarrow$'':\par
 	Si $l$ no es $f(x_0^-)\Rightarrow \exists \varepsilon>0:\forall \delta>0: \exists x\in(x_0-\delta, x_0): |f(x)-l|\geq \varepsilon$. Vamos a construir una sucesión que se acerca por la izquierda y cuyas imágenes no convergen a $l$ para todo $\varepsilon$.
@@ -2752,7 +3162,9 @@ $$\lim_{x\rightarrow x_0^+}f(x)=-\infty\Leftrightarrow \forall \{x_n\}_{n=1}^\in
 \end{itemize}
 \end{prop}
 
-\subsection{Teoremas Fundamentales de Funciones Continuas}
+\subsection{Teoremas fundamentales de funciones continuas}
+Dijimos en su momento que la continuidad aportaba unas ciertas condiciones de regularidad que permitían estudiar y analizar exhaustivamente a las mismas. Los teoremas que presentamos en este apartado son fruto precisamente de esta regularidad y son algunas de las muestras de la importancia de las funciones continuas en el Análisis matemático.
+
 \begin{theo}[de Wierstrass]
 Sea $f:[a,b] \rightarrow \mathbb R$ continua, entonces:
 \begin{itemize}
@@ -2769,7 +3181,7 @@ Entonces tenemos que $\{x_n\}_{n\in \mathbb N}\subset [a,b]$ y por el teorema de
 
 \item Como está acotado, su supremo existe: $S=\sup\{f(x): x\in [a,b]\}$ y su ínfimo $I=\inf\{f(x): x\in [a,b]\}$, entonces\footnote{Hacemos la del supremo porque la del ínfimo es análoga} como es supremo:
 $$\forall n\in \mathbb N: \exists x_n\in [a,b]: S-\frac{1}{n}<f(x_n)\leq S$$
-Esto forma una sucesión de números. Como sabemos que $\{x_n\}\subset[a,b]$, entonces por el Teorema de Bolzano-Wierstrass, tenemos que $\exists \{x_{n_k}\}$ que converge (a $d$) por lo que tenemos que $f(x_{n_k})$ converge a $f(d)$ y como $f(x_n)$ converge a $S$, entonces $f(d)=S$.
+Esto forma una sucesión de números. Como sabemos que $\{x_n\}_{n=1}^\infty\subset[a,b]$, entonces por el Teorema de Bolzano-Wierstrass, tenemos que $\exists \{x_{n_k}\}$ que converge (a $d$) por lo que tenemos que $f(x_{n_k})$ converge a $f(d)$ y como $f(x_n)$ converge a $S$, entonces $f(d)=S$.
 \end{enumerate}
 \end{demo}
 
@@ -2848,7 +3260,7 @@ $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$ es continua pero no uniformemente
 Sea $f:[a,b]\rightarrow \mathbb R$ continua, entonces es uniformemente continua en un intervalo cerrado y acotado.
 \end{theo}
 \begin{demo}
-Supongamos que $f$ no es uniformemente continua, entonces $\exists \varepsilon> 0: \forall \delta>0: \exists x,y\in [a,b]: |x-y|<\delta$ y $|f(x)-f(y)|\geq \varepsilon$. Para $\delta = \frac{1}{n}: n\in \mathbb N$, entonces $\exists x_n, y_n\in [a,b]: |x_n-y_n|<\frac{1}{n}$ y $|f(x_n)-f(y_n)|\geq \varepsilon$. Pero entonces tenemos $\{x_n\}\in [a,b]$ y por el teorema de Bolzano-Wierstrass, $\exists \{x_{n_k}\}$ subsucesión convergente a $l\in [a,b]$ de manera que $|x_{n_k}-y_{n_k}| < \frac{1}{n} \xrightarrow{n\rightarrow \infty} 0\Rightarrow |x_{n_k}-y_{n_k}|\xrightarrow{n\rightarrow \infty} 0\Rightarrow y_{n_k}=x_{n_k}+(y_{n_k}-x_{n_k})\stackrel{n\rightarrow \infty}{\Leftrightarrow} y_{n_k}\rightarrow l+0=l$
+Supongamos que $f$ no es uniformemente continua, entonces $\exists \varepsilon> 0: \forall \delta>0: \exists x,y\in [a,b]: |x-y|<\delta$ y $|f(x)-f(y)|\geq \varepsilon$. Para $\delta = \frac{1}{n}: n\in \mathbb N$, entonces $\exists x_n, y_n\in [a,b]: |x_n-y_n|<\frac{1}{n}$ y $|f(x_n)-f(y_n)|\geq \varepsilon$. Pero entonces tenemos $\{x_n\}_{n=1}^\infty\in [a,b]$ y por el teorema de Bolzano-Wierstrass, $\exists \{x_{n_k}\}$ subsucesión convergente a $l\in [a,b]$ de manera que $|x_{n_k}-y_{n_k}| < \frac{1}{n} \xrightarrow{n\rightarrow \infty} 0\Rightarrow |x_{n_k}-y_{n_k}|\xrightarrow{n\rightarrow \infty} 0\Rightarrow y_{n_k}=x_{n_k}+(y_{n_k}-x_{n_k})\stackrel{n\rightarrow \infty}{\Leftrightarrow} y_{n_k}\rightarrow l+0=l$
 
 Pero por otro lado, las imágenes están lejos porque como f es continua, entonces $f(x_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$ y $f(y_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$, pero tenemos que $|f(x_{n_k})-f(y_{n_k})|\geq 0$ y es absurdo porque cuando se tiende a infinito tenemos que $|l-l|=0<\varepsilon\Rightarrow \#$.
 \end{demo}
