@@ -391,69 +391,73 @@ Los dos hechos anteriores según el principio de inducción implican que $S=\mat
 \end{demo}
 
 \chapter{Números Reales}
-Los seres humanos a lo largo de la Historia han ido descubriendo distintos conjuntos útiles en función de las necesidades que iban surgiendo en cada momento. Hasta el momento, entre los fundamentales para este curso, tenemos $\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$ donde entendemos cada conjunto como:
+La gran mayoría de objetos matemáticos que se van a estudiar en el manual, de una forma u otra, trabajan en el conjunto de los números reales. Parece conveniente, en ese caso, que estudiemos qué propiedades tienen estos simplemente por cómo son, para poder aprovecharnos después de sus particularidades y características en nuestro favor.
+
+El primero de los puntos a aclarar sería decidir qué entendemos cuando decimos ``conjunto de los números reales''. Los seres humanos han ido incrementando el edificio de las Matemáticas conforme han ido descubriendo elementos que no estaban descritos lo que se llamaba ``Matemáticas'' hasta ese momento. Un ejemplo que ilustra este hecho ocurrió en la Grecia Clásica. Los griegos sólo\footnote{Entendiendo los naturales y enteros como subcojuntos de los racionales, pues son fracciones de denominador 1.} utilizaban números racionales por considerarlos ``perfectos'' al estar basados en proporciones. Sin embargo, algo tan sencillo como el dibujo de un cuadrado de lado 1 ya ponía de manifiesto que dicho conjunto se quedaba corto para representar la totalidad de magnitudes ``reales'', pues la diagonal de dicho cuadrado medía $\sqrt{2}$, que no es racional.
+
+Este ejemplo y muchos otros dan testimonio de que, a lo largo de la Historia, los seres humanos han ido descubriendo y creando hasta llegar a las Matemáticas que conocemos hoy y que siguen expandiéndose. En concreto, nosotros vamos a utilizar y considerar los conjuntos $\mathbb N\subset \mathbb Z\subset \mathbb Q\subset \mathbb R\subset \mathbb C$, siendo cada uno:
 \begin{itemize}
-\item $\mathbb N = \{1,2,3,4,...\}$ como el conjunto de los naturales
-\item $\mathbb Z = \{..., -1, 0 ,1, ...\}$ como el conjunto de los enteros, formados por los naturales, el 0 y los negativos.
-\item $\mathbb Q={\frac{a}{b}: a,b\in \mathbb Z \wedge b\neq 0}$ como el conjunto de los racionales en los que cada número racional está representado por un conjunto de fracciones equivalentes: $[\frac{a}{b}]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$.
+\item $\mathbb N = \{1,2,3,4, \ldots\}$ como el conjunto de los naturales
+\item $\mathbb Z = \{\ldots, -1, 0 ,1, \ldots\}$ como el conjunto de los enteros, formados por los naturales, el 0 y los negativos.
+\item $\mathbb Q=\{\frac{a}{b}: a,b\in \mathbb Z$ y $b\neq 0\}$ como el conjunto de los racionales en los que cada número racional está representado por un conjunto de fracciones equivalentes: $\left[\frac{a}{b}\right]={\frac{m}{n}: \frac{m}{n}=\frac{a}{b}}$.
 \item $\mathbb{R}$ como el conjunto de los reales, formados por los irracionales y los racionales.
+\item $\mathbb C = \{a + bi : \ a, b\in \mathbb R\}$ como el conjunto de los números complejos.
 \end{itemize}
-Y, como el curso es de Análisis de Variable \textbf{Real}, es lógico dedicar todo un capítulo en ahondar y definir de cero qué significa eso de \textit{Real} y de qué cualidades del mismo nos podemos aprovechar en el resto de capítulos.
+
+En realidad, la definición ``formal'' de los números racionales es algo más compleja y la veremos más adelante, pero por lo pronto nos sirve simplemente saber que están compuestos por los racionales (que sí conocemos bien y fácilmente) y los irracionales, que son esos números algo más complicados de entender que han ido apareciendo después.
+
+Dentro de este capítulo, tenemos varias secciones. La primera estará dedicada al estudio de las buenas propiedades que van a tener los números reales por la estructura algebraica que forma el conjunto de sus elementos, el segundo estará dedicado a hacer una mención especial a los números complejos porque como contienen a los reales a veces nos será útil tenerlos en cuenta y, por último, al supremo e ínfimo que van a ser elementos claves para cualquier conjunto que contenga números reales.
 
 \section{Propiedades Algebraicas de $\mathbb R$}
-En esta sección lo primero que haremos será hacer un estudio intensivo de tres características fundamentales de los números reales para el Análisis: su estructura algebraica de cuerpo, su orden total y sus propiedades métricas.
+En esta, la primera sección, vamos a estudiar detenidamente tres características fundamentales de los números reales para el Análisis: su estructura algebraica de cuerpo, su orden total y sus propiedades métricas.
 
-Aunque inicialmente no se entienda del todo qué significan estas, en general lo que estaremos haciendo será cimentar y dar unas bases sólidas a todas aquellas propiedades que dábamos por hecho y nos dan grandes ventajas a la hora de operar y trabajar con los reales, pero que realmente no todos los conjuntos tienen.
+Aunque inicialmente no se entienda del todo qué significan tales propiedades, según se avance en la sección podremos observar que no estaremos haciendo más que cimentar y formalizar con una base sólida todas aquellas propiedades que dábamos por hecho y que ya utilizábamos cuando trabajábamos con números reales. Sin embargo, no está de más explicitar qué cosas podemos hacer \textbf{porque estamos en el conjunto de los reales}, pues por primera vez nos va a mostrar propiedades que otros conjuntos no tienen.
 
 \subsection{Estructura de cuerpo}
-La primera de las características mencionadas es la de \textit{estructura de cuerpo}, pero ¿qué significa esto? Pues bien, que el conjunto de los reales, junto con las operaciones suma y producto que cumplen ciertas propiedades, adquiere una serie de cualidades que nos son muy útiles para operar con ellos. Por ejemplo, sería razonable que si observamos la siguiente ecuación
-\[
-a\cdot x = b
-\] 
-la solución de la misma que diésemos fuera $x = a^{-1}\cdot b = b/a$. Sin embargo, aquí hemos asumido algunas cosas, como que siempre existe $a^{-1}$. Cuando trabajamos en los reales esto es cierto, pero si en la ecuación del enunciado los valores $a$ y $b$ hubiesen sido matrices ya no lo hubiera sido y en ocasiones no habría solución. Otra propiedad similar es poder hacer la deducción
-\[
-a \cdot b = 0 \Rightarrow a = 0 \mbox{ o } b= 0
-\]
-Para ya ponernos manos a la obra, en la primera propiedad de \textit{estructura de cuerpo} vamos a demostrar todas estas cuestiones algebraicas que hacen que los números reales funcionen razonablemente bien al operar con ellos. Para ello, comenzamos definiendo qué es la estructura de cuerpo y qué elementos la conforman.
+La primera de las características mencionadas es la de \textit{estructura de cuerpo}, pero ¿qué significa esto? Pues bien, cuando un conjunto junto con dos operaciones cumple ciertas propiedades, se dice que tiene \textbf{estructura de cuerpo}. Esto es lo que ocurre precisamente con el conjunto de los reales y las operaciones suma y producto.
+
+La estructura de cuerpo es importante y ``deseable'' porque dota al conjunto que la posee de una serie de cualidades muy útiles para operar con elementos del conjunto usando las funciones mencionadas. A modo de ejemplo, normalmente cuando vemos una ecuación del estilo $a\cdot x = b$ uno responde inmediatamente que la solución es $x = a^{-1}\cdot b = b/a$. Sin embargo, implícitamente estamos asumiendo algunas cosas, como que siempre existe $a^{-1}$. Que todos los elementos tengan un inverso es una de esas propiedades deseables que nos proporciona la estructura de cuerpo. Cómo es posible que esto no sea verdad, en qué mundo puede ocurrir tal aberración, se preguntará más de uno. Por ejemplo, en el conjunto de las matrices. Si en la ecuación anterior $a$ y $b$ hubiesen sido matrices es posible que ya no hubiese existido $a^{-1}$ y no hubiese habido solución. Y, como esta, hay muchas otras.
+
+Lo primero es ver qué es un cuerpo y eso significa ver qué elementos lo forman, qué características tienen que cumplir estos elementos de forma individual y qué propiedades tiene que cumplir entre ellos.
 
 \begin{defi}[Suma]
-Sea $\mathbb K$ un conjunto de números, definimos la operación \textbf{la suma} como
+Sea $\mathbb K$ un conjunto de números, definimos la operación \textbf{suma} como
 \begin{eqnarray*}
-+: \mathbb K \times\mathbb K & \stackrel{+}{\rightarrow} & \mathbb K \\
++: \mathbb K \times\mathbb K & \longrightarrow & \mathbb K \\
 (a,b) & \longmapsto  & a+b
 \end{eqnarray*}
-y si $(K, +)$ cumple las siguientes propiedades:
+y, si el conjunto $(K, +)$ cumple las propiedades:
 \begin{enumerate}
-\item Propiedad conmutativa: $\forall a, b \in \mathbb K: a+b=b+a$
-\item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a+b)+c=a+(b+c)$
-\item Propiedad elemento neutro: $\exists 0_k\in \mathbb K : \forall a \in \mathbb K : a+0_k=0_k+a=a$
-\item Propiedad elemento opuesto: $\forall a \in \mathbb K : \exists (-a) : a+(-a)=0_k$
+\item Conmutativa: $\forall a, b \in \mathbb K: a+b=b+a$
+\item Asociativa: $\forall a, b, c\in \mathbb K : (a+b)+c=a+(b+c)$
+\item Elemento neutro: $\exists 0_k\in \mathbb K : \forall a \in \mathbb K : a+0_k=0_k+a=a$
+\item Elemento opuesto: $\forall a \in \mathbb K : \exists (-a) : a+(-a)=0_k$
 \end{enumerate}
-decimos que $(K,+)$ es un \textbf{grupo conmutativo}.
+entonces decimos que $(K,+)$ es un \textbf{grupo conmutativo}.
 \end{defi}
 
 \begin{ej}
-Con la definición que se ha dado de $+$, los conjuntos $\mathbb {Z, Q, R, C}$ equipados con la operación $+$ son grupos conmutativos, pero $\mathbb N$ no, pues cumple sólo las dos primeras.
+Los conjuntos $\mathbb {Z, Q, R, C}$ equipados con la suma habitual son grupos conmutativos, pero por ejemplo $\mathbb N$ no porque sólo cumple las dos primeras.
 \end{ej}
 
 \begin{defi}[Producto]
 Sea $\mathbb K$ un conjunto de números, definimos la operación \textbf{producto} como:
 \begin{eqnarray*}
-\cdot: \mathbb K \times\mathbb K & \stackrel{\cdot}{\rightarrow} & \mathbb K \\
+\cdot: \mathbb K \times\mathbb K & \longrightarrow & \mathbb K \\
 (a,b) & \longmapsto  & a\cdot b
 \end{eqnarray*}
-y si $(K, \cdot)$ cumple las siguientes propiedades:
+y, si $(K, \cdot)$ cumple las propiedades:
 \begin{enumerate}
 \item Propiedad conmutativa: $\forall a, b \in \mathbb K: a\cdot b=b\cdot a$
 \item Propiedad asociativa: $\forall a, b, c\in \mathbb K : (a\cdot b)\cdot c=a\cdot (b\cdot c)$
 \item Propiedad elemento neutro: $\exists 1_k\in \mathbb K : \forall a \in \mathbb K : a\cdot 1_k=1_k\cdot a=a$
 \item Propiedad elemento inverso: $\forall a \in \mathbb K : \exists a^{-1} : a\cdot a^{-1}=1_k$
 \end{enumerate}
-decimos que $(K,\cdot)$ es un \textbf{grupo conmutativo}.
+entonces decimos que $(K,\cdot)$ es un \textbf{grupo conmutativo}.
 \end{defi}
 
 \begin{ej}
-Con la definición que se ha dado de producto, los conjuntos $\mathbb {Q, R, C}$ equipados con la operación $\cdot$ son grupos conmutativos, pero $\mathbb {N,Z}$ no, pues cumplen solo las tres primeras.
+Los conjuntos $\mathbb {Q, R, C}$ equipados con el producto habitual son grupos conmutativos, pero por ejemplo $\mathbb {N,Z}$ no porque sólo cumplen las tres primeras.
 \end{ej}
 
 \begin{defi}[Cuerpo Conmutativo]
@@ -465,18 +469,18 @@ Sea $K$ un conjunto, $+$ la operación suma y $\cdot$ la operación producto, de
 \end{itemize}
 \end{defi}
 
-Ahora que tenemos claro qué es un cuerpo conmutativo, estamos preparados para ver qué propiedades algebraicas nos ofrece a la hora de trabajar con sus elementos. Recordemos que muchas de las siguientes propiedades nos son familiares, pero no todos los conjuntos equipados con operaciones cualquiera las poseen.
+Ahora que tenemos claro qué es un cuerpo conmutativo, estamos preparados para ver qué propiedades algebraicas nos ofrece a la hora de trabajar con sus elementos. Recordemos que muchas de las siguientes propiedades nos son familiares, pero no todos los conjuntos las poseen.
 
 \begin{prop}[Propiedades de Cuerpo Conmutativo]
 Sea $(\mathbb K, +, \cdot)$ un cuerpo conmutativo, se cumplen las siguientes propiedades:
 \begin{enumerate}
-\item \textbf{El elemento neutro de la suma es único}.
-\item \textbf{El elemento neutro del producto es único}. 
-\item \textbf{Si $x+a=a\Rightarrow x=0$}\par 
-\item \textbf{Si $a\neq 0\in \mathbb K \Rightarrow x\cdot a=a\Rightarrow x=1$}.
+\item \textbf{El elemento neutro de la suma $0_K$ es único}.
+\item \textbf{El elemento neutro del producto $1_K$ es único}. 
 \item \textbf{El elemento opuesto de $x\in \mathbb K$ es único y en particular $-(-x)=x$}.
-\item \textbf{El elemento inverso de $x\neq 0\in \mathbb K$ es único, en particular $(x^{-1})^{-1}$}.
-\item \textbf{$\forall x\in \mathbb K: x\cdot 0=0$, por tanto, el 0 no tiene inverso}. 
+\item \textbf{El elemento inverso de $x \in \mathbb K\setminus\{0_K\}$ es único, en particular $(x^{-1})^{-1} = x$}.
+\item \textbf{$\forall x\in \mathbb K: x\cdot 0=0$, por tanto, el 0 no tiene inverso}.
+\item $x+a=a\Rightarrow x=0$
+\item $a\neq 0\in \mathbb K \Rightarrow x\cdot a=a\Rightarrow x=1$.
 \item \textbf{$\forall x\in \mathbb K : -x=(-1)\cdot x$}.
 \item \textbf{Conocidos $a, b\in \mathbb{K}$, la ecuación $x+a=b$ tiene una única solución $x=b-a$}.
 \item \textbf{Si $a\neq 0$, la ecuación $a\cdot x=b$ tiene una única solución: $x=\frac{b}{a}$}.
@@ -536,28 +540,33 @@ $$(a^{-1}b^{-1})(ab)=a^{-1} a \cdot b^{-1} b=1 \Rightarrow (a^{-1}b^{-1})=(ab)^{
 \end{demo}
 
 \subsection{Propiedades de orden}
-La segunda de las propiedades mencionadas era la de orden total. Además de ser un cuerpo, el conjunto de los números reales posee una ``relación de orden'' intrínseca que escribimos como ``$\leq$'' y que nos ofrece una serie de propiedades muy importantes a la hora de trabajar con desigualdades (lo cual es más que habitual en este curso).
+Desde pequeños siempre hemos aprendido los números en cierto orden y hemos tenido claro qué cantidades eran ``más pequeñas'' y cuáles ``más grandes''. Esta propiedad de orden es importante porque permite hacer \textbf{comparaciones} y veremos que será muy importante en el resto del documento, casi siempre por medio de desigualdades.
+
+La relación binaria que entendemos por relación de orden (y que denotaremos por $\leq$) es intrínseca de los números reales y ofrece esa capacidad de ``comparar'' valores reales entre sí. No obstante, primero definiremos lo que debe cumplir una relación cualquiera para ser considerada de ``orden''.
 
 \begin{defi}[Relación de orden y orden total]
-Sea $\leq$ una relación binaria de un conjunto $A$ en sí mismo, decimos que ésta es una \textbf{relación de orden} si y sólo si verifica las siguientes propiedades:
+Sea $R$ una relación binaria de un conjunto $A$ en sí mismo, decimos que ésta es una \textbf{relación de orden} si y sólo si verifica las siguientes propiedades:
 \begin{itemize}
-\item \textbf{Propiedad Reflexiva}: $\forall x\in  A: x \leq x$
-\item \textbf{Propiedad Antisimétrica}: $(x\leq y) \wedge (y\leq x) \Rightarrow x=y$
-\item \textbf{Propiedad Transitiva}: $(x\leq y) \wedge (y \leq z) \Rightarrow x\leq z$
+\item \textbf{Reflexividad}: $\forall x\in  A: x R x$
+\item \textbf{Antisimetría}: $(xR y) \wedge (yR x) \Rightarrow x=y$
+\item \textbf{Transitividad}: $(xR y) \wedge (y R z) \Rightarrow xR z$
 \end{itemize}
-Además, decimos que dicha relación es de \textbf{orden total} si y sólo si también verifica la siguiente propiedad:
+y decimos que es una \textbf{relación de orden total} si y sólo si además verifica la siguiente propiedad:
 \begin{itemize}
-\item \textbf{Propiedad de Orden Total}: $\forall x,y\in A: (x\leq y) \vee (y\leq x)$
+\item \textbf{Ordenación total}: $\forall x,y\in A: (xR y) \vee (yR x)$
 \end{itemize}
 \end{defi}
 
-\begin{obs}
-Si a un cuerpo $(\mathbb K, +, \cdot)$ se le agrega una relación de orden definidas como $\leq$ , decimos que se trata de un cuerpo \textbf{totalmente ordenado}. Además, esta operación de orden tiene una serie de propiedades con respecto a las operaciones de la estructura de cuerpo:
+Cuando a un cuerpo $(\mathbb K, +, \cdot)$ se le agrega una relación de orden total como la definida por $\leq$, decimos que se trata de un cuerpo \textbf{totalmente ordenado}.
+
+En el conjunto de los números reales, esta relación binaria es la definida por el operador $\leq$. En ese caso, como el conjunto de los números reales se trata de un cuerpo totalmente ordenado, es interesante estudiar cómo se comportan las operaciones que dotaban al conjunto de estructura de cuerpo (la suma y el producto) con respecto a la relación de orden $\leq$.
+
+\begin{prop}
 \begin{enumerate}
 \item $x\leq y \Rightarrow \forall z \in \mathbb{K} : x+z\leq y+z$
 \item $(x\geq 0 \wedge y \geq 0)\Rightarrow xy\geq 0$
 \end{enumerate}
-\end{obs}
+\end{prop}
 
 Muchas veces hablamos de números positivos o negativos, esto es, que $x > 0$ o $x < 0$. Sin embargo, no hemos definido qué significa el operador $<$, luego veamos a qué nos referimos cuando lo utilizamos, siempre en términos de la relación $\leq$ que dota de orden a los reales.
 
@@ -659,27 +668,35 @@ $$(0<a<1)\Rightarrow a<1\Rightarrow a^{-1}\cdot a<1\cdot a^{-1}\Rightarrow 1<\fr
 \end{enumerate}
 \end{demo}
 
+Como ya hemos comentado, esta relación de orden tiene y tendrá consecuencias importantes en el resto del documento. A continuación, a modo de ejemplo, se muestran dos proposiciones que se valen de esta relación para demostrar ciertos resultados acerca de los números enteros.
+
 \begin{prop}
-Los números naturales están contenidos en los enteros como los enteros positivos:
-$$\forall n \in \mathbb N: n\geq 1 \mbox{ y } \mathbb N =\{n\in \mathbb Z: n\geq 1\}=\{n\in \mathbb Z : n>0\}$$
-Y cualquier número entero entro otros dos consecutivos es necesariamente uno de esos:
-$$\forall n,m\in \mathbb Z : n\leq m\leq n+1\Rightarrow m=n\mbox{ o } m=n+1$$
+Sea $\mathbb N$ el conjunto de los naturales y $\mathbb Z$ el de los enteros, podemos caracterizar los primeros como los enteros positivos
+\[
+\forall n \in \mathbb N: n\geq 1 \mbox{ y } \mathbb N =\{n\in \mathbb Z: n\geq 1\}=\{n\in \mathbb Z : n>0\}
+\]
 \end{prop}
 \begin{demo}
-\begin{enumerate}
-\item Como $1\geq 0\Rightarrow 2\geq 1 \Rightarrow ...$, demostramos por inducción sobre n:\par
+Como $1\geq 0\Rightarrow 2\geq 1 \Rightarrow ...$, demostramos por inducción sobre n:\par
 Sea $S=\{n\in \mathbb N: n\geq 1\}$, $1\in S$ porque $1\geq 1$ y como $1\geq 1\Rightarrow 2\geq 2$ entonces tenemos que para un elemento $k$ del conjunto, otro $k+1$ también pertenece a él, en consecuencia por el principio de inducción: $\mathbb N=S$\par
 Ahora sea $m\in \mathbb Z: m>0$ probamos  que es natural:
 $$m\notin \mathbb N \Rightarrow (-m)\in \mathbb N \Rightarrow (-m)\geq  1\mbox{ pero como }m>0 \mbox{ \#}\Rightarrow m\in \mathbb Z$$
-\vspace{0.5cm}
-\item Si $m\neq n$ y $m\neq n+1$, sea $k=m-n>0$:
-$$k=m-n>0\Rightarrow k\in \mathbb N \mbox{ pero como }n\leq m \leq n+1\Rightarrow m-n<\leq 1 \Rightarrow k\leq 1$$
-$$\mbox{ pero como }m\neq n+1\Rightarrow k\neq 1\Rightarrow k<1\mbox{ \# Por ser natural k }$$
-\end{enumerate}
 \end{demo}
 
-\subsubsection{Desigualdades Notables}
-Una vez que hemos definido bien lo que significa el operador $\leq$ y hemos visto las consecuencias y propiedades que éste tiene sobre los números reales, vamos a comentar una serie de desigualdades que pueden venirnos bien conocer para algunos resultados. Comenzaremos suponiendo demostrado (aunque lo haremos después) que $a\in \mathbb R : a>0\Rightarrow \exists x\in \mathbb R : (x>0)\wedge (x^2=a)$.
+\begin{prop}
+Sean $n, m\in \mathbb Z$, entonces:
+\[
+n\leq m \leq n+1 \Rightarrow m = n \text{ o } m = n+1
+\]
+\end{prop}
+\begin{demo}
+Si $m\neq n$ y $m\neq n+1$, sea $k=m-n>0$:
+$$k=m-n>0\Rightarrow k\in \mathbb N \mbox{ pero como }n\leq m \leq n+1\Rightarrow m-n<\leq 1 \Rightarrow k\leq 1$$
+$$\mbox{ pero como }m\neq n+1\Rightarrow k\neq 1\Rightarrow k<1\mbox{ \# Por ser natural k }$$
+\end{demo}
+
+\subsubsection{Desigualdades notables}
+A las expresiones donde la relación de orden $\leq$ se ve involucrada las llamamos \textbf{desigualdades}. En general, utilizaremos bastante las desigualdades para estudiar el resto de elementos del documento. De hecho, normalmente buscaremos demostrar que alguna cosa es ``menor o igual'' que otra y para ello es útil recordar ciertas desigualdades\footnote{En las demostraciones de las mismas, se da por hecho el resultado $\forall a\in \mathbb R : a>0 \Rightarrow \exists x>0 : x^2=a$, o lo que es lo mismo, que la raíz cuadrada de un número positivo existe. Esto se demostrará más tarde, pero debe utilizarse para demostrar estas desigualdades.} poco evidentes, pero sorprendentemente ciertas.
 
 \begin{theo}[Discriminante en ecuaciones]
 Sean $a,b,c\in \mathbb R  : a\neq 0$, la ecuación $ax^2+bx+c=0$ y el discriminante $\Delta=b^2-4ac$, entonces:
@@ -740,19 +757,20 @@ Concretamente para que se de el caso ``='': $2\sum_{i=1}^n (a_ib_i)=2\sqrt{A}+\s
 \end{demo}
 
 \subsection{Propiedades métricas}
-La última de las propiedades comentadas es que en los números reales podemos medir cómo de cerca están unos valores de otros, esto es, existe una noción de distancia. Por ello, empezaremos estudiando las propiedades del valor absoluto (que es la métrica usual\footnote{Existen más métricas en $\mathbb{R}$ con distintas propiedades (distintas formas de medir que modifican las distancias), pero en este curso nos limitaremos a utilizar la habitual.} en $\mathbb{R}$) para después ahondar en las definiciones de distancia, que serán de gran importancia en muchos de los capítulos posteriores.
+La última de las propiedades mencionada es que en los números reales podemos \textbf{medir}, es decir, podemos definir una noción de distancia que describe cómo de cerca están unos valores de otros. Esta ``distancia'' será la que viene dada por el valor absoluto de la diferencia entre números (que es la métrica usual\footnote{Existen más métricas en $\mathbb{R}$ con distintas propiedades (distintas formas de medir que modifican las distancias), pero en este curso nos limitaremos a utilizar la habitual.} en $\mathbb{R}$).
 
 \begin{defi}[Valor Absoluto]
 Sea $\mathbb{R}$ el conjunto de los números reales, definimos la función $|\cdot| : \mathbb{R}\rightarrow \mathbb{R}$ \textbf{valor absoluto} como:
 \[
-|a|=max\{a,-a\} =
+|a|=
 \begin{cases}
-a & a>0 \\
-0 & a=0 \\
+a & a\geq 0 \\
 -a & a<0
 \end{cases}
 \]
 \end{defi}
+
+Y, de nuevo, nos disponemos a hacer el mismo desarrollo que en las secciones anteriores: vamos a estudiar qué propiedades tiene esta función con respecto a las operaciones de cuerpo y la relación de ordenación.
 
 \begin{prop}[Propiedades del Valor Absoluto]
 \begin{enumerate}
@@ -806,12 +824,15 @@ $$||a|-|b||\leq c=|a-b|$$
 \end{enumerate}
 \end{demo}
 
-En el Análisis, siempre dicho de forma poco rigurosa, será habitual hablar con los términos \textit{cerca} o \textit{suficientemente cerca}. Sin ir más lejos, las definiciones de límite, supremo, continuidad, etc. se apoyan en estos términos (insistimos, hablando vulgarmente) y por eso es importante tener clara la definición de distancia, pues nos permite medir en cierta manera ese ``lejos'' o ``cerca'' de las definiciones.
+
+El concepto de distancia es importante porque casi la totalidad de los conceptos posteriores (límites, supremos, continuidad, etc.) se basan, de forma intuitiva, en hablar en términos de ``cerca'' o ``suficientemente cerca'' y por eso es importante tener clara la definición de distancia, pues permite formalizar esa noción de ``lejos'' o ``cerca'' para que no haya lugar a equívoco.
 
 \begin{defi}[Distancia entre números]
-Sean $a,b\in \mathbb{R}$ números reales, definimos la \textbf{distancia entre $a$ y $b$} como:
-$$dist(a,b)=|a-b|$$
-dicha función conforma una métrica en $\mathbb{R}$.
+Sean $a,b\in \mathbb{R}$ números reales, definimos la \textbf{distancia entre $a$ y $b$} como
+\[
+dist(a,b)=|a-b|
+\]
+que además es una métrica en $\mathbb{R}$.
 \end{defi}
 
 \begin{prop}[Propiedades de la Distancia]
@@ -832,6 +853,8 @@ dicha función conforma una métrica en $\mathbb{R}$.
 \item $d(x,y)=|x-y|=|x-z+z-y|\leq |x-z|+|z-y|=d(x,z)+d(z,y)$
 \end{enumerate}
 \end{demo}
+
+A modo de ejemplo de utilidades de la distancia, vamos a formalizar el concepto de intervalo y de entorno que tan habitualmente utilizamos en Matemáticas.
 
 \begin{defi}[Intervalos]
 Sean $a,b\in \mathbb R$ donde $a<b$, definimos:
@@ -854,7 +877,7 @@ $$\bar{E}(a,r)=\{x\in \mathbb R : dist(x,a)\leq r\}=\{x\in \mathbb R :|x-a|\leq 
 \end{defi}
 
 \section{Números Complejos}
-Según se avanza en los cursos de Matemáticas, uno se va haciendo consciente de que los complejos no es sino una compleción de los números reales y en multitud de ocasiones hay problemas reales que se resuelven de forma más sencilla (o únicamente) pasando por los complejos. En consecuencia, no está de más conocer unas nociones básicas sobre el cuerpo\footnote{En este documento se va a dar una definición más simple del cuerpo $\mathbb{C}$ para no perder tiempo en ello y entrar directamente a estudiar sus propiedades.} de los números complejos y las propiedades del mismo para cuando sea necesario.
+Según se avanza en los cursos de Matemáticas, uno se va haciendo consciente de que los complejos son una compleción de los números reales y permiten resolver de forma más sencillas (o de forma única) problemas que involucran únicamente a los reales. En consecuencia, no está de más conocer unas nociones básicas sobre el cuerpo\footnote{En este documento se va a dar una definición más simple del cuerpo $\mathbb{C}$ para no perder tiempo en ello y entrar directamente a estudiar sus propiedades.} de los números complejos y las propiedades del mismo para cuando sea necesario.
 
 \begin{defi}[Cuerpo de los Números Complejos]
 Sea $\mathbb C=\{(a,b)\in \mathbb{R}^2)\}$ el conjunto de los complejos, la operación $+: \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b) + (c,d) = (a+c, b+d)$ y la operación $\cdot : \mathbb{C}\times \mathbb{C}\rightarrow \mathbb{C}$ definida como $(a,b)\cdot (c,d)=(ac-bd,ad+bc)$, definimos el \textbf{cuerpo de los números complejos} como la terna $(\mathbb{C}, +, \cdot)$, que constituye un cuerpo conmutativo.
@@ -905,40 +928,20 @@ posee las siguientes propiedades:
 \end{prop}
 
 \begin{obs}
-El conjunto $\mathbb{R}$ de los reales está incluido en el conjunto $\mathbb C$ de los complejos a través de la aplicación inclusión $j: x \longmapsto (x,0)\in \mathbb{C}$. De esta manera, es lógico pensar que si la unidad de los reales era el $(1,0)$, la unidad de los complejos será $(0,1)$ y que denotaremos por $i$. Por la definición del producto, tenemos que $i^2=(-1,0)\in \mathbb R$ y es justo de este hecho de  donde nace la notación $i^2=-1\Rightarrow i=\sqrt{-1}$ más conocida.
+Hemos comentado que el conjunto de los números reales $\mathbb{R}$ está incluido en el conjunto $\mathbb C$ de los complejos. Esto no ocurre de manera direta, pues los reales son escalares y los complejos ``pares'' tal y como los hemos definido. Cuando decimos que los reales están incluidos queremos decir que podemos identificarlos con un subconjunto de $\mathbb C$, que sería $\{(x,0) : x\in \mathbb R\}$.
 
-Al utilizar esta nueva unidad, podemos escribir los números complejos $(a,b)\in \mathbb C$ ya no como pares sino como suma de su parte real e imaginaria, pues $(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)$, de donde se obtiene la notación habitual
+Si pensamos en dicha representación, la unidad real se identifica con $(1,0)$, luego la unidad imaginaria sería razonable definirla como $(0,1)$. Denotando por $i$ a la misma, la definición del producto nos indica que $i^2=(-1,0)\in \mathbb R$ e identificando de vuelta el $(-1, 0)$ con el $-1$ es justo de donde surge la notación $i^2=-1\Rightarrow i=\sqrt{-1}$, mucho más conocida.
+
+Al utilizar esta nueva unidad, podemos escribir los números complejos $(a,b)\in \mathbb C$ ya no como pares sino como suma de su parte real e imaginaria, pues
 \[
-(a,b)=a+bi
+(a,b)=(a,0)+(0,b)=a(1,0)+b(0,1)
 \]
-El valor $a$ constituye su parte real y $b$, parte imaginaria.
+de donde se obtiene la notación habitual $(a,b)=a+bi$ donde $a$ constituye su \textbf{parte real} y $b$, \textbf{parte imaginaria}.
 \end{obs}
 
-La interpretación de un número complejo como un par ordenado $(a,b)\in \mathbb{R}^2$ permite considerarlo como vector en lugar de como número complejo. Si bien es cierto que con sus coordenadas podemos conocer de forma única al vector que nos referimos, hay otras formas de ``orientarnos'' en el plano.
+La interpretación de un número complejo como un par ordenado $(a,b)\in \mathbb{R}^2$ permite considerarlo como vector en lugar de como número complejo, siendo $a$ y $b$ sus coordenadas en el plano cartesiano. No obstante, hay otra forma de orientarse en el plano conocida como \textbf{coordenadas polares} que nos permiten caracterizar a un número complejo de forma alternativa.
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}
-  % Ejes coordenados
-  \draw[-latex] (-2,0) -- (3,0) node[right] {$x$};
-  \draw[-latex] (0,-2) -- (0,3) node[above] {$y$};
-  
-  % Dibujo del vector (1,2)
-  \draw[-o, thick] (0,0) to (1,2) node[right]{$(1,2)$};
-  % Llave con etiqueta
-  \draw[decorate,decoration={brace,amplitude=10pt},xshift=-4pt,yshift=0pt]
-    (0,0) -- (1,2) node[midway, left,xshift=-10pt] {$\sqrt{5}$};
-
-  % Punto en el origen
-  \fill (0,0) circle (2pt) node {};
-
-  % Marcas del módulo y argumento
-  \draw[-latex] (0.5,0) arc (0:56.31:0.5) node[midway, right] {$\theta = \pi/3$};
-\end{tikzpicture}
-\caption{Representación del número complejo $1 + 2i$}
-\end{figure}
-
-Podemos dar la distancia que hay que andar desde el origen y la dirección en la que habría que andar y de esta manera también tendríamos determinado sin lugar a confusión el vector al que nos queremos referir. Precisamente estas nociones de ``distancia andada'' y ``dirección en la que andar'' son las que presentamos como módulo y argumento.
+Estas coordenadas polares vienen dadas por ``la distancia que hay que andar desde el origen'' o \textbf{módulo} y la ``dirección'' o \textbf{argumento} en la que habría que andar. Como podemos ver en la figura \ref{fig: polares}, esta manera también determina de modo único el vector al que nos queremos referir siempre y cuando $\theta \in [0, 2\pi)$.
 
 \begin{defi}[Módulo y argumento]
 Sea $z=a+bi\in \mathbb C$ un número complejo, definimos su \textbf{módulo} como:
@@ -951,9 +954,41 @@ cos(\theta)=\frac{a}{|z|} & & sen(\theta)=\frac{b}{|z|}
 \end{align*}
 \end{defi}
 
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+	  % Ejes coordenados
+	  \draw[-latex] (-2,0) -- (3,0) node[right] {$x$};
+	  \draw[-latex] (0,-2) -- (0,3) node[above] {$y$};
+	  
+	  % Dibujo del vector (1,2)
+	  \draw[-o, thick] (0,0) to (1,2) node[right]{$(1,2)$};
+	  % Llave con etiqueta
+	  \draw[decorate,decoration={brace,amplitude=10pt},xshift=-4pt,yshift=0pt]
+		(0,0) -- (1,2) node[midway, left,xshift=-10pt] {$\sqrt{5}$};
+	
+	  % Punto en el origen
+	  \fill (0,0) circle (2pt) node {};
+	
+	  % Marcas del módulo y argumento
+	  \draw[-latex] (0.5,0) arc (0:56.31:0.5) node[midway, right] {$\theta = \pi/3$};
+	\end{tikzpicture}
+	\caption{Representación del número complejo $1 + 2i$}
+	\label{fig: polares}
+	\end{figure}
+
 \begin{defi}[Conjugado]
 Sea $z=a+bi\in \mathbb C$ un número complejo, definimos su \textbf{conjugado} como el número complejo $\bar{z}=a-bi$.
 \end{defi}
+
+Definimos una última forma de representar los números complejos cuya justificación excede este curso, pero que se emplea bastante por su comodidad y relación con la función exponencial.
+
+\begin{defi}[Exponencial compleja]
+Sea $z=a+bi\in \mathbb C$, definimos la \textbf{exponencial compleja} como:
+$$e^z = e^{a+bi}=e^a\cdot e^{bi}=e^a\cdot (cos(b)+i\cdot sen(b))=e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)$$
+\end{defi}
+
+Por último, se presenta un resultado que permite estudiar las propiedades que tienen los números complejos en relación con estas distintas representaciones.
 
 \begin{prop}
 \begin{itemize}
@@ -988,13 +1023,6 @@ $$cos(\alpha + \beta)+ i\cdot sen(\alpha + \beta)= e^{i\cdot(\alpha + \beta)}$$
 \end{enumerate}
 \end{demo}
 
-\begin{defi}[Exponencial compleja]
-Sea $z=a+bi\in \mathbb C$, definimos la \textbf{exponencial compleja} como:
-$$e^z = e^{a+bi}=e^a\cdot e^{bi}=e^a\cdot (cos(b)+i\cdot sen(b))=e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)$$
-Concretamente, cuando $z\in \mathbb{R}$, es decir, $b=0$:
-$$e^a\cdot cos(b)+e^a\cdot i\cdot sen(b)=e^a$$
-\end{defi}
-
 \begin{obs}
 A modo de recopilación de los enunciados anteriores, hay 4 formas de representar un número complejo:
 \begin{itemize}
@@ -1005,47 +1033,52 @@ A modo de recopilación de los enunciados anteriores, hay 4 formas de representa
 \end{itemize}
 \end{obs}
 
+
+
 \subsection{Teorema Fundamental del Álgebra}
-Supongamos que tenemos un polinomio $P(z)$ con coeficientes complejos, decimos que el número $z_0\in \mathbb C$ es raíz de $P(z)$ lo que es equivalente a decir que: $P(z)=(z-z_0)Q(z)$.\par
-Decimos que $z_0$ es raíz de $P(z)$ con multiplicidad $m\in \mathbb N\Leftrightarrow P(z)=(z-z_0)^mQ(z)$, donde $Q(z_0)\neq 0$.\par
+El teorema fundamental del álgebra afirma que un polinomio tiene tantas raíces en $\mathbb C$ como grado. Esto es importante porque permite afirmar que en $\mathbb C$ se pueden calcular todas las raíces de un polinomio, no como en $\mathbb R$ donde, por ejemplo, el polinomio $x^2+1$ no tiene raíces reales.
+
+Supongamos que tenemos un polinomio $P(z)$ con coeficientes complejos, decimos que el número $z_0\in \mathbb C$ es raíz de $P(z)$ lo que es equivalente a decir que: $P(z)=(z-z_0)Q(z)$. Si $z_0$ es raíz de $P(z)$ $m$ veces (lo que se denota por ``ser raíz con multiplicidad $m$''), entonces esto quiere decir que $P(z)=(z-z_0)^mQ(z)$, donde $Q(z_0)\neq 0$.
+
 El teorema dice que si tenemos un polinomio cualquiera de coeficientes complejos, siempre existe una raíz al menos.
 $$f(x)\in \mathbb C[x]\Rightarrow \exists z_0\in \mathbb C: P(z_0)=0$$
-Como consecuencia de dicho Teorema, si tenemos un polinomio $P(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots + a_1z+a_0: a_0,\cdots, a_n\in \mathbb C \wedge a_n\neq 0$, entonces $P(z)$ tiene $n$ raíces complejas (teniendo en cuenta su multiplicidad). Es decir, $\exists z_0,\cdots, z_k\in \mathbb C$ y $\exists m_0,\cdots, m_k\in \mathbb N$, tales que $\sum_{i=1}^k(m_i)=n$ y tales que:
+y su consecuencia directa es que cualquier polinomio descompone completamente en factores lineales. Esto quiere decir que, dado $P(z)=a_nz^n+a_{n-1}z^{n-1}+\cdots + a_1z+a_0: a_0,\cdots, a_n\in \mathbb C \wedge a_n\neq 0$, entonces $\exists z_0,\cdots, z_k\in \mathbb C$ y $\exists m_0,\cdots, m_k\in \mathbb N : \sum_{i=1}^k(m_i)=n$ de manera que:
 $$P(z)=a_n(z-z_1)^{m_1}\cdots (z-z_k)^{m^k}$$
 
 \subsubsection{Raíces de números complejos}
-Sea $z\in \mathbb C$ y $n\in \mathbb N$ buscamos $\omega \in \mathbb C: \omega^n=z$. Con lo cual para poder buscarlo, sabemos que buscamos un omega tal que:
-$$\omega=r\cdot e^{i\theta}\mbox{ donde }r=|\omega|, \theta=argumento$$
-De aquí se sigue que:
-$$\omega^n=r^n\cdot e^{in\theta}=z=|z|\cdot e^{i\alpha}\Rightarrow
+El Teorema Fundamental del Álgebra afirma que el polinomio $x^n - z$ tiene $n$ raíces, o lo que es lo mismo, hay $n$ raíces $n$-ésimas de $z$. Por tanto, a pesar de que $x^3-2$ sólo tiene como solución $\sqrt[3]{2}$ en $\mathbb R$ hay dos más y la pregunta es ¿cómo las calculamos?
+
+Sea $z\in \mathbb C$ y $n\in \mathbb N$ en realidad lo que buscamos es un $\omega \in \mathbb C$ tal que $\omega^n=z$. Si reescribimos $\omega$ en su forma exponencial como $\omega=r\cdot e^{i\theta}$ entonces debe ocurrir que $\omega^n=r^n\cdot e^{in\theta}=z=|z|\cdot e^{i\alpha}$, luego 
+\[
 \begin{cases}
 r^n=z & \Rightarrow r=\sqrt[n]{z} \\
-e^{in\theta}=e^{i\alpha} & \Rightarrow n\theta=\alpha\Rightarrow \theta=\frac{\alpha+2\pi k}{n}
+e^{in\theta}=e^{i\alpha} & \Rightarrow \theta=\frac{\alpha+2\pi k}{n}
 \end{cases}
-$$
-Donde $k=0,1,..., n-1$
+\]
+con $k=0,1,..., n-1$.
 
 \section{Supremos e Ínfimos}
-En general, no sólo trabajaremos con el conjunto total de los números reales sino que en ocasiones manejaremos subconjuntos concretos. Cuando estos subconjuntos están ``delimitados'', esto es, se encuentran dentro de un intervalo concreto (finito por alguno de los dos lados) conviene estudiar una propiedad que hace único el conjunto de los números reales.
+En general, no sólo trabajaremos con el conjunto total de los números reales sino que en ocasiones manejaremos subconjuntos del mismo. Cuando estos subconjuntos están ``delimitados'', esto es, se encuentran dentro de algún intervalo concreto (finito por alguno de los dos lados) conviene estudiar una propiedad que hace único el conjunto de los números reales.
 
-Para saber de qué se trata, observemos el conjunto de los números positivos $\mathcal T^+ := \{a\in \mathbb{R} : a > 0\}$. Notamos que cualquier número por debajo del $0$ no pertenece al conjunto, luego el $0$ hace de ``frontera'' de dicho conjunto por abajo. Sin embargo, atendiendo a la justificación \textit{ningún número por debajo pertenece al conjunto} también podríamos decir que es ``frontera'' el $-1$, el $-1/2$, ... entonces ¿por qué es especial el $0$? Porque es la mejor ``frontera'', es decir, es la más cercana al conjunto que no se deja ningún número fuera. Para demostrarlo, basta comprobar que cualquier otro valor cumple alguna de las dos siguientes alternativas:
+Para saber de qué se trata, observemos el conjunto de los números positivos $\mathcal T^+ := \{a\in \mathbb{R} : a > 0\}$. Notamos que cualquier número por debajo del $0$ no pertenece al conjunto, luego el $0$ hace de ``frontera'' de dicho conjunto por abajo. Sin embargo, atendiendo a la justificación \textit{ningún número por debajo pertenece al conjunto} también podríamos decir que es ``frontera'' el $-1$, el $-1/2$, ... entonces ¿por qué es especial el $0$? Porque es la ``mejor frontera'', es decir, es la más cercana al conjunto que no se deja ningún elemento fuera. Para demostrarlo, basta comprobar que cualquier otro valor cumple una de las dos siguientes alternativas:
 \begin{itemize}
-\item Es peor ``frontera'', que es el caso de los menores que $0$ porque el propio $0$ ya sabemos que hace esta función y está más cerca que cualquier negativo.
-\item Se deja algún número que está en $\mathcal{T}^+$, que es el caso de los mayores que $0$ porque cualquier otro posible ``frontera'' $b > 0$ verifica que $0< b/2 < b$, es decir, se le escapa $b/2$.
+\item O es peor ``frontera'', que podría ser por ejemplo el caso de los negativos, pues el $0$ sabemos que es frontera y está más cerca que cualquiera de ellos.
+\item O se deja algún elemento de $\mathcal{T}^+$, que es el caso de los positivos, pues cualquier $b>0$ ``frontera'' verifica que $0< b/2 < b$, es decir, se le escapa $b/2$.
 \end{itemize}
-Este concepto de la mejor ``frontera'', o hablando más formalmente, de la mejor \textit{cota} es precisamente el caracteriza la noción de supremo e ínfimo y es esencial porque forma parte de la naturaleza de los números reales.
+
+\subsection{Definición formal de supremo e ínfimo}
+El concepto del ejemplo anterior de la mejor ``frontera'', o hablando más formalmente, de la mejor \textit{cota} es precisamente el que caracteriza la noción de lo que vamos a llamar supremo e ínfimo y es esencial por dos motivos: porque es una característica única que forma parte de la naturaleza de los números reales y porque permite formalizar el concepto del mayor o menor ``más ajustado'' de un conjunto.
 
 \begin{defi}[Cotas]
 Sea $A\subset \mathbb R$ un subconjunto no vacío, decimos que:
 \begin{itemize}
 \item $M\in R$ es \textbf{cota superior} de A si y sólo si $\forall a\in A: a\leq M$.
-
 \item $m\in \mathbb R$ es \textbf{cota inferior} de A si y sólo si $\forall a\in A: m\leq a$.
 \end{itemize}
-y si $A$ posee cota superior o inferior decimos\footnote{Cuando simplemente decimos que está acotado, estamos diciendo que lo está tanto superiormente como inferiormente.} que está \textbf{acotado superiormente o inferiormente}.
+y llamamos\footnote{Cuando simplemente decimos que está acotado, estamos diciendo que lo está tanto superiormente como inferiormente.} conjunto \textbf{acotado superiormente o inferiormente} a los que tienen cota superior o inferior respectivamente.
 \end{defi}
 
-La definición anterior formaliza eso que hemos llamado vulgarmente ``frontera'' en la introducción de la sección y que a partir de ahora llamaremos \textit{cota}. Ahora queda definir qué significa eso de ser la ``mejor''. Si la definición anterior ya formaliza el ``no dejarse ningún valor fuera'', falta formalizar el ``no hay otra cota más cerca'' ¿Cómo lo hacemos? De la manera más lógica y tal y como ocurría en el ejemplo: si estamos hablando de una cota superior, ser la mejor es que cualquier otra cota sea más ``superior'' que ella y hablando de cotas inferiores de forma análoga.
+La definición anterior da un respaldo riguroso y preciso de lo que significa ``no dejarse ningún valor fuera''. En consecuencia, para poder hablar de ínfimo o supremo inequívocamente, queda definir qué significa eso de ``no hay otra cota más cerca'' ¿Cómo lo hacemos? De la misma manera que en el ejemplo del inicio de la sección: si estamos hablando de una cota superior, ser la mejor es que cualquier otra cota sea más ``superior'' que ella (el caso de cotas inferior sería análogo).
 
 \begin{defi}[Ínfimos y Supremos]
 Sea $A\subset \mathbb{R}$ un subconjunto no vacío, decimos que:
@@ -1064,7 +1097,7 @@ Sea $A\subset \mathbb R$ un subconjunto no vacío y acotado superiormente, enton
 \end{theo}
 
 \begin{obs}
-La propiedad anterior es una de las propiedades fundamentales del cuerpo de los números reales y lo diferencia de muchos otros. Por ejemplo, en $\mathbb Q$ el axioma no es cierto porque el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$ está acotado tanto en $\mathbb{R}$ como en $\mathbb{Q}$, pero sólo existe supremo ($\sqrt{2}$) en $\mathbb R$, pero no\footnote{Veremos más adelante por qué hay infinitos racionales tan cerca como se quiera del valor $\sqrt{2}$} en $\mathbb Q$.
+Como hemos comentado, la propiedad anterior es una de las propiedades fundamentales del cuerpo de los números reales y lo diferencia de muchos otros. Por ejemplo, en $\mathbb Q$ el axioma no es cierto porque el conjunto: $\{x\in \mathbb Q: x^2 < 2\}$ está acotado tanto en $\mathbb{R}$ como en $\mathbb{Q}$, pero su supremo $\sqrt{2}$ sólo\footnote{\label{note: densidad de Q en R}  Veremos más adelante por qué hay infinitos racionales tan cerca como se quiera del valor $\sqrt{2}$.} existe en $\mathbb R$.
 \end{obs}
 
 \begin{prop}
@@ -1136,6 +1169,13 @@ $-S<m\leq a\Rightarrow S>-m\geq -a\Rightarrow -m$ es cota superior de B, \# porq
 Cuando un subconjunto $A\subset \mathbb R$ no vacío es no acotado, solemos denotarlo empleando $sup(A)=+\infty$ y $inf(A)=-\infty$.
 \end{obs}
 
+\begin{prop}
+	Sea $A\subset \mathbb{R}$ un conjunto real y $S\subset A$ un subconjunto suyo, entonces:
+	\begin{align*}
+	\sup S\leq \sup A && \inf S\geq \inf A
+	\end{align*}
+\end{prop}
+
 Cuando avancemos en el documento veremos que el supremo y el ínfimo están muy presentes en el resto de capítulos (aunque sea de forma intrínseca), pero para ir abriendo boca e identificar la importancia que tiene vamos a ver que toman un papel crucial en aspectos tan básicos del Análisis como justificar que siempre existe la raíz enésima de un número.
 
 \begin{theo}[de la existencia de raíces]
@@ -1187,18 +1227,96 @@ Por lo que al poder encontrar un $h$ que satisfaga dicha expresión llegamos a u
 \end{enumerate}
 \end{demo}
 
-\begin{prop}
-Sea $A\subset \mathbb{R}$ un conjunto real y $S\subset A$ un subconjunto suyo, entonces:
-\begin{align*}
-\sup S\leq \sup A && \inf S\geq \inf A
-\end{align*}
-\end{prop}
+Por último, vamos comentar un resultado debido a Cantor que nos será útil de vez en cuando en el resto del documento y que precisamente se apoya en las nociones de supremo e ínfimo que hemos comentado para su demostración.
+
+\begin{defi}[Intervalos Encajados]
+Sea $F$ una familia de intervalos cerrados, es decir, $F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$, decimos que es de \textbf{intervalos encajados} si y sólo si:
+$$ \forall n, m\in \mathbb{N} : n >m : I_n\subset I_m$$
+que también puede expresarse como:
+$$\forall n\in \mathbb N : I_{n+1}\subset I_{n}$$
+\end{defi}
+
+\begin{theo}[Principio de intervalos encajados de Cantor]
+Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces:
+$$\bigcap_{n\in \mathbb N}I_n = [\xi, \eta] \neq \emptyset$$
+donde $\xi=sup\{a_n: n\in \mathbb N\}$ y $\eta=inf\{b_n: n\in \mathbb N\}$.
+\end{theo}
+\begin{demo}
+Llamamos $A=\{a_n: n\in \mathbb N\}$ y $B=\{b_n: n\in \mathbb N\}$, veamos que $\forall n\in \mathbb N: a_n\leq b_m$:
+$$\mbox{Si }n\geq m\Rightarrow I_n\subset I_m\Leftrightarrow [a_n,b_n]\subset [a_m, b_m]\Rightarrow a_m\leq a_n\leq b_n\leq b_m$$
+$$\mbox{Si }m>n\Rightarrow I_m\subset I_n\Rightarrow [a_m,b_m]\subset[a_n,b_n]\Rightarrow a_n\leq a_m\leq b_m\leq b_n$$
+Lo que demuestra que cualesquiera que sean los intervalos elegidos, el extremos izquierdo de uno de ellos siempre es menor que el extremos derecho del del otro.\par 
+Esto quiere decir que: $\forall n\in \mathbb N: b_m$ es cota superior del conjunto A, por lo que $\exists \xi\in \mathbb R: \xi=sup (A)$, y además $\xi\leq b_m :\forall m\in \mathbb N$, pero esto mismo afirma que $\xi$ es cota inferior de B, en consecuencia: $\exists \eta\in \mathbb R: \eta=inf(B)$ y además, $\xi\leq\eta$.\par
+Veamos que: $\bigcap_{n\in \mathbb N}I_n=[\xi, \eta]\neq \emptyset$:
+\begin{itemize}
+\item ``$\subset$'':
+$$x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow a_n\leq x\leq b_n: \forall n \in \mathbb N\Rightarrow\begin{cases} x \mbox{ es cota superior de A}\Rightarrow x\geq\xi \\
+x\mbox{ es cota inferior de B}\Rightarrow x\leq \eta\end{cases}\Rightarrow x\in [\xi,\eta]$$
+
+\item ``$\supset$'':
+$$x\in [\xi,\eta]\Leftrightarrow a_n\leq \xi\leq x\leq \eta\leq b_n: \forall n \in \mathbb N\Rightarrow a_n\leq x\leq b_n\Rightarrow x\in [a_n,b_n]=I_n: \forall n\in \mathbb N\Rightarrow x\in \bigcap_{n\in \mathbb N}I_n$$
+\end{itemize}
+\end{demo}
+
+\begin{obs}
+Del teorema anterior deducimos que $\xi\leq \eta$.
+\end{obs}
+
+\begin{coro}
+Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces\footnote{Si $I=[a,b]$, entonces su longitud es $l(I)=b-a$}:
+$$\bigcap_{n\in \mathbb N}I_n\mbox{ es un único número}\Leftrightarrow \forall \varepsilon>0: \exists n\in \mathbb N: l(I_n)<\varepsilon$$
+\end{coro}
+\begin{demo}
+Por el teorema demostrado: $\bigcap_{n\in \mathbb N}I_n=[\xi,\eta]$, por lo que es un único número $\Leftrightarrow \xi=\eta$:
+
+\begin{itemize}
+\item ``$\Rightarrow$'':
+$$\mbox{Sea }\varepsilon>0\wedge \xi=sup(A)\stackrel{Prop. Sup}{\Rightarrow} \xi-\frac{\varepsilon}{2}<a_n\leq \xi$$
+Pero como además, $\xi=\eta=inf(B)$:
+$$\exists m \in \mathbb N: \xi\leq b_m< \xi+ \frac{\varepsilon}{2}$$
+
+\begin{center}
+\includegraphics[scale=0.25]{corolario cantor}
+\end{center}
+
+	\begin{itemize}
+	\item Ahora, si $n\geq m\Rightarrow I_n\subset I_m\Leftrightarrow a_m\leq a_n\leq b_n\leq b_m$, entonces:
+$$l(I_n)=b_n-a_n\leq b_m-a_n\leq \xi+ \frac{\varepsilon}{2}-a_n<\xi+ \frac{\varepsilon}{2}-\xi+ \frac{\varepsilon}{2}=\varepsilon$$
+
+	\item Por último, si $n<m\Rightarrow I_m\subset I_n\Leftrightarrow a_n\leq a_m\leq b_m\leq b_n$, entonces:
+$$l(I_m)=b_m-a_m< \xi+\frac{\varepsilon}{2}-a_m\leq \xi+\frac{\varepsilon}{2}-a_n<\xi+\frac{\varepsilon}{2}-\xi+\frac{\varepsilon}{2}=\varepsilon$$
+	\end{itemize}
+
+\item ``$\Leftarrow$'': supongamos que $\xi<\eta$
+
+\begin{center}
+\includegraphics[scale=0.25]{corolario cantor 2}
+\end{center}
+
+$$\xi<\eta\Rightarrow \forall n \in \mathbb N: a_n\leq \xi<\eta\leq b_n\Rightarrow l(I_n)=b_n-a_n\geq \eta-a_n\geq \eta-\xi=\delta>0\Rightarrow \mbox{ \#}$$
+Por que entonces decimos que los intervalos no son de la longitud que queramos porque tiene que ser mayores que un valor $\delta$ determinado.
+\end{itemize}
+\end{demo}
+
+\begin{obs}
+Si los intervalos no son cerrados, el teorema no es cierto pues, por ejemplo, si consideramos la familia $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$ de intervalos abiertos, vemos que son encajados
+\[
+x\in I_{n+1}\Leftrightarrow 0<x<\frac{1}{n+1}<\frac{1}{n}\Rightarrow x\in \left(0,\frac{1}{n}\right)=I_n
+\]
+pero su intersección es vacía porque
+\[
+x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\frac{1}{n}\Rightarrow \nexists x \in \bigcap_{n\in \mathbb{N}} I_n
+\]
+debido a que los naturales no tienen cota superior.
+\end{obs}
 
 
 \subsection{Densidad de $\mathbb{Q}$ en $\mathbb{R}$}
-En una de las anotaciones a pie de página, se explicó que posteriormente se iba a demostrar que, escogido cualquier número real, podemos encontrar un racional tan cerca como queramos del mismo. Esta propiedad se cumple no sólo para los racionales sino también para los irracionales y es lo que se conoce como densidad de estos conjuntos en el conjunto de los reales.
+En la anotación de pie de página de la página \pageref{note: densidad de Q en R}, se comentaba que, escogido cualquier número real, podemos encontrar un racional tan cerca como queramos del mismo. Esta propiedad se cumple no sólo para los racionales sino también para los irracionales y es lo que se conoce como \textbf{densidad} de estos conjuntos en el conjunto de los reales.
 
-Este concepto tiene relevancia porque permite saber que siempre tendremos a ciertos individuos \textit{tan cerca como queramos} de cierto valor y esto cobra especial importancia cuando se habla de límites, continuidad, etc.
+Este concepto tiene relevancia porque nos da la certeza de que siempre habrá ciertos individuos \textit{tan cerca como queramos} de un valor real y esto cobra especial importancia cuando se habla de límites y continuidad.
+
+En lo que sigue de subsección, vamos a desarrollar una serie de resultados que progresivamente van a construir el conjunto de herramientas que usaremos para terminar demostrando la propiedad que da nombre al apartado.
 
 \begin{theo}[Propiedad Arquimediana de $\mathbb R$]
 \label{theo:arquimediana}
@@ -1304,97 +1422,21 @@ $$a<b\Rightarrow \frac{a}{\sqrt{2}}< \frac{b}{\sqrt{2}}\Rightarrow \exists r \in
 Y es fácil ver que $r\in \mathbb R\mbox{\textbackslash}\mathbb Q$.
 \end{demo}
 
-Para terminar la sección, vamos comentar un resultado debido a Cantor que nos será útil de vez en cuando en el resto del documento y que precisamente se apoya en las nociones de supremo e ínfimo que hemos comentado para su demostración.
-
-\begin{defi}[Intervalos Encajados]
-Sea $F$ una familia de intervalos cerrados, es decir, $F=\{I_n\}_{n\in \mathbb N}\mbox{ donde }I_n=[a_n,b_n]$, decimos que es de \textbf{intervalos encajados} si y sólo si:
-$$ \forall n, m\in \mathbb{N} : n >m : I_n\subset I_m$$
-que también puede expresarse como:
-$$\forall n\in \mathbb N : I_{n+1}\subset I_{n}$$
-\end{defi}
-
-\begin{theo}[Principio de intervalos encajados de Cantor]
-Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces:
-$$\bigcap_{n\in \mathbb N}I_n = [\xi, \eta] \neq \emptyset$$
-donde $\xi=sup\{a_n: n\in \mathbb N\}$ y $\eta=inf\{b_n: n\in \mathbb N\}$.
-\end{theo}
-\begin{demo}
-Llamamos $A=\{a_n: n\in \mathbb N\}$ y $B=\{b_n: n\in \mathbb N\}$, veamos que $\forall n\in \mathbb N: a_n\leq b_m$:
-$$\mbox{Si }n\geq m\Rightarrow I_n\subset I_m\Leftrightarrow [a_n,b_n]\subset [a_m, b_m]\Rightarrow a_m\leq a_n\leq b_n\leq b_m$$
-$$\mbox{Si }m>n\Rightarrow I_m\subset I_n\Rightarrow [a_m,b_m]\subset[a_n,b_n]\Rightarrow a_n\leq a_m\leq b_m\leq b_n$$
-Lo que demuestra que cualesquiera que sean los intervalos elegidos, el extremos izquierdo de uno de ellos siempre es menor que el extremos derecho del del otro.\par 
-Esto quiere decir que: $\forall n\in \mathbb N: b_m$ es cota superior del conjunto A, por lo que $\exists \xi\in \mathbb R: \xi=sup (A)$, y además $\xi\leq b_m :\forall m\in \mathbb N$, pero esto mismo afirma que $\xi$ es cota inferior de B, en consecuencia: $\exists \eta\in \mathbb R: \eta=inf(B)$ y además, $\xi\leq\eta$.\par
-Veamos que: $\bigcap_{n\in \mathbb N}I_n=[\xi, \eta]\neq \emptyset$:
-\begin{itemize}
-\item ``$\subset$'':
-$$x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow a_n\leq x\leq b_n: \forall n \in \mathbb N\Rightarrow\begin{cases} x \mbox{ es cota superior de A}\Rightarrow x\geq\xi \\
-x\mbox{ es cota inferior de B}\Rightarrow x\leq \eta\end{cases}\Rightarrow x\in [\xi,\eta]$$
-
-\item ``$\supset$'':
-$$x\in [\xi,\eta]\Leftrightarrow a_n\leq \xi\leq x\leq \eta\leq b_n: \forall n \in \mathbb N\Rightarrow a_n\leq x\leq b_n\Rightarrow x\in [a_n,b_n]=I_n: \forall n\in \mathbb N\Rightarrow x\in \bigcap_{n\in \mathbb N}I_n$$
-\end{itemize}
-\end{demo}
-
-\begin{obs}
-Del teorema anterior deducimos que $\xi\leq \eta$.
-\end{obs}
-
-\begin{coro}
-Sea $F=\{I_n\}_{n\in \mathbb N}$ una familia de intervalos cerrados y encajados, entonces\footnote{Si $I=[a,b]$, entonces su longitud es $l(I)=b-a$}:
-$$\bigcap_{n\in \mathbb N}I_n\mbox{ es un único número}\Leftrightarrow \forall \varepsilon>0: \exists n\in \mathbb N: l(I_n)<\varepsilon$$
-\end{coro}
-\begin{demo}
-Por el teorema demostrado: $\bigcap_{n\in \mathbb N}I_n=[\xi,\eta]$, por lo que es un único número $\Leftrightarrow \xi=\eta$:
-
-\begin{itemize}
-\item ``$\Rightarrow$'':
-$$\mbox{Sea }\varepsilon>0\wedge \xi=sup(A)\stackrel{Prop. Sup}{\Rightarrow} \xi-\frac{\varepsilon}{2}<a_n\leq \xi$$
-Pero como además, $\xi=\eta=inf(B)$:
-$$\exists m \in \mathbb N: \xi\leq b_m< \xi+ \frac{\varepsilon}{2}$$
-
-\begin{center}
-\includegraphics[scale=0.25]{corolario cantor}
-\end{center}
-
-	\begin{itemize}
-	\item Ahora, si $n\geq m\Rightarrow I_n\subset I_m\Leftrightarrow a_m\leq a_n\leq b_n\leq b_m$, entonces:
-$$l(I_n)=b_n-a_n\leq b_m-a_n\leq \xi+ \frac{\varepsilon}{2}-a_n<\xi+ \frac{\varepsilon}{2}-\xi+ \frac{\varepsilon}{2}=\varepsilon$$
-
-	\item Por último, si $n<m\Rightarrow I_m\subset I_n\Leftrightarrow a_n\leq a_m\leq b_m\leq b_n$, entonces:
-$$l(I_m)=b_m-a_m< \xi+\frac{\varepsilon}{2}-a_m\leq \xi+\frac{\varepsilon}{2}-a_n<\xi+\frac{\varepsilon}{2}-\xi+\frac{\varepsilon}{2}=\varepsilon$$
-	\end{itemize}
-
-\item ``$\Leftarrow$'': supongamos que $\xi<\eta$
-
-\begin{center}
-\includegraphics[scale=0.25]{corolario cantor 2}
-\end{center}
-
-$$\xi<\eta\Rightarrow \forall n \in \mathbb N: a_n\leq \xi<\eta\leq b_n\Rightarrow l(I_n)=b_n-a_n\geq \eta-a_n\geq \eta-\xi=\delta>0\Rightarrow \mbox{ \#}$$
-Por que entonces decimos que los intervalos no son de la longitud que queramos porque tiene que ser mayores que un valor $\delta$ determinado.
-\end{itemize}
-\end{demo}
-
-\begin{obs}
-Si los intervalos no son cerrados, el teorema no es cierto pues, por ejemplo, si consideramos la familia $I_n=\left(0,\frac{1}{n}\right) n\in \mathbb N$ de intervalos abiertos, vemos que son encajados
-\[
-x\in I_{n+1}\Leftrightarrow 0<x<\frac{1}{n+1}<\frac{1}{n}\Rightarrow x\in \left(0,\frac{1}{n}\right)=I_n
-\]
-pero su intersección es vacía porque
-\[
-x\in \bigcap_{n\in \mathbb N}I_n\Leftrightarrow \forall n \in \mathbb N: 0<x<\frac{1}{n}\Rightarrow \nexists x \in \bigcap_{n\in \mathbb{N}} I_n
-\]
-debido a que los naturales no tienen cota superior.
-\end{obs}
-
 \subsection{Definición de la exponencial real}
-Se va a prescindir de las demostraciones de las operaciones con potencias y de los resultados para raíces porque se considera que son triviales y además se prescindirá de la demostración de los enunciados posteriormente descritos por la dificultad que revisten, pero se incluyen en estos apuntes por la importancia que tienen para resultados posteriores.
+El concepto de ínfimo y supremo es tan esencial que aparece en cuestiones absolutamente básicas desde el punto de vista analítico, como por ejemplo la exponencial.
 
-Para poder definir lo que significa tener un número elevado a otro número real se atiende a la siguiente definición: sea $a,x\in \mathbb R$ y $r\in \mathbb Q$:
-$$x=\sup\{r\in \mathbb Q: r<x\}=\inf\{r\in \mathbb Q: r>x\}$$
+Si uno se pregunta que significa $a^2$, evidentemente hallará como respuesta que se trata de $a\cdot a$. Si se complica un poco la pregunta, el valor $a^{3/2}$ será interpretado como $\sqrt{a} \cdot \sqrt{a} \cdot \sqrt{a}$. Pero si uno se pregunta a sí mismo qué es lo que queremos decir cuando decimos $a^\pi$ probablemente se quede sorprendido consigo mismo por haber usado con asiduidad la exponencial y no enteder a qué se refiere tal expresión.
 
-Esto implica que entendamos la exponencial real como:
-$$a^x=\sup\{a^r: r<x\}=\inf\{a^r: r>x\}$$
+Para poder definir lo que significa la expresión $a^x$ siendo $a,x\in \mathbb R$, primero debemos entender que
+\[
+x=\sup\{r\in \mathbb Q: r<x\}=\inf\{r\in \mathbb Q: r>x\}
+\]
+para después definir la exponencial real como 
+\[
+a^x=\sup\{a^r: r<x\}=\inf\{a^r: r>x\}
+\]
+
+Lógicamente en este pequeño argumentario hemos omitido gran cantidad de pasos importantes: demostraciones de las operaciones con potencias y de los resultados para raíces, demostración de la coherencia de la definición con las versiones para $x$ entero y racional... No obstante, la disquisición anterior sirve como ejemplo para justificar la importancia que tienen conceptos tan sencillos como son el supremo y el ínfimo.
 
 \chapter{Sucesiones y Series}
 No es raro que algunos de nosotros hayamos visto en algún momento de nuestra vida algún ejercicio de completar la secuencia como el siguiente:
