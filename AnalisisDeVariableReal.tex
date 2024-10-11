@@ -391,6 +391,7 @@ Los dos hechos anteriores según el principio de inducción implican que $S=\mat
 \end{demo}
 
 \chapter{Números Reales}
+\label{chap: numeros reales}
 La gran mayoría de objetos matemáticos que se van a estudiar en el manual, de una forma u otra, trabajan en el conjunto de los números reales. Parece conveniente, en ese caso, que estudiemos qué propiedades tienen estos simplemente por cómo son, para poder aprovecharnos después de sus particularidades y características en nuestro favor.
 
 El primero de los puntos a aclarar sería decidir qué entendemos cuando decimos ``conjunto de los números reales''. Los seres humanos han ido incrementando el edificio de las Matemáticas conforme han ido descubriendo elementos que no estaban descritos lo que se llamaba ``Matemáticas'' hasta ese momento. Un ejemplo que ilustra este hecho ocurrió en la Grecia Clásica. Los griegos sólo\footnote{Entendiendo los naturales y enteros como subcojuntos de los racionales, pues son fracciones de denominador 1.} utilizaban números racionales por considerarlos ``perfectos'' al estar basados en proporciones. Sin embargo, algo tan sencillo como el dibujo de un cuadrado de lado 1 ya ponía de manifiesto que dicho conjunto se quedaba corto para representar la totalidad de magnitudes ``reales'', pues la diagonal de dicho cuadrado medía $\sqrt{2}$, que no es racional.
@@ -411,7 +412,7 @@ Dentro de este capítulo, tenemos varias secciones. La primera estará dedicada 
 \section{Propiedades Algebraicas de $\mathbb R$}
 En esta, la primera sección, vamos a estudiar detenidamente tres características fundamentales de los números reales para el Análisis: su estructura algebraica de cuerpo, su orden total y sus propiedades métricas.
 
-Aunque inicialmente no se entienda del todo qué significan tales propiedades, según se avance en la sección podremos observar que no estaremos haciendo más que cimentar y formalizar con una base sólida todas aquellas propiedades que dábamos por hecho y que ya utilizábamos cuando trabajábamos con números reales. Sin embargo, no está de más explicitar qué cosas podemos hacer \textbf{porque estamos en el conjunto de los reales}, pues por primera vez nos va a mostrar propiedades que otros conjuntos no tienen.
+Estas características son la base formal y el cimiento que justifican las propiedades que dábamos por hecho y venimos utilizando desde siempre para operar con números reales. Sin embargo, no está de más explicitar qué puede hacerse gracias \textbf{a estar en el conjunto de los reales}, para ser conscientes de que otros conjuntos no permiten tales operaciones.
 
 \subsection{Estructura de cuerpo}
 La primera de las características mencionadas es la de \textit{estructura de cuerpo}, pero ¿qué significa esto? Pues bien, cuando un conjunto junto con dos operaciones cumple ciertas propiedades, se dice que tiene \textbf{estructura de cuerpo}. Esto es lo que ocurre precisamente con el conjunto de los reales y las operaciones suma y producto.
@@ -1058,6 +1059,7 @@ e^{in\theta}=e^{i\alpha} & \Rightarrow \theta=\frac{\alpha+2\pi k}{n}
 con $k=0,1,..., n-1$.
 
 \section{Supremos e Ínfimos}
+\label{sec: supremo e infimo}
 En general, no sólo trabajaremos con el conjunto total de los números reales sino que en ocasiones manejaremos subconjuntos del mismo. Cuando estos subconjuntos están ``delimitados'', esto es, se encuentran dentro de algún intervalo concreto (finito por alguno de los dos lados) conviene estudiar una propiedad que hace único el conjunto de los números reales.
 
 Para saber de qué se trata, observemos el conjunto de los números positivos $\mathcal T^+ := \{a\in \mathbb{R} : a > 0\}$. Notamos que cualquier número por debajo del $0$ no pertenece al conjunto, luego el $0$ hace de ``frontera'' de dicho conjunto por abajo. Sin embargo, atendiendo a la justificación \textit{ningún número por debajo pertenece al conjunto} también podríamos decir que es ``frontera'' el $-1$, el $-1/2$, ... entonces ¿por qué es especial el $0$? Porque es la ``mejor frontera'', es decir, es la más cercana al conjunto que no se deja ningún elemento fuera. Para demostrarlo, basta comprobar que cualquier otro valor cumple una de las dos siguientes alternativas:
@@ -1439,6 +1441,7 @@ a^x=\sup\{a^r: r<x\}=\inf\{a^r: r>x\}
 Lógicamente en este pequeño argumentario hemos omitido gran cantidad de pasos importantes: demostraciones de las operaciones con potencias y de los resultados para raíces, demostración de la coherencia de la definición con las versiones para $x$ entero y racional... No obstante, la disquisición anterior sirve como ejemplo para justificar la importancia que tienen conceptos tan sencillos como son el supremo y el ínfimo.
 
 \chapter{Sucesiones y Series}
+\label{chap: sucesiones y series}
 No es raro que algunos de nosotros hayamos visto en algún momento de nuestra vida algún ejercicio de completar la secuencia como el siguiente:
 \[
 1, 1/2, 1/4, 1/8, ???
@@ -1448,23 +1451,28 @@ Si prolongamos esta secuencia de forma indefinida tendremos lo que se conoce com
 Las sucesiones y las series son una parte muy importante del curso porque están presentes en cosas muy básicas (la definición de la exponencial real), pero facilitan y fundamentan cosas más complejas (como la caracterización de la continuidad de las funciones reales). Además, también tiene gran interés en ser estudiadas como un fin en sí mismo. Multitud de situaciones de la vida real se rigen por sucesiones númericas y conocer las virtudes y defectos de la mismas nos permite trasladar el conocimiento a todas estas áreas.
 
 \section{Sucesiones}
-Como ya hemos comentado al inicio del capítulo, el primero de los nuevos objetos matemáticos que vamos a estudiar son las sucesiones. Una sucesión de elementos de un conjunto es una lista infinita y numerada de elementos del mismo que se puede entender como una función ``discretizada''. El término discretizada se utiliza porque, a diferencia de sus primas hermanas las funciones reales donde el término $x$ puede tomar cualquier valor real, en nuestro caso la variable se denotará $n$ para indicar que sólo puede tomar valores enteros, esto es, discretos.
+Esta sección estudia la definición y el comportamiento de lo que conocemos como \textit{sucesiones} en Matemáticas. Las sucesiones forman parte fundamental... ???
+
+La sección está organizada de manera que primero se vea la definición de sucesión y cómo operar con sucesiones, después se estudie qué significa la convergencia de sucesiones y por primera vez aparezca el concepto de límite (que será central el resto del manual) y, por último, ???.
+
+\subsection{Definición de sucesión}
+Una sucesión de elementos de un conjunto es una lista infinita y numerada de elementos del mismo. Esto puede verse como una función ``discretizada'', es decir, una función que toma un valor entero (el índice de la lista) y devuelve un elemento del conjunto (el que ocupa dicha posición en la lista).
 
 \begin{defi}[Sucesión]
-Sea $M$ un conjunto no vacío, definimos una \textbf{sucesión de elementos\footnote{Si $M=\mathbb R$ entonces decimos que se trata de una \textbf{sucesión numérica}.} de $M$} como una función:
+Sea $M$ un conjunto no vacío, definimos una \textbf{sucesión de elementos de $M$} como una función:
 \begin{eqnarray*}
-f: \mathbb N &\rightarrow& M \\
+f: \mathbb N &\longrightarrow& M \\
 n &\longmapsto& x_n
 \end{eqnarray*}
-y la denotaremos por $\{x_n\}_{n=1}^\infty\subset M$
+y la denotaremos por $\{x_n\}_{n=1}^\infty\subset M$.
 \end{defi}
 
-Si nos fijamos la notación anterior es muy adecuada, pues, a pesar de tratarse de una función, en el fondo estamos determinando una lista numerada de elementos que se escribiría de la siguiente manera:
+La notación anterior es bastante acertada, pues, a pesar de definirse formalmente como una función, hace más explícito el concepto de trabajar con una lista numerada infinita.
 \[
 \{f(1),f(2),f(3), ...\}\Leftrightarrow \{x_1,x_2,x_3,...\}=\{x_n\}_{n\in \mathbb N}=\{x_n\}_{n=1}^{\infty}
 \]
 
-Cuando ya hemos diseñado con exactitud el nuevo objeto matemático ¿qué es lo que toca hacer? Efectivamente, describir como se comporta dicho objeto con respecto a las operaciones habituales que nos parece razonable hacer sobre el mismo. En nuestro caso, como se trata de sucesiones numéricas, lo suyo sería describir cómo se comportan las sucesiones con respecto a las operaciones que constituyen el cuerpo de los reales.
+A partir de ahora, nuestro objetivo es centrarnos en las sucesiones reales, esto es, aquellas cuyo conjunto de elementos es subconjunto de los reales y, lo primero entonces, será describir como se comportan con respecto a las operaciones habituales de $\mathbb R$ que estudiamos en el capítulo \href{cap: numeros reales}.
 
 \begin{defi}[Operaciones con sucesiones numéricas]
 Sean $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset \mathbb R$ dos sucesiones numéricas, definimos las operaciones entre ellas de la siguiente manera:
@@ -1482,27 +1490,35 @@ Sean $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ y $\{y_n\}_{n=1}^{\infty}\subset 
 \begin{obs}
 Como hemos reducido las operaciones entre sucesiones a operaciones entre sus elementos igualmente numerados, éstas heredan las propiedades que tenían los números reales con estas operaciones (asociativa, distributiva, ...).
 
-Lo relevante de este asunto, aunque a priori no se entienda de momento del todo, es que esta definición confiere a las sucesiones numéricas de estructura de \textbf{espacio vectorial} y para quien haya estudiado Álgebra Lineal permite utilizar los enunciados de esta disciplina para trabajar con sucesiones.
+Lo relevante de este asunto es que esta definición confiere a las sucesiones numéricas de estructura de \textbf{espacio vectorial}, lo que permite trabajar con ellas utilizando los resultados del Álgebra Lineal.
 \end{obs}
 
 \subsection{Convergencia}
 \label{subsec:convergencia}
-Si retomamos la sucesión de la introducción del capítulo podemos ver que conforme los valores de $n$ aumentan, es decir, conforme avanzamos en la sucesión los elementos de la misma cada vez son más próximos a 0.
+
+Lo primero de lo que uno puede darse cuenta cuando observa por primera vez el concepto de sucesión es que hay algunas que ``parece'' que se ``acercan'' a un valor. Por ejemplo, si retomamos la sucesión de la introducción del capítulo, podemos ver que conforme los valores de $n$ aumentan (según avanzamos en la sucesión) sus elementos cada vez son más próximos a 0.
 \[
 \left\lbrace\frac{1}{2^n}\right\rbrace_{n=1}^{\infty} = \frac{1}{1}, \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \cdots
 \]
-Esta aproximación hacia un valor es lo que conocemos como \textit{convergencia} o \textit{límite} de una sucesión. Sin embargo y como todo, precisamos una definición formal para clarificar que significa eso de ``acercarse''. Para ver esta necesidad de formalismos, ¿serías capaz de decir si la siguiente sucesión converge? ¿A qué valor?
+
+Esta ``aproximación hacia un valor'' es lo que conocemos como \textbf{convergencia} o \textbf{límite} de una sucesión. Sin embargo, de la misma manera que en \href{chap: supremo e infimo} empleamos mucho tiempo en formalizar eso de ``ser la mejor cota'', aquí deberíamos perder tanto o más en clarificar que significa eso de ``acercarse''. Por ejemplo, con la intuición que hemos dado hasta ahora no quedaría muy claro si la siguiente sucesión converge ni a qué valor
 \[
 \frac{1}{1}, 1, \frac{1}{2}, 1, \frac{1}{4}, 1, \frac{1}{8}, \cdots
 \]
 
 \begin{defi}[Convergencia]
 Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión numérica, decimos que ésta \textbf{converge o tienen límite en $l\in \mathbb R$} si y sólo si:
-$$\forall \varepsilon>0: \exists n_0\in \mathbb N : \forall n\geq n_0: x_n\in (l-\varepsilon, l+\varepsilon)= E(l,\varepsilon)=|x_n-l|<\varepsilon$$
+$$\forall \varepsilon>0: \exists n_0\in \mathbb N : \forall n\geq n_0: |x_n-l|<\varepsilon$$
 y lo denotaremos por $x_n \xrightarrow{n\rightarrow \infty}l$ o $\lim_{n\rightarrow\infty}x_n = l$.
 \end{defi}
 
-Vamos a desentrañar bien qué quiere decir la definición anterior utilizando como ejemplo la sucesión $\{1/2^n\}_{n=0}^\infty$ del capítulo. Como intuitivamente sabemos que el límite es $0$, el enunciado dice que para cualquier $\varepsilon$ que escojamos existirá un término de la sucesión a partir del cual todos los demás estén dentro del entorno $E(0,\varepsilon)$. 
+\begin{obs}
+	En la definición anterior se podría haber sustituido la expresión $|x_n-l|$ por sus equivalentes $x_n\in (l-\varepsilon, l+\varepsilon)$ o $E(l,\varepsilon)$. Sin embargo, se ha puesto esa por ser las más usada luego en demostraciones o resultados.
+\end{obs}
+
+Vamos a desentrañar bien qué quiere decir la definición anterior utilizando como ejemplo la sucesión $\{1/2^n\}_{n=0}^\infty$ del capítulo. Como intuitivamente sabemos que el límite es $0$, la aplicación literal del enunciado dice que para cualquier $\varepsilon > 0$ que escojamos, existirá un índice $n_0$ a partir del cual todos los elementos estarán dentro del entorno $E(0,\varepsilon)$.
+
+Por tanto, si por ejemplo escogemos $\varepsilon = 1/15$, vemos que el $n_0$ a partir del cual todos los $x_n : n\geq n_0$ están dentro del entorno es el $n_0=4$ porque $x_4 = 1/2^4 = 1/16$ es el primer término que está dentro y a partir de él todos los demás nunca vuelven a salirse del entorno $E(0, 1/15)$ tal y como se muestra en la figura \ref{fig:convergencia}.
 
 \begin{figure}[h]
 \centering
@@ -1538,13 +1554,13 @@ Vamos a desentrañar bien qué quiere decir la definición anterior utilizando c
 \label{fig:convergencia}
 \end{figure}
 
-Por tanto, si por ejemplo escogemos $\varepsilon = 1/15$ vemos que el $n_0$ a partir del cual todos los $n\geq n_0$ están dentro del entorno es el $n_0=4$ porque el $1/2^4 = 1/16$ es el primer término que está dentro y a partir del cual TODOS los términos de la sucesión nunca vuelven a estar más lejos de $1/15$ unidades. Esto que se ha hecho para $\varepsilon= 1/15$ se puede hacer para cualquier valor que se desee y de nuevo encontraremos otro término de la sucesión que caerá dentro del intervalo, etc. Es lo que decíamos intuitivamente de ``acercarse infinitamente''.
+Esto que se ha hecho para $\varepsilon= 1/15$ se puede hacer para cualquier valor que se desee y de nuevo encontraremos otro término de la sucesión que caerá dentro del intervalo y a partir del cual... Es precisamente a lo que nos referíamos de manera informal como ``acercarse infinitamente''.
 
-\begin{obs}
-Nótese que la sucesión de la introducción del subapartado no converge ni a $0$ ni a $1$ ni a ambos a la vez. Si escogemos $0$ como límite, siempre tendremos términos (los impares que van al $1$) que no estarán dentro de su entorno $E(0,\varepsilon)$ y análogamente ocurre con el $1$. Claramente no podemos tomar los dos límites a la vez porque se nos escapan, por un motivo u otro, los términos que convergen al otro valor.
-\end{obs}
+Con la definición formal en la mano, ahora sí podemos analizar la convergencia de la sucesión $\frac{1}{1}, 1, \frac{1}{2}, 1, \frac{1}{4}, 1, \frac{1}{8}, \cdots $. A priori, podríamos pensar que la sucesión convergería a $0$, a $1$ o a ambos a la vez. Vamos a ver que la respuesta finalmente es que no converge a ninguno de ellos.
 
-Este hecho de que no pueda haber varios límites porque si la sucesión se acerca infinitamente a uno necesariamente no puede acercarse también infinitamente al otro (porque si no ambos límites estarían infinitamente cerca, es decir, serían el mismo) no es algo aislado. Es precisamente lo que demuestra la \textit{Unicidad del límite}.
+Si escogemos $0$ como límite, $\epsilon$ menores que 1 siempre se dejarán los términos impares, que no estarán dentro del entorno $E(0,\varepsilon)$. Análogamente con $1$, también $\epsilon$ menores que 1 siempre\footnote{La justificación de palabra que se ha dado no es una demostración formal de que esto ocurre. Habría que argumentar que siempre hay elementos de la forma $\frac{1}{2^n}$ que verifican que son menores que $1-\varepsilon$.} se dejarán algún término par que no estarán dentro del entorno $E(1,\varepsilon)$. Y, obviamente, no podemos tomar como límite a ambos pues en el momento que $\varepsilon < \frac{1}{2}$ la intersección de ambos entornos es vacía (luego no puede haber elementos de la sucesión en ella).
+
+El ejemplo anterior, además de ser un buen ejercicio para entender lo que significa la convergencia, pone de manifiesto que no puede haber varios límites porque si la sucesión se acerca infinitamente a uno necesariamente no puede acercarse también infinitamente al otro (porque si no ambos límites estarían infinitamente cerca, es decir, serían el mismo). Este resultado, que se verifica para la sucesión anterior, no es algo aislado y es precisamente lo que se conoce como \textit{Unicidad del límite}.
  
 \begin{prop}[Unicidad del límite]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión convergente, entonces el límite de convergencia es único.
@@ -1555,10 +1571,10 @@ $$\exists l_1,l_2: \lim_{n\rightarrow \infty}x_n=l_i$$
 Como son dos números reales $l_1<l_2$, tomamos $\varepsilon=\frac{l_2-l_1}{2}$, con esto sabemos que $\exists n_0\in \mathbb N: \forall n>n_0: |x_n-l_1|<\varepsilon$ y también $\exists m_0\in \mathbb N: \forall n>m_0: |x_n-l_2|<\varepsilon\Rightarrow n\geq max\{n_0,m_0\}\Rightarrow x_n\in E(l_1,\varepsilon)=(l_1-\varepsilon, l_2+\varepsilon)\wedge x_n\in E(l_2, \varepsilon)=(l_2-\varepsilon, l_2+\varepsilon)$, estos conjuntos deben ser disjuntos pensando en el dibujo mental, así se ve que: $l_1+\varepsilon\leq l_2-\varepsilon$ concretamente $=$ porque $2\varepsilon=l_2-l_1\Rightarrow \#$
 \end{demo}
 
-En la figura \ref{fig:convergencia}, podemos observar un dato curioso: toda la sucesión salvo un número finito de términos cabe en un intervalo centrado en el límite. Esto quiere decir que la gran mayoría de la sucesión está acotada (porque cabe en el intervalo) y el resto de términos que no caben es un conjunto finito, luego podemos escoger el mayor distancia tenga al límite y entonces TODA la sucesión cabe en ese intervalo grande. Por tanto, los términos de una sucesión convergente forman un conjunto acotado.
+En la figura \ref{fig:convergencia}, podemos observar un dato curioso: toda la sucesión salvo un número finito de términos está contenida en un intervalo centrado en el límite. Esto quiere decir que la gran mayoría de la sucesión está acotada (porque está dentro del intervalo) y el resto de términos, al ser un conjunto finito, permiten determinar cuál es el más lejano al límite. Si escogemos un intervalo que contenga al intervalo de la parte que converge y al más lejano de los demás, entonces toda la sucesión estará contenida en ese intervalo grande, luego los términos de una sucesión convergente formarán un conjunto acotado.
 
 \begin{prop}[Acotamiento por convergencia]
-Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión convergente, entonces $\exists M>0: \forall n\in \mathbb N: |x_n|\leq M$, es decir, está acotada.
+Sea $\{x_n\}_{n=1}^{\infty}\subset \mathbb R$ una sucesión convergente, entonces $\exists M>0: \forall n\in \mathbb N: |x_n|\leq M$, es decir, la sucesión está acotada.
 \end{prop}
 \begin{demo}
 Sabemos que $l$ es el límite de la sucesión así que sabemos que $\forall \varepsilon>0: \exists n_0: \forall n\geq n_0: |x_n-l|<\varepsilon$. Tomamos $\varepsilon=1$
@@ -1572,7 +1588,7 @@ El recíproco, es decir, que un conjunto de términos de una sucesión que esté
 \[
 \exists l \in \mathbb R: \forall \varepsilon>0: \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\varepsilon
 \]
-Si $n$ es par, $|1-l|<\varepsilon$ y si $n$ es impar, $|-1-l|<\varepsilon$. Tomando entonces $\varepsilon=\frac{1}{2}$, se tiene que $|1-l|<\frac{1}{2}$  y $|-1-l|<\frac{1}{2}$, luego $x\in (\frac{1}{2}, \frac{3}{2})\cap (\frac{-3}{2}, \frac{-1}{2})=\emptyset$ así que es absurdo.
+Por ser convergente, para cualquier $\varepsilon$ que escojamos, si $n$ es par entonces $|1-l|<\varepsilon$ y si $n$ es impar, $|-1-l|<\varepsilon$. Tomando entonces $\varepsilon=\frac{1}{2}$, se tiene que $|1-l|<\frac{1}{2}$ y $|-1-l|<\frac{1}{2}$. Como $x\in (\frac{1}{2}, \frac{3}{2})\cap (\frac{-3}{2}, \frac{-1}{2})=\emptyset$, queda demostrado por reducción al absurdo.
 \end{obs}
 
 Hasta ahora no lo hemos hecho, pero realmente la única forma que tenemos por el momento de calcular los límites de una sucesión es con la propia definición que es, cuanto menos, engorrosa. Una forma de facilitar las cosas sería saber si las operaciones entre sucesiones se pueden extender a los límites que estas tengan porque, de serlo, reduciría el cálculo de límites de sucesiones complejas al cálculo en sucesiones más sencillas y luego simplemente operar.
@@ -1655,7 +1671,7 @@ Esto último porque sabemos que dado $\varepsilon>0 : \exists n_0\in \mathbb N: 
 \end{enumerate}
 \end{demo}
 
-Al igual que tenía sentido preguntarse por el comportamiento de la convergencia ante las operaciones algebraicas de $\mathbb{R}$, tiene sentido preguntarse por su comportamiento ante las propiedades de \textit{orden total} que vimos en el capítulo anterior. Esta vez, no nos servirán tanto (aunque también) para conocer la convergencia, sino para acotar dicha convergencia. 
+Al igual que tenía sentido preguntarse por el comportamiento de la convergencia ante las operaciones algebraicas de $\mathbb{R}$, tiene sentido preguntarse por su comportamiento ante las propiedades de \textit{orden total} que vimos en el capítulo anterior.
 
 \begin{prop}[Convergencia y Orden]
 Sean $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ sucesiones convergentes a $x,y\in \mathbb R$ respectivamente, entonces:
@@ -1685,7 +1701,7 @@ $$z_n=(z_n-x_n)+x_n\Rightarrow \lim_{n\rightarrow \infty} z_n=\lim_{n\rightarrow
 \end{enumerate}
 \end{demo}
 
-Con respecto a estas relaciones de orden que hemos analizado, falta por observar un caso particular que se produce cuando la sucesión toma valores cada vez más grandes o cada vez más pequeños de forma continuada, es decir, cuando trabajamos con sucesiones que siempre crecen o decrecen.
+Con respecto a estas relaciones de orden, hay un caso particular bastante frecuente a la hora de trabajar con sucesiones y que reviste gran importancia. Estas son precisamente aquellas cuyos valores cada vez son más grandes o más pequeños de forma continuada, es decir, cuando trabajamos con sucesiones que siempre crecen o decrecen.
 
 \begin{defi}[Monotonía]
 Una sucesión de números de reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se llama \textbf{monótona creciente\footnote{Decimos que es estrictamente creciente si la desigualdad es estricta}} si y sólo si:
@@ -1698,7 +1714,7 @@ Una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$, se lla
 \]
 \end{defi}
 
-Con la definición que hemos dado hay una cosa que parece casi evidente: si tenemos una sucesión creciente\footnote{Lo mismo podría decirse de una sucesión decreciente con cota inferior.} y acotada superiormente esta se va a ir ``aplastando'' cada vez más hacia esa cota superior. Más concretamente, la \textit{mejor cota} es sobre la que se aplastará cada vez más la sucesión, lo cual motiva el siguiente enunciado.
+Con la definición que hemos dado hay una cosa que parece casi evidente: si tenemos una sucesión creciente\footnote{Lo mismo podría decirse de una sucesión decreciente con cota inferior.} y acotada superiormente esta se va a ir ``aplastando'' cada vez más hacia esa cota superior. Más concretamente, la \textit{mejor cota} es sobre la que se aplastará cada vez más la sucesión, lo que motiva el siguiente resultado.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión monótona creciente y acotada superiormente, entonces es convergente al \textbf{supremo} de los elementos de la sucesión.
@@ -1727,9 +1743,9 @@ Del mismo modo que antes, se cumplen las premisas de convergencia sin mentir en 
 \end{demo}
 
 \subsubsection{Divergencia}
-Cuando una sucesión no converge a ningún valor concreto no podemos decir directamente que no converge, hay ciertas diferencias que obligan a hilar un poco más fino. Veamos un ejemplo, si consideramos la sucesión $\{(-1)^n\}_{n=1}^\infty$ claramente podemos decir que no converge a ningún valor porque simplemente salta de $1$ a $-1$ todo el rato sin saber qué ocurrirá según $n\rightarrow \infty$. En contraposición, la sucesión $\{n\}_{n=1}^\infty$ es cierto que no converge a ningún valor \textit{real}, pero ciertamente podríamos decir que está ``converge'' a $\infty$ conforme avanza $n$.
+Cuando una sucesión no converge a ningún valor concreto no podemos decir directamente que no converge, hay ciertas diferencias que obligan a hilar un poco más fino. Si consideramos la sucesión $\{(-1)^n\}_{n=1}^\infty$ claramente podemos decir que no converge a ningún valor porque simplemente alterna entre $1$ y $-1$ continuamente y no podemos determinar qué ocurrirá según $n\rightarrow \infty$. En contraposición, la sucesión $\{n\}_{n=1}^\infty$ es cierto que no converge a ningún valor \textit{real}, pero ciertamente podríamos decir que está ``converge'' a $\infty$ según $n\rightarrow\infty$.
 
-Lo mismo podríamos decir utilizando de ejemplo otra sucesión para $-\infty$ y el caso es que a ``converger'' a $\pm\infty$ es lo que precisamente conocemos como \textit{divergencia}.
+Esta diferencia entre no converger a nada o ``converger'' a $\pm\infty$ merece una distinción especial, que es lo que conocemos como \textit{divergencia}.
 
 \begin{defi}[Divergencia]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica decimos que ésta \textbf{diverge o tiende a $\infty$}\footnote{Del mismo modo, la definición para la divergencia a menos infinito viene dada por $\forall M>0: \exists n_0\in \mathbb N: \forall n \geq n_0: x_n\leq -M$} si y sólo si:
@@ -1739,7 +1755,7 @@ Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica decimos que 
 y lo denotamos por $\lim_{n\rightarrow\infty} x_n = \infty$.
 \end{defi}
 
-Justo antes de empezar con la divergencia hicimos un comentario acerca de la convergencia de sucesiones monótonas que no están acotadas. Una pregunta que nos pudo surgir es la siguiente: ¿y si la sucesión es creciente, pero no está acotada? En ese caso lo que ocurre es que la sucesión crece indefinidamente, es decir, se hace infinitamente grande (pues de lo contrario si habría cota).
+De la misma manera que cuando teníamos una sucesión creciente/decreciente y acotada superior/inferiormente era evidente que esta debía converger a su supremo/ínfimo, cuando esta no está acotada es obvio que debe diverger a $\pm\infty$, pues crece/decrece indefinidamente y no hay cota que la limite.
 
 \begin{theo}[Divergencia y Monotonía]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, entonces
@@ -1761,7 +1777,9 @@ Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, entonces
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, si es divergente entonces no es acotada.
 \end{coro}
 
-Nuestros pasos se encaminan a presentar otro enunciado, esta vez incluyendo la divergencia como posibilidad, que nos permita trabajar con los límites con las operaciones permitidas entre sucesiones para simplificar los cálculos. No obstante, primero hay que solucionar un asunto delicado y es que no existe $\infty^{-1}$, es decir, que dividir por sucesiones divergente de momento no está permitido.
+Justo después de definir la convergencia, estudiamos cómo se comportan los límites con respecto a las operaciones habituales del cuerpo de los números reales. Ahora que hemos permitido $\infty$ como un valor más para el límite, no queda claro cómo podemos operar con él en base a esas normas. Por ejemplo, si tenemos una sucesión $\{x_n\}_{n=1}^\infty$ que diverge a $+\infty$, no sabemos calcular cuál es el límite de la sucesión $\{\frac{1}{x_n}\}_{n=1}^\infty$ porque no existe $\infty^{-1}$.
+
+Por tanto, merece la pena que dediquemos unas líneas a armonizar el cálculo de límites con la divergencia de sucesiones.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty \subset \mathbb R$ una sucesión numérica, entonces:
@@ -1789,7 +1807,7 @@ $$\mbox{Sea }M>0,\mbox{ tomamos }\varepsilon=\frac{1}{M}>0\Rightarrow \exists n_
 \end{enumerate}
 \end{demo}
 
-De esta manera, ya estamos preparados para poder definir cómo se comporta el nuevo elemento $\pm \infty$ con respecto a las operaciones habituales con números reales. Hemos preferido dar este resultado como definición para ahorrar tiempo con demostraciones, pero pensando en que se operan sucesiones cuando operamos sus límites se entiende perfectamente el porqué de cada una de las propiedades.
+Se va a dar el resultado como definición para ahorrar tiempo con demostraciones, pero si se piensa detenidamente en las sucesiones que se operan cuando operamos sus límites, se entiende perfectamente el porqué de cada una de las propiedades.
 
 \begin{defi}[$\mathbb{R}$ ampliado]
 Sea $\mathbb{R}$ el conjunto de los números reales, definimos como \textbf{$\mathbb R$ ampliado} a
@@ -1815,7 +1833,7 @@ Es importante destacar que en la definición anterior se han excluido ciertas si
 Estas son las conocidas \textbf{indeterminaciones} y precisamente llevan ese nombre porque al operar sucesiones dichos límites no siempre se obtiene los mismos resultados y dependen en su totalidad del caso concreto que observemos.
 \end{obs}
 
-Pues ahora sí, ya tenemos el resultado que nos da la seguridad de poder operar con los límites (esta vez ampliados) tal y como lo veníamos haciendo hasta ahora, eso sí, sin perder de vista las indeterminaciones que se nos han presentado y que no están contempladas como operaciones válidas en $\overline{\mathbb{R}}$
+Sin perder de vista las indeterminaciones que no están incluidas dentro de las operaciones admitidas de $\mathbb R$ ampliado, ya podemos presentar el incremento de las operaciones con límites vistas.
 
 \begin{prop}[Operaciones con límites infinitos]
 Sea $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ dos sucesiones convergentes a $x,y\in \overline{\mathbb R}$ respectivamente, entonces:
@@ -1828,7 +1846,8 @@ Sea $\{x_n\}_{n=1}^\infty$ y $\{y_n\}_{n=1}^\infty\subset \mathbb R$ dos sucesio
 \end{enumerate}
 \end{prop}
 
-Por último, vamos a añadir un par de resultados que simplifiquen la labor de determinar cuál es el límite de la sucesión que tenemos entre manos y que hasta ahora no se habían dado porque no teníamos definida ni la divergencia ni las operaciones entre límites de $\overline{\mathbb{R}}$.
+\subsubsection{Criterios de convergencia}
+Lo primero para poder operar con límites es conocer los límites de las sucesiones con las que se trabaja. Para ello, se incluyen a continuación una serie de criterios útiles para decidir acerca de la convergencia de sucesiones.
 
 \begin{theo}[Criterio del Cociente y la Raíz]
 Sea $\{x_n\}_{n=1}^\infty$ una sucesión numérica, entonces:
@@ -1838,18 +1857,22 @@ Sea $\{x_n\}_{n=1}^\infty$ una sucesión numérica, entonces:
 \lim_{n\rightarrow \infty}\sqrt[n]{|x_n|}<1 &\Rightarrow \lim_{n\rightarrow \infty} x_n=0\\
 \lim_{n\rightarrow \infty}\sqrt[n]{|x_n|}>1 &\Rightarrow \lim_{n\rightarrow \infty} |x_n|=\infty
 \end{align*}
-Cabe destacar que el caso en que dichos límites sean exactamente 1 no aporta ningún tipo de información acerca de la convergencia de la sucesión.
 \end{theo}
 
+\begin{obs}
+	Cabe destacar que el caso en que dichos límites son exactamente 1 no aporta ningún tipo de información acerca de la convergencia de la sucesión.
+\end{obs}
 
 \begin{ej}
-Consideremos la sucesión $\{\frac{1}{n^p}_{n=1}^\infty$ donde $p>0$ y comprobemos que converge a $0$:
+Consideremos la sucesión $\{\frac{1}{n^p}\}_{n=1}^\infty$ donde $p>0$ y comprobemos que converge a $0$:
 \[
 1\leq n<n+1\Rightarrow n^p < (n+1)^p \Rightarrow \frac{1}{(n+1)^p} < \frac{1}{n^p} \Rightarrow x_{n+1} < x_n \Rightarrow \{x\}_{n=1}^\infty \downarrow
 \]
-Como es una sucesión decreciente o converge a su ínfimo porque está acotada o diverge a $-\infty$. Desde luego, está acotada por el valor $0$ y precisamente es el ínfimo del conjunto de sus términos:
-$$\exists \alpha, \ 0 < \alpha \leq \frac{1}{n^p}: \forall n\in \mathbb N \Leftrightarrow n^p\leq \frac{1}{\alpha}\Rightarrow n\leq \left(\frac{1}{\alpha}\right)^{\frac{1}{p}}: \forall n \in \mathbb N\Rightarrow \#$$
-Llegamos a absurdo porque ya comentamos en el teorema \ref{theo:arquimediana} que los naturales no están acotados superiormente.
+Como es una sucesión decreciente o converge a su ínfimo (porque está acotada) o diverge a $-\infty$. Desde luego, está acotada por el valor $0$ y precisamente es el ínfimo del conjunto de sus términos:
+\[
+\exists \alpha, \ 0 < \alpha \leq \frac{1}{n^p}: \forall n\in \mathbb N \Leftrightarrow n^p\leq \frac{1}{\alpha}\Rightarrow n\leq \left(\frac{1}{\alpha}\right)^{\frac{1}{p}}: \forall n \in \mathbb N
+\]
+y concluimos con absurdo porque el teorema \ref{theo:arquimediana} afirma que los naturales no están acotados superiormente.
 \end{ej}
 
 \begin{ej}
@@ -2021,19 +2044,20 @@ $$\frac{n^\alpha}{(1+p)^n}\leq \frac{n^\alpha}{n^k\cdot C}=\frac{1}{n^{k-\alpha}
 
 \subsection{Subsucesiones}
 \label{sub:subsucesiones}
-En ocasiones, el estudio de una sucesión se entiende mejor eliminando índices o cogiendo algunos valores de esa lista ordenada. Este concepto de sucesión más pequeña a partir de una sucesión es lo que conocemos por \textit{subsucesión}. A priori, parece que el estudio de dicho elemento nos ofrece una visión más reducida de lo que ocurre con la sucesión, pero precisamente esta simplificación es la que en muchos casos ofrece resultados sorprendentes.
+
+En el caso de la sucesión $\{(-1)^n\}_{n=1}^\infty$ se entiende mucho mejor si se distingue por separado los índices impares de los pares. Esto mismo puede suceder en multitud de ocasiones, donde el estudio de una sucesión se simplifica notablemente se escogen solo algunos valores de esa lista ordenada. Este concepto de sucesión más pequeña a partir de una sucesión es lo que conocemos por \textit{subsucesión}.
+
+A priori, parece que el estudio de dicho elemento nos ofrece una visión más reducida de lo que ocurre con la sucesión, pero precisamente esta simplificación es la que en muchos casos ofrece resultados sorprendentes.
 
 \begin{defi}[Subsucesión]
 Sea $\{x_n\}_{n=1}^\infty\subset R$, se define una \textbf{subsucesión} de la misma como
-$$\{x_{n_k}\}_{k=1}^\infty=\{x_{n_1}, x_{n_2}, ..., x_{n_k}, ...\}: n_k<n_{k+1}$$
+\[
+\{x_{n_k}\}_{k=1}^\infty=\{x_{n_1}, x_{n_2}, ..., x_{n_k}, ...\}: n_k<n_{k+1}
+\]
 es decir, es un conjunto de \textbf{subíndices ordenados crecientemente} que forman una nueva sucesión más pequeña.
 \end{defi}
 
-\begin{ej}
-$$\{x_n\}_{n=1}^\infty =\{2,4,6,8,10,...\}\rightarrow \{x_{n_k}\}_{n=1}^\infty =\{4,8,12,...\}$$
-\end{ej}
-
-Seguro que en alguno de los ejemplos anteriores (o en ejercicios de clase) alguno habremos pensado: ``Con los términos pares podría demostrar esto o lo otro y con los impares aquello también''. Pues esa predisposición a ``partir'' la sucesión en otras subsucesiones que funcionan mejor es, para algunas cuestiones, una forma de facilitar el trabajo. En esa línea, presentamos los siguientes teoremas.
+Seguro que muchos casos concretos, suscitarán la tentación de ``partir'' la sucesión en otras subsucesiones que funcionan mejor es (como en el ejemplo de $\{(-1)^n\}_{n=1}^\infty$). Esto, en general, es una buena técnica y permite facilitar el trabajo y, en esa línea, se presentan los siguientes resultados.
 
 \begin{prop}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$, ésta converge a $l\in \mathbb R$ si y sólo si $\forall \{x_{n_k}\}_{k=1}^\infty : x_{n_k}\xrightarrow{k\rightarrow \infty} l$.
@@ -2106,11 +2130,19 @@ $$x_{n_k}\in J_{k-1}\wedge \varphi\in J_{k-1}\Rightarrow \left|x_{n_k}-\varphi\r
 \end{demo}
 
 \subsection{Sucesiones de Cauchy}
-Supongamos que tenemos una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$ que converge a $l\in \mathbb R$, entonces:
-$$\forall \varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\frac{\varepsilon}{2}$$
-De este modo, sabemos que para $n,m\geq n_0$ entonces $|x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon$, es decir, como ambos elementos de la sucesión están dentro del intervalo de centro el límite, la distancia entre ambos es menor que ese intervalo.
+Supongamos que tenemos una sucesión de números reales $\{x_n\}_{n=1}^\infty\subset \mathbb R$ que converge a $l\in \mathbb R$, por la propia definición de límite sabemos que:
+\[
+\forall \varepsilon>0, \exists n_0\in \mathbb N: \forall n\geq n_0: |x_n-l|<\frac{\varepsilon}{2}
+\]
+Por tanto, si escogemos $n,m\geq n_0$ deben cumplir la desigualdad superior y entonces podemos afirmar que 
+\[
+|x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon
+\]
+es decir, que la distancia entre ambos elementos se hace pequeña igual de rápido que la distnacia de cada uno con respecto al límite.  Esto se corresponde con la noción intuitiva de que si ambos elementos de la sucesión están dentro del entorno centrado en el límite, la distancia entre ambos debe ser menor que ese intervalo.
 
-Obviando la parte de la convergencia inicial, las sucesiones cuyos términos a partir de un cierto índice están suficientemente cerca unos de otros (todos de todos) tienen nombre propio y es lo que conocemos como \textit{sucesiones de Cauchy}.
+El desarrollo anterior pone de manifiesto que las sucesiones que convergen, ``agolpan'' sus términos entre sí cuanto más cerca se mira del límite (resultado que veremos más adelante). La pregunta es la siguiente: ¿qué hay de las sucesiones que ``agolpan'' sus términos entre sí cuanto más avanzo en la lista de la sucesión? ¿Convergerán a algún valor?
+
+Estas sucesiones cuyos términos a partir de un cierto índice están suficientemente cerca unos de otros (todos de todos) tienen nombre propio y es lo que conocemos como \textit{sucesiones de Cauchy}.
 
 \begin{defi}[Sucesión de Cauchy]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión, se dice que es una \textbf{sucesión de Cauchy} si y sólo si:
@@ -2136,6 +2168,10 @@ $$|x_n|-|x_{n_0}|\leq |x_n-x_{n_0}|<1\Rightarrow |x_n|\leq |x_{n_0}|+1$$
 Es decir, que todos los índices mayores de $n_0$ están acotados por el valor $|x_{n_0}|+1$. Ahora hay que ver los índices que no están comprendidos en la cantidad anterior: $\{|x_1|, \cdots, |x_{n_0-1}|\}$, pero como este es un conjunto finito, también está acotado por lo que escogiendo el máximo de ambas cotas, acota a todos los elementos de la sucesión.
 \end{demo}
 
+Las sucesiones de Cauchy son importantes porque permiten dar una definición formal de lo que son los números reales. Obviando detalles más avanzados, los números reales se pueden definir como los límites de las sucesiones de Cauchy de números racionales. Esto quiere decir que para cada real existe una sucesión de Cauchy formada por números racionales cuyo límite es dicho número real.
+
+Por ejemplo, si tomamos la sucesión $x_{n+1} = \frac{1}{2}\left( x_n + \frac{2}{x_n} \right)$ empezando en $x_0=1$, su límite es $\sqrt{2}$, que es irracional. Precisamente este es el motivo de que al siguiente teorema se le llame ``Teorema de completitud'', pues todo este razonamiento da testimonio de los números reales son el cuerpo que completa (analíticamente hablando) a los números racionales.
+
 \begin{theo}[Completitud de $\mathbb R$]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión\footnote{Este resultado es falso en los números $\mathbb Q$} de Cauchy, entonces $\{x_n\}_{n=1}^\infty$ es convergente.
 \end{theo}
@@ -2154,7 +2190,9 @@ Por tanto, dado un $\varepsilon>0,\exists n_0\in \mathbb N: k\geq k_0\Rightarrow
 \end{demo}
 
 \subsection{Límite inferior y superior de una sucesión}
-Muchas veces tenemos sucesiones que no convergen a ningún valor concreto, pero que siempre oscilan entre varios valores posibles, por ejemplo, la sucesión $\{(-1)^n\}_{n=1}^\infty$. Es cierto que dicha sucesión no converge, pero si podemos encontrar un conjunto acotado que contenga los posibles límites de cada subsucesión convergente. La cota superior e inferior de este conjunto son precisamente las que corresponden a las nociones de \textit{límite superior e inferior}.
+Hemos visto ya un par de ejemplos de sucesiones que no convergen a ningún valor concreto, pero que siempre oscilan entre varios valores posibles, como es el caso de la sucesión $\{(-1)^n\}_{n=1}^\infty$. Es cierto que dicha sucesión no converge, pero sus subsucesiones sí. Es evidente que no podemos afirmar que un posible límite de la subsucesión es el $2$ o $-7$, pero sí podemos afirmar que es $1$ o $-1$, luego ¿cómo podemos encontrar un conjunto que contenga los posibles límites de cada subsucesión convergente?.
+
+Veremos que este conjunto es acotado y las cotas superior e inferior son precisamente las que corresponden a las nociones de \textit{límite superior e inferior}.
 
 \begin{defi}
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión acotada y denotamos $N\in \mathbb N$, entonces definimos las sucesiones:
@@ -2168,12 +2206,15 @@ La monotonía de cada una es algo sencillo de ver. Sin embargo, lo realmente rel
 \[
 \forall n\in \mathbb N: a_1\leq a_N\leq b_N\leq b_1
 \]
-Por tanto, tenemos dos sucesiones monótonas y acotadas, luego el límite de ambas existe y es justo a dicho límite de cada una a lo que conocemos como límite inferior y superior de una sucesión.
+En consecuencia, tenemos dos sucesiones monótonas y acotadas, por lo que el límite de ambas existe y es justo a dicho límite de cada una a lo que conocemos como límite inferior y superior de una sucesión.
 
 \begin{defi}[Límite Inferior y Superior]
 Sea $\{x_n\}_{n=0}^\infty\subset \mathbb R$ una sucesión acotada y $\{a_N\}$ y $\{b_N\}$ sus sucesiones superior e inferior, definimos el \textbf{límite superior e inferior} de la sucesión $\{x_n\}_{n=1}^\infty$ como:
-$$\liminf_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}a_N$$
-$$\limsup_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}b_N$$
+\begin{align*}
+	\liminf_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}a_N
+	&&
+	\limsup_{n\rightarrow\infty}x_n=\lim_{N\rightarrow\infty}b_N
+\end{align*}
 \end{defi}
 
 \begin{prop}
@@ -2223,12 +2264,14 @@ Puede parecer que ya está demostrado en la propia definición de las sucesiones
 Si suponemos que $a$ es el límite de inferior, entonces sea $\varepsilon_1=1$ ocurre que $\exists n_1\in \mathbb N: a_1\leq x_{n_1}<a+1$ y por inducción podemos construir la siguiente sucesión: sea $\varepsilon_k= \frac{1}{k} : \exists n_k > n_k -1: a_{n_{k-1}}\leq x_{n_k}\leq a_{n_{k-1}}+\varepsilon_k$, por lo que se construye $\{x_{n_k}\}_{k=1}^\infty$ de manera que $a_{n_{k-1}}\leq x_{n_k}\leq a_{n_{k-1}}+\frac{1}{k}$ que vemos que por la regla del sandwich tiende a lo dicho.
 \end{demo}
 
-\begin{obs}
-Con ello queda probado que, si definimos el conjunto $L=\{x_0\in \mathbb R: \exists \{x_{n_k}\}, \ x_{n_k}\xrightarrow{k\rightarrow \infty} x_0\}\}$ de todos los puntos de $\mathbb{R}$ para los que existe alguna subsucesión convergente, entonces podemos redefinir ambos límites como:
+Por tanto, este último resultado prueba que, si definimos el conjunto de los límites de todas las posibles subsucesiones
+\[
+L=\{x_0\in \mathbb R: \exists \{x_{n_k}\}, \ x_{n_k}\xrightarrow{k\rightarrow \infty} x_0\}
+\]
+entonces efectivamente los límites superior e inferior son respectivamente las cotas superiore e inferior de dicho conjunto.
 \begin{align*}
 \liminf_{n\rightarrow\infty}x_n=\inf L && \limsup_{n\rightarrow\infty}x_n=\sup L
 \end{align*}
-\end{obs}
 
 \subsection{Límites en el exponente}
 Hasta ahora hemos demostrado que el límite se distribuye razonablemente en la suma y el producto de sucesiones. Sin embargo, una propiedad útil y que aún no hemos demostrado sería saber si también ocurre lo mismo con la exponencial, es decir, ¿si $x_n \xrightarrow{n\rightarrow \infty} x$ y $y_n \xrightarrow{n\rightarrow \infty} y$ la sucesión $x_n^{y_n} \xrightarrow{n\rightarrow \infty} x^y$?
@@ -2276,9 +2319,49 @@ $$z_N\leq a_N\leq y_N\Rightarrow z_N^{z'_n}\leq a_N^{z'_n}\leq a_N^{x_n}\leq a_N
 \end{demo}
 
 \section{Series Numéricas}
-Hasta ahora, por muy grande que haya podido ser, las sumas que hemos realizado siempre han sido sumas de tipo finito, pero alguno podría preguntarse ¿qué ocurre si sumamos infinitos términos? Esta idea es precisamente la que hay detrás de las series numéricas, que consisten fundamentalmente en calcular hacia que valor converge una suma cuando está se va haciendo infinita.
+Hasta el momento, por muy grande que hayan podido ser, las sumas que hayamos podido realizar siempre han sido sumas de un número \textbf{finito} de términos, pero tiene sentido preguntarse qué ocurriría si se suman \textbf{infinitos} términos. Esta idea es precisamente la que hay detrás de las \textit{series numéricas}.
 
-Sin embargo, como hemos dicho, hasta ahora sólo sabemos sumar cantidades de tipo finito, luego ¿cómo planteamos una operación que involucra infinitos términos? Pues como hacemos casi siempre que encontramos algún concepto que involucra de algún modo el ``infinito'': los límites. La posible solución sería calcular la suma hasta término $1-\mbox{ésimo}$, $2-\mbox{ésimo}$, $3-\mbox{ésimo}$, ... y considerarlos como términos de una sucesión. ¿Cuál será entonces la suma de los infinitos términos? Pues el límite de convergencia de dicha sucesión.
+La respuesta fácil a priori es obvia: la suma crece continuamente y decimos que tiene como resultado $\infty$. Pero cuando uno se para a analizar con detenimiento, observa que no se puede responder tan fácilmente. Supongamos que queremos realizar la siguiente suma
+\[
+1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots
+\]
+Si dibujamos la progresión de la suma en un segmento, observamos que la suma aumenta indefinidamente, ¡pero desde luego no converge a infinito!
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+    % Dibuja una línea de 0 a 2
+    \draw[thick] (0,0) -- (6,0);
+    
+    % Dibuja marcas para 0, 1, 2
+    \foreach \x/\label in {0/$0$, 3/$1$, 6/$2$}
+    {
+        \draw[thick] (\x,0.1) -- (\x,-0.1) node[below] {\label};
+    }
+
+    % Dibuja las sumas parciales
+    % Primera suma: 1
+    \draw[thick, red] (0,0.3) -- (3,0.3) node[midway, above] {$1$};
+    
+    % Segunda suma: 1 + 1/2 = 1.5
+    \draw[thick, blue] (3,0.6) -- (4.5,0.6) node[midway, above] {$\frac{1}{2}$};
+    
+    % Tercera suma: 1 + 1/2 + 1/4 = 1.75
+    \draw[thick, green] (4.5,0.9) -- (5.25,0.9) node[midway, above] {$\frac{1}{4}$};
+    
+    % Cuarta suma: 1 + 1/2 + 1/4 + 1/8 = 1.875
+    \draw[thick, purple] (5.25,1.2) -- (5.625,1.2) node[midway, above] {$\frac{1}{8}$};
+	\end{tikzpicture}
+	\caption{Representación de la suma $1 + 1/2 + 1/4 + 1/8 + \cdots$.}
+	\label{fig: suma inversos potencias de dos}
+\end{figure}
+
+Para abordar con detenimiento el estudio de las series, la primera parte se centra en la definición formal como sucesiones para después, en la segunda parte, estudiar los límites de las mismas.
+
+\subsection{Definición de serie}
+La cuestión ahora es cómo definir formalmente una serie para estudiar cuándo su suma converge a un valor concreto y cuándo crece indefinidamente. El mejor hecho de convergencia suscita el concepto de límite y éste el de sucesión.
+
+La posible solución sería calcular la suma hasta término $1-\mbox{ésimo}$, $2-\mbox{ésimo}$, $3-\mbox{ésimo}$, ... y considerarlos como términos de una sucesión. ¿Cuál será entonces la suma de los infinitos términos? El límite de convergencia de dicha sucesión.
 
 \begin{defi}[Serie numérica]
 Sea $\{x_n\}_{n=1}^\infty\subset \mathbb R$ una sucesión numérica, se define la \textbf{serie numérica} asociada como la sucesión de sumas parciales:
@@ -2308,10 +2391,14 @@ y de este modo podemos calcular el límite de la misma para conocer la convergen
 \end{ej}
 
 \subsection{Criterios de convergencia}
-En ocasiones, como en el ejemplo anterior, será sencillo incluso calcular el valor concreto del límite de convergencia de una serie, pero en general no siempre será tan fácil. En su lugar, optaremos por determinar cuando una serie es o no convergente para que, en caso de requerirlo, perdamos nuestro tiempo calculando el límite (si existe) a través de otros métodos matemáticos que aproximen o den idea de dicho límite.
+Una vez que hemos reducido el estudio de series al estudio de sucesiones, estudiar la convergencia de las mismas consistirá en estudiar la convergencia de las series asociadas.
+
+Normalmente, calcular el límite no es tan sencillo como ocurría en sucesiones. En su lugar, optaremos por determinar cuando una serie tiene ese límite o diverge hacia infinito, sin calcular\footnote{No obstante, esto no puede ser motivo de desánimo, pues en caso de requerirlo basta con aplicar alguna técnica numérica que lo proporcione. Sin embargo, lo que sí es importante para poder aplicar dicha técnica es saber si el límite realmente es un valor o simplemente diverge, de ahí su importancia.} el límite explícitamente.
+
+Por ello, se presentan a continuación una serie de resultados que sirven como criterios de evaluación de la convergencia de series.
 
 \begin{theo}
-Sea $\sum_{n=1}^\infty x_n$ una serie convergente\footnote{Es habitual encontrar la notación $\sum_{n=1}^\infty x_n < \infty$ para denotar que algo es convergente (también es usual en integrales)}, entonces la sucesión de términos que se suman tiende a $0$, es decir:
+Sea $\sum_{n=1}^\infty x_n$ una serie convergente, entonces la sucesión de términos que se suman tiende a $0$, es decir:
 $$\sum_{n=1}^{\infty} x_n <\infty \Rightarrow \lim_{n \rightarrow \infty} x_n =0$$
 \end{theo}
 \begin{demo}
@@ -2379,7 +2466,7 @@ $$\left|\sum_{m+1}^{n} x_k\right| \leq \sum_{m+1}^{n} \left|x_k\right|  < \varep
 \end{demo}
 
 \begin{ej}
-Como contraejemplo ejemplo para el recíproco se tiene la serie armónica alternada: $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ que converge a $\ln(2)$, pero $\sum_{n=1}^{\infty} |x_n|$ que es la serie armónica diverge.
+Como contraejemplo para el recíproco, podemos ver que la serie armónica alternada: $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ converge a $\ln(2)$, pero $\sum_{n=1}^{\infty} |x_n|$, que es la serie armónica, diverge.
 \end{ej}
 
 \begin{coro}
@@ -2433,7 +2520,9 @@ $$\Rightarrow \sum y_n \mbox{ converge }\Rightarrow \Sigma x_n \mbox{ converge}$
 \end{demo}
 
 \subsection{Convergencia absoluta y condicional}
-Ahora que ya hemos visto lo que son las series y qué significa que estas converjan, vamos a matizar un poco cómo es esta convergencia. Aunque se trate de sumas, podemos estar sumando algún término negativo que en lugar de ``aportar'' a la suma esté restando valor a la misma, es decir, que puede que si tomásemos en valor absoluto los términos que se van sumando la serie no converja, pero gracias a que algunos ``restan'' la serie original si converja. Estos dos tipos de convergencia, son precisamente los que dan lugar a las dos clases de convergencia que existen la \textit{convergencia absoluta} y la \textit{convergencia condicional}.
+Cuando analizamos la serie armónica alternada, ya vimos cómo la convergencia en ``crudo'' de la misma sí estaba asegurada mientras que la convergencia ``en valor absoluto'' de la misma no (pues era la serie armónica).
+
+El ejemplo anterior ya pone de manifiesto que hay series donde es posible que sumandos negativos ``arreglen'' una convergencia que, de tomarse en valor absoluto, no sería tal. Esto dos ``tipos'' de convergencia son los que precisamente van a dar lugar a la clasificación que haremos a continuación: \textit{convergencia absoluta} y la \textit{convergencia condicional}.
 
 \begin{defi}[Convergencia Absoluta y Condicional]
 Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converge absolutamente o es absolutamente convergente} si y sólo si la serie de los valores absolutos es convergente, es decir:
@@ -2448,7 +2537,7 @@ Sea $\sum_{n = 1}^{\infty} x_n$ una serie numérica, decimos que \textbf{converg
 \end{defi}
 
 \begin{obs}
-Si una serie es convergente, necesariamente debe ser o absolutamente convergente o condicionalmente convergente. Esto es así porque la convergencia absoluta es un hecho más fuerte que la de convergencia a secas, pues la una implica a la otra por el Corolario \ref{coro:convergencia_abs-convergencia} y, en consecuencia, las series que convergen absolutamente son un subconjunto de las series convergentes. Como su complementario son las que son condicionalmente convergentes y éstas también son subconjunto de las convergentes, queda demostrado que si se es convergente se es la una o la otra.
+La condición de ser absolutamente convergente es más fuerte que la convergencia, pues la una implica a la otra por el Corolario \ref{coro:convergencia_abs-convergencia}. Esto quiere decir que todas las series convergentes lo son de un modo u otro y que esto es sólo una distinción de cuán fuerte es la convergencia de la serie.
 \end{obs}
 
 \begin{theo}[Criterio de la Raíz y del Cociente]
@@ -2577,7 +2666,7 @@ esta serie. De este modo, si esta converge, entonces la subsucesión $\{s_{2^n}\
 \end{demo}
 
 \begin{obs}
-Este criterio resulta muy útil para decidir la convergencia de sucesiones en las que intervengan logaritmos, pues al tener $\ln (n)$ y sustituir $\ln (2^k)$ podemos sacar $k$ fuera para que nos quede una expresión más sencilla.
+Este criterio resulta muy útil para decidir la convergencia de sucesiones en las que intervengan logaritmos, pues al tener $\ln (n)$ y sustituir $\ln (2^k)$ podemos extraer $k$ fuera para que nos quede una expresión más sencilla.
 \end{obs}
 
 
@@ -2635,10 +2724,12 @@ Ya hemos visto en el capítulo \nameref{chap:intro_a_conjuntos_y_funciones} lo q
 \label{fig:funciones_continuas}
 \end{figure}
 
-Lo que diferencia a ambas funciones es que la de la izquierda es continua en todo su dominio y la de la derecha lo es\footnote{La demostración es apta para este curso, pero se omite por ser la función de Thomae solamente un medio para la introducción del capítulo.} sólo en los irracionales. Al fin y al cabo, la continuidad es una condición de regularidad que establece que ``lo que pasa cerca del punto es lo que vale la función en el punto'', de ahí el interés en trabajar con este tipo de funciones, pues lo que tiene algún tipo de regularidad se puede estudiar y analizar.
+Lo que diferencia a ambas funciones es que la de la izquierda es continua en todo su dominio y la de la derecha lo es\footnote{La demostración es apta para este curso, pero se omite para aligerar la introducción. Para el lector interesado, la función cuestión es conocida como la función de Thomae.} sólo en los irracionales. Al fin y al cabo, la continuidad es una condición de regularidad que nos ofrece garantías para pensar que ``lo que sucede cerca un punto'' se corresponde cono ``lo que sucede en el punto''. Estas garantías nos permiten estudiar elementos que no van a ser impredecibles, de los que esperamos ciertas condiciones.
 
 \section{Concepto de Límite}
-La primera parte de la definición informal de continuidad que hemos comentado en la introducción era ``lo que pasa cerca del punto''. La noción de \textit{límite} viene a formalizar esta idea de ``lo que pasa cerca'' y, para entender mejor a qué nos referimos, vamos a ver el ejemplo de la Figura \ref{fig:ejem_limite}.
+La primera parte de la observación informal acerca de la continuidad es ``lo que sucede cerca del punto''. Este concepto ya lo hemos visto en el tema de \nameref{chap: sucesiones y series} y se corresponde con la noción de \textit{límite}.
+
+Recordemos que las sucesiones eran funciones que mapeaban naturales (índices) en valores reales (elementos de la sucesión). Las funciones reales mapean valores reales en valores reales y, aunque sea sólo por el hecho de trabajar en un conjunto no discreto, la definición de límite se complica algo más. Para entender mejor a qué nos referimos, vamos a ver el ejemplo de la Figura \ref{fig:ejem_limite}.
 
 \begin{figure}[h]
 \centering
@@ -2666,9 +2757,9 @@ La primera parte de la definición informal de continuidad que hemos comentado e
 \label{fig:ejem_limite}
 \end{figure}
 
-Si escogemos valores de $x$ cada vez más cercanos al $0$, las imágenes de dichos valores se acercarán cada vez más a $-1$. Decimos en ese caso que el límite en $0$ es $-1$ porque hacia donde \textit{tienden} las imágenes cuando la variable $x$ \textit{tiende} hacia $0$. Además, se ha escogido concretamente esa función para hacer evidente que no se corresponde con el valor que toma la función en el $0$ y esto es muy importante. \textit{Límite} es un término que hace referencia a la \textit{vecindad} de un punto, pero que prescinde completamente de la información de la función en dicho punto.
+Si escogemos valores de $x$ cada vez más cercanos al $0$, las imágenes de dichos valores se acercarán cada vez más a $-1$. Decimos en ese caso que el límite en $0$ toma como valor $-1$ porque es hacia donde \textit{tienden} las imágenes cuando la variable $x$ \textit{tiende} hacia $0$. Además, se ha escogido concretamente esa función para hacer evidente que este límite no se corresponde con el valor que toma la función en el $0$, que es $1$, y esto es muy importante. \textit{Límite} es un término que hace referencia a la \textit{vecindad} de un punto, pero que prescinde completamente de la información de la función en dicho punto.
 
-Para entrar ya en materia, lo primero que vamos a hacer es dar unas nociones ínfimas de topología y, después, podremos entrar de lleno en la definición formal de límite (pues hasta ahora todo ha sido de forma imprecisa) y en las propiedades de esta función.
+No obstante, para no adelantar acontecimientos, en esta sección lo primero que veremos será unas nociones ínfimas de topología necesarias para dar una base teórica al razonamiento que estamos queriendo hacer y, después, entraremos de lleno a la definición formal de límite y sus propiedades.
 
 \subsection{Topología fundamental}
 La topología es una rama más amplia de las matemáticas que se centra, de forma muy simplificada y no completa, en clasificar qué papel juegan los subconjuntos (incluyendo puntos) dentro del total. Por ejemplo, saber si un conjunto es abierto, cerrado, si hay puntos tan cerca como se quiera unos de otros...
