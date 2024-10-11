@@ -1,9 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1728633112 "c:/Users/jdbar/OneDrive/JD/Trabajo/DG_MatInfo_1/AR/AnalisisDeVariableReal.tex" "AnalisisDeVariableReal.pdf" "AnalisisDeVariableReal" 1728633122 0
-  "AnalisisDeVariableReal.aux" 1728633122 73167 b76c04db676a30424ce64174ae9b9a51 "pdflatex"
-  "AnalisisDeVariableReal.out" 1728633122 14863 fa42e62388152bd0e5256badf68b7bdb "pdflatex"
-  "AnalisisDeVariableReal.tex" 1728633112 437717 1d1bcab94566bf02c1e1087e18bfeb72 ""
-  "AnalisisDeVariableReal.toc" 1728633122 7527 86fd890710cef0c159d39b792cae314e "pdflatex"
+["pdflatex"] 1728643060 "c:/Users/jdbar/OneDrive/JD/Trabajo/DG_MatInfo_1/AR/AnalisisDeVariableReal.tex" "AnalisisDeVariableReal.pdf" "AnalisisDeVariableReal" 1728643070 0
+  "AnalisisDeVariableReal.aux" 1728643070 73035 ae72b345dbdfb3778b5ced8b68c3f4aa "pdflatex"
+  "AnalisisDeVariableReal.out" 1728643070 15107 c13caa6711c93ca7ec96050d0bbc7d7c "pdflatex"
+  "AnalisisDeVariableReal.tex" 1728643049 438037 8b93e791bd98f05703f15e018e27a304 ""
+  "AnalisisDeVariableReal.toc" 1728643070 7641 8323f21630f15031dbf581e5f0238f5f "pdflatex"
   "C:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty" 1576433666 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -374,7 +374,7 @@
   "C:/Users/jdbar/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
   "C:/Users/jdbar/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/pst-xkey.sty" 1656236919 1694 74b0201cd6a70abed294b6332f129c41 ""
   "C:/Users/jdbar/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "c:/Users/jdbar/OneDrive/JD/Trabajo/DG_MatInfo_1/AR/AnalisisDeVariableReal.tex" 1728633112 437717 1d1bcab94566bf02c1e1087e18bfeb72 ""
+  "c:/Users/jdbar/OneDrive/JD/Trabajo/DG_MatInfo_1/AR/AnalisisDeVariableReal.tex" 1728643049 438037 8b93e791bd98f05703f15e018e27a304 ""
   "fotos/Interpretacion derivada.png" 1613504096 18149 ed438cfdb1d11b78b04cdc7ce66945ac ""
   "fotos/Teorema de Rolle.png" 1613907848 8381 eb64a0c843b273c0af1d09147fbfca43 ""
   "fotos/area facil.png" 1615529276 569470 cc89f92e6e4002cae3464c64551001b0 ""

@@ -2138,7 +2138,7 @@ Por tanto, si escogemos $n,m\geq n_0$ deben cumplir la desigualdad superior y en
 \[
 |x_n-x_m|=|x_n-l+l-x_m|\leq |x_n-l|+|x_m-l|< \frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon
 \]
-es decir, que la distancia entre ambos elementos se hace pequeña igual de rápido que la distnacia de cada uno con respecto al límite.  Esto se corresponde con la noción intuitiva de que si ambos elementos de la sucesión están dentro del entorno centrado en el límite, la distancia entre ambos debe ser menor que ese intervalo.
+es decir, que la distancia entre ambos elementos se hace pequeña igual de rápido que la distancia de cada uno con respecto al límite.  Esto se corresponde con la noción intuitiva de que si ambos elementos de la sucesión están dentro del entorno centrado en el límite, la distancia entre ambos debe ser menor que ese intervalo.
 
 El desarrollo anterior pone de manifiesto que las sucesiones que convergen, ``agolpan'' sus términos entre sí cuanto más cerca se mira del límite (resultado que veremos más adelante). La pregunta es la siguiente: ¿qué hay de las sucesiones que ``agolpan'' sus términos entre sí cuanto más avanzo en la lista de la sucesión? ¿Convergerán a algún valor?
 
@@ -2764,7 +2764,7 @@ No obstante, para no adelantar acontecimientos, en esta sección lo primero que 
 \subsection{Topología fundamental}
 La topología es una rama más amplia de las matemáticas que se centra, de forma muy simplificada y no completa, en clasificar qué papel juegan los subconjuntos (incluyendo puntos) dentro del total. Por ejemplo, saber si un conjunto es abierto, cerrado, si hay puntos tan cerca como se quiera unos de otros...
 
-En nuestro caso, sólo precisamos de la topología para entender bien qué son las nociones de \textit{punto de acumulación} y \textit{punto aislado}, pues nos servirán para establecer cuando ``siempre hay valores cerca'' y así asegurarnos de que hablar de límites, continuidad, etc., que son nociones que involucran ``mirar cada vez más cerca'', tienen sentido, pues hay puntos donde mirar.
+En nuestro caso, sólo precisamos de la topología para entender bien qué son las nociones de \textit{punto de acumulación} y \textit{punto aislado}, pues nos servirán para establecer cuándo ``siempre hay valores cerca'' y así asegurarnos de que hablar de límites, continuidad, etc. (que son nociones que involucran ``mirar cada vez más cerca'') tienen sentido y están bien definidas (pues hay puntos donde mirar).
 
 \begin{defi}[Punto de Acumulación]
 Sea $D\subset \mathbb R$, decimos que $x_0\in \mathbb R$ es un \textbf{punto de acumulación de D} si y sólo si:
@@ -2772,11 +2772,11 @@ $$\forall \delta>0: \exists d\in D: d\in (x_0-\delta, x_0+\delta)\setminus\{x_0\
 y denotamos por $D'$ al conjunto\footnote{Nótese que $D'\nsubseteq D$.} de puntos de acumulación de $D$.
 \end{defi}
 
-La definición anterior aunque sea confusa no viene a decir otra cosa sino que cualquier entorno alrededor de $x_0$ contiene otros puntos del conjunto (sin contar con $x_0$), luego también podemos verlo como:
+La definición anterior, aunque sea confusa, no viene a decir otra cosa sino que cualquier entorno alrededor de $x_0$ contiene otros puntos del conjunto (sin contar con $x_0$), luego también podemos verlo como:
 \[
 D\cap \left((x_0-\delta, x_0+\delta)\setminus \{x_0\}\right)\neq \emptyset
 \]
-Es decir, en los puntos de acumulación da igual cuán cerca o lejos estrechemos el cerco sobre el punto que siempre vamos a encontrar, tan cerca como queramos, a otro punto del mismo conjunto que él. Son puntos que, en cierta manera, ``nunca están solos''.
+Es decir, en los puntos de acumulación da igual cuán cerca o lejos pogamos los límites del cerco sobre el punto porque siempre vamos a encontrar, tan cerca como queramos, a otro punto del mismo conjunto que él. Son puntos que, en cierta manera, ``nunca están solos''.
 
 
 \begin{obs}
@@ -2814,14 +2814,16 @@ Aunque no parezca relevante, para formalizar esa idea de ``puntos que nunca est�
 Si permitiésemos tener en cuenta el propio punto para la definición, diríamos que el $3$ es de acumulación, pero salta a la vista que ese punto sí es de los que están ``solos'' en el conjunto.
 \end{obs}
 
-Parece lógico entonces decir que cuando un punto no es de acumulación entonces sí es de esos que está ``solo'' o, como dice la definición formal, \textit{aislado}.
+Parece lógico entonces decir que cuando un punto no es de acumulación entonces sí es de esos que está ``solo'' o, lo que denotaremos por \textit{aislado}.
 
 \begin{defi}[Punto Aislado]
 Sea $D\subset \mathbb R$ y $x_0\in D$, decimos que es un \textbf{punto aislado} de $D$ si no es de acumulación:
 $$\exists \delta >0 : D\cap \left((x_0-\delta, x_0+\delta)\mbox{\textbackslash} \{x_0\}\right)= \emptyset$$
 \end{defi}
 
-Y, de nuevo, seguimos el patrón habitual en matemáticas: tras una definición rigurosa que formaliza el concepto formulamos una caracterización más manejable para trabajar con ella. La idea de ser un punto que no está aislado es que podemos ``saltar'' de punto en punto del conjunto hacia él, acercándonos tanto como queramos sin llegar a él, es decir, podemos hacer sucesiones.
+Esta definición también es de esas que parecen bastante inmanejables en la práctica y por eso es buena idea construir una caracterización que sea más útil a la hora de trabajar con la noción de punto de acumulación y punto aislado.
+
+Como los puntos de acumulación, i.e. los que no están aislados, tienen siempre puntos del comjunto tan cerca como queramos de ellos, podemos hacer podemos hacer sucesiones de puntos que lo tengan como límite.
 
 \begin{prop}
 Sea $D\subset \mathbb R$ y $x_0\in D$, entonces:
@@ -2841,7 +2843,7 @@ $$x_n\in (x_0-\delta , x_0+\delta)\mbox{\textbackslash} \{x_0\}\stackrel{x_n\in 
 \end{demo}
 
 \subsection{Definición formal de límite}
-Ya hemos contado al inicio de la sección por donde iban a ir los tiros en la definición de límite: el valor al que se acercan las imágenes si nos vamos acercando al punto. Sin embargo, la formalización invierte, en cierta manera, la sucesión de eventos que hemos descrito. En lugar de ``me acerco al punto y miro a dónde se acercan las imágenes'' opta por ``me acerco a la imagen y miro si hay un entorno alrededor del punto que esté tan cerca''.
+Al inicio de la sección ya se adelantó más o menos cómo iba a ser la definición de límite: el valor al que se acercan las imágenes si nos vamos acercando al punto. Sin embargo, la formalización invierte, en cierta manera, la sucesión de eventos que hemos descrito. En lugar de ``me acerco al punto y miro a dónde se acercan las imágenes'' opta por ``me acerco a la imagen y miro si hay un entorno alrededor del punto que esté tan cerca''.
 
 \begin{defi}[Límite de una Función]
 Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, decimos que $l\in \mathbb R$ es el \textbf{límite de $f(x)$ cuando $x$ tiende a $x_0$} si y sólo si:
@@ -2854,8 +2856,8 @@ y lo denotamos por $\lim_{x\rightarrow x_0} f(x) = l$.
 Para desgranar mejor la definición que hemos dado y ligarla con lo que hemos dicho al inicio del apartado, vamos a observar la Figura \ref{fig:definicion_formal_limite}. Lo que hacemos es seguir estos pasos:
 \begin{enumerate}
 \item Escogemos un entorno alrededor del límite de radio $\varepsilon$ (banda azul).
-\item Buscamos un entorno alrededor del punto de radio $\delta$ (banda amarilla).
-\item Verificamos que el conjunto de las imágenes está dentro del entorno alrededor del límite (banda verde contenida en banda azul).
+\item Buscamos un entorno alrededor del punto de radio $\delta$ (banda naranja).
+\item Verificamos que el conjunto de las imágenes está dentro del entorno alrededor del límite (el trozo de función delimitado por la banda naranja está en la banda azul).
 \end{enumerate}
 
 \begin{figure}[h]
@@ -2867,15 +2869,13 @@ Para desgranar mejor la definición que hemos dado y ligarla con lo que hemos di
 
 La definición de límite dice que, si existe el límite, los pasos descritos anteriormente se van a poder realizar: para cada entorno alrededor del límite, podremos encontrar un entorno alrededor del punto cuyas imágenes caigan dentro del entorno alrededor del límite.
 
-\begin{obs}
 Una forma un poco más visual y completamente equivalente de escribir la definición de límite que se ha dado es utilizando valores absolutos
 \[
 \forall \varepsilon>0, \ \exists \delta>0 : x\in D \mbox{ y } 0 < |x-x_0| < \delta\Rightarrow |f(x)-l|<\varepsilon
 \]
 donde la desigualdad estricta $0 < |x-x_0|$ implícitamente implica que $x \neq x_0$.
-\end{obs}
 
-Alguno puede que se haya asustado al ver la definición de límite y encontrar tan enrevesado o complicado lo que en cursos anteriores siempre fue tan sencillo. Sin embargo, es importante tener una definición formal fuerte y rigurosa sobre la que cimentar toda la teoría posterior. Además, para trabajar luego con el concepto, ya hemos explicado que se suele hacer otra cosa siempre después de dar una definición complicada...
+A continuación, se va a dar una caracterización en términos de sucesiones de la continuidad que nos es útil para trabajar en algunos contextos, pero la expresión anterior en términos de valores absolutos se va a utilizar incluso más que esta caracterización.
 
 \begin{prop}[Caracterización del Límite]
 Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces:
@@ -2903,9 +2903,9 @@ Comprobamos que se dan ambas implicaciones:
 	\end{itemize}
 \end{demo}
 
-Esta caracterización recupera en parte la idea de ``si nos acercamos al punto, las imágenes se acercan al límite'', gracias a las sucesiones. Sin embargo, la clave está en que esto tiene que ocurrir para cualquier forma de acercarse, es decir, a través de cualquier sucesión.
+Esta caracterización recupera en parte la idea de ``si nos acercamos al punto, las imágenes se acercan al límite'', gracias a las sucesiones. Sin embargo, la clave está en que esto tiene que ocurrir \textbf{para cualquier forma de acercarse}, es decir, \textbf{a través de cualquier sucesión}.
 
-A partir de ahora, lo que vamos a hacer es copiar de manera idéntica lo que se hizo en el apartado de \nameref{subsec:convergencia}. Demostrar que el límite es único, las operaciones que se pueden hacer con el límite, ampliar las operaciones a $\overline{\mathbb{R}}$... En definitiva, trabajar el concepto para que luego el cálculo de límites sea más algebraico y se simplifique todo.
+A partir de ahora, lo que vamos a hacer es copiar el mismo esquema que el del apartado \nameref{subsec:convergencia} de sucesiones: demostrar que el límite es único, las operaciones que se pueden hacer con el límite, ampliar las operaciones a $\overline{\mathbb{R}}$... En definitiva, trabajar el concepto para que luego el cálculo de límites sea más algebraico y sencillo.
 
 \begin{theo}[Unicidad del límite]
 Sea $D\subset \mathbb R$ no nulo, $f:D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces si existe el límite este es único.
@@ -3036,7 +3036,10 @@ Esta recaracterización, esta vez para el límite ampliado, de nuevo vuelve a se
 \end{obs}
 
 \section{Concepto de función Continua}
-En la introducción del capítulo hemos aclarado que la idea informal de continuidad es la de que los valores de la función ``cerca'' del punto coinciden con el valor de la función en el punto. La parte de ``cerca'' ha quedado zanjada y formalizada en la noción de límite que hemos desarrollado en el capítulo anterior. Por tanto, para conseguir formalizar el término \textit{continuidad en un punto} es necesario que articulemos todo. ¿Qué puede querer decir que el valor de la función cerca coincida con el valor de la función en el punto? Efectivamente, que el propio límite sea la imagen del punto donde estamos estudiando la continuidad.
+En la introducción del capítulo se dejó claro que la idea informal de continuidad es la de que los valores de la función ``cerca'' del punto coinciden con el valor de la función en el punto. La parte de ``cerca'' ha quedado zanjada y formalizada en la noción de límite que hemos desarrollado en la sección anterior. Por tanto, para conseguir formalizar el término \textit{continuidad en un punto} vamos a terminar articulando todo.
+
+\subsection{Definición formal de continuidad}
+¿Qué puede querer decir que el valor de la función cerca coincida con el valor de la función en el punto? Efectivamente, que el propio límite sea la imagen del punto donde estamos estudiando la continuidad, que es precisamente la definición formal de continuidad.
 
 \begin{defi}[Continuidad en un punto]
 Sea $D\subset \mathbb R$, $f: D\longrightarrow \mathbb R$ y $x_0\in D$, entonces decimos que $f$ es continua en $x_0$ si y sólo si
@@ -3044,7 +3047,7 @@ $$\forall \varepsilon >0 : \exists \delta >0: x\in D\cap (x_0-\delta, x_0+\delta
 La continuidad en un conjunto se traduce en la continuidad en cada uno de sus puntos.
 \end{defi}
 
-Es importante remarcar una cosa y para ello vamos a volver a fijarnos en las dos funciones de la Figura \ref{fig:funciones_continuas} de la introducción del capítulo. A veces tenemos la mala costumbre de tomar las explicaciones informales que se dan a modo de intuición como teoremas mismos. Con lo que hemos ido explicando, uno podría pensar: ``Una función continua es aquella que se pinta sin levantar el lápiz del papel'', es decir, que si hay ``saltos'' entre los puntos que están cerca entonces no puede ser continua ahí. Sin embargo, en la función de Thomae (a la derecha en la misma figura) hemos dicho que en los irracionales sí es continua y, recordemos, siempre hay racionales tan cerca como se quiera de un irracional (por ser real), luego tenemos infinitos saltos tan cerca como queramos y, aún así, la función es continua en esos valores.
+A veces tenemos la mala costumbre de tomar las intuiciones que se dan como teoremas de pleno derecho. Con lo que hemos ido explicando, uno podría pensar que una función continua es aquella que ``se pinta sin levantar el lápiz del papel'', es decir, que si hay ``saltos'' entre los puntos que están cerca entonces no puede ser continua ahí. Sin embargo, recuperando el ejemplo de la figura \ref{fig:funciones_continuas}, vemos que la función de Thomae es continua en los irracionales y, recordemos, siempre hay racionales tan cerca como se quiera de un irracional, luego tenemos infinitos saltos tan cerca como queramos y, aún así, la función es continua en esos valores.
 
 \begin{prop}[Caracterización de la continuidad]
 Sea $D\subset \mathbb R$ no nulo, $f: D\longrightarrow \mathbb R$ una función real y $x_0\in D'$, entonces:
@@ -3071,7 +3074,9 @@ $$x=x_0\Rightarrow |f(x_0)-f(x_0)|=0<\varepsilon\Rightarrow \mbox{ también lo v
 \end{demo}
 
 \begin{obs}
-En la caracterización de continuidad que hemos dado, se ha pedido que $x_0\in D'$, pero en la definición formal de continuidad basta con que $x_0\in D$. Llegados a este punto, uno se habrá fijado además que en la definición formal se permite considerar a $x_0$ entre esos puntos del conjunto cuya imagen cae cerca de $f(x_0)$. Juntando estas dos cosas vemos que lo único que puede estropear la continuidad son los puntos cercanos ¡pues la imagen de $x_0$ siempre estará cerca de $f(x_0)$, concretamente a distancia $0$!, es decir, que si $x_0$ es un punto aislado \textbf{la función es continua\footnote{Sin embargo, en la caracterización se ha pedido que $x_0\in D'$ porque para poder hablar de límite es necesario dicha condición, esto es, la caracterización se centra en los puntos donde no es trivial la continuidad.} trivialmente.}
+En la caracterización de continuidad, se ha pedido que $x_0\in D'$, pero en la definición formal de continuidad basta con que $x_0\in D$. Además, en la definición formal se permite considerar a $x_0$ entre esos puntos del conjunto cuya imagen cae cerca de $f(x_0)$.
+
+Juntando estos dos elementos vemos que lo único que puede estropear la continuidad son los puntos de la vecindad ¡pues la imagen de $x_0$ siempre estará cerca de $f(x_0)$, concretamente a distancia $0$!, es decir, que si $x_0$ es un punto aislado \textbf{la función es continua\footnote{Sin embargo, en la caracterización se ha pedido que $x_0\in D'$ porque para poder hablar de límite es necesario dicha condición, esto es, la caracterización se centra en los puntos donde no es trivial la continuidad.} trivialmente.}
 \end{obs}
 
 Viendo el paralelismo que existe entre la definición de continuidad y la definición de límite, no es de extrañar que podamos extrapolar muchos de los resultados para estos últimos a la continuidad de funciones.
@@ -3235,6 +3240,10 @@ Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, entonces:
 \end{enumerate}
 \end{demo}
 
+Cuando una función no es continua, siempre ocurre que el límite no concuerda con la imagen, pero hay varios motivos distintos por los que se puede dar esta situación. Por ejemplo, si nos fijamos en la función de la figura \ref{fig:ejem_limite} y la función $f(x) = \frac{1}{x}$ tomando $f(0) = 0$, veremos que ambas no son continuas en $x=0$, pero la apariencia que tienen la discontinuidad es muy distinta.
+
+Por este motivo, es importante que hagamos un pequeño estudio y distinción de qué situaciones pueden propiciar que una función no sea continua.
+
 \begin{defi}[Discontinuidades]
 Sea $f: (a,b)\longrightarrow \mathbb R$ y $x_0\in (a,b)$, si $f$ no es continua en $x_0$, entonces:
 \begin{itemize}
@@ -3276,10 +3285,10 @@ $$\lim_{x\rightarrow x_0^+}f(x)=-\infty\Leftrightarrow \forall M>0: \exists \del
 Sea $f: (a,b)\longrightarrow \mathbb R$, entonces:
 \begin{itemize}
 \item Si $x_0\in (a,b)$, decimos que:
-$$\lim_{x\rightarrow x_0}f(x)=\infty\Leftrightarrow \lim_{x\rightarrow x_0^-}f(x)=\infty \wedge \lim_{x\rightarrow x_0^+}f(x)=\infty$$
+$$\lim_{x\rightarrow x_0}f(x)=\infty\Leftrightarrow \lim_{x\rightarrow x_0^-}f(x)=\infty \text{ y } \lim_{x\rightarrow x_0^+}f(x)=\infty$$
 
 \item Si $x_0\in (a,b)$, decimos que:
-$$\lim_{x\rightarrow x_0}f(x)=-\infty\Leftrightarrow \lim_{x\rightarrow x_0^-}f(x)=-\infty \wedge \lim_{x\rightarrow x_0^+}f(x)=-\infty$$
+$$\lim_{x\rightarrow x_0}f(x)=-\infty\Leftrightarrow \lim_{x\rightarrow x_0^-}f(x)=-\infty \text{ y } \lim_{x\rightarrow x_0^+}f(x)=-\infty$$
 
 \item Si $x_0\in (a,b]$, decimos que:
 $$\lim_{x\rightarrow x_0^-}f(x)=\infty\Leftrightarrow \forall \{x_n\}_{n=1}^\infty \subset (a,b): x_n\xrightarrow{n\rightarrow\infty} x_0: x_n<x_0: \forall n\in \mathbb N\Rightarrow f(x_n)\xrightarrow{n\rightarrow \infty} \infty$$
@@ -3296,7 +3305,7 @@ $$\lim_{x\rightarrow x_0^+}f(x)=-\infty\Leftrightarrow \forall \{x_n\}_{n=1}^\in
 \end{prop}
 
 \subsection{Teoremas fundamentales de funciones continuas}
-Dijimos en su momento que la continuidad aportaba unas ciertas condiciones de regularidad que permitían estudiar y analizar exhaustivamente a las mismas. Los teoremas que presentamos en este apartado son fruto precisamente de esta regularidad y son algunas de las muestras de la importancia de las funciones continuas en el Análisis matemático.
+La continuidad es importante porque impone unas condiciones de regularidad que permiten estudiar y analizar exhaustivamente las funciones que lo son. Los teoremas que presentamos en este apartado son fruto precisamente de esta regularidad y son algunas de las muestras de la importancia de las funciones continuas en el Análisis matemático.
 
 \begin{theo}[de Wierstrass]
 Sea $f:[a,b] \rightarrow \mathbb R$ continua, entonces:
@@ -3319,9 +3328,14 @@ Esto forma una sucesión de números. Como sabemos que $\{x_n\}_{n=1}^\infty\sub
 \end{demo}
 
 \begin{obs}
-Se puede anotar como observación que cuando la función no es continua esto es falso y del mismo modo cuando el intervalo es abierto no ocurre.
-$$f(x)=\begin{cases} \frac{1}{x} & \mbox{ si }x\neq 0 \\ 0 &\mbox{ si }x=0\end{cases} \mbox{ donde }x\in [-1,1]\Rightarrow \mbox{ no acotada}$$
-$$f(x)=\begin{cases} \frac{1}{x} & \mbox{ si }x\neq 0 \\ 0 &\mbox{ si }x=0\end{cases} \mbox{ donde }x\in (0,1)\Rightarrow \mbox{ no alcanza su máximo y su mínimo}$$
+Cuando la función no es continua esto es falso, pues podemos podemos poner como contraejemplo la función 
+\[
+f(x)=\begin{cases} \frac{1}{x} & \mbox{ si }x\neq 0 \\ 0 &\mbox{ si }x=0\end{cases} \mbox{ donde }x\in [-1,1]\Rightarrow \mbox{ no acotada}
+\]
+y, del mismo modo, que el intervalo sea cerrado es indispensable, 
+\[
+f(x)=\begin{cases} \frac{1}{x} & \mbox{ si }x\neq 0 \\ 0 &\mbox{ si }x=0\end{cases} \mbox{ donde }x\in (0,1)\Rightarrow \mbox{ no alcanza su máximo y su mínimo}
+\]
 \end{obs}
 
 \begin{theo}[de Bolzano]
@@ -3364,30 +3378,22 @@ Teniendo en cuenta lo primero podemos asegurar que $\exists a, b \in I: \alpha=f
 \end{demo}
 
 \subsubsection{Continuidad uniforme}
-La definicion de continuidad vista es: supongamos que tenemos $f: D\rightarrow \mathbb R$ donde $D\subset \mathbb R$ de manera que $f$ es continua en $D$, es decir:
-$$\forall x\in D: \forall \varepsilon>0: \exists \delta>0 : x,y \in D: |x-y|<\delta\Rightarrow |f(x)-f(y)|<\varepsilon$$
-Esto quiere decir que una vez fijo el $x$, para cualquier $\varepsilon$ escogido, siempre podemos encontrar un $\delta$ de manera que se cumpla lo que sigue.
+Para una función $f: D\subset\mathbb R\rightarrow \mathbb R$ es continua en $D$, por ser continua, se verifica
+\[
+\forall x\in D: \forall \varepsilon>0: \exists \delta>0 : x,y \in D: |x-y|<\delta\Rightarrow |f(x)-f(y)|<\varepsilon
+\]
+y esto quiere decir que una vez fijo el $x$, para cualquier $\varepsilon$ escogido, siempre podemos encontrar un $\delta$ de manera que se cumpla lo que sigue.
 
-La aproximación que ofrecemos en este subapartado es completamente distinta: elegimos el $\varepsilon$ primero y encontramos un $\delta$ que nos vale para cualesquiera dos puntos que estén a dicha distancia.
+Una aproximación diferente podría elegir primero el $\varepsilon$ y encontramos después un $\delta$ que nos vale para \textbf{cualesquiera dos puntos que estén a dicha distancia}. Esta es la definición de la \textit{continuidad uniforme} y es, de hecho, una condición más fuerte que la continuidad.
 
 \begin{defi}[Continuidad uniforme]
 Sea $f:D\rightarrow \mathbb{R}$ una función, decimos que es \textbf{uniformemente continua en $D$} si y sólo si:
 $$\forall \varepsilon>0: \exists \delta>0 : \forall x, y \in D: |x-y|<\delta \Rightarrow |f(x)-f(y)|<\varepsilon$$
 \end{defi}
 
-Se ve, por tanto, que ponemos de manifiesto que escogido un $\varepsilon$ cualquiera, siempre podemos encontrar un $\delta$ de manera que para todos los $x$ e $y$ que estén a distancia menor que $\delta$ sus imágenes están lo suficientemente cerca.
+Claramente las funciones uniformemente continuas son continuas porque si cualesquiera dos están a esa distancia en particular las de la definición de continuidad también.
 
-\begin{obs}
-\begin{enumerate}
-\item Si $f$ es uniformemente continua en D, también es continua en D.
-
-\item  El recíproco es falso:
-\end{enumerate}
-\end{obs}
-
-\begin{ej}
-$f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$ es continua pero no uniformemente continua. Esto es así porque sea $\varepsilon=1$, $\delta >0$ y $x,x+\delta$ entonces tenemos que: $|f(x)-f(x+\delta)|=|x^2|-(x+\delta)^2=\delta|\delta +2x|$. Si dado el delta yo escojo un $x$ de manera que $\delta +2x > \frac{1}{\delta}$, entonces $\delta|\delta +2x|>1$, por lo que no es uniformemente continua porque hemos encontrado un $x$ que no satisface la propiedad.
-\end{ej}
+No obstante, el recíproco es falso. Por ejemplo podemos considerar la función $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$. Esta es continua, pero no uniformemente continua porque para $\varepsilon=1$, $\delta >0$ y $x,x+\delta$ entonces $|f(x)-f(x+\delta)|=|x^2|-(x+\delta)^2=\delta|\delta +2x|$. Si dado el delta yo escojo un $x$ de manera que $\delta +2x > \frac{1}{\delta}$, entonces $\delta|\delta +2x|>1$ y habríamos probado que no se verifica la continuidad uniforme (pues dicho $x$ no satisface la propiedad).
 
 \begin{theo}
 Sea $f:[a,b]\rightarrow \mathbb R$ continua, entonces es uniformemente continua en un intervalo cerrado y acotado.
@@ -3398,8 +3404,8 @@ Supongamos que $f$ no es uniformemente continua, entonces $\exists \varepsilon> 
 Pero por otro lado, las imágenes están lejos porque como f es continua, entonces $f(x_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$ y $f(y_{n_k})\xrightarrow{k\rightarrow \infty}f(l)$, pero tenemos que $|f(x_{n_k})-f(y_{n_k})|\geq 0$ y es absurdo porque cuando se tiende a infinito tenemos que $|l-l|=0<\varepsilon\Rightarrow \#$.
 \end{demo}
 
-\subsection{Funciones Monótonas}
-Cabe destacar y mencionar en este capítulo una serie de funciones muy relevantes: las funciones monótonas. Vamos a estudiar que propiedades ofrece la monotonía y por qué son tan importantes en el estudio del análisis de variable real. 
+\subsubsection{Funciones Monótonas}
+Vamos a dedicar unas líneas a relacionar la continuidad con la propiedad de monotonía, para ver qué ventajas ofrecen. La monotonía es la misma propiedad que vimos para sucesiones, pero adapatada a un conjunto no discreto de elementos.
 
 \begin{defi}[Función Monótona]
 Sea $f:[a,b]\rightarrow \mathbb R$, decimos\footnote{Le añadimos el sobrenombre de \textbf{estricta} si la desigualdad es estricta} que es:
@@ -3523,7 +3529,7 @@ Del mismo modo, tenemos que $f(x)=x^a$ es continua porque por el mismo razonamie
 Basta con ver que al ser estas dos funciones continuas, la composición de ambas: $h(x)=f(x)^{g(x)}$ es continua.
 \end{demo}
 
-\begin{theo}
+\begin{theo}[Continuidad de las funciones trigonométricas]
 La funciones trigonométricas seno y coseno, es decir, $\sin x$ y $\cos x$ son funciones continuas.
 \end{theo}
 
