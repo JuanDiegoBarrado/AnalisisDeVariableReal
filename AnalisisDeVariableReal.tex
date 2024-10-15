@@ -3556,31 +3556,65 @@ El resto de propiedades se demuestran de forma análoga.
 \end{demo}
 
 \chapter{Cálculo Diferencial}
-En este capítulo desarrollamos otro de los temas centrales del cálculo y el análisis matemático: la derivación. El problema surge del estudio de cambios en el valor de la función ante cambios infinitesimales de la entrada de la misma. Además, dicho concepto se relaciona íntimamente con las curvas y rectas tangentes a distintas superficies y con la optimización de funciones a través de máximos y mínimos.
+\begin{figure}[b]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			domain=-5:5, 
+			samples=100,
+			axis lines=middle, 
+			xlabel={$x$}, ylabel={$f(x)$},
+			xtick={-5,-4,...,5}, 
+			ytick={0,5,10,...,25},
+			ymin=0, ymax=26, % ajusta el rango del eje y
+			xmin=-5, xmax=5, % ajusta el rango del eje x
+			grid=major,
+			grid style={dashed,gray!30},
+			enlargelimits=true
+		]
+		\addplot[blue, thick] {x^2};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Análisis de la variación en el intervalo $[-5, 5]$}
+	\label{fig: analisis_variacion}
+\end{figure}
+
+Desde que se comienzan a utilizar las funciones para modelar el mundo real, por ejemplo, representando poblaciones de individuos, flujo monetario de una empresa o consumo eléctrico de un dispositivo, comienzan a surgir la necesidad de estudiar cómo varían las funciones.
+
+Cuando hablamos de \textit{variaciones}, hablamos de incrementos o decrementos en los valores de la función para ciertos valores continuos de $x$. Por ejemplo, en la función de la figura \ref{fig: analisis_variacion}, vemos claramente que entre los valores $[0, 1]$ la función aumenta su valor, pero ¿cómo podemos medirlo? Una primera aproximación sería tomar la diferencia de los valores en los extremos, es decir, en un intervalo $[a,b]$ medirlo como $f(b)-f(a)$. No obstante, esto es una medida de cuánto ha aumentado, pero \textbf{no de cuán deprisa}. Por ejemplo, en el intervalo $[0,2]$, la función crece más que en el $[1,2]$, pero en este último el crecimiento es claramente más pronunciado. La respuesta es utilizar como medida la \textbf{tasa de variación media}, que consiste en utilizar la diferencia de valores de los extremos, pero normalizado por la longitud del intervalo donde sucede la variación (ecuación \ref{eq: TVM}). De esta manera, cada incremento queda ``ponderado'' por el ``tiempo'' que tarda en producirse y así obtenemos una métrica más ajustada de lo que queríamos.
+\begin{equation}
+	\label{eq: TVM}
+	TVM = \frac{f(b) - f(a)}{b - a}
+\end{equation}
+
+El concepto de la derivada surge para llevar un poco más lejos la disquisición anterior y, en lugar de interesarnos por la tasa de incremento en un intervalo, hacerlo de forma \textbf{puntual}, es decir, no considerar un intervalo $[a,b]$ sobre el que medir cómo de rápido crece/decrece la función, sino saberlo en un punto $c\in \mathbb R$ concreto. Para ello, el capítulo está organizado en dos secciones: la primera se dedica a definir la derivada para que cumpla las expectativas que hemos mencionado y la segunda muestra cómo podemos emplearla para detallar cuestiones tan claves de una función como monotonía, límites, optimización, tangencias, etc.
 
 \section{Derivabilidad}
-En esta primera parte vamos a desarrollar toda la teoría necesaria para comprender el concepto de derivada, saber cómo operar con él y qué propiedades tiene para luego poder aplicar los resultados de forma eficiente.
+En esta primera parte vamos a ver cómo hacer posible el estudio del incremento/decremento de forma puntual en lugar de en un intervalo para desarrollar toda la teoría necesaria para comprender el concepto de derivada. Después, vamos a ver cómo operar conservando esta propiedad y qué particularidades para formar una base sólida.
 
 \subsection{Concepto de Derivada}
-El objetivo principal es ver cómo se comporta el cociente $\frac{f(x) - f(c)}{x-c}$ cuando $x$ es muy próximo a $c$. Es decir, dado un punto $c$ cualquiera, queremos cuantificar cuánto varía la imagen por $f$ con respecto a la que nos da $f(c)$ cuando los puntos que observamos están a una distancia infinitesimal.
+Ya hemos visto que la TMV nos puede servir para medir cómo de rápido una función crece/decrece en un intervalo concreto. ¿Qué ocurre si hacemos el intervalo cada vez más pequeño? Más concretamente, se trata de observar qué ocurre con el cociente $\frac{f(x) - f(c)}{x-c}$ cuando $x$ es muy próximo a $c$ para poder estudiar la variación ``instantánea'' en $c$.
+
+Lógicamente, no podemos tomar $x=c$ porque el denominador sería nulo, pero podemos utilizar el concepto de límite para abordar esa idea de ``lo más cerca posible''. De esta manera, si definimos la derivada como el límite de dicho cociente, el valor del mismo será un cuantificador de cuánto varía la imagen por $f$ con respecto a $f(c)$ ante cambios infinitesimales de $x$ en la vecindad de $c$.
 
 \begin{defi}[Derivabilidad]
 Sea $f: I\rightarrow \mathbb R$ una función donde $I$ es un intervalo y $c\in I$, decimos que es \textbf{derivable o diferenciable en $c$} si y sólo si $\exists L\in \mathbb R$ que verifica:
 $$\forall \varepsilon>0: \exists \delta>0 : 0<|x-c|<\delta\Rightarrow \left|\frac{f(x)-f(c)}{x-c}-L\right|<\varepsilon$$
-En este caso\footnote{Cabe destacar que $c$ puede ser un extremo del intervalo y que además $c$ debe pertenecer al dominio porque debemos poder calcular $f(c)$.} decimos que $L$ es la derivada de $f$ en $c$ y escribimos $f'(c)=L$.
+y en ese caso\footnote{Cabe destacar que $c$ puede ser un extremo del intervalo y que además $c$ debe pertenecer al dominio porque debemos poder calcular $f(c)$.} decimos que $L$ es la derivada de $f$ en $c$ y escribimos $f'(c)=L$.
 \end{defi}
 
-\begin{obs}
-Esta definición es equivalente a la siguiente: si definimos la función $\varphi(x) = \frac{f(x)-f(c)}{x-c}$ donde $x\in I\mbox{\textbackslash}\{c\}$ entonces podemos redefinir la derivada como:
-$$f\mbox{ es derivable en }c\Leftrightarrow \exists \lim_{x\rightarrow c}\varphi(x) = L$$
-Esta caracterización es importante porque hemos visto y trabajado la demostración de la existencia o no de un límite y el cálculo de los mismos, por lo que en ocasiones puede facilitarnos el trabajo usar esta alternativa en vez de la definición.
-\end{obs}
+La definición anterior no es más que la definición del límite cuando $x\to c$ de la función $\varphi(x) = \frac{f(x)-f(c)}{x-c}$, de manera que se puede entender la derivada en un punto como dicho límite.
+
+Esto tiene consecuencias importantes, pues nos va a permitir demostrar multitud de resultados como la unicidad, existencia, etc. a través de su definición como límite de esta función.
 
 \begin{ej}
-Sea $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$, luego hay que estudiar $\frac{f(x)-f(c)}{x-c} = \frac{x^2- c^2}{x-c}= x+c$, luego tenemos que $\lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c}= 2c$.\par
-Veamos el mismo ejemplo con la definición, nuestro candidato es $f'(c)=2c$, la pregunta es si dado $\varepsilon>0$, puedo encontrar un $\delta$ de manera que se cumpla al definición?, veamos:
+Considerando la función $f: \mathbb R \rightarrow \mathbb R: f(x)=x^2$, para calcular la derivada habría que estudiar el límite del cociente $\frac{f(x)-f(c)}{x-c} = \frac{x^2- c^2}{x-c}= x+c$, es decir:
+\[
+	\lim_{x\rightarrow c} \frac{f(x)-f(c)}{x-c}= 2c
+\]
+Con la definición en la mano en lugar de como límite, tendríamos como candidato a $f'(c)=2c$ y la pregunta sería si dado $\varepsilon>0$, podemos encontrar un $\delta$ de manera que se cumpla al definición. Veamos:
 $$\left|\frac{f(x)-f(c)}{x-c}-2c\right| = \left|\frac{x^2-c^2}{x-c}-2c\right| = |x+c-2c|= |x-c|<\delta \Rightarrow \delta <\varepsilon$$
-Luego bastaría con escoger un delta de manera que este sea menor que el epsilon dado.
+así que bastaría con escoger un delta menor que el epsilon dado, por ejemplo $\delta = \varepsilon / 2$ para que se verifique la definición.
 \end{ej}
 
 \begin{prop}
@@ -3621,20 +3655,20 @@ Luego no es derivable
 \end{ej}
 
 \subsubsection{Interpretación geométrica de la derivada}
-Sea $f:I \rightarrow \mathbb R$ una función real y $c,a\in I$ puntos de su dominio, vamos a estudiar el valor de la pendiente\footnote{A pesar de darse esta explicación geométrica, en ningún caso intervendrá en cualesquiera de las demostraciones posteriores puesto que prevalece la definición de derivada dada} de la recta que pasa por $(cf,(c))$ y $(a,f(a))$.
+Dada una función real $f:I \rightarrow \mathbb R$ la pendiente de la recta que une las imágenes de dos puntos $c,a\in I$ de su dominio viene dada por la expresión
 $$m = \frac{f(a)-f(c)}{a-c}$$
-Pero nos preguntamos ¿qué cambios sufrirá dicho valor si variamos el punto $a$?. Para ello, vamos a tomar $a$, como una variable, es decir, $x$, quedando el valor anterior como:
+Por tanto, para un punto $c\in I$ cualquiera, la expresión que determina la pendiente de la recta que une su imagen con otro punto cualquiera es precisamente el cociente que estudiamos para la derivada:
 $$m = \frac{f(x)-f(c)}{x-c}$$
-De este modo, para cada valor de $x$ tendremos el valor de la pendiente de la recta que une ambos puntos y ahora nos surge otra nueva pregunta: ¿qué pasará si escojo valores de $x$ cada vez más cercanos a $c$ o, lo que es lo mismo, si $x\rightarrow c$? La respuesta visualmente es sencilla:
+Si dicho cociente en el límite es la derivada, tomará el mismo valor que dicha pendiente en el límite y ¿cuál es la recta determinada por unir $(c, f(c))$ con $(x, f(x))$ cuando $x$ se aproxima infinitamente a $c$?
 
 \begin{center}
 \includegraphics[scale=0.64]{Interpretacion derivada}
 \end{center}
 
-La recta, como pasa cada vez por dos puntos que están más próximos, tiene una pendiente más ajustada a la curva por el punto $c$. Cuando pasamos al límite, estamos diciendo que estamos ``tomando $x=c$'' y, en consecuencia, tenemos una recta tangente a $c$ en ese punto.
+La recta, como pasa cada vez por dos puntos que están más próximos, tiene una pendiente más ajustada a la curva por el punto $c$. Cuando pasamos al límite, estamos diciendo que estamos tomando prácticamente $x=c$ y, en consecuencia, tenemos una recta tangente a $c$ en ese punto. Por lo tanto, geométricamente \textbf{la pendiente de la recta tangente en un punto es la derivada de la función en ese punto}.
 
 \subsection{Criterios de Derivabilidad}
-Una vez definido y estudiado el concepto de derivada, es necesario entender cómo se relaciona este nuevo elemento matemático con las operaciones habituales de funciones sobre todo para saber en qué casos se conserva.
+De la misma manera que cuando vimos continuidad de funciones, la idea no es probar la derivabilidad de cada función que nos encontremos con la definición formal. Más bien, se trata de poder demostrar un conjunto de funciones que son derivables y proporcionarnos herramientas que conserven la derivabilidad y nos permitan relacionar funciones más complejas con estas más sencillas de las que hemos probado la propiedad.
 
 \begin{theo}[Operaciones con Derivabilidad]
 Sean $f,g: I\rightarrow \mathbb R$ derivables en $c\in I$, se tiene que:
@@ -3677,11 +3711,9 @@ $$= \left(f_1'(c)\cdot f_2(c) \cdot ... \cdot f_n(c) +...+ f_1(c)\cdot f_2(c)\cd
 $$=f_1'(c)\cdot f_2(c) \cdot ... \cdot f_n(c)\cdot f_{n+1}(c) +...+ f_1(c)\cdot f_2(c)\cdot ...\cdot f'_n(c)f_{n+1}(c)+f_1(c)\cdot ...\cdot f_n(c)f_{n+1}'$$
 \end{demo}
 
-\begin{ej}
-Si tenemos $f(x)=x^n= x\cdot x\cdots x$, entonces tenemos que por el corolario tenemos que: $f'(x)=1\cdot x \cdot ... \cdot x + ... + x\cdot ... \cdot x \cdot 1 = \underbrace{x^{n-1} + x^{n-1}+ ... + x^{n-1}}_{n \mbox{ veces}}= n\cdot x^{n-1}$
+Las propiedades anteriores permiten conservar la derivabilidad entre operaciones algebraicas de $\mathbb R$ y además nos indican cómo calcular la derivada en cada caso. Por ejemplo, si $g(x)= f(x)^n = f(x) \cdot \ldots \cdot f(x)$, entonces $g'(x)= n\cdot f'(x) \cdot f(x)^{n-1}$.
 
-Con lo cual, podemos verlo en un caso general diciendo que $g(x)= f(x)^n$, por lo que $g'(c)= n\cdot f'(c)\cdot f(c)^{n-1}$.
-\end{ej}
+Sin embargo, en el caso de las funciones, tenemos una operación más que será habitual y que es necesario definir con respecto a la derivabilidad: la composición.
 
 \begin{lema}[de Caratheodery]
 Sea $f:I \rightarrow \mathbb R$, es derivable en $c\in I$ si y sólo si $\exists\varphi: I\rightarrow \mathbb R$ continua en $c$ de manera que $f(x)-f(c)=\varphi(x)(x-c): \forall x \in I$ de forma que $f'(c)=\varphi(c)$.
@@ -3733,12 +3765,14 @@ Como $g$ es continua porque $f$ lo es y además $\varphi$ es continua en $g(d)=c
 $$g'(d)=\frac{1}{\varphi(g(d))}=\frac{1}{f'(g(d))}$$
 \end{demo}
 
-\begin{obs}
-Una buena forma de recordarlo es que:
-$$f^{-1}\circ f = id \Leftrightarrow g(f(x))=x\Leftrightarrow g'(f(x))\cdot f'(x)=1\Rightarrow g'(f(x))=\frac{1}{f'(x)}$$
-Si $y=f(x)$ entonces:
-$$g'(y)=\frac{1}{f'(g(y))}$$
-\end{obs}
+Una buena forma de recordar el teorema anterior es entender la función inversa es entenderla en términos de la composición. Si denotamos por $g$ a la función inversa, como $f^{-1}\circ f = id$, entonces debe ocurrir que
+\[
+g(f(x))=x\Leftrightarrow g'(f(x))\cdot f'(x)=1\Rightarrow g'(f(x))=\frac{1}{f'(x)}
+\]
+y basta con entender $y$ como $f(x)$ para ver que entonces claramente la derivada es
+\[
+	g'(y)=\frac{1}{f'(g(y))}
+\]
 
 \begin{ej}
 Sea $y=x^m: x>0$ tenemos una función definida de forma que $y: \mathbb R^+ \rightarrow \mathbb R^+$, por lo que hemos demostrado se tiene que $g(y)=\sqrt[m]{y}$, luego sabemos que $g'(y)=\frac{1}{f'(x))}$ pero como quiero expresar las cosas en términos de $y$, sabemos que $y=x^m$, luego se tiene que $g(y)=\frac{1}{mx^{m-1}}=\frac{1}{\frac{1}{m}y^{\frac{1}{m}-1}}=\frac{1}{\frac{1}{m}\sqrt[m-1]{y}}$
@@ -3747,31 +3781,28 @@ Sea $y=sen(x)$, sabemos que $y'=cos(x)$ y la función inversa del seno se llama 
 $$(arcsen(y))'=\frac{1}{\sqrt{1-y^2}}$$
 \end{ej}
 
-\section{Crecimiento y Decrecimiento}
-Hemos comentado que las derivadas tienen múltiples aplicaciones y una de ellas es ser indicador del crecimiento o decrecimiento de una función. La idea intuitiva es que si las derivadas son las pendientes de las rectas tangentes, pendientes positivas indicarán crecimiento de funciones y las pendientes negativas decrecimiento.
+\section{Aplicaciones de derivada}
 
-Esta propiedad además permite caracterizar los puntos que son máximos o mínimos relativos, pues basta ver cómo crece o decrece la función a izquierda o derecha de estos puntos para verificarlo, por ejemplo, un máximos será aquel punto intermedio entre una etapa de crecimiento y una de decrecimiento.
+\subsection{Monotonía y optimización}
+La propia introducción del capítulo y la interpretación geométrica dan pistas acerca de cómo podemos medir el incremento/decremento. Como la derivada es la pendiente de la recta tangente, la idea es que derivadas positivas indicarán crecimiento y negativas decrecimiento.
 
-\subsection{Teorema del Valor Medio}
-En este primer apartado vamos a estudiar todos los puntos relativos a crecimiento y decrecimiento y extremos relativos. Cabe destacar el Teorema del Valor Medio, en algunos sitios mencionado como \textit{Teorema Fundamental del Cálculo Diferencial} por la gran relevancia de sus resultados en múltiples áreas en las que las derivadas se ven involucradas.
+Además, la propia monotonía permite caracterizar máximos o mínimos relativos, pues basta ver cómo crece o decrece la función a izquierda o derecha de estos puntos para verificarlo y, en tales puntos, la derivada debe ser nula.
 
 \begin{defi}[Extremos relativos]
 Sea $f:I\rightarrow \mathbb R$ decimos\footnote{Lo llamamos estricto si la desigualdad $f(x)\geq \mbox{ ó }\leq f(c)$ es estricta, en ambos casos \textbf{Y SE CAMBIA LA CONDICIÓN A $0<|x-c|<\delta$}} que tiene en $c\in I$ un:
 \begin{itemize}
-\item \textbf{Máximo Relativo}: $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\leq f(c)$.
-\item \textbf{Mínimo Relativo}: $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\geq f(c)$.
+\item \textbf{Máximo relativo}: $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\leq f(c)$.
+\item \textbf{Mínimo relativo}: $\exists \delta>0: \forall x \in I: |x-c|<\delta \Rightarrow f(x)\geq f(c)$.
 \end{itemize}
 \end{defi}
+
+Si trabajamos con la definición que hemos dado de extremo relativo, es indispensable ``poder mirar a izquierda y derecha'', es decir, los puntos sobre los que me pregunte acerca de la definición no pueden ser ``extremos del intervalo''. Esto motiva la siguiente definición.
 
 \begin{defi}[Punto Interior]
 Sea $I\subset\mathbb{R}$, decimos que $c\in I$ es un \textbf{punto interior de $I$} si y sólo si:
 $$\exists \delta_0 >0: (c-\delta_0, c+\delta_0)\subset I$$
 Denotamos por $\mathring{I}$ al conjunto de puntos interiores de $I$.
 \end{defi}
-
-\begin{ej}
-En particular, si $I$ es un intervalo $I=[a,b]$, entonces $(a,b)\in \mathring{I}$.
-\end{ej}
 
 \begin{theo}[Caracterización de los extremos relativos]
 Sea $f: I\rightarrow \mathbb R$ una función con un extremo relativo en $c\in \mathring{I}$, si $f$ es derivable en $c$, entonces $f'(c)=0$.
@@ -3787,9 +3818,40 @@ $$f(a)=f(b)=0\Rightarrow \exists c\in (a,b): f'(c)=0$$
 \end{theo}
 \begin{demo}
 Puede ser que la función sea constante 0, cuyo caso no estudiaremos por la trivialidad de su veracidad.
+% \begin{center}
+% \includegraphics[scale=0.90]{Teorema de Rolle}
+% \end{center}
+% TODO
 \begin{center}
-\includegraphics[scale=0.90]{Teorema de Rolle}
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel={$x$},
+			ylabel={$f(x)$},
+			xmin=0, xmax=4,
+			ymin=0, ymax=3,
+			domain=0:4,
+			samples=100,
+			grid=both,
+			minor tick num=1,
+			major grid style={line width=.2pt,draw=gray!50},
+			minor grid style={line width=.1pt,draw=gray!30},
+			thick,
+			title={Gráfica de $f(x) = 1.5 + \sin(2(x-1))$}
+		]
+		% Función
+		\addplot[blue, thick] {1.5 + sin(deg(2*(x-1)))};
+		
+		% Para la función 2*cos(2*(x-1)) = 0, se da cuando x = 1 + pi/4
+		\node at (axis cs:1 + pi/4, 2) [anchor=south] {$(x_0, f(x_0))$};
+		
+		% Ejes
+		\addplot[black, thick] coordinates {(0,0)(0,3)};
+		\addplot[black, thick] coordinates {(0,0)(4,0)};
+		
+		\end{axis}
+	\end{tikzpicture}
 \end{center}
+
 En caso contrario, $\exists x_0\in (a,b):f(x_0)\neq 0$. En primer lugar, supongamos que $f(x_0)>0\Rightarrow 0<f(x_0)\leq \max{f(x)}: x\in [a,b]$ y como $f$ es continua, entonces el máximo se alcanza por lo que $\exists c\in [a,b]: f(c)=\max{f(x)}>0\Rightarrow c\in (a,b): c\in \mathring{I}\Rightarrow f'(c) = 0$ por ser máximo relativo.
 
 El caso menor es análogo.
@@ -3928,89 +3990,81 @@ Si $f'$ fuese continua, este teorema es trivial por el teorema del valor interme
 
 \begin{obs}
 Una consecuencia muy interesante de este teorema es que la función derivada puede no ser continua, pero en ningún caso puede tener saltos. Como concepto intuitivo, podemos decir que la discontinuidad posible que tienen es que oscile demasiado (como ocurre con $\sen\left(\frac{1}{x}\right)$).
-$$DIBUJO$$
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis}[
+		axis x line=middle, axis y line=middle,
+		xlabel=$x$, ylabel=$y$,
+		samples=1000, % Más muestras para capturar detalles
+		domain=-0.5:0.5, % Dominio ajustado a [-0.5, 0.5]
+		restrict y to domain=-5:5, % Restringir el eje y para evitar picos grandes
+		width=10cm, height=6cm,
+		xtick={-0.5, -0.25, 0.25, 0.5}, ytick={-1, 0, 1}
+		]
+		\addplot[blue, thick] {sin(10/x)};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
 \end{obs}
 
-\subsubsection{Aplicaciones del Teorema del valor Medio}
-\underline{\textbf{Aproximaciones}}
-
-Vamos a aproximar, por ejemplo, la raíz de 105. Sabemos que $\sqrt{100}=10$ y que $\sqrt{121}=11$ luego el número que buscamos debe estar entre 10 y 11. Entonces sea $f(x)=\sqrt{x}$ aplicamos el teorema del valor medio entre 100 y $105$:
-$$\exists c\in (100, 105):f'(c)=\frac{f(105)-f(100)}{105-100}=\frac{\sqrt{105}-\sqrt{100}}{5}$$
-Y también sabemos que $f'(c)=\frac{1}{2\sqrt{c}}$, luego se tiene que $\sqrt{105}=10+5f'(c)$. Si como hipótesis teníamos que $10<c<11$ es fácil llegar a que $\underbrace{10+\frac{5}{22}}_{\simeq 10,227}< \sqrt{105} < \underbrace{10+\frac{1}{4}}_{\simeq 10,25}$.
-
-\underline{\textbf{Desigualdades}}
-
-Vamos a probar que $\forall x \in \mathbb R: e^x \geq 1+x$. Es evidente que $1=e^0$ así que tomamos $f(x)=e^x$ luego por el teorema del valor medio se tiene que:
-\begin{itemize}
-\item $x>0$
-$$\exists c\in (0,x): e^c=f'(c)=\frac{e^x-e^0}{x-0}\Rightarrow e^x-1=xe^c\stackrel{c>0}{\Rightarrow} e^x-1=xe^c>x\Rightarrow e^x>1+x$$
-
-\item $x<0$
-$$\exists c\in (x,0): e^c=f'(c)\frac{e^x-e^0}{x-0}\Rightarrow e^x-1=xe^c$$
-Como $0<e^c<1$ y $x<0$, entonces $xe^x>x\Rightarrow e^x>1+x$
-
-\item $x=0$
-$$e^0=1+0$$
-\end{itemize}
-
-\subsection{Regla de L'Hopital}
-Otro resultado notablemente importante es la regla de L'Hopital, pues simplificó el cálculo de límites bastante complejos a través de la derivación.
-
-Para comprender la idea subyacente, supongamos $f,g: [a,b]\rightarrow \mathbb R$ de manera que $f(a)=0=g(a)$ y $g'(a)\neq 0$, entonces puedo transformar el límite del cociente como sigue:
+\subsection{Límites: L'Hôpital}
+Otro resultado notablemente importante es la regla de L'Hopital, pues simplificó el cálculo de límites bastante complejos a través de la derivación. Para comprender la idea subyacente, supongamos $f,g: [a,b]\rightarrow \mathbb R$ de manera que $f(a)=0=g(a)$ y $g'(a)\neq 0$, entonces puedo transformar el límite del cociente como sigue:
 $$\lim_{x\rightarrow a} \frac{f(x)}{g(x)}=\lim_{x\rightarrow a} \frac{f(x)-f(a)}{g(x)-g(a)}\Rightarrow \lim_{x\rightarrow a}\frac{\frac{f(x)-f(a)}{x-a}}{\frac{g(x)-g(a)}{x-a}}$$
 Por tanto, si también pedimos que $f$ y $g$ sean derivables en $a$:
-$$\lim_{x\rightarrow a} \frac{f(x)}{g(x)}=\frac{f'(a)}{g'(a)}$$
+$$\lim_{x\rightarrow a} \frac{f(x)}{g(x)}= \frac{f'(a)}{g'(a)}$$
 
-\subsubsection{L'Hôpital 1}
+\begin{theo}[L'Hôpital 1]
 Sea $f,g: (a,b) \rightarrow \mathbb R$ donde $-\infty \leq a < b \leq \infty$, $f$ y $g$ derivables en $(a,b)$ con $g'(x)\neq 0: \forall x\in (a,b)$. Supongamos que $\lim_{x\rightarrow a^+} f(x)=\lim_{x\rightarrow a^+} g(x)=0$, si existe el $\lim_{x\rightarrow a^+} \frac{f'(x)}{g'(x)}=L\in \overline{\mathbb R}$ entonces $\lim_{x\rightarrow a^+}\frac{f'(x)}{g'(x)}=L$
+\end{theo}
+\begin{demo}
+	Pendiente de redacción
 
-\underline{Demostración}
+% Se basa en el siguiente resultado:
 
-Se basa en el siguiente resultado:
+% \underline{\textbf{Teorema del valor medio de Cauchy}}
 
-\underline{\textbf{Teorema del valor medio de Cauchy}}
+% Sean $f,g: [a,b]\rightarrow \mathbb R$ continuas en $[a,b]$ y derivables en $(a,b)$. Supongamos que $g'(x)\neq 0: \forall x\in (a,b)$, entonces $\exists c\in (a,b): \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}$.
 
-Sean $f,g: [a,b]\rightarrow \mathbb R$ continuas en $[a,b]$ y derivables en $(a,b)$. Supongamos que $g'(x)\neq 0: \forall x\in (a,b)$, entonces $\exists c\in (a,b): \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}$.
+% Es fácil ver que si cogemos $g(x)=x$ recuperamos el enunciado que hemos visto del Teorema del valor Medio.
 
-Es fácil ver que si cogemos $g(x)=x$ recuperamos el enunciado que hemos visto del Teorema del valor Medio.
+% Demostración:
 
-Demostración:
+% Sea $F:[a,b]\rightarrow\mathbb R$ definida como $F(x)=\frac{f(b)-f(a)}{g(b)-g(a)}\cdot (g(x)-g(a))\cdot (f(x)-f(a))$. De nuevo vemos que por ser suma de funciones continuas y derivables, F es continua en $[a,b]$ y derivable en $(a,b)$ y además $(g(x)-g(a))\neq 0$ porque por el teorema de valor medio ocurriría que $g(b)=g(a)\Rightarrow \exists c\in  (a,b): g'(c)=0\Rightarrow \#$ porque hemos dicho que $g'(x)\neq 0$.
 
-Sea $F:[a,b]\rightarrow\mathbb R$ definida como $F(x)=\frac{f(b)-f(a)}{g(b)-g(a)}\cdot (g(x)-g(a))\cdot (f(x)-f(a))$. De nuevo vemos que por ser suma de funciones continuas y derivables, F es continua en $[a,b]$ y derivable en $(a,b)$ y además $(g(x)-g(a))\neq 0$ porque por el teorema de valor medio ocurriría que $g(b)=g(a)\Rightarrow \exists c\in  (a,b): g'(c)=0\Rightarrow \#$ porque hemos dicho que $g'(x)\neq 0$.
+% Además ahora tenemos que $F(b)=F(a)=0$, por lo que por el Teorema de Rolle tenemos que $\exists c \in (a,b): F'(c)=0\Rightarrow \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}$.
 
-Además ahora tenemos que $F(b)=F(a)=0$, por lo que por el Teorema de Rolle tenemos que $\exists c \in (a,b): F'(c)=0\Rightarrow \frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(c)}{g'(c)}$.
+% Volviendo a la demostración inicial, vamos a ver el caso en que $L\in \mathbb R$. Por la definición de límite tenemos que:
+% $$\forall \varepsilon>0: \exists c\in (a,b): x\in (a,c)\Rightarrow \left|\frac{f'(x)}{g'(x)}-L\right|\Leftrightarrow L-\varepsilon< \frac{f'(x)}{g'(x)}< L+\varepsilon$$
+% Vamos a escoger $a<\alpha<\beta < c$, entonces vemos que $f,g: [\alpha,\beta]\rightarrow \mathbb R$ y cumplen las hipótesis del Teorema visto antes, así que:
+% $$\frac{f(\beta)-f(\alpha)}{g(\beta)-g(\alpha)}=\frac{f'(u)}{g'(u)}: u\in (\alpha, \beta)$$
+% FALTA ALGUNA COSILLA DE EXPLICACIÓN
 
-Volviendo a la demostración inicial, vamos a ver el caso en que $L\in \mathbb R$. Por la definición de límite tenemos que:
-$$\forall \varepsilon>0: \exists c\in (a,b): x\in (a,c)\Rightarrow \left|\frac{f'(x)}{g'(x)}-L\right|\Leftrightarrow L-\varepsilon< \frac{f'(x)}{g'(x)}< L+\varepsilon$$
-Vamos a escoger $a<\alpha<\beta < c$, entonces vemos que $f,g: [\alpha,\beta]\rightarrow \mathbb R$ y cumplen las hipótesis del Teorema visto antes, así que:
-$$\frac{f(\beta)-f(\alpha)}{g(\beta)-g(\alpha)}=\frac{f'(u)}{g'(u)}: u\in (\alpha, \beta)$$
-FALTA ALGUNA COSILLA DE EXPLICACIÓN
+% Entonces si $a<\alpha < \beta < c$, se tiene que:
+% $$L-\varepsilon< \frac{f(\beta)- f(\alpha)}{g(\beta)-g(\alpha)}<L+\varepsilon$$
 
-Entonces si $a<\alpha < \beta < c$, se tiene que:
-$$L-\varepsilon< \frac{f(\beta)- f(\alpha)}{g(\beta)-g(\alpha)}<L+\varepsilon$$
+% Vamos a fijar $\beta$ y vamos a acercar $\alpha $ cada vez más a $a$, por lo tanto podemos pasar al límite cuando $\alpha \rightarrow a$:
+% $$\frac{f(\beta)-f(\alpha)}{g(\beta)-g(\alpha)}\xrightarrow{\alpha\rightarrow a^+} \frac{f(\beta)}{g(\beta)}$$
+% FALTA EXPLICACIONES IMPORTANTES DE MOVER PARÁMETROS
 
-Vamos a fijar $\beta$ y vamos a acercar $\alpha $ cada vez más a $a$, por lo tanto podemos pasar al límite cuando $\alpha \rightarrow a$:
-$$\frac{f(\beta)-f(\alpha)}{g(\beta)-g(\alpha)}\xrightarrow{\alpha\rightarrow a^+} \frac{f(\beta)}{g(\beta)}$$
-FALTA EXPLICACIONES IMPORTANTES DE MOVER PARÁMETROS
+% Como $L-\varepsilon < \frac{f(\beta)- f(\alpha)}{g(\beta)-g(\alpha)}<L+\varepsilon$ cuando $\alpha \rightarrow a^+$ tenemos que:
+% $$L-\varepsilon \leq \frac{ f(\beta)}{g(\beta)}\leq L+\varepsilon\Rightarrow \left|\frac{f(\beta)}{g(\beta)}-L\right|<\varepsilon: \forall a<\beta, c$$
+% Luego precisamente esto es la definición de límite:
+% $$\lim_{\beta\rightarrow a^+}\frac{f(\beta)}{g(\beta)}$$
 
-Como $L-\varepsilon < \frac{f(\beta)- f(\alpha)}{g(\beta)-g(\alpha)}<L+\varepsilon$ cuando $\alpha \rightarrow a^+$ tenemos que:
-$$L-\varepsilon \leq \frac{ f(\beta)}{g(\beta)}\leq L+\varepsilon\Rightarrow \left|\frac{f(\beta)}{g(\beta)}-L\right|<\varepsilon: \forall a<\beta, c$$
-Luego precisamente esto es la definición de límite:
-$$\lim_{\beta\rightarrow a^+}\frac{f(\beta)}{g(\beta)}$$
+% Para cambiar la demostración para que sea $L\in \overline{\mathbb R}$ entonces:
 
-Para cambiar la demostración para que sea $L\in \overline{\mathbb R}$ entonces:
+% CAMBIA COSAS QUE NO HE VISTO.
+\end{demo}
 
-CAMBIA COSAS QUE NO HE VISTO.
-
-\subsubsection{L'Hôpital 2}
+\begin{theo}[L'Hôpital 2]
 Sea $-\infty\leq a < b \leq \infty$, $f,g: [a,b]\rightarrow \mathbb R$ derivables en $(a,b)$, supongamos que $g'(x)\neq 0: \forall x\in (a,b)$ y $\lim_{x\rightarrow a^+}g(x)=\pm\infty$, entonces:
 $$\lim_{x\rightarrow a^+}\frac{f(x)}{g(x)}=\lim_{x\rightarrow a^+}\frac{f'(x)}{g'(x)}=L\in \overline{\mathbb R}$$
+\end{theo}
+\begin{demo}
+Pendiente de redacción
+\end{demo}
 
-\underline{Demostración}:
-
-La demostración es muy parecido a lo anterior y se deja para mirar en los libros en caso de no saber hacerla.
-
-\subsubsection{Ejemplos de aplicación del Teorema de L'Hôpital}
+\begin{ej}
 Supongamos que $\lim_{x\rightarrow \infty} e^{-x} \cdot x^2$, es fácil ver que nos queda una indeterminación de tipo $\frac{\infty}{\infty}$ porque se puede reescribir $\lim_{x\rightarrow \infty}\frac{x^2}{e^x}$. Como se cumplen las hipótesis de L'Hopital podemos hacer:
 $$\lim_{x\rightarrow \infty} e^{-x} \cdot x^2=\lim_{x\rightarrow \infty}\frac{x^2}{e^x}\stackrel{\mbox{L'Hôpital}}{=}\lim_{x\rightarrow \infty}\frac{2x}{e^x}\stackrel{\mbox{L'Hôpital}}{=}\lim_{x\rightarrow \infty}\frac{2}{e^x}=0$$
 
@@ -4019,46 +4073,48 @@ $$\lim_{x\rightarrow \infty} \frac{ln(x)}{x}=\lim_{x\rightarrow \infty}\frac{\fr
 
 Veamos el caso $\lim_{x\rightarrow \infty} e^{-\alpha \cdot x}\cdot x^n$, la pregunta es saber si habrá valores de $\alpha$ o de $n$ para los que pasen cosas distintas (¿quién gana?):
 $$\lim_{x\rightarrow \infty} e^{-\alpha x}x^n=\lim_{x\rightarrow \infty}\frac{x^n}{e^{\alpha x}}=\lim_{x\rightarrow \infty} \frac{n\cdot x^n}{\alpha e^{\alpha x}}=\cdots =\lim_{x\rightarrow \infty} \frac{n!}{\alpha^n e^{\alpha x}}=0$$
+\end{ej}
 
-\section{Otros Resultados}
-Por último, vamos a mencionar un par enunciados muy importantes, consecuencia de la teoría desarrollada a lo largo de todo el capítulo. Es muy destacable sobre todo el \textit{Teorema de Taylor} por su repercusión en la sección \nameref{Series de Funciones} y por la cantidad de aplicaciones que tiene en general. 
-
-\subsection{Teorema de Taylor}
-Supongamos que tenemos una función $f:\mathbb R\rightarrow \mathbb R$, un hecho difícil de adivinar, pero sencillo de entender es que la recta tangente es la que mejor aproxima a la función en un punto:
+\subsection{Serie de Taylor}
+Supongamos que tenemos una función $f:\mathbb R\rightarrow \mathbb R$, un hecho difícil de adivinar. La derivada no es sólo la pendiente de la recta tangente, sino que dicha recta es además la mejor aproximación lineal de la función en ese punto. Esto quiere decir que es la recta $r$ que minimiza el error $f(x) - r$.
 \begin{center}
 \includegraphics[scale=0.9]{polinomio de taylor 1}
 \end{center}
-Incluso ampliando, vemos que de todas las rectas posibles que atraviesan ese punto, la tangente es la que más ``se parece'' a la función que tenemos:
+Por ejemplo, si consideramos la función de la primera imagen, vemos que cuanto más cerca del punto miramos más indistinguibles se vuelven la recta tangente y la propia función, lo que refuerza la propiedad que hemos comentado.
 \begin{center}
 \includegraphics[scale=0.25]{de taylor 2}
 \end{center}
-Y, en consecuencia, surge la siguiente pregunta ¿cuál será el polinomio de grado 2 que mejor aproxime a $f$?, y todavía más en general, ¿cuál será el polinomio de grado $n$ que mejor aproxima a la función $f$?.
 
-Una de las ideas más razonable desde un principio es pensar en el polinomio de grado 2 que verifique:
+Si la recta tangente, que es un polinomio de grado 1, es la mejor aproximación cerca del punto, ¿cuál será el polinomio de grado 2 que mejor aproxime a $f$? De hecho, de forma más general, ¿cuál será el polinomio de grado $n$ que mejor aproxima a la función $f$?.
+
+Por ejemplo, para el caso de grado 2, lo más razonable es buscar un polinomio que verifique:
 \begin{align*}
 p(x_0)=f(x_0)  & &
 p'(x_0)=f'(x_0) & &
 p''(x_0)=f''(x_0)
 \end{align*}
-Y viendo las condiciones que imponemos, también es razonable querer escribir el polinomio en cuestión $p(x)=a_0+a_1x+a_2x^2$ en términos de $x_0$ o, mejor dicho, centrado en $x_0$, es decir:
-$$p(x; x_0)=b_0+b_1(x-x_0)+b_2(x-x_0)^2$$
-Ahora basta con determinar los coeficientes $b_i$ imponiendo las condiciones iniciales sobre dicho polinomio:
-$$\begin{cases} p(x_0)=b_0+0+0=b_0=f(x_0)&\Rightarrow b_0=f(x_0)\\
-p'(x_0)=b_1+2b_2(x_0-x_0)=b_1=f'(x_0)&\Rightarrow b_1=f'(x_0)\\
-p''(x_0)=2b_2=f''(x_0)&\Rightarrow b_2= \frac{f''(x_0)}{2}\end{cases}$$
-Luego el polinomio queda como
-$$p(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2$$
+y, como va a depender del punto $x_0$ en concreto escogido, parece razonable que reescribamos el polinomio en cuestión $p(x)=a_0+a_1x+a_2x^2$ en términos de este, concretamente centrado en $x_0$:
+\[
+p(x; x_0)=b_0+b_1(x-x_0)+b_2(x-x_0)^2
+\]
 
-Por tanto, es razonable pensar que, en el caso general, concluimos que el único polinomio de grado $n$ tal que $p_n(x_0)=f(x_0)$, $p_n'(x_0)=f'(x_0)$, ..., $p_n^{(n)}(x_0)=f^{(n)}(x_0)$ es precisamente el polinomio de Taylor que vamos a definir.
+Ahora basta con resolver el sistema formado por las condiciones iniciales para determinar los coeficientes $b_i$, obteniendo como soluciones $b_1=f'(x_0)$, $b_1 = f'(x_0)$ y $b_2= \frac{f''(x_0)}{2}$ y el polinomio
+\[
+p(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2
+\]
+
+Por tanto, es razonable pensar que la generalización para un polinomio de grado $n$ que verifique $p_n(x_0)=f(x_0)$, $p_n'(x_0)=f'(x_0)$, ..., $p_n^{(n)}(x_0)=f^{(n)}(x_0)$ será de la forma
+\[
+p_n(x; x_0)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2 + \cdots + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n
+\]
+y es precisamente lo que conocemos por polinomio de Taylor.
 
 \begin{defi}[Polinomio de Taylor]
 Sea $f: I\rightarrow \mathbb{R}$ una función cuyas derivadas $f'(x), f''(x), \cdots, f^{(n)}(x)$ existen y son continuas en $I$, definimos su \textbf{polinomio de Taylor de grado $n$} como:
 $$p_n(x; x_0)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2+\frac{f'''(x_0)}{3!}(x-x_0)^3+ \cdots +\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$$
 \end{defi}
 
-\begin{obs}
-Habría que comprobar que la definición que se ha dado cumple que $p_n(x_0)=f(x_0)$, $p_n'(x_0)=f'(x_0)$, ..., $p_n^{(n)}(x_0)=f^{(n)}(x_0)$.
-\end{obs}
+De entrada habría que demostrar que tal polinomio verifica las condiciones iniciales que hemos supuesto, pero aun así lo más relevante es que no se ha probado la propiedad para la que se empezó todo el desarrollo. La demostración se verá un poco más adelante, pero principalmente se basa en el hecho de que la función se puede escribir como un polinomio de Taylor más un residuo que cerca del punto es ``despreciable''.
 
 \begin{theo}[de Taylor]
 Sea $I=[a,b]$ un intervalo, $f:I\rightarrow \mathbb R$ una función cuyas $f,f',f'', ..., f^{(n)}$ existen y son continuas en $I$ y $f^{(n+1)}$ existe en $\mathring{I}$, entonces\footnote{El resto de Lagrange el error que existe entre la aproximación del polinomio de Taylor y la función requerida} $\forall x_0 \in [a,b]$:
@@ -4079,9 +4135,12 @@ $$=(x-x_0)^{n+1}\cdot \frac{-f^{(n+1)}(c)(x-c)^n}{-1\cdot n!(n+1)(x-c)^n}\Righta
 \end{demo}
 
 \begin{obs}
-Como observación, si escogemos $n=0$ entonces quedaría como $f(x)=p_n+R_n=f(x_0)+f'(c)(x-x_0)\Rightarrow \frac{f(x)-f(x_0)}{x-x_0}=f'(c)$ que es justamente el Teorema del Valor Medio, así que podemos considerar que este teorema es como una generalización del teorema del Valor Medio.
+Como observación, el teorema de Taylor aplicado usando un polinomio de Taylor de grado cero es
+\[
+f(x)=p_n+R_n=f(x_0)+f'(c)(x-x_0)\Rightarrow \frac{f(x)-f(x_0)}{x-x_0}=f'(c)
+\]
+y precisamente se puede observar que se trata del \textit{Teorema del Valor Medio}, luego podemos considerar el teorema de Taylor como una generalización del mismo.
 \end{obs}
-
 
 \subsubsection{Aplicaciones del Teorema de Taylor}
 Veamos el caso de $f(x)=e^x$, ocurre que $f'(x)=e^x$ y en particular $\forall n\in \mathbb N : f^{(n)}(x)=e^x$ , si tomamos $x_0=0$, entonces $f(0)=1=f'(0)=f''(0)=\cdots = f^{(n)}(0)$ y el polinomio de taylor queda como:
@@ -4127,9 +4186,14 @@ Como ahora $f^{(n)}(c)$ es fijo el término que no podemos determinar el signo q
 \end{itemize}
 \end{demo}
 
+A continuación, se muestra el resultado que justifica que el polinomio de Taylor es el polinomio que mejor aproxima la función en la vecindad de un punto.
+
 \begin{prop}
-El polinomio de Taylor aproxima a la función mejor que cualquier otro polinomio, es decir, sea $f: I\rightarrow\mathbb R$ tal que $f, f'', ..., f^{(n)}, f^{(n+1)}$ son continuas y $x_0\in \mathring{I}$. Si llamamos $Q_n(x)$ a cualquier otro polinomio de grado $\leq n$, entonces:
-$$\lim_{x\rightarrow x_0}\frac{|f(x)-p_n(x;x_0)|}{|f(x)-Q_n(x)|}=0$$\end{prop}
+Sea $f: I\rightarrow\mathbb R$ tal que $f, f'', ..., f^{(n)}, f^{(n+1)}$ son continuas y $x_0\in \mathring{I}$ y $Q_n(x)$ un polinomio de grado $\leq n$, entonces
+\[
+\lim_{x\rightarrow x_0}\frac{|f(x)-p_n(x;x_0)|}{|f(x)-Q_n(x)|}=0
+\]
+\end{prop}
 \begin{demo}
 $$f(x)-p_n(x;x_0)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$$
 Como en particular es continua en un entorno de $x_0$, lo anterior va a estar acotado. Fijamos un $\delta_0>0 : [x_0-\delta_0, x_0+\delta_0]\in I$ y si $M_{n+1}=\max |f^{(n+1)}(x)|$ donde $|x-x_0|<\delta$. Es decir, que llamo $M_{n+1}$ a la máxima derivada del orden $n+1$ de las $x$ en ese entorno alrededor de $x_0$. 
@@ -4158,8 +4222,8 @@ $$=\frac{|f(x)-p_n(x;x_0)|}{|f(x)-Q_n(x)|}\leq \frac{\frac{M_{n+1}}{(n+1)!}|x-x_
 Y es trivial ver que cuando $x\rightarrow x_0$ el denominador tiende a una constante y el numerador tiende a 0, luego el resultado de pasar al límite es 0 por la regla del sandwich (porque ese cociente es positivo).
 \end{demo}
 
-\subsection{Convexidad y Concavidad}
-De forma intuitiva, decimos que una función es convexa cuando tiene la forma de ``una sonrisa'' y ocurre siempre que los dos puntos de la función en un intervalo $I$ la gráfica de la función quedan por arriba o por debajo de la recta.
+\subsection{Curvatura: convexidad y concavidad}
+La curvatura es un concepto que se refiere a cómo ``se dobla'' una función. Principalmente hay dos tipos de curvatura y se distinguen por cómo queda la función con respecto a un segmento que une dos puntos: si dado un segmento que une dos puntos la función queda \textbf{por debajo}, entonces decimos que es convexa y, si queda \textbf{por encima}, decimos que es cóncava.
 
 \begin{center}
 \includegraphics[scale=0.70]{convexidad}
@@ -4170,22 +4234,29 @@ Sea $f:I\rightarrow\mathbb R$, decimos que es \textbf{convexa} si\footnote{Para 
 $$\forall x_0,x_1 \in I: \forall t\in (0,1): f(tx_0+(1-t)x_1)\leq f(x_0)+(1-t)f(x_1)$$
 \end{defi}
 
-Para ver la interpretación que le podemos dar a dicha definición, supongamos que tenemos $x_0, x_1\in I$ tal que $x_0<x_1$, sin pérdida de generalidad, y $t\in (0,1)$. Veamos que siempre $tx_0+(1-t)x_1\in (x_0, x_1)$:
-$$tx_0+(1-t)x_1=x_0-x_0+tx_0+(1-t)x_1= x_0 +\underbrace{(1-t)(x_1-x_0)}_{>0}\Rightarrow x_0\leq tx_0+(1-t)x_1\leq \underbrace{x_0+(x_1-x_0)}_{=x_1}$$
-Además cabe destacar que cualquier punto entre ambos puntos se puede escribir de esta forma tomando un cierto valor de $t$:
-$$z\in (x_0,x_1)\Rightarrow z= x_0+\frac{z-x_0}{x_1-x_0}(x_1-x_0)= x_0+\frac{z-x_1+x_1-x_0}{x_1-x_0}(x_1-x_0)=$$
-$$=x_0+(1-\underbrace{\frac{x_1-z}{x_1-x_0}}_{=t})(x_1-x_0)= x_0+(1-t)(x_1-x_0)$$
+En Matemáticas, a la expresión $tx_0+(1-t)x_1: t\in (0,1)$ se le denomina combinación lineal convexa de $x_1$ y $x_2$ y el conjunto de puntos descritos por esa expresión constituye el segmento que une $x_1$ y $x_2$, pues todos los puntos están en el segmento:
+\[
+tx_0+(1-t)x_1=x_0-x_0+tx_0+(1-t)x_1= x_0 +\underbrace{(1-t)(x_1-x_0)}_{>0}\Rightarrow x_0\leq tx_0+(1-t)x_1\leq \underbrace{x_0+(x_1-x_0)}_{=x_1}
+\]
+y todos los puntos $z\in (x_0,x_1)$ del segmento se pueden expresar de esta manera:
+\begin{align*}
+z &= x_0+\frac{z-x_0}{x_1-x_0}(x_1-x_0) \\
+  &= x_0+\frac{z-x_1+x_1-x_0}{x_1-x_0}(x_1-x_0) \\
+  &=x_0+(1-\underbrace{\frac{x_1-z}{x_1-x_0}}_{=t})(x_1-x_0)= x_0+(1-t)(x_1-x_0)
+\end{align*}
 
-\textbf{A la expresión} $tx_0+(1-t)x_1: t\in (0,1)$ \textbf{se le denomina combinación lineal convexa de} $x_1$ \textbf{y} $x_2$.
 
-\begin{center}
+\begin{figure}
+	\centering
 \includegraphics[scale=0.30]{convexidad 2}
-\end{center}
+\caption{Interpretación de la convexidad.}
+\label{fig: interpretación de la convexidad}
+\end{figure}
 
-En el fondo, lo que decimos es que la proyección del punto sobre la recta siempre está por encima de la imagen cuando nos encontramos en un intervalo de convexidad.
+Por tanto, la desigualdad de la definición lo que quiere decir es que la combinación lineal de las imágenes de los extremos (el segmento que une las imágenes de los extremos) está ``por encima'' de la imagen del propio segmento (el trozo de función delimitado por los extremos). Se puede ver una representación gráfica de esta interpretación en la figura \ref{fig: interpretación de la convexidad}.
 
 \begin{theo}[Caracterización de la Convexidad]
-Sea $f:I\rightarrow\mathbb R$, donde $I$ es un intervalo abierto, una función con dos derivadas en $I$. La función $f$ es convexa en $I$ si y sólo si $\forall x\in I: f''(x)>0$.
+Sea $f:I\rightarrow\mathbb R$ una función dos veces derivable e $I$ un intervalo abierto, entonces $f$ es convexa en $I$ si y sólo si $\forall x\in I: f''(x)>0$.
 \end{theo}
 \begin{demo}
 \begin{itemize}
@@ -4222,15 +4293,17 @@ La manera intuitiva de ver que este teorema tenía que ser cierto es que $f''(x)
 \end{obs}
 
 \subsection{Método de Newton para calcular raíces de f(x)}
-Si calculamos la recta tangente a la función en un punto cercano a una raíz, vemos que esta corta cerca de la raíz. Si hacemos lo mismo con los sucesivos puntos de corte de cada una de las tangentes, los puntos de corte cada vez se aproximan más a la raíz que buscamos aproximar.
+Existe un algoritmo debido a Newton que trata de calcular las raíces de una función aprovechándose precisamente de la noción de derivada. Si calculamos la recta tangente a la función en un punto cercano a una raíz, vemos que esta corta cerca de la raíz. Si hacemos lo mismo con los sucesivos puntos de corte de cada una de las tangentes, los puntos de corte cada vez se aproximan más a la raíz que buscamos aproximar.
 \begin{center}
 \includegraphics[scale=1.6]{metodo Newton}
 \end{center}
 Indudablemente, este método puede fallar si no nos encontramos suficientemente cerca de la raíz porque puede ocurrir que uno de los cortes caiga justo en un punto cuya derivada es 0 y en ese caso la recta tangente no cortaría al eje en ningún punto.
 
-Para ver la relación entre un punto y el siguiente, estudiamos la recta tangente: $y-f(x')=f'(x')(x-x')$ y $x''$ es tal que $(x'', 0)$ está en la recta así que:
-$$0-f(x')=f'(x')(x''-x')\Leftrightarrow \frac{-f(x')}{f'(x')}=x''-x'$$
-Es decir, tenemos una sucesión de puntos para realizar las sucesivas iteraciones del algoritmo y que cada vez están más cerca de la raíz:
+El algoritmo determina, para cada punto $(x', 0)$, el siguiente $(x'', 0)$ cada vez más cercano a la raíz buscada. El siguiente punto está determinado a través del corte de la recta tangente $y-f(x')=f'(x')(x-x')$ con el eje de abcisas, así que la relación entre ambos es
+\[
+0-f(x')=f'(x')(x''-x')\Leftrightarrow \frac{-f(x')}{f'(x')}=x''-x'
+\]
+luego, en general, podemos expresar la sucesión de puntos de manera recursiva a través de la expresión
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}$$
 
 \begin{theo}

@@ -686,12 +686,6 @@ INPUT .\fotos\Interpretacion derivada.png
 INPUT .\fotos\Interpretacion derivada.png
 INPUT .\fotos\Interpretacion derivada.png
 INPUT .\fotos\Interpretacion derivada.png
-INPUT .\fotos\Teorema de Rolle.png
-INPUT .\fotos\Teorema de Rolle.png
-INPUT .\fotos\Teorema de Rolle.png
-INPUT .\fotos\Teorema de Rolle.png
-INPUT .\fotos\Teorema de Rolle.png
-INPUT .\fotos\Teorema de Rolle.png
 INPUT .\fotos\polinomio de taylor 1.png
 INPUT .\fotos\polinomio de taylor 1.png
 INPUT .\fotos\polinomio de taylor 1.png
@@ -704,6 +698,7 @@ INPUT .\fotos\de taylor 2.png
 INPUT .\fotos\de taylor 2.png
 INPUT .\fotos\de taylor 2.png
 INPUT .\fotos\de taylor 2.png
+INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmssi10.tfm
 INPUT .\fotos\convexidad.png
 INPUT .\fotos\convexidad.png
 INPUT .\fotos\convexidad.png
@@ -805,6 +800,8 @@ INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmss10.pfb
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
+INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
+INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\jdbar\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
